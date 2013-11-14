@@ -48,6 +48,11 @@ namespace zwg_china.model
         public string LastLoginIp { get; set; }
 
         /// <summary>
+        /// 绑定信息
+        /// </summary>
+        public virtual UserBinding Binding { get; set; }
+
+        /// <summary>
         /// 游戏资料
         /// </summary>
         public virtual UserPlayInfo PlayInfo { get; set; }
@@ -58,9 +63,9 @@ namespace zwg_china.model
         public virtual UserData Data { get; set; }
 
         /// <summary>
-        /// 绑定信息
+        /// 额外的高点号配额
         /// </summary>
-        public virtual UserBinding Binding { get; set; }
+        public virtual List<ExtraQuota> ExtraQuotas { get; set; }
 
         #endregion
 
@@ -94,6 +99,7 @@ namespace zwg_china.model
             this.LastLoginTime = DateTime.Now;
             this.Data = new UserData();
             this.Binding = new UserBinding();
+            this.ExtraQuotas = new List<ExtraQuota>();
         }
 
         #endregion

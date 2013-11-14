@@ -51,13 +51,6 @@
       <FileName>StatisticalDataModelBase.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="zwg_china.model.IContextOfBase" Collapsed="true">
-    <Position X="15" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IContextOfBase.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="zwg_china.model.RegularStatus">
     <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
