@@ -36,11 +36,12 @@ namespace zwg_china.model
         /// <summary>
         /// 实例化一个新的亲族节点
         /// </summary>
-        /// <param name="beau">目标对象</param>
-        public Relative(CategoryModelBase beau)
+        /// <param name="nodeId">节点所对应的对象的存储指针</param>
+        /// <param name="nodeLayer">节点所对应的对象的层级</param>
+        public Relative(int nodeId, int nodeLayer)
         {
-            this.NodeId = beau.Id;
-            this.NodeLayer = beau.Layer;
+            this.NodeId = nodeId;
+            this.NodeLayer = nodeLayer;
         }
 
         #endregion

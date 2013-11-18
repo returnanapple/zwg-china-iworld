@@ -84,10 +84,9 @@ namespace zwg_china.model
         /// <param name="username">用户名</param>
         /// <param name="password">密码</param>
         /// <param name="playInfo">游戏资料</param>
-        /// <param name="relatives">父祖节点</param>
-        /// <param name="tree">所从属的树</param>
-        public Author(string username, string password, UserPlayInfo playInfo, List<Relative> relatives, string tree)
-            : base(relatives, tree)
+        /// <param name="parent">父节点</param>
+        public Author(string username, string password, UserPlayInfo playInfo, Author parent = null)
+            : base(parent)
         {
             this.Username = username;
             this.Password = password;

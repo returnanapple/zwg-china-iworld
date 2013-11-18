@@ -42,31 +42,24 @@ namespace zwg_china.model
         /// <summary>
         /// 实例化一个新的树状结构的数据模型
         /// </summary>
-        /// <param name="relatives">父祖节点</param>
-        /// <param name="tree">所从属的树</param>
-        public CategoryModelBase(List<Relative> relatives, string tree = "")
+        /// <param name="parent">父节点</param>
+        public CategoryModelBase(CategoryModelBase parent)
         {
-            if (relatives == null)
+            this.Relatives = new List<Relative>();
+            if (parent == null)
             {
-                this.Relatives = new List<Relative>();
                 this.Layer = 1;
                 this.Tree = Guid.NewGuid().ToString("N");
             }
-            else if (relatives.Count > 0)
-            {
-                this.Relatives = relatives;
-                this.Layer = relatives.Max(x => x.NodeLayer) + 1;
-
-                Regex reg = new Regex(@"^[a-zA-Z0-9]{32}$");
-                if (!reg.IsMatch(tree))
-                {
-                    throw new Exception("树状结构的名称应为32位的guid");
-                }
-                this.Tree = tree;
-            }
             else
             {
-                throw new Exception("输入的父祖节点不应为空列表 如果该对象是第一级节点 请将父祖节点输入为null");
+                this.Layer = parent.Layer + 1;
+                this.Tree = parent.Tree;
+                parent.Relatives.OrderBy(x => x.NodeLayer).ToList().ForEach(x =>
+                    {
+                        this.Relatives.Add(new Relative(x.NodeId, x.NodeLayer));
+                    });
+                this.Relatives.Add(new Relative(parent.Id, parent.Layer));
             }
         }
 
