@@ -48,6 +48,11 @@ namespace zwg_china.model
         public string LastLoginIp { get; set; }
 
         /// <summary>
+        /// 上次登录的实际地址
+        /// </summary>
+        public string LastLoginAddres { get; set; }
+
+        /// <summary>
         /// 绑定信息
         /// </summary>
         public virtual UserBinding Binding { get; set; }
@@ -95,6 +100,7 @@ namespace zwg_china.model
             this.PlayInfo = playInfo;
             this.Status = UserStatus.未激活;
             this.LastLoginIp = "从未登陆";
+            this.LastLoginAddres = "从未登陆";
             this.LastLoginTime = DateTime.Now;
             this.Data = new UserData();
             this.Binding = new UserBinding();

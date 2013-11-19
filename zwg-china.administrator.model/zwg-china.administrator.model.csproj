@@ -39,10 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
+    <Compile Include="AdministratorGroup.cs" />
+    <Compile Include="AdministratorLandingRecord.cs" />
+    <Compile Include="OperateRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="_administrator.model.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zwg-china.model\zwg-china.model.csproj">
+      <Project>{276735de-42f6-40db-a96d-9ecf74a659c8}</Project>
+      <Name>zwg-china.model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
