@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,22 +41,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Betting.cs" />
-    <Compile Include="BettingInChasing.cs" />
+    <Compile Include="BettingStatus.cs" />
+    <Compile Include="BettingWithChasing.cs" />
     <Compile Include="BettingSeat.cs" />
     <Compile Include="Chasing.cs" />
     <Compile Include="ChasingSeat.cs" />
+    <Compile Include="ChasingStatus.cs" />
     <Compile Include="HowToPlay.cs" />
     <Compile Include="Lottery.cs" />
+    <Compile Include="LotteryInterface.cs" />
     <Compile Include="LotterySeat.cs" />
+    <Compile Include="LotterySources.cs" />
     <Compile Include="LotteryTicket.cs" />
     <Compile Include="LotteryTime.cs" />
-    <Compile Include="OptionalSeat.cs" />
     <Compile Include="PlayTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VirtualBonus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="_lottery.model.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zwg-china.administrator.model\zwg-china.administrator.model.csproj">
+      <Project>{10ca1212-7df8-41a7-84ba-2320583ab437}</Project>
+      <Name>zwg-china.administrator.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
+      <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
+      <Name>zwg-china.author.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.model\zwg-china.model.csproj">
+      <Project>{276735de-42f6-40db-a96d-9ecf74a659c8}</Project>
+      <Name>zwg-china.model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

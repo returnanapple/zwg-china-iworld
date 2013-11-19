@@ -4,107 +4,128 @@
     <Position X="0.5" Y="0.5" Height="0.284" Width="0.919" />
   </Comment>
   <Comment CommentText="开奖记录">
-    <Position X="0.5" Y="1.792" Height="0.284" Width="0.919" />
+    <Position X="0.5" Y="2.042" Height="0.284" Width="0.919" />
   </Comment>
   <Comment CommentText="投注信息">
-    <Position X="0.5" Y="3.031" Height="0.284" Width="0.919" />
+    <Position X="0.5" Y="3.531" Height="0.284" Width="0.919" />
   </Comment>
   <Comment CommentText="追号信息">
-    <Position X="0.5" Y="4.313" Height="0.284" Width="0.919" />
+    <Position X="0.5" Y="5.063" Height="0.284" Width="0.919" />
   </Comment>
   <Comment CommentText="虚拟排行">
-    <Position X="0.5" Y="5.521" Height="0.284" Width="0.919" />
+    <Position X="0.5" Y="6.542" Height="0.284" Width="0.919" />
   </Comment>
   <Class Name="zwg_china.model.LotteryTicket" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ACEAAAAADAMAABAAEiAAAAQAAAAAAEIAAAAAEAAAAAA=</HashCode>
       <FileName>LotteryTicket.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.LotteryTime" Collapsed="true">
     <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQEAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>LotteryTime.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.PlayTag" Collapsed="true">
     <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAABAAAACEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayTag.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.HowToPlay" Collapsed="true">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AEEAAAAAAgIiAgAAEABAQAQAAAIAAAAACAAAAAAAAAA=</HashCode>
       <FileName>HowToPlay.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.OptionalSeat" Collapsed="true">
-    <Position X="7.5" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OptionalSeat.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="zwg_china.model.Lottery" Collapsed="true">
-    <Position X="0.5" Y="2.25" Width="1.5" />
+    <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAACAgAAAAAAAAAQAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Lottery.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.LotterySeat" Collapsed="true">
-    <Position X="2.25" Y="2.25" Width="1.5" />
+    <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>LotterySeat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.Betting" Collapsed="true">
-    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAMgAACECAAAggAIEgAIAQAAAgAAAAABAAQAAAAAAAA=</HashCode>
       <FileName>Betting.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.BettingSeat" Collapsed="true">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+    <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>BettingSeat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.Chasing" Collapsed="true">
-    <Position X="0.5" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIgAQCEAAAAgwAAggAAAAAAAgABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Chasing.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.ChasingSeat" Collapsed="true">
-    <Position X="2.25" Y="4.75" Width="1.5" />
+    <Position X="2.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>ChasingSeat.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.BettingInChasing" Collapsed="true">
-    <Position X="4" Y="4.75" Width="1.5" />
+  <Class Name="zwg_china.model.BettingWithChasing" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BettingInChasing.cs</FileName>
+      <FileName>BettingWithChasing.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.VirtualBonus" Collapsed="true">
-    <Position X="0.5" Y="6" Width="1.5" />
+    <Position X="0.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>VirtualBonus.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Enum Name="zwg_china.model.LotteryInterface" Collapsed="true">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQAAAA=</HashCode>
+      <FileName>LotteryInterface.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="zwg_china.model.LotterySources" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>LotterySources.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="zwg_china.model.BettingStatus" Collapsed="true">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>BettingStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="zwg_china.model.ChasingStatus" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAQIAAAAAAAAAAAIAAAQAAAAABAAAAAAA=</HashCode>
+      <FileName>ChasingStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

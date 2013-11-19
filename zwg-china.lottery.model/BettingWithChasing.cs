@@ -6,16 +6,11 @@ using System.Text;
 namespace zwg_china.model
 {
     /// <summary>
-    /// 投注
+    /// 投注（追号）
     /// </summary>
-    public class Betting : RecordingTimeModelBase
+    public class BettingWithChasing : ModelBase
     {
         #region 公开属性
-
-        /// <summary>
-        /// 投注人
-        /// </summary>
-        public virtual Author Owner { get; set; }
 
         /// <summary>
         /// 期号
@@ -23,29 +18,9 @@ namespace zwg_china.model
         public string Issue { get; set; }
 
         /// <summary>
-        /// 注数
-        /// </summary>
-        public int Notes { get; set; }
-
-        /// <summary>
         /// 倍数
         /// </summary>
         public double Multiple { get; set; }
-
-        /// <summary>
-        /// 用于转换为赔率的点数
-        /// </summary>
-        public double Points { get; set; }
-
-        /// <summary>
-        /// 玩法
-        /// </summary>
-        public virtual HowToPlay HowToPlay { get; set; }
-
-        /// <summary>
-        /// 位
-        /// </summary>
-        public virtual List<BettingSeat> Seats { get; set; }
 
         /// <summary>
         /// 当前状态
@@ -62,40 +37,35 @@ namespace zwg_china.model
         /// </summary>
         public double Bonus { get; set; }
 
+        /// <summary>
+        /// 所从属的追号记录
+        /// </summary>
+        public virtual Chasing Chasing { get; set; }
+
         #endregion
 
         #region 构造方法
 
         /// <summary>
-        /// 实例化一个新的投注
+        /// 实例化一个新的投注记录（追号）
         /// </summary>
-        public Betting()
+        public BettingWithChasing()
         {
         }
 
         /// <summary>
-        /// 实例化一个新的投注
+        /// 实例化一个新的投注记录（追号）
         /// </summary>
-        /// <param name="owner">投注人</param>
         /// <param name="issue">期号</param>
-        /// <param name="notes">注数</param>
         /// <param name="multiple">倍数</param>
-        /// <param name="points">用于转换为赔率的点数</param>
-        /// <param name="howToPlay">玩法</param>
-        /// <param name="seats">位</param>
         /// <param name="pay">投注金额</param>
-        public Betting(Author owner, string issue, int notes, double multiple, double points
-            , HowToPlay howToPlay, List<BettingSeat> seats, double pay)
+        /// <param name="chasing">所从属的追号记录</param>
+        public BettingWithChasing(string issue, double multiple, double pay, Chasing chasing)
         {
-            this.Owner = owner;
             this.Issue = issue;
-            this.Notes = notes;
             this.Multiple = multiple;
-            this.Points = points;
-            this.HowToPlay = howToPlay;
-            this.Seats = seats;
-            this.Status = BettingStatus.等待开奖;
             this.Pay = pay;
+            this.Status = BettingStatus.等待开奖;
             this.Bonus = 0;
         }
 
@@ -111,27 +81,27 @@ namespace zwg_china.model
         {
             string result = "";
 
-            if (this.HowToPlay.Interface == LotteryInterface.任N直选
-                && this.HowToPlay.IsDuplex == false)
+            if (this.Chasing.HowToPlay.Interface == LotteryInterface.任N直选
+                && this.Chasing.HowToPlay.IsDuplex == false)
             {
-                result = this.Seats.First().Values;
+                result = this.Chasing.Seats.First().Values;
             }
-            else if (this.HowToPlay.Interface == LotteryInterface.任N直选)
+            else if (this.Chasing.HowToPlay.Interface == LotteryInterface.任N直选)
             {
-                result = string.Join(",", this.Seats.ConvertAll(x => string.Join(" ", x.ValueList)));
+                result = string.Join(",", this.Chasing.Seats.ConvertAll(x => string.Join(" ", x.ValueList)));
             }
-            else if (this.HowToPlay.Interface == LotteryInterface.任N组选
-                || this.HowToPlay.Interface == LotteryInterface.任N不定位)
+            else if (this.Chasing.HowToPlay.Interface == LotteryInterface.任N组选
+                || this.Chasing.HowToPlay.Interface == LotteryInterface.任N不定位)
             {
-                result = string.Join(" ", this.Seats.First().ValueList);
+                result = string.Join(" ", this.Chasing.Seats.First().ValueList);
             }
-            else if (this.HowToPlay.Interface == LotteryInterface.任N定位胆)
+            else if (this.Chasing.HowToPlay.Interface == LotteryInterface.任N定位胆)
             {
-                result = string.Join(",", this.Seats.ConvertAll(x =>
-                    {
-                        string t = x.Values == "" ? "" : string.Join(" ", x.ValueList);
-                        return string.Format("{0}：", x.Name, t);
-                    }));
+                result = string.Join(",", this.Chasing.Seats.ConvertAll(x =>
+                {
+                    string t = x.Values == "" ? "" : string.Join(" ", x.ValueList);
+                    return string.Format("{0}：", x.Name, t);
+                }));
             }
 
             return result;
@@ -145,7 +115,7 @@ namespace zwg_china.model
         public int GetNotesOfWin(Lottery lottery)
         {
             int result = 0;
-            if (this.HowToPlay.Tag.Ticket.RealName != lottery.Ticket.RealName)
+            if (this.Chasing.HowToPlay.Tag.Ticket.RealName != lottery.Ticket.RealName)
             {
                 throw new Exception("所传入的开奖记录跟当前投注所对应的彩票不一致");
             }
@@ -154,7 +124,7 @@ namespace zwg_china.model
                 throw new Exception("所传入的开奖记录跟当前投注所声明的期号不一致");
             }
 
-            switch (this.HowToPlay.Interface)
+            switch (this.Chasing.HowToPlay.Interface)
             {
                 case LotteryInterface.任N直选:
                     result = DirectElection(lottery);
@@ -184,23 +154,23 @@ namespace zwg_china.model
         /// <returns>返回中奖注数</returns>
         int DirectElection(Lottery lottery)
         {
-            if (this.HowToPlay.Interface != LotteryInterface.任N直选)
+            if (this.Chasing.HowToPlay.Interface != LotteryInterface.任N直选)
             {
                 throw new Exception("当前投注的玩法的反奖接口不是【任N直选】，请检查操作");
             }
 
             int result = 0;
-            if (this.HowToPlay.IsDuplex) //复式投注
+            if (this.Chasing.HowToPlay.IsDuplex) //复式投注
             {
-                if (this.Seats.All(x => lottery.Seats.Any(s => s.Name == x.Name && x.ValueList.Any(v => v == s.Value))))
+                if (this.Chasing.Seats.All(x => lottery.Seats.Any(s => s.Name == x.Name && x.ValueList.Any(v => v == s.Value))))
                 {
                     result = 1;
                 }
             }
             else //单式投注
             {
-                string[] seatNames = this.HowToPlay.ValidSeats.Split(new char[] { ',' });
-                List<string> betValues = this.Seats.First().ValueList;
+                string[] seatNames = this.Chasing.HowToPlay.ValidSeats.Split(new char[] { ',' });
+                List<string> betValues = this.Chasing.Seats.First().ValueList;
                 for (int i = 0; i < betValues.Count; i++)
                 {
                     char[] tBettingValues = betValues[i].ToArray();
@@ -227,17 +197,17 @@ namespace zwg_china.model
         /// <returns>返回中奖注数</returns>
         int GroupSelection(Lottery lottery)
         {
-            List<string> betValues = this.Seats.First().ValueList;
-            string[] seatNames = this.HowToPlay.ValidSeats.Split(new char[] { ',' });
+            List<string> betValues = this.Chasing.Seats.First().ValueList;
+            string[] seatNames = this.Chasing.HowToPlay.ValidSeats.Split(new char[] { ',' });
             List<string> valuesOfWin = lottery.Seats.Where(x => seatNames.Contains(x.Name) && betValues.Contains(x.Value))
                 .ToList().ConvertAll(x => x.Value);
-            if (valuesOfWin.Count < this.HowToPlay.CountOfSeatsForWin)
+            if (valuesOfWin.Count < this.Chasing.HowToPlay.CountOfSeatsForWin)
             {
                 return 0;
             }
             List<string> differentValuesOfWin = valuesOfWin.Distinct().ToList();
-            if (differentValuesOfWin.Count >= this.HowToPlay.LowerCountOfDifferentSeatsForWin
-                && differentValuesOfWin.Count <= this.HowToPlay.CapsCountOfDifferentSeatsForWin)
+            if (differentValuesOfWin.Count >= this.Chasing.HowToPlay.LowerCountOfDifferentSeatsForWin
+                && differentValuesOfWin.Count <= this.Chasing.HowToPlay.CapsCountOfDifferentSeatsForWin)
             {
                 return 1;
             }
@@ -251,7 +221,7 @@ namespace zwg_china.model
         /// <returns>返回中奖注数</returns>
         int DoesNotLocate(Lottery lottery)
         {
-            List<string> betValues = this.Seats.First().ValueList;
+            List<string> betValues = this.Chasing.Seats.First().ValueList;
             if (lottery.Seats.Any(x => betValues.Contains(x.Value)))
             {
                 return 1;
@@ -266,7 +236,7 @@ namespace zwg_china.model
         /// <returns>返回中奖注数</returns>
         int PositioningBile(Lottery lottery)
         {
-            int result = lottery.Seats.Count(x => this.Seats.Any(s => s.Name == x.Name && s.ValueList.Contains(x.Value)));
+            int result = lottery.Seats.Count(x => this.Chasing.Seats.Any(s => s.Name == x.Name && s.ValueList.Contains(x.Value)));
             return result;
         }
 
