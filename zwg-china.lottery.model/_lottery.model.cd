@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="彩票信息">
+    <Position X="0.5" Y="0.5" Height="0.284" Width="0.919" />
+  </Comment>
+  <Comment CommentText="开奖记录">
+    <Position X="0.5" Y="1.792" Height="0.284" Width="0.919" />
+  </Comment>
+  <Comment CommentText="投注信息">
+    <Position X="0.5" Y="3.031" Height="0.284" Width="0.919" />
+  </Comment>
+  <Comment CommentText="追号信息">
+    <Position X="0.5" Y="4.313" Height="0.284" Width="0.919" />
+  </Comment>
+  <Comment CommentText="虚拟排行">
+    <Position X="0.5" Y="5.521" Height="0.284" Width="0.919" />
+  </Comment>
+  <Class Name="zwg_china.model.LotteryTicket" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LotteryTicket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.LotteryTime" Collapsed="true">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LotteryTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.PlayTag" Collapsed="true">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PlayTag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.HowToPlay" Collapsed="true">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HowToPlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.OptionalSeat" Collapsed="true">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OptionalSeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.Lottery" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lottery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.LotterySeat" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LotterySeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.Betting" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Betting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.BettingSeat" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BettingSeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.Chasing" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Chasing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.ChasingSeat" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChasingSeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.BettingInChasing" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BettingInChasing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.VirtualBonus" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VirtualBonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

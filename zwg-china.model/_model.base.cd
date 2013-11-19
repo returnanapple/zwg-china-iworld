@@ -4,7 +4,7 @@
     <Position X="0.5" Y="0.5" Height="0.284" Width="1.092" />
   </Comment>
   <Class Name="zwg_china.model.CategoryModelBase">
-    <Position X="9.75" Y="5.25" Width="2.5" />
+    <Position X="9.75" Y="5.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>CategoryModelBase.cs</FileName>
@@ -23,12 +23,12 @@
   <Class Name="zwg_china.model.RecordingTimeModelBase">
     <Position X="6.5" Y="2.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>RecordingTimeModelBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.RegularModelBase">
-    <Position X="3" Y="5.25" Width="2.5" />
+    <Position X="3" Y="5.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEQAAAAAAAEAAAAAAEAAAgAAAAQAAAAAAAAAA=</HashCode>
       <FileName>RegularModelBase.cs</FileName>
@@ -46,8 +46,11 @@
   </Class>
   <Class Name="zwg_china.model.StatisticalDataModelBase">
     <Position X="15.5" Y="2.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAAAAAAAACAgAAEIQBAAAAAAIAAEA=</HashCode>
+      <HashCode>AAAAQEAIAABAAAAAAAACAAISAgEAEIQBAACEAAIAAEA=</HashCode>
       <FileName>StatisticalDataModelBase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,14 +62,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.IpToAddressComparison">
-    <Position X="6.25" Y="5.25" Width="2.75" />
+    <Position X="6.25" Y="5.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
       <FileName>IpToAddressComparison.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="zwg_china.model.RegularStatus">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+    <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAEAAAAAAAAAAAAQAAAAAAAAAAAIA=</HashCode>
       <FileName>RegularStatus.cs</FileName>

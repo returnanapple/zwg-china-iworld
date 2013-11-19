@@ -36,5 +36,17 @@ namespace zwg_china.model
         }
 
         #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 声明改模型已经被修改
+        /// </summary>
+        public virtual void OnModify()
+        {
+            this.ModifiedTime = DateTime.Now;
+        }
+
+        #endregion
     }
 }

@@ -39,7 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Betting.cs" />
+    <Compile Include="BettingInChasing.cs" />
+    <Compile Include="BettingSeat.cs" />
+    <Compile Include="Chasing.cs" />
+    <Compile Include="ChasingSeat.cs" />
+    <Compile Include="HowToPlay.cs" />
+    <Compile Include="Lottery.cs" />
+    <Compile Include="LotterySeat.cs" />
+    <Compile Include="LotteryTicket.cs" />
+    <Compile Include="LotteryTime.cs" />
+    <Compile Include="OptionalSeat.cs" />
+    <Compile Include="PlayTag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VirtualBonus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_lottery.model.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

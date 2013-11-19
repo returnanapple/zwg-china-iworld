@@ -5,6 +5,9 @@ using System.Text;
 
 namespace zwg_china.model
 {
+    /// <summary>
+    /// 通知
+    /// </summary>
     public class Notice : RecordingTimeModelBase
     {
         #region 公开属性
