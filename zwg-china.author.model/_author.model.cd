@@ -7,10 +7,31 @@
     <Position X="0.5" Y="2.058" Height="0.284" Width="1.175" />
   </Comment>
   <Comment CommentText="直属高点号配额">
-    <Position X="0.5" Y="3.542" Height="0.284" Width="1.309" />
+    <Position X="4" Y="2.042" Height="0.284" Width="1.309" />
   </Comment>
-  <Comment CommentText="清理条件">
-    <Position X="0.5" Y="5.025" Height="0.284" Width="0.883" />
+  <Comment CommentText="自动清理用户">
+    <Position X="0.5" Y="8.025" Height="0.284" Width="1.112" />
+  </Comment>
+  <Comment CommentText="充值">
+    <Position X="0.5" Y="5.067" Height="0.284" Width="0.7" />
+  </Comment>
+  <Comment CommentText="充值">
+    <Position X="0.5" Y="6.556" Height="0.284" Width="0.7" />
+  </Comment>
+  <Comment CommentText="帐变明细">
+    <Position X="4.021" Y="6.535" Height="0.284" Width="0.846" />
+  </Comment>
+  <Comment CommentText="推广">
+    <Position X="2.26" Y="8.015" Height="0.284" Width="0.7" />
+  </Comment>
+  <Comment CommentText="找回密码">
+    <Position X="4" Y="8.035" Height="0.284" Width="0.94" />
+  </Comment>
+  <Comment CommentText="登陆记录">
+    <Position X="5.75" Y="8.025" Height="0.284" Width="0.94" />
+  </Comment>
+  <Comment CommentText="用户组">
+    <Position X="0.5" Y="3.557" Height="0.284" Width="0.7" />
   </Comment>
   <Class Name="zwg_china.model.Author" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
@@ -34,7 +55,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.ExtraQuota" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>ExtraQuota.cs</FileName>
@@ -55,24 +76,80 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SystemQuota" Collapsed="true">
-    <Position X="2.25" Y="4" Width="1.5" />
+    <Position X="5.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>SystemQuota.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SystemQuotaDetail" Collapsed="true">
-    <Position X="4" Y="4" Width="1.5" />
+    <Position X="7.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>SystemQuotaDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.ConditionOfClearTheUser" Collapsed="true">
-    <Position X="0.5" Y="5.5" Width="1.5" />
+    <Position X="0.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ConditionOfClearTheUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.RechargeRecord" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACEAAAAAIAAAAAAAAAAAAEAAAAAAAACAAAAAAQ=</HashCode>
+      <FileName>RechargeRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.TransferRecord" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAIAAAAAAAAAAAAEAAAAAAAACAAAAAAQ=</HashCode>
+      <FileName>TransferRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.WithdrawalsRecord" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAACEAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAAQQ=</HashCode>
+      <FileName>WithdrawalsRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.MoneyChangeRecord" Collapsed="true">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAgAAAAAAAAAAAAAAACAAAAAQAAAAAAAAQ=</HashCode>
+      <FileName>MoneyChangeRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.SpreadRecord" Collapsed="true">
+    <Position X="2.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACARAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpreadRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.ForgotPasswordRecord" Collapsed="true">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ForgotPasswordRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.AuthorLandingRecord" Collapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
+      <FileName>AuthorLandingRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.UserGroup" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAEJAAQAAAAAAAAAAAAAAAEEAAA=</HashCode>
+      <FileName>UserGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="zwg_china.model.Bank" Collapsed="true">
@@ -87,6 +164,27 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAEAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>UserStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="zwg_china.model.RechargeStatus" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAkEAAAAA=</HashCode>
+      <FileName>RechargeStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="zwg_china.model.TransferStatus" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAA=</HashCode>
+      <FileName>TransferStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="zwg_china.model.WithdrawalsStatus" Collapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQQA=</HashCode>
+      <FileName>WithdrawalsStatus.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Microsoft YaHei UI" Size="9" />

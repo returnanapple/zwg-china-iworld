@@ -42,12 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryModelBase.cs" />
+    <Compile Include="IpToAddressComparison.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordingTimeModelBase.cs" />
     <Compile Include="RegularModelBase.cs" />
     <Compile Include="RegularStatus.cs" />
     <Compile Include="Relative.cs" />
+    <Compile Include="SettingDetail.cs" />
     <Compile Include="StatisticalDataModelBase.cs" />
   </ItemGroup>
   <ItemGroup>

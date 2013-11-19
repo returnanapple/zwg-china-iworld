@@ -8,10 +8,10 @@ using System.Windows;
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("zwg-china.host")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("最出色的的博彩投注软件，尽在iworld系列")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("zwg-china.host")]
+[assembly: AssemblyCompany("紫微阁工作室")]
+[assembly: AssemblyProduct("iworld系列（时时彩博彩平台）")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -51,5 +51,5 @@ using System.Windows;
 // 可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("4.6.*")]
+[assembly: AssemblyFileVersion("4.6.0.0")]

@@ -1,98 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="管理者对象的基类">
+    <Position X="0.5" Y="0.5" Height="0.284" Width="1.263" />
+  </Comment>
+  <Comment CommentText="信使服务">
+    <Position X="0.5" Y="1.844" Height="0.284" Width="0.783" />
+  </Comment>
   <Class Name="zwg_china.model.manager.ManagerService" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+    <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAQAAAEEAAAAAAAAAAAAAAAAAAIAQAAA=</HashCode>
       <FileName>ManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ManagerBase&lt;T&gt;" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAgQAAAAAAAABAAAAAAAAEAAAAAABAAAAAA=</HashCode>
       <FileName>ManagerBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfSendOnManagerService" Collapsed="true">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAIAAIAAA=</HashCode>
       <FileName>InfoOfSendOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfSendOnManagerService&lt;T&gt;" Collapsed="true">
-    <Position X="0.5" Y="5.5" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>InfoOfSendOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOnCallOnManagerService" Collapsed="true">
-    <Position X="2.25" Y="4.5" Width="1.5" />
+    <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>InfoOnCallOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOnCallOnManagerService&lt;T&gt;" Collapsed="true">
-    <Position X="2.25" Y="5.5" Width="1.5" />
+    <Position X="2.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>InfoOnCallOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ListenAttribute" Collapsed="true">
-    <Position X="4" Y="2.75" Width="1.5" />
+    <Position X="4" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAA=</HashCode>
       <FileName>ListenAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.OnCallAttribute" Collapsed="true">
-    <Position X="5.75" Y="2.75" Width="1.5" />
+    <Position X="5.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAA=</HashCode>
       <FileName>OnCallAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ListenerAttribute" Collapsed="true">
-    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ListenerAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ServerAttribute" Collapsed="true">
-    <Position X="2.25" Y="2.75" Width="1.5" />
+    <Position X="2.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ServerAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.model.manager.IPackageForCreateModel&lt;T&gt;" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IPackageForCreateModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="zwg_china.model.manager.IPackageForUpdateModel&lt;T&gt;" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQCAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>IPackageForUpdateModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="zwg_china.model.manager.DefaultAction" Collapsed="true">
-    <Position X="4" Y="2" Width="1.5" />
+    <Position X="4" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>DefaultAction.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="zwg_china.model.manager.ExecutionOrder" Collapsed="true">
-    <Position X="2.25" Y="2" Width="1.5" />
+    <Position X="2.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAA=</HashCode>
       <FileName>ExecutionOrder.cs</FileName>

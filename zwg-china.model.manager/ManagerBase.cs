@@ -106,7 +106,7 @@ namespace zwg_china.model.manager
         public T Create(IPackageForCreateModel<T> package)
         {
             package.CheckData(db);
-            var entity = package.GetEntity();
+            var entity = package.GetEntity(db);
             if (entity == null)
             {
                 throw new Exception("所要添加到数据库的数据模型不能为空，请检查传入的数据集");

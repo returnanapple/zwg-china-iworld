@@ -22,6 +22,7 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 获取数据模型的实体
         /// </summary>
-        T GetEntity();
+        /// <param name="db">数据库连接对象</param>
+        T GetEntity(DbContext db);
     }
 }
