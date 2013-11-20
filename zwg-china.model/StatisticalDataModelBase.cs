@@ -17,6 +17,7 @@ namespace zwg_china.model
         double rebate = 0;
         double bonus = 0;
         double commission = 0;
+        double reward = 0;
         double dividend = 0;
         double recharge = 0;
         double withdrawal = 0;
@@ -86,7 +87,20 @@ namespace zwg_china.model
             set
             {
                 if (value < 0) { throw new Exception("佣金不能小于0"); }
-                bonus = value;
+                commission = value;
+            }
+        }
+
+        /// <summary>
+        /// 活动奖励
+        /// </summary>
+        public double Reward
+        {
+            get { return reward; }
+            set
+            {
+                if (value < 0) { throw new Exception("活动奖励不能小于0"); }
+                reward = value;
             }
         }
 
@@ -155,7 +169,7 @@ namespace zwg_china.model
         /// </summary>
         public virtual void RefreshProfit()
         {
-            this.Profit = this.Bonus + this.Rebate + this.Commission - this.AmountOfBets;
+            this.Profit = this.Bonus + this.Rebate + this.Commission + this.Rebate - this.AmountOfBets;
         }
 
         #endregion
