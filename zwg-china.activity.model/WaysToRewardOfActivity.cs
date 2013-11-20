@@ -7,20 +7,14 @@ using System.Text;
 namespace zwg_china.model
 {
     /// <summary>
-    /// 用户状态
+    /// 奖品返还方式
     /// </summary>
     [DataContract]
-    public enum UserStatus
+    public enum WaysToRewardOfActivity
     {
         [EnumMember]
-        永久删除 = -3,
+        绝对值 = 1,
         [EnumMember]
-        删除 = -2,
-        [EnumMember]
-        禁止访问 = -1,
-        [EnumMember]
-        未激活 = 0,
-        [EnumMember]
-        正常 = 1
+        百分比 = 2
     }
 }

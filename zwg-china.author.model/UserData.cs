@@ -10,32 +10,97 @@ namespace zwg_china.model
     /// </summary>
     public class UserData : StatisticalDataModelBase
     {
+        #region 私有字段
+
+        double money = 0;
+        double money_Frozen = 0;
+        double consumption = 0;
+        double integral = 0;
+        int subordinate = 0;
+
+        #endregion
+
         #region 属性
 
         /// <summary>
         /// 现金余额
         /// </summary>
-        public double Money { get; set; }
+        public double Money
+        {
+            get { return money; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("现金余额不能小于0");
+                }
+                money = value;
+            }
+        }
 
         /// <summary>
         /// 被冻结的现金总额
         /// </summary>
-        public double Money_Frozen { get; set; }
+        public double Money_Frozen
+        {
+            get { return money_Frozen; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("被冻结的现金总额不能小于0");
+                }
+                money_Frozen = value;
+            }
+        }
 
         /// <summary>
         /// 消费量
         /// </summary>
-        public double Consumption { get; set; }
+        public double Consumption
+        {
+            get { return consumption; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("消费量不能小于0");
+                }
+                consumption = value;
+            }
+        }
 
         /// <summary>
         /// 积分
         /// </summary>
-        public double Integral { get; set; }
+        public double Integral
+        {
+            get { return integral; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("积分不能小于0");
+                }
+                integral = value;
+            }
+        }
 
         /// <summary>
         /// 直属下级数量
         /// </summary>
-        public int Subordinate { get; set; }
+        public int Subordinate
+        {
+            get { return subordinate; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("直属下级数量不能小于0");
+                }
+                subordinate = value;
+            }
+        }
 
         /// <summary>
         /// 直属的高点用户数量
@@ -51,11 +116,6 @@ namespace zwg_china.model
         /// </summary>
         public UserData()
         {
-            this.Money = 0;
-            this.Money_Frozen = 0;
-            this.Consumption = 0;
-            this.Integral = 0;
-            this.Subordinate = 0;
             this.SubordinateOfHighRebate = new List<SubordinateData>();
         }
 

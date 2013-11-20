@@ -7,20 +7,20 @@ using System.Text;
 namespace zwg_china.model
 {
     /// <summary>
-    /// 用户状态
+    /// 时间刻度
     /// </summary>
     [DataContract]
-    public enum UserStatus
+    public enum TimescaleOfActivity
     {
         [EnumMember]
-        永久删除 = -3,
+        无 = 0,
         [EnumMember]
-        删除 = -2,
+        日 = 101,
         [EnumMember]
-        禁止访问 = -1,
+        周 = 102,
         [EnumMember]
-        未激活 = 0,
+        月 = 103,
         [EnumMember]
-        正常 = 1
+        年 = 104
     }
 }

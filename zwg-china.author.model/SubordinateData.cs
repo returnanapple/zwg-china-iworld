@@ -10,6 +10,12 @@ namespace zwg_china.model
     /// </summary>
     public class SubordinateData : ModelBase
     {
+        #region 私有字段
+
+        int sun = 0;
+
+        #endregion
+
         #region 属性
 
         /// <summary>
@@ -20,7 +26,18 @@ namespace zwg_china.model
         /// <summary>
         /// 人数
         /// </summary>
-        public int Sum { get; set; }
+        public int Sum
+        {
+            get { return sun; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("人数不能小于0");
+                }
+                sun = value;
+            }
+        }
 
         #endregion
 
