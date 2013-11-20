@@ -44,10 +44,13 @@
     <Compile Include="Author.cs" />
     <Compile Include="AuthorLandingRecord.cs" />
     <Compile Include="Bank.cs" />
+    <Compile Include="CommissionRecord.cs" />
     <Compile Include="ConditionOfClearTheUser.cs" />
+    <Compile Include="DividendRecord.cs" />
     <Compile Include="ForgotPasswordRecord.cs" />
     <Compile Include="MoneyChangeRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebateRecord.cs" />
     <Compile Include="RechargeRecord.cs" />
     <Compile Include="RechargeStatus.cs" />
     <Compile Include="SpreadRecord.cs" />
