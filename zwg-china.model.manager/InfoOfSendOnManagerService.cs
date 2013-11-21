@@ -16,7 +16,7 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 数据库连接对象
         /// </summary>
-        public DbContext Db { get; private set; }
+        public IModelToDbContext Db { get; private set; }
 
         /// <summary>
         /// 触发对象
@@ -50,7 +50,7 @@ namespace zwg_china.model.manager
         /// <param name="executionAction">当前执行的动作</param>
         /// <param name="executionOrder">相对于出发动作的操作顺序</param>
         /// <param name="entity">当前操作的数据模型的实例</param>
-        public InfoOfSendOnManagerService(DbContext db, Type sender, object executionAction, ExecutionOrder executionOrder
+        public InfoOfSendOnManagerService(IModelToDbContext db, Type sender, object executionAction, ExecutionOrder executionOrder
             , object entity)
         {
             this.Db = db;
@@ -89,7 +89,7 @@ namespace zwg_china.model.manager
         /// <param name="executionOrder">相对于出发动作的操作顺序</param>
         /// <param name="entity">当前操作的数据模型的实例</param>
         /// <param name="entityInfo">额外的信息</param>
-        public InfoOfSendOnManagerService(DbContext db, Type sender, object executionAction, ExecutionOrder executionOrder
+        public InfoOfSendOnManagerService(IModelToDbContext db, Type sender, object executionAction, ExecutionOrder executionOrder
             , object entity, T entityInfo)
             : base(db, sender, executionAction, executionOrder, entity)
         {

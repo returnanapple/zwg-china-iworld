@@ -16,7 +16,7 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 数据库连接对象
         /// </summary>
-        public DbContext Db { get; private set; }
+        public IModelToDbContext Db { get; private set; }
 
         /// <summary>
         /// 触发对象
@@ -44,7 +44,7 @@ namespace zwg_china.model.manager
         /// <param name="sender">触发对象</param>
         /// <param name="executionAction">当前执行的动作</param>
         /// <param name="entity">当前操作的数据模型的实例</param>
-        public InfoOnCallOnManagerService(DbContext db, Type sender, object executionAction, object entity)
+        public InfoOnCallOnManagerService(IModelToDbContext db, Type sender, object executionAction, object entity)
         {
             this.Db = db;
             this.Sender = sender;
@@ -80,7 +80,7 @@ namespace zwg_china.model.manager
         /// <param name="executionAction">当前执行的动作</param>
         /// <param name="entity">当前操作的数据模型的实例</param>
         /// <param name="entityInfo">额外的信息</param>
-        public InfoOnCallOnManagerService(DbContext db, Type sender, object executionAction, object entity, T entityInfo)
+        public InfoOnCallOnManagerService(IModelToDbContext db, Type sender, object executionAction, object entity, T entityInfo)
             : base(db, sender, executionAction, entity)
         {
             this.EntityInfo = entityInfo;

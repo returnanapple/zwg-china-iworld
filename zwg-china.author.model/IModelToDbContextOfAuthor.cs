@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义用户模块的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfAuthor
+    public interface IModelToDbContextOfAuthor : IModelToDbContext
     {
         /// <summary>
         /// 用户信息的数据存储器

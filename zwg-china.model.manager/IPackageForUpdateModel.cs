@@ -22,7 +22,7 @@ namespace zwg_china.model.manager
         /// 检查输入的数据是否合法
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        void CheckData(DbContext db);
+        void CheckData(IModelToDbContext db);
 
         /// <summary>
         /// 修改数据模型

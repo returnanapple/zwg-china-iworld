@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义基本的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfBase
+    public interface IModelToDbContextOfBase : IModelToDbContext
     {
         /// <summary>
         /// 网络 - 实际地址对照的数据存储区

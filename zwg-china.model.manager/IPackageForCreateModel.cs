@@ -17,12 +17,12 @@ namespace zwg_china.model.manager
         /// 检查输入的数据是否合法
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        void CheckData(DbContext db);
+        void CheckData(IModelToDbContext db);
 
         /// <summary>
         /// 获取数据模型的实体
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        T GetEntity(DbContext db);
+        T GetModel(IModelToDbContext db);
     }
 }

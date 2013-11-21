@@ -75,11 +75,18 @@
       <FileName>Picture.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="zwg_china.model.IModelToDbContentOfBase" Collapsed="true">
-    <Position X="24.5" Y="0.5" Width="1.5" />
+  <Interface Name="zwg_china.model.IModelToDbContextOfBase" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAA=</HashCode>
-      <FileName>IModelToDbContentOfBase.cs</FileName>
+      <FileName>IModelToDbContextOfBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="zwg_china.model.IModelToDbContext" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IModelToDbContext.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="zwg_china.model.RegularStatus">
