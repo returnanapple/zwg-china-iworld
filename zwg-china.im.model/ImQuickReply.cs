@@ -6,7 +6,7 @@ using System.Text;
 namespace zwg_china.model
 {
     /// <summary>
-    /// 快捷回复
+    /// 快捷回复（IM）
     /// </summary>
     public class ImQuickReply : ModelBase
     {
@@ -27,14 +27,14 @@ namespace zwg_china.model
         #region 构造方法
 
         /// <summary>
-        /// 实例化一个新的快捷回复
+        /// 实例化一个新的快捷回复（IM）
         /// </summary>
         public ImQuickReply()
         {
         }
 
         /// <summary>
-        /// 实例化一个新的快捷回复
+        /// 实例化一个新的快捷回复（IM）
         /// </summary>
         /// <param name="userId">所属用户的存储指针（如为0则为公用）</param>
         /// <param name="context">正文</param>

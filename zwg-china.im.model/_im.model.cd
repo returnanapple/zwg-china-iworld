@@ -3,10 +3,13 @@
   <Comment CommentText="聊天插件">
     <Position X="0.5" Y="0.5" Height="0.284" Width="0.783" />
   </Comment>
+  <Comment CommentText="上下文">
+    <Position X="0.5" Y="2.073" Height="0.284" Width="0.7" />
+  </Comment>
   <Class Name="zwg_china.model.ImMessage" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAgAAAAAAAAAAAAQAAAAAAAACABACAAAAIAA=</HashCode>
       <FileName>ImMessage.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,6 +27,13 @@
       <FileName>ImUser.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="zwg_china.model.IModelToDbContext" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>IModelToDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="zwg_china.model.ImOnlineStatus" Collapsed="true">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>

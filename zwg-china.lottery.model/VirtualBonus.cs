@@ -5,6 +5,9 @@ using System.Text;
 
 namespace zwg_china.model
 {
+    /// <summary>
+    /// 虚拟排行
+    /// </summary>
     public class VirtualBonus : RecordingTimeModelBase
     {
         #region 公开属性

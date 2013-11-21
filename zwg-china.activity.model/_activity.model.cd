@@ -15,6 +15,9 @@
   <Comment CommentText="积分兑换">
     <Position X="0.5" Y="4.969" Height="0.284" Width="0.846" />
   </Comment>
+  <Comment CommentText="上下文">
+    <Position X="0.5" Y="7.823" Height="0.284" Width="0.815" />
+  </Comment>
   <Class Name="zwg_china.model.RewardForRegisterPlan" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -127,6 +130,13 @@
       <FileName>RedeemSnapshot.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="zwg_china.model.IModelToDbContextOfActivity" Collapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAAAQAAAAAAAAEAAAIIAAAAAAAIAAAAAIAQAEAA=</HashCode>
+      <FileName>IModelToDbContextOfActivity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="zwg_china.model.PrizesOfActivityType" Collapsed="true">
     <Position X="0.5" Y="7" Width="1.5" />
     <TypeIdentifier>
@@ -151,7 +161,7 @@
   <Enum Name="zwg_china.model.TimescaleOfActivity" Collapsed="true">
     <Position X="5.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEIAAAAAAAAAAAAAAABAAAAAQAQAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEIAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TimescaleOfActivity.cs</FileName>
     </TypeIdentifier>
   </Enum>

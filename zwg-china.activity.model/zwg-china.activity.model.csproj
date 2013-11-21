@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IModelToDbContextOfActivity.cs" />
     <Compile Include="PrizesOfActivityType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RedeemPlan.cs" />

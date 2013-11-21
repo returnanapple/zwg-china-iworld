@@ -3,6 +3,9 @@
   <Comment CommentText="交互消息">
     <Position X="0.5" Y="0.5" Height="0.284" Width="0.846" />
   </Comment>
+  <Comment CommentText="上下文">
+    <Position X="0.5" Y="2.021" Height="0.284" Width="0.846" />
+  </Comment>
   <Class Name="zwg_china.model.Bulletin" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -17,5 +20,12 @@
       <FileName>Notice.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="zwg_china.model.IModelToDbContextOfMessage" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IModelToDbContextOfMessage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

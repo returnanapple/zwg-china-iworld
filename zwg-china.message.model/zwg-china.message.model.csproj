@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bulletin.cs" />
+    <Compile Include="IModelToDbContextOfMessage.cs" />
     <Compile Include="Notice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

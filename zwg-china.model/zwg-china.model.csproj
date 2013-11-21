@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryModelBase.cs" />
-    <Compile Include="IModelToDbContentOfBase.cs" />
+    <Compile Include="IModelToDbContextOfBase.cs" />
     <Compile Include="IpToAddressComparison.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Picture.cs" />

@@ -55,6 +55,7 @@
     <Compile Include="ChasingSeat.cs" />
     <Compile Include="ChasingStatus.cs" />
     <Compile Include="HowToPlay.cs" />
+    <Compile Include="IModelToDbContextOfLottery.cs" />
     <Compile Include="Lottery.cs" />
     <Compile Include="LotteryInterface.cs" />
     <Compile Include="LotterySeat.cs" />

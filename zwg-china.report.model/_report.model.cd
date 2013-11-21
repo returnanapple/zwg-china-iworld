@@ -1,67 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="报表">
+    <Position X="0.5" Y="0.5" Height="0.284" Width="0.7" />
+  </Comment>
+  <Comment CommentText="上下文">
+    <Position X="0.5" Y="4.531" Height="0.284" Width="0.7" />
+  </Comment>
   <Class Name="zwg_china.model.RersonalReportForOneDay" Collapsed="true">
-    <Position X="5.75" Y="3.25" Width="1.5" />
+    <Position X="6.75" Y="3.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RersonalReportForOneDay.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.RersonalReportForOneMonth" Collapsed="true">
-    <Position X="8" Y="3.25" Width="1.5" />
+    <Position X="9.75" Y="3.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RersonalReportForOneMonth.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.TeamReportForOneDay" Collapsed="true">
-    <Position X="10.25" Y="3.25" Width="1.5" />
+    <Position X="13" Y="3.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TeamReportForOneDay.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.TeamReportForOneMonth" Collapsed="true">
-    <Position X="12.5" Y="3.25" Width="1.5" />
+    <Position X="15.75" Y="3.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TeamReportForOneMonth.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SiteReportForOneDay" Collapsed="true">
-    <Position X="1.25" Y="3.25" Width="1.5" />
+    <Position X="1.25" Y="3.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SiteReportForOneDay.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SiteReportForOneMonth" Collapsed="true">
-    <Position X="3.5" Y="3.25" Width="1.5" />
+    <Position X="4" Y="3.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SiteReportForOneMonth.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.ReportBase" Collapsed="true">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="8.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>ReportBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SiteReportBase" Collapsed="true">
-    <Position X="2.25" Y="2" Width="1.5" />
+    <Position X="2.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SiteReportBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.RersonalAndTeamReportBase" Collapsed="true">
-    <Position X="9" Y="2" Width="1.5" />
+    <Position X="11.25" Y="2" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAQAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>RersonalAndTeamReportBase.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="zwg_china.model.IModelToDbContextOfReport" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IModelToDbContextOfReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

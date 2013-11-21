@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImMessage.cs" />
+    <Compile Include="IModelToDbContext.cs" />
     <Compile Include="ImOnlineStatus.cs" />
     <Compile Include="ImQuickReply.cs" />
     <Compile Include="ImUser.cs" />
