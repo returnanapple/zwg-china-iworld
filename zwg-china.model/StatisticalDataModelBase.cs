@@ -19,6 +19,7 @@ namespace zwg_china.model
         double commission = 0;
         double reward = 0;
         double dividend = 0;
+        double profit = 0;
         double recharge = 0;
         double withdrawal = 0;
 
@@ -120,7 +121,11 @@ namespace zwg_china.model
         /// <summary>
         /// 盈亏
         /// </summary>
-        public double Profit { get; set; }
+        public double Profit
+        {
+            get { return profit; }
+            set { profit = value; }
+        }
 
         /// <summary>
         /// 充值
@@ -157,7 +162,34 @@ namespace zwg_china.model
         /// </summary>
         public StatisticalDataModelBase()
         {
-            this.Profit = 0;
+        }
+
+        /// <summary>
+        /// 实例化一个新的统计数据相关的数据模型
+        /// </summary>
+        /// <param name="timesOfLogin">登陆次数</param>
+        /// <param name="amountOfBets">投注额</param>
+        /// <param name="rebate">返点</param>
+        /// <param name="bonus">奖金</param>
+        /// <param name="commission">佣金</param>
+        /// <param name="reward">活动奖励</param>
+        /// <param name="dividend">分红</param>
+        /// <param name="recharge">充值</param>
+        /// <param name="withdrawal">提现</param>
+        public StatisticalDataModelBase(int timesOfLogin, double amountOfBets, double rebate, double bonus, double commission, double reward
+            , double dividend, double recharge, double withdrawal)
+        {
+            this.TimesOfLogin = timesOfLogin;
+            this.AmountOfBets = amountOfBets;
+            this.Rebate = rebate;
+            this.Bonus = bonus;
+            this.Commission = commission;
+            this.Reward = reward;
+            this.Dividend = dividend;
+            this.Recharge = recharge;
+            this.Withdrawal = withdrawal;
+
+            RefreshProfit();
         }
 
         #endregion
@@ -169,7 +201,7 @@ namespace zwg_china.model
         /// </summary>
         public virtual void RefreshProfit()
         {
-            this.Profit = this.Bonus + this.Rebate + this.Commission + this.Rebate - this.AmountOfBets;
+            this.Profit = this.Bonus + this.Rebate + this.Commission + this.Reward - this.AmountOfBets;
         }
 
         #endregion

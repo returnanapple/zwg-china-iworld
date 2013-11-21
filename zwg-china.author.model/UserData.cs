@@ -17,6 +17,7 @@ namespace zwg_china.model
         double consumption = 0;
         double integral = 0;
         int subordinate = 0;
+        List<SubordinateData> subordinateOfHighRebate = new List<SubordinateData>();
 
         #endregion
 
@@ -105,7 +106,11 @@ namespace zwg_china.model
         /// <summary>
         /// 直属的高点用户数量
         /// </summary>
-        public virtual List<SubordinateData> SubordinateOfHighRebate { get; set; }
+        public virtual List<SubordinateData> SubordinateOfHighRebate
+        {
+            get { return subordinateOfHighRebate; }
+            set { subordinateOfHighRebate = value; }
+        }
 
         #endregion
 
@@ -116,7 +121,6 @@ namespace zwg_china.model
         /// </summary>
         public UserData()
         {
-            this.SubordinateOfHighRebate = new List<SubordinateData>();
         }
 
         #endregion

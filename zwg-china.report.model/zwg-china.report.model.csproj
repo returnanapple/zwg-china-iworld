@@ -40,6 +40,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportBase.cs" />
+    <Compile Include="RersonalReportForOneDay.cs" />
+    <Compile Include="RersonalReportForOneMonth.cs" />
+    <Compile Include="SiteReportBase.cs" />
+    <Compile Include="SiteReportForOneDay.cs" />
+    <Compile Include="SiteReportForOneMonth.cs" />
+    <Compile Include="RersonalAndTeamReportBase.cs" />
+    <Compile Include="TeamReportForOneDay.cs" />
+    <Compile Include="TeamReportForOneMonth.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_report.model.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
+      <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
+      <Name>zwg-china.author.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.model\zwg-china.model.csproj">
+      <Project>{276735de-42f6-40db-a96d-9ecf74a659c8}</Project>
+      <Name>zwg-china.model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

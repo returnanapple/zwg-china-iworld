@@ -15,12 +15,8 @@ namespace zwg_china.model
         [EnumMember]
         无 = 0,
         [EnumMember]
-        日 = 101,
+        日 = 1,
         [EnumMember]
-        周 = 102,
-        [EnumMember]
-        月 = 103,
-        [EnumMember]
-        年 = 104
+        月 = 2,
     }
 }
