@@ -19,11 +19,6 @@ namespace zwg_china.model.manager
         int Id { get; }
 
         /// <summary>
-        /// 一个布尔值，表示改数据集是否自定义修改数据模型的方法
-        /// </summary>
-        bool IsCustom { get; }
-
-        /// <summary>
         /// 检查输入的数据是否合法
         /// </summary>
         /// <param name="db">数据库连接对象</param>

@@ -14,7 +14,7 @@ namespace zwg_china.model
         /// <summary>
         /// 注册奖励的计划的数据存储区
         /// </summary>
-        DbSet<RewardForRechargePlan> RewardForRechargePlans { get; set; }
+        DbSet<RewardForRegisterPlan> RewardForRegisterPlans { get; set; }
 
         /// <summary>
         /// 注册奖励的计划的快照的数据存储区

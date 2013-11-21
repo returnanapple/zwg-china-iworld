@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultAction.cs" />
     <Compile Include="InfoOfSendOnManagerService.cs" />
     <Compile Include="ExecutionOrder.cs" />
     <Compile Include="InfoOnCallOnManagerService.cs" />
