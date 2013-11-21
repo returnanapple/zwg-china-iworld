@@ -6,7 +6,7 @@ using System.Text;
 namespace zwg_china.model
 {
     /// <summary>
-    /// 用于清理用户列表的
+    /// 用于自动清理用户的条件
     /// </summary>
     public class ConditionOfClearTheUser : ModelBase
     {

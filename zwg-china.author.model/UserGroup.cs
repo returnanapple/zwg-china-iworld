@@ -5,6 +5,9 @@ using System.Text;
 
 namespace zwg_china.model
 {
+    /// <summary>
+    /// 用户组
+    /// </summary>
     public class UserGroup : ModelBase
     {
         #region 公开属性

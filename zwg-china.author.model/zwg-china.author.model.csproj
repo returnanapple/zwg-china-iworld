@@ -54,6 +54,7 @@
     <Compile Include="ConditionOfClearTheUser.cs" />
     <Compile Include="DividendRecord.cs" />
     <Compile Include="ForgotPasswordRecord.cs" />
+    <Compile Include="IModelToDbContextOfAuthor.cs" />
     <Compile Include="MoneyChangeRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RebateRecord.cs" />

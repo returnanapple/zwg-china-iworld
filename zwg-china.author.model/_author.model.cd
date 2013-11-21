@@ -15,7 +15,7 @@
   <Comment CommentText="充值">
     <Position X="0.5" Y="5.067" Height="0.284" Width="0.7" />
   </Comment>
-  <Comment CommentText="充值">
+  <Comment CommentText="提现">
     <Position X="0.5" Y="6.556" Height="0.284" Width="0.7" />
   </Comment>
   <Comment CommentText="帐变明细">
@@ -36,6 +36,9 @@
   <Comment CommentText="返点、佣金和分红">
     <Position X="0.5" Y="9.567" Height="0.284" Width="1.445" />
   </Comment>
+  <Comment CommentText="上下文">
+    <Position X="0.5" Y="11.036" Height="0.284" Width="0.7" />
+  </Comment>
   <Class Name="zwg_china.model.Author" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -53,7 +56,7 @@
   <Class Name="zwg_china.model.UserData" Collapsed="true">
     <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAgAAAAAAAAAQAAAAAAAAAkAgAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAQAAgAAAgIAAAAQAAAAACAAAkAgAAFAAAAAAAAEAA=</HashCode>
       <FileName>UserData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -74,7 +77,7 @@
   <Class Name="zwg_china.model.SubordinateData" Collapsed="true">
     <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>SubordinateData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -176,6 +179,13 @@
       <FileName>RebateRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="zwg_china.model.IModelToDbContextOfAuthor" Collapsed="true">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAACAAAQAAABAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>IModelToDbContextOfAuthor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="zwg_china.model.Bank" Collapsed="true">
     <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -186,7 +196,7 @@
   <Enum Name="zwg_china.model.UserStatus" Collapsed="true">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAEAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAkAAAAEAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>UserStatus.cs</FileName>
     </TypeIdentifier>
   </Enum>
