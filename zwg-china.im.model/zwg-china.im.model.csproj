@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C851A7ED-7DDF-4755-8AFF-9D14B3C24BE3}</ProjectGuid>
+    <ProjectGuid>{44C447CE-12B9-4030-AC6F-AE358557F5A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>zwg_china.model</RootNamespace>
-    <AssemblyName>zwg-china.report.model</AssemblyName>
+    <AssemblyName>zwg-china.im.model</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,27 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImMessage.cs" />
+    <Compile Include="ImOnlineStatus.cs" />
+    <Compile Include="ImQuickReply.cs" />
+    <Compile Include="ImUser.cs" />
+    <Compile Include="ImUserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportBase.cs" />
-    <Compile Include="RersonalReportForOneDay.cs" />
-    <Compile Include="RersonalReportForOneMonth.cs" />
-    <Compile Include="SiteReportBase.cs" />
-    <Compile Include="SiteReportForOneDay.cs" />
-    <Compile Include="SiteReportForOneMonth.cs" />
-    <Compile Include="RersonalAndTeamReportBase.cs" />
-    <Compile Include="TeamReportForOneDay.cs" />
-    <Compile Include="TeamReportForOneMonth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="_report.model.cd" />
+    <None Include="_im.model.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
-      <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
-      <Name>zwg-china.author.model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\zwg-china.model\zwg-china.model.csproj">
       <Project>{276735de-42f6-40db-a96d-9ecf74a659c8}</Project>
       <Name>zwg-china.model</Name>
