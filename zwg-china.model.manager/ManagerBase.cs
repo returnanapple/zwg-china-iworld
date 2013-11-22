@@ -17,12 +17,12 @@ namespace zwg_china.model.manager
         where TActions : struct
         where TModel : ModelBase
     {
-        #region 私有字段
+        #region 保护字段
 
         /// <summary>
         /// 数据库连接对象
         /// </summary>
-        TDbContext db = null;
+        protected TDbContext db = null;
 
         #endregion
 
@@ -35,9 +35,9 @@ namespace zwg_china.model.manager
         /// <param name="entity">当前操作的数据模型的实例</param>
         protected void OnExecuting(object executionAction, object entity)
         {
-            InfoOfSendOnManagerService info
-                = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.Before, entity);
-            ManagerService.Send(info);
+            //InfoOfSendOnManagerService info
+            //    = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.Before, entity);
+            //ManagerService.Send(info);
         }
 
         /// <summary>
@@ -49,9 +49,9 @@ namespace zwg_china.model.manager
         /// <param name="entityInfo">附加信息</param>
         protected void OnExecuting<T>(object executionAction, object entity, T entityInfo)
         {
-            InfoOfSendOnManagerService<T> info
-                = new InfoOfSendOnManagerService<T>(db, this.GetType(), executionAction, ExecutionOrder.Before, entity, entityInfo);
-            ManagerService.Send(info);
+            //InfoOfSendOnManagerService<T> info
+            //    = new InfoOfSendOnManagerService<T>(db, this.GetType(), executionAction, ExecutionOrder.Before, entity, entityInfo);
+            //ManagerService.Send(info);
         }
 
         /// <summary>
@@ -61,9 +61,9 @@ namespace zwg_china.model.manager
         /// <param name="entity">当前操作的数据模型的实例</param>
         protected void OnExecuted(object executionAction, object entity)
         {
-            InfoOfSendOnManagerService info
-                = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.After, entity);
-            ManagerService.Send(info);
+            //InfoOfSendOnManagerService info
+            //    = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.After, entity);
+            //ManagerService.Send(info);
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace zwg_china.model.manager
         /// <param name="entityInfo">附加信息</param>
         protected void OnExecuted<T>(object executionAction, object entity, T entityInfo)
         {
-            InfoOfSendOnManagerService<T> info
-                = new InfoOfSendOnManagerService<T>(db, this.GetType(), executionAction, ExecutionOrder.After, entity, entityInfo);
-            ManagerService.Send(info);
+            //InfoOfSendOnManagerService<T> info
+            //    = new InfoOfSendOnManagerService<T>(db, this.GetType(), executionAction, ExecutionOrder.After, entity, entityInfo);
+            //ManagerService.Send(info);
         }
 
         #endregion

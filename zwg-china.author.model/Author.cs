@@ -50,7 +50,7 @@ namespace zwg_china.model
         /// <summary>
         /// 上次登录的实际地址
         /// </summary>
-        public string LastLoginAddres { get; set; }
+        public string LastLoginAddress { get; set; }
 
         /// <summary>
         /// 绑定信息
@@ -100,11 +100,27 @@ namespace zwg_china.model
             this.PlayInfo = playInfo;
             this.Status = UserStatus.未激活;
             this.LastLoginIp = "从未登陆";
-            this.LastLoginAddres = "从未登陆";
+            this.LastLoginAddress = "从未登陆";
             this.LastLoginTime = DateTime.Now;
             this.Data = new UserData();
             this.Binding = new UserBinding();
             this.ExtraQuotas = new List<ExtraQuota>();
+        }
+
+        #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 声明用户已经登录
+        /// </summary>
+        /// <param name="ip">网络地址</param>
+        /// <param name="address">实际地址</param>
+        public void OnLogin(string ip, string address)
+        {
+            this.LastLoginIp = ip;
+            this.LastLoginAddress = address;
+            this.LastLoginTime = DateTime.Now;
         }
 
         #endregion

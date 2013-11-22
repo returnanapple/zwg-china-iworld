@@ -55,6 +55,10 @@
     <None Include="_author.model.manager.cd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\zwg-china.aid\zwg-china.aid.csproj">
+      <Project>{5b7b4da0-8f8c-427a-89ac-24aeab0f8bd3}</Project>
+      <Name>zwg-china.aid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
       <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
       <Name>zwg-china.author.model</Name>
