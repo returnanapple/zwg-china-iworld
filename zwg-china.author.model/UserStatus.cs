@@ -13,10 +13,6 @@ namespace zwg_china.model
     public enum UserStatus
     {
         [EnumMember]
-        永久删除 = -3,
-        [EnumMember]
-        删除 = -2,
-        [EnumMember]
         禁止访问 = -1,
         [EnumMember]
         未激活 = 0,

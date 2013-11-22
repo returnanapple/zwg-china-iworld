@@ -41,6 +41,10 @@ namespace zwg_china.model.manager
             {
                 throw new Exception("用户名或密码错误，请重新输入");
             }
+            if (user.Status == UserStatus.禁止访问)
+            {
+                throw new Exception("黑名单，你懂的。");
+            }
 
             OnExecuting(Actions.Login, user);
             user.OnLogin(package.Ip, package.Address);
@@ -50,36 +54,90 @@ namespace zwg_china.model.manager
             return user;
         }
 
-        /// <summary>
-        /// 移除用户
-        /// </summary>
-        /// <param name="id">所要移除的用户的存储指针</param>
-        public override void Remove(int id)
-        {
-            Author user = db.Authors.FirstOrDefault(x => x.Id == id);
-            if (user == null)
-            {
-                throw new Exception("存储指针指向的用户不存在，请检查输入");
-            }
-
-            OnExecuting(Actions.Remove, user);
-            user.Status = UserStatus.删除;
-            OnExecuted(Actions.Remove, user);
-            db.SaveChanges();
-        }
-
         #endregion
 
         #region 静态方法
 
-        public static void ChangeMoney()
+        #region 服务
+
+        /// <summary>
+        /// 服务：修改用户的账户余额
+        /// </summary>
+        /// <param name="info">数据集</param>
+        public static void Service_ChangeMoney(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author, ChangeMoneyArgs> info)
+        {
+            Author user = info.Db.Authors.FirstOrDefault(x => x.Id == info.Args.UserId);
+            if (user == null)
+            {
+                throw new Exception("给定的存储指针指向的用户不存在");
+            }
+
+            user.Money += info.Args.Sum;
+        }
+
+        #endregion
+
+        #region 监听
+
+        /// <summary>
+        /// 监听：（直属）下级用户数量改变
+        /// </summary>
+        /// <param name="info">数据集</param>
+        public static void Monitor_AddSubordinate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
+        {
+            if (info.Model.Layer <= 1) { return; }
+            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            if (user == null)
+            {
+                string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
+                    , info.Model.Username
+                    , info.Model.Layer);
+                throw new Exception(error);
+            }
+
+            user.Subordinate++;
+        }
+
+        /// <summary>
+        /// 监听：（直属）下级用户（高点号）数量改变
+        /// </summary>
+        /// <param name="info">数据集</param>
+        public static void Monitor_AddSubordinateOfHighRebate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
+        {
+            if (info.Model.Layer <= 1) { return; }
+            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            if (user == null)
+            {
+                string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
+                    , info.Model.Username
+                    , info.Model.Layer);
+                throw new Exception(error);
+            }
+
+            SubordinateData sd = user.SubordinateOfHighRebate.FirstOrDefault(x => x.Rebate == info.Model.PlayInfo.Rebate_Normal);
+            if (sd == null)
+            {
+                sd = new SubordinateData(info.Model.PlayInfo.Rebate_Normal, 1);
+                user.SubordinateOfHighRebate.Add(sd);
+            }
+            else
+            {
+                sd.Sum++;
+            }
+        }
+
+        public static void Monitor_FreezeMoney(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, WithdrawalsRecordManager.Actions, WithdrawalsRecord> info)
         {
 
         }
 
         #endregion
 
-        #region 内嵌枚举
+        #endregion
+
+        #region 内嵌元素
+
+        #region 枚举
 
         /// <summary>
         /// 动作
@@ -106,10 +164,10 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 内嵌类型
+        #region 接口
 
         /// <summary>
-        /// 定于用于登陆的数据集
+        /// 定义用于登陆的数据集
         /// </summary>
         public interface PackageForLogin
         {
@@ -134,6 +192,10 @@ namespace zwg_china.model.manager
             string Address { get; }
         }
 
+        #endregion
+
+        #region 类型
+
         /// <summary>
         /// 用于向改变目标用户的余额的方法传递数据的数据集
         /// </summary>
@@ -149,6 +211,8 @@ namespace zwg_china.model.manager
             /// </summary>
             public double Sum { get; set; }
         }
+
+        #endregion
 
         #endregion
     }

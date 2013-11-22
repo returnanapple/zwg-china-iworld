@@ -67,7 +67,6 @@
     <Compile Include="TransferRecord.cs" />
     <Compile Include="TransferStatus.cs" />
     <Compile Include="UserBinding.cs" />
-    <Compile Include="UserData.cs" />
     <Compile Include="UserGroup.cs" />
     <Compile Include="UserPlayInfo.cs" />
     <Compile Include="ExtraQuota.cs" />

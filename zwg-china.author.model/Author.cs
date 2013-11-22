@@ -10,6 +10,17 @@ namespace zwg_china.model
     /// </summary>
     public class Author : CategoryModelBase
     {
+        #region 私有字段
+
+        double money = 0;
+        double money_Frozen = 0;
+        double consumption = 0;
+        double integral = 0;
+        int subordinate = 0;
+        List<SubordinateData> subordinateOfHighRebate = new List<SubordinateData>();
+
+        #endregion
+
         #region 属性
 
         /// <summary>
@@ -63,14 +74,102 @@ namespace zwg_china.model
         public virtual UserPlayInfo PlayInfo { get; set; }
 
         /// <summary>
-        /// 统计数据
-        /// </summary>
-        public virtual UserData Data { get; set; }
-
-        /// <summary>
         /// 额外的高点号配额
         /// </summary>
         public virtual List<ExtraQuota> ExtraQuotas { get; set; }
+
+        #region 数据
+
+        /// <summary>
+        /// 现金余额
+        /// </summary>
+        public double Money
+        {
+            get { return money; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("现金余额不能小于0");
+                }
+                money = value;
+            }
+        }
+
+        /// <summary>
+        /// 被冻结的现金总额
+        /// </summary>
+        public double Money_Frozen
+        {
+            get { return money_Frozen; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("被冻结的现金总额不能小于0");
+                }
+                money_Frozen = value;
+            }
+        }
+
+        /// <summary>
+        /// 消费量
+        /// </summary>
+        public double Consumption
+        {
+            get { return consumption; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("消费量不能小于0");
+                }
+                consumption = value;
+            }
+        }
+
+        /// <summary>
+        /// 积分
+        /// </summary>
+        public double Integral
+        {
+            get { return integral; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("积分不能小于0");
+                }
+                integral = value;
+            }
+        }
+
+        /// <summary>
+        /// 直属下级数量
+        /// </summary>
+        public int Subordinate
+        {
+            get { return subordinate; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("直属下级数量不能小于0");
+                }
+                subordinate = value;
+            }
+        }
+
+        /// <summary>
+        /// 直属的高点用户数量
+        /// </summary>
+        public virtual List<SubordinateData> SubordinateOfHighRebate
+        {
+            get { return subordinateOfHighRebate; }
+            set { subordinateOfHighRebate = value; }
+        }
+
+        #endregion
 
         #endregion
 
@@ -102,7 +201,6 @@ namespace zwg_china.model
             this.LastLoginIp = "从未登陆";
             this.LastLoginAddress = "从未登陆";
             this.LastLoginTime = DateTime.Now;
-            this.Data = new UserData();
             this.Binding = new UserBinding();
             this.ExtraQuotas = new List<ExtraQuota>();
         }

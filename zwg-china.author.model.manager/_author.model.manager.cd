@@ -1,13 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="用户模块的数据模型的管理者对象">
-    <Position X="0.5" Y="0.5" Height="0.542" Width="1.825" />
-  </Comment>
   <Class Name="zwg_china.model.manager.AuthorManager" Collapsed="true">
-    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAA=</HashCode>
+      <FileName>AuthorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.WithdrawalsRecordManager" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.WithdrawalsRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WithdrawalsRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>AuthorManager.cs</FileName>
+      <FileName>WithdrawalsRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

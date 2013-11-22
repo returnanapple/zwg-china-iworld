@@ -3,11 +3,8 @@
   <Comment CommentText="用户">
     <Position X="0.5" Y="0.5" Height="0.284" Width="0.7" />
   </Comment>
-  <Comment CommentText="统计数据">
-    <Position X="0.5" Y="2.058" Height="0.284" Width="1.175" />
-  </Comment>
   <Comment CommentText="直属高点号配额">
-    <Position X="4" Y="2.042" Height="0.284" Width="1.309" />
+    <Position X="0.5" Y="2.042" Height="0.284" Width="1.309" />
   </Comment>
   <Comment CommentText="自动清理用户">
     <Position X="0.5" Y="8.025" Height="0.284" Width="1.112" />
@@ -42,7 +39,7 @@
   <Class Name="zwg_china.model.Author" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAEAAAAAAgAAQCAAEAAAAACADACAAAAAAAAACE=</HashCode>
+      <HashCode>AAgQAAgEAAgIAAgAQQAAAkCAAAkCgCAHAAAAAAAAECE=</HashCode>
       <FileName>Author.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -53,15 +50,8 @@
       <FileName>UserBinding.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.UserData" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAQAAgAAAgIAAAAQAAAAACAAAkAgAAFAAAAAAAAEAA=</HashCode>
-      <FileName>UserData.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="zwg_china.model.ExtraQuota" Collapsed="true">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>ExtraQuota.cs</FileName>
@@ -75,21 +65,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SubordinateData" Collapsed="true">
-    <Position X="2.25" Y="2.5" Width="1.5" />
+    <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>SubordinateData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SystemQuota" Collapsed="true">
-    <Position X="5.75" Y="2.5" Width="1.5" />
+    <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>SystemQuota.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SystemQuotaDetail" Collapsed="true">
-    <Position X="7.5" Y="2.5" Width="1.5" />
+    <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>SystemQuotaDetail.cs</FileName>
@@ -182,21 +172,21 @@
   <Interface Name="zwg_china.model.IModelToDbContextOfAuthor" Collapsed="true">
     <Position X="0.5" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAAACAAAQAAABAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAABAAIAAAAQJAACABgQAAABAAABAAAAAAQAQAAA=</HashCode>
       <FileName>IModelToDbContextOfAuthor.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="zwg_china.model.Bank" Collapsed="true">
-    <Position X="7.5" Y="1" Width="1.5" />
+    <Position X="9.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAABAAAEEAAAAAAAAAADAQAAAAAAAAAAEABQAAAAA=</HashCode>
       <FileName>Bank.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="zwg_china.model.UserStatus" Collapsed="true">
-    <Position X="5.75" Y="1" Width="1.5" />
+    <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAkAAAAEAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAEAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>UserStatus.cs</FileName>
     </TypeIdentifier>
   </Enum>
