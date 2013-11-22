@@ -32,52 +32,52 @@ namespace zwg_china.model.manager
         /// 在动作执行前呼叫相关连锁动作
         /// </summary>
         /// <param name="executionAction">即将要执行动作的标识</param>
-        /// <param name="entity">当前操作的数据模型的实例</param>
-        protected void OnExecuting(object executionAction, object entity)
+        /// <param name="model">当前操作的数据模型的实例</param>
+        protected void OnExecuting(TActions executionAction, TModel model)
         {
-            //InfoOfSendOnManagerService info
-            //    = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.Before, entity);
-            //ManagerService.Send(info);
+            InfoOfSendOnManagerService<TDbContext, TActions, TModel> info
+                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel>(db, this.GetType(), executionAction, ExecutionOrder.Before, model);
+            ManagerService.Send(info);
         }
 
         /// <summary>
         /// 在动作执行前呼叫相关连锁动作
         /// </summary>
-        /// <typeparam name="T">所要附加的信息的类型</typeparam>
+        /// <typeparam name="TArgs">所要附加的信息的类型</typeparam>
         /// <param name="executionAction">即将要执行动作的标识</param>
-        /// <param name="entity">当前操作的数据模型的实例</param>
-        /// <param name="entityInfo">附加信息</param>
-        protected void OnExecuting<T>(object executionAction, object entity, T entityInfo)
+        /// <param name="model">当前操作的数据模型的实例</param>
+        /// <param name="args">附加信息</param>
+        protected void OnExecuting<TArgs>(TActions executionAction, TModel model, TArgs args)
         {
-            //InfoOfSendOnManagerService<T> info
-            //    = new InfoOfSendOnManagerService<T>(db, this.GetType(), executionAction, ExecutionOrder.Before, entity, entityInfo);
-            //ManagerService.Send(info);
+            InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs> info
+                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs>(db, this.GetType(), executionAction, ExecutionOrder.Before, model, args);
+            ManagerService.Send(info);
         }
 
         /// <summary>
         /// 在动作执行完毕之后呼叫相关连锁动作
         /// </summary>
         /// <param name="executionAction">之前执行的动作的标识</param>
-        /// <param name="entity">当前操作的数据模型的实例</param>
-        protected void OnExecuted(object executionAction, object entity)
+        /// <param name="model">当前操作的数据模型的实例</param>
+        protected void OnExecuted(TActions executionAction, TModel model)
         {
-            //InfoOfSendOnManagerService info
-            //    = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.After, entity);
-            //ManagerService.Send(info);
+            InfoOfSendOnManagerService<TDbContext, TActions, TModel> info
+                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel>(db, this.GetType(), executionAction, ExecutionOrder.After, model);
+            ManagerService.Send(info);
         }
 
         /// <summary>
         /// 在动作执行完毕之后呼叫相关连锁动作
         /// </summary>
-        /// <typeparam name="T">之前执行的动作的标识</typeparam>
+        /// <typeparam name="TArgs">之前执行的动作的标识</typeparam>
         /// <param name="executionAction">即将要执行动作的标识</param>
-        /// <param name="entity">当前操作的数据模型的实例</param>
-        /// <param name="entityInfo">附加信息</param>
-        protected void OnExecuted<T>(object executionAction, object entity, T entityInfo)
+        /// <param name="model">当前操作的数据模型的实例</param>
+        /// <param name="args">附加信息</param>
+        protected void OnExecuted<TArgs>(TActions executionAction, TModel model, TArgs args)
         {
-            //InfoOfSendOnManagerService<T> info
-            //    = new InfoOfSendOnManagerService<T>(db, this.GetType(), executionAction, ExecutionOrder.After, entity, entityInfo);
-            //ManagerService.Send(info);
+            InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs> info
+                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs>(db, this.GetType(), executionAction, ExecutionOrder.After, model, args);
+            ManagerService.Send(info);
         }
 
         #endregion

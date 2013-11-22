@@ -9,22 +9,8 @@
   <Class Name="zwg_china.model.manager.ManagerService" Collapsed="true">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAQAAAEEAAAAAAAAAAAAAAAAAAIAQAAA=</HashCode>
+      <HashCode>AQAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAIAQAAA=</HashCode>
       <FileName>ManagerService.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="zwg_china.model.manager.ListenerAttribute" Collapsed="true">
-    <Position X="0.5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ListenerAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="zwg_china.model.manager.ServerAttribute" Collapsed="true">
-    <Position X="2.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ServerAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ManagerBase&lt;TDbContext, TActions, TModel&gt;" Collapsed="true">
@@ -35,39 +21,39 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfSendOnManagerService" Collapsed="true">
-    <Position X="0.5" Y="4.25" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAwAAAAAACIQgAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>InfoOfSendOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfSendOnManagerService&lt;TDbContext, TActions, TModel&gt;" Collapsed="true">
-    <Position X="2.25" Y="4.25" Width="1.5" />
+    <Position X="2.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAgAIAAIAAA=</HashCode>
       <FileName>InfoOfSendOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfSendOnManagerService&lt;TDbContext, TActions, TModel, TArgs&gt;" Collapsed="true">
-    <Position X="4" Y="4.25" Width="1.5" />
+    <Position X="4" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>InfoOfSendOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfCallOnManagerService" Collapsed="true">
-    <Position X="0.5" Y="5.25" Width="1.5" />
+    <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAwAAAAAAAIQgAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>InfoOnCallOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfCallOnManagerService&lt;TDbContext, TActions, TModel&gt;" Collapsed="true">
-    <Position X="2.25" Y="5.25" Width="1.5" />
+    <Position X="2.25" Y="4.25" Width="1.5" />
     <InheritanceLine Type="zwg_china.model.manager.InfoOfCallOnManagerService" FixedFromPoint="true">
       <Path>
-        <Point X="2" Y="5.562" />
-        <Point X="2.25" Y="5.562" />
+        <Point X="2" Y="4.562" />
+        <Point X="2.25" Y="4.562" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -76,11 +62,11 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.InfoOfCallOnManagerService&lt;TDbContext, TActions, TModel, TArgs&gt;" Collapsed="true">
-    <Position X="4" Y="5.25" Width="1.5" />
+    <Position X="4" Y="4.25" Width="1.5" />
     <InheritanceLine Type="zwg_china.model.manager.InfoOfCallOnManagerService&lt;TDbContext, TActions, TModel&gt;" FixedFromPoint="true">
       <Path>
-        <Point X="3.75" Y="5.562" />
-        <Point X="4" Y="5.562" />
+        <Point X="3.75" Y="4.562" />
+        <Point X="4" Y="4.562" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -89,71 +75,43 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ServiceInfo" Collapsed="true">
-    <Position X="2.25" Y="7.5" Width="1.5" />
+    <Position X="8" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAA=</HashCode>
       <FileName>ServiceInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ServiceInfo&lt;TDbContext, TActions, TModel&gt;" Collapsed="true">
-    <Position X="0.5" Y="7.5" Width="1.5" />
+    <Position X="6.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ServiceInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ServiceInfo&lt;TDbContext, TActions, TModel, TArgs&gt;" Collapsed="true">
-    <Position X="4" Y="7.5" Width="1.5" />
+    <Position X="9.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ServiceInfo.cs</FileName>
       <NewMemberFileName>MonitorInfo.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.manager.ListenAttribute&lt;TDbContext, TActions, TModel&gt;" Collapsed="true">
-    <Position X="7.75" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAIAAAAAAAAIAgAAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ListenAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="zwg_china.model.manager.ListenAttribute&lt;TDbContext, TActions, TModel, TArgs&gt;" Collapsed="true">
-    <Position X="6" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAIAAAAAAAAIAgAAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ListenAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="zwg_china.model.manager.OnCallAttribute&lt;TDbContext, TActions, TModel&gt;" Collapsed="true">
-    <Position X="7.75" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAgAAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OnCallAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="zwg_china.model.manager.OnCallAttribute&lt;TDbContext, TActions, TModel, TArgs&gt;" Collapsed="true">
-    <Position X="6" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAgAAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OnCallAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="zwg_china.model.manager.MonitorInfo" Collapsed="true">
-    <Position X="2.25" Y="6.5" Width="1.5" />
+    <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAA=</HashCode>
       <FileName>MonitorInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.MonitorInfo&lt;TDbContext, TActions, TModel&gt;" Collapsed="true">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Position X="6.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>MonitorInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.MonitorInfo&lt;TDbContext, TActions, TModel, TArgs&gt;" Collapsed="true">
-    <Position X="4" Y="6.5" Width="1.5" />
+    <Position X="9.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>MonitorInfo.cs</FileName>

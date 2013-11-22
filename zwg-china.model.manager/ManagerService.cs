@@ -26,87 +26,117 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 静态方法
+        #region 注册
 
         /// <summary>
-        /// 初始化信使服务
+        /// 注册监听信息
         /// </summary>
-        public static void Initialize()
+        /// <param name="info">监听信息</param>
+        public static void RegisterMonitor(MonitorInfo info)
         {
-            monitors.Clear();
-            services.Clear();
+            monitors.Add(info);
+        }
 
-            string path = string.Format("{0}/Content/LogicAssemblies.xml", AppDomain.CurrentDomain.BaseDirectory);
-            XElement doc = XElement.Load(path);
-            doc.Elements("assembliy").ToList().ForEach(x => LoadFormAssembly(x.Value));
+        /// <summary>
+        /// 注册服务信息
+        /// </summary>
+        /// <param name="info">服务信息</param>
+        public static void RegisterMonitor(ServiceInfo info)
+        {
+            services.Add(info);
+        }
+
+        #endregion
+
+        #region 呼叫
+
+        /// <summary>
+        /// 呼叫监听
+        /// </summary>
+        /// <typeparam name="TDbContext">数据库连接对象的类型</typeparam>
+        /// <typeparam name="TActions">方法的标识的类型</typeparam>
+        /// <typeparam name="TModel">数据模型的类型</typeparam>
+        /// <param name="info">数据集</param>
+        public static void Send<TDbContext, TActions, TModel>(InfoOfSendOnManagerService<TDbContext, TActions, TModel> info)
+            where TDbContext : IModelToDbContext
+            where TActions : struct
+            where TModel : ModelBase
+        {
+            monitors.Where(monitor => monitor is MonitorInfo<TDbContext, TActions, TModel>)
+                .Where(monitor => info.Accord(monitor))
+                .ToList()
+                .ForEach(monitor =>
+                {
+                    MonitorInfo<TDbContext, TActions, TModel> _monitor = (MonitorInfo<TDbContext, TActions, TModel>)monitor;
+                    _monitor.Excite(info);
+                });
         }
 
         /// <summary>
         /// 呼叫监听
         /// </summary>
+        /// <typeparam name="TDbContext">数据库连接对象的类型</typeparam>
+        /// <typeparam name="TActions">方法的标识的类型</typeparam>
+        /// <typeparam name="TModel">数据模型的类型</typeparam>
+        /// <typeparam name="TArgs">额外的信息的类型</typeparam>
         /// <param name="info">数据集</param>
-        public static void Send(InfoOfSendOnManagerService info)
+        public static void Send<TDbContext, TActions, TModel, TArgs>(InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs> info)
+            where TDbContext : IModelToDbContext
+            where TActions : struct
+            where TModel : ModelBase
         {
+            monitors.Where(monitor => monitor is MonitorInfo<TDbContext, TActions, TModel, TArgs>)
+                .Where(monitor => info.Accord(monitor))
+                .ToList()
+                .ForEach(monitor =>
+                {
+                    MonitorInfo<TDbContext, TActions, TModel, TArgs> _monitor = (MonitorInfo<TDbContext, TActions, TModel, TArgs>)monitor;
+                    _monitor.Excite(info);
+                });
         }
 
         /// <summary>
         /// 呼叫服务
         /// </summary>
-        /// <param name="info"></param>
-        public static void Call(InfoOfCallOnManagerService info)
+        /// <typeparam name="TDbContext">数据库连接对象的类型</typeparam>
+        /// <typeparam name="TActions">方法的标识的类型</typeparam>
+        /// <typeparam name="TModel">数据模型的类型</typeparam>
+        /// <param name="info">数据集</param>
+        public static void Call<TDbContext, TActions, TModel>(InfoOfCallOnManagerService<TDbContext, TActions, TModel> info)
+            where TDbContext : IModelToDbContext
+            where TActions : struct
+            where TModel : ModelBase
         {
+            services.Where(service => services is ServiceInfo<TDbContext, TActions, TModel>)
+                .Where(service => info.Accord(service))
+                .ToList()
+                .ForEach(service =>
+                {
+                    ServiceInfo<TDbContext, TActions, TModel> _service = (ServiceInfo<TDbContext, TActions, TModel>)service;
+                    _service.Excite(info);
+                });
         }
 
-        #endregion
-
-        #region 私有方法
-
         /// <summary>
-        /// 加载程序中声明的监听和服务
+        /// 呼叫服务
         /// </summary>
-        /// <param name="assemblyName">程序集的长名称</param>
-        static void LoadFormAssembly(string assemblyName)
+        /// <typeparam name="TDbContext">数据库连接对象的类型</typeparam>
+        /// <typeparam name="TActions">方法的标识的类型</typeparam>
+        /// <typeparam name="TModel">数据模型的类型</typeparam>
+        /// <typeparam name="TArgs">额外的信息的类型</typeparam>
+        /// <param name="info">数据集</param>
+        public static void Call<TDbContext, TActions, TModel, TArgs>(InfoOfCallOnManagerService<TDbContext, TActions, TModel, TArgs> info)
+            where TDbContext : IModelToDbContext
+            where TActions : struct
+            where TModel : ModelBase
         {
-            Assembly assembly = Assembly.Load(assemblyName);
-            assembly.GetTypes().Where(type => type.GetCustomAttributes().Any(attribute => attribute is ListenerAttribute || attribute is ServerAttribute))
-                .ToList().ForEach(type =>
+            services.Where(service => services is ServiceInfo<TDbContext, TActions, TModel, TArgs>)
+                .Where(service => info.Accord(service))
+                .ToList()
+                .ForEach(service =>
                 {
-                    #region 注册监听
-
-                    type.GetMethods().Where(method => method.GetCustomAttributes<ListenAttribute>().Count() > 0)
-                        .ToList().ForEach(method =>
-                        {
-                            //ListenAttribute attribute = method.GetCustomAttributes<ListenAttribute>().Single();
-
-                            //MonitorInfo mi = new MonitorInfo(attribute.ListenTo, attribute.InterestedAction, attribute.InterestedOrder
-                            //    , (info) =>
-                            //    {
-                            //        object[] parameters = new object[] { info };
-                            //        method.Invoke(null, parameters);
-                            //    });
-                            //monitors.Add(mi);
-
-                        });
-
-                    #endregion
-
-                    #region 注册服务
-
-                    type.GetMethods().Where(method => method.GetCustomAttributes<OnCallAttribute>().Count() > 0)
-                        .ToList().ForEach(method =>
-                        {
-                            //OnCallAttribute attribute = method.GetCustomAttributes<OnCallAttribute>().Single();
-
-                            //ServiceInfo si = new ServiceInfo(attribute.ListenTo, attribute.InterestedAction
-                            //    , (info) =>
-                            //    {
-                            //        object[] parameters = new object[] { info };
-                            //        method.Invoke(null, parameters);
-                            //    });
-                            //services.Add(si);
-                        });
-
-                    #endregion
+                    ServiceInfo<TDbContext, TActions, TModel, TArgs> _service = (ServiceInfo<TDbContext, TActions, TModel, TArgs>)service;
+                    _service.Excite(info);
                 });
         }
 
