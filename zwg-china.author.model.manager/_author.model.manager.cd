@@ -1,24 +1,174 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="用户相关的管理者对象">
+    <Position X="0.5" Y="0.5" Height="0.284" Width="1.7" />
+  </Comment>
   <Class Name="zwg_china.model.manager.AuthorManager" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAA=</HashCode>
+      <HashCode>AAAACQABAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAA=</HashCode>
       <FileName>AuthorManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.WithdrawalsRecordManager" Collapsed="true">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WithdrawalsRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.SystemQuotaManager" Collapsed="true">
+    <Position X="2.25" Y="1" Width="1.5" />
     <NestedTypes>
-      <Enum Name="zwg_china.model.manager.WithdrawalsRecordManager.Actions" Collapsed="true">
+      <Enum Name="zwg_china.model.manager.SystemQuotaManager.Actions" Collapsed="true">
         <TypeIdentifier>
-          <NewMemberFileName>WithdrawalsRecordManager.cs</NewMemberFileName>
+          <NewMemberFileName>SystemQuotaManager.cs</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WithdrawalsRecordManager.cs</FileName>
+      <FileName>SystemQuotaManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.UserGroupManager" Collapsed="true">
+    <Position X="4" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.UserGroupManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UserGroupManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserGroupManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.TransferRecordManager" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.TransferRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TransferRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransferRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RechargeRecordManager" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.RechargeRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>RechargeRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RechargeRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.MoneyChangeRecordManager" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.MoneyChangeRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MoneyChangeRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoneyChangeRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.SpreadRecordManager" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.SpreadRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SpreadRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpreadRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.ForgotPasswordRecordManager" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.ForgotPasswordRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ForgotPasswordRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ForgotPasswordRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.AuthorLandingRecordManager" Collapsed="true">
+    <Position X="4" Y="4" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.AuthorLandingRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AuthorLandingRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuthorLandingRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RebateRecordManager" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.RebateRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>RebateRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RebateRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.CommissionRecordManager" Collapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.CommissionRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CommissionRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommissionRecordManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.DividendRecordManager" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.DividendRecordManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DividendRecordManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DividendRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

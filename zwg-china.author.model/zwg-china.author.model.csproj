@@ -51,7 +51,6 @@
     <Compile Include="AuthorLandingRecord.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="CommissionRecord.cs" />
-    <Compile Include="ConditionOfClearTheUser.cs" />
     <Compile Include="DividendRecord.cs" />
     <Compile Include="ForgotPasswordRecord.cs" />
     <Compile Include="IModelToDbContextOfAuthor.cs" />

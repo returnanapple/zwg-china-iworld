@@ -6,17 +6,17 @@ using System.Text;
 namespace zwg_china.model.manager
 {
     /// <summary>
-    /// 提现记录的管理者对象
+    /// 系统设定的高点号配额方案的管理者对象
     /// </summary>
-    public class WithdrawalsRecordManager : ManagerBase<IModelToDbContextOfAuthor, WithdrawalsRecordManager.Actions, WithdrawalsRecord>
+    public class SystemQuotaManager : ManagerBase<IModelToDbContextOfAuthor, SystemQuotaManager.Actions, SystemQuota>
     {
         #region 构造方法
 
         /// <summary>
-        /// 实例化一个新的提现记录的管理者对象
+        /// 实例化一个新的系统设定的高点号配额方案的管理者对象
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        public WithdrawalsRecordManager(IModelToDbContextOfAuthor db)
+        public SystemQuotaManager(IModelToDbContextOfAuthor db)
             : base(db)
         {
 

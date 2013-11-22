@@ -46,8 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorLandingRecordManager.cs" />
     <Compile Include="AuthorManager.cs" />
+    <Compile Include="CommissionRecordManager.cs" />
+    <Compile Include="DividendRecordManager.cs" />
+    <Compile Include="ForgotPasswordRecordManager.cs" />
+    <Compile Include="MoneyChangeRecordManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebateRecordManager.cs" />
+    <Compile Include="RechargeRecordManager.cs" />
+    <Compile Include="SpreadRecordManager.cs" />
+    <Compile Include="SystemQuotaManager.cs" />
+    <Compile Include="TransferRecordManager.cs" />
+    <Compile Include="UserGroupManager.cs" />
     <Compile Include="WithdrawalsRecordManager.cs" />
   </ItemGroup>
   <ItemGroup>

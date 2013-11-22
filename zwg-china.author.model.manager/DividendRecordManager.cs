@@ -6,17 +6,17 @@ using System.Text;
 namespace zwg_china.model.manager
 {
     /// <summary>
-    /// 提现记录的管理者对象
+    /// 分红记录的管理者对象
     /// </summary>
-    public class WithdrawalsRecordManager : ManagerBase<IModelToDbContextOfAuthor, WithdrawalsRecordManager.Actions, WithdrawalsRecord>
+    public class DividendRecordManager : ManagerBase<IModelToDbContextOfAuthor, DividendRecordManager.Actions, DividendRecord>
     {
         #region 构造方法
 
         /// <summary>
-        /// 实例化一个新的提现记录的管理者对象
+        /// 实例化一个新的分红记录的管理者对象
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        public WithdrawalsRecordManager(IModelToDbContextOfAuthor db)
+        public DividendRecordManager(IModelToDbContextOfAuthor db)
             : base(db)
         {
 

@@ -6,9 +6,6 @@
   <Comment CommentText="直属高点号配额">
     <Position X="0.5" Y="2.042" Height="0.284" Width="1.309" />
   </Comment>
-  <Comment CommentText="自动清理用户">
-    <Position X="0.5" Y="8.025" Height="0.284" Width="1.112" />
-  </Comment>
   <Comment CommentText="充值">
     <Position X="0.5" Y="5.067" Height="0.284" Width="0.7" />
   </Comment>
@@ -19,13 +16,13 @@
     <Position X="4.021" Y="6.535" Height="0.284" Width="0.846" />
   </Comment>
   <Comment CommentText="推广">
-    <Position X="2.26" Y="8.015" Height="0.284" Width="0.7" />
+    <Position X="0.51" Y="8.265" Height="0.284" Width="0.7" />
   </Comment>
   <Comment CommentText="找回密码">
-    <Position X="4" Y="8.035" Height="0.284" Width="0.94" />
+    <Position X="2.25" Y="8.285" Height="0.284" Width="0.94" />
   </Comment>
   <Comment CommentText="登陆记录">
-    <Position X="5.75" Y="8.025" Height="0.284" Width="0.94" />
+    <Position X="4" Y="8.275" Height="0.284" Width="0.94" />
   </Comment>
   <Comment CommentText="用户组">
     <Position X="0.5" Y="3.557" Height="0.284" Width="0.7" />
@@ -85,13 +82,6 @@
       <FileName>SystemQuotaDetail.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.ConditionOfClearTheUser" Collapsed="true">
-    <Position X="0.5" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ConditionOfClearTheUser.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="zwg_china.model.RechargeRecord" Collapsed="true">
     <Position X="2.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
@@ -121,21 +111,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SpreadRecord" Collapsed="true">
-    <Position X="2.25" Y="8.5" Width="1.5" />
+    <Position X="0.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACARAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpreadRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.ForgotPasswordRecord" Collapsed="true">
-    <Position X="4" Y="8.5" Width="1.5" />
+    <Position X="2.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ForgotPasswordRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.AuthorLandingRecord" Collapsed="true">
-    <Position X="5.75" Y="8.5" Width="1.5" />
+    <Position X="4" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAA=</HashCode>
       <FileName>AuthorLandingRecord.cs</FileName>
