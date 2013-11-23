@@ -18,21 +18,17 @@ namespace zwg_china.model.manager
         /// </summary>
         protected IModelToDbContext db;
         /// <summary>
-        /// 触发对象
+        /// 提供服务的对象
         /// </summary>
-        protected Type sender;
+        protected Type supplier;
         /// <summary>
-        /// 当前执行的动作
+        /// 服务名
         /// </summary>
-        protected object executionAction;
+        protected object serviceName;
         /// <summary>
-        /// 当前操作的数据模型的实例
+        /// 传递的信息
         /// </summary>
-        protected object model;
-        /// <summary>
-        /// 额外的信息
-        /// </summary>
-        protected object args;
+        protected object agrs;
 
         #endregion
 
@@ -42,17 +38,15 @@ namespace zwg_china.model.manager
         /// 实例化一个新的用于向信使服务传递信息的数据集（服务）
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        /// <param name="sender">触发对象</param>
-        /// <param name="executionAction">当前执行的动作</param>
-        /// <param name="model">当前操作的数据模型的实例</param>
-        /// <param name="args">额外的信息</param>
-        public InfoOfCallOnManagerService(IModelToDbContext db, Type sender, object executionAction, object model, object args)
+        /// <param name="supplier">提供服务的对象</param>
+        /// <param name="serviceName">服务名</param>
+        /// <param name="args">传递的信息</param>
+        public InfoOfCallOnManagerService(IModelToDbContext db, Type supplier, object serviceName, object args)
         {
             this.db = db;
-            this.sender = sender;
-            this.executionAction = executionAction;
-            this.model = model;
-            this.args = args;
+            this.supplier = supplier;
+            this.serviceName = serviceName;
+            this.agrs = args;
         }
 
         #endregion
@@ -60,14 +54,14 @@ namespace zwg_china.model.manager
         #region 方法
 
         /// <summary>
-        /// 判断给定的服务条件是否相符
+        /// 判断给定的服务签名是否相符
         /// </summary>
         /// <param name="info">所要进行判断的服务信息</param>
-        /// <returns>返回一个布尔值，表示给定的服务条件是否相符</returns>
+        /// <returns>返回一个布尔值，表示给定的服务签名是否相符</returns>
         public bool Accord(ServiceInfo info)
         {
-            return this.sender == info.ListenTo
-                && this.executionAction.Equals(info.InterestedAction);
+            return this.supplier == info.Supplier
+                && this.serviceName.Equals(info.ServiceName);
         }
 
         #endregion
@@ -76,11 +70,12 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 用于向信使服务传递信息的数据集（服务）
     /// </summary>
-    /// <typeparam name="TDbContext">所要传递的数据库连接对象的类型</typeparam>
-    public class InfoOfCallOnManagerService<TDbContext, TActions, TModel> : InfoOfCallOnManagerService
+    /// <typeparam name="TDbContext">数据库连接对象的类型</typeparam>
+    /// <typeparam name="TActions">服务的标识的类型</typeparam>
+    /// <typeparam name="TArgs">传递的信息的类型</typeparam>
+    public class InfoOfCallOnManagerService<TDbContext, TServices, TArgs> : InfoOfCallOnManagerService
         where TDbContext : IModelToDbContext
-        where TActions : struct
-        where TModel : ModelBase
+        where TServices : struct
     {
         #region 属性
 
@@ -93,67 +88,27 @@ namespace zwg_china.model.manager
         }
 
         /// <summary>
-        /// 触发对象
+        /// 提供服务的对象
         /// </summary>
-        public Type Sender
+        public Type Supplier
         {
-            get { return sender; }
+            get { return supplier; }
         }
 
         /// <summary>
-        /// 当前执行的动作
+        /// 服务名
         /// </summary>
-        public TActions ExecutionAction
+        public TServices ServiceName
         {
-            get { return (TActions)executionAction; }
+            get { return (TServices)serviceName; }
         }
 
         /// <summary>
-        /// 当前操作的数据模型的实例
-        /// </summary>
-        public TModel Model
-        {
-            get { return (TModel)model; }
-        }
-
-        #endregion
-
-        #region 构造方法
-
-        /// <summary>
-        /// 实例化一个新的用于向信使服务传递信息的数据集（服务）
-        /// </summary>
-        /// <param name="db">数据库连接对象</param>
-        /// <param name="sender">触发对象</param>
-        /// <param name="executionAction">当前执行的动作</param>
-        /// <param name="model">当前操作的数据模型的实例</param>
-        /// <param name="args">额外的信息</param>
-        public InfoOfCallOnManagerService(TDbContext db, Type sender, TActions executionAction, TModel model, object args = null)
-            : base(db, sender, executionAction, model, args)
-        {
-        }
-
-        #endregion
-    }
-
-    /// <summary>
-    /// 用于向信使服务传递信息的数据集泛型实现（服务）
-    /// </summary>
-    /// <typeparam name="TDbContext">所要传递的数据库连接对象的类型</typeparam>
-    /// <typeparam name="TArgs">所要额外传递的数据的类型</typeparam>
-    public class InfoOfCallOnManagerService<TDbContext, TActions, TModel, TArgs> : InfoOfCallOnManagerService<TDbContext, TActions, TModel>
-        where TDbContext : IModelToDbContext
-        where TActions : struct
-        where TModel : ModelBase
-    {
-        #region 属性
-
-        /// <summary>
-        /// 额外的信息
+        /// 传递的信息
         /// </summary>
         public TArgs Args
         {
-            get { return (TArgs)args; }
+            get { return (TArgs)agrs; }
         }
 
         #endregion
@@ -164,13 +119,11 @@ namespace zwg_china.model.manager
         /// 实例化一个新的用于向信使服务传递信息的数据集（服务）
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        /// <param name="sender">触发对象</param>
-        /// <param name="executionAction">当前执行的动作</param>
-        /// <param name="executionOrder">相对于出发动作的操作顺序</param>
-        /// <param name="entity">当前操作的数据模型的实例</param>
-        /// <param name="args">额外的信息</param>
-        public InfoOfCallOnManagerService(TDbContext db, Type sender, TActions executionAction, TModel entity, TArgs args)
-            : base(db, sender, executionAction, entity, args)
+        /// <param name="sender">提供服务的对象</param>
+        /// <param name="serviceName">服务名</param>
+        /// <param name="args">传递的信息</param>
+        public InfoOfCallOnManagerService(TDbContext db, Type sender, TServices serviceName, object args)
+            : base(db, sender, serviceName, args)
         {
         }
 
