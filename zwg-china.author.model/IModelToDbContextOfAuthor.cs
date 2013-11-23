@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义用户模块的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfAuthor : IModelToDbContext
+    public interface IModelToDbContextOfAuthor : IModelToDbContextOfBase
     {
         /// <summary>
         /// 用户信息的数据存储器
@@ -45,11 +45,6 @@ namespace zwg_china.model
         /// 帐变记录的数据存储器
         /// </summary>
         DbSet<MoneyChangeRecord> MoneyChangeRecords { get; set; }
-
-        /// <summary>
-        /// 用于自动清理用户的条件的数据存储器
-        /// </summary>
-        DbSet<ConditionOfClearTheUser> ConditionOfClearTheUsers { get; set; }
 
         /// <summary>
         /// 推广记录的数据存储器

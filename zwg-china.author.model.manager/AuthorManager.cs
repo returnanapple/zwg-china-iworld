@@ -64,15 +64,34 @@ namespace zwg_china.model.manager
         /// 服务：修改用户的账户余额
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Service_ChangeMoney(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author, ChangeMoneyArgs> info)
+        public static void Service_ChangeMoney(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Services, ChangeMoneyArgs> info)
         {
-            Author user = info.Db.Authors.FirstOrDefault(x => x.Id == info.Args.UserId);
-            if (user == null)
-            {
-                throw new Exception("给定的存储指针指向的用户不存在");
-            }
-
+            Author user = info.Db.Authors.Find(info.Args.UserId);
             user.Money += info.Args.Sum;
+        }
+
+        /// <summary>
+        /// 服务：修改用户被冻结的金额
+        /// </summary>
+        /// <param name="info">数据集</param>
+        public static void Service_ChangeFreeze(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Services, ChangeFreezeCrgs> info)
+        {
+            Author user = info.Db.Authors.Find(info.Args.UserId);
+            user.Money_Frozen += info.Args.Sum;
+            if (info.Args.LinkageWithMoney)
+            {
+                user.Money -= info.Args.Sum;
+            }
+        }
+
+        /// <summary>
+        /// 服务：修改用户的积分
+        /// </summary>
+        /// <param name="info">数据集</param>
+        public static void Service_ChangeIntegral(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Services, ChangeIntegralArgs> info)
+        {
+            Author user = info.Db.Authors.Find(info.Args.UserId);
+            user.Integral += info.Args.Sum;
         }
 
         #endregion
@@ -80,7 +99,7 @@ namespace zwg_china.model.manager
         #region 监听
 
         /// <summary>
-        /// 监听：（直属）下级用户数量改变
+        /// 监听：（直属）下级用户数量+1
         /// </summary>
         /// <param name="info">数据集</param>
         public static void Monitor_AddSubordinate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
@@ -99,7 +118,26 @@ namespace zwg_china.model.manager
         }
 
         /// <summary>
-        /// 监听：（直属）下级用户（高点号）数量改变
+        /// 监听：（直属）下级用户数量-1
+        /// </summary>
+        /// <param name="info">数据集</param>
+        public static void Monitor_RemoveSubordinate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
+        {
+            if (info.Model.Layer <= 1) { return; }
+            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            if (user == null)
+            {
+                string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
+                    , info.Model.Username
+                    , info.Model.Layer);
+                throw new Exception(error);
+            }
+
+            user.Subordinate--;
+        }
+
+        /// <summary>
+        /// 监听：（直属）下级用户（高点号）数量+1
         /// </summary>
         /// <param name="info">数据集</param>
         public static void Monitor_AddSubordinateOfHighRebate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
@@ -126,9 +164,27 @@ namespace zwg_china.model.manager
             }
         }
 
-        public static void Monitor_FreezeMoney(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, WithdrawalsRecordManager.Actions, WithdrawalsRecord> info)
+        /// <summary>
+        /// 监听：（直属）下级用户（高点号）数量-1
+        /// </summary>
+        /// <param name="info">数据集</param>
+        public static void Monitor_RemoveSubordinateOfHighRebate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
         {
+            if (info.Model.Layer <= 1) { return; }
+            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            if (user == null)
+            {
+                string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
+                    , info.Model.Username
+                    , info.Model.Layer);
+                throw new Exception(error);
+            }
 
+            SubordinateData sd = user.SubordinateOfHighRebate.FirstOrDefault(x => x.Rebate == info.Model.PlayInfo.Rebate_Normal);
+            if (sd != null)
+            {
+                sd.Sum--;
+            }
         }
 
         #endregion
@@ -160,6 +216,25 @@ namespace zwg_china.model.manager
             /// 用户登录
             /// </summary>
             Login
+        }
+
+        /// <summary>
+        /// 服务
+        /// </summary>
+        public enum Services
+        {
+            /// <summary>
+            /// 修改用户的账户余额
+            /// </summary>
+            ChangeMoney,
+            /// <summary>
+            /// 修改用户被冻结的金额
+            /// </summary>
+            ChangeFreeze,
+            /// <summary>
+            /// 修改用户的积分
+            /// </summary>
+            ChangeIntegral
         }
 
         #endregion
@@ -197,9 +272,46 @@ namespace zwg_china.model.manager
         #region 类型
 
         /// <summary>
-        /// 用于向改变目标用户的余额的方法传递数据的数据集
+        /// 用于向改变目标用户的余额的服务传递数据的数据集
         /// </summary>
         public class ChangeMoneyArgs
+        {
+            /// <summary>
+            /// 目标用户的存储指针
+            /// </summary>
+            public int UserId { get; set; }
+
+            /// <summary>
+            /// 所要改变的数额
+            /// </summary>
+            public double Sum { get; set; }
+        }
+
+        /// <summary>
+        /// 用于向修改用户被冻结的金额的服务传递数据的数据集
+        /// </summary>
+        public class ChangeFreezeCrgs
+        {
+            /// <summary>
+            /// 目标用户的存储指针
+            /// </summary>
+            public int UserId { get; set; }
+
+            /// <summary>
+            /// 所要改变的数额
+            /// </summary>
+            public double Sum { get; set; }
+
+            /// <summary>
+            /// 一个布尔值，表示是否需要跟现金账户联动
+            /// </summary>
+            public bool LinkageWithMoney { get; set; }
+        }
+
+        /// <summary>
+        /// 用于向改变目标用户的积分的服务传递数据的数据集
+        /// </summary>
+        public class ChangeIntegralArgs
         {
             /// <summary>
             /// 目标用户的存储指针
