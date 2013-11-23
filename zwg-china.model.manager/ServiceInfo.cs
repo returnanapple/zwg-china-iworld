@@ -29,12 +29,12 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 实例化一个新的服务信息
         /// </summary>
-        /// <param name="listenTo">提供服务的对象</param>
-        /// <param name="interestedService">服务名</param>
-        public ServiceInfo(Type listenTo, object interestedService)
+        /// <param name="supplier">提供服务的对象</param>
+        /// <param name="serviceName">服务名</param>
+        public ServiceInfo(Type supplier, object serviceName)
         {
-            this.Supplier = listenTo;
-            this.ServiceName = interestedService;
+            this.Supplier = supplier;
+            this.ServiceName = serviceName;
         }
 
         #endregion
@@ -44,18 +44,18 @@ namespace zwg_china.model.manager
     /// 服务信息
     /// </summary>
     /// <typeparam name="TDbContext">数据库连接对象的类型</typeparam>
-    /// <typeparam name="TActions">服务的标识的类型</typeparam>
+    /// <typeparam name="TServices">服务的标识的类型</typeparam>
     /// <typeparam name="TArgs">传递的信息的类型</typeparam>
-    public class ServiceInfo<TDbContext, TActions, TArgs> : ServiceInfo
+    public class ServiceInfo<TDbContext, TServices, TArgs> : ServiceInfo
         where TDbContext : IModelToDbContext
-        where TActions : struct
+        where TServices : struct
     {
         #region 属性
 
         /// <summary>
         /// 调用服务的时候将要执行的方法
         /// </summary>
-        public Action<InfoOfCallOnManagerService<TDbContext, TActions, TArgs>> Excite { get; private set; }
+        public Action<InfoOfCallOnManagerService<TDbContext, TServices, TArgs>> Excite { get; private set; }
 
         #endregion
 
@@ -64,12 +64,12 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 实例化一个新的服务信息
         /// </summary>
-        /// <param name="listenTo">提供服务的对象</param>
-        /// <param name="interestedAction">服务名</param>
+        /// <param name="supplier">提供服务的对象</param>
+        /// <param name="serviceName">服务名</param>
         /// <param name="excite">调用服务的时候将要执行的方法</param>
-        public ServiceInfo(Type listenTo, object interestedAction
-            , Action<InfoOfCallOnManagerService<TDbContext, TActions, TArgs>> excite)
-            : base(listenTo, interestedAction)
+        public ServiceInfo(Type supplier, TServices serviceName
+            , Action<InfoOfCallOnManagerService<TDbContext, TServices, TArgs>> excite)
+            : base(supplier, serviceName)
         {
             this.Excite = excite;
         }

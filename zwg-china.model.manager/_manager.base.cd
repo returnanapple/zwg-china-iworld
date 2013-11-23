@@ -9,7 +9,7 @@
   <Class Name="zwg_china.model.manager.ManagerService" Collapsed="true">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAIAQAAA=</HashCode>
+      <HashCode>AQAAQAAAAAAAAAAAAEAAAAAAAACAAAAAAAAAAIAQAAA=</HashCode>
       <FileName>ManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -70,7 +70,7 @@
       <FileName>ServiceInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.manager.ServiceInfo&lt;TDbContext, TActions, TArgs&gt;" Collapsed="true">
+  <Class Name="zwg_china.model.manager.ServiceInfo&lt;TDbContext, TServices, TArgs&gt;" Collapsed="true">
     <Position X="5.75" Y="5.25" Width="1.5" />
     <InheritanceLine Type="zwg_china.model.manager.ServiceInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
@@ -105,6 +105,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>MonitorInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RIBase" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RIBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.model.manager.IPackageForCreateModel&lt;T&gt;" Collapsed="true">

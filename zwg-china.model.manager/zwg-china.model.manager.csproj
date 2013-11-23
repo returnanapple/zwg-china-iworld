@@ -55,6 +55,7 @@
     <Compile Include="ManagerService.cs" />
     <Compile Include="MonitorInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RIBase.cs" />
     <Compile Include="ServiceInfo.cs" />
   </ItemGroup>
   <ItemGroup>

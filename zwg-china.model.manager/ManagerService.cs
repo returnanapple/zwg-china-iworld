@@ -41,7 +41,7 @@ namespace zwg_china.model.manager
         /// 注册服务信息
         /// </summary>
         /// <param name="info">服务信息</param>
-        public static void RegisterMonitor(ServiceInfo info)
+        public static void RegisterService(ServiceInfo info)
         {
             services.Add(info);
         }

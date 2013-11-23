@@ -8,37 +8,66 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 用户相关的系统设置
     /// </summary>
-    public class SettingOfAuthor
+    public class SettingOfAuthor : SettingBase
     {
-        #region 私有字段
-
-        List<SettingDetail> details = new List<SettingDetail>();
-
-        #endregion
-
         #region 属性
+
+        /// <summary>
+        /// 允许设置的最低返点
+        /// </summary>
+        public double LowerRebate
+        {
+            get { return GetDoubleValue("LowerRebate", 4.5); }
+            set { SetValue("LowerRebate", value); }
+        }
+
+        /// <summary>
+        /// 允许设置的最高返点
+        /// </summary>
+        public double CapsRebate
+        {
+            get { return GetDoubleValue("CapsRebate", 13.0); }
+            set { SetValue("CapsRebate", value); }
+        }
+
+        /// <summary>
+        /// “高点号”定义的下限
+        /// </summary>
+        public double LowerRebateOfHigh
+        {
+            get { return GetDoubleValue("LowerRebateOfHigh", 12.1); }
+            set { SetValue("LowerRebateOfHigh", value); }
+        }
+
+        /// <summary>
+        /// “高点号”定义的上限
+        /// </summary>
+        public double CapsRebateOfHigh
+        {
+            get { return GetDoubleValue("CapsRebateOfHigh", 12.1); }
+            set { SetValue("CapsRebateOfHigh", value); }
+        }
 
         #endregion
 
         #region 构造方法
 
-        public SettingOfAuthor(IModelToDbContextOfBase db)
+        /// <summary>
+        /// 获取一个用户相关的系统设置的副本（空）
+        /// </summary>
+        public SettingOfAuthor()
         {
-            Type classType = this.GetType();
-            classType.GetProperties().ToList().ForEach(property =>
-                {
-                    if (!property.CanRead) { return; }
-                    string key = string.Format("[{0}]{1}", classType.FullName, property.Name);
-                    SettingDetail sd = db.SettingDetails.FirstOrDefault(x => x.Key == key);
-                    if (sd == null)
-                    {
 
-                    }
-                    else
-                    {
-                        details.Add(sd);
-                    }
-                });
+        }
+
+        /// <summary>
+        /// 获取一个用户相关的系统设置的副本
+        /// </summary>
+        /// <param name="db">数据库连接对象</param>
+        public SettingOfAuthor(IModelToDbContextOfBase db)
+            : base(db)
+        {
+
         }
 
         #endregion
