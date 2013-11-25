@@ -162,23 +162,29 @@ namespace zwg_china.model.manager
         /// 服务：修改用户的账户余额
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Service_ChangeMoney(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Services, ChangeMoneyArgs> info)
+        public static void Service_ChangeMoney(InfoOfCallOnManagerService info)
         {
-            Author user = info.Db.Authors.Find(info.Args.UserId);
-            user.Money += info.Args.Sum;
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            ChangeMoneyArgs args = (ChangeMoneyArgs)info.Args;
+
+            Author user = db.Authors.Find(args.UserId);
+            user.Money += args.Sum;
         }
 
         /// <summary>
         /// 服务：修改用户被冻结的金额
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Service_ChangeFreeze(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Services, ChangeFreezeCrgs> info)
+        public static void Service_ChangeFreeze(InfoOfCallOnManagerService info)
         {
-            Author user = info.Db.Authors.Find(info.Args.UserId);
-            user.Money_Frozen += info.Args.Sum;
-            if (info.Args.LinkageWithMoney)
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            ChangeFreezeCrgs args = (ChangeFreezeCrgs)info.Args;
+
+            Author user = db.Authors.Find(args.UserId);
+            user.Money_Frozen += args.Sum;
+            if (args.LinkageWithMoney)
             {
-                user.Money -= info.Args.Sum;
+                user.Money -= args.Sum;
             }
         }
 
@@ -186,10 +192,13 @@ namespace zwg_china.model.manager
         /// 服务：修改用户的积分
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Service_ChangeIntegral(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Services, ChangeIntegralArgs> info)
+        public static void Service_ChangeIntegral(InfoOfCallOnManagerService info)
         {
-            Author user = info.Db.Authors.Find(info.Args.UserId);
-            user.Integral += info.Args.Sum;
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            ChangeFreezeCrgs args = (ChangeFreezeCrgs)info.Args;
+
+            Author user = db.Authors.Find(args.UserId);
+            user.Integral += args.Sum;
         }
 
         #endregion
@@ -200,15 +209,18 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户数量+1
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Monitor_AddSubordinate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
+        public static void Monitor_AddSubordinate(InfoOfSendOnManagerService info)
         {
-            if (info.Model.Layer <= 1) { return; }
-            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            Author model = (Author)info.Model;
+
+            if (model.Layer <= 1) { return; }
+            Author user = db.Authors.FirstOrDefault(x => model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == model.Layer - 1);
             if (user == null)
             {
                 string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
-                    , info.Model.Username
-                    , info.Model.Layer);
+                    , model.Username
+                    , model.Layer);
                 throw new Exception(error);
             }
 
@@ -219,15 +231,18 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户数量-1
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Monitor_RemoveSubordinate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
+        public static void Monitor_RemoveSubordinate(InfoOfSendOnManagerService info)
         {
-            if (info.Model.Layer <= 1) { return; }
-            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            Author model = (Author)info.Model;
+
+            if (model.Layer <= 1) { return; }
+            Author user = db.Authors.FirstOrDefault(x => model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == model.Layer - 1);
             if (user == null)
             {
                 string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
-                    , info.Model.Username
-                    , info.Model.Layer);
+                    , model.Username
+                    , model.Layer);
                 throw new Exception(error);
             }
 
@@ -238,24 +253,27 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户（高点号）数量+1
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Monitor_AddSubordinateOfHighRebate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
+        public static void Monitor_AddSubordinateOfHighRebate(InfoOfSendOnManagerService info)
         {
-            if (info.Model.Layer <= 1) { return; }//顶级用户没有上级
-            SettingOfAuthor setting = new SettingOfAuthor(info.Db);
-            if (info.Model.PlayInfo.Rebate_Normal < setting.LowerRebateOfHigh) { return; }//非高点用户不参与统计
-            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            Author model = (Author)info.Model;
+
+            if (model.Layer <= 1) { return; }//顶级用户没有上级
+            SettingOfAuthor setting = new SettingOfAuthor(db);
+            if (model.PlayInfo.Rebate_Normal < setting.LowerRebateOfHigh) { return; }//非高点用户不参与统计
+            Author user = db.Authors.FirstOrDefault(x => model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == model.Layer - 1);
             if (user == null)
             {
                 string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
-                    , info.Model.Username
-                    , info.Model.Layer);
+                    , model.Username
+                    , model.Layer);
                 throw new Exception(error);
             }
 
-            SubordinateData sd = user.SubordinateOfHighRebate.FirstOrDefault(x => x.Rebate == info.Model.PlayInfo.Rebate_Normal);
+            SubordinateData sd = user.SubordinateOfHighRebate.FirstOrDefault(x => x.Rebate == model.PlayInfo.Rebate_Normal);
             if (sd == null)
             {
-                sd = new SubordinateData(info.Model.PlayInfo.Rebate_Normal, 1);
+                sd = new SubordinateData(model.PlayInfo.Rebate_Normal, 1);
                 user.SubordinateOfHighRebate.Add(sd);
             }
             else
@@ -268,21 +286,24 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户（高点号）数量-1
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Monitor_RemoveSubordinateOfHighRebate(InfoOfSendOnManagerService<IModelToDbContextOfAuthor, AuthorManager.Actions, Author> info)
+        public static void Monitor_RemoveSubordinateOfHighRebate(InfoOfSendOnManagerService info)
         {
-            if (info.Model.Layer <= 1) { return; }//顶级用户没有上级
-            SettingOfAuthor setting = new SettingOfAuthor(info.Db);
-            if (info.Model.PlayInfo.Rebate_Normal < setting.LowerRebateOfHigh) { return; }//非高点用户不参与统计
-            Author user = info.Db.Authors.FirstOrDefault(x => info.Model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == info.Model.Layer - 1);
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            Author model = (Author)info.Model;
+
+            if (model.Layer <= 1) { return; }//顶级用户没有上级
+            SettingOfAuthor setting = new SettingOfAuthor(db);
+            if (model.PlayInfo.Rebate_Normal < setting.LowerRebateOfHigh) { return; }//非高点用户不参与统计
+            Author user = db.Authors.FirstOrDefault(x => model.Relatives.Any(r => r.NodeId == x.Id) && x.Layer == model.Layer - 1);
             if (user == null)
             {
                 string error = string.Format("致命错误，非顶级用户（用户名：{0}，层级：{1}）没有上级用户"
-                    , info.Model.Username
-                    , info.Model.Layer);
+                    , model.Username
+                    , model.Layer);
                 throw new Exception(error);
             }
 
-            SubordinateData sd = user.SubordinateOfHighRebate.FirstOrDefault(x => x.Rebate == info.Model.PlayInfo.Rebate_Normal);
+            SubordinateData sd = user.SubordinateOfHighRebate.FirstOrDefault(x => x.Rebate == model.PlayInfo.Rebate_Normal);
             if (sd != null)
             {
                 sd.Sum--;

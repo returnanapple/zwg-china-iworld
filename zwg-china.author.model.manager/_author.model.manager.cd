@@ -51,7 +51,7 @@
   <Class Name="zwg_china.model.manager.MoneyChangeRecordManager" Collapsed="true">
     <Position X="5.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>MoneyChangeRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -102,13 +102,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAAAAIAAgAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>SettingOfAuthor.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="zwg_china.model.manager.RIOfAuthor" Collapsed="true">
-    <Position X="2.25" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RIOfAuthor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

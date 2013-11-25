@@ -6,9 +6,10 @@ using System.Text;
 namespace zwg_china.model.manager
 {
     /// <summary>
-    /// 监听信息
+    /// 标记该方法将注册到信使服务的监听池
     /// </summary>
-    public class MonitorInfo
+    [AttributeUsage(AttributeTargets.Method)]
+    public class ListenAttribute : Attribute
     {
         #region 属性
 
@@ -27,29 +28,21 @@ namespace zwg_china.model.manager
         /// </summary>
         public ExecutionOrder InterestedOrder { get; private set; }
 
-        /// <summary>
-        /// 满足条件时候将要激发的动作
-        /// </summary>
-        public Action<InfoOfSendOnManagerService> Excite { get; private set; }
-
         #endregion
 
         #region 构造方法
 
         /// <summary>
-        /// 实例化一个新的监听信息
+        /// 标记该方法将注册到信使服务的监听池
         /// </summary>
         /// <param name="listenTo">监听对象</param>
         /// <param name="interestedAction">感兴趣的动作</param>
         /// <param name="interestedOrder">感兴趣的动作的当前执行顺序</param>
-        /// <param name="excite">满足条件时候将要激发的动作</param>
-        public MonitorInfo(Type listenTo, object interestedAction, ExecutionOrder interestedOrder
-            , Action<InfoOfSendOnManagerService> excite)
+        public ListenAttribute(Type listenTo, object interestedAction, ExecutionOrder interestedOrder)
         {
             this.ListenTo = listenTo;
             this.InterestedAction = interestedAction;
             this.InterestedOrder = interestedOrder;
-            this.Excite = excite;
         }
 
         #endregion

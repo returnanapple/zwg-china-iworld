@@ -32,18 +32,22 @@ namespace zwg_china.model.manager
         /// 服务：生成对应的帐变记录
         /// </summary>
         /// <param name="info">数据集</param>
-        public static void Service_CreateMoneyChangeRecord(InfoOfCallOnManagerService<IModelToDbContextOfAuthor, Services, CreateMoneyChangeRecordArgs> info)
+        [OnCall(typeof(MoneyChangeRecordManager), Services.CreateMoneyChangeRecord)]
+        public static void Service_CreateMoneyChangeRecord(InfoOfCallOnManagerService info)
         {
-            Author user = info.Db.Authors.FirstOrDefault(x => x.Id == info.Args.UserId);
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            CreateMoneyChangeRecordArgs args = (CreateMoneyChangeRecordArgs)info.Args;
+
+            Author user = db.Authors.FirstOrDefault(x => x.Id == args.UserId);
             if (user == null)
             {
                 throw new Exception("提供的存储指针指向的用户不存在，请检查输入");
             }
 
-            MoneyChangeRecord record = new MoneyChangeRecord(user, info.Args.Type, info.Args.Description, info.Args.Income, info.Args.Expenses);
-            MoneyChangeRecordManager manager = new MoneyChangeRecordManager(info.Db);
+            MoneyChangeRecord record = new MoneyChangeRecord(user, args.Type, args.Description, args.Income, args.Expenses);
+            MoneyChangeRecordManager manager = new MoneyChangeRecordManager(db);
             manager.OnExecuting(Actions.Create, record);
-            info.Db.MoneyChangeRecords.Add(record);
+            db.MoneyChangeRecords.Add(record);
             manager.OnExecuted(Actions.Create, record);
         }
 

@@ -35,8 +35,8 @@ namespace zwg_china.model.manager
         /// <param name="model">当前操作的数据模型的实例</param>
         protected void OnExecuting(TActions executionAction, TModel model)
         {
-            InfoOfSendOnManagerService<TDbContext, TActions, TModel> info
-                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel>(db, this.GetType(), executionAction, ExecutionOrder.Before, model);
+            InfoOfSendOnManagerService info
+                = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.Before, model);
             ManagerService.Send(info);
         }
 
@@ -49,8 +49,8 @@ namespace zwg_china.model.manager
         /// <param name="args">附加信息</param>
         protected void OnExecuting<TArgs>(TActions executionAction, TModel model, TArgs args)
         {
-            InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs> info
-                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs>(db, this.GetType(), executionAction, ExecutionOrder.Before, model, args);
+            InfoOfSendOnManagerService info
+                = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.Before, model, args);
             ManagerService.Send(info);
         }
 
@@ -61,8 +61,8 @@ namespace zwg_china.model.manager
         /// <param name="model">当前操作的数据模型的实例</param>
         protected void OnExecuted(TActions executionAction, TModel model)
         {
-            InfoOfSendOnManagerService<TDbContext, TActions, TModel> info
-                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel>(db, this.GetType(), executionAction, ExecutionOrder.After, model);
+            InfoOfSendOnManagerService info
+                = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.After, model);
             ManagerService.Send(info);
         }
 
@@ -75,8 +75,8 @@ namespace zwg_china.model.manager
         /// <param name="args">附加信息</param>
         protected void OnExecuted<TArgs>(TActions executionAction, TModel model, TArgs args)
         {
-            InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs> info
-                = new InfoOfSendOnManagerService<TDbContext, TActions, TModel, TArgs>(db, this.GetType(), executionAction, ExecutionOrder.After, model, args);
+            InfoOfSendOnManagerService info
+                = new InfoOfSendOnManagerService(db, this.GetType(), executionAction, ExecutionOrder.After, model, args);
             ManagerService.Send(info);
         }
 
