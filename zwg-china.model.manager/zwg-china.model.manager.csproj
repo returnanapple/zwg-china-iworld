@@ -51,6 +51,7 @@
     <Compile Include="InfoOnCallOnManagerService.cs" />
     <Compile Include="IPackageForCreateModel.cs" />
     <Compile Include="IPackageForUpdateModel.cs" />
+    <Compile Include="IRI.cs" />
     <Compile Include="ListenAttribute.cs" />
     <Compile Include="ListenerAttribute.cs" />
     <Compile Include="ManagerBase.cs" />

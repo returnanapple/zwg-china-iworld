@@ -15,10 +15,8 @@ namespace zwg_china.model
         [EnumMember]
         失败 = -1,
         [EnumMember]
-        等待处理 = 0,
+        处理中 = 0,
         [EnumMember]
-        处理中 = 1,
-        [EnumMember]
-        提现成功 = 2
+        提现成功 = 1
     }
 }

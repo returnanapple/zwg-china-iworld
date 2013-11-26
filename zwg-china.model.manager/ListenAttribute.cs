@@ -8,7 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 标记该方法将注册到信使服务的监听池
     /// </summary>
-    [AttributeUsage(AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class ListenAttribute : Attribute
     {
         #region 属性

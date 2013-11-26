@@ -44,14 +44,17 @@ namespace zwg_china.model.manager
                             type.GetMethods().Where(method => method.GetCustomAttributes().Any(attribute => attribute is ListenAttribute))
                                 .ToList().ForEach(method =>
                                 {
-                                    ListenAttribute attribute = method.GetCustomAttributes<ListenAttribute>().First();
-                                    MonitorInfo monitor = new MonitorInfo(attribute.ListenTo, attribute.InterestedAction, attribute.InterestedOrder
-                                        , (info) =>
+                                    method.GetCustomAttributes<ListenAttribute>().ToList()
+                                        .ForEach(attribute =>
                                         {
-                                            object[] objs = new object[] { info };
-                                            method.Invoke(null, objs);
+                                            MonitorInfo monitor = new MonitorInfo(attribute.ListenTo, attribute.InterestedAction, attribute.InterestedOrder
+                                                , (info) =>
+                                                {
+                                                    object[] objs = new object[] { info };
+                                                    method.Invoke(null, objs);
+                                                });
+                                            monitors.Add(monitor);
                                         });
-                                    monitors.Add(monitor);
                                 });
 
                             #endregion

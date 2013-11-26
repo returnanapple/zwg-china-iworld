@@ -10,6 +10,9 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 用户的管理者对象
     /// </summary>
+
+    [Listener]
+    [Server]
     public class AuthorManager : ManagerBase<IModelToDbContextOfAuthor, AuthorManager.Actions, Author>
     {
         #region 构造方法
@@ -159,39 +162,10 @@ namespace zwg_china.model.manager
         #region 服务
 
         /// <summary>
-        /// 服务：修改用户的账户余额
-        /// </summary>
-        /// <param name="info">数据集</param>
-        public static void Service_ChangeMoney(InfoOfCallOnManagerService info)
-        {
-            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
-            ChangeMoneyArgs args = (ChangeMoneyArgs)info.Args;
-
-            Author user = db.Authors.Find(args.UserId);
-            user.Money += args.Sum;
-        }
-
-        /// <summary>
-        /// 服务：修改用户被冻结的金额
-        /// </summary>
-        /// <param name="info">数据集</param>
-        public static void Service_ChangeFreeze(InfoOfCallOnManagerService info)
-        {
-            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
-            ChangeFreezeCrgs args = (ChangeFreezeCrgs)info.Args;
-
-            Author user = db.Authors.Find(args.UserId);
-            user.Money_Frozen += args.Sum;
-            if (args.LinkageWithMoney)
-            {
-                user.Money -= args.Sum;
-            }
-        }
-
-        /// <summary>
         /// 服务：修改用户的积分
         /// </summary>
         /// <param name="info">数据集</param>
+        [OnCall(typeof(AuthorManager), Services.ChangeIntegral)]
         public static void Service_ChangeIntegral(InfoOfCallOnManagerService info)
         {
             IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
@@ -209,6 +183,7 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户数量+1
         /// </summary>
         /// <param name="info">数据集</param>
+        [Listen(typeof(AuthorManager), AuthorManager.Actions.Create, ExecutionOrder.After)]
         public static void Monitor_AddSubordinate(InfoOfSendOnManagerService info)
         {
             IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
@@ -231,6 +206,7 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户数量-1
         /// </summary>
         /// <param name="info">数据集</param>
+        [Listen(typeof(AuthorManager), AuthorManager.Actions.Remove, ExecutionOrder.Before)]
         public static void Monitor_RemoveSubordinate(InfoOfSendOnManagerService info)
         {
             IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
@@ -253,6 +229,8 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户（高点号）数量+1
         /// </summary>
         /// <param name="info">数据集</param>
+        [Listen(typeof(AuthorManager), AuthorManager.Actions.Create, ExecutionOrder.After)]
+        [Listen(typeof(AuthorManager), AuthorManager.Actions.ChangeRebate, ExecutionOrder.After)]
         public static void Monitor_AddSubordinateOfHighRebate(InfoOfSendOnManagerService info)
         {
             IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
@@ -286,6 +264,8 @@ namespace zwg_china.model.manager
         /// 监听：（直属）下级用户（高点号）数量-1
         /// </summary>
         /// <param name="info">数据集</param>
+        [Listen(typeof(AuthorManager), AuthorManager.Actions.Remove, ExecutionOrder.Before)]
+        [Listen(typeof(AuthorManager), AuthorManager.Actions.ChangeRebate, ExecutionOrder.Before)]
         public static void Monitor_RemoveSubordinateOfHighRebate(InfoOfSendOnManagerService info)
         {
             IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
@@ -307,6 +287,73 @@ namespace zwg_china.model.manager
             if (sd != null)
             {
                 sd.Sum--;
+            }
+        }
+
+        /// <summary>
+        /// 监听：用户的账户余额改变
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(MoneyChangeRecordManager), MoneyChangeRecordManager.Actions.Create, ExecutionOrder.After)]
+        public static void Monitor_MoneyChange(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            MoneyChangeRecord model = (MoneyChangeRecord)info.Model;
+
+            Author user = db.Authors.Find(model.Owner.Id);
+            user.Money += model.Sum;
+        }
+
+        /// <summary>
+        /// 监听：冻结资金
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(WithdrawalsRecordManager), WithdrawalsRecordManager.Actions.Create, ExecutionOrder.After)]
+        public static void Monitor_FreezeMoney(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            WithdrawalsRecord model = (WithdrawalsRecord)info.Model;
+
+            if (model.Status == WithdrawalsStatus.处理中)
+            {
+                Author user = db.Authors.Find(model.Owner.Id);
+                user.Money -= model.Sum;
+                user.Money_Frozen += model.Sum;
+            }
+        }
+
+        /// <summary>
+        /// 监听：解冻资金
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(WithdrawalsRecordManager), WithdrawalsRecordManager.Actions.ChangeStatus, ExecutionOrder.After)]
+        public static void Monitor_ThawMoney(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            WithdrawalsRecord model = (WithdrawalsRecord)info.Model;
+
+            if (model.Status == WithdrawalsStatus.失败)
+            {
+                Author user = db.Authors.Find(model.Owner.Id);
+                user.Money += model.Sum;
+                user.Money_Frozen -= model.Sum;
+            }
+        }
+
+        /// <summary>
+        /// 监听：蒸发冻结的资金
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(WithdrawalsRecordManager), WithdrawalsRecordManager.Actions.ChangeStatus, ExecutionOrder.After)]
+        public static void Monitor_EvaporateMoney(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            WithdrawalsRecord model = (WithdrawalsRecord)info.Model;
+
+            if (model.Status == WithdrawalsStatus.提现成功)
+            {
+                Author user = db.Authors.Find(model.Owner.Id);
+                user.Money_Frozen -= model.Sum;
             }
         }
 
@@ -350,14 +397,6 @@ namespace zwg_china.model.manager
         /// </summary>
         public enum Services
         {
-            /// <summary>
-            /// 修改用户的账户余额
-            /// </summary>
-            ChangeMoney,
-            /// <summary>
-            /// 修改用户被冻结的金额
-            /// </summary>
-            ChangeFreeze,
             /// <summary>
             /// 修改用户的积分
             /// </summary>

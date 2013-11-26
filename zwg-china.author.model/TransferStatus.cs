@@ -13,8 +13,6 @@ namespace zwg_china.model
     public enum TransferStatus
     {
         [EnumMember]
-        测试 = -1,
-        [EnumMember]
         用户已经支付 = 0,
         [EnumMember]
         充值成功 = 1

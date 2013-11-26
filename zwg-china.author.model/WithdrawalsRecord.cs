@@ -73,7 +73,7 @@ namespace zwg_china.model
             this.Card = card;
             this.HolderOfTheCard = holderOfTheCard;
             this.BankOfTheCard = bankOfTheCard;
-            this.Status = WithdrawalsStatus.等待处理;
+            this.Status = WithdrawalsStatus.处理中;
             this.Remark = "";
         }
 

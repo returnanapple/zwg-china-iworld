@@ -6,10 +6,13 @@
   <Comment CommentText="信使服务">
     <Position X="0.5" Y="1.844" Height="0.284" Width="0.783" />
   </Comment>
+  <Comment CommentText="注册机">
+    <Position X="0.5" Y="6.323" Height="0.284" Width="0.7" />
+  </Comment>
   <Class Name="zwg_china.model.manager.ManagerService" Collapsed="true">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAQAAAAAAAAAAAAEAAAAAAAACAAAAAAAAAAIAQAAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAIAQAAA=</HashCode>
       <FileName>ManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -30,7 +33,7 @@
   <Class Name="zwg_china.model.manager.InfoOfCallOnManagerService" Collapsed="true">
     <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAQgAAAAACAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgIAAEAAAAAAAAAAAAAAAAAAAAAAEBAA=</HashCode>
       <FileName>InfoOnCallOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -88,6 +91,13 @@
     <TypeIdentifier>
       <HashCode>AAQCAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IPackageForUpdateModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="zwg_china.model.manager.IRI" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>IRI.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="zwg_china.model.manager.ExecutionOrder" Collapsed="true">

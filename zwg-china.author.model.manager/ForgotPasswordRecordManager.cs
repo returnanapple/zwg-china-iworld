@@ -24,6 +24,22 @@ namespace zwg_china.model.manager
 
         #endregion
 
+        #region 方法
+
+        /// <summary>
+        /// 声明一个找回密码记录已经被使用
+        /// </summary>
+        /// <param name="package">存储指针</param>
+        public void Use(IPackageForUse package)
+        {
+            ForgotPasswordRecord record = db.ForgotPasswordRecords.Find(package.ForgotPasswordRecordId);
+            if (record.HadUsed) { return; }
+            record.HadUsed = true;
+            db.SaveChanges();
+        }
+
+        #endregion
+
         #region 内嵌元素
 
         #region 枚举
@@ -45,6 +61,21 @@ namespace zwg_china.model.manager
             /// 移除用户
             /// </summary>
             Remove
+        }
+
+        #endregion
+
+        #region 接口
+
+        /// <summary>
+        /// 定义用于声明一个找回密码记录已经被使用的数据集
+        /// </summary>
+        public interface IPackageForUse
+        {
+            /// <summary>
+            /// 所要操作的找回密码记录的存储指针
+            /// </summary>
+            int ForgotPasswordRecordId { get; }
         }
 
         #endregion
