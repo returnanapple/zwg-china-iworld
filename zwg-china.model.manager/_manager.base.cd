@@ -9,6 +9,9 @@
   <Comment CommentText="注册机">
     <Position X="0.5" Y="6.323" Height="0.284" Width="0.7" />
   </Comment>
+  <Comment CommentText="时间线">
+    <Position X="5.76" Y="0.5" Height="0.284" Width="0.7" />
+  </Comment>
   <Class Name="zwg_china.model.manager.ManagerService" Collapsed="true">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
@@ -77,6 +80,25 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>OnCallAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.TimeLineManager" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.TimeLineManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TimeLineManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="zwg_china.model.manager.TimeLineManager.SparkArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TimeLineManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAQAAAAAAAAAAAAQAAAAgAAAAAgAAAAA=</HashCode>
+      <FileName>TimeLineManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.model.manager.IPackageForCreateModel&lt;T&gt;" Collapsed="true">
