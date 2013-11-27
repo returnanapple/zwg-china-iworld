@@ -9,7 +9,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 时间线的管理者对象
     /// </summary>
-    public class TimeLineManager : ManagerBase<IModelToDbContext, TimeLineManager.Actions, ModelBase>
+    public class TimelineManager : ManagerBase<IModelToDbContext, TimelineManager.Actions, ModelBase>
     {
         #region 构造方法
 
@@ -17,7 +17,7 @@ namespace zwg_china.model.manager
         /// 实例化一个新的时间线的管理者对象
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        public TimeLineManager(IModelToDbContext db)
+        public TimelineManager(IModelToDbContext db)
             : base(db)
         {
 
@@ -48,7 +48,6 @@ namespace zwg_china.model.manager
             SparkArgs args = new SparkArgs { Now = now };
             OnExecuting(Actions.SparkEachSecond, null, args);
             OnExecuted(Actions.SparkEachSecond, null, args);
-            db.SaveChanges();
         }
 
         /// <summary>
@@ -61,7 +60,6 @@ namespace zwg_china.model.manager
             SparkArgs args = new SparkArgs { Now = now };
             OnExecuting(Actions.SparkEachMinute, null, args);
             OnExecuted(Actions.SparkEachMinute, null, args);
-            db.SaveChanges();
         }
 
         /// <summary>
@@ -74,7 +72,6 @@ namespace zwg_china.model.manager
             SparkArgs args = new SparkArgs { Now = now };
             OnExecuting(Actions.SparkEachHour, null, args);
             OnExecuted(Actions.SparkEachHour, null, args);
-            db.SaveChanges();
         }
 
         #endregion

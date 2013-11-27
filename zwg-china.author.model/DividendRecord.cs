@@ -13,6 +13,11 @@ namespace zwg_china.model
         #region 属性
 
         /// <summary>
+        /// 标题
+        /// </summary>
+        public string Title { get; set; }
+
+        /// <summary>
         /// 用户
         /// </summary>
         public virtual Author Owner { get; set; }
@@ -33,9 +38,14 @@ namespace zwg_china.model
         public double Sum { get; set; }
 
         /// <summary>
-        /// 一个布尔值，表示该分红记录是否已经兑现
+        /// 状态
         /// </summary>
-        public bool HadHonored { get; set; }
+        public DividendStatus Status { get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Remark { get; set; }
 
         #endregion
 
@@ -52,15 +62,31 @@ namespace zwg_china.model
         /// <summary>
         /// 实例化一个新的分红记录
         /// </summary>
+        /// <param name="title">标题</param>
         /// <param name="owner">用户</param>
         /// <param name="profit">下线盈亏</param>
-        public DividendRecord(Author owner, double profit)
+        public DividendRecord(string title, Author owner, double profit)
         {
+            this.Title = title;
             this.Owner = owner;
             this.Profit = profit;
             this.Scale = owner.PlayInfo.Dividend;
             this.Sum = this.Profit > 0 ? 0 : Math.Round(Math.Abs(this.Profit) * this.Scale / 100, 2);
-            this.HadHonored = false;
+            this.Status = DividendStatus.已申请;
+            this.Remark = "";
+        }
+
+        #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 获取相关描述
+        /// </summary>
+        /// <returns>返回相关描述</returns>
+        public string GetDescription()
+        {
+            return this.Title;
         }
 
         #endregion

@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 帐变记录的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class MoneyChangeRecordManager : ManagerBase<IModelToDbContextOfAuthor, MoneyChangeRecordManager.Actions, MoneyChangeRecord>
     {
         #region 构造方法
@@ -55,6 +56,119 @@ namespace zwg_china.model.manager
 
         #region 监听
 
+        /// <summary>
+        /// 监听：充值成功
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(RechargeRecordManager), RechargeRecordManager.Actions.Create, ExecutionOrder.After)]
+        [Listen(typeof(RechargeRecordManager), RechargeRecordManager.Actions.ChangeStatus, ExecutionOrder.After)]
+        public static void Monitor_CreateWhenRecharge(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            RechargeRecord model = (RechargeRecord)info.Model;
+
+            if (model.Status == RechargeStatus.后台手动添加
+                || model.Status == RechargeStatus.充值成功)
+            {
+                MoneyChangeRecordManager manager = new MoneyChangeRecordManager(db);
+                MoneyChangeRecord record = new MoneyChangeRecord(model.Owner
+                    , "充值"
+                    , model.Status.ToString()
+                    , model.Sum
+                    , 0);
+                manager.OnExecuting(Actions.Create, record);
+                db.MoneyChangeRecords.Add(record);
+                manager.OnExecuted(Actions.Create, record);
+            }
+        }
+
+        /// <summary>
+        /// 监听：提现成功
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(WithdrawalsRecordManager), WithdrawalsRecordManager.Actions.ChangeStatus, ExecutionOrder.After)]
+        public static void Monitor_CreateWhenWithdrawals(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            WithdrawalsRecord model = (WithdrawalsRecord)info.Model;
+
+            if (model.Status == WithdrawalsStatus.提现成功)
+            {
+                MoneyChangeRecord record = new MoneyChangeRecord(model.Owner
+                    , "提现"
+                    , model.Status.ToString()
+                    , 0
+                    , model.Sum);
+                db.MoneyChangeRecords.Add(record);
+            }
+        }
+
+        /// <summary>
+        /// 监听：返点
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(RebateRecordManager), RebateRecordManager.Actions.Create, ExecutionOrder.After)]
+        public static void Monitor_CreateWhenRebate(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            RebateRecord model = (RebateRecord)info.Model;
+
+            MoneyChangeRecordManager manager = new MoneyChangeRecordManager(db);
+            MoneyChangeRecord record = new MoneyChangeRecord(model.Owner
+                , "返点"
+                , model.GetDescription()
+                , model.Sum
+                , 0);
+            manager.OnExecuting(Actions.Create, record);
+            db.MoneyChangeRecords.Add(record);
+            manager.OnExecuted(Actions.Create, record);
+        }
+
+        /// <summary>
+        /// 监听：佣金
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(CommissionRecordManager), CommissionRecordManager.Actions.Create, ExecutionOrder.After)]
+        public static void Monitor_CreateWhenCommission(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            CommissionRecord model = (CommissionRecord)info.Model;
+
+            MoneyChangeRecordManager manager = new MoneyChangeRecordManager(db);
+            MoneyChangeRecord record = new MoneyChangeRecord(model.Owner
+                , "佣金"
+                , model.GetDescription()
+                , model.Sum
+                , 0);
+            manager.OnExecuting(Actions.Create, record);
+            db.MoneyChangeRecords.Add(record);
+            manager.OnExecuted(Actions.Create, record);
+        }
+
+        /// <summary>
+        /// 监听：分红
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(DividendRecordManager), DividendRecordManager.Actions.ChangeStatus, ExecutionOrder.After)]
+        public static void Monitor_CreateWhenDividend(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            DividendRecord model = (DividendRecord)info.Model;
+
+            if (model.Status == DividendStatus.已支付)
+            {
+                MoneyChangeRecordManager manager = new MoneyChangeRecordManager(db);
+                MoneyChangeRecord record = new MoneyChangeRecord(model.Owner
+                    , "佣金"
+                    , model.GetDescription()
+                    , model.Sum
+                    , 0);
+                manager.OnExecuting(Actions.Create, record);
+                db.MoneyChangeRecords.Add(record);
+                manager.OnExecuted(Actions.Create, record);
+            }
+        }
+
         #endregion
 
         #endregion
@@ -69,15 +183,15 @@ namespace zwg_china.model.manager
         public enum Actions
         {
             /// <summary>
-            /// 创建新用户
+            /// 创建新的帐变记录
             /// </summary>
             Create,
             /// <summary>
-            /// 修改用户信息
+            /// 修改帐变记录
             /// </summary>
             Update,
             /// <summary>
-            /// 移除用户
+            /// 移除帐变记录
             /// </summary>
             Remove
         }

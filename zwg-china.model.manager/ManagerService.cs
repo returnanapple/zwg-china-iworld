@@ -36,7 +36,7 @@ namespace zwg_china.model.manager
         {
             assemblies.ForEach(assembly =>
                 {
-                    assembly.GetTypes().Where(type => type.GetCustomAttributes().Any(attribute => attribute is ListenerAttribute || attribute is ServerAttribute))
+                    assembly.GetTypes().Where(type => type.GetCustomAttributes().Any(attribute => attribute is RegisterToManagerServiceAttribute))
                         .ToList().ForEach(type =>
                         {
                             #region 注册监听
@@ -61,7 +61,7 @@ namespace zwg_china.model.manager
 
                             #region 注册服务
 
-                            type.GetMethods().Where(method => method.GetCustomAttributes().Any(attribute => attribute is ServerAttribute))
+                            type.GetMethods().Where(method => method.GetCustomAttributes().Any(attribute => attribute is OnCallAttribute))
                                 .ToList().ForEach(method =>
                                 {
                                     OnCallAttribute attribute = method.GetCustomAttributes<OnCallAttribute>().First();

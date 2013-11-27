@@ -9,14 +9,14 @@
   <Class Name="zwg_china.model.manager.AuthorManager" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAACQAAAAAAAAAAAAAAgAAAIAAAAABAAAAWAAAACAA=</HashCode>
+      <HashCode>AEAACQAAAAAAAAAAAAAAgCAAIAAAAABAAAAWAAAACAA=</HashCode>
       <FileName>AuthorManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.WithdrawalsRecordManager" Collapsed="true">
     <Position X="4" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WithdrawalsRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -37,14 +37,14 @@
   <Class Name="zwg_china.model.manager.TransferRecordManager" Collapsed="true">
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TransferRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.RechargeRecordManager" Collapsed="true">
     <Position X="2.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>RechargeRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -58,14 +58,14 @@
   <Class Name="zwg_china.model.manager.SpreadRecordManager" Collapsed="true">
     <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SpreadRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ForgotPasswordRecordManager" Collapsed="true">
     <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ForgotPasswordRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -100,7 +100,7 @@
   <Class Name="zwg_china.model.manager.SettingOfAuthor" Collapsed="true">
     <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAAAAAAAIAAgAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABgAAAAAABIBAgAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>SettingOfAuthor.cs</FileName>
     </TypeIdentifier>
   </Class>

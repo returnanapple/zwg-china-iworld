@@ -52,6 +52,7 @@
     <Compile Include="Bank.cs" />
     <Compile Include="CommissionRecord.cs" />
     <Compile Include="DividendRecord.cs" />
+    <Compile Include="DividendStatus.cs" />
     <Compile Include="ForgotPasswordRecord.cs" />
     <Compile Include="IModelToDbContextOfAuthor.cs" />
     <Compile Include="MoneyChangeRecord.cs" />

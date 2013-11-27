@@ -44,8 +44,35 @@ namespace zwg_china.model.manager
         /// </summary>
         public double CapsRebateOfHigh
         {
-            get { return GetDoubleValue("CapsRebateOfHigh", 12.1); }
+            get { return GetDoubleValue("CapsRebateOfHigh", 13.0); }
             set { SetValue("CapsRebateOfHigh", value); }
+        }
+
+        /// <summary>
+        /// 充值记录超时时间（小时）
+        /// </summary>
+        public int RechargeRecordTimeout
+        {
+            get { return GetIntValue("RechargeRecordTimeout", 24); }
+            set { SetValue("RechargeRecordTimeout", value); }
+        }
+
+        /// <summary>
+        /// 推广记录超时时间（小时）
+        /// </summary>
+        public int SpreadRecordTimeout
+        {
+            get { return GetIntValue("SpreadRecordTimeout", 24); }
+            set { SetValue("SpreadRecordTimeout", value); }
+        }
+
+        /// <summary>
+        /// 找回密码记录超时时间（小时）
+        /// </summary>
+        public int ForgotPasswordRecordTimeout
+        {
+            get { return GetIntValue("ForgotPasswordRecordTimeout", 24); }
+            set { SetValue("ForgotPasswordRecordTimeout", value); }
         }
 
         #endregion

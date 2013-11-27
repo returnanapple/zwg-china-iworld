@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 充值记录的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class RechargeRecordManager : ManagerBase<IModelToDbContextOfAuthor, RechargeRecordManager.Actions, RechargeRecord>
     {
         #region 构造方法
@@ -24,34 +25,95 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 方法
+        #region 静态方法
+
+        #region 监听
 
         /// <summary>
-        /// 改变充值状态
+        /// 监听：确认充值
         /// </summary>
-        /// <param name="package"></param>
-        public void ChangeStatus(IPackageForChangeStatus package)
+        /// <param name="info">数据集</param>
+        [Listen(typeof(RechargeRecordManager), RechargeRecordManager.Actions.Create, ExecutionOrder.Before)]
+        public static void Monitor_EnterOnCreate(InfoOfSendOnManagerService info)
         {
-            if (package.NewStatus == RechargeStatus.等待银行确认)
-            {
-                throw new Exception("不允许将充值状态修改为“等待银行确认”，操作无效");
-            }
-            RechargeRecord record = db.RechargeRecords.Find(package.RechargeRecordId);
-            if (record.Status != RechargeStatus.等待银行确认)
-            {
-                throw new Exception("已经操作的充值记录不允许再次修改，操作无效");
-            }
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            RechargeRecord model = (RechargeRecord)info.Model;
 
-            ChangeStatusArgs args = new ChangeStatusArgs
+            if (model.Status == RechargeStatus.等待银行确认)
             {
-                OldStatus = record.Status,
-                NewStatus = package.NewStatus
-            };
-            OnExecuting<ChangeStatusArgs>(Actions.ChangeStatus, record, args);
-            record.Status = package.NewStatus;
-            OnExecuted<ChangeStatusArgs>(Actions.ChangeStatus, record, args);
+                TransferRecord transfer = db.TransferRecords.FirstOrDefault(x => x.ComeFrom == model.ComeFrom
+                    && x.SerialNumber == model.SerialNumber
+                    && x.Postscript == model.Postscript
+                    && x.Status == TransferStatus.用户已经支付);
+                if (transfer == null) { return; }
+
+                RechargeRecordManager manager = new RechargeRecordManager(db);
+                ChangeStatusArgs args = new ChangeStatusArgs
+                {
+                    OldStatus = model.Status,
+                    NewStatus = RechargeStatus.充值成功
+                };
+                manager.OnExecuting(Actions.ChangeStatus, model, args);
+                model.Sum = transfer.Sum;
+                model.Status = RechargeStatus.充值成功;
+                manager.OnExecuted(Actions.ChangeStatus, model, args);
+            }
+        }
+
+        /// <summary>
+        /// 监听：确认充值
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(TimelineManager), TimelineManager.Actions.SparkEachMinute, ExecutionOrder.Before)]
+        public static void Monitor_EnterOnTimeline(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            RechargeRecordManager manager = new RechargeRecordManager(db);
+
+            db.TransferRecords.Where(x => x.Status == TransferStatus.用户已经支付).ToList()
+                .ForEach(transfer =>
+                {
+                    RechargeRecord recharge = db.RechargeRecords.FirstOrDefault(x => x.ComeFrom == transfer.ComeFrom
+                        && x.SerialNumber == transfer.SerialNumber
+                        && x.Postscript == transfer.Postscript
+                        && x.Status == RechargeStatus.等待银行确认);
+                    if (recharge == null) { return; }
+
+                    ChangeStatusArgs _args = new ChangeStatusArgs
+                    {
+                        OldStatus = recharge.Status,
+                        NewStatus = RechargeStatus.充值成功
+                    };
+
+                    manager.OnExecuting(Actions.ChangeStatus, recharge, _args);
+                    recharge.Sum = transfer.Sum;
+                    recharge.Status = RechargeStatus.充值成功;
+                    manager.OnExecuted(Actions.ChangeStatus, recharge, _args);
+                });
             db.SaveChanges();
         }
+
+        /// <summary>
+        /// 监听：超时
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(TimelineManager), TimelineManager.Actions.SparkEachMinute, ExecutionOrder.Before)]
+        public static void Monitor_TimeOut(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
+            TimelineManager.SparkArgs args = (TimelineManager.SparkArgs)info.Args;
+            SettingOfAuthor setting = new SettingOfAuthor(db);
+            DateTime limit = args.Now.AddHours(-setting.RechargeRecordTimeout);
+
+            db.RechargeRecords.Where(x => x.Status == RechargeStatus.等待银行确认 && x.CreatedTime > limit).ToList()
+                .ForEach(x =>
+                {
+                    x.Status = RechargeStatus.超时;
+                });
+            db.SaveChanges();
+        }
+
+        #endregion
 
         #endregion
 
@@ -65,41 +127,21 @@ namespace zwg_china.model.manager
         public enum Actions
         {
             /// <summary>
-            /// 创建新用户
+            /// 创建新的充值记录
             /// </summary>
             Create,
             /// <summary>
-            /// 修改用户信息
+            /// 修改充值记录
             /// </summary>
             Update,
             /// <summary>
-            /// 移除用户
+            /// 移除充值记录
             /// </summary>
             Remove,
             /// <summary>
             /// 改变充值状态
             /// </summary>
             ChangeStatus
-        }
-
-        #endregion
-
-        #region 接口
-
-        /// <summary>
-        /// 定义用于修改充值状态的数据集
-        /// </summary>
-        public interface IPackageForChangeStatus
-        {
-            /// <summary>
-            /// 充值记录的存储指针
-            /// </summary>
-            public int RechargeRecordId { get; }
-
-            /// <summary>
-            /// 新状态
-            /// </summary>
-            public RechargeStatus NewStatus { get; }
         }
 
         #endregion

@@ -34,15 +34,15 @@ namespace zwg_china.model.manager
         public enum Actions
         {
             /// <summary>
-            /// 创建新用户
+            /// 创建新的系统设定的高点号配额方案
             /// </summary>
             Create,
             /// <summary>
-            /// 修改用户信息
+            /// 修改系统设定的高点号配额方案
             /// </summary>
             Update,
             /// <summary>
-            /// 移除用户
+            /// 移除系统设定的高点号配额方案
             /// </summary>
             Remove
         }

@@ -10,9 +10,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 用户的管理者对象
     /// </summary>
-
-    [Listener]
-    [Server]
+    [RegisterToManagerService]
     public class AuthorManager : ManagerBase<IModelToDbContextOfAuthor, AuthorManager.Actions, Author>
     {
         #region 构造方法
@@ -459,22 +457,6 @@ namespace zwg_china.model.manager
         #region 类型
 
         /// <summary>
-        /// 用于向改变目标用户的余额的服务传递数据的数据集
-        /// </summary>
-        public class ChangeMoneyArgs
-        {
-            /// <summary>
-            /// 目标用户的存储指针
-            /// </summary>
-            public int UserId { get; set; }
-
-            /// <summary>
-            /// 所要改变的数额
-            /// </summary>
-            public double Sum { get; set; }
-        }
-
-        /// <summary>
         /// 用于向修改用户被冻结的金额的服务传递数据的数据集
         /// </summary>
         public class ChangeFreezeCrgs
@@ -493,22 +475,6 @@ namespace zwg_china.model.manager
             /// 一个布尔值，表示是否需要跟现金账户联动
             /// </summary>
             public bool LinkageWithMoney { get; set; }
-        }
-
-        /// <summary>
-        /// 用于向改变目标用户的积分的服务传递数据的数据集
-        /// </summary>
-        public class ChangeIntegralArgs
-        {
-            /// <summary>
-            /// 目标用户的存储指针
-            /// </summary>
-            public int UserId { get; set; }
-
-            /// <summary>
-            /// 所要改变的数额
-            /// </summary>
-            public double Sum { get; set; }
         }
 
         #endregion

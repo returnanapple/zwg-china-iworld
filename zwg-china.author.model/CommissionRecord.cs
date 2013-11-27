@@ -60,5 +60,21 @@ namespace zwg_china.model
         }
 
         #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 获取相关描述
+        /// </summary>
+        /// <returns>返回相关描述</returns>
+        public string GetDescription()
+        {
+            string result = string.Format("来源于用户 {0}{1}"
+                , this.Source.Username
+                , this.IsImmediate ? "" : " 的下级");
+            return result;
+        }
+
+        #endregion
     }
 }

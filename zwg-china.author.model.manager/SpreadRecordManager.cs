@@ -50,15 +50,15 @@ namespace zwg_china.model.manager
         public enum Actions
         {
             /// <summary>
-            /// 创建新用户
+            /// 创建新的推广记录
             /// </summary>
             Create,
             /// <summary>
-            /// 修改用户信息
+            /// 修改推广记录
             /// </summary>
             Update,
             /// <summary>
-            /// 移除用户
+            /// 移除推广记录
             /// </summary>
             Remove
         }

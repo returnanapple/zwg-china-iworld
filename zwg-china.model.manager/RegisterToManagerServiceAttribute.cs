@@ -6,10 +6,10 @@ using System.Text;
 namespace zwg_china.model.manager
 {
     /// <summary>
-    /// 标记改管理者对象将监听信使服务的某些动作
+    /// 标记改管理者对象将注册到信使服务的相关服务
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class ListenerAttribute : Attribute
+    public class RegisterToManagerServiceAttribute : Attribute
     {
     }
 }

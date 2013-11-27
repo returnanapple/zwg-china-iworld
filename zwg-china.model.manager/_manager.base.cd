@@ -40,13 +40,6 @@
       <FileName>InfoOnCallOnManagerService.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.manager.ServiceInfo" Collapsed="true">
-    <Position X="2.25" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAEBAA=</HashCode>
-      <FileName>ServiceInfo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="zwg_china.model.manager.MonitorInfo" Collapsed="true">
     <Position X="2.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
@@ -54,51 +47,40 @@
       <FileName>MonitorInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.manager.ListenerAttribute" Collapsed="true">
-    <Position X="0.5" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ListenerAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="zwg_china.model.manager.ServerAttribute" Collapsed="true">
-    <Position X="2.25" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ServerAttribute.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="zwg_china.model.manager.ListenAttribute" Collapsed="true">
-    <Position X="4" Y="5.25" Width="1.5" />
+    <Position X="2.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAA=</HashCode>
       <FileName>ListenAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.OnCallAttribute" Collapsed="true">
-    <Position X="5.75" Y="5.25" Width="1.5" />
+    <Position X="4" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>OnCallAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.manager.TimeLineManager" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.model.manager.TimelineManager" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="1" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="zwg_china.model.manager.TimeLineManager.Actions" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>TimeLineManager.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Class Name="zwg_china.model.manager.TimeLineManager.SparkArgs" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>TimeLineManager.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAAQAAAAAAAAAAAAQAAAAgAAAAAgAAAAA=</HashCode>
-      <FileName>TimeLineManager.cs</FileName>
+      <FileName>TimelineManager.cs</FileName>
+      <NewMemberFileName>TimeLineManager.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RegisterToManagerServiceAttribute" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RegisterToManagerServiceAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.ServiceInfo" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAEBAA=</HashCode>
+      <FileName>ServiceInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.model.manager.IPackageForCreateModel&lt;T&gt;" Collapsed="true">
