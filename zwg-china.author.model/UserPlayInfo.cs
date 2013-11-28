@@ -23,17 +23,17 @@ namespace zwg_china.model
         public double Rebate_IndefinitePosition { get; set; }
 
         /// <summary>
-        /// 一级佣金
+        /// 一级佣金（如果为0则采用系统设置）
         /// </summary>
         public double Commission_A { get; set; }
 
         /// <summary>
-        /// 二级佣金
+        /// 二级佣金（如果为0则采用系统设置）
         /// </summary>
         public double Commission_B { get; set; }
 
         /// <summary>
-        /// 分红（百分比）
+        /// 分红（百分比）（如果为0则采用系统设置）
         /// </summary>
         public double Dividend { get; set; }
 

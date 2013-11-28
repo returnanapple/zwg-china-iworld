@@ -104,7 +104,7 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 类型
+        #region 类
 
         /// <summary>
         /// 修改提现状态的方法提供的相关数据

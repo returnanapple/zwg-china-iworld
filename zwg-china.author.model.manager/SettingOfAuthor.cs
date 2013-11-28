@@ -75,6 +75,96 @@ namespace zwg_china.model.manager
             set { SetValue("ForgotPasswordRecordTimeout", value); }
         }
 
+        /// <summary>
+        /// 分红日
+        /// </summary>
+        public string DaysOfDividend
+        {
+            get { return GetStringValue("DaysOfDividend", "1,16"); }
+            set { SetValue("DaysOfDividend", value); }
+        }
+
+        /// <summary>
+        /// 每日允许提现次数
+        /// </summary>
+        public int TimesOfWithdrawal
+        {
+            get { return GetIntValue("TimesOfWithdrawal", 10); }
+            set { SetValue("TimesOfWithdrawal", value); }
+        }
+
+        /// <summary>
+        /// 单笔最低取款金额
+        /// </summary>
+        public double MinimumWithdrawalAmount
+        {
+            get { return GetDoubleValue("MinimumWithdrawalAmount", 10.0); }
+            set { SetValue("MinimumWithdrawalAmount", value); }
+        }
+
+        /// <summary>
+        /// 单笔最高取款金额
+        /// </summary>
+        public double MaximumWithdrawalAmount
+        {
+            get { return GetDoubleValue("MaximumWithdrawalAmount", 100000.0); }
+            set { SetValue("MaximumWithdrawalAmount", value); }
+        }
+
+        /// <summary>
+        /// 一级佣金
+        /// </summary>
+        public double Commission_A
+        {
+            get { return GetDoubleValue("Commission_A", 8); }
+            set { SetValue("Commission_A", value); }
+        }
+
+        /// <summary>
+        /// 二级佣金
+        /// </summary>
+        public double Commission_B
+        {
+            get { return GetDoubleValue("Commission_B", 12.0); }
+            set { SetValue("Commission_B", value); }
+        }
+
+        /// <summary>
+        /// 获得佣金的消费额下限
+        /// </summary>
+        public double LowerConsumptionForCommission
+        {
+            get { return GetDoubleValue("LowerConsumptionForCommission", 500); }
+            set { SetValue("LowerConsumptionForCommission", value); }
+        }
+
+        /// <summary>
+        /// 顶级用户分红（百分比）
+        /// </summary>
+        public double Dividend_A
+        {
+            get { return GetDoubleValue("Dividend_A", 10.0); }
+            set { SetValue("Dividend_A", value); }
+        }
+
+        /// <summary>
+        /// 次级用户分红（百分比）
+        /// </summary>
+        public double Dividend_B
+        {
+            get { return GetDoubleValue("Dividend_B", 7.0); }
+            set { SetValue("Dividend_B", value); }
+        }
+
+        /// <summary>
+        /// 获得分红的消费额下限
+        /// </summary>
+        public double LowerConsumptionForDividend
+        {
+            get { return GetDoubleValue("LowerConsumptionForDividend", 10000); }
+            set { SetValue("LowerConsumptionForDividend", value); }
+        }
+
         #endregion
 
         #region 构造方法

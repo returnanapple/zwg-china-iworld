@@ -159,7 +159,7 @@ namespace zwg_china.model.manager
             {
                 MoneyChangeRecordManager manager = new MoneyChangeRecordManager(db);
                 MoneyChangeRecord record = new MoneyChangeRecord(model.Owner
-                    , "佣金"
+                    , "分红"
                     , model.GetDescription()
                     , model.Sum
                     , 0);
@@ -209,7 +209,7 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 类型
+        #region 类
 
         /// <summary>
         /// 用于给生成对应的帐变记录的服务提供数据的数据集

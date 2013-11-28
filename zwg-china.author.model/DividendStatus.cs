@@ -13,10 +13,14 @@ namespace zwg_china.model
     public enum DividendStatus
     {
         [EnumMember]
+        过期 = -2,
+        [EnumMember]
         拒绝支付 = -1,
         [EnumMember]
-        已申请 = 0,
+        开放申请 = 0,
         [EnumMember]
-        已支付 = 1
+        已申请 = 1,
+        [EnumMember]
+        已支付 = 2
     }
 }

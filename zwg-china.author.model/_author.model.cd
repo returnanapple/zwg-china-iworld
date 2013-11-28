@@ -28,10 +28,10 @@
     <Position X="0.5" Y="3.557" Height="0.284" Width="0.7" />
   </Comment>
   <Comment CommentText="返点、佣金和分红">
-    <Position X="0.5" Y="9.567" Height="0.284" Width="1.445" />
+    <Position X="0.5" Y="9.817" Height="0.284" Width="1.445" />
   </Comment>
   <Comment CommentText="上下文">
-    <Position X="0.5" Y="11.036" Height="0.284" Width="0.7" />
+    <Position X="0.5" Y="11.286" Height="0.284" Width="0.7" />
   </Comment>
   <Class Name="zwg_china.model.Author" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
@@ -139,28 +139,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.CommissionRecord" Collapsed="true">
-    <Position X="2.25" Y="10" Width="1.5" />
+    <Position X="2.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAgAAAAAQIAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>CommissionRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.DividendRecord" Collapsed="true">
-    <Position X="4" Y="10" Width="1.5" />
+    <Position X="4" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACEAAAAAEAAIAIAAAACAAAAAAAAAAAAAAAAAQQ=</HashCode>
       <FileName>DividendRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.RebateRecord" Collapsed="true">
-    <Position X="0.5" Y="10" Width="1.5" />
+    <Position X="0.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAgAAAAAQIAAAAAAAAAAAAAAAAAAgAAAAAAQ=</HashCode>
       <FileName>RebateRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.model.IModelToDbContextOfAuthor" Collapsed="true">
-    <Position X="0.5" Y="11.5" Width="1.5" />
+    <Position X="0.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAIAAAAQJAACAAgQAAABAAABAAAAAAQAQAAA=</HashCode>
       <FileName>IModelToDbContextOfAuthor.cs</FileName>
@@ -202,9 +202,9 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="zwg_china.model.DividendStatus" Collapsed="true">
-    <Position X="5.75" Y="10" Width="1.5" />
+    <Position X="5.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAIAAIAAAAA=</HashCode>
+      <HashCode>AAAAAIAAABAAAAAAAAAAACAAAAAAAAAAAAIAAIAAAAA=</HashCode>
       <FileName>DividendStatus.cs</FileName>
     </TypeIdentifier>
   </Enum>

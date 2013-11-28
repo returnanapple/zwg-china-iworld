@@ -454,7 +454,7 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 类型
+        #region 类
 
         /// <summary>
         /// 用于向修改用户被冻结的金额的服务传递数据的数据集

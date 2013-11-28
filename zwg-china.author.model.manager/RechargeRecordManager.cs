@@ -146,7 +146,7 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 类型
+        #region 类
 
         /// <summary>
         /// 改变充值记录方法提供的相关数据

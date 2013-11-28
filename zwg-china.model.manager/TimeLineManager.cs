@@ -115,7 +115,7 @@ namespace zwg_china.model.manager
 
         #endregion
 
-        #region 类型
+        #region 类
 
         /// <summary>
         /// 触发时间线时间的相关数据

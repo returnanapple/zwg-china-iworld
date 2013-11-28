@@ -65,14 +65,16 @@ namespace zwg_china.model
         /// <param name="title">标题</param>
         /// <param name="owner">用户</param>
         /// <param name="profit">下线盈亏</param>
-        public DividendRecord(string title, Author owner, double profit)
+        /// <param name="scale">分红比例</param>
+        /// <param name="sum">分红金额</param>
+        public DividendRecord(string title, Author owner, double profit, double scale, double sum)
         {
             this.Title = title;
             this.Owner = owner;
             this.Profit = profit;
-            this.Scale = owner.PlayInfo.Dividend;
-            this.Sum = this.Profit > 0 ? 0 : Math.Round(Math.Abs(this.Profit) * this.Scale / 100, 2);
-            this.Status = DividendStatus.已申请;
+            this.Scale = scale;
+            this.Sum = sum;
+            this.Status = DividendStatus.开放申请;
             this.Remark = "";
         }
 
