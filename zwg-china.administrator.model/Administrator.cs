@@ -70,5 +70,21 @@ namespace zwg_china.model
         }
 
         #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 声明用户已经登录
+        /// </summary>
+        /// <param name="ip">网络地址</param>
+        /// <param name="address">实际地址</param>
+        public void OnLogin(string ip, string address)
+        {
+            this.LastLoginIp = ip;
+            this.LastLoginAddress = address;
+            this.LastLoginTime = DateTime.Now;
+        }
+
+        #endregion
     }
 }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Comment CommentText="管理员">
-    <Position X="0.5" Y="0.594" Height="0.284" Width="0.721" />
+    <Position X="0.5" Y="0.5" Height="0.284" Width="0.721" />
   </Comment>
   <Comment CommentText="上下文">
     <Position X="0.5" Y="2.271" Height="0.284" Width="0.721" />
@@ -34,11 +34,11 @@
       <FileName>OperateRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="zwg_china.model.IModelToContextOfAdministrtor" Collapsed="true">
+  <Interface Name="zwg_china.model.IModelToDbContextOfAdministrtor" Collapsed="true">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IModelToContextOfAdministrtor.cs</FileName>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAEAAAAAgAAAA=</HashCode>
+      <FileName>IModelToDbContextOfAdministrtor.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Microsoft YaHei UI" Size="9" />

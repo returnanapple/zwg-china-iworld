@@ -34,7 +34,7 @@ namespace zwg_china.model.manager
         /// </summary>
         /// <param name="package">用于登陆的数据集</param>
         /// <returns>返回用户的实例</returns>
-        public Author Login(PackageForLogin package)
+        public Author Login(IPackageForLogin package)
         {
             string username = VerifyHelper.EliminateSpaces(package.Username);
             string password = VerifyHelper.EliminateSpaces(package.Password);
@@ -63,7 +63,7 @@ namespace zwg_china.model.manager
         /// 修改用户返点
         /// </summary>
         /// <param name="package">数据集</param>
-        public void ChangeRebate(PackageForChangeRebate package)
+        public void ChangeRebate(IPackageForChangeRebate package)
         {
             SettingOfAuthor setting = new SettingOfAuthor(db);
 
@@ -408,7 +408,7 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 定义用于登陆的数据集
         /// </summary>
-        public interface PackageForLogin
+        public interface IPackageForLogin
         {
             /// <summary>
             /// 用户名
@@ -434,7 +434,7 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 定于用于修改用户返点的数据集
         /// </summary>
-        public interface PackageForChangeRebate
+        public interface IPackageForChangeRebate
         {
             /// <summary>
             /// 用户的存储指针
