@@ -138,6 +138,19 @@ namespace zwg_china.model
         }
 
         /// <summary>
+        /// 获取描述
+        /// </summary>
+        /// <returns>返回描述</returns>
+        public string GetDescription()
+        {
+            string result = string.Format("{0} - {1} - {2}"
+                , this.HowToPlay.Tag.Ticket.Name
+                , this.HowToPlay.Tag.Name
+                , this.HowToPlay.Name);
+            return result;
+        }
+
+        /// <summary>
         /// 获取中奖注数
         /// </summary>
         /// <param name="lottery">开奖记录</param>

@@ -22,14 +22,6 @@ namespace zwg_china.model
         #region 构造方法
 
         /// <summary>
-        /// 获取一个新的系统设置的副本（空）
-        /// </summary>
-        public SettingBase()
-        {
-
-        }
-
-        /// <summary>
         /// 获取一个新的系统设置的副本
         /// </summary>
         /// <param name="db">数据库连接项目</param>

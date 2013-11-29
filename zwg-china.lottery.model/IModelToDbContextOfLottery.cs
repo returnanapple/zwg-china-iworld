@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义彩票模块的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfLottery
+    public interface IModelToDbContextOfLottery : IModelToDbContextOfAuthor
     {
         /// <summary>
         /// 彩票的数据存储区

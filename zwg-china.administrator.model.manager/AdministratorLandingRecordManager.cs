@@ -27,6 +27,13 @@ namespace zwg_china.model.manager
 
         #region 静态方法
 
+        #region 监听
+
+        /// <summary>
+        /// 监听：生成登陆记录
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(AdministratorManager), AdministratorManager.Actions.Login, ExecutionOrder.After)]
         public static void Monitor_CreateLandingRecord(InfoOfSendOnManagerService info)
         {
             IModelToDbContextOfAdministrtor db = (IModelToDbContextOfAdministrtor)info.Db;
@@ -35,6 +42,8 @@ namespace zwg_china.model.manager
             AdministratorLandingRecord landingRecord = new AdministratorLandingRecord(model, model.LastLoginIp, model.LastLoginAddress);
             db.AdministratorLandingRecords.Add(landingRecord);
         }
+
+        #endregion
 
         #endregion
 

@@ -170,14 +170,6 @@ namespace zwg_china.model.manager
         #region 构造方法
 
         /// <summary>
-        /// 获取一个用户相关的系统设置的副本（空）
-        /// </summary>
-        public SettingOfAuthor()
-        {
-
-        }
-
-        /// <summary>
         /// 获取一个用户相关的系统设置的副本
         /// </summary>
         /// <param name="db">数据库连接对象</param>

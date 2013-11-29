@@ -300,6 +300,12 @@ namespace zwg_china.model.manager
 
             Author user = db.Authors.Find(model.Owner.Id);
             user.Money += model.Sum;
+
+            List<string> tNames = new List<string> { "投注", "撤单" };
+            if (tNames.Contains(model.Type))
+            {
+                user.Consumption += model.Sum;
+            }
         }
 
         /// <summary>
