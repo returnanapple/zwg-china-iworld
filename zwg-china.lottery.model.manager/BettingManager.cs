@@ -213,6 +213,10 @@ namespace zwg_china.model.manager
                         return;
                     }
                     double bonus = notes * betting.Multiple * betting.HowToPlay.Odds * (setting.PayoutBase + betting.Points * setting.ConversionRates) / setting.PayoutBase;
+                    if (bonus > setting.MaximumPayout)
+                    {
+                        bonus = setting.MaximumPayout;
+                    }
                     bonus = Math.Round(bonus, 2);
 
                     manager.OnExecuting(Actions.Win, betting);
