@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.administrator.mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.lottery.model.manager", "zwg-china.lottery.model.manager\zwg-china.lottery.model.manager.csproj", "{BD124364-14E2-4FDD-8C59-C0F0E00DC8F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.activity.model.manager", "zwg-china.activity.model.manager\zwg-china.activity.model.manager.csproj", "{A64F8282-CCFE-483F-B775-236683EBDCD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,10 @@ Global
 		{BD124364-14E2-4FDD-8C59-C0F0E00DC8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD124364-14E2-4FDD-8C59-C0F0E00DC8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD124364-14E2-4FDD-8C59-C0F0E00DC8F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64F8282-CCFE-483F-B775-236683EBDCD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64F8282-CCFE-483F-B775-236683EBDCD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64F8282-CCFE-483F-B775-236683EBDCD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64F8282-CCFE-483F-B775-236683EBDCD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -161,6 +167,7 @@ Global
 		{BD124364-14E2-4FDD-8C59-C0F0E00DC8F3} = {C3953C6A-6EEC-4057-AB5D-5F33F1EEC61F}
 		{EC83604D-0340-43CE-B85D-138BC0A20C2E} = {287E9CB9-F6A5-4EC0-9CAE-D56B051789AD}
 		{6EA341AD-1FB0-4B23-BDFC-E797B105E28A} = {EFA5F7C6-93BF-404C-AAAD-F869ACEF815F}
+		{A64F8282-CCFE-483F-B775-236683EBDCD1} = {EFA5F7C6-93BF-404C-AAAD-F869ACEF815F}
 		{C851A7ED-7DDF-4755-8AFF-9D14B3C24BE3} = {0A3D5985-3613-414E-A894-75B974F2ECAE}
 		{44C447CE-12B9-4030-AC6F-AE358557F5A0} = {B39AEEE2-05A9-49CF-B189-103CC4CAD4E7}
 	EndGlobalSection

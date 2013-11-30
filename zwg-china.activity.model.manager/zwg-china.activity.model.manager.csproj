@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD124364-14E2-4FDD-8C59-C0F0E00DC8F3}</ProjectGuid>
+    <ProjectGuid>{A64F8282-CCFE-483F-B775-236683EBDCD1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>zwg_china.model.manager</RootNamespace>
-    <AssemblyName>zwg-china.lottery.model.manager</AssemblyName>
+    <AssemblyName>zwg-china.activity.model.manager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,22 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BettingManager.cs" />
-    <Compile Include="BettingWithChasingManager.cs" />
-    <Compile Include="ChasingManager.cs" />
-    <Compile Include="LotteryManager.cs" />
-    <Compile Include="LotteryTicketManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RIOfLottery.cs" />
-    <Compile Include="SettingOfLottery.cs" />
-    <Compile Include="VirtualBonusManager.cs" />
+    <Compile Include="RedeemPlanManager.cs" />
+    <Compile Include="RedeemRecordManager.cs" />
+    <Compile Include="RewardForConsumptionPlanManager.cs" />
+    <Compile Include="RewardForConsumptionRecordManager.cs" />
+    <Compile Include="RewardForRechargePlanManager.cs" />
+    <Compile Include="RewardForRechargeRecordManager.cs" />
+    <Compile Include="RewardForRegisterPlanManager.cs" />
+    <Compile Include="RewardForRegisterRecordManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="_lottery.model.manager.cd" />
+    <None Include="_activity.model.manager.cd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\zwg-china.activity.model\zwg-china.activity.model.csproj">
+      <Project>{6ea341ad-1fb0-4b23-bdfc-e797b105e28a}</Project>
+      <Name>zwg-china.activity.model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\zwg-china.author.model.manager\zwg-china.author.model.manager.csproj">
       <Project>{a2a2f14e-49cc-4413-93ee-f1d6ad8a3e55}</Project>
       <Name>zwg-china.author.model.manager</Name>
@@ -69,6 +73,10 @@
     <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
       <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
       <Name>zwg-china.author.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.lottery.model.manager\zwg-china.lottery.model.manager.csproj">
+      <Project>{bd124364-14e2-4fdd-8c59-c0f0e00dc8f3}</Project>
+      <Name>zwg-china.lottery.model.manager</Name>
     </ProjectReference>
     <ProjectReference Include="..\zwg-china.lottery.model\zwg-china.lottery.model.csproj">
       <Project>{7b23ae17-8a27-43ab-bc09-37c873cb5fc2}</Project>

@@ -51,7 +51,7 @@
   <Class Name="zwg_china.model.manager.MoneyChangeRecordManager" Collapsed="true">
     <Position X="5.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <HashCode>IAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAACAAAYAAAA=</HashCode>
       <FileName>MoneyChangeRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -72,43 +72,43 @@
   <Class Name="zwg_china.model.manager.AuthorLandingRecordManager" Collapsed="true">
     <Position X="4" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AuthorLandingRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.RebateRecordManager" Collapsed="true">
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RebateRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.CommissionRecordManager" Collapsed="true">
     <Position X="2.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CommissionRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.DividendRecordManager" Collapsed="true">
     <Position X="4" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DividendRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.SettingOfAuthor" Collapsed="true">
     <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABgAAAAAABIBAgAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAACAAAABgBAAAAABMFAgkAAIAAAAABAAAAAAAEAAA=</HashCode>
       <FileName>SettingOfAuthor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.model.manager.RI" Collapsed="true">
+  <Class Name="zwg_china.model.manager.RIOfAuthor" Collapsed="true">
     <Position X="2.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
-      <FileName>RI.cs</FileName>
+      <FileName>RIOfAuthor.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>

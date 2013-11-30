@@ -9,7 +9,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 注册机
     /// </summary>
-    public class RI : IRI
+    public class RIOfAdministrato : IRI
     {
         /// <summary>
         /// 获取目标程序集

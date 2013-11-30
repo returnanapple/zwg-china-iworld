@@ -55,7 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RebateRecordManager.cs" />
     <Compile Include="RechargeRecordManager.cs" />
-    <Compile Include="RI.cs" />
+    <Compile Include="RIOfAuthor.cs" />
     <Compile Include="SettingOfAuthor.cs" />
     <Compile Include="SpreadRecordManager.cs" />
     <Compile Include="SystemQuotaManager.cs" />

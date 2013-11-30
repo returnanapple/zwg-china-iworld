@@ -31,5 +31,13 @@
       <FileName>OperateRecordManager.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="zwg_china.model.manager.RIOfAdministrato" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>RIOfAdministrato.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

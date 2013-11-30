@@ -167,7 +167,7 @@ namespace zwg_china.model.manager
         public static void Service_ChangeIntegral(InfoOfCallOnManagerService info)
         {
             IModelToDbContextOfAuthor db = (IModelToDbContextOfAuthor)info.Db;
-            ChangeFreezeCrgs args = (ChangeFreezeCrgs)info.Args;
+            ChangeIntegralArgs args = (ChangeIntegralArgs)info.Args;
 
             Author user = db.Authors.Find(args.UserId);
             user.Integral += args.Sum;
@@ -463,9 +463,9 @@ namespace zwg_china.model.manager
         #region 类
 
         /// <summary>
-        /// 用于向修改用户被冻结的金额的服务传递数据的数据集
+        /// 用于向修改修改用户的积分的服务传递数据的数据集
         /// </summary>
-        public class ChangeFreezeCrgs
+        public class ChangeIntegralArgs
         {
             /// <summary>
             /// 目标用户的存储指针
@@ -476,11 +476,6 @@ namespace zwg_china.model.manager
             /// 所要改变的数额
             /// </summary>
             public double Sum { get; set; }
-
-            /// <summary>
-            /// 一个布尔值，表示是否需要跟现金账户联动
-            /// </summary>
-            public bool LinkageWithMoney { get; set; }
         }
 
         #endregion

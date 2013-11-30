@@ -23,21 +23,21 @@
   <Class Name="zwg_china.model.manager.BettingManager" Collapsed="true">
     <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABBAAAQAAAAAAAEAAAAAAAAAAAAACABAAAAAAAAA=</HashCode>
+      <HashCode>AAAABBAAAQAAAAAAAEAAAABAAAAAAAACABAAAAAAAAA=</HashCode>
       <FileName>BettingManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.ChasingManager" Collapsed="true">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAABAAQAAQAAAAEAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>ChasingManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.manager.BettingWithChasingManager" Collapsed="true">
     <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAQAAAAAAAAAAAABAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>BettingWithChasingManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -54,6 +54,14 @@
       <HashCode>IAAIAAAIAAAAAAAAAAAiAAAABAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>SettingOfLottery.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RIOfLottery" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>RIOfLottery.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

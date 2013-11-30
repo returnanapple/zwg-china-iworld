@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义活动模块的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfActivity
+    public interface IModelToDbContextOfActivity : IModelToDbContextOfAuthor
     {
         /// <summary>
         /// 注册奖励的计划的数据存储区
