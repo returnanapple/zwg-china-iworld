@@ -51,7 +51,9 @@
     <Compile Include="InfoOnCallOnManagerService.cs" />
     <Compile Include="IPackageForCreateModel.cs" />
     <Compile Include="IPackageForUpdateModel.cs" />
+    <Compile Include="IpToAddressComparisonManager.cs" />
     <Compile Include="ListenAttribute.cs" />
+    <Compile Include="PictureManager.cs" />
     <Compile Include="RegisterToManagerServiceAttribute.cs" />
     <Compile Include="ManagerBase.cs" />
     <Compile Include="ManagerService.cs" />

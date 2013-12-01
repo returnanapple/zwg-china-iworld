@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9896B9D-0387-428B-B6EF-DCB592EF3CD4}</ProjectGuid>
+    <ProjectGuid>{D8416ACD-8C05-4406-9089-6E29F8F99D99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>zwg_china.model.manager</RootNamespace>
-    <AssemblyName>zwg-china.im.model.manager</AssemblyName>
+    <RootNamespace>zwg_china.service.base</RootNamespace>
+    <AssemblyName>zwg_china.service.@base</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
@@ -47,28 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImMessageManager.cs" />
-    <Compile Include="ImQuickReplyManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="_im.model.manager.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\zwg-china.im.model\zwg-china.im.model.csproj">
-      <Project>{44c447ce-12b9-4030-ac6f-ae358557f5a0}</Project>
-      <Name>zwg-china.im.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.model.manager\zwg-china.model.manager.csproj">
-      <Project>{6136db9f-9d62-48bf-8598-cd575ee809dd}</Project>
-      <Name>zwg-china.model.manager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.model\zwg-china.model.csproj">
-      <Project>{276735de-42f6-40db-a96d-9ecf74a659c8}</Project>
-      <Name>zwg-china.model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
