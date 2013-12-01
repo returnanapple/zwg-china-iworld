@@ -13,9 +13,19 @@ namespace zwg_china.model
         #region 属性
 
         /// <summary>
+        /// 接受消息用户的存储指针
+        /// </summary>
+        public int OwnerId { get; set; }
+
+        /// <summary>
         /// 接受消息用户的用户名
         /// </summary>
         public string Owner { get; set; }
+
+        /// <summary>
+        /// 发送消息的用户的存储指针
+        /// </summary>
+        public int ComeFromId { get; set; }
 
         /// <summary>
         /// 发送消息的用户的用户名
@@ -61,14 +71,16 @@ namespace zwg_china.model
         /// <summary>
         /// 实例化一个新的聊天信息（IM）
         /// </summary>
+        /// <param name="ownerId">接受消息用户的存储指针</param>
         /// <param name="owner">接受消息用户的用户名</param>
+        /// <param name="comeFromId">发送消息的用户的存储指针</param>
         /// <param name="comeFrom">发送消息的用户的用户名</param>
         /// <param name="content">正文</param>
         /// <param name="ip">来源IP</param>
         /// <param name="address">来源地址</param>
         /// <param name="readed">一个布尔值 表示该信息是否已经阅读</param>
         /// <param name="isOfficial">一个布尔值 表示该信息是否官方信息(默认为 false)</param>
-        public ImMessage(string owner, string comeFrom, string content, string ip, string address
+        public ImMessage(int ownerId, string owner, int comeFromId, string comeFrom, string content, string ip, string address
             , bool readed, bool isOfficial = false)
         {
             this.Owner = owner;

@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义IM模块的数据存储区
     /// </summary>
-    public interface IModelToDbContext
+    public interface IModelToDbContextOfIm : IModelToDbContext
     {
         /// <summary>
         /// 聊天信息（IM）的数据存储区

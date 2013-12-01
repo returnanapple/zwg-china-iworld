@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="聊天模块的管理者对象">
+    <Position X="0.5" Y="0.5" Height="0.284" Width="1.7" />
+  </Comment>
+  <Class Name="zwg_china.model.manager.ImMessageManager" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.ImMessageManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ImMessageManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImMessageManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.ImQuickReplyManager" Collapsed="true">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="zwg_china.model.manager.ImQuickReplyManager.Actions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ImQuickReplyManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImQuickReplyManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
