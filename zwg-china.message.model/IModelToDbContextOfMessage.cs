@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义交互消息模块的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfMessage
+    public interface IModelToDbContextOfMessage : IModelToDbContextOfAuthor
     {
         /// <summary>
         /// 公告的数据存储区
