@@ -68,5 +68,18 @@ namespace zwg_china.model
         }
 
         #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 刷新盈亏
+        /// </summary>
+        public override void RefreshProfit()
+        {
+            base.RefreshProfit();
+            this.Profit = -this.Profit;
+        }
+
+        #endregion
     }
 }

@@ -42,6 +42,11 @@ namespace zwg_china.model
         /// </summary>
         public double Sum { get; set; }
 
+        /// <summary>
+        /// 当前余额
+        /// </summary>
+        public double Money { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -70,6 +75,7 @@ namespace zwg_china.model
             this.Income = income;
             this.Expenses = expenses;
             this.Sum = this.Income - this.Expenses;
+            this.Money = this.Owner.Money + this.Sum;
         }
 
         #endregion

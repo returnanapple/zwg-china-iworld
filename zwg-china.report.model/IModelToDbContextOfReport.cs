@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义报表模块的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfReport
+    public interface IModelToDbContextOfReport : IModelToDbContextOfAuthor
     {
         /// <summary>
         /// 单日站点统计的数据库存储区

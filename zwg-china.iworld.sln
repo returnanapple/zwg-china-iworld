@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.activity.model.ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.message.model.manager", "zwg-china.message.model.manager\zwg-china.message.model.manager.csproj", "{076598C0-1038-4C88-822A-AE10C130A3DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.report.model.manager", "zwg-china.report.model.manager\zwg-china.report.model.manager.csproj", "{DDE26A78-A3FE-417F-8405-4B46BB37AA92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,10 @@ Global
 		{076598C0-1038-4C88-822A-AE10C130A3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{076598C0-1038-4C88-822A-AE10C130A3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{076598C0-1038-4C88-822A-AE10C130A3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE26A78-A3FE-417F-8405-4B46BB37AA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE26A78-A3FE-417F-8405-4B46BB37AA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE26A78-A3FE-417F-8405-4B46BB37AA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE26A78-A3FE-417F-8405-4B46BB37AA92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +182,7 @@ Global
 		{6EA341AD-1FB0-4B23-BDFC-E797B105E28A} = {EFA5F7C6-93BF-404C-AAAD-F869ACEF815F}
 		{A64F8282-CCFE-483F-B775-236683EBDCD1} = {EFA5F7C6-93BF-404C-AAAD-F869ACEF815F}
 		{C851A7ED-7DDF-4755-8AFF-9D14B3C24BE3} = {0A3D5985-3613-414E-A894-75B974F2ECAE}
+		{DDE26A78-A3FE-417F-8405-4B46BB37AA92} = {0A3D5985-3613-414E-A894-75B974F2ECAE}
 		{44C447CE-12B9-4030-AC6F-AE358557F5A0} = {B39AEEE2-05A9-49CF-B189-103CC4CAD4E7}
 	EndGlobalSection
 EndGlobal
