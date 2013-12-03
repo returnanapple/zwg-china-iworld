@@ -12,22 +12,22 @@ namespace zwg_china.model
     public interface IModelToDbContextOfAdministrtor : IModelToDbContextOfBase
     {
         /// <summary>
-        /// 管理员的数据存储器
+        /// 管理员的数据存储区
         /// </summary>
         DbSet<Administrator> Administrators { get; set; }
 
         /// <summary>
-        /// 管理员用户组的数据存储器
+        /// 管理员用户组的数据存储区
         /// </summary>
         DbSet<AdministratorGroup> AdministratorGroups { get; set; }
 
         /// <summary>
-        /// 管理员登陆记录的数据存储器
+        /// 管理员登陆记录的数据存储区
         /// </summary>
         DbSet<AdministratorLandingRecord> AdministratorLandingRecords { get; set; }
 
         /// <summary>
-        /// 操作记录的数据存储器
+        /// 操作记录的数据存储区
         /// </summary>
         DbSet<OperateRecord> OperateRecords { get; set; }
     }

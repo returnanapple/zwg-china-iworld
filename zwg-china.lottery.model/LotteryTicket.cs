@@ -146,6 +146,17 @@ namespace zwg_china.model
 
             #endregion
 
+            #region 如果每日只有一期，返回相应时间
+
+            if (this.Times.Count == 1)
+            {
+                return DateTime.Now > this.Times.First().Time
+                    ? this.Times.First().Time.AddDays(1)
+                    : this.Times.First().Time;
+            }
+
+            #endregion
+
             #region 确认期号
 
             int issue = 1;

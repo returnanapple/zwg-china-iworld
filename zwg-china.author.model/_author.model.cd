@@ -31,7 +31,10 @@
     <Position X="0.5" Y="9.817" Height="0.284" Width="1.445" />
   </Comment>
   <Comment CommentText="上下文">
-    <Position X="0.5" Y="11.286" Height="0.284" Width="0.7" />
+    <Position X="0.5" Y="12.786" Height="0.284" Width="0.7" />
+  </Comment>
+  <Comment CommentText="官方账户">
+    <Position X="0.5" Y="11.307" Height="0.284" Width="0.908" />
   </Comment>
   <Class Name="zwg_china.model.Author" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
@@ -106,7 +109,7 @@
   <Class Name="zwg_china.model.MoneyChangeRecord" Collapsed="true">
     <Position X="4" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAgAAAAAAAAAAAAAAACAAAAAQAAAAAAAAQ=</HashCode>
+      <HashCode>AAAQAACAAAAgAAAAAAAAAAAAAAACAAAAAQAAAAAAAAQ=</HashCode>
       <FileName>MoneyChangeRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -159,10 +162,17 @@
       <FileName>RebateRecord.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="zwg_china.model.IModelToDbContextOfAuthor" Collapsed="true">
+  <Class Name="zwg_china.model.SystemBankAccount" Collapsed="true">
     <Position X="0.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAIAAAAQJAACAAgQAAABAAABAAAAAAQAQAAA=</HashCode>
+      <HashCode>AQFAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>SystemBankAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="zwg_china.model.IModelToDbContextOfAuthor" Collapsed="true">
+    <Position X="0.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAIAAAAQJAACAAgQAAABAAABAAAAAAQAQAQA=</HashCode>
       <FileName>IModelToDbContextOfAuthor.cs</FileName>
     </TypeIdentifier>
   </Interface>

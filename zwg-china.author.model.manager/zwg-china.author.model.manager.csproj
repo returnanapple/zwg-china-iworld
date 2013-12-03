@@ -57,6 +57,7 @@
     <Compile Include="RechargeRecordManager.cs" />
     <Compile Include="SettingOfAuthor.cs" />
     <Compile Include="SpreadRecordManager.cs" />
+    <Compile Include="SystemBankAccountManager.cs" />
     <Compile Include="SystemQuotaManager.cs" />
     <Compile Include="TransferRecordManager.cs" />
     <Compile Include="UserGroupManager.cs" />

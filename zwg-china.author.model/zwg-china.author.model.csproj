@@ -62,6 +62,7 @@
     <Compile Include="RechargeStatus.cs" />
     <Compile Include="SpreadRecord.cs" />
     <Compile Include="SubordinateData.cs" />
+    <Compile Include="SystemBankAccount.cs" />
     <Compile Include="SystemQuota.cs" />
     <Compile Include="SystemQuotaDetail.cs" />
     <Compile Include="TransferRecord.cs" />
