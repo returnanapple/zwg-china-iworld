@@ -12,6 +12,12 @@
   <Comment CommentText="基本对象的管理者">
     <Position X="0.5" Y="6.26" Height="0.284" Width="1.377" />
   </Comment>
+  <Comment CommentText="注册机">
+    <Position X="0.5" Y="7.802" Height="0.284" Width="0.7" />
+  </Comment>
+  <Comment CommentText="设置">
+    <Position X="4.052" Y="7.802" Height="0.284" Width="0.7" />
+  </Comment>
   <Class Name="zwg_china.model.manager.ManagerService" Collapsed="true">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
@@ -85,13 +91,6 @@
   </Class>
   <Class Name="zwg_china.model.manager.IpToAddressComparisonManager" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="6.75" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="zwg_china.model.manager.IpToAddressComparisonManager.Actions" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>IpToAddressComparisonManager.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IpToAddressComparisonManager.cs</FileName>
@@ -99,16 +98,24 @@
   </Class>
   <Class Name="zwg_china.model.manager.PictureManager" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="6.75" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="zwg_china.model.manager.PictureManager.Actions" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>PictureManager.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PictureManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RIOfBase" Collapsed="true">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>RIOfBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="zwg_china.model.manager.SettingOfBase" Collapsed="true">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQYAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>SettingOfBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.model.manager.IPackageForCreateModel&lt;T&gt;" Collapsed="true">
@@ -123,6 +130,13 @@
     <TypeIdentifier>
       <HashCode>AAQCAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IPackageForUpdateModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="zwg_china.model.manager.IRI" Collapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>IRI.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="zwg_china.model.manager.ExecutionOrder" Collapsed="true">

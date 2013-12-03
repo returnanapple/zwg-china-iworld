@@ -3,6 +3,9 @@
   <Comment CommentText="交互消息的管理者对象">
     <Position X="0.5" Y="0.5" Height="0.284" Width="1.544" />
   </Comment>
+  <Comment CommentText="注册机">
+    <Position X="0.5" Y="1.979" Height="0.284" Width="0.856" />
+  </Comment>
   <Class Name="zwg_china.model.manager.BulletinManager" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -16,6 +19,14 @@
       <HashCode>AAAAAAgAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>NoticeManager.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RIOfMessage" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>RIOfMessage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

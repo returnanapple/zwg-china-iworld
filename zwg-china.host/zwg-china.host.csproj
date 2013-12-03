@@ -104,6 +104,7 @@
   <ItemGroup>
     <Resource Include="Content\LotteryTickets.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -49,6 +49,7 @@
     <Compile Include="BulletinManager.cs" />
     <Compile Include="NoticeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RIOfMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

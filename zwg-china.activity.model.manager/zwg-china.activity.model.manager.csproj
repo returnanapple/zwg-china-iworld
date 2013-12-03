@@ -55,6 +55,7 @@
     <Compile Include="RewardForRechargeRecordManager.cs" />
     <Compile Include="RewardForRegisterPlanManager.cs" />
     <Compile Include="RewardForRegisterRecordManager.cs" />
+    <Compile Include="RIOfActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

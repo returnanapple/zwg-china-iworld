@@ -8,7 +8,7 @@
     <FormatOfIssue>yyyymmddiii</FormatOfIssue>
     <Seats>万位,千位,百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--五星直选-->
       <Tag>
@@ -459,7 +459,7 @@
     <FormatOfIssue>yyyymmddiii</FormatOfIssue>
     <Seats>万位,千位,百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--五星直选-->
       <Tag>
@@ -910,7 +910,7 @@
     <FormatOfIssue>yyyymmddii</FormatOfIssue>
     <Seats>万位,千位,百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--五星直选-->
       <Tag>
@@ -2039,7 +2039,7 @@
     <FormatOfIssue>yyyyiii</FormatOfIssue>
     <Seats>百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--三星直选-->
       <Tag>
@@ -2254,7 +2254,7 @@
     <FormatOfIssue>yyiii</FormatOfIssue>
     <Seats>百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--三星直选-->
       <Tag>
@@ -2469,7 +2469,7 @@
     <FormatOfIssue>yyyymmddii</FormatOfIssue>
     <Seats>百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--三星直选-->
       <Tag>
@@ -2684,7 +2684,7 @@
     <FormatOfIssue>yymmddiii</FormatOfIssue>
     <Seats>百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--三星直选-->
       <Tag>
@@ -2893,7 +2893,7 @@
     </Tags>
   </Ticket>
   <!--以上是官方彩票-->
-  
+
   <!--以下是自主开奖的彩票-->
   <!--五分时时彩-->
   <Ticket>
@@ -2902,7 +2902,7 @@
     <FormatOfIssue>yyyymmddiii</FormatOfIssue>
     <Seats>万位,千位,百位,十位,个位</Seats>
     <FirstNum>0</FirstNum>
-    <CountOfNUm>9</CountOfNUm>
+    <CountOfNUm>10</CountOfNUm>
     <Tags>
       <!--五星直选-->
       <Tag>

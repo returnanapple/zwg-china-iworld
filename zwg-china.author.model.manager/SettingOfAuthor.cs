@@ -165,6 +165,46 @@ namespace zwg_china.model.manager
             set { SetValue("LowerConsumptionForDividend", value); }
         }
 
+        #region 清理用户的条件
+
+        /// <summary>
+        /// 自动清理用户的条件：未激活时间（天）
+        /// </summary>
+        public int ClearUser_DaysOfInactive
+        {
+            get { return GetIntValue("ClearUser_DaysOfInactive", 30); }
+            set { SetValue("ClearUser_DaysOfInactive", value); }
+        }
+
+        /// <summary>
+        /// 自动清理用户的条件：未登陆时间（天）
+        /// </summary>
+        public int ClearUser_DaysOfUnSetIn
+        {
+            get { return GetIntValue("ClearUser_DaysOfUnSetIn", 30); }
+            set { SetValue("ClearUser_DaysOfUnSetIn", value); }
+        }
+
+        /// <summary>
+        /// 自动清理用户的条件：余额（小于）
+        /// </summary>
+        public double ClearUser_LowerOfMoney
+        {
+            get { return GetDoubleValue("ClearUser_LowerOfMoney", 100.0); }
+            set { SetValue("ClearUser_LowerOfMoney", value); }
+        }
+
+        /// <summary>
+        /// 自动清理用户的条件：未发送帐变的时间（天）
+        /// </summary>
+        public int ClearUser_DaysOfUnMoneyChange
+        {
+            get { return GetIntValue("ClearUser_DaysOfUnMoneyChange", 30); }
+            set { SetValue("ClearUser_DaysOfUnMoneyChange", value); }
+        }
+
+        #endregion
+
         #endregion
 
         #region 构造方法

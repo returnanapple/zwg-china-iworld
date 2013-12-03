@@ -52,6 +52,7 @@
     <Compile Include="LotteryManager.cs" />
     <Compile Include="LotteryTicketManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RIOfLottery.cs" />
     <Compile Include="SettingOfLottery.cs" />
     <Compile Include="VirtualBonusManager.cs" />
   </ItemGroup>

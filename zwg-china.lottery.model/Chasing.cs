@@ -100,14 +100,12 @@ namespace zwg_china.model
         /// <param name="howToPlay">玩法</param>
         /// <param name="seats">位</param>
         /// <param name="pay">投注总金额</param>
-        public Chasing(Author owner, string startIssue, int continuance, int notes, double points, HowToPlay howToPlay, List<ChasingSeat> seats
-            , double pay)
+        public Chasing(Author owner, string startIssue, int continuance, double points, HowToPlay howToPlay, List<ChasingSeat> seats, double pay)
         {
             this.Owner = owner;
             this.StartIssue = startIssue;
             this.Continuance = continuance;
             this.Gone = 0;
-            this.Notes = notes;
             this.Points = points;
             this.HowToPlay = howToPlay;
             this.Seats = seats;
@@ -115,6 +113,8 @@ namespace zwg_china.model
             this.Pay = pay;
             this.Repay = 0;
             this.Bonus = 0;
+
+            this.Notes = GetNotes();
         }
 
         #endregion
@@ -295,6 +295,86 @@ namespace zwg_china.model
         {
             int result = lottery.Seats.Count(x => this.Seats.Any(s => s.Name == x.Name && s.ValueList.Contains(x.Value)));
             return result;
+        }
+
+        /// <summary>
+        /// 获取投注的注数
+        /// </summary>
+        /// <returns>返回投注的注数</returns>
+        int GetNotes()
+        {
+            int notes = 0;
+
+            #region 获取实际的注数
+
+            if (this.HowToPlay.Interface == LotteryInterface.任N直选)
+            {
+                //直选复式
+                if (this.HowToPlay.IsDuplex)
+                {
+                    notes = 1;
+                    this.Seats.ForEach(seat => { notes *= seat.ValueList.Count; });
+                }
+                //直选单式
+                else
+                {
+                    notes = this.Seats.First().ValueList.Count;
+                }
+            }
+            else if (this.HowToPlay.Interface == LotteryInterface.任N组选)
+            {
+                //二星组选
+                if (this.HowToPlay.CountOfSeatsForWin == 2)
+                {
+                    int t = this.Seats.First().ValueList.Count;
+                    List<int> tList = new List<int> 
+                    {
+                        t,
+                        t * (t - 1) 
+                    };
+                    for (int i = 1; i <= 2; i++)
+                    {
+                        if (i >= this.HowToPlay.LowerCountOfDifferentSeatsForWin
+                            && i <= this.HowToPlay.CapsCountOfDifferentSeatsForWin)
+                        {
+                            notes += tList[i - 1];
+                        }
+                    }
+                }
+                //三星组选
+                else if (this.HowToPlay.CountOfSeatsForWin == 3)
+                {
+                    int t = this.Seats.First().ValueList.Count;
+                    List<int> tList = new List<int> 
+                    {
+                        t,
+                        3 * t * (t - 1),
+                        t * (t - 1) *(t - 2)
+                    };
+                    for (int i = 1; i <= 3; i++)
+                    {
+                        if (i >= this.HowToPlay.LowerCountOfDifferentSeatsForWin
+                            && i <= this.HowToPlay.CapsCountOfDifferentSeatsForWin)
+                        {
+                            notes += tList[i - 1];
+                        }
+                    }
+                }
+            }
+            else if (this.HowToPlay.Interface == LotteryInterface.任N定位胆)
+            {
+                //定位胆
+                this.Seats.ForEach(seat => { notes += seat.ValueList.Count; });
+            }
+            else if (this.HowToPlay.Interface == LotteryInterface.任N不定位)
+            {
+                //不定位
+                notes = this.Seats.First().ValueList.Count;
+            }
+
+            #endregion
+
+            return notes;
         }
 
         #endregion

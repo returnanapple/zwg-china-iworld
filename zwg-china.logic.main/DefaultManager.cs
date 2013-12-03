@@ -128,8 +128,39 @@ namespace zwg_china.logic
                                         .ForEach(eHowToPlay =>
                                         {
                                             howToPlayOrder++;
+                                            LotteryInterface _interface = (LotteryInterface)Enum.Parse(typeof(LotteryInterface), eHowToPlay.Element("Interface").Value);
                                             double odds = 0;
+                                            double tDatum = 1.7;
+                                            string _validSeats = eHowToPlay.Element("ValidSeats").Value;
                                             #region 动态计算赔率
+
+                                            if (_interface == LotteryInterface.任N直选
+                                                || _interface == LotteryInterface.任N组选)
+                                            {
+                                                double t = 1;
+                                                _validSeats.Split(new char[] { ',', '，' }).ToList()
+                                                    .ForEach(x =>
+                                                    {
+                                                        t *= ticket.CountOfNUm;
+                                                    });
+                                                odds = Math.Round(t * tDatum, 2);
+                                            }
+                                            else if (_interface == LotteryInterface.任N定位胆)
+                                            {
+                                                odds = Math.Round(ticket.CountOfNUm * tDatum, 2);
+                                            }
+                                            else if (_interface == LotteryInterface.任N不定位)
+                                            {
+                                                double t1 = ((double)(ticket.CountOfNUm - 1)) / ((double)ticket.CountOfNUm);
+                                                double t2 = 1;
+                                                _validSeats.Split(new char[] { ',', '，' }).ToList()
+                                                    .ForEach(x =>
+                                                    {
+                                                        t2 *= t1;
+                                                    });
+                                                double t = 1 / (1 - t2);
+                                                odds = Math.Round(t * tDatum, 2);
+                                            }
 
                                             #endregion
                                             HowToPlay howToPlay = new HowToPlay(name: eHowToPlay.Element("Name").Value
@@ -137,9 +168,9 @@ namespace zwg_china.logic
                                                 , lowerSeats: Convert.ToInt32(eHowToPlay.Element("LowerSeats").Value)
                                                 , capsSeats: Convert.ToInt32(eHowToPlay.Element("CapsSeats").Value)
                                                 , odds: odds
-                                                , _interface: (LotteryInterface)Enum.Parse(typeof(LotteryInterface), eHowToPlay.Element("Interface").Value)
+                                                , _interface: _interface
                                                 , allowFreeSeats: Convert.ToBoolean(eHowToPlay.Element("AllowFreeSeats").Value)
-                                                , validSeats: eHowToPlay.Element("ValidSeats").Value
+                                                , validSeats: _validSeats
                                                 , optionalSeats: eHowToPlay.Element("OptionalSeats").Value
                                                 , isDuplex: Convert.ToBoolean(eHowToPlay.Element("IsDuplex").Value)
                                                 , countOfSeatsForWin: Convert.ToInt32(eHowToPlay.Element("CountOfSeatsForWin").Value)
@@ -167,8 +198,22 @@ namespace zwg_china.logic
                     #endregion
 
                     db.SaveChanges();
+                    new SettingOfBase(db).Save(db);
+                    new SettingOfAuthor(db).Save(db);
+                    new SettingOfLottery(db).Save(db);
                 }
             };
+            List<Assembly> assemblies = new List<Assembly>
+            {
+                new RIOfActivity().GetAssembly(),
+                new RIOfAdministrator().GetAssembly(),
+                new RIOfAuthor().GetAssembly(),
+                new RIOfBase().GetAssembly(),
+                new RIOfLottery().GetAssembly(),
+                new RIOfMessage().GetAssembly(),
+                new RIOfReport().GetAssembly()
+            };
+            ManagerService.Initialize(assemblies);
         }
     }
 }

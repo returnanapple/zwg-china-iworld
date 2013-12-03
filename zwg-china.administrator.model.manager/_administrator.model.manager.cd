@@ -3,6 +3,9 @@
   <Comment CommentText="管理员模块的管理者对象">
     <Position X="0.5" Y="0.5" Height="0.284" Width="1.627" />
   </Comment>
+  <Comment CommentText="注册机">
+    <Position X="0.5" Y="2.198" Height="0.284" Width="0.721" />
+  </Comment>
   <Class Name="zwg_china.model.manager.AdministratorManager" Collapsed="true">
     <Position X="0.5" Y="1" Width="1.5" />
     <TypeIdentifier>
@@ -30,6 +33,14 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>OperateRecordManager.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.model.manager.RIOfAdministrator" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>RIOfAdministrator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

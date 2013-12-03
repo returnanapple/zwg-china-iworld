@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RersonalReportForOneDayManager.cs" />
     <Compile Include="RersonalReportForOneMonthManager.cs" />
+    <Compile Include="RIOfReport.cs" />
     <Compile Include="SiteReportForOneDayManager.cs" />
     <Compile Include="SiteReportForOneMonthManager.cs" />
     <Compile Include="TeamReportForOneDayManager.cs" />

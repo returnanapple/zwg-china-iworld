@@ -78,18 +78,16 @@ namespace zwg_china.model
         /// </summary>
         /// <param name="owner">投注人</param>
         /// <param name="issue">期号</param>
-        /// <param name="notes">注数</param>
         /// <param name="multiple">倍数</param>
         /// <param name="points">用于转换为赔率的点数</param>
         /// <param name="howToPlay">玩法</param>
         /// <param name="seats">位</param>
         /// <param name="pay">投注金额</param>
-        public Betting(Author owner, string issue, int notes, double multiple, double points
-            , HowToPlay howToPlay, List<BettingSeat> seats, double pay)
+        public Betting(Author owner, string issue, double multiple, double points, HowToPlay howToPlay
+            , List<BettingSeat> seats, double pay)
         {
             this.Owner = owner;
             this.Issue = issue;
-            this.Notes = notes;
             this.Multiple = multiple;
             this.Points = points;
             this.HowToPlay = howToPlay;
@@ -97,6 +95,8 @@ namespace zwg_china.model
             this.Status = BettingStatus.等待开奖;
             this.Pay = pay;
             this.Bonus = 0;
+
+            this.Notes = GetNotes();
         }
 
         #endregion
@@ -281,6 +281,86 @@ namespace zwg_china.model
         {
             int result = lottery.Seats.Count(x => this.Seats.Any(s => s.Name == x.Name && s.ValueList.Contains(x.Value)));
             return result;
+        }
+
+        /// <summary>
+        /// 获取投注的注数
+        /// </summary>
+        /// <returns>返回投注的注数</returns>
+        int GetNotes()
+        {
+            int notes = 0;
+
+            #region 获取实际的注数
+
+            if (this.HowToPlay.Interface == LotteryInterface.任N直选)
+            {
+                //直选复式
+                if (this.HowToPlay.IsDuplex)
+                {
+                    notes = 1;
+                    this.Seats.ForEach(seat => { notes *= seat.ValueList.Count; });
+                }
+                //直选单式
+                else
+                {
+                    notes = this.Seats.First().ValueList.Count;
+                }
+            }
+            else if (this.HowToPlay.Interface == LotteryInterface.任N组选)
+            {
+                //二星组选
+                if (this.HowToPlay.CountOfSeatsForWin == 2)
+                {
+                    int t = this.Seats.First().ValueList.Count;
+                    List<int> tList = new List<int> 
+                    {
+                        t,
+                        t * (t - 1) 
+                    };
+                    for (int i = 1; i <= 2; i++)
+                    {
+                        if (i >= this.HowToPlay.LowerCountOfDifferentSeatsForWin
+                            && i <= this.HowToPlay.CapsCountOfDifferentSeatsForWin)
+                        {
+                            notes += tList[i - 1];
+                        }
+                    }
+                }
+                //三星组选
+                else if (this.HowToPlay.CountOfSeatsForWin == 3)
+                {
+                    int t = this.Seats.First().ValueList.Count;
+                    List<int> tList = new List<int> 
+                    {
+                        t,
+                        3 * t * (t - 1),
+                        t * (t - 1) *(t - 2)
+                    };
+                    for (int i = 1; i <= 3; i++)
+                    {
+                        if (i >= this.HowToPlay.LowerCountOfDifferentSeatsForWin
+                            && i <= this.HowToPlay.CapsCountOfDifferentSeatsForWin)
+                        {
+                            notes += tList[i - 1];
+                        }
+                    }
+                }
+            }
+            else if (this.HowToPlay.Interface == LotteryInterface.任N定位胆)
+            {
+                //定位胆
+                this.Seats.ForEach(seat => { notes += seat.ValueList.Count; });
+            }
+            else if (this.HowToPlay.Interface == LotteryInterface.任N不定位)
+            {
+                //不定位
+                notes = this.Seats.First().ValueList.Count;
+            }
+
+            #endregion
+
+            return notes;
         }
 
         #endregion
