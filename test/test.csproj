@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D8416ACD-8C05-4406-9089-6E29F8F99D99}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{75E60685-7DB4-4E90-B1A9-30A3301CC551}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>zwg_china.service</RootNamespace>
-    <AssemblyName>zwg_china.service.@base</AssemblyName>
+    <RootNamespace>test</RootNamespace>
+    <AssemblyName>test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,10 +36,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -46,53 +49,33 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerivceBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
-    <None Include="_service.base.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\zwg-china.activity.model\zwg-china.activity.model.csproj">
-      <Project>{6ea341ad-1fb0-4b23-bdfc-e797b105e28a}</Project>
-      <Name>zwg-china.activity.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.administrator.model\zwg-china.administrator.model.csproj">
-      <Project>{10ca1212-7df8-41a7-84ba-2320583ab437}</Project>
-      <Name>zwg-china.administrator.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
-      <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
-      <Name>zwg-china.author.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.im.model\zwg-china.im.model.csproj">
-      <Project>{44c447ce-12b9-4030-ac6f-ae358557f5a0}</Project>
-      <Name>zwg-china.im.model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\zwg-china.logic.main\zwg-china.logic.main.csproj">
       <Project>{12adf318-c34d-4b51-80ad-9f564319bd7d}</Project>
       <Name>zwg-china.logic.main</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zwg-china.lottery.model\zwg-china.lottery.model.csproj">
-      <Project>{7b23ae17-8a27-43ab-bc09-37c873cb5fc2}</Project>
-      <Name>zwg-china.lottery.model</Name>
+    <ProjectReference Include="..\zwg-china.model.manager\zwg-china.model.manager.csproj">
+      <Project>{6136db9f-9d62-48bf-8598-cd575ee809dd}</Project>
+      <Name>zwg-china.model.manager</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zwg-china.message.model\zwg-china.message.model.csproj">
-      <Project>{ec83604d-0340-43ce-b85d-138bc0a20c2e}</Project>
-      <Name>zwg-china.message.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.model\zwg-china.model.csproj">
-      <Project>{276735de-42f6-40db-a96d-9ecf74a659c8}</Project>
-      <Name>zwg-china.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.report.model\zwg-china.report.model.csproj">
-      <Project>{c851a7ed-7ddf-4755-8aff-9d14b3c24be3}</Project>
-      <Name>zwg-china.report.model</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\LotteryTickets.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

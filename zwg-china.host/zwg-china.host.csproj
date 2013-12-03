@@ -102,12 +102,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Contetnt\LogicAssemblies.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Contetnt\LotteryTickets.xml">
+    <Resource Include="Content\LotteryTickets.xml">
       <SubType>Designer</SubType>
     </Resource>
   </ItemGroup>

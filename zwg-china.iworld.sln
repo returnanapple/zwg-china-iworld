@@ -77,6 +77,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_main", "_main", "{BF95158B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.logic.main", "zwg-china.logic.main\zwg-china.logic.main.csproj", "{12ADF318-C34D-4B51-80AD-9F564319BD7D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{05AB2026-3642-48C6-8290-F91DF1EB521D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{75E60685-7DB4-4E90-B1A9-30A3301CC551}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +171,10 @@ Global
 		{12ADF318-C34D-4B51-80AD-9F564319BD7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12ADF318-C34D-4B51-80AD-9F564319BD7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12ADF318-C34D-4B51-80AD-9F564319BD7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E60685-7DB4-4E90-B1A9-30A3301CC551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E60685-7DB4-4E90-B1A9-30A3301CC551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E60685-7DB4-4E90-B1A9-30A3301CC551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E60685-7DB4-4E90-B1A9-30A3301CC551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -206,5 +214,6 @@ Global
 		{C9896B9D-0387-428B-B6EF-DCB592EF3CD4} = {B39AEEE2-05A9-49CF-B189-103CC4CAD4E7}
 		{D8416ACD-8C05-4406-9089-6E29F8F99D99} = {AA8EA477-195A-4B6B-919D-E7D0788BA1AE}
 		{12ADF318-C34D-4B51-80AD-9F564319BD7D} = {BF95158B-096F-4DAA-A4AD-C652EB187737}
+		{75E60685-7DB4-4E90-B1A9-30A3301CC551} = {05AB2026-3642-48C6-8290-F91DF1EB521D}
 	EndGlobalSection
 EndGlobal
