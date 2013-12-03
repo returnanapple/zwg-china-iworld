@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 单月个人统计的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class RersonalReportForOneMonthManager : ManagerBase<IModelToDbContextOfReport, RersonalReportForOneMonthManager.Actions, RersonalReportForOneMonth>
     {
         #region 构造方法

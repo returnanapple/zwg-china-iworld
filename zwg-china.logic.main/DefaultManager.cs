@@ -158,7 +158,7 @@ namespace zwg_china.logic
 
                 #region 银行账户
 
-                SystemBankAccount bank1 = new SystemBankAccount(holderOfTheCard: "习近平", card: "6213387263443096574", bank: Bank.中国工商银行
+                SystemBankAccount bank1 = new SystemBankAccount(holderOfTheCard: "大厨麦当牛", card: "6213387263443096574", bank: Bank.中国工商银行
                     , remark: "测试账户", order: 1, hide: false);
                 db.SystemBankAccounts.Add(bank1);
 

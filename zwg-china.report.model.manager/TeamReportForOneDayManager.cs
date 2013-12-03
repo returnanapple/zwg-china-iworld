@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 单日团队统计的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class TeamReportForOneDayManager : ManagerBase<IModelToDbContextOfReport, TeamReportForOneDayManager.Actions, TeamReportForOneDay>
     {
         #region 构造方法

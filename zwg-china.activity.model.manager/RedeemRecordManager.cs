@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 积分兑换的参与记录
     /// </summary>
+    [RegisterToManagerService]
     public class RedeemRecordManager : ManagerBase<IModelToDbContextOfActivity, RedeemRecordManager.Actions, RedeemRecord>
     {
         #region 构造方法

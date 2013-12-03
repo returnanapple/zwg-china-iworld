@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 充值奖励的参与记录的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class RewardForRechargeRecordManager : ManagerBase<IModelToDbContextOfActivity, RewardForRechargeRecordManager.Actions, RewardForRechargeRecord>
     {
         #region 构造方法

@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 通知的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class NoticeManager : ManagerBase<IModelToDbContextOfMessage, NoticeManager.Actions, Notice>
     {
         #region 构造方法

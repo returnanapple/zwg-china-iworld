@@ -1,4 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <assemblies>
-  <assembliy></assembliy>
+  <assembliy>zwg-china.model.manager</assembliy>
+  <assembliy>zwg-china.activity.model.manager</assembliy>
+  <assembliy>zwg-china.administrator.model.manager</assembliy>
+  <assembliy>zwg-china.author.model.manager</assembliy>
+  <assembliy>zwg-china.im.model.manager</assembliy>
+  <assembliy>zwg-china.lottery.model.manager</assembliy>
+  <assembliy>zwg-china.message.model.manager</assembliy>
+  <assembliy>zwg-china.report.model.manager</assembliy>
 </assemblies>

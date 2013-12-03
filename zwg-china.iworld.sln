@@ -57,8 +57,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.author.model.mana
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.aid", "zwg-china.aid\zwg-china.aid.csproj", "{5B7B4DA0-8F8C-427A-89AC-24AEAB0F8BD3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{470E38EA-9CD1-4548-B96F-27DE27C0A0F9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.administrator.model.manager", "zwg-china.administrator.model.manager\zwg-china.administrator.model.manager.csproj", "{C7EAED87-0AF3-49F0-9BCE-E95A10850C5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zwg-china.lottery.model.manager", "zwg-china.lottery.model.manager\zwg-china.lottery.model.manager.csproj", "{BD124364-14E2-4FDD-8C59-C0F0E00DC8F3}"

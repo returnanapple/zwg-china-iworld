@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 消费奖励的参与记录的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class RewardForConsumptionRecordManager : ManagerBase<IModelToDbContextOfActivity, RewardForConsumptionRecordManager.Actions, RewardForConsumptionRecord>
     {
         #region 构造方法

@@ -8,6 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 单月站点统计的管理者对象
     /// </summary>
+    [RegisterToManagerService]
     public class SiteReportForOneMonthManager : ManagerBase<IModelToDbContextOfReport, SiteReportForOneMonthManager.Actions, SiteReportForOneMonth>
     {
         #region 构造方法
