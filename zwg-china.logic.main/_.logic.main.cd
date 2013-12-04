@@ -18,5 +18,20 @@
       <FileName>DefaultManager.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="zwg_china.logic.CollectManager" Collapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="zwg_china.logic.CollectManager.PackageForCreateLottery" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CollectManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAQAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>CollectManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

@@ -34,6 +34,11 @@ namespace zwg_china.model
         public string Issue { get; set; }
 
         /// <summary>
+        /// 当期开奖记录
+        /// </summary>
+        public string LotteryValues { get; set; }
+
+        /// <summary>
         /// 下一期的期号
         /// </summary>
         public string NextIssue { get; set; }
@@ -116,6 +121,7 @@ namespace zwg_china.model
             this.RealName = name;
             this.Installments = installments;
             this.Issue = "从未开奖";
+            this.LotteryValues = "从未开奖";
             this.NextIssue = "";
             this.Tags = new List<PlayTag>();
             this.Times = times;

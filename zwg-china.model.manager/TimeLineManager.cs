@@ -34,9 +34,9 @@ namespace zwg_china.model.manager
         /// <param name="e">传递的数据</param>
         void Spark(object sender, ElapsedEventArgs e)
         {
-            SparkEachSecond(e.SignalTime);
-            SparkEachMinute(e.SignalTime);
-            SparkEachHour(e.SignalTime);
+            new Action<DateTime>(SparkEachSecond).BeginInvoke(e.SignalTime, null, null);
+            new Action<DateTime>(SparkEachMinute).BeginInvoke(e.SignalTime, null, null);
+            new Action<DateTime>(SparkEachHour).BeginInvoke(e.SignalTime, null, null);
         }
 
         /// <summary>

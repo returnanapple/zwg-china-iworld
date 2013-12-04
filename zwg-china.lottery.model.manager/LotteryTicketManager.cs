@@ -8,7 +8,8 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 彩票的管理者对象
     /// </summary>
-    public class LotteryTicketManager: ManagerBase<IModelToDbContextOfLottery, LotteryTicketManager.Actions, LotteryTicket>
+    [RegisterToManagerService]
+    public class LotteryTicketManager : ManagerBase<IModelToDbContextOfLottery, LotteryTicketManager.Actions, LotteryTicket>
     {
         #region 构造方法
 
@@ -20,6 +21,27 @@ namespace zwg_china.model.manager
             : base(db)
         {
 
+        }
+
+        #endregion
+
+        #region 静态方法
+
+        /// <summary>
+        /// 更新开奖时间和期号
+        /// </summary>
+        /// <param name="info">数据集</param>
+        [Listen(typeof(LotteryManager), LotteryManager.Actions.Create, ExecutionOrder.After)]
+        public static void UpdateLotteryIssue(InfoOfSendOnManagerService info)
+        {
+            IModelToDbContextOfLottery db = (IModelToDbContextOfLottery)info.Db;
+            Lottery model = (Lottery)info.Model;
+            if (model.Sources == LotterySources.手动) { return; }
+
+            LotteryTicket ticket = db.LotteryTickets.Find(model.Ticket.Id);
+            ticket.Issue = model.Issue;
+            ticket.NextIssue = model.GetNextIssue();
+            ticket.LotteryValues = string.Join(",", model.Seats.ConvertAll(x => x.Value));
         }
 
         #endregion

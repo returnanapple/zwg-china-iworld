@@ -16,6 +16,8 @@ namespace zwg_china.logic
     /// </summary>
     public class DefaultManager
     {
+        #region 静态方法
+
         /// <summary>
         /// 加载初始化数据
         /// </summary>
@@ -214,6 +216,9 @@ namespace zwg_china.logic
                 new RIOfReport().GetAssembly()
             };
             ManagerService.Initialize(assemblies);
+            CollectManager.Run();
         }
+
+        #endregion
     }
 }
