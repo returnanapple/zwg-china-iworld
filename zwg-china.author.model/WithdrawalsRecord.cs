@@ -10,7 +10,7 @@ namespace zwg_china.model
     /// </summary>
     public class WithdrawalsRecord : RecordingTimeModelBase
     {
-        #region 公开属性
+        #region 属性
 
         /// <summary>
         /// 申请人

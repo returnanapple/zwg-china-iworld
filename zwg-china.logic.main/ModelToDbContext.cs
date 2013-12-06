@@ -10,7 +10,7 @@ namespace zwg_china.logic
     /// <summary>
     /// 数据库连接对象
     /// </summary>
-    public class ModelToDbContext : DbContext, IModelToDbContext, IModelToDbContextOfActivity, IModelToDbContextOfAdministrtor
+    public class ModelToDbContext : DbContext, IModelToDbContext, IModelToDbContextOfActivity, IModelToDbContextOfAdministrator
         , IModelToDbContextOfAuthor, IModelToDbContextOfBase, IModelToDbContextOfIm, IModelToDbContextOfLottery, IModelToDbContextOfMessage
         , IModelToDbContextOfReport
     {
@@ -380,9 +380,9 @@ namespace zwg_china.logic
             modelBuilder.Entity<SystemQuota>().ToTable("zwg-SystemQuota");
             modelBuilder.Entity<SystemQuota>().HasKey(x => x.Id);
 
-            modelBuilder.Entity<SystemQuota>().HasMany(x => x.Detail)
+            modelBuilder.Entity<SystemQuota>().HasMany(x => x.Details)
                 .WithMany()
-                .Map(x => x.ToTable("zwg-SystemQuota-Detail"));
+                .Map(x => x.ToTable("zwg-SystemQuota-Details"));
 
             #endregion
             #region SystemQuotaDetail的契约

@@ -10,7 +10,7 @@ namespace zwg_china.model
     /// </summary>
     public class UserGroup : ModelBase
     {
-        #region 公开属性
+        #region 属性
 
         #region 基本信息
 

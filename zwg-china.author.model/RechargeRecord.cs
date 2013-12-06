@@ -28,11 +28,6 @@ namespace zwg_china.model
         public string SerialNumber { get; set; }
 
         /// <summary>
-        /// 附言
-        /// </summary>
-        public string Postscript { get; set; }
-
-        /// <summary>
         /// 金额
         /// </summary>
         public double Sum { get; set; }
@@ -60,13 +55,11 @@ namespace zwg_china.model
         /// <param name="owner">用户</param>
         /// <param name="comeFrom">来源银行</param>
         /// <param name="serialNumber">流水号</param>
-        /// <param name="postscript">金额</param>
-        public RechargeRecord(Author owner, Bank comeFrom, string serialNumber, string postscript)
+        public RechargeRecord(Author owner, Bank comeFrom, string serialNumber)
         {
             this.Owner = owner;
             this.ComeFrom = comeFrom;
             this.SerialNumber = serialNumber;
-            this.Postscript = postscript;
             this.Sum = 0;
             this.Status = RechargeStatus.等待银行确认;
         }

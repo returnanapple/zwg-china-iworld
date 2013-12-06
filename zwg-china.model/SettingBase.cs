@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace zwg_china.model
@@ -28,18 +29,25 @@ namespace zwg_china.model
         public SettingBase(IModelToDbContextOfBase db)
         {
             Type classType = this.GetType();
-            classType.GetProperties().ToList().ForEach(property =>
+            Dictionary<string, PropertyInfo> properties = new Dictionary<string, PropertyInfo>();
+            List<string> keys = classType.GetProperties()
+                .Where(x => x.CanRead)
+                .ToList()
+                .ConvertAll(property =>
                 {
-                    if (!property.CanRead) { return; }
                     string key = string.Format("[{0}]{1}", classType.FullName, property.Name);
-                    SettingDetail sd = db.SettingDetails.FirstOrDefault(x => x.Key == key);
-                    if (sd == null)
-                    {
-                        string value = property.GetValue(this).ToString();
-                        sd = new SettingDetail(key, value);
-                    }
-                    details.Add(sd);
+                    properties.Add(key, property);
+                    return key;
                 });
+            List<SettingDetail> sds = db.SettingDetails.Where(x => keys.Contains(x.Key)).ToList();
+            keys.Where(key => !sds.Any(sd => sd.Key == key)).ToList()
+                .ForEach(key =>
+                {
+                    string value = properties[key].GetValue(this).ToString();
+                    SettingDetail sd = new SettingDetail(key, value);
+                    sds.Add(sd);
+                });
+            this.details = sds;
         }
 
         #endregion

@@ -126,7 +126,7 @@ namespace zwg_china.model.manager
                 {
                     SystemQuota sq = db.SystemQuotas.FirstOrDefault(x => x.Rebate == parent.PlayInfo.Rebate_Normal);
                     if (sq == null) { sq = new SystemQuota(parent.PlayInfo.Rebate_Normal, new List<SystemQuotaDetail>()); }
-                    SystemQuotaDetail sqDetail = sq.Detail.FirstOrDefault(x => x.Rebate == package.NewRebate_Normal);
+                    SystemQuotaDetail sqDetail = sq.Details.FirstOrDefault(x => x.Rebate == package.NewRebate_Normal);
                     int quota = sqDetail == null ? 0 : sqDetail.Sum;
                     ExtraQuota eq = parent.ExtraQuotas.FirstOrDefault(x => x.Rebate == package.NewRebate_Normal);
                     if (eq != null) { quota += eq.Sum; }

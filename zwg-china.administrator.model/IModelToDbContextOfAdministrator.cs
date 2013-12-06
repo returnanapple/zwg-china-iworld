@@ -9,7 +9,7 @@ namespace zwg_china.model
     /// <summary>
     /// 定义管理员模块的数据库连接对象
     /// </summary>
-    public interface IModelToDbContextOfAdministrtor : IModelToDbContextOfBase
+    public interface IModelToDbContextOfAdministrator : IModelToDbContextOfBase
     {
         /// <summary>
         /// 管理员的数据存储区

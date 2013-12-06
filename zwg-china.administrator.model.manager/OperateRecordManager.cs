@@ -8,7 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 操作记录的管理对象
     /// </summary>
-    public class OperateRecordManager : ManagerBase<IModelToDbContextOfAdministrtor, OperateRecordManager.Actions, OperateRecord>
+    public class OperateRecordManager : ManagerBase<IModelToDbContextOfAdministrator, OperateRecordManager.Actions, OperateRecord>
     {
         #region 构造方法
 
@@ -16,7 +16,7 @@ namespace zwg_china.model.manager
         /// 实例化一个新的操作记录的管理对象
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        public OperateRecordManager(IModelToDbContextOfAdministrtor db)
+        public OperateRecordManager(IModelToDbContextOfAdministrator db)
             : base(db)
         {
 

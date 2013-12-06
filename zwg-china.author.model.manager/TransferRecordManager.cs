@@ -43,7 +43,6 @@ namespace zwg_china.model.manager
             {
                 TransferRecord record = db.TransferRecords.FirstOrDefault(x => x.ComeFrom == model.ComeFrom
                     && x.SerialNumber == model.SerialNumber
-                    && x.Postscript == model.Postscript
                     && x.Status == TransferStatus.用户已经支付);
                 if (record == null)
                 {

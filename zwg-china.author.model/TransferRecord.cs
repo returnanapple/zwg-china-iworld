@@ -23,11 +23,6 @@ namespace zwg_china.model
         public string SerialNumber { get; set; }
 
         /// <summary>
-        /// 附言
-        /// </summary>
-        public string Postscript { get; set; }
-
-        /// <summary>
         /// 金额
         /// </summary>
         public double Sum { get; set; }
@@ -53,13 +48,11 @@ namespace zwg_china.model
         /// </summary>
         /// <param name="comeFrom">来源银行</param>
         /// <param name="serialNumber">流水号</param>
-        /// <param name="postscript">附言</param>
         /// <param name="sum">金额</param>
-        public TransferRecord(Bank comeFrom, string serialNumber, string postscript, double sum)
+        public TransferRecord(Bank comeFrom, string serialNumber, double sum)
         {
             this.ComeFrom = comeFrom;
             this.SerialNumber = serialNumber;
-            this.Postscript = postscript;
             this.Sum = sum;
             this.Status = TransferStatus.用户已经支付;
         }

@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorLoginInfo.cs" />
+    <Compile Include="AdministratorLoginInfoPond.cs" />
+    <Compile Include="AuthorLoginInfo.cs" />
+    <Compile Include="AuthorLoginInfoPond.cs" />
     <Compile Include="CollectManager.cs" />
     <Compile Include="DefaultManager.cs" />
     <Compile Include="ModelToDbContext.cs" />

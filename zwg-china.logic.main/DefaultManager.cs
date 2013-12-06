@@ -40,8 +40,8 @@ namespace zwg_china.logic
                         , canViewAdministrator: false, canEditAdministrator: false, isCustomerService: false);
                     db.AdministratorGroups.Add(administratorGroup2);
 
-                    AdministratorGroup administratorGroup3 = new AdministratorGroup(name: "客服", canViewUsers: false, canEditUsers: false, canViewTickets: false
-                        , canEditTickets: false, canViewActivities: false, canEditActivities: false, canViewSettings: false, canEditSettings: false, canViewDataReports: false, canEditDataReports: false
+                    AdministratorGroup administratorGroup3 = new AdministratorGroup(name: "客服", canViewUsers: true, canEditUsers: false, canViewTickets: true
+                        , canEditTickets: false, canViewActivities: true, canEditActivities: false, canViewSettings: true, canEditSettings: false, canViewDataReports: true, canEditDataReports: false
                         , canViewAdministrator: false, canEditAdministrator: false, isCustomerService: true);
                     db.AdministratorGroups.Add(administratorGroup3);
 

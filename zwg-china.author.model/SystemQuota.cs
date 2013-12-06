@@ -20,7 +20,7 @@ namespace zwg_china.model
         /// <summary>
         /// 方案明细
         /// </summary>
-        public virtual List<SystemQuotaDetail> Detail { get; set; }
+        public virtual List<SystemQuotaDetail> Details { get; set; }
 
         #endregion
 
@@ -37,11 +37,11 @@ namespace zwg_china.model
         /// 实例化一个新的系统设定的高点号配额方案
         /// </summary>
         /// <param name="rebate">返点</param>
-        /// <param name="detail">方案明细</param>
-        public SystemQuota(double rebate, List<SystemQuotaDetail> detail)
+        /// <param name="details">方案明细</param>
+        public SystemQuota(double rebate, List<SystemQuotaDetail> details)
         {
             this.Rebate = rebate;
-            this.Detail = detail;
+            this.Details = details;
         }
 
         #endregion

@@ -1,38 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="服务">
+    <Position X="0.5" Y="0.5" Height="0.284" Width="0.7" />
+  </Comment>
+  <Comment CommentText="数据契约">
+    <Position X="0.5" Y="2.24" Height="0.284" Width="0.96" />
+  </Comment>
   <Class Name="zwg_china.service.SerivceBase" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SerivceBase.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.ReaderBase" Collapsed="true">
-    <Position X="2.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ReaderBase.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="zwg_china.service.NormalResult" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NormalResult.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.PageResult&lt;T&gt;" Collapsed="true">
-    <Position X="2.5" Y="1.5" Width="1.5" />
+    <Position X="2.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAAEAAAAAI=</HashCode>
       <FileName>PageResult.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.NormalResult&lt;T&gt;" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>NormalResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.GetPageListImportBase" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GetPageListImportBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.ImportBase" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ImportBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.GetSettingImport" Collapsed="true">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GetSettingImport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.SetSettingImportBase" Collapsed="true">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SetSettingImportBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

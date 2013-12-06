@@ -9,7 +9,7 @@ namespace zwg_china.model.manager
     /// 管理员的登录记录的管理者对象
     /// </summary>
     [RegisterToManagerService]
-    public class AdministratorLandingRecordManager : ManagerBase<IModelToDbContextOfAdministrtor, AdministratorLandingRecordManager.Actions, AdministratorLandingRecord>
+    public class AdministratorLandingRecordManager : ManagerBase<IModelToDbContextOfAdministrator, AdministratorLandingRecordManager.Actions, AdministratorLandingRecord>
     {
         #region 构造方法
 
@@ -17,7 +17,7 @@ namespace zwg_china.model.manager
         /// 实例化一个新的管理员的登录记录的管理者对象
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        public AdministratorLandingRecordManager(IModelToDbContextOfAdministrtor db)
+        public AdministratorLandingRecordManager(IModelToDbContextOfAdministrator db)
             : base(db)
         {
 
@@ -36,7 +36,7 @@ namespace zwg_china.model.manager
         [Listen(typeof(AdministratorManager), AdministratorManager.Actions.Login, ExecutionOrder.After)]
         public static void Monitor_CreateLandingRecord(InfoOfSendOnManagerService info)
         {
-            IModelToDbContextOfAdministrtor db = (IModelToDbContextOfAdministrtor)info.Db;
+            IModelToDbContextOfAdministrator db = (IModelToDbContextOfAdministrator)info.Db;
             Administrator model = (Administrator)info.Model;
 
             AdministratorLandingRecord landingRecord = new AdministratorLandingRecord(model, model.LastLoginIp, model.LastLoginAddress);

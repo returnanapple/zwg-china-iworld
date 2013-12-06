@@ -165,7 +165,7 @@
   <Class Name="zwg_china.model.SystemBankAccount" Collapsed="true">
     <Position X="0.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQFAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AAFAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAACAAAQA=</HashCode>
       <FileName>SystemBankAccount.cs</FileName>
     </TypeIdentifier>
   </Class>

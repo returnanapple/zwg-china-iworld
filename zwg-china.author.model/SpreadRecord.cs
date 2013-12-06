@@ -10,7 +10,7 @@ namespace zwg_china.model
     /// </summary>
     public class SpreadRecord : RecordingTimeModelBase
     {
-        #region 公开属性
+        #region 属性
 
         /// <summary>
         /// 推广人

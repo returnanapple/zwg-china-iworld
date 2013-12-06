@@ -9,7 +9,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 管理员的管理者对象
     /// </summary>
-    public class AdministratorManager : ManagerBase<IModelToDbContextOfAdministrtor, AdministratorManager.Actions, Administrator>
+    public class AdministratorManager : ManagerBase<IModelToDbContextOfAdministrator, AdministratorManager.Actions, Administrator>
     {
         #region 构造方法
 
@@ -17,7 +17,7 @@ namespace zwg_china.model.manager
         /// 实例化一个新的管理员的管理者对象
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        public AdministratorManager(IModelToDbContextOfAdministrtor db)
+        public AdministratorManager(IModelToDbContextOfAdministrator db)
             : base(db)
         {
 

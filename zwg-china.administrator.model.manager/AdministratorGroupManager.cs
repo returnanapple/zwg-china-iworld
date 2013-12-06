@@ -8,7 +8,7 @@ namespace zwg_china.model.manager
     /// <summary>
     /// 管理员的用户组的管理者对象
     /// </summary>
-    public class AdministratorGroupManager : ManagerBase<IModelToDbContextOfAdministrtor, AdministratorGroupManager.Actions, AdministratorGroup>
+    public class AdministratorGroupManager : ManagerBase<IModelToDbContextOfAdministrator, AdministratorGroupManager.Actions, AdministratorGroup>
     {
         #region 构造方法
 
@@ -16,7 +16,7 @@ namespace zwg_china.model.manager
         /// 实例化一个新的管理员的用户组的管理者对象
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        public AdministratorGroupManager(IModelToDbContextOfAdministrtor db)
+        public AdministratorGroupManager(IModelToDbContextOfAdministrator db)
             : base(db)
         {
 

@@ -43,7 +43,6 @@ namespace zwg_china.model.manager
             {
                 TransferRecord transfer = db.TransferRecords.FirstOrDefault(x => x.ComeFrom == model.ComeFrom
                     && x.SerialNumber == model.SerialNumber
-                    && x.Postscript == model.Postscript
                     && x.Status == TransferStatus.用户已经支付);
                 if (transfer == null) { return; }
 
@@ -75,7 +74,6 @@ namespace zwg_china.model.manager
                 {
                     RechargeRecord recharge = db.RechargeRecords.FirstOrDefault(x => x.ComeFrom == transfer.ComeFrom
                         && x.SerialNumber == transfer.SerialNumber
-                        && x.Postscript == transfer.Postscript
                         && x.Status == RechargeStatus.等待银行确认);
                     if (recharge == null) { return; }
 

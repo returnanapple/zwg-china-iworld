@@ -9,7 +9,7 @@ namespace zwg_china.service
     /// <summary>
     /// 服务的基类
     /// </summary>
-    public class SerivceBase
+    public abstract class SerivceBase
     {
         #region 私有字段
 

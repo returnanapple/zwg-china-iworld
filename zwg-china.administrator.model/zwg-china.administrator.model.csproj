@@ -49,7 +49,7 @@
     <Compile Include="Administrator.cs" />
     <Compile Include="AdministratorGroup.cs" />
     <Compile Include="AdministratorLandingRecord.cs" />
-    <Compile Include="IModelToDbContextOfAdministrtor.cs" />
+    <Compile Include="IModelToDbContextOfAdministrator.cs" />
     <Compile Include="OperateRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

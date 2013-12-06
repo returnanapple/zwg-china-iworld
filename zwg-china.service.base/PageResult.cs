@@ -18,16 +18,25 @@ namespace zwg_china.service
         /// <summary>
         /// 页码
         /// </summary>
+        [DataMember]
         public int PageInde { get; set; }
+
+        /// <summary>
+        /// 信息总数（条）
+        /// </summary>
+        [DataMember]
+        public int CountOfAllMessage { get; set; }
 
         /// <summary>
         /// 页面总数
         /// </summary>
+        [DataMember]
         public int CountOfPage { get; set; }
 
         /// <summary>
         /// 页面大小
         /// </summary>
+        [DataMember]
         public int PageSize { get; set; }
 
         /// <summary>
@@ -44,15 +53,23 @@ namespace zwg_china.service
         /// 实例化一个新的分页列表信息（操作成功）
         /// </summary>
         /// <param name="pageIndex">页码</param>
-        /// <param name="countOfPage">页面总数</param>
+        /// <param name="countOfAllMessage">信息总数（条）</param>
         /// <param name="pageSize">页面大小</param>
         /// <param name="list">列表</param>
-        public PageResult(int pageIndex, int countOfPage, int pageSize, List<T> list)
+        public PageResult(int pageIndex, int countOfAllMessage, int pageSize, List<T> list)
         {
             this.PageInde = pageIndex;
-            this.CountOfPage = countOfPage;
+            this.CountOfAllMessage = countOfAllMessage;
             this.PageSize = pageSize;
             this.List = list;
+
+            this.CountOfPage = this.CountOfAllMessage % this.PageSize == 0
+                ? this.CountOfAllMessage / this.PageSize
+                : this.CountOfAllMessage / this.PageSize + 1;
+            if (this.PageInde > this.CountOfPage)
+            {
+                this.PageInde = this.CountOfPage;
+            }
         }
 
         /// <summary>
