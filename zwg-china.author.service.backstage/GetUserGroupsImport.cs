@@ -16,11 +16,17 @@ namespace zwg_china.service
     [DataContract]
     public class GetUserGroupsImport : GetPageListImportOfAuthor
     {
+        #region 属性
+
         /// <summary>
         /// 关键字（用户组名）
         /// </summary>
         [DataMember]
         public string KeywordForGroupName { get; set; }
+
+        #endregion
+
+        #region 方法
 
         /// <summary>
         /// 获取用户组信息
@@ -54,5 +60,7 @@ namespace zwg_china.service
 
             return new PageResult<UserGroupExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
         }
+
+        #endregion
     }
 }

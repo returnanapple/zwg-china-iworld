@@ -14,11 +14,17 @@ namespace zwg_china.service
     [DataContract]
     public class GetSystemBankAccountsImport : GetSettingImport
     {
+        #region 属性
+
         /// <summary>
         /// 页码
         /// </summary>
         [DataMember]
         public int PageIndex { get; set; }
+
+        #endregion
+
+        #region 方法
 
         /// <summary>
         /// 获取银行账户信息
@@ -41,5 +47,7 @@ namespace zwg_china.service
 
             return new PageResult<SystemBankAccountExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
         }
+
+        #endregion
     }
 }

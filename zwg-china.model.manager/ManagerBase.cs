@@ -107,7 +107,7 @@ namespace zwg_china.model.manager
         /// </summary>
         /// <param name="package">用于创建新的数据模型的数据集</param>
         /// <returns>返回创建成功并已经持久化到数据库的数据模型的实例</returns>
-        public TModel Create(IPackageForCreateModel<TModel> package)
+        public TModel Create(IPackageForCreateModel<TDbContext, TModel> package)
         {
             package.CheckData(db);
             TModel model = package.GetModel(db);
@@ -138,7 +138,7 @@ namespace zwg_china.model.manager
         /// 修改一个已经持久化的数据模型
         /// </summary>
         /// <param name="package">用于修改数据模型的数据集</param>
-        public void Create(IPackageForUpdateModel<TModel> package)
+        public void Create(IPackageForUpdateModel<TDbContext, TModel> package)
         {
             TModel model = db.Set<TModel>().FirstOrDefault(x => x.Id == package.Id);
             if (model == null)
@@ -166,14 +166,15 @@ namespace zwg_china.model.manager
         /// <summary>
         /// 移除一个已经持久化的数据模型
         /// </summary>
-        /// <param name="id">所要移除的数据模型的存储指针</param>
-        public virtual void Remove(int id)
+        /// <param name="package">用于移除数据模型的数据集</param>
+        public virtual void Remove(IPackageForRemove<TDbContext> package)
         {
-            TModel model = db.Set<TModel>().FirstOrDefault(x => x.Id == id);
+            TModel model = db.Set<TModel>().FirstOrDefault(x => x.Id == package.Id);
             if (model == null)
             {
                 throw new Exception("存储指针指向的对象为Null，请检查输入");
             }
+            package.CheckData(db);
 
             TActions action;
             bool gotAction = Enum.TryParse<TActions>("Remove", out action);

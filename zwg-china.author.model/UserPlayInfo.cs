@@ -56,7 +56,7 @@ namespace zwg_china.model
         /// <param name="commission_A">一级佣金</param>
         /// <param name="commission_B">二级佣金</param>
         /// <param name="dvidend">分红（百分比）</param>
-        public UserPlayInfo(double rebate_Normal, double rebate_IndefinitePosition, double commission_A, double commission_B, double dvidend)
+        public UserPlayInfo(double rebate_Normal, double rebate_IndefinitePosition, double commission_A = 0, double commission_B = 0, double dvidend = 0)
         {
             this.Rebate_Normal = rebate_Normal;
             this.Rebate_IndefinitePosition = rebate_IndefinitePosition;

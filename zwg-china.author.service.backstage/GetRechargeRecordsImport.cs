@@ -16,6 +16,8 @@ namespace zwg_china.service
     [DataContract]
     public class GetRechargeRecordsImport : GetPageListImportOfAuthor
     {
+        #region 属性
+
         /// <summary>
         /// 关键字（用户名）
         /// </summary>
@@ -44,6 +46,10 @@ namespace zwg_china.service
         /// </summary>
         [DataMember]
         public RechargeStatus? Status { get; set; }
+
+        #endregion
+
+        #region 方法
 
         /// <summary>
         /// 获取充值记录
@@ -109,5 +115,7 @@ namespace zwg_china.service
 
             return new PageResult<RechargeRecordExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
         }
+
+        #endregion
     }
 }

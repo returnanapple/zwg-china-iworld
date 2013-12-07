@@ -16,6 +16,8 @@ namespace zwg_china.service
     [DataContract]
     public class GetUsersImport : GetPageListImportOfAuthor
     {
+        #region 属性
+
         /// <summary>
         /// 关键字（用户名）
         /// </summary>
@@ -33,6 +35,10 @@ namespace zwg_china.service
         /// </summary>
         [DataMember]
         public int? BelongingUserId { get; set; }
+
+        #endregion
+
+        #region 方法
 
         /// <summary>
         /// 获取用户信息列表
@@ -108,5 +114,7 @@ namespace zwg_china.service
 
             return new PageResult<AuthorExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
         }
+
+        #endregion
     }
 }

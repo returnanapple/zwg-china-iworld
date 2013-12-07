@@ -77,7 +77,7 @@ namespace zwg_china.model
         /// <param name="minimumWithdrawalAmount">单笔最低取款金额</param>
         /// <param name="maximumWithdrawalAmount">单笔最高取款金额</param>
         public UserGroup(string name, int grade, double lowerOfConsumption, double capsOfConsumption, int timesOfWithdrawal
-            , double minimumWithdrawalAmount, double maximumWithdrawalAmount, double minimumRechargeAmount)
+            , double minimumWithdrawalAmount, double maximumWithdrawalAmount)
         {
             this.Name = name;
             this.Grade = grade;

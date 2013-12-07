@@ -16,6 +16,8 @@ namespace zwg_china.service
     [DataContract]
     public class GetMoneyChangeRecordsImport : GetPageListImportOfAuthor
     {
+        #region 属性
+
         /// <summary>
         /// 关键字（用户名）
         /// </summary>
@@ -44,6 +46,10 @@ namespace zwg_china.service
         /// </summary>
         [DataMember]
         public string Type { get; set; }
+
+        #endregion
+
+        #region 属性
 
         /// <summary>
         /// 获取帐变记录
@@ -108,5 +114,7 @@ namespace zwg_china.service
 
             return new PageResult<MoneyChangeRecordExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
         }
+
+        #endregion
     }
 }

@@ -49,6 +49,7 @@ namespace zwg_china.model.manager
             };
             OnExecuting<ChangeStatusArgs>(Actions.ChangeStatus, record, args);
             record.Status = package.NewStatus;
+            record.Remark = package.Remark;
             OnExecuted<ChangeStatusArgs>(Actions.ChangeStatus, record, args);
             db.SaveChanges();
         }
@@ -100,6 +101,11 @@ namespace zwg_china.model.manager
             /// 新状态
             /// </summary>
             WithdrawalsStatus NewStatus { get; }
+
+            /// <summary>
+            /// 备注
+            /// </summary>
+            string Remark { get; }
         }
 
         #endregion

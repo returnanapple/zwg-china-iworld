@@ -16,6 +16,8 @@ namespace zwg_china.service
     [DataContract]
     public class GetCommissionRecordsImport : GetPageListImportOfAuthor
     {
+        #region 属性
+
         /// <summary>
         /// 关键字（用户名）
         /// </summary>
@@ -38,6 +40,10 @@ namespace zwg_china.service
         /// </summary>
         [DataMember]
         public DateTime? EndTime { get; set; }
+
+        #endregion
+
+        #region 方法
 
         /// <summary>
         /// 获取佣金记录
@@ -95,5 +101,7 @@ namespace zwg_china.service
 
             return new PageResult<CommissionRecordExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
         }
+
+        #endregion
     }
 }

@@ -402,7 +402,7 @@ namespace zwg_china.logic
         /// <summary>
         /// 用于新建开奖记录的数据集
         /// </summary>
-        class PackageForCreateLottery : IPackageForCreateModel<Lottery>
+        class PackageForCreateLottery : IPackageForCreateModel<IModelToDbContextOfLottery, Lottery>
         {
             #region 属性
 
@@ -446,17 +446,16 @@ namespace zwg_china.logic
             /// 检查输入的数据是否合法
             /// </summary>
             /// <param name="db">数据库连接对象</param>
-            public void CheckData(IModelToDbContext db)
+            public void CheckData(IModelToDbContextOfLottery db)
             {
             }
 
             /// <summary>
             /// 获取数据模型的实体
             /// </summary>
-            /// <param name="_db">数据库连接对象</param>
-            public Lottery GetModel(IModelToDbContext _db)
+            /// <param name="db">数据库连接对象</param>
+            public Lottery GetModel(IModelToDbContextOfLottery db)
             {
-                IModelToDbContextOfLottery db = (IModelToDbContextOfLottery)_db;
                 LotteryTicket ticket = db.LotteryTickets.FirstOrDefault(x => x.RealName == this.TicketName);
                 if (ticket == null)
                 {

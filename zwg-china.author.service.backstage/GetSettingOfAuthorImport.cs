@@ -14,6 +14,8 @@ namespace zwg_china.service
     [DataContract]
     public class GetSettingOfAuthorImport : GetSettingImport
     {
+        #region 方法
+
         /// <summary>
         /// 获取用户模块的系统设置
         /// </summary>
@@ -25,5 +27,7 @@ namespace zwg_china.service
             SettingOfAuthorExport info = new SettingOfAuthorExport(settingOfAuthor);
             return new NormalResult<SettingOfAuthorExport>(info);
         }
+
+        #endregion
     }
 }

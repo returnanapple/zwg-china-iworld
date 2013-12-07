@@ -33,6 +33,7 @@ namespace zwg_china.model.manager
         /// 监听：使用充值记录
         /// </summary>
         /// <param name="info">数据集</param>
+        [Listen(typeof(RechargeRecordManager), RechargeRecordManager.Actions.Create, ExecutionOrder.After)]
         [Listen(typeof(RechargeRecordManager), RechargeRecordManager.Actions.ChangeStatus, ExecutionOrder.After)]
         public static void Monitor_Use(InfoOfSendOnManagerService info)
         {

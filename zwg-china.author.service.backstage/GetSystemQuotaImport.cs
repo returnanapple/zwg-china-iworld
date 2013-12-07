@@ -13,6 +13,8 @@ namespace zwg_china.service
     [DataContract]
     public class GetSystemQuotaImport : GetSettingImport
     {
+        #region 方法
+
         /// <summary>
         /// 获取系统设定的高点号配额方案
         /// </summary>
@@ -23,5 +25,7 @@ namespace zwg_china.service
             var tlist = db.SystemQuotas.ToList().ConvertAll(x => new SystemQuotaExport(x));
             return new NormalResult<List<SystemQuotaExport>>(tlist);
         }
+
+        #endregion
     }
 }

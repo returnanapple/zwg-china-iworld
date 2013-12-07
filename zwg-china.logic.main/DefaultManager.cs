@@ -53,23 +53,23 @@ namespace zwg_china.logic
                     #region 用户组
 
                     UserGroup userGroup1 = new UserGroup(name: "见习会员", grade: 1, lowerOfConsumption: 0, capsOfConsumption: 5000, timesOfWithdrawal: 0
-                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0, minimumRechargeAmount: 0);
+                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0);
                     db.UserGroups.Add(userGroup1);
 
                     UserGroup userGroup2 = new UserGroup(name: "正式会员", grade: 2, lowerOfConsumption: 5000, capsOfConsumption: 100000, timesOfWithdrawal: 0
-                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0, minimumRechargeAmount: 0);
+                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0);
                     db.UserGroups.Add(userGroup2);
 
                     UserGroup userGroup3 = new UserGroup(name: "高级会员", grade: 3, lowerOfConsumption: 100000, capsOfConsumption: 500000, timesOfWithdrawal: 0
-                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0, minimumRechargeAmount: 0);
+                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0);
                     db.UserGroups.Add(userGroup3);
 
                     UserGroup userGroup4 = new UserGroup(name: "VIP会员", grade: 4, lowerOfConsumption: 500000, capsOfConsumption: 10000000, timesOfWithdrawal: 0
-                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0, minimumRechargeAmount: 0);
+                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0);
                     db.UserGroups.Add(userGroup4);
 
                     UserGroup userGroup5 = new UserGroup(name: "黄金VIP会员", grade: 5, lowerOfConsumption: 10000000, capsOfConsumption: 500000000, timesOfWithdrawal: 0
-                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0, minimumRechargeAmount: 0);
+                       , minimumWithdrawalAmount: 0, maximumWithdrawalAmount: 0);
                     db.UserGroups.Add(userGroup5);
 
                     #endregion

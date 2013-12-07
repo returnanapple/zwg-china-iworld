@@ -50,6 +50,7 @@
     <Compile Include="ExecutionOrder.cs" />
     <Compile Include="InfoOnCallOnManagerService.cs" />
     <Compile Include="IPackageForCreateModel.cs" />
+    <Compile Include="IPackageForRemove.cs" />
     <Compile Include="IPackageForUpdateModel.cs" />
     <Compile Include="IpToAddressComparisonManager.cs" />
     <Compile Include="IRI.cs" />

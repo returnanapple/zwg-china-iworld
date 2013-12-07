@@ -34,7 +34,7 @@
   <Class Name="zwg_china.logic.AdministratorLoginInfoPond" Collapsed="true">
     <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACQAACAAAAAgAQAQQAAAAQAEEAAQABAgAAAAAAAAAAA=</HashCode>
+      <HashCode>ACQAACAAAAAgAQAQQAAAAQAEEAAQAAAgAAAAAAAAAAE=</HashCode>
       <FileName>AdministratorLoginInfoPond.cs</FileName>
     </TypeIdentifier>
   </Class>

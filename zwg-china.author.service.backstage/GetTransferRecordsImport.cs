@@ -15,6 +15,8 @@ namespace zwg_china.service
     [DataContract]
     public class GetTransferRecordsImport : GetSettingImport
     {
+        #region 属性
+
         /// <summary>
         /// 起始时间
         /// </summary>
@@ -38,6 +40,10 @@ namespace zwg_china.service
         /// </summary>
         [DataMember]
         public int PageIndex { get; set; }
+
+        #endregion
+
+        #region 方法
 
         /// <summary>
         /// 获取转账记录
@@ -86,5 +92,7 @@ namespace zwg_china.service
 
             return new PageResult<TransferRecordExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
         }
+
+        #endregion
     }
 }

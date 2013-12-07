@@ -95,10 +95,9 @@
     <Compile Include="RemoveGroupImport.cs" />
     <Compile Include="RemoveSystemBankAccountImport.cs" />
     <Compile Include="RemoveUserImport.cs" />
-    <Compile Include="SetRechargeStatusImport.cs" />
+    <Compile Include="SetExtraQuotasImport.cs" />
     <Compile Include="SetSettingOfAuthorImport.cs" />
     <Compile Include="SetStstemQuotaImport.cs" />
-    <Compile Include="SetSystemQuotaDetailImport.cs" />
     <Compile Include="SettingOfAuthorExport.cs" />
     <Compile Include="SettingOfAuthorService.cs" />
     <Compile Include="SetWithdrawslsStatusImport.cs" />
