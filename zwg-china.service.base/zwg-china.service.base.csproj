@@ -55,7 +55,7 @@
     <Compile Include="NormalResult.cs" />
     <Compile Include="PageResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerivceBase.cs" />
+    <Compile Include="ServiceBase.cs" />
     <Compile Include="SetSettingImportBase.cs" />
   </ItemGroup>
   <ItemGroup>

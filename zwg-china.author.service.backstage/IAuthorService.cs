@@ -42,7 +42,61 @@ namespace zwg_china.service
 
         #region 操作
 
+        /// <summary>
+        /// 创建新的顶级用户
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult CreateUser(CreateUserImport import);
 
+        /// <summary>
+        /// 修改用户资料
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult EditUser(EditUserImport import);
+
+        /// <summary>
+        /// 修改额外的直属高点号配额
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult SetExtraQuotas(SetExtraQuotasImport import);
+
+        /// <summary>
+        /// 强制移除用户
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult RemoveUser(RemoveUserImport import);
+
+        /// <summary>
+        /// 创建新的用户组
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult CreateUserGroup(CreateUserGroupImport import);
+
+        /// <summary>
+        /// 修改用户组资料
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult EditUserGroup(EditUserGroupImport import);
+
+        /// <summary>
+        /// 移除用户组
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult RemoveUserGroup(RemoveGroupImport import);
 
         #endregion
     }

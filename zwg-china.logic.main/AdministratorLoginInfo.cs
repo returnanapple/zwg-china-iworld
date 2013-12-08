@@ -22,7 +22,7 @@ namespace zwg_china.logic
         /// <summary>
         /// 管理员信息的存储指针
         /// </summary>
-        public int UserId { get; set; }
+        public int AdministratorId { get; set; }
 
         /// <summary>
         /// 登陆时间
@@ -42,14 +42,14 @@ namespace zwg_china.logic
         /// 实例化一个新的管理员的登陆信息
         /// </summary>
         /// <param name="db">数据库存储指针</param>
-        /// <param name="userId">管理员信息的存储指针</param>
-        public AdministratorLoginInfo(IModelToDbContextOfAdministrator db, int userId)
+        /// <param name="administratorId">管理员信息的存储指针</param>
+        public AdministratorLoginInfo(IModelToDbContextOfAdministrator db, int administratorId)
         {
             SettingOfBase setting = new SettingOfBase(db);
             int s = setting.HeartbeatInterval * 3;
 
             this.Token = Guid.NewGuid().ToString("N");
-            this.UserId = userId;
+            this.AdministratorId = administratorId;
             this.LoginTime = DateTime.Now;
             this.Timeout = this.LoginTime.AddSeconds(s);
         }
@@ -87,7 +87,7 @@ namespace zwg_china.logic
         /// <returns>返回管理员信息</returns>
         public Administrator GetUser(IModelToDbContextOfAdministrator db)
         {
-            return db.Administrators.Find(this.UserId);
+            return db.Administrators.Find(this.AdministratorId);
         }
 
         #endregion

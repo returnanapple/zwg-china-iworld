@@ -138,7 +138,7 @@ namespace zwg_china.model.manager
         /// 修改一个已经持久化的数据模型
         /// </summary>
         /// <param name="package">用于修改数据模型的数据集</param>
-        public void Create(IPackageForUpdateModel<TDbContext, TModel> package)
+        public void Update(IPackageForUpdateModel<TDbContext, TModel> package)
         {
             TModel model = db.Set<TModel>().FirstOrDefault(x => x.Id == package.Id);
             if (model == null)

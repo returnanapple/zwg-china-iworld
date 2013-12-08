@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using zwg_china.logic;
+using zwg_china.model;
 using zwg_china.model.manager;
 
 namespace test
@@ -15,8 +16,8 @@ namespace test
     {
         static void Main(string[] args)
         {
-            DefaultManager.Load();
-            Console.ReadKey();
+            //DefaultManager.Load();
+            //Console.ReadKey();
         }
     }
 }

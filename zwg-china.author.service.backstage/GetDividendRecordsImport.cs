@@ -28,7 +28,7 @@ namespace zwg_china.service
         /// 用户的存储指针
         /// </summary>
         [DataMember]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         /// <summary>
         /// 起始时间
         /// </summary>

@@ -104,10 +104,10 @@ namespace zwg_china.logic
         /// <param name="userId">管理员的存储指针</param>
         static void RemoveInfo(int userId)
         {
-            if (!infos.Any(x => x.UserId == userId)) { return; }
-            AdministratorLoginInfo info = infos.First(x => x.UserId == userId);
+            if (!infos.Any(x => x.AdministratorId == userId)) { return; }
+            AdministratorLoginInfo info = infos.First(x => x.AdministratorId == userId);
             CallEvent(Logouting, info);
-            infos.RemoveAll(x => x.UserId == userId);
+            infos.RemoveAll(x => x.AdministratorId == userId);
             CallEvent(Logouted, info);
         }
 
@@ -123,7 +123,7 @@ namespace zwg_china.logic
                 infos.Where(x => x.IsTimeout(e.SignalTime)).ToList()
                     .ForEach(x =>
                     {
-                        RemoveInfo(x.UserId);
+                        RemoveInfo(x.AdministratorId);
                     });
             }
         }

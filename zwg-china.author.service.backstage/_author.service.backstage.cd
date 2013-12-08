@@ -7,7 +7,7 @@
     <Position X="0.5" Y="14.208" Height="0.284" Width="1.294" />
   </Comment>
   <Comment CommentText="数据契约（输入）">
-    <Position X="0.5" Y="4.448" Height="0.284" Width="1.294" />
+    <Position X="0.5" Y="4.594" Height="0.284" Width="1.294" />
   </Comment>
   <Comment CommentText="池">
     <Position X="0.531" Y="3" Height="0.284" Width="1.294" />
@@ -103,23 +103,26 @@
   <Class Name="zwg_china.service.AuthorService" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAEAAAAAAQAAAAABAEAAAIAAAAABAAAEAAAAAAAAAiA=</HashCode>
       <FileName>AuthorService.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.AuthorCallbackPond" Collapsed="true">
-    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAAAAAAAAAQIAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>AuthorCallbackPond.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.AuthorSubscription" Collapsed="true">
     <Position X="5.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AuthorSubscription.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.21" />
   </Class>
   <Class Name="zwg_china.service.UserPlayInfoExport" Collapsed="true">
     <Position X="2.25" Y="14.75" Width="1.5" />
@@ -257,9 +260,10 @@
   <Class Name="zwg_china.service.RecordOfAuthorService" Collapsed="true">
     <Position X="2.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAUAAAAAAAJHAAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>RecordOfAuthorService.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.SystemQuotaExport" Collapsed="true">
     <Position X="4" Y="17.75" Width="1.5" />
@@ -285,9 +289,10 @@
   <Class Name="zwg_china.service.SettingOfAuthorService" Collapsed="true">
     <Position X="4" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAQAQAAAAAAAIAAAAABAAAQABAAAAABAAAAA=</HashCode>
       <FileName>SettingOfAuthorService.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.SetWithdrawslsStatusImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="12" Width="1.5" />
@@ -355,7 +360,7 @@
   <Class Name="zwg_china.service.SetStstemQuotaImport" Collapsed="true">
     <Position X="7.5" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAA=</HashCode>
       <FileName>SetStstemQuotaImport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -382,37 +387,37 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Interface Name="zwg_china.service.IAuthorService" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+    <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>IAEAAAAAAQAAAAABAEAAAIAAAAABAAAEAAAAAAAAAiA=</HashCode>
       <FileName>IAuthorService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="zwg_china.service.IAuthorSubscription" Collapsed="true">
-    <Position X="5.75" Y="2" Width="1.5" />
+    <Position X="5.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IAuthorSubscription.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="zwg_china.service.IAuthorCallback" Collapsed="true">
-    <Position X="7.5" Y="2" Width="1.5" />
+    <Position X="7.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>IAuthorCallback.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="zwg_china.service.IRecordOfAuthorService" Collapsed="true">
-    <Position X="2.25" Y="2" Width="1.5" />
+    <Position X="2.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAUAAAAAAAJHAAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>IRecordOfAuthorService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="zwg_china.service.ISettingOfAuthorService" Collapsed="true">
-    <Position X="4" Y="2" Width="1.5" />
+    <Position X="4" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAQAQAAAAAAAIAAAAABAAAQABAAAAABAAAAA=</HashCode>
       <FileName>ISettingOfAuthorService.cs</FileName>
     </TypeIdentifier>
   </Interface>
