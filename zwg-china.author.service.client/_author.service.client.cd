@@ -147,14 +147,14 @@
   <Class Name="zwg_china.service.WithdrawalsRecordExport" Collapsed="true">
     <Position X="2.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABCAACMAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAAQQ=</HashCode>
+      <HashCode>AABCAACMAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAAQU=</HashCode>
       <FileName>WithdrawalsRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.RebateRecordExport" Collapsed="true">
     <Position X="4" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAACIAgAAAAAQAAAAAABAAAAAAAAAAAAgAAAAAAQ=</HashCode>
+      <HashCode>AAACAACIAgAAAAAQAAAAAABAAAAAAAAAAAAgAAAAAAU=</HashCode>
       <FileName>RebateRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -198,21 +198,21 @@
   <Class Name="zwg_china.service.CommissionRecordExport" Collapsed="true">
     <Position X="5.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAACIAgAAAAAQAAAAAABAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAACAACIAgAAAAAQAAAAAABAAAAAAAAAAAAAAAAAAAU=</HashCode>
       <FileName>CommissionRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.DividendRecordExport" Collapsed="true">
     <Position X="7.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAACMAAAAAEAAAAIAAAACAAAAAAAAAAAAAAAAAQQ=</HashCode>
+      <HashCode>AAACAACMAAAAAEAAAAIAAAACAAAAAAAAAAAAAAAAAQU=</HashCode>
       <FileName>DividendRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.RechargeRecordExport" Collapsed="true">
     <Position X="0.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAACMAAAAAAAAAAAAAAAAAAEAAAAAAAACAAAAAAQ=</HashCode>
+      <HashCode>AAACAACMAAAAAAAAAAAAAAAAAAEAAAAAAAACAAAAAAU=</HashCode>
       <FileName>RechargeRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -240,7 +240,7 @@
   <Class Name="zwg_china.service.AuthorService" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABAAAAAAQAAAAAAAAAgQgAAAgAIABAAAAAQAQAAAAE=</HashCode>
+      <HashCode>IABAAAAAAQAAAAAAAAAgQgAAAgAYABAAAAAQAQAAAAE=</HashCode>
       <FileName>AuthorService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -270,7 +270,7 @@
   <Interface Name="zwg_china.service.IAuthorService" Collapsed="true">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABAAAAAAQAAAAAAAAAgQgAAAgAIABAAAAAQAQAAAAE=</HashCode>
+      <HashCode>IABAAAAAAQAAAAAAAAAgQgAAAgAYABAAAAAQAQAAAAE=</HashCode>
       <FileName>IAuthorService.cs</FileName>
     </TypeIdentifier>
   </Interface>

@@ -8,18 +8,12 @@ using zwg_china.model;
 namespace zwg_china.service
 {
     /// <summary>
-    /// 用户登陆记录
+    /// 操作记录
     /// </summary>
     [DataContract]
-    public class AuthorLandingRecordExport
+    public class OperateRecordExport
     {
         #region 属性
-
-        /// <summary>
-        /// 存储指针
-        /// </summary>
-        [DataMember]
-        public int Id { get; set; }
 
         /// <summary>
         /// 用户的存储指针
@@ -34,16 +28,10 @@ namespace zwg_china.service
         public string Owner { get; set; }
 
         /// <summary>
-        /// 网络地址
+        /// 操作
         /// </summary>
         [DataMember]
-        public string Ip { get; set; }
-
-        /// <summary>
-        /// 实际地址
-        /// </summary>
-        [DataMember]
-        public string Address { get; set; }
+        public string Operated { get; set; }
 
         /// <summary>
         /// 时间
@@ -56,24 +44,22 @@ namespace zwg_china.service
         #region 构造方法
 
         /// <summary>
-        /// 实例化一个新的用户登陆记录
+        /// 实例化一个新的操作记录
         /// </summary>
-        public AuthorLandingRecordExport()
+        public OperateRecordExport()
         {
 
         }
 
         /// <summary>
-        /// 实例化一个新的用户登陆记录
+        /// 实例化一个新的操作记录
         /// </summary>
-        /// <param name="model">用户登陆记录的数据模型</param>
-        public AuthorLandingRecordExport(AuthorLandingRecord model)
+        /// <param name="model">操作记录的存储指针</param>
+        public OperateRecordExport(OperateRecord model)
         {
-            this.Id = model.Id;
             this.OwnerId = model.Owner.Id;
             this.Owner = model.Owner.Username;
-            this.Ip = model.Ip;
-            this.Address = model.Address;
+            this.Operated = model.Operated;
             this.CreatedTime = model.CreatedTime;
         }
 

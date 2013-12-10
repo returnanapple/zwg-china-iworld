@@ -115,5 +115,17 @@ namespace zwg_china.service
         NormalResult EditFundsCodeWithSafeCode(EditFundsCodeWithSafeCodeImport import);
 
         #endregion
+
+        #region 心跳协议
+
+        /// <summary>
+        /// 保持心跳
+        /// </summary>
+        /// <param name="token">身份标识</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult KeepHeartbeat(string token);
+
+        #endregion
     }
 }

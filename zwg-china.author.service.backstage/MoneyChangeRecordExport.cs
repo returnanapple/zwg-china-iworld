@@ -69,6 +69,12 @@ namespace zwg_china.service
         [DataMember]
         public double Money { get; set; }
 
+        /// <summary>
+        /// 时间
+        /// </summary>
+        [DataMember]
+        public DateTime CreatedTime { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -96,6 +102,7 @@ namespace zwg_china.service
             this.Expenses = model.Expenses;
             this.Sum = model.Sum;
             this.Money = model.Money;
+            this.CreatedTime = model.CreatedTime;
         }
 
         #endregion

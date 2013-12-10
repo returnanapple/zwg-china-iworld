@@ -12,13 +12,14 @@ using zwg_china.logic;
 using zwg_china.model;
 using zwg_china.model.manager;
 
+
 namespace zwg_china.service
 {
     /// <summary>
     /// 用于登陆的数据集
     /// </summary>
     [DataContract]
-    public class LoginImport : ImportBase, AuthorManager.IPackageForLogin
+    public class LoginImport : ImportBase, AdministratorManager.IPackageForLogin
     {
         #region 属性
 

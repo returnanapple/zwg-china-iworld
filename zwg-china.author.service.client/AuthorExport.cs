@@ -40,6 +40,12 @@ namespace zwg_china.service
         public UserStatus Status { get; set; }
 
         /// <summary>
+        /// 注册时间
+        /// </summary>
+        [DataMember]
+        public DateTime CreatedTime { get; set; }
+
+        /// <summary>
         /// 上次登录时间
         /// </summary>
         [DataMember]
@@ -129,6 +135,7 @@ namespace zwg_china.service
             this.Username = model.Username;
             this.Group = new UserGroupExport(group);
             this.Status = model.Status;
+            this.CreatedTime = model.CreatedTime;
             this.LastLoginTime = model.LastLoginTime;
             this.LastLoginIp = model.LastLoginIp;
             this.LastLoginAddress = model.LastLoginAddress;

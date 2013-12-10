@@ -44,7 +44,7 @@ namespace zwg_china.service
             if (this.PageIndex < 1) { this.PageIndex = 1; }
             SettingOfBase settingOfBase = new SettingOfBase(db);
             SettingOfAuthor settingOfAuthor = new SettingOfAuthor(db);
-            int startRow = settingOfBase.PageSizeForAdmin * (this.PageIndex - 1);
+            int startRow = settingOfBase.PageSizeForClient * (this.PageIndex - 1);
 
             Expression<Func<Author, bool>> predicate1 = x => x.Id > 0;
             Expression<Func<Author, bool>> predicate2 = x => x.Id > 0;
@@ -71,7 +71,7 @@ namespace zwg_china.service
                 .Where(predicate2)
                 .Where(predicate3)
                 .Skip(startRow)
-                .Take(settingOfBase.PageSizeForAdmin)
+                .Take(settingOfBase.PageSizeForClient)
                 .ToList()
                 .ConvertAll(x =>
                 {
@@ -88,7 +88,7 @@ namespace zwg_china.service
                     return new BasicAuthorExport(x, group);
                 });
 
-            return new PageResult<BasicAuthorExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
+            return new PageResult<BasicAuthorExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForClient, tList);
         }
 
         #endregion

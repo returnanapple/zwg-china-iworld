@@ -8,18 +8,12 @@ using zwg_china.model;
 namespace zwg_china.service
 {
     /// <summary>
-    /// 用户登陆记录
+    /// 管理员登陆记录
     /// </summary>
     [DataContract]
-    public class AuthorLandingRecordExport
+    public class AdministratorLandingRecordExport
     {
         #region 属性
-
-        /// <summary>
-        /// 存储指针
-        /// </summary>
-        [DataMember]
-        public int Id { get; set; }
 
         /// <summary>
         /// 用户的存储指针
@@ -56,20 +50,19 @@ namespace zwg_china.service
         #region 构造方法
 
         /// <summary>
-        /// 实例化一个新的用户登陆记录
+        /// 实例化一个新的管理员登陆记录
         /// </summary>
-        public AuthorLandingRecordExport()
+        public AdministratorLandingRecordExport()
         {
 
         }
 
         /// <summary>
-        /// 实例化一个新的用户登陆记录
+        /// 实例化一个新的管理员登陆记录
         /// </summary>
-        /// <param name="model">用户登陆记录的数据模型</param>
-        public AuthorLandingRecordExport(AuthorLandingRecord model)
+        /// <param name="model">管理员登陆记录的数据模型</param>
+        public AdministratorLandingRecordExport(AdministratorLandingRecord model)
         {
-            this.Id = model.Id;
             this.OwnerId = model.Owner.Id;
             this.Owner = model.Owner.Username;
             this.Ip = model.Ip;

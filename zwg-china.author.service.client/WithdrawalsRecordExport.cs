@@ -69,6 +69,12 @@ namespace zwg_china.service
         [DataMember]
         public string Remark { get; set; }
 
+        /// <summary>
+        /// 时间
+        /// </summary>
+        [DataMember]
+        public DateTime CreatedTime { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -96,6 +102,7 @@ namespace zwg_china.service
             this.BankOfTheCard = model.BankOfTheCard;
             this.Status = model.Status;
             this.Remark = model.Remark;
+            this.CreatedTime = model.CreatedTime;
         }
 
         #endregion

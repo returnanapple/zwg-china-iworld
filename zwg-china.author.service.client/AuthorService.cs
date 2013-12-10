@@ -246,5 +246,27 @@ namespace zwg_china.service
         }
 
         #endregion
+
+        #region 心跳协议
+
+        /// <summary>
+        /// 保持心跳
+        /// </summary>
+        /// <param name="token">身份标识</param>
+        /// <returns>返回操作结果</returns>
+        public NormalResult KeepHeartbeat(string token)
+        {
+            try
+            {
+                AuthorLoginInfoPond.KeepHeartbeat(db, token);
+                return new NormalResult();
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult(ex.Message);
+            }
+        }
+
+        #endregion
     }
 }
