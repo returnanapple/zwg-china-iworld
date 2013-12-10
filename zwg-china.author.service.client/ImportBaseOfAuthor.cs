@@ -9,22 +9,23 @@ using zwg_china.model;
 namespace zwg_china.service
 {
     /// <summary>
-    /// 用于获取系统设置的参数集
+    /// 用户模块的参数集的基类
     /// </summary>
     [DataContract]
-    public abstract class GetSettingImport : ImportBase
+    public abstract class ImportBaseOfAuthor : ImportBase
     {
+        /// <summary>
+        /// 自身的存储指针
+        /// </summary>
+        public Author Self { get; set; }
+
         /// <summary>
         /// 判定当前用户是否允许执行操作
         /// </summary>
         /// <param name="db">数据库连接对象</param>
         public override void CheckAllowExecuteOrNot(ModelToDbContext db)
         {
-            Administrator administrator = AdministratorLoginInfoPond.GetAdministratorInfo(db, this.Token);
-            if (!administrator.Group.CanViewSettings)
-            {
-                throw new Exception("没有查看系统设置的权限");
-            }
+            this.Self = AuthorLoginInfoPond.GetUserInfo(db, this.Token);
         }
     }
 }

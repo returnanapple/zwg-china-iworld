@@ -55,7 +55,7 @@
   <Class Name="zwg_china.logic.AdministratorLoginInfo" Collapsed="true">
     <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAAAAAAAAAAAAgAAAAQAAIAEAAAAAABAQA=</HashCode>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAQAAIAEAAgAAABAQA=</HashCode>
       <FileName>AdministratorLoginInfo.cs</FileName>
     </TypeIdentifier>
   </Class>

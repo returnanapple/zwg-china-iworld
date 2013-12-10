@@ -4,22 +4,23 @@ using System.Linq;
 using System.Text;
 using zwg_china.model;
 using zwg_china.model.manager;
+using zwg_china.logic;
 
 namespace zwg_china.service
 {
     /// <summary>
-    /// 用户模块的后台服务
+    /// 用户信息服务
     /// </summary>
     public class AuthorService : ServiceBase, IAuthorService
     {
-        #region 数据
+        #region 获取数据
 
         /// <summary>
-        /// 获取用户信息的分页列表
+        /// 获取下级用户的用户信息的分页列表
         /// </summary>
-        /// <param name="import">参数集</param>
-        /// <returns>返回用户信息的分页列表</returns>
-        public PageResult<AuthorExport> GetUsers(GetUsersImport import)
+        /// <param name="import">数据集</param>
+        /// <returns>返回下级用户的用户信息的分页列表</returns>
+        public PageResult<BasicAuthorExport> GetUsers(GetUsersImport import)
         {
             try
             {
@@ -28,43 +29,43 @@ namespace zwg_china.service
             }
             catch (Exception ex)
             {
-                return new PageResult<AuthorExport>(ex.Message);
+                return new PageResult<BasicAuthorExport>(ex.Message);
             }
         }
 
         /// <summary>
-        /// 获取用户登录记录的分页列表
+        /// 获取自身的详细用户信息
         /// </summary>
-        /// <param name="import">参数集</param>
-        /// <returns>返回用户登录记录的分页列表</returns>
-        public PageResult<AuthorLandingRecordExport> GetLandingRecords(GetLandingRecordsImport import)
+        /// <param name="import">数据集</param>
+        /// <returns>返回自身的详细用户信息</returns>
+        public NormalResult<AuthorExport> GetUserInfo(GetUserInfoImpoert import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                return import.GetLandingRecords(db);
+                return import.GetSelf(db);
             }
             catch (Exception ex)
             {
-                return new PageResult<AuthorLandingRecordExport>(ex.Message);
+                return new NormalResult<AuthorExport>(null, ex.Message);
             }
         }
 
         /// <summary>
-        /// 获取用户组信息的分页列表
+        /// 获取基本的自身数据信息
         /// </summary>
-        /// <param name="import">参数集</param>
-        /// <returns>返回用户组信息的分页列表</returns>
-        public PageResult<UserGroupExport> GetGroups(GetUserGroupsImport import)
+        /// <param name="import">数据集</param>
+        /// <returns>返回基本的自身数据信息</returns>
+        public NormalResult<BasicSelfInfoExport> GetBasicSelfInfo(GetBasicSelfInfoImport import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                return import.GetUserGroups(db);
+                return import.GetBasicSelfInfo();
             }
             catch (Exception ex)
             {
-                return new PageResult<UserGroupExport>(ex.Message);
+                return new NormalResult<BasicSelfInfoExport>(null, ex.Message);
             }
         }
 
@@ -73,7 +74,46 @@ namespace zwg_china.service
         #region 操作
 
         /// <summary>
-        /// 创建新的顶级用户
+        /// 登陆
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果（如成功将返回档次登陆的身份标识）</returns>
+        public NormalResult<string> Login(LoginImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                Author user = new AuthorManager(db).Login(import);
+                string token = AuthorLoginInfoPond.AddInfo(db, user.Id);
+                return new NormalResult<string>(token);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<string>(null, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 信息绑定
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        public NormalResult BindingUserInfo(BindingUserInfoImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                new AuthorManager(db).Update(import);
+                return new NormalResult();
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 创建下级用户
         /// </summary>
         /// <param name="import">数据集</param>
         /// <returns>返回操作结果</returns>
@@ -82,8 +122,7 @@ namespace zwg_china.service
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                AuthorManager manager = new AuthorManager(db);
-                manager.Create(import);
+                new AuthorManager(db).Create(import);
                 return new NormalResult();
             }
             catch (Exception ex)
@@ -93,17 +132,16 @@ namespace zwg_china.service
         }
 
         /// <summary>
-        /// 修改用户资料
+        /// 升点
         /// </summary>
         /// <param name="import">数据集</param>
         /// <returns>返回操作结果</returns>
-        public NormalResult EditUser(EditUserImport import)
+        public NormalResult UpgradePorn(UpgradePornImport import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                AuthorManager manager = new AuthorManager(db);
-                manager.Update(import);
+                new AuthorManager(db).ChangeRebate(import);
                 return new NormalResult();
             }
             catch (Exception ex)
@@ -113,17 +151,16 @@ namespace zwg_china.service
         }
 
         /// <summary>
-        /// 修改额外的直属高点号配额
+        /// 修改银行卡信息
         /// </summary>
         /// <param name="import">数据集</param>
         /// <returns>返回操作结果</returns>
-        public NormalResult SetExtraQuotas(SetExtraQuotasImport import)
+        public NormalResult EditBank(EditBankImport import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                AuthorManager manager = new AuthorManager(db);
-                manager.Update(import);
+                new AuthorManager(db).Update(import);
                 return new NormalResult();
             }
             catch (Exception ex)
@@ -133,17 +170,16 @@ namespace zwg_china.service
         }
 
         /// <summary>
-        /// 强制移除用户
+        /// 修改登陆密码
         /// </summary>
         /// <param name="import">数据集</param>
         /// <returns>返回操作结果</returns>
-        public NormalResult RemoveUser(RemoveUserImport import)
+        public NormalResult EditPassword(EditPasswordImport import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                AuthorManager manager = new AuthorManager(db);
-                manager.Remove(import);
+                new AuthorManager(db).Update(import);
                 return new NormalResult();
             }
             catch (Exception ex)
@@ -153,17 +189,16 @@ namespace zwg_china.service
         }
 
         /// <summary>
-        /// 创建新的用户组
+        /// 修改资金密码
         /// </summary>
         /// <param name="import">数据集</param>
         /// <returns>返回操作结果</returns>
-        public NormalResult CreateUserGroup(CreateUserGroupImport import)
+        public NormalResult EditFundsCode(EditFundsCodeImport import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                UserGroupManager manager = new UserGroupManager(db);
-                manager.Create(import);
+                new AuthorManager(db).Update(import);
                 return new NormalResult();
             }
             catch (Exception ex)
@@ -173,17 +208,16 @@ namespace zwg_china.service
         }
 
         /// <summary>
-        /// 修改用户组资料
+        /// 使用安全码修改登陆密码
         /// </summary>
         /// <param name="import">数据集</param>
         /// <returns>返回操作结果</returns>
-        public NormalResult EditUserGroup(EditUserGroupImport import)
+        public NormalResult EditPasswordWithSafeCode(EditPasswordWithSafeCodeImport import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                UserGroupManager manager = new UserGroupManager(db);
-                manager.Update(import);
+                new AuthorManager(db).Update(import);
                 return new NormalResult();
             }
             catch (Exception ex)
@@ -193,17 +227,16 @@ namespace zwg_china.service
         }
 
         /// <summary>
-        /// 移除用户组
+        /// 使用安全码修改资金密码
         /// </summary>
         /// <param name="import">数据集</param>
         /// <returns>返回操作结果</returns>
-        public NormalResult RemoveUserGroup(RemoveGroupImport import)
+        public NormalResult EditFundsCodeWithSafeCode(EditFundsCodeWithSafeCodeImport import)
         {
             try
             {
                 import.CheckAllowExecuteOrNot(db);
-                UserGroupManager manager = new UserGroupManager(db);
-                manager.Remove(import);
+                new AuthorManager(db).Update(import);
                 return new NormalResult();
             }
             catch (Exception ex)

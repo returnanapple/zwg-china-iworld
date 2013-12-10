@@ -40,7 +40,8 @@ namespace zwg_china.logic
         /// </summary>
         /// <param name="db">数据库连接对象</param>
         /// <param name="userId">用户信息的存储指针</param>
-        public static void AddInfo(IModelToDbContextOfAuthor db, int userId)
+        /// <returns>返回身份标识</returns>
+        public static string AddInfo(IModelToDbContextOfAuthor db, int userId)
         {
             lock (infos)
             {
@@ -49,6 +50,7 @@ namespace zwg_china.logic
                 CallEvent(Logining, info);
                 infos.Add(info);
                 CallEvent(Logined, info);
+                return info.Token;
             }
         }
 

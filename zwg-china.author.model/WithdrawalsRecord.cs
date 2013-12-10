@@ -63,16 +63,13 @@ namespace zwg_china.model
         /// </summary>
         /// <param name="owner">申请人</param>
         /// <param name="sum">金额</param>
-        /// <param name="card">目标银行卡的卡号</param>
-        /// <param name="holderOfTheCard">目标银行卡的开户人姓名</param>
-        /// <param name="bankOfTheCard">目标银行卡的开户银行</param>
-        public WithdrawalsRecord(Author owner, double sum, string card, string holderOfTheCard, Bank bankOfTheCard)
+        public WithdrawalsRecord(Author owner, double sum)
         {
             this.Owner = owner;
             this.Sum = sum;
-            this.Card = card;
-            this.HolderOfTheCard = holderOfTheCard;
-            this.BankOfTheCard = bankOfTheCard;
+            this.Card = owner.Binding.Card;
+            this.HolderOfTheCard = owner.Binding.HolderOfTheCard;
+            this.BankOfTheCard = owner.Binding.BankOfTheCard;
             this.Status = WithdrawalsStatus.处理中;
             this.Remark = "";
         }

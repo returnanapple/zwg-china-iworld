@@ -29,12 +29,6 @@ namespace zwg_china.service
         public UserStatus Status { get; set; }
 
         /// <summary>
-        /// 安全邮箱
-        /// </summary>
-        [DataMember]
-        public string Email { get; set; }
-
-        /// <summary>
         /// 银行卡
         /// </summary>
         [DataMember]
@@ -124,7 +118,6 @@ namespace zwg_china.service
         public void Update(Author model)
         {
             model.Status = this.Status;
-            model.Binding.Email = this.Email;
             model.Binding.Card = this.Card;
             model.Binding.HolderOfTheCard = this.HolderOfTheCard;
             model.Binding.BankOfTheCard = this.BankOfTheCard;

@@ -18,11 +18,13 @@ namespace zwg_china.service
         /// 判定当前用户是否允许执行操作
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        /// <returns>返回一个布尔值，表示当前用户是否允许执行操作</returns>
-        public override bool AllowExecute(ModelToDbContext db)
+        public override void CheckAllowExecuteOrNot(ModelToDbContext db)
         {
             Administrator administrator = AdministratorLoginInfoPond.GetAdministratorInfo(db, this.Token);
-            return administrator.Group.CanEditUsers;
+            if (!administrator.Group.CanEditUsers)
+            {
+                throw new Exception("没有权限编辑前台用户信息");
+            }
         }
     }
 }

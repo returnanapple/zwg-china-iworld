@@ -199,6 +199,23 @@ namespace zwg_china.logic
 
                     #endregion
 
+                    #region 高点号配额
+
+                    for (double i = 13; i > 12; i -= 0.1)
+                    {
+                        SystemQuota sq = new SystemQuota(i, new List<SystemQuotaDetail>());
+                        for (double j = 13; j > 12; j -= 0.1)
+                        {
+                            int t = (int)((i - j) * 10);
+                            if (t < 0) { t = 0; }
+                            SystemQuotaDetail sqd = new SystemQuotaDetail(j, t);
+                            sq.Details.Add(sqd);
+                        }
+                        db.SystemQuotas.Add(sq);
+                    }
+
+                    #endregion
+
                     db.SaveChanges();
                     new SettingOfBase(db).Save(db);
                     new SettingOfAuthor(db).Save(db);

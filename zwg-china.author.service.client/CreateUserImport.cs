@@ -40,6 +40,12 @@ namespace zwg_china.service
         [DataMember]
         public double Rebate_IndefinitePosition { get; set; }
 
+        /// <summary>
+        /// 上级用户的存储指针
+        /// </summary>
+        [DataMember]
+        public int ParentId { get; set; }
+
         #endregion
 
         #region 方法
@@ -82,6 +88,58 @@ namespace zwg_china.service
                     , settingOfAuthor.CapsRebate);
                 throw new Exception(error);
             }
+
+            Author parent = db.Authors.Find(this.ParentId);
+            if (this.Rebate_Normal > parent.PlayInfo.Rebate_Normal)
+            {
+                string error = string.Format("所要设置的普通返点（{0}）不得大于所从属的上级用户的普通返点（{1}）"
+                    , this.Rebate_Normal
+                    , parent.PlayInfo.Rebate_Normal);
+                throw new Exception(error);
+            }
+            if (this.Rebate_IndefinitePosition > parent.PlayInfo.Rebate_IndefinitePosition)
+            {
+                string error = string.Format("所要设置的不定位返点（{0}）不得大于所从属的上级用户的不定位返点（{1}）"
+                    , this.Rebate_IndefinitePosition
+                    , parent.PlayInfo.Rebate_IndefinitePosition);
+                throw new Exception(error);
+            }
+            #region 检查上级用户的高点号配额
+            if (this.Rebate_Normal > settingOfAuthor.LowerRebateOfHigh)
+            {
+                int numOfSq = 0;
+                int numOfEq = 0;
+                int numOfSd = 0;
+                SystemQuota sq = db.SystemQuotas.FirstOrDefault(x => x.Rebate == parent.PlayInfo.Rebate_Normal);
+                if (sq != null)
+                {
+                    SystemQuotaDetail sqd = sq.Details.FirstOrDefault(x => x.Rebate == this.Rebate_Normal);
+                    if (sqd != null)
+                    {
+                        numOfSq = sqd.Sum;
+                    }
+                }
+                ExtraQuota eq = parent.ExtraQuotas.FirstOrDefault(x => x.Rebate == this.Rebate_Normal);
+                if (eq != null)
+                {
+                    numOfEq = eq.Sum;
+                }
+                SubordinateData sd = parent.SubordinateOfHighRebate.FirstOrDefault(x => x.Rebate == this.Rebate_Normal);
+                if (sd != null)
+                {
+                    numOfSd = sd.Sum;
+                }
+                int surplus = numOfSq + numOfEq - numOfSd;
+                if (surplus <= 0)
+                {
+                    string error = string.Format("作为上级用户的用户（用户名：{0}）的返点为 {1} 的高点号配额为 0，操作无效"
+                        , parent.Username
+                        , this.Rebate_Normal);
+                    throw new Exception(error);
+                }
+            }
+            #endregion
+
             #endregion
         }
 

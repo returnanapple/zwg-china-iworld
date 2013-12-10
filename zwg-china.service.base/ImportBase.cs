@@ -23,7 +23,6 @@ namespace zwg_china.service
         /// 判定当前用户是否允许执行操作
         /// </summary>
         /// <param name="db">数据库连接对象</param>
-        /// <returns>返回一个布尔值，表示当前用户是否允许执行操作</returns>
-        public abstract bool AllowExecute(ModelToDbContext db);
+        public abstract void CheckAllowExecuteOrNot(ModelToDbContext db);
     }
 }

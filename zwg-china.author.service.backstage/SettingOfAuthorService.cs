@@ -23,6 +23,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 return import.GetSystemBankAccounts(db);
             }
             catch (Exception ex)
@@ -40,6 +41,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 return import.GetSettingOfAuthor(db);
             }
             catch (Exception ex)
@@ -57,6 +59,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 return import.GetSystemQuota(db);
             }
             catch (Exception ex)
@@ -78,6 +81,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 SystemBankAccountManager manager = new SystemBankAccountManager(db);
                 manager.Create(import);
                 return new NormalResult();
@@ -97,6 +101,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 SystemBankAccountManager manager = new SystemBankAccountManager(db);
                 manager.Update(import);
                 return new NormalResult();
@@ -116,6 +121,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 SystemBankAccountManager manager = new SystemBankAccountManager(db);
                 manager.Remove(import);
                 return new NormalResult();
@@ -135,6 +141,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 import.SetAndSave(db);
                 return new NormalResult();
             }
@@ -153,6 +160,7 @@ namespace zwg_china.service
         {
             try
             {
+                import.CheckAllowExecuteOrNot(db);
                 import.SetAndSave(db);
                 return new NormalResult();
             }

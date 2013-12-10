@@ -64,7 +64,10 @@ namespace zwg_china.service
         /// <param name="info">数据集</param>
         public static void RemoveTheCallback(AdministratorLoginInfo info)
         {
-            if (callbacks.Any(x => x.Key == info.AdministratorId)) { callbacks.Remove(info.AdministratorId); }
+            if (callbacks.Any(x => x.Key == info.AdministratorId))
+            {
+                callbacks.Remove(info.AdministratorId);
+            }
         }
 
         /// <summary>
@@ -89,7 +92,19 @@ namespace zwg_china.service
             }
             lock (callbacks)
             {
-                callbacks.Values.ToList().ForEach(callback => callback.SetCountOfWithdrawal(countOfWithdrawal: count));
+                List<int> cs = new List<int>();
+                callbacks.Keys.ToList().ForEach(key =>
+                {
+                    try
+                    {
+                        callbacks[key].SetCountOfWithdrawal(countOfWithdrawal: count);
+                    }
+                    catch (Exception)
+                    {
+                        cs.Add(key);
+                    }
+                });
+                cs.ForEach(x => callbacks.Remove(x));
             }
         }
 
