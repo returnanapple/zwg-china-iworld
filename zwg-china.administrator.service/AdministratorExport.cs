@@ -51,6 +51,12 @@ namespace zwg_china.service
         [DataMember]
         public string LastLoginAddress { get; set; }
 
+        /// <summary>
+        /// 身份标识
+        /// </summary>
+        [DataMember]
+        public string Token { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -67,7 +73,7 @@ namespace zwg_china.service
         /// 实例化一个新的管理员信息
         /// </summary>
         /// <param name="model">管理员信息的数据模型</param>
-        public AdministratorExport(Administrator model)
+        public AdministratorExport(Administrator model, string token)
         {
             this.Username = model.Username;
             this.Group = new AdministratorGroupExport(model.Group);
@@ -75,6 +81,7 @@ namespace zwg_china.service
             this.LastLoginTime = model.LastLoginTime;
             this.LastLoginIp = model.LastLoginIp;
             this.LastLoginAddress = model.LastLoginAddress;
+            this.Token = token;
         }
 
         #endregion

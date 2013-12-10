@@ -52,7 +52,7 @@ namespace zwg_china.service
         /// </summary>
         /// <param name="db">数据库连接对象</param>
         /// <returns>返回管理员登陆记录的分页列表</returns>
-        public PageResult<AdministratorLandingRecordExport> GetAdministrators(IModelToDbContextOfAdministrator db)
+        public PageResult<AdministratorLandingRecordExport> GetAdministratorLandingRecords(IModelToDbContextOfAdministrator db)
         {
             if (this.PageIndex < 1) { this.PageIndex = 1; }
             SettingOfBase settingOfBase = new SettingOfBase(db);

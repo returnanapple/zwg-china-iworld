@@ -34,7 +34,7 @@ namespace zwg_china.service
         /// </summary>
         /// <param name="db">数据库连接对象</param>
         /// <returns>返回管理员组信息的分页列表</returns>
-        public PageResult<AdministratorGroupExport> GetAdministrators(IModelToDbContextOfAdministrator db)
+        public PageResult<AdministratorGroupExport> GetAdministratorGroups(IModelToDbContextOfAdministrator db)
         {
             if (this.PageIndex < 1) { this.PageIndex = 1; }
             SettingOfBase settingOfBase = new SettingOfBase(db);
