@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA18BAB8-E2A4-4BE8-8A65-295602B099AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zwg_china.service</RootNamespace>
+    <AssemblyName>zwg-china.im.service.client</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <XsdCodeGenEnabled>True</XsdCodeGenEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zwg-china.activity.model\zwg-china.activity.model.csproj">
+      <Project>{6ea341ad-1fb0-4b23-bdfc-e797b105e28a}</Project>
+      <Name>zwg-china.activity.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.administrator.model\zwg-china.administrator.model.csproj">
+      <Project>{10ca1212-7df8-41a7-84ba-2320583ab437}</Project>
+      <Name>zwg-china.administrator.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.aid\zwg-china.aid.csproj">
+      <Project>{5b7b4da0-8f8c-427a-89ac-24aeab0f8bd3}</Project>
+      <Name>zwg-china.aid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
+      <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
+      <Name>zwg-china.author.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.im.model.manager\zwg-china.im.model.manager.csproj">
+      <Project>{c9896b9d-0387-428b-b6ef-dcb592ef3cd4}</Project>
+      <Name>zwg-china.im.model.manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.im.model\zwg-china.im.model.csproj">
+      <Project>{44c447ce-12b9-4030-ac6f-ae358557f5a0}</Project>
+      <Name>zwg-china.im.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.logic.main\zwg-china.logic.main.csproj">
+      <Project>{12adf318-c34d-4b51-80ad-9f564319bd7d}</Project>
+      <Name>zwg-china.logic.main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.lottery.model\zwg-china.lottery.model.csproj">
+      <Project>{7b23ae17-8a27-43ab-bc09-37c873cb5fc2}</Project>
+      <Name>zwg-china.lottery.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.message.model\zwg-china.message.model.csproj">
+      <Project>{ec83604d-0340-43ce-b85d-138bc0a20c2e}</Project>
+      <Name>zwg-china.message.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.model.manager\zwg-china.model.manager.csproj">
+      <Project>{6136db9f-9d62-48bf-8598-cd575ee809dd}</Project>
+      <Name>zwg-china.model.manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.model\zwg-china.model.csproj">
+      <Project>{276735de-42f6-40db-a96d-9ecf74a659c8}</Project>
+      <Name>zwg-china.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.report.model\zwg-china.report.model.csproj">
+      <Project>{c851a7ed-7ddf-4755-8aff-9d14b3c24be3}</Project>
+      <Name>zwg-china.report.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.service.base\zwg-china.service.base.csproj">
+      <Project>{d8416acd-8c05-4406-9089-6e29f8f99d99}</Project>
+      <Name>zwg-china.service.base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio</VSToolsPath>
+    <WcfServiceModelTargetPath>$(VSToolsPath)\WCF</WcfServiceModelTargetPath>
+  </PropertyGroup>
+  <Import Project="$(WcfServiceModelTargetPath)\Microsoft.VisualStudio.ServiceModel.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

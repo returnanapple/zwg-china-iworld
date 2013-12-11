@@ -10,7 +10,7 @@ namespace zwg_china.model
     /// </summary>
     public class Betting : RecordingTimeModelBase
     {
-        #region 公开属性
+        #region 属性
 
         /// <summary>
         /// 投注人
@@ -82,9 +82,9 @@ namespace zwg_china.model
         /// <param name="points">用于转换为赔率的点数</param>
         /// <param name="howToPlay">玩法</param>
         /// <param name="seats">位</param>
-        /// <param name="pay">投注金额</param>
+        /// <param name="unitPrice">单价</param>
         public Betting(Author owner, string issue, double multiple, double points, HowToPlay howToPlay
-            , List<BettingSeat> seats, double pay)
+            , List<BettingSeat> seats, double unitPrice)
         {
             this.Owner = owner;
             this.Issue = issue;
@@ -93,10 +93,10 @@ namespace zwg_china.model
             this.HowToPlay = howToPlay;
             this.Seats = seats;
             this.Status = BettingStatus.等待开奖;
-            this.Pay = pay;
             this.Bonus = 0;
 
             this.Notes = GetNotes();
+            this.Pay = Math.Round(unitPrice * this.Notes * this.Multiple, 2);
         }
 
         #endregion

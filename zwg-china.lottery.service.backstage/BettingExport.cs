@@ -1,0 +1,124 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using zwg_china.model;
+
+namespace zwg_china.service
+{
+    /// <summary>
+    /// 投注信息
+    /// </summary>
+    [DataContract]
+    public class BettingExport
+    {
+        #region 属性
+
+        /// <summary>
+        /// 存储指针
+        /// </summary>
+        [DataMember]
+        public int Id { get; set; }
+
+        /// <summary>
+        /// 投注人的存储指针
+        /// </summary>
+        [DataMember]
+        public int OwnerId { get; set; }
+
+        /// <summary>
+        /// 投注人的用户名
+        /// </summary>
+        [DataMember]
+        public string Owner { get; set; }
+
+        /// <summary>
+        /// 期号
+        /// </summary>
+        [DataMember]
+        public string Issue { get; set; }
+
+        /// <summary>
+        /// 注数
+        /// </summary>
+        [DataMember]
+        public int Notes { get; set; }
+
+        /// <summary>
+        /// 倍数
+        /// </summary>
+        [DataMember]
+        public double Multiple { get; set; }
+
+        /// <summary>
+        /// 用于转换为赔率的点数
+        /// </summary>
+        [DataMember]
+        public double Points { get; set; }
+
+        /// <summary>
+        /// 玩法的名称
+        /// </summary>
+        [DataMember]
+        public string HowToPlay { get; set; }
+
+        /// <summary>
+        /// 投注信息
+        /// </summary>
+        [DataMember]
+        public string values { get; set; }
+
+        /// <summary>
+        /// 当前状态
+        /// </summary>
+        [DataMember]
+        public BettingStatus Status { get; set; }
+
+        /// <summary>
+        /// 投注金额
+        /// </summary>
+        [DataMember]
+        public double Pay { get; set; }
+
+        /// <summary>
+        /// 中奖金额（未中奖时候为0）
+        /// </summary>
+        [DataMember]
+        public double Bonus { get; set; }
+
+        #endregion
+
+        #region 构造方法
+
+        /// <summary>
+        /// 实例化一个新的投注信息
+        /// </summary>
+        public BettingExport()
+        {
+
+        }
+
+        /// <summary>
+        /// 实例化一个新的投注信息
+        /// </summary>
+        /// <param name="model">投注信息的数据模型</param>
+        public BettingExport(Betting model)
+        {
+            this.Id = model.Id;
+            this.OwnerId = model.Owner.Id;
+            this.Owner = model.Owner.Username;
+            this.Issue = model.Issue;
+            this.Notes = model.Notes;
+            this.Multiple = model.Multiple;
+            this.Points = model.Points;
+            this.HowToPlay = model.GetDescription();
+            this.values = model.GetBetStr();
+            this.Status = model.Status;
+            this.Pay = model.Pay;
+            this.Bonus = model.Bonus;
+        }
+
+        #endregion
+    }
+}

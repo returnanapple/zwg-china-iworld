@@ -221,6 +221,7 @@ namespace zwg_china.model.manager
 
                     manager.OnExecuting(Actions.Win, betting);
                     betting.Status = BettingStatus.中奖;
+                    betting.Bonus = bonus;
                     manager.OnExecuted(Actions.Win, betting);
                 });
         }

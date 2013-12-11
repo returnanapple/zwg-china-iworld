@@ -10,7 +10,7 @@ namespace zwg_china.model
     /// </summary>
     public class VirtualBonus : RecordingTimeModelBase
     {
-        #region 公开属性
+        #region 属性
 
         /// <summary>
         /// 对应的彩票

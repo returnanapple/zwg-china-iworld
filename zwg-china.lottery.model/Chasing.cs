@@ -10,7 +10,7 @@ namespace zwg_china.model
     /// </summary>
     public class Chasing : RecordingTimeModelBase
     {
-        #region 公开属性
+        #region 属性
 
         /// <summary>
         /// 投注人
@@ -21,11 +21,6 @@ namespace zwg_china.model
         /// 起始期号
         /// </summary>
         public string StartIssue { get; set; }
-
-        /// <summary>
-        /// 结束期号
-        /// </summary>
-        public string EndIssue { get; set; }
 
         /// <summary>
         /// 持续期数

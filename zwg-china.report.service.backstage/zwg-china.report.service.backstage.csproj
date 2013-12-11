@@ -4,16 +4,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75E60685-7DB4-4E90-B1A9-30A3301CC551}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A56F46F4-BAA9-4998-9BF7-75F4B9B991FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>test</RootNamespace>
-    <AssemblyName>test</AssemblyName>
+    <RootNamespace>zwg_china.service</RootNamespace>
+    <AssemblyName>zwg-china.report.service.backstage</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <XsdCodeGenEnabled>True</XsdCodeGenEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +27,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,47 +35,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\zwg-china.activity.model.manager\zwg-china.activity.model.manager.csproj">
-      <Project>{a64f8282-ccfe-483f-b775-236683ebdcd1}</Project>
-      <Name>zwg-china.activity.model.manager</Name>
-    </ProjectReference>
     <ProjectReference Include="..\zwg-china.activity.model\zwg-china.activity.model.csproj">
       <Project>{6ea341ad-1fb0-4b23-bdfc-e797b105e28a}</Project>
       <Name>zwg-china.activity.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.administrator.model.manager\zwg-china.administrator.model.manager.csproj">
-      <Project>{c7eaed87-0af3-49f0-9bce-e95a10850c5e}</Project>
-      <Name>zwg-china.administrator.model.manager</Name>
     </ProjectReference>
     <ProjectReference Include="..\zwg-china.administrator.model\zwg-china.administrator.model.csproj">
       <Project>{10ca1212-7df8-41a7-84ba-2320583ab437}</Project>
@@ -82,33 +71,9 @@
       <Project>{5b7b4da0-8f8c-427a-89ac-24aeab0f8bd3}</Project>
       <Name>zwg-china.aid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zwg-china.author.model.manager\zwg-china.author.model.manager.csproj">
-      <Project>{a2a2f14e-49cc-4413-93ee-f1d6ad8a3e55}</Project>
-      <Name>zwg-china.author.model.manager</Name>
-    </ProjectReference>
     <ProjectReference Include="..\zwg-china.author.model\zwg-china.author.model.csproj">
       <Project>{ae947170-6a9b-42f4-b6fa-e54c35b5bb22}</Project>
       <Name>zwg-china.author.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.author.service.backstage\zwg-china.author.service.backstage.csproj">
-      <Project>{8f3936ed-6291-4037-a838-5554c14d6b48}</Project>
-      <Name>zwg-china.author.service.backstage</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.author.service.client\zwg-china.author.service.client.csproj">
-      <Project>{a023fdf9-064a-46c1-83e2-8f5dcc78ee4f}</Project>
-      <Name>zwg-china.author.service.client</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.host.framework\zwg-china.host.framework.csproj">
-      <Project>{fe46241b-7a80-4fa4-ae03-a2f120e4629d}</Project>
-      <Name>zwg-china.host.framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.host\zwg-china.host.csproj">
-      <Project>{1612b9af-f1ed-4b15-8935-b63638637eed}</Project>
-      <Name>zwg-china.host</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.im.model.manager\zwg-china.im.model.manager.csproj">
-      <Project>{c9896b9d-0387-428b-b6ef-dcb592ef3cd4}</Project>
-      <Name>zwg-china.im.model.manager</Name>
     </ProjectReference>
     <ProjectReference Include="..\zwg-china.im.model\zwg-china.im.model.csproj">
       <Project>{44c447ce-12b9-4030-ac6f-ae358557f5a0}</Project>
@@ -118,17 +83,9 @@
       <Project>{12adf318-c34d-4b51-80ad-9f564319bd7d}</Project>
       <Name>zwg-china.logic.main</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zwg-china.lottery.model.manager\zwg-china.lottery.model.manager.csproj">
-      <Project>{bd124364-14e2-4fdd-8c59-c0f0e00dc8f3}</Project>
-      <Name>zwg-china.lottery.model.manager</Name>
-    </ProjectReference>
     <ProjectReference Include="..\zwg-china.lottery.model\zwg-china.lottery.model.csproj">
       <Project>{7b23ae17-8a27-43ab-bc09-37c873cb5fc2}</Project>
       <Name>zwg-china.lottery.model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\zwg-china.message.model.manager\zwg-china.message.model.manager.csproj">
-      <Project>{076598c0-1038-4c88-822a-ae10c130a3db}</Project>
-      <Name>zwg-china.message.model.manager</Name>
     </ProjectReference>
     <ProjectReference Include="..\zwg-china.message.model\zwg-china.message.model.csproj">
       <Project>{ec83604d-0340-43ce-b85d-138bc0a20c2e}</Project>
@@ -155,13 +112,22 @@
       <Name>zwg-china.service.base</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Content\LotteryTickets.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(VisualStudioVersion)' != '' and '$(VisualStudioVersion)' != '11.0'">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio</VSToolsPath>
+    <WcfServiceModelTargetPath>$(VSToolsPath)\WCF</WcfServiceModelTargetPath>
+  </PropertyGroup>
+  <Import Project="$(WcfServiceModelTargetPath)\Microsoft.VisualStudio.ServiceModel.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
