@@ -34,12 +34,6 @@ namespace zwg_china.service
         public string Ticket { get; set; }
 
         /// <summary>
-        /// 期号
-        /// </summary>
-        [DataMember]
-        public string Issue { get; set; }
-
-        /// <summary>
         /// 金额
         /// </summary>
         [DataMember]
@@ -66,7 +60,6 @@ namespace zwg_china.service
             this.Id = model.Id;
             this.TicketId = model.Ticket.Id;
             this.Ticket = model.Ticket.Name;
-            this.Issue = model.Issue;
             this.Sum = model.Sum;
         }
 

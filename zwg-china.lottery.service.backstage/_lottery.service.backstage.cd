@@ -30,24 +30,25 @@
       <FileName>GetPageListImportBaseOfLottery.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.EditLotteryTicketImport" Collapsed="true">
+  <Class Name="zwg_china.service.EditLotteryTicketImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAUCAAAAAEAAAAAAEAAAAAQAAAAAAEIAAAAAAAAAAAA=</HashCode>
       <FileName>EditLotteryTicketImport.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.EditPlayTagImport" Collapsed="true">
     <Position X="2.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EditPlayTagImport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.EditHowToPlayImport" Collapsed="true">
     <Position X="4" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EditHowToPlayImport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -82,7 +83,7 @@
   <Class Name="zwg_china.service.EditLotteryTimeImport" Collapsed="true">
     <Position X="5.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EditLotteryTimeImport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -117,30 +118,33 @@
   <Class Name="zwg_china.service.VirtualBonusExport" Collapsed="true">
     <Position X="0.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAECAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAACAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
       <FileName>VirtualBonusExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.CreateVirtualBonusImport" Collapsed="true">
+  <Class Name="zwg_china.service.CreateVirtualBonusImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAECAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
       <FileName>CreateVirtualBonusImport.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.EditVirtualBonusImport" Collapsed="true">
+  <Class Name="zwg_china.service.EditVirtualBonusImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQCAAAAAEIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
       <FileName>EditVirtualBonusImport.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.RemoveVirtualBonusImport" Collapsed="true">
+  <Class Name="zwg_china.service.RemoveVirtualBonusImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RemoveVirtualBonusImport.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.GetLotteryTicketsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="3.5" Width="1.5" />
@@ -180,7 +184,7 @@
   <Interface Name="zwg_china.service.ILotteryService" Collapsed="true">
     <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEQAACAAAAgAAAgAAAAAEAAAAAAAAAAEACAACAAAA=</HashCode>
       <FileName>ILotteryService.cs</FileName>
     </TypeIdentifier>
   </Interface>

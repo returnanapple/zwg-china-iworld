@@ -40,7 +40,7 @@ namespace zwg_china.service
         /// </summary>
         /// <param name="db">数据库连接对象</param>
         /// <returns>返回虚拟排行信息</returns>
-        public PageResult<VirtualBonusExport> GetBettings(IModelToDbContextOfLottery db)
+        public PageResult<VirtualBonusExport> GetVirtualBonus(IModelToDbContextOfLottery db)
         {
             if (this.PageIndex < 1) { this.PageIndex = 1; }
             SettingOfBase settingOfBase = new SettingOfBase(db);

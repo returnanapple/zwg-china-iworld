@@ -18,11 +18,6 @@ namespace zwg_china.model
         public virtual LotteryTicket Ticket { get; set; }
 
         /// <summary>
-        /// 期号
-        /// </summary>
-        public string Issue { get; set; }
-
-        /// <summary>
         /// 金额
         /// </summary>
         public double Sum { get; set; }
@@ -44,10 +39,9 @@ namespace zwg_china.model
         /// <param name="ticket">对应的彩票</param>
         /// <param name="issue">期号</param>
         /// <param name="sum">金额</param>
-        public VirtualBonus(LotteryTicket ticket, string issue, double sum)
+        public VirtualBonus(LotteryTicket ticket, double sum)
         {
             this.Ticket = ticket;
-            this.Issue = issue;
             this.Sum = sum;
         }
 

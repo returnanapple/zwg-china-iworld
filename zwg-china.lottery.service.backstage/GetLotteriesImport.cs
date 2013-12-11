@@ -52,7 +52,7 @@ namespace zwg_china.service
         /// </summary>
         /// <param name="db">数据库连接对象</param>
         /// <returns>返回开奖信息</returns>
-        public PageResult<LotteryExport> GetBettings(IModelToDbContextOfLottery db)
+        public PageResult<LotteryExport> GetLotteries(IModelToDbContextOfLottery db)
         {
             if (this.PageIndex < 1) { this.PageIndex = 1; }
             SettingOfBase settingOfBase = new SettingOfBase(db);
