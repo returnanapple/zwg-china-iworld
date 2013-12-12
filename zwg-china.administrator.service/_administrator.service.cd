@@ -86,7 +86,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.CreateAdministratorGroupImport" Collapsed="true" HideInheritanceLine="true">
-    <Position X="2.25" Y="5" Width="1.5" />
+    <Position X="4" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAIFCAABAAAAAAAAQAgABAAAAADAAAAAAICAI=</HashCode>
       <FileName>CreateAdministratorGroupImport.cs</FileName>
@@ -94,7 +94,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.EditAdministratorGroupImport" Collapsed="true" HideInheritanceLine="true">
-    <Position X="4" Y="5" Width="1.5" />
+    <Position X="5.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQCAAEAIFAAABAAAAAAAAQAgABAAAAADAAAAAAICAI=</HashCode>
       <FileName>EditAdministratorGroupImport.cs</FileName>
@@ -102,7 +102,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.RemoveAdministratorGroupImport" Collapsed="true" HideInheritanceLine="true">
-    <Position X="5.75" Y="5" Width="1.5" />
+    <Position X="7.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RemoveAdministratorGroupImport.cs</FileName>
@@ -140,22 +140,36 @@
   <Class Name="zwg_china.service.AdministratorGroupExport" Collapsed="true">
     <Position X="4" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAIBAAAlAAAAAAAAQAgABAAAAADAAAAAAICAI=</HashCode>
+      <HashCode>AAACAAEAIBAAAlAAAAAAAAQAgABAAAAADAAAAAAICAI=</HashCode>
       <FileName>AdministratorGroupExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.AdministratorLandingRecordExport" Collapsed="true">
-    <Position X="5.75" Y="7.5" Width="1.5" />
+    <Position X="7.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACIAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIAE=</HashCode>
       <FileName>AdministratoLandingRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.OperateRecordExport" Collapsed="true">
-    <Position X="7.5" Y="7.5" Width="1.5" />
+    <Position X="9.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>OperateRecordExport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.BasicAdministratorGroupExport" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BasicAdministratorGroupExport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.GetBasicAdministratorGroupsImport" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>GetBasicAdministratorGroupsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.service.IAdministratorService" Collapsed="true">

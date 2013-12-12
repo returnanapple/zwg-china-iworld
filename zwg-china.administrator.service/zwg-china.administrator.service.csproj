@@ -57,6 +57,7 @@
     <Compile Include="AdministratorGroupExport.cs" />
     <Compile Include="AdministratorService.cs" />
     <Compile Include="BasicAdministratorExport.cs" />
+    <Compile Include="BasicAdministratorGroupExport.cs" />
     <Compile Include="ChangeGroupImport.cs" />
     <Compile Include="CreateAdministratorGroupImport.cs" />
     <Compile Include="CreateAdministratorImport.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="GetAdministratorLandingRecordsImport.cs" />
     <Compile Include="GetAdministratorGroupsImport.cs" />
     <Compile Include="GetAdministratorsImport.cs" />
+    <Compile Include="GetBasicAdministratorGroupsImport.cs" />
     <Compile Include="GetOperatedRecordsImport.cs" />
     <Compile Include="GetPageListImportBaseOfAdministrator.cs" />
     <Compile Include="IAdministratorService.cs" />

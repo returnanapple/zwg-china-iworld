@@ -55,9 +55,7 @@
   <ItemGroup>
     <Compile Include="AuthorExport.cs" />
     <Compile Include="AuthorLandingRecordExport.cs" />
-    <Compile Include="AuthorCallbackPond.cs" />
     <Compile Include="AuthorService.cs" />
-    <Compile Include="AuthorSubscription.cs" />
     <Compile Include="CommissionRecordExport.cs" />
     <Compile Include="CreateRechargeRecordImport.cs" />
     <Compile Include="CreateSystemBankAccountImport.cs" />
@@ -68,6 +66,7 @@
     <Compile Include="EditUserGroupImport.cs" />
     <Compile Include="EditUserImport.cs" />
     <Compile Include="GetCommissionRecordsImport.cs" />
+    <Compile Include="GetCountOfUntreatedWithdrawalsRecordsImport.cs" />
     <Compile Include="GetDividendRecordsImport.cs" />
     <Compile Include="GetMoneyChangeRecordsImport.cs" />
     <Compile Include="GetRechargeRecordsImport.cs" />
@@ -80,9 +79,7 @@
     <Compile Include="GetPageListImportOfAuthor.cs" />
     <Compile Include="GetUsersImport.cs" />
     <Compile Include="GetWithdrawalsRecordsImport.cs" />
-    <Compile Include="IAuthorCallback.cs" />
     <Compile Include="IAuthorService.cs" />
-    <Compile Include="IAuthorSubscription.cs" />
     <Compile Include="ImportBaseOfAuthor.cs" />
     <Compile Include="IRecordOfAuthorService.cs" />
     <Compile Include="ISettingOfAuthorService.cs" />

@@ -31,6 +31,14 @@ namespace zwg_china.service
         PageResult<RechargeRecordExport> GetRechargeRecords(GetRechargeRecordsImport import);
 
         /// <summary>
+        /// 获取未处理的提现记录的数量
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回未处理的提现记录的数量</returns>
+        [OperationContract]
+        NormalResult<int> GetCountOfUntreatedWithdrawalsRecords(GetCountOfUntreatedWithdrawalsRecordsImport import);
+
+        /// <summary>
         /// 获取提现记录分页列表
         /// </summary>
         /// <param name="import">数据集</param>

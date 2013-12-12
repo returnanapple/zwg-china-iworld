@@ -51,6 +51,24 @@ namespace zwg_china.service
         }
 
         /// <summary>
+        /// 获取未处理的提现记录的数量
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回未处理的提现记录的数量</returns>
+        public NormalResult<int> GetCountOfUntreatedWithdrawalsRecords(GetCountOfUntreatedWithdrawalsRecordsImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetCountOfUntreatedWithdrawalsRecords(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<int>(0, ex.Message);
+            }
+        }
+
+        /// <summary>
         /// 获取提现记录分页列表
         /// </summary>
         /// <param name="import">数据集</param>

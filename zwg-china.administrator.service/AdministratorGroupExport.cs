@@ -16,6 +16,12 @@ namespace zwg_china.service
         #region 属性
 
         /// <summary>
+        /// 存储指针
+        /// </summary>
+        [DataMember]
+        public int Id { get; set; }
+
+        /// <summary>
         /// 名称
         /// </summary>
         [DataMember]
@@ -117,6 +123,7 @@ namespace zwg_china.service
         /// <param name="model">管理员用户组信息的数据模型</param>
         public AdministratorGroupExport(AdministratorGroup model)
         {
+            this.Id = model.Id;
             this.Name = model.Name;
             this.CanViewUsers = model.CanViewUsers;
             this.CanEditUsers = model.CanEditUsers;

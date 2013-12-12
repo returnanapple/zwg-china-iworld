@@ -53,6 +53,24 @@ namespace zwg_china.service
         }
 
         /// <summary>
+        /// 获取基础的管理员用户组信息
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns><返回基础的管理员用户组信息/returns>
+        public NormalResult<List<BasicAdministratorGroupExport>> GetBasicAdministratorGroups(GetBasicAdministratorGroupsImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetBasicAdministratorGroups(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<List<BasicAdministratorGroupExport>>(null, ex.Message);
+            }
+        }
+
+        /// <summary>
         /// 获取管理员登陆记录的分页列表
         /// </summary>
         /// <param name="import">数据集</param>
