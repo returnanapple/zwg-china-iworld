@@ -56,6 +56,7 @@
     <Compile Include="AuthorExport.cs" />
     <Compile Include="AuthorLandingRecordExport.cs" />
     <Compile Include="AuthorService.cs" />
+    <Compile Include="BasicUserGroupExport.cs" />
     <Compile Include="CommissionRecordExport.cs" />
     <Compile Include="CreateRechargeRecordImport.cs" />
     <Compile Include="CreateSystemBankAccountImport.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="EditSystemBankAccountImport.cs" />
     <Compile Include="EditUserGroupImport.cs" />
     <Compile Include="EditUserImport.cs" />
+    <Compile Include="GetBasicUserGroupsImport.cs" />
     <Compile Include="GetCommissionRecordsImport.cs" />
     <Compile Include="GetCountOfUntreatedWithdrawalsRecordsImport.cs" />
     <Compile Include="GetDividendRecordsImport.cs" />

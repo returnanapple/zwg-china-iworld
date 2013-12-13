@@ -8,11 +8,8 @@ using zwg_china.model;
 
 namespace zwg_china.service
 {
-    /// <summary>
-    /// 用户模块的参数集的基类
-    /// </summary>
     [DataContract]
-    public abstract class ImportBaseOfAuthor : ImportBase
+    public class ImportBaseOfLottery : ImportBase
     {
         /// <summary>
         /// 自身

@@ -31,6 +31,14 @@ namespace zwg_china.service
         PageResult<AuthorLandingRecordExport> GetLandingRecords(GetLandingRecordsImport import);
 
         /// <summary>
+        /// 获取基础的用户组信息
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回基础的用户组信息</returns>
+        [OperationContract]
+        NormalResult<List<BasicUserGroupExport>> GetBasicUserGroups(GetBasicUserGroupsImport import);
+
+        /// <summary>
         /// 获取用户组信息的分页列表
         /// </summary>
         /// <param name="import">参数集</param>

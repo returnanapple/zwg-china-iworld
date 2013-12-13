@@ -51,6 +51,24 @@ namespace zwg_china.service
         }
 
         /// <summary>
+        /// 获取基础的用户组信息
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回基础的用户组信息</returns>
+        public NormalResult<List<BasicUserGroupExport>> GetBasicUserGroups(GetBasicUserGroupsImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetBasicUserGroups(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<List<BasicUserGroupExport>>(null, ex.Message);
+            }
+        }
+
+        /// <summary>
         /// 获取用户组信息的分页列表
         /// </summary>
         /// <param name="import">参数集</param>

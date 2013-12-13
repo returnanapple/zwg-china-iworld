@@ -22,12 +22,6 @@ namespace zwg_china.service
         public string Issue { get; set; }
 
         /// <summary>
-        /// 来源
-        /// </summary>
-        [DataMember]
-        public LotterySources Sources { get; set; }
-
-        /// <summary>
         /// 彩种的存储指针
         /// </summary>
         [DataMember]
@@ -64,7 +58,6 @@ namespace zwg_china.service
         public LotteryExport(Lottery model)
         {
             this.Issue = model.Issue;
-            this.Sources = model.Sources;
             this.TicketId = model.Ticket.Id;
             this.Ticket = model.Ticket.Name;
             this.values = string.Join(",", model.Seats.ConvertAll(x => x.Value));
