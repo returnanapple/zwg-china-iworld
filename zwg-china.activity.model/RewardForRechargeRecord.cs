@@ -65,7 +65,7 @@ namespace zwg_china.model
             this.Owner = owner;
             this.Plan = plan;
             this.PostIn = postIn;
-            this.ValidDetail = plan.Details.First(x => x.LowerConsumption >= this.PostIn && x.CapsConsumption < this.PostIn);
+            this.ValidDetail = plan.Details.First(x => x.LowerRecharge >= this.PostIn && x.CapsRecharge < this.PostIn);
             this.PrizeType = this.ValidDetail.PrizeType;
             this.Sum = this.ValidDetail.WaysToReward == WaysToRewardOfActivity.绝对值
                 ? this.ValidDetail.Sum

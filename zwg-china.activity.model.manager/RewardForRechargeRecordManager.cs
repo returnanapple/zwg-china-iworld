@@ -77,7 +77,7 @@ namespace zwg_china.model.manager
             db.RewardForRechargePlans.Where(x => x.BeginTime < now
                 && x.EndTime > now
                 && !x.Hide
-                && x.Details.Any(d => d.LowerConsumption <= model.Sum && d.CapsConsumption >= model.Sum))
+                && x.Details.Any(d => d.LowerRecharge <= model.Sum && d.CapsRecharge >= model.Sum))
                 .ToList()
                 .ForEach(plan =>
                 {

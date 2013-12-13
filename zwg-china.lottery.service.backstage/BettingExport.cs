@@ -87,6 +87,12 @@ namespace zwg_china.service
         [DataMember]
         public double Bonus { get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [DataMember]
+        public DateTime CreatedTime { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -117,6 +123,7 @@ namespace zwg_china.service
             this.Status = model.Status;
             this.Pay = model.Pay;
             this.Bonus = model.Bonus;
+            this.CreatedTime = model.CreatedTime;
         }
 
         #endregion

@@ -92,6 +92,10 @@ namespace zwg_china.service
 
             List<BettingSeat> bettingSeats = this.Seats.ConvertAll(x => new BettingSeat(x.SeatNmae, x.Values));
             Betting betting = new Betting(this.Self, this.Issue, this.Multiple, this.Points, howToPlay, bettingSeats, settingOfLottery.UnitPrice);
+            if (betting.Pay > this.Self.Money)
+            {
+                throw new Exception("余额不足，操作无效");
+            }
             pForCreateBetting pfcb = new pForCreateBetting(betting);
             new BettingManager(db).Create(pfcb);
 
@@ -111,6 +115,10 @@ namespace zwg_china.service
                 List<ChasingSeat> chasingSeats = this.Seats.ConvertAll(x => new ChasingSeat(x.SeatNmae, x.Values));
                 Chasing chasing = new Chasing(this.Self, this.BettingWithChasings.First().Issue, this.BettingWithChasings.Count, this.Points, howToPlay
                     , chasingSeats, pay);
+                if (chasing.Pay > this.Self.Money)
+                {
+                    throw new Exception("余额不足，操作无效");
+                }
                 pForCreateChasing pfcc = new pForCreateChasing(chasing);
                 new ChasingManager(db).Create(pfcc);
 

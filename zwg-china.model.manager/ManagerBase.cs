@@ -159,6 +159,7 @@ namespace zwg_china.model.manager
 
             OnExecuting(action, model);
             package.Update(model);
+            model.OnModify();
             OnExecuted(action, model);
             db.SaveChanges();
         }

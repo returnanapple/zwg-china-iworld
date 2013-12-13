@@ -64,9 +64,16 @@ namespace zwg_china.model
         {
             this.Issue = issue;
             this.Multiple = multiple;
-            this.Pay = pay;
             this.Status = BettingStatus.等待开奖;
             this.Bonus = 0;
+            this.Chasing = chasing;
+
+            double t = this.Chasing.HowToPlay.Interface == LotteryInterface.任N不定位
+                ? this.Chasing.Owner.PlayInfo.Rebate_IndefinitePosition
+                : this.Chasing.Owner.PlayInfo.Rebate_Normal;
+            t -= this.Chasing.Points;
+            t = (1 - t) / 100;
+            this.Pay = Math.Round(pay * t, 2);
         }
 
         #endregion

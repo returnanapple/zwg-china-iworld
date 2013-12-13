@@ -96,7 +96,12 @@ namespace zwg_china.model
             this.Bonus = 0;
 
             this.Notes = GetNotes();
-            this.Pay = Math.Round(unitPrice * this.Notes * this.Multiple, 2);
+            double t = howToPlay.Interface == LotteryInterface.任N不定位
+                ? owner.PlayInfo.Rebate_IndefinitePosition
+                : owner.PlayInfo.Rebate_Normal;
+            t -= this.Points;
+            t = (1 - t) / 100;
+            this.Pay = Math.Round(unitPrice * this.Notes * this.Multiple * t, 2);
         }
 
         #endregion

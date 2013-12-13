@@ -42,7 +42,7 @@ namespace zwg_china.model
         /// <summary>
         /// 声明改模型已经被修改
         /// </summary>
-        public virtual void OnModify()
+        public override void OnModify()
         {
             this.ModifiedTime = DateTime.Now;
         }

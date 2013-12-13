@@ -93,6 +93,12 @@ namespace zwg_china.service
         [DataMember]
         public List<BettingWithChasingExport> Bettings { get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [DataMember]
+        public DateTime CreatedTime { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -125,6 +131,7 @@ namespace zwg_china.service
             this.Pay = model.Pay;
             this.Bonus = model.Bonus;
             this.Bettings = bettings.ConvertAll(x => new BettingWithChasingExport(x));
+            this.CreatedTime = model.CreatedTime;
         }
 
         #endregion

@@ -52,10 +52,53 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActicityService.cs" />
+    <Compile Include="CreateRedeemPlanImport.cs" />
+    <Compile Include="IActicityService.cs" />
+    <Compile Include="RewardForConsumptionPlanDetailImport.cs" />
+    <Compile Include="CreateRewardForConsumptionPlanImport.cs" />
+    <Compile Include="RewardForRechargePlanDetailImport.cs" />
+    <Compile Include="CreateRewardForRechargePlanImport.cs" />
+    <Compile Include="CreateRewardForRegisterPlanImport.cs" />
+    <Compile Include="EditRedeemPlanImport.cs" />
+    <Compile Include="EditRewardForConsumptionPlanImport.cs" />
+    <Compile Include="EditRewardForRechargePlanImport.cs" />
+    <Compile Include="EditRewardForRegisterPlanImport.cs" />
+    <Compile Include="GetPageListImportBaseOfActivity.cs" />
+    <Compile Include="GetRedeemPlansImport.cs" />
+    <Compile Include="GetRedeemRecordsImport.cs" />
+    <Compile Include="GetRewardForConsumptionPlansImport.cs" />
+    <Compile Include="GetRewardForConsumptionRecordsImport.cs" />
+    <Compile Include="GetRewardForRechargePlansImport.cs" />
+    <Compile Include="GetRewardForRechargeRecordsImport.cs" />
+    <Compile Include="GetRewardForRegisterPlansImport.cs" />
+    <Compile Include="GetRewardForRegisterRecordsImport.cs" />
+    <Compile Include="ImportBaseOfActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedeemPlanExport.cs" />
+    <Compile Include="RedeemRecordExport.cs" />
+    <Compile Include="RedeemSnapshotExport.cs" />
+    <Compile Include="RemoveRedeemPlanImport.cs" />
+    <Compile Include="RemoveRewardForRechargePlanImport.cs" />
+    <Compile Include="RemoveRewardForConsumptionPlanImport.cs" />
+    <Compile Include="RemoveRewardForRegisterPlanImport.cs" />
+    <Compile Include="RewardForConsumptionPlanDetailExport.cs" />
+    <Compile Include="RewardForConsumptionPlanExport.cs" />
+    <Compile Include="RewardForConsumptionRecordExport.cs" />
+    <Compile Include="RewardForConsumptionSnapshotDetailExport.cs" />
+    <Compile Include="RewardForConsumptionSnapshotExport.cs" />
+    <Compile Include="RewardForRechargePlanDetailExport.cs" />
+    <Compile Include="RewardForRechargePlanExport.cs" />
+    <Compile Include="RewardForRechargeRecordExport.cs" />
+    <Compile Include="RewardForRechargeSnapshotDetailExport.cs" />
+    <Compile Include="RewardForRechargeSnapshotExport.cs" />
+    <Compile Include="RewardForRegisterPlanExport.cs" />
+    <Compile Include="RewardForRegisterRecordExport.cs" />
+    <Compile Include="RewardForRegisterSnapshotExport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="_activity.service.backstage.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
