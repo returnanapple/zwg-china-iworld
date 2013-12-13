@@ -9,10 +9,10 @@ using zwg_china.model;
 namespace zwg_china.service
 {
     /// <summary>
-    /// 彩票模块的参数集的基类
+    /// 活动模块的参数集的基类
     /// </summary>
     [DataContract]
-    public class ImportBaseOfLottery : ImportBase
+    public class ImportBaseOfActivity : ImportBase
     {
         /// <summary>
         /// 自身
