@@ -1,17 +1,6 @@
 ﻿<configuration>
     <system.serviceModel>
-        <bindings>
-            <customBinding>
-                <binding name="NetTcpBinding_IAdministratorService">
-                    <binaryMessageEncoding />
-                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
-                </binding>
-            </customBinding>
-        </bindings>
-        <client>
-            <endpoint address="net.tcp://192.168.1.130:4512/AdministratorService"
-                binding="customBinding" bindingConfiguration="NetTcpBinding_IAdministratorService"
-                contract="AdministratorService.IAdministratorService" name="NetTcpBinding_IAdministratorService" />
-        </client>
+        <bindings />
+        <client />
     </system.serviceModel>
 </configuration>

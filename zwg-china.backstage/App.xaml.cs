@@ -9,12 +9,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using zwg_china.backstage.framework;
 
 namespace zwg_china.backstage
 {
     public partial class App : Application
     {
-
         public App()
         {
             this.Startup += this.Application_Startup;
@@ -26,7 +26,9 @@ namespace zwg_china.backstage
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            this.RootVisual = new MainPage();
+            MainPage mainPage = new MainPage();
+            this.RootVisual = mainPage;
+            ViewModelService.Initialize(mainPage);
         }
 
         private void Application_Exit(object sender, EventArgs e)
