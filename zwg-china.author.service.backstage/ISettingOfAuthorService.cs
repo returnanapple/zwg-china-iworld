@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 定义用户模块的相关设置的服务

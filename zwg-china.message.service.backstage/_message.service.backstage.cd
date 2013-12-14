@@ -9,35 +9,35 @@
   <Comment CommentText="数据契约（输出）">
     <Position X="0.5" Y="2.229" Height="0.284" Width="1.304" />
   </Comment>
-  <Class Name="zwg_china.service.BulletinExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.BulletinExport" Collapsed="true">
     <Position X="0.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAEQgAAAEAAEAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BulletinExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.ImportBaseOfMessage" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.ImportBaseOfMessage" Collapsed="true">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ImportBaseOfMessage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetPageListImportBaseOfMessage" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.GetPageListImportBaseOfMessage" Collapsed="true">
     <Position X="2.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetPageListImportBaseOfMessage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetBulletinsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetBulletinsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>GetBulletinsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.CreateBulleinImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.CreateBulleinImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQkCAAEAAEAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
@@ -45,7 +45,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.EditBulleinImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.EditBulleinImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQCAAAAQkAAAEAAEAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
@@ -53,7 +53,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.RemoveBulleinImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.RemoveBulleinImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -61,7 +61,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.MessageService" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.MessageService" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IABAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
@@ -69,7 +69,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Interface Name="zwg_china.service.IMessageService" Collapsed="true">
+  <Interface Name="zwg_china.service.backstage.IMessageService" Collapsed="true">
     <Position X="2.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IABAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>

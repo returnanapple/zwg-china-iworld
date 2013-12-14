@@ -9,7 +9,7 @@
     <ProjectGuid>{41B80C22-4831-48A2-A87E-03ED4A01F425}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>zwg_china.service</RootNamespace>
+    <RootNamespace>zwg_china.service.client</RootNamespace>
     <AssemblyName>zwg-china.message.service.client</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>/client:"WcfTestClient.exe"</StartArguments>

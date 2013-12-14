@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用于获取系统设定的高点号配额方案的参数集

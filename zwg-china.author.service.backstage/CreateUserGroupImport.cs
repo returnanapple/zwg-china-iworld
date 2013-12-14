@@ -7,7 +7,7 @@ using zwg_china.aid;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用于创建新的用户组的数据集

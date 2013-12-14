@@ -12,7 +12,7 @@ using zwg_china.logic;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用于登陆的数据集

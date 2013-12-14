@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 定义前台用户的推送行为的回调

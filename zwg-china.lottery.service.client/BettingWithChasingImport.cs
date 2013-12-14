@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用于投注（追号）的数据集

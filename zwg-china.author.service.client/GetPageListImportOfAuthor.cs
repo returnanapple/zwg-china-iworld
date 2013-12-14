@@ -6,7 +6,7 @@ using System.Text;
 using zwg_china.logic;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用户模块的用于获取分页列表的参数集的基类

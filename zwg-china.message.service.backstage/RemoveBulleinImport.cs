@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用于移除公告的数据集

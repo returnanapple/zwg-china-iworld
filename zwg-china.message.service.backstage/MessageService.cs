@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 交互信息的数据服务

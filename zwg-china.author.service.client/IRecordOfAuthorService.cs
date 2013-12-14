@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 定义用户相关的系统记录的数据服务

@@ -6,7 +6,7 @@ using System.Text;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用于创建新的积分兑换参与记录

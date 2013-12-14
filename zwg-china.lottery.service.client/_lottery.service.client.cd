@@ -9,7 +9,7 @@
   <Comment CommentText="数据契约（输出）">
     <Position X="0.5" Y="6.24" Height="0.284" Width="1.356" />
   </Comment>
-  <Class Name="zwg_china.service.LotteryService" Collapsed="true">
+  <Class Name="zwg_china.service.client.LotteryService" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEQAAAAAAEAAACAAAAAAAAQAAAAAAAAAAAAACAAAA=</HashCode>
@@ -17,21 +17,21 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.BetImpoert" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.client.BetImpoert" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAgAIAEgAAAAAAAAAAAAAAAAAAAEAAABA=</HashCode>
       <FileName>BetImpoert.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetTicketsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.client.GetTicketsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetTicketsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RecallBettingImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.client.RecallBettingImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
@@ -39,91 +39,91 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.ImportBaseOfLottery" Collapsed="true">
+  <Class Name="zwg_china.service.client.ImportBaseOfLottery" Collapsed="true">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ImportBaseOfLottery.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetPageListImportBaseOfLottery" Collapsed="true">
+  <Class Name="zwg_china.service.client.GetPageListImportBaseOfLottery" Collapsed="true">
     <Position X="2.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetPageListImportBaseOfLottery.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetLotteriesImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.client.GetLotteriesImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>GetLotteriesImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetBettingsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.client.GetBettingsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAEQAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetBettingsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.LotteryTicketExport" Collapsed="true">
+  <Class Name="zwg_china.service.client.LotteryTicketExport" Collapsed="true">
     <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAECAAAADAEAABAAAgAAAAQAAAAAAEAAAAAAAAAAgAA=</HashCode>
       <FileName>LotteryTicketExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.PlayTagExport" Collapsed="true">
+  <Class Name="zwg_china.service.client.PlayTagExport" Collapsed="true">
     <Position X="2.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAECAAAAAABAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayTagExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.HowToPlayExport" Collapsed="true">
+  <Class Name="zwg_china.service.client.HowToPlayExport" Collapsed="true">
     <Position X="4" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEECAAAAAAICAgAAAABAQAQAAAIAAAAACAAAAAAAAAA=</HashCode>
       <FileName>HowToPlayExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.LotteryExport" Collapsed="true">
+  <Class Name="zwg_china.service.client.LotteryExport" Collapsed="true">
     <Position X="0.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAACAAAAAAAAAAAAADAAAAAAAAAAAAA=</HashCode>
       <FileName>LotteryExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.BettingExport" Collapsed="true">
+  <Class Name="zwg_china.service.client.BettingExport" Collapsed="true">
     <Position X="2.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAMiAACMAAAAggAAEAAAAAAAAgAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>BettingExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetChasingsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.client.GetChasingsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAgAAAAAAAAAACAAAA=</HashCode>
       <FileName>GetChasingsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.ChasingExport" Collapsed="true">
+  <Class Name="zwg_china.service.client.ChasingExport" Collapsed="true">
     <Position X="4" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIiAACMAAAAggAAgAAAAAAAAgABAAAAAABgAAAAAAA=</HashCode>
       <FileName>ChasingExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.BettingWithChasingExport" Collapsed="true">
+  <Class Name="zwg_china.service.client.BettingWithChasingExport" Collapsed="true">
     <Position X="5.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAECAAAEAAAAAgAAEAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BettingWithChasingExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RecallChassingImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.client.RecallChassingImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="7.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -131,21 +131,21 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.BetSeatImport" Collapsed="true">
+  <Class Name="zwg_china.service.client.BetSeatImport" Collapsed="true">
     <Position X="2.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>BetSeatImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.BettingWithChasingImport" Collapsed="true">
+  <Class Name="zwg_china.service.client.BettingWithChasingImport" Collapsed="true">
     <Position X="4" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BettingWithChasingImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="zwg_china.service.ILotteryService" Collapsed="true">
+  <Interface Name="zwg_china.service.client.ILotteryService" Collapsed="true">
     <Position X="2.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEQAAAAAAEAAACAAAAAAAAQAAAAAAAAAAAAACAAAA=</HashCode>

@@ -6,7 +6,7 @@ using System.Text;
 using zwg_china.logic;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 管理员模块用于获取分页列表的参数集的基类

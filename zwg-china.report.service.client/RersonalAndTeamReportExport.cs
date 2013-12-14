@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 私人/团队报表

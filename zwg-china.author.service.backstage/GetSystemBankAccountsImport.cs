@@ -6,7 +6,7 @@ using System.Text;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用于获取银行账户信息的参数集

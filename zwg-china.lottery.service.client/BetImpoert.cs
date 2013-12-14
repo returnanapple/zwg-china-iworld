@@ -9,7 +9,7 @@ using zwg_china.logic;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用于投注的数据集

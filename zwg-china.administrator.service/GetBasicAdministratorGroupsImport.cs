@@ -9,7 +9,7 @@ using zwg_china.logic;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用于获取基础的管理员用户组信息的数据集

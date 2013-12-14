@@ -6,7 +6,7 @@ using zwg_china.model;
 using zwg_china.model.manager;
 using zwg_china.logic;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用户相关的系统记录的数据服务

@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用户相关的系统设置

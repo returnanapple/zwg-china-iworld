@@ -5,7 +5,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 消费奖励的计划的明细的快照

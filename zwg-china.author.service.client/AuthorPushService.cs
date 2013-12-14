@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     public class AuthorPushService : ServiceBase, IAuthorPushService
     {

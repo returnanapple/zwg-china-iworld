@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用于创建/修改充值奖励的计划的明细的数据集

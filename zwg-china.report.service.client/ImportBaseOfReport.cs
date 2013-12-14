@@ -6,7 +6,7 @@ using System.Text;
 using zwg_china.logic;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 报表模块的参数集的基类

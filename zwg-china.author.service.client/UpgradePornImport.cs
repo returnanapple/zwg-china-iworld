@@ -6,7 +6,7 @@ using System.Text;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     [DataContract]
     public class UpgradePornImport : ImportBaseOfAuthor, AuthorManager.IPackageForChangeRebate

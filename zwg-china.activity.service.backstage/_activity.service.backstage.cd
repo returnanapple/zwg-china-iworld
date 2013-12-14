@@ -9,189 +9,189 @@
   <Comment CommentText="数据契约（输出）">
     <Position X="0.5" Y="2.25" Height="0.284" Width="1.273" />
   </Comment>
-  <Class Name="zwg_china.service.RewardForRegisterPlanExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRegisterPlanExport" Collapsed="true">
     <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAEQAAgAEAAEAAgAAAAAAAhAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForRegisterPlanExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRegisterRecordExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRegisterRecordExport" Collapsed="true">
     <Position X="4" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACIAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAU=</HashCode>
       <FileName>RewardForRegisterRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRegisterSnapshotExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRegisterSnapshotExport" Collapsed="true">
     <Position X="2.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAEAAAAAgAAAAAAABAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForRegisterSnapshotExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForConsumptionPlanExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForConsumptionPlanExport" Collapsed="true">
     <Position X="0.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACAAAEQAAhAEAAEAAgAAAAAAAgAAAgAAAAAAAAAAA=</HashCode>
       <FileName>RewardForConsumptionPlanExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForConsumptionPlanDetailExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForConsumptionPlanDetailExport" Collapsed="true">
     <Position X="2.25" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAYAABAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForConsumptionPlanDetailExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForConsumptionSnapshotExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForConsumptionSnapshotExport" Collapsed="true">
     <Position X="4" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACAAAAAAAhAEAAAAAgAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>RewardForConsumptionSnapshotExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForConsumptionSnapshotDetailExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForConsumptionSnapshotDetailExport" Collapsed="true">
     <Position X="5.75" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAYAABAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForConsumptionSnapshotDetailExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForConsumptionRecordExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForConsumptionRecordExport" Collapsed="true">
     <Position X="7.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACIAAAAAAEAAAAAAAAAAAABAAABAAAEAAAAAAU=</HashCode>
       <FileName>RewardForConsumptionRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRechargePlanExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRechargePlanExport" Collapsed="true">
     <Position X="0.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACAAAEQAAhAEAAEAAgAAAAAAAgAAAgAAAAAAAAAAA=</HashCode>
       <FileName>RewardForRechargePlanExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRechargePlanDetailExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRechargePlanDetailExport" Collapsed="true">
     <Position X="2.25" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAQAAAAAAAAAgAAAIAABAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForRechargePlanDetailExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRechargeSnapshotExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRechargeSnapshotExport" Collapsed="true">
     <Position X="4" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACAAAAAAAhAEAAAAAgAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>RewardForRechargeSnapshotExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRechargeSnapshotDetailExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRechargeSnapshotDetailExport" Collapsed="true">
     <Position X="5.75" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAQAAAAAAAAAgAAAIAABAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForRechargeSnapshotDetailExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRechargeRecordExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRechargeRecordExport" Collapsed="true">
     <Position X="7.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACIAAAAAAEAAAAAAAAAAAABAAABAAAEAAAAAAU=</HashCode>
       <FileName>RewardForRechargeRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RedeemPlanExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RedeemPlanExport" Collapsed="true">
     <Position X="0.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAASAAAEQAAgAEAAEAAgAAAAAAEgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RedeemPlanExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RedeemSnapshotExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RedeemSnapshotExport" Collapsed="true">
     <Position X="2.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAASAAAAAAAgAEAAAAAgAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RedeemSnapshotExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RedeemRecordExport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RedeemRecordExport" Collapsed="true">
     <Position X="4" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACIAAAAAAAAAAAAAAAAAAAAABABgQAAAAAAAgQ=</HashCode>
       <FileName>RedeemRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRewardForRegisterPlansImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRewardForRegisterPlansImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>GetRewardForRegisterPlansImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.ImportBaseOfActivity" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.ImportBaseOfActivity" Collapsed="true">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ImportBaseOfActivity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetPageListImportBaseOfActivity" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.GetPageListImportBaseOfActivity" Collapsed="true">
     <Position X="2.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetPageListImportBaseOfActivity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRewardForRegisterRecordsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRewardForRegisterRecordsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="7.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAQAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>GetRewardForRegisterRecordsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRewardForConsumptionPlansImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRewardForConsumptionPlansImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>GetRewardForConsumptionPlansImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRewardForConsumptionRecordsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRewardForConsumptionRecordsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="7.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAAAgAAAAgBAAAAAAAAAAAAAQ=</HashCode>
       <FileName>GetRewardForConsumptionRecordsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRewardForRechargePlansImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRewardForRechargePlansImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetRewardForRechargePlansImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRewardForRechargeRecordsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRewardForRechargeRecordsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="7.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAgAAAAAAAgAAAAgAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>GetRewardForRechargeRecordsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRedeemPlansImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRedeemPlansImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetRedeemPlansImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.GetRedeemRecordsImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.GetRedeemRecordsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="7.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAAAgABAAgAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>GetRedeemRecordsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.CreateRewardForRegisterPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.CreateRewardForRegisterPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQECgAEAAEAAAAAAAAAAhAAAAAAAAAAAAAAQ=</HashCode>
@@ -199,7 +199,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.EditRewardForRegisterPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.EditRewardForRegisterPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQCAAAAQEAgAEAAEAAAAAAAAAAhAAAAAAAAAAAAAAQ=</HashCode>
@@ -207,7 +207,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.RemoveRewardForRegisterPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.RemoveRewardForRegisterPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -215,7 +215,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.CreateRewardForConsumptionPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.CreateRewardForConsumptionPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAQEChAEAAEAAAAAAAAAAgAAAgAAAAAAAAAAA=</HashCode>
@@ -223,7 +223,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.EditRewardForConsumptionPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.EditRewardForConsumptionPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABQCAAAAQEAhAEAAEAAAAAAAAAAgAAAgAAAAAAAAAAA=</HashCode>
@@ -231,7 +231,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.RemoveRewardForConsumptionPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.RemoveRewardForConsumptionPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -239,7 +239,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.CreateRewardForRechargePlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.CreateRewardForRechargePlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAQEChAEAAEAAAAAAAAAAgAAAgAAAAAAAAAAA=</HashCode>
@@ -247,7 +247,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.EditRewardForRechargePlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.EditRewardForRechargePlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABQCAAAAQEAhAEAAEAAAAAAAAAAgAAAgAAAAAAAAAAA=</HashCode>
@@ -255,7 +255,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.RemoveRewardForRechargePlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.RemoveRewardForRechargePlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -263,7 +263,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.CreateRedeemPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.CreateRedeemPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAQECgAEAAEAAAAAAAAAEgAAAAAAAAAAAAAAA=</HashCode>
@@ -271,7 +271,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.EditRedeemPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.EditRedeemPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQSAAAAQEAgAEAAEAAAAAAAAAEgAAAAAAAAAAAAAAA=</HashCode>
@@ -279,7 +279,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.RemoveRedeemPlanImport" Collapsed="true" HideInheritanceLine="true">
+  <Class Name="zwg_china.service.backstage.RemoveRedeemPlanImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -287,21 +287,21 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="zwg_china.service.RewardForConsumptionPlanDetailImport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForConsumptionPlanDetailImport" Collapsed="true">
     <Position X="9.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAYAABAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForConsumptionPlanDetailImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.RewardForRechargePlanDetailImport" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.RewardForRechargePlanDetailImport" Collapsed="true">
     <Position X="9.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAgAAAIAABAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>RewardForRechargePlanDetailImport.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="zwg_china.service.ActicityService" Collapsed="true">
+  <Class Name="zwg_china.service.backstage.ActicityService" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAIAAAABAAAgAACAAAIAEHAAABABQAAQAEgAEAAA=</HashCode>
@@ -309,7 +309,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Interface Name="zwg_china.service.IActicityService" Collapsed="true">
+  <Interface Name="zwg_china.service.backstage.IActicityService" Collapsed="true">
     <Position X="2.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAIAAAABAAAgAACAAAIAEHAAABABQAAQAEgAEAAA=</HashCode>

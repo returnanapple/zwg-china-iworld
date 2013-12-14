@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.backstage
 {
     /// <summary>
     /// 用于获取未处理的提现记录的数据集

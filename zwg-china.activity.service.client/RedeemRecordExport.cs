@@ -5,7 +5,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 积分兑换的参与记录

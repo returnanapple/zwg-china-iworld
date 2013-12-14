@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 活动模块的数据服务

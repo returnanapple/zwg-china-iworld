@@ -8,7 +8,7 @@ using zwg_china.aid;
 using zwg_china.model;
 using zwg_china.model.manager;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用于获取用户信息列表的参数集

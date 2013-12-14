@@ -6,7 +6,7 @@ using System.Timers;
 using zwg_china.logic;
 using zwg_china.model;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 前台用户的回调的管理者对象

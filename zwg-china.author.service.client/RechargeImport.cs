@@ -7,7 +7,7 @@ using zwg_china.model;
 using zwg_china.model.manager;
 using System.Runtime.Serialization;
 
-namespace zwg_china.service
+namespace zwg_china.service.client
 {
     /// <summary>
     /// 用于创建新的充值记录的数据集
