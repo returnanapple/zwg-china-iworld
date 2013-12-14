@@ -68,6 +68,7 @@ namespace zwg_china.service
             var tList = db.VirtualBonuss
                 .Where(predicate1)
                 .Where(predicate2)
+                .OrderBy(x => x.Ticket.Order)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

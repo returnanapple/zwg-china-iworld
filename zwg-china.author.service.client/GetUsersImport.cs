@@ -70,6 +70,7 @@ namespace zwg_china.service
                 .Where(predicate1)
                 .Where(predicate2)
                 .Where(predicate3)
+                .OrderByDescending(x => x.Layer)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForClient)
                 .ToList()

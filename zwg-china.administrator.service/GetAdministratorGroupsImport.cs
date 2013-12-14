@@ -55,6 +55,7 @@ namespace zwg_china.service
                 .Count();
             var tList = db.AdministratorGroups
                 .Where(predicate1)
+                .OrderBy(x => x.Name)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

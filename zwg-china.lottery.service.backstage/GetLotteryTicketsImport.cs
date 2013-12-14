@@ -54,6 +54,7 @@ namespace zwg_china.service
                 .Count();
             var tList = db.LotteryTickets
                 .Where(predicate1)
+                .OrderBy(x => x.Order)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

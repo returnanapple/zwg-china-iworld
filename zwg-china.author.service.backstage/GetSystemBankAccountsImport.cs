@@ -40,6 +40,7 @@ namespace zwg_china.service
             int countOfAllMessages = db.SystemBankAccounts
                 .Count();
             var tList = db.SystemBankAccounts
+                .OrderBy(x => x.Order)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

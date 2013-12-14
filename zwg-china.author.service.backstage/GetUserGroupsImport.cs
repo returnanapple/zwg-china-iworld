@@ -53,6 +53,7 @@ namespace zwg_china.service
                 .Count();
             var tList = db.UserGroups
                 .Where(predicate1)
+                .OrderBy(x => x.Grade)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

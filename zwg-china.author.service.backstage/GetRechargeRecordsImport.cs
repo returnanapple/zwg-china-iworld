@@ -108,6 +108,7 @@ namespace zwg_china.service
                 .Where(predicate3)
                 .Where(predicate4)
                 .Where(predicate5)
+                .OrderByDescending(x => x.CreatedTime)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

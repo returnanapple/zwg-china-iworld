@@ -26,7 +26,10 @@ namespace zwg_china.service
         /// <returns>返回彩票信息</returns>
         public NormalResult<List<LotteryTicketExport>> GetTickets(IModelToDbContextOfLottery db)
         {
-            List<LotteryTicketExport> tList = db.LotteryTickets.Where(x => x.Hide == false).ToList().ConvertAll(x => new LotteryTicketExport(x));
+            List<LotteryTicketExport> tList = db.LotteryTickets.Where(x => x.Hide == false)
+                .OrderBy(x => x.Order)
+                .ToList()
+                .ConvertAll(x => new LotteryTicketExport(x));
             return new NormalResult<List<LotteryTicketExport>>(tList);
         }
 

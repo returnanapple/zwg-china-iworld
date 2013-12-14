@@ -84,6 +84,7 @@ namespace zwg_china.service
                 .Where(predicate1)
                 .Where(predicate2)
                 .Where(predicate3)
+                .OrderBy(x => x.Username)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

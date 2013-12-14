@@ -9,10 +9,10 @@ using zwg_china.model;
 namespace zwg_china.service
 {
     /// <summary>
-    /// 交互信息模块的用于获取分页列表的数据集的基类
+    /// 报表模块的用于获取分页列表的参数集的基类
     /// </summary>
     [DataContract]
-    public class GetPageListImportBaseOfMessage : GetPageListImportBase
+    public class GetPageListImportBaseOfReport : GetPageListImportBase
     {
         /// <summary>
         /// 判定当前用户是否允许执行操作
@@ -21,9 +21,9 @@ namespace zwg_china.service
         public override void CheckAllowExecuteOrNot(ModelToDbContext db)
         {
             Administrator administrator = AdministratorLoginInfoPond.GetAdministratorInfo(db, this.Token);
-            if (!administrator.Group.CanViewSettings)
+            if (!administrator.Group.CanEditDataReports)
             {
-                throw new Exception("没有查看交互信息设置的权限，操作无效");
+                throw new Exception("没有查看统计报表的权限，操作无效");
             }
         }
     }

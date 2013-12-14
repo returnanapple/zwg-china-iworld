@@ -57,6 +57,7 @@ namespace zwg_china.service
             var tList = db.RewardForRegisterPlans
                 .Where(predicate1)
                 .Where(predicate2)
+                .OrderByDescending(x => x.CreatedTime)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()

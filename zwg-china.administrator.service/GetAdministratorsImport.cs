@@ -70,6 +70,7 @@ namespace zwg_china.service
                 .Where(predicate1)
                 .Where(predicate2)
                 .Skip(startRow)
+                .OrderBy(x => x.Username)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()
                 .ConvertAll(x => new BasicAdministratorExport(x));

@@ -44,7 +44,7 @@ namespace zwg_china.service
         {
             if (this.PageIndex < 1) { this.PageIndex = 1; }
             SettingOfBase settingOfBase = new SettingOfBase(db);
-            int startRow = settingOfBase.PageSizeForAdmin * (this.PageIndex - 1);
+            int startRow = settingOfBase.PageSizeForClient * (this.PageIndex - 1);
 
             Expression<Func<RedeemRecord, bool>> predicate1 = x => x.Owner.Id == this.Self.Id;
             Expression<Func<RedeemRecord, bool>> predicate2 = x => x.Id > 0;
@@ -70,12 +70,13 @@ namespace zwg_china.service
                 .Where(predicate1)
                 .Where(predicate2)
                 .Where(predicate3)
+                .OrderByDescending(x => x.CreatedTime)
                 .Skip(startRow)
-                .Take(settingOfBase.PageSizeForAdmin)
+                .Take(settingOfBase.PageSizeForClient)
                 .ToList()
                 .ConvertAll(x => new RedeemRecordExport(x));
 
-            return new PageResult<RedeemRecordExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
+            return new PageResult<RedeemRecordExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForClient, tList);
         }
 
         #endregion
