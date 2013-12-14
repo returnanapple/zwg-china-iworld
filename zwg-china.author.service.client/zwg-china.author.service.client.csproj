@@ -73,6 +73,7 @@
     <Compile Include="GetPageListImportOfAuthor.cs" />
     <Compile Include="GetRebateRecordsImport.cs" />
     <Compile Include="GetRechargeDetailsImport.cs" />
+    <Compile Include="GetSettingImport.cs" />
     <Compile Include="GetUserInfoImpoert.cs" />
     <Compile Include="GetUsersImport.cs" />
     <Compile Include="GetWithdrawDetailsImport.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="RechargeImport.cs" />
     <Compile Include="RechargeRecordExport.cs" />
     <Compile Include="RecordOfAuthorService.cs" />
+    <Compile Include="SettingExport.cs" />
     <Compile Include="UpgradePornImport.cs" />
     <Compile Include="UserBindingExport.cs" />
     <Compile Include="UserGroupExport.cs" />
@@ -130,6 +132,10 @@
     <ProjectReference Include="..\zwg-china.logic.main\zwg-china.logic.main.csproj">
       <Project>{12adf318-c34d-4b51-80ad-9f564319bd7d}</Project>
       <Name>zwg-china.logic.main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\zwg-china.lottery.model.manager\zwg-china.lottery.model.manager.csproj">
+      <Project>{bd124364-14e2-4fdd-8c59-c0f0e00dc8f3}</Project>
+      <Name>zwg-china.lottery.model.manager</Name>
     </ProjectReference>
     <ProjectReference Include="..\zwg-china.lottery.model\zwg-china.lottery.model.csproj">
       <Project>{7b23ae17-8a27-43ab-bc09-37c873cb5fc2}</Project>

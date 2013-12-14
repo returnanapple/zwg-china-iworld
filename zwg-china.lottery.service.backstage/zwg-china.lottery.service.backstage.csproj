@@ -66,6 +66,7 @@
     <Compile Include="GetLotteriesImport.cs" />
     <Compile Include="GetLotteryTicketsImport.cs" />
     <Compile Include="GetPageListImportBaseOfLottery.cs" />
+    <Compile Include="GetSettingOfLotteryImport.cs" />
     <Compile Include="GetVirtualBonusImport.cs" />
     <Compile Include="HowToPlayExport.cs" />
     <Compile Include="ILotteryService.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="PlayTagExport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveVirtualBonusImport.cs" />
+    <Compile Include="SetSettingOfLotteryImport.cs" />
+    <Compile Include="SettingOfLotteryExport.cs" />
     <Compile Include="VirtualBonusExport.cs" />
   </ItemGroup>
   <ItemGroup>

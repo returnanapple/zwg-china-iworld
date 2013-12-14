@@ -69,6 +69,7 @@
     <Compile Include="GetBasicAdministratorGroupsImport.cs" />
     <Compile Include="GetOperatedRecordsImport.cs" />
     <Compile Include="GetPageListImportBaseOfAdministrator.cs" />
+    <Compile Include="GetSettingOfBaseImport.cs" />
     <Compile Include="IAdministratorService.cs" />
     <Compile Include="ImportBaseOfAdministrator.cs" />
     <Compile Include="LoginImport.cs" />
@@ -76,6 +77,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveAdministratorGroupImport.cs" />
     <Compile Include="RemoveAdministratorImport.cs" />
+    <Compile Include="SetSettingOfBaseImport.cs" />
+    <Compile Include="SettingOfBaseExport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

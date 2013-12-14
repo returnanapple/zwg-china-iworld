@@ -127,5 +127,17 @@ namespace zwg_china.service.client
         NormalResult KeepHeartbeat(string token);
 
         #endregion
+
+        #region 设置
+
+        /// <summary>
+        /// 获取系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回系统设置</returns>
+        [OperationContract]
+        NormalResult<SettingExport> GetSetting(GetSettingImport import);
+
+        #endregion
     }
 }

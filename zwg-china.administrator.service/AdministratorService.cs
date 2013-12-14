@@ -287,5 +287,46 @@ namespace zwg_china.service.backstage
         }
 
         #endregion
+
+        #region 设置
+
+        /// <summary>
+        /// 获取基本的系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回基本的系统设置</returns>
+        public NormalResult<SettingOfBaseExport> GetSettingOfBase(GetSettingOfBaseImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetSettingOfBase(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<SettingOfBaseExport>(null, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 设置基本的系统设置
+        /// </summary>
+        /// <param name="impotr">数据集</param>
+        /// <returns>返回操作结果</returns>
+        public NormalResult SetSettingOfBase(SetSettingOfBaseImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                import.SetAndSave(db);
+                return new NormalResult();
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult(ex.Message);
+            }
+        }
+
+        #endregion
     }
 }

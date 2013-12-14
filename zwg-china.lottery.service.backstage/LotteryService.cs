@@ -106,6 +106,47 @@ namespace zwg_china.service.backstage
 
         #endregion
 
+        #region 设置
+
+        /// <summary>
+        /// 获取彩票模块的系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回彩票模块的系统设置</returns>
+        public NormalResult<SettingOfLotteryExport> GetSettingOfLottery(GetSettingOfLotteryImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetSettingOfLottery(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<SettingOfLotteryExport>(null, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 设置彩票模块的系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        public NormalResult SetSettingOfLottery(SetSettingOfLotteryImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                import.SetAndSave(db);
+                return new NormalResult();
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult(ex.Message);
+            }
+        }
+
+        #endregion
+
         #region 操作
 
         /// <summary>

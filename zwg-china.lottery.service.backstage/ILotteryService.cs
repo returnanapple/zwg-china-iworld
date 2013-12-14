@@ -56,6 +56,26 @@ namespace zwg_china.service.backstage
 
         #endregion
 
+        #region 获取设置
+
+        /// <summary>
+        /// 获取彩票模块的系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回彩票模块的系统设置</returns>
+        [OperationContract]
+        NormalResult<SettingOfLotteryExport> GetSettingOfLottery(GetSettingOfLotteryImport import);
+
+        /// <summary>
+        /// 设置彩票模块的系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult SetSettingOfLottery(SetSettingOfLotteryImport import);
+
+        #endregion
+
         #region 操作
 
         /// <summary>

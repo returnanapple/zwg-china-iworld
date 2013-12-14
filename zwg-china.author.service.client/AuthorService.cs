@@ -268,5 +268,27 @@ namespace zwg_china.service.client
         }
 
         #endregion
+
+        #region 设置
+
+        /// <summary>
+        /// 获取系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回系统设置</returns>
+        public NormalResult<SettingExport> GetSetting(GetSettingImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetSetting(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<SettingExport>(null, ex.Message);
+            }
+        }
+
+        #endregion
     }
 }

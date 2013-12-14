@@ -135,5 +135,25 @@ namespace zwg_china.service.backstage
         NormalResult KeepHeartbeat(string token);
 
         #endregion
+
+        #region 设置
+
+        /// <summary>
+        /// 获取基本的系统设置
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回基本的系统设置</returns>
+        [OperationContract]
+        NormalResult<SettingOfBaseExport> GetSettingOfBase(GetSettingOfBaseImport import);
+
+        /// <summary>
+        /// 设置基本的系统设置
+        /// </summary>
+        /// <param name="impotr">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult SetSettingOfBase(SetSettingOfBaseImport impotr);
+
+        #endregion
     }
 }
