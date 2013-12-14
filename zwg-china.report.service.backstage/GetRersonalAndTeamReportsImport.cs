@@ -43,6 +43,18 @@ namespace zwg_china.service
         [DataMember]
         public TeamOrSelf TOS { get; set; }
 
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [DataMember]
+        public DateTime? BeginTime { get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [DataMember]
+        public DateTime? EndTime { get; set; }
+
         #endregion
 
         #region 方法
@@ -66,6 +78,8 @@ namespace zwg_china.service
 
                     Expression<Func<RersonalReportForOneMonth, bool>> predicate1 = x => x.Id > 0;
                     Expression<Func<RersonalReportForOneMonth, bool>> predicate2 = x => x.Id > 0;
+                    Expression<Func<RersonalReportForOneMonth, bool>> predicate3 = x => x.Id > 0;
+                    Expression<Func<RersonalReportForOneMonth, bool>> predicate4 = x => x.Id > 0;
 
                     if (this.KeywordOfUsername != null)
                     {
@@ -78,14 +92,28 @@ namespace zwg_china.service
                         int userId = (int)this.UserId;
                         predicate2 = x => x.Owner.Id == userId;
                     }
+                    if (this.BeginTime != null)
+                    {
+                        DateTime beginTime = (DateTime)this.BeginTime;
+                        predicate3 = x => x.Time >= beginTime;
+                    }
+                    if (this.EndTime != null)
+                    {
+                        DateTime endtime = (DateTime)this.EndTime;
+                        predicate4 = x => x.Time <= endtime;
+                    }
 
                     int countOfAllMessages = db.RersonalReportForOneMonths
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .Count();
                     var tList = db.RersonalReportForOneMonths
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .OrderByDescending(x => x.Id)
                         .Skip(startRow)
                         .Take(settingOfBase.PageSizeForAdmin)
@@ -102,6 +130,8 @@ namespace zwg_china.service
 
                     Expression<Func<RersonalReportForOneDay, bool>> predicate1 = x => x.Id > 0;
                     Expression<Func<RersonalReportForOneDay, bool>> predicate2 = x => x.Id > 0;
+                    Expression<Func<RersonalReportForOneDay, bool>> predicate3 = x => x.Id > 0;
+                    Expression<Func<RersonalReportForOneDay, bool>> predicate4 = x => x.Id > 0;
 
                     if (this.KeywordOfUsername != null)
                     {
@@ -114,14 +144,28 @@ namespace zwg_china.service
                         int userId = (int)this.UserId;
                         predicate2 = x => x.Owner.Id == userId;
                     }
+                    if (this.BeginTime != null)
+                    {
+                        DateTime beginTime = (DateTime)this.BeginTime;
+                        predicate3 = x => x.Time >= beginTime;
+                    }
+                    if (this.EndTime != null)
+                    {
+                        DateTime endtime = (DateTime)this.EndTime;
+                        predicate4 = x => x.Time <= endtime;
+                    }
 
                     int countOfAllMessages = db.RersonalReportForOneDays
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .Count();
                     var tList = db.RersonalReportForOneDays
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .OrderByDescending(x => x.Id)
                         .Skip(startRow)
                         .Take(settingOfBase.PageSizeForAdmin)
@@ -141,6 +185,8 @@ namespace zwg_china.service
 
                     Expression<Func<TeamReportForOneMonth, bool>> predicate1 = x => x.Id > 0;
                     Expression<Func<TeamReportForOneMonth, bool>> predicate2 = x => x.Id > 0;
+                    Expression<Func<TeamReportForOneMonth, bool>> predicate3 = x => x.Id > 0;
+                    Expression<Func<TeamReportForOneMonth, bool>> predicate4 = x => x.Id > 0;
 
                     if (this.KeywordOfUsername != null)
                     {
@@ -153,14 +199,28 @@ namespace zwg_china.service
                         int userId = (int)this.UserId;
                         predicate2 = x => x.Owner.Id == userId;
                     }
+                    if (this.BeginTime != null)
+                    {
+                        DateTime beginTime = (DateTime)this.BeginTime;
+                        predicate3 = x => x.Time >= beginTime;
+                    }
+                    if (this.EndTime != null)
+                    {
+                        DateTime endtime = (DateTime)this.EndTime;
+                        predicate4 = x => x.Time <= endtime;
+                    }
 
                     int countOfAllMessages = db.TeamReportForOneMonths
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .Count();
                     var tList = db.TeamReportForOneMonths
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .OrderByDescending(x => x.Id)
                         .Skip(startRow)
                         .Take(settingOfBase.PageSizeForAdmin)
@@ -177,6 +237,8 @@ namespace zwg_china.service
 
                     Expression<Func<TeamReportForOneDay, bool>> predicate1 = x => x.Id > 0;
                     Expression<Func<TeamReportForOneDay, bool>> predicate2 = x => x.Id > 0;
+                    Expression<Func<TeamReportForOneDay, bool>> predicate3 = x => x.Id > 0;
+                    Expression<Func<TeamReportForOneDay, bool>> predicate4 = x => x.Id > 0;
 
                     if (this.KeywordOfUsername != null)
                     {
@@ -189,14 +251,28 @@ namespace zwg_china.service
                         int userId = (int)this.UserId;
                         predicate2 = x => x.Owner.Id == userId;
                     }
+                    if (this.BeginTime != null)
+                    {
+                        DateTime beginTime = (DateTime)this.BeginTime;
+                        predicate3 = x => x.Time >= beginTime;
+                    }
+                    if (this.EndTime != null)
+                    {
+                        DateTime endtime = (DateTime)this.EndTime;
+                        predicate4 = x => x.Time <= endtime;
+                    }
 
                     int countOfAllMessages = db.TeamReportForOneDays
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .Count();
                     var tList = db.TeamReportForOneDays
                         .Where(predicate1)
                         .Where(predicate2)
+                        .Where(predicate3)
+                        .Where(predicate4)
                         .OrderByDescending(x => x.Id)
                         .Skip(startRow)
                         .Take(settingOfBase.PageSizeForAdmin)

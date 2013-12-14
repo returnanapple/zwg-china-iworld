@@ -25,6 +25,18 @@ namespace zwg_china.service
         [DataMember]
         public MonthOrDay MOD { get; set; }
 
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [DataMember]
+        public DateTime? BeginTime { get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [DataMember]
+        public DateTime? EndTime { get; set; }
+
         #endregion
 
         #region 方法
@@ -42,9 +54,29 @@ namespace zwg_china.service
 
             if (this.MOD == MonthOrDay.Month)
             {
+                #region 单月报表
+
+                Expression<Func<SiteReportForOneMonth, bool>> predicate1 = x => x.Id > 0;
+                Expression<Func<SiteReportForOneMonth, bool>> predicate2 = x => x.Id > 0;
+
+                if (this.BeginTime != null)
+                {
+                    DateTime beginTime = (DateTime)this.BeginTime;
+                    predicate1 = x => x.Time >= beginTime;
+                }
+                if (this.EndTime != null)
+                {
+                    DateTime endtime = (DateTime)this.EndTime;
+                    predicate2 = x => x.Time <= endtime;
+                }
+
                 int countOfAllMessages = db.SiteReportForOneMonths
+                    .Where(predicate1)
+                    .Where(predicate2)
                     .Count();
                 var tList = db.SiteReportForOneMonths
+                    .Where(predicate1)
+                    .Where(predicate2)
                     .OrderByDescending(x => x.Id)
                     .Skip(startRow)
                     .Take(settingOfBase.PageSizeForAdmin)
@@ -52,12 +84,34 @@ namespace zwg_china.service
                     .ConvertAll(x => new SiteReportExpot(x));
 
                 return new PageResult<SiteReportExpot>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
+
+                #endregion
             }
             else
             {
+                #region 单日报表
+
+                Expression<Func<SiteReportForOneDay, bool>> predicate1 = x => x.Id > 0;
+                Expression<Func<SiteReportForOneDay, bool>> predicate2 = x => x.Id > 0;
+
+                if (this.BeginTime != null)
+                {
+                    DateTime beginTime = (DateTime)this.BeginTime;
+                    predicate1 = x => x.Time >= beginTime;
+                }
+                if (this.EndTime != null)
+                {
+                    DateTime endtime = (DateTime)this.EndTime;
+                    predicate2 = x => x.Time <= endtime;
+                }
+
                 int countOfAllMessages = db.SiteReportForOneDays
+                    .Where(predicate1)
+                    .Where(predicate2)
                     .Count();
                 var tList = db.SiteReportForOneDays
+                    .Where(predicate1)
+                    .Where(predicate2)
                     .OrderByDescending(x => x.Id)
                     .Skip(startRow)
                     .Take(settingOfBase.PageSizeForAdmin)
@@ -65,6 +119,8 @@ namespace zwg_china.service
                     .ConvertAll(x => new SiteReportExpot(x));
 
                 return new PageResult<SiteReportExpot>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);
+
+                #endregion
             }
         }
 

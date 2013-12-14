@@ -17,6 +17,11 @@ namespace zwg_china.model
         /// </summary>
         public string Date { get; set; }
 
+        /// <summary>
+        /// 时间
+        /// </summary>
+        public DateTime Time { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -26,7 +31,8 @@ namespace zwg_china.model
         /// </summary>
         public ReportBase()
         {
-
+            DateTime t = DateTime.Now.AddDays(-1);
+            this.Time = new DateTime(t.Year, t.Month, t.Day);
         }
 
         /// <summary>
@@ -47,6 +53,8 @@ namespace zwg_china.model
             : base(timesOfLogin, amountOfBets, rebate, bonus, commission, reward, dividend, recharge, withdrawal)
         {
             this.Date = date;
+            DateTime t = DateTime.Now.AddDays(-1);
+            this.Time = new DateTime(t.Year, t.Month, t.Day);
         }
 
         #endregion

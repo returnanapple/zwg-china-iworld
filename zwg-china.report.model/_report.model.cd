@@ -51,14 +51,14 @@
   <Class Name="zwg_china.model.ReportBase" Collapsed="true">
     <Position X="8.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQA=</HashCode>
       <FileName>ReportBase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.model.SiteReportBase" Collapsed="true">
     <Position X="2.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AEAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SiteReportBase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -72,7 +72,7 @@
   <Interface Name="zwg_china.model.IModelToDbContextOfReport" Collapsed="true">
     <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAECAAAAAAAADAAAAAAAAIAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>IModelToDbContextOfReport.cs</FileName>
     </TypeIdentifier>
   </Interface>
