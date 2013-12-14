@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AdministratorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IAdministratorService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAdministratorService_GetAdministrators_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministrators" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetAdministrators_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetAdministratorGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorGroups" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetAdministratorGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetBasicAdministratorGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasicAdministratorGroups" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetBasicAdministratorGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasicAdministratorGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetAdministratorLandingRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorLandingRecords" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetAdministratorLandingRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdministratorLandingRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetOperatedRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatedRecords" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetOperatedRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatedRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_CreateAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_CreateAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_EditPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPassword" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_EditPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_ChangeGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeGroup" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_ChangeGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_RemoveAdministrator_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAdministrator" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_RemoveAdministrator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAdministratorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_CreateAdministratorGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdministratorGroup" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_CreateAdministratorGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdministratorGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_EditAdministratorGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditAdministratorGroup" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_EditAdministratorGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditAdministratorGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_RemoveAdministratorGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAdministratorGroup" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_RemoveAdministratorGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAdministratorGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_KeepHeartbeat_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeepHeartbeat" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_KeepHeartbeat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeepHeartbeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetSettingOfBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingOfBase" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_GetSettingOfBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingOfBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_SetSettingOfBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingOfBase" />
+  </wsdl:message>
+  <wsdl:message name="IAdministratorService_SetSettingOfBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingOfBaseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAdministratorService">
+    <wsdl:operation name="GetAdministrators">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/GetAdministrators" message="tns:IAdministratorService_GetAdministrators_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/GetAdministratorsResponse" message="tns:IAdministratorService_GetAdministrators_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/GetAdministratorGroups" message="tns:IAdministratorService_GetAdministratorGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/GetAdministratorGroupsResponse" message="tns:IAdministratorService_GetAdministratorGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBasicAdministratorGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/GetBasicAdministratorGroups" message="tns:IAdministratorService_GetBasicAdministratorGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/GetBasicAdministratorGroupsResponse" message="tns:IAdministratorService_GetBasicAdministratorGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorLandingRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/GetAdministratorLandingRecords" message="tns:IAdministratorService_GetAdministratorLandingRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/GetAdministratorLandingRecordsResponse" message="tns:IAdministratorService_GetAdministratorLandingRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatedRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/GetOperatedRecords" message="tns:IAdministratorService_GetOperatedRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/GetOperatedRecordsResponse" message="tns:IAdministratorService_GetOperatedRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/Login" message="tns:IAdministratorService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/LoginResponse" message="tns:IAdministratorService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/CreateAdministrator" message="tns:IAdministratorService_CreateAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/CreateAdministratorResponse" message="tns:IAdministratorService_CreateAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/EditPassword" message="tns:IAdministratorService_EditPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/EditPasswordResponse" message="tns:IAdministratorService_EditPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/ChangeGroup" message="tns:IAdministratorService_ChangeGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/ChangeGroupResponse" message="tns:IAdministratorService_ChangeGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAdministrator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/RemoveAdministrator" message="tns:IAdministratorService_RemoveAdministrator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/RemoveAdministratorResponse" message="tns:IAdministratorService_RemoveAdministrator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdministratorGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/CreateAdministratorGroup" message="tns:IAdministratorService_CreateAdministratorGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/CreateAdministratorGroupResponse" message="tns:IAdministratorService_CreateAdministratorGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAdministratorGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/EditAdministratorGroup" message="tns:IAdministratorService_EditAdministratorGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/EditAdministratorGroupResponse" message="tns:IAdministratorService_EditAdministratorGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAdministratorGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/RemoveAdministratorGroup" message="tns:IAdministratorService_RemoveAdministratorGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/RemoveAdministratorGroupResponse" message="tns:IAdministratorService_RemoveAdministratorGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeepHeartbeat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/KeepHeartbeat" message="tns:IAdministratorService_KeepHeartbeat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/KeepHeartbeatResponse" message="tns:IAdministratorService_KeepHeartbeat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingOfBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/GetSettingOfBase" message="tns:IAdministratorService_GetSettingOfBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/GetSettingOfBaseResponse" message="tns:IAdministratorService_GetSettingOfBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingOfBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdministratorService/SetSettingOfBase" message="tns:IAdministratorService_SetSettingOfBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdministratorService/SetSettingOfBaseResponse" message="tns:IAdministratorService_SetSettingOfBase_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IAdministratorService" type="tns:IAdministratorService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IAdministratorService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetAdministrators">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/GetAdministrators" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorGroups">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/GetAdministratorGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBasicAdministratorGroups">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/GetBasicAdministratorGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdministratorLandingRecords">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/GetAdministratorLandingRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatedRecords">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/GetOperatedRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdministrator">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/CreateAdministrator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPassword">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/EditPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeGroup">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/ChangeGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAdministrator">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/RemoveAdministrator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdministratorGroup">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/CreateAdministratorGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAdministratorGroup">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/EditAdministratorGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAdministratorGroup">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/RemoveAdministratorGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeepHeartbeat">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/KeepHeartbeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingOfBase">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/GetSettingOfBase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingOfBase">
+      <soap12:operation soapAction="http://tempuri.org/IAdministratorService/SetSettingOfBase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AdministratorService">
+    <wsdl:port name="NetTcpBinding_IAdministratorService" binding="tns:NetTcpBinding_IAdministratorService">
+      <soap12:address location="net.tcp://192.168.1.130:4512/AdministratorService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/AdministratorService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -10,7 +10,7 @@ namespace zwg_china.service.backstage
     /// <summary>
     /// 彩票相关的数据服务
     /// </summary>
-    public class LotteryService : ServiceBase
+    public class LotteryService : ServiceBase, ILotteryService
     {
         #region 获取数据
 
