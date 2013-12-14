@@ -12,6 +12,7 @@ namespace zwg_china.service
     /// <summary>
     /// 彩票模块的参数集的基类
     /// </summary>
+    [DataContract]
     public class ImportBaseOfLottery : ImportBase
     {
         /// <summary>
@@ -23,7 +24,7 @@ namespace zwg_china.service
             Administrator administrator = AdministratorLoginInfoPond.GetAdministratorInfo(db, this.Token);
             if (!administrator.Group.CanEditTickets)
             {
-                throw new Exception("没有修彩票的权限，操作无效");
+                throw new Exception("没有修改彩票设置的权限，操作无效");
             }
         }
     }

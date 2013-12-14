@@ -5,15 +5,14 @@ using System.Runtime.Serialization;
 using System.Text;
 using zwg_china.logic;
 using zwg_china.model;
-using zwg_china.model.manager;
 
 namespace zwg_china.service
 {
     /// <summary>
-    /// 彩票模块的用于获取分页列表的参数集的基类
+    /// 交互信息模块的参数集的基类
     /// </summary>
     [DataContract]
-    public class GetPageListImportBaseOfLottery : GetPageListImportBase
+    public class ImportBaseOfMessage : ImportBase
     {
         /// <summary>
         /// 判定当前用户是否允许执行操作
@@ -22,9 +21,9 @@ namespace zwg_china.service
         public override void CheckAllowExecuteOrNot(ModelToDbContext db)
         {
             Administrator administrator = AdministratorLoginInfoPond.GetAdministratorInfo(db, this.Token);
-            if (!administrator.Group.CanViewTickets)
+            if (!administrator.Group.CanEditSettings)
             {
-                throw new Exception("没有修彩票的权限，操作无效");
+                throw new Exception("没有修改交互信息设置的权限，操作无效");
             }
         }
     }
