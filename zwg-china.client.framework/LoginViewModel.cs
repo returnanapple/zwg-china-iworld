@@ -5,7 +5,7 @@ using System.Text;
 
 namespace zwg_china.client.framework
 {
-    public class LoginViewModel
+    public class LoginViewModel : ViewModelBase
     {
     }
 }

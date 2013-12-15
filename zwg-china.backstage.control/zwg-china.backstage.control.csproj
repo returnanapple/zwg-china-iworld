@@ -59,6 +59,12 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class\IJumpButton.cs" />
+    <Compile Include="class\IMenuButton.cs" />
+    <Compile Include="class\MenuSelectedInfo.cs" />
+    <Compile Include="ContentBox.xaml.cs">
+      <DependentUpon>ContentBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CoverFloorTool.xaml.cs">
       <DependentUpon>CoverFloorTool.xaml</DependentUpon>
     </Compile>
@@ -68,11 +74,32 @@
     <Compile Include="LoginPrompt.xaml.cs">
       <DependentUpon>LoginPrompt.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManageFrame.xaml.cs">
+      <DependentUpon>ManageFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuButton.xaml.cs">
+      <DependentUpon>MenuButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NormalPrompt.xaml.cs">
       <DependentUpon>NormalPrompt.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ri\RI.cs" />
+    <Compile Include="class\RI.cs" />
+    <Compile Include="SideTool.xaml.cs">
+      <DependentUpon>SideTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SideTool_MenuButton.xaml.cs">
+      <DependentUpon>SideTool_MenuButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SideTool_MenuList.xaml.cs">
+      <DependentUpon>SideTool_MenuList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SideTool_MenuList_Button.xaml.cs">
+      <DependentUpon>SideTool_MenuList_Button.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TechnicalSupport_Button.xaml.cs">
+      <DependentUpon>TechnicalSupport_Button.xaml</DependentUpon>
+    </Compile>
     <Compile Include="tool\ClearPasswordOnFocus.cs" />
     <Compile Include="tool\KeepPasswordRealTime.cs" />
     <Compile Include="tool\KeepTextRealTime.cs" />
@@ -86,6 +113,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="ContentBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CoverFloorTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,13 +133,54 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ManageFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="NormalPrompt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SideTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SideTool_MenuButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SideTool_MenuList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SideTool_MenuList_Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TechnicalSupport_Button.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bg-menu-item-current.png" />
+    <Resource Include="img\bg-menu-item-green.png" />
+    <Resource Include="img\chinaz1.png" />
+    <Resource Include="img\chinaz2.png" />
+    <Resource Include="img\chinaz3.png" />
+    <Resource Include="img\icon_files.png" />
+    <Resource Include="img\icon_list.png" />
+    <Resource Include="img\icon_pen.png" />
+    <Resource Include="img\icon_women.png" />
+    <Resource Include="img\information.png" />
+    <Resource Include="img\menu-current-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
