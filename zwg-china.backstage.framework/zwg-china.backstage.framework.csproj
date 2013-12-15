@@ -113,6 +113,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="UniversalCommand.cs" />
+    <Compile Include="UsersViewModel.cs" />
     <Compile Include="ViewAttribute.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="ViewModelService.cs" />

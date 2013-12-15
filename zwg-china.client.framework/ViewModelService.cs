@@ -137,10 +137,13 @@ namespace zwg_china.client.framework
             {
                 throw new Exception("该界面已经被注册到界面池，请检查程序");
             }
-            bool hadDefault = _pageCreaters.Any(x => x.Key.IsDefault);
-            if (hadDefault)
+            if (isDefault)
             {
-                throw new Exception("已经有一个被声明为默认界面的界面被注册到界面池，请检查程序");
+                bool hadDefault = _pageCreaters.Any(x => x.Key.IsDefault);
+                if (hadDefault)
+                {
+                    throw new Exception("已经有一个被声明为默认界面的界面被注册到界面池，请检查程序");
+                }
             }
 
             #endregion

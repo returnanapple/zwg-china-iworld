@@ -20,7 +20,7 @@
             <TextBlock Text="欢迎来到 IWorld" Style="{StaticResource ResourceKey=PageTitle}"/>
 
             <!--软件介绍-->
-            <TextBlock Text="这个软件由紫微阁工作室制作。内核版本号为：v4.1.0.3703" Canvas.Top="52" Canvas.Left="3"/>
+            <TextBlock Text="这个软件由紫微阁工作室制作。内核版本号为：v4.6.0.3703" Canvas.Top="52" Canvas.Left="3"/>
             <TextBlock Text="如果你想要升级/拓展你的软件模组，或者重新定制你的软件UI；" Canvas.Top="69" Canvas.Left="3"/>
             <TextBlock Text="又或者你遇到了一些无法处理的故障/疑问，请联系我们的工程师。" Canvas.Top="86" Canvas.Left="3"/>
             <TextBlock Text="我们提供永久的技术支持和拓展、升级服务" Canvas.Top="101" Canvas.Left="3"/>

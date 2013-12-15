@@ -39,7 +39,7 @@
   <Class Name="zwg_china.backstage.framework.ModelBase" Collapsed="true">
     <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAIAQAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -54,7 +54,7 @@
   <Class Name="zwg_china.backstage.framework.ManagerViewModelBase" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAACAEAAAgAAAAAACQAAKAMEAAgAAAAABAAAEAAAAIA=</HashCode>
+      <HashCode>QAACAEAAAgAAAAAACwAAKAMAAAgAgAAABQAAAAAAAIA=</HashCode>
       <FileName>ManagerViewModelBase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -70,6 +70,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IndexViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.UsersViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsersViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.backstage.framework.IMainPage" Collapsed="true">
@@ -89,14 +96,14 @@
   <Enum Name="zwg_china.backstage.framework.Page" Collapsed="true">
     <Position X="7.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAIAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Page.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="zwg_china.backstage.framework.Pop" Collapsed="true">
     <Position X="9.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Pop.cs</FileName>
     </TypeIdentifier>
   </Enum>

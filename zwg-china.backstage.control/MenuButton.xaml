@@ -4,20 +4,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
     <UserControl.Resources>
-        <Style TargetType="TextBlock" x:Key="t_normal" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
-            <Setter Property="Foreground" Value="#FF555555"/>
-        </Style>
-        <Style TargetType="TextBlock" x:Key="t_hover" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
-            <Setter Property="Foreground" Value="#57A000"/>
-        </Style>
-        <Style TargetType="Border" x:Key="bg_normal">
-            <Setter Property="Background" Value="#FFF0F0F0"/>
-        </Style>
-        <Style TargetType="Border" x:Key="bg_hover">
-            <Setter Property="Background" Value="White"/>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="css.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="TextBlock" x:Key="t_normal" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
+                <Setter Property="Foreground" Value="#FF555555"/>
+            </Style>
+            <Style TargetType="TextBlock" x:Key="t_hover" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
+                <Setter Property="Foreground" Value="#57A000"/>
+            </Style>
+            <Style TargetType="Border" x:Key="bg_normal">
+                <Setter Property="Background" Value="#FFF0F0F0"/>
+            </Style>
+            <Style TargetType="Border" x:Key="bg_hover">
+                <Setter Property="Background" Value="White"/>
+            </Style>
+        </ResourceDictionary>
     </UserControl.Resources>
 
     <Grid x:Name="root" Width="135" Cursor="Hand" MouseEnter="ShowHoverStyle" 

@@ -12,5 +12,6 @@ namespace zwg_china.backstage.framework
     {
         登陆页 = 101,
         首页 = 102,
+        查看用户列表 = 201,
     }
 }
