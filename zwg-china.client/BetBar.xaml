@@ -1,0 +1,42 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.BetBar"
+    mc:Ignorable="d"
+    Height="32" Width="656">
+
+    <Grid x:Name="RealWidth">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="388"/>
+            <ColumnDefinition Width="198"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="ImageOfTittle" Grid.Column="0" Stretch="None"/>
+
+        <ItemsControl x:Name="Selections" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:NewCheckBoxWithOffsetEffect Width="31" Height="32" ImageNameOfBackground="NumberButtonBg" Margin="2,0,2,0"
+                                                       ImageNameOfContent="{Binding Number}" 
+                                                       IsChecked="{Binding Selected,Mode=TwoWay}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <StackPanel x:Name="MultiSelectNumberButtons" Grid.Column="2" Orientation="Horizontal">
+            <local:NewButton ImageNameOfContent="大"/>
+            <local:NewButton ImageNameOfContent="小" Margin="6,0,6,0"/>
+            <local:NewButton ImageNameOfContent="单"/>
+            <local:NewButton ImageNameOfContent="双" Margin="6,0,6,0"/>
+            <local:NewButton ImageNameOfContent="全"/>
+            <local:NewButton ImageNameOfContent="清" Margin="6,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -29,7 +29,7 @@ namespace zwg_china.client
         {
             MainPage mainPage = new MainPage();
             this.RootVisual = mainPage;
-            ViewModelService.Initialize(mainPage);
+            //ViewModelService.Initialize(mainPage);
         }
 
         private void Application_Exit(object sender, EventArgs e)

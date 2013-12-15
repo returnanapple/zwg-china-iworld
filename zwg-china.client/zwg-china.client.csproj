@@ -75,22 +75,116 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BetBar.xaml.cs">
+      <DependentUpon>BetBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BetTool.xaml.cs">
+      <DependentUpon>BetTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BetInfo.cs" />
+    <Compile Include="Classes\SelectResult.cs" />
+    <Compile Include="Classes\SingleSelect.cs" />
+    <Compile Include="LotteryButton.xaml.cs">
+      <DependentUpon>LotteryButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewButton.xaml.cs">
+      <DependentUpon>NewButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewCheckBoxWithOffsetEffect.xaml.cs">
+      <DependentUpon>NewCheckBoxWithOffsetEffect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewRadioButton.xaml.cs">
+      <DependentUpon>NewRadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayTagButton.xaml.cs">
+      <DependentUpon>PlayTagButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemainTimeAndResultControl.xaml.cs">
+      <DependentUpon>RemainTimeAndResultControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowABulletinTool.xaml.cs">
+      <DependentUpon>ShowABulletinTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAHistoryResultTool.xaml.cs">
+      <DependentUpon>ShowAHistoryResultTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAWinningTool.xaml.cs">
+      <DependentUpon>ShowAWinningTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPlayTagButton.xaml.cs">
+      <DependentUpon>SubPlayTagButton.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="BetBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BetTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LotteryButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewCheckBoxWithOffsetEffect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewRadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlayTagButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RemainTimeAndResultControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowABulletinTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowAHistoryResultTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowAWinningTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubPlayTagButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Fonts\ARIALUNI.TTF" />
+    <Resource Include="Fonts\msyh.ttf" />
+    <None Include="Fonts\simsun.ttc" />
     <None Include="Properties\AppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +192,133 @@
       <Project>{d69f6cf8-861c-4a60-8a14-3776ae6a52ff}</Project>
       <Name>zwg-china.client.framework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NavigationButtonBg_Checked.png" />
+    <Resource Include="Images\NavigationButtonBg_MouseOver.png" />
+    <Resource Include="Images\NavigationButtonBg_Pressed.png" />
+    <Resource Include="Images\个人中心.png" />
+    <Resource Include="Images\会员管理.png" />
+    <Resource Include="Images\低频彩_Checked.png" />
+    <Resource Include="Images\低频彩_MouseOver.png" />
+    <Resource Include="Images\低频彩_Normal.png" />
+    <Resource Include="Images\低频彩_Pressed.png" />
+    <Resource Include="Images\信封_MouseOver.png" />
+    <Resource Include="Images\信封_Normal.png" />
+    <Resource Include="Images\信封_Pressed.png" />
+    <Resource Include="Images\充值_MouseOver.png" />
+    <Resource Include="Images\充值_Normal.png" />
+    <Resource Include="Images\充值_Pressed.png" />
+    <Resource Include="Images\其他高频彩_Checked.png" />
+    <Resource Include="Images\其他高频彩_MouseOver.png" />
+    <Resource Include="Images\其他高频彩_Normal.png" />
+    <Resource Include="Images\其他高频彩_Pressed.png" />
+    <Resource Include="Images\十一选五_Checked.png" />
+    <Resource Include="Images\十一选五_MouseOver.png" />
+    <Resource Include="Images\十一选五_Normal.png" />
+    <Resource Include="Images\十一选五_Pressed.png" />
+    <Resource Include="Images\在线客服.png" />
+    <Resource Include="Images\安全退出.png" />
+    <Resource Include="Images\投注明细.png" />
+    <Resource Include="Images\提现_MouseOver.png" />
+    <Resource Include="Images\提现_Normal.png" />
+    <Resource Include="Images\提现_Pressed.png" />
+    <Resource Include="Images\数据报表.png" />
+    <Resource Include="Images\时时彩_Checked.png" />
+    <Resource Include="Images\时时彩_MouseOver.png" />
+    <Resource Include="Images\时时彩_Normal.png" />
+    <Resource Include="Images\时时彩_Pressed.png" />
+    <Resource Include="Images\棋牌游戏_Checked.png" />
+    <Resource Include="Images\棋牌游戏_MouseOver.png" />
+    <Resource Include="Images\棋牌游戏_Normal.png" />
+    <Resource Include="Images\棋牌游戏_Pressed.png" />
+    <Resource Include="Images\活动专区_Checked.png" />
+    <Resource Include="Images\活动专区_MouseOver.png" />
+    <Resource Include="Images\活动专区_Normal.png" />
+    <Resource Include="Images\活动专区_Pressed.png" />
+    <Resource Include="Images\确认投注_MouseOver.png" />
+    <Resource Include="Images\确认投注_Normal.png" />
+    <Resource Include="Images\确认投注_Pressed.png" />
+    <Resource Include="Images\资金管理.png" />
+    <Resource Include="Images\首页.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotteryButtonBg_Checked.png" />
+    <Resource Include="Images\LotteryButtonBg_MouseOver.png" />
+    <Resource Include="Images\LotteryButtonBg_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PlayTagButtonBg_Checked.png" />
+    <Resource Include="Images\PlayTagButtonBg_MouseOver.png" />
+    <Resource Include="Images\PlayTagButtonBg_Normal.png" />
+    <Resource Include="Images\PlayTagButtonBg_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NumberButtonBg_Checked.png" />
+    <Resource Include="Images\NumberButtonBg_Normal.png" />
+    <Resource Include="Images\NumberButtonBg_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\0.png" />
+    <Resource Include="Images\1.png" />
+    <Resource Include="Images\10.png" />
+    <Resource Include="Images\11.png" />
+    <Resource Include="Images\2.png" />
+    <Resource Include="Images\3.png" />
+    <Resource Include="Images\4.png" />
+    <Resource Include="Images\5.png" />
+    <Resource Include="Images\6.png" />
+    <Resource Include="Images\7.png" />
+    <Resource Include="Images\8.png" />
+    <Resource Include="Images\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\全.png" />
+    <Resource Include="Images\单.png" />
+    <Resource Include="Images\双.png" />
+    <Resource Include="Images\大.png" />
+    <Resource Include="Images\小.png" />
+    <Resource Include="Images\清.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MultiSelectButtonBg_MouseOver.png" />
+    <Resource Include="Images\MultiSelectButtonBg_Normal.png" />
+    <Resource Include="Images\MultiSelectButtonBg_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\万位.png" />
+    <Resource Include="Images\个位.png" />
+    <Resource Include="Images\十位.png" />
+    <Resource Include="Images\千位.png" />
+    <Resource Include="Images\百位.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\led0.png" />
+    <Resource Include="Images\led1.png" />
+    <Resource Include="Images\led2.png" />
+    <Resource Include="Images\led3.png" />
+    <Resource Include="Images\led4.png" />
+    <Resource Include="Images\led5.png" />
+    <Resource Include="Images\led6.png" />
+    <Resource Include="Images\led7.png" />
+    <Resource Include="Images\led8.png" />
+    <Resource Include="Images\led9.png" />
+    <Resource Include="Images\led冒号.png" />
+    <Resource Include="Images\结果0.png" />
+    <Resource Include="Images\结果1.png" />
+    <Resource Include="Images\结果10.png" />
+    <Resource Include="Images\结果11.png" />
+    <Resource Include="Images\结果2.png" />
+    <Resource Include="Images\结果3.png" />
+    <Resource Include="Images\结果4.png" />
+    <Resource Include="Images\结果5.png" />
+    <Resource Include="Images\结果6.png" />
+    <Resource Include="Images\结果7.png" />
+    <Resource Include="Images\结果8.png" />
+    <Resource Include="Images\结果9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\最新公告Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
