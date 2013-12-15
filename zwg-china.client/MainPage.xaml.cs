@@ -10,11 +10,13 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using zwg_china.client.control;
 using zwg_china.client.framework;
 
 namespace zwg_china.client
 {
+    /// <summary>
+    /// 主界面
+    /// </summary>
     public partial class MainPage : UserControl, IMainPage
     {
         #region 构造方法
@@ -67,8 +69,23 @@ namespace zwg_china.client
 
             #endregion
 
-            //注册弹窗
-            new RI().Register();
+            #region 注册弹窗
+
+            assembly.GetTypes()
+                .Where(x => (x.GetInterfaces().Any(t => t == typeof(IPop)))
+                    && (x.GetCustomAttributes(true).Any(t => t is WindowAttribute)))
+                .ToList().ForEach(_type =>
+                {
+                    WindowAttribute attribute = _type.GetCustomAttributes(true)
+                        .First(x => x is WindowAttribute) as WindowAttribute;
+                    ViewModelService.RegisterPop(attribute.Pop
+                        , new ViewModelService.WindowCreater(() =>
+                        {
+                            return assembly.CreateInstance(_type.FullName) as ChildWindow;
+                        }));
+                });
+
+            #endregion
         }
 
         #endregion

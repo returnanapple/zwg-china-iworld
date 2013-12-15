@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("zwg_china.client")]
-[assembly: AssemblyDescription("最出色的的博彩投注软件，尽在iworld系列")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("紫微阁工作室")]
-[assembly: AssemblyProduct("iworld系列（时时彩博彩平台）")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("zwg_china.client")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
-[assembly: AssemblyTrademark("zwg-china-iworld")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 可使此程序集中的类型
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则以下 GUID 用作类型库的 ID
-[assembly: Guid("0c1e44b4-d2fe-49d0-a454-9d6b9a0e8857")]
+[assembly: Guid("b8fa124d-f7b0-40b3-9210-a9a93acd8dc6")]
 
 // 程序集的版本信息由下面四个值组成: 
 //
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 //
 // 您可以指定所有这些值，也可以使用“修订号”和“生成号”的默认值，
 // 方法是按如下所示使用“*”: 
-[assembly: AssemblyVersion("4.6.*")]
-[assembly: AssemblyFileVersion("4.6.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

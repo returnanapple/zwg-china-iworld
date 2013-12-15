@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0C1E44B4-D2FE-49D0-A454-9D6B9A0E8857}</ProjectGuid>
+    <ProjectGuid>{B8FA124D-F7B0-40B3-9210-A9A93ACD8DC6}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -92,13 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
-    <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\zwg-china.client.control\zwg-china.client.control.csproj">
-      <Project>{72f0d820-54ca-4073-9dda-e2df2dac400c}</Project>
-      <Name>zwg-china.client.control</Name>
-    </ProjectReference>
     <ProjectReference Include="..\zwg-china.client.framework\zwg-china.client.framework.csproj">
       <Project>{d69f6cf8-861c-4a60-8a14-3776ae6a52ff}</Project>
       <Name>zwg-china.client.framework</Name>

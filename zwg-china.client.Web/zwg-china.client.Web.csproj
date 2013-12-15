@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A386BB8C-8C93-4EBA-B7AF-2B6080B1363D}</ProjectGuid>
+    <ProjectGuid>{CBC274C9-1980-435F-A69C-6F6DF8223654}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -19,7 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <SilverlightApplicationList>{0C1E44B4-D2FE-49D0-A454-9D6B9A0E8857}|..\zwg-china.client\zwg-china.client.csproj|ClientBin|False</SilverlightApplicationList>
+    <SilverlightApplicationList>{B8FA124D-F7B0-40B3-9210-A9A93ACD8DC6}|..\zwg-china.client\zwg-china.client.csproj|ClientBin|False</SilverlightApplicationList>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -88,7 +88,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1757</DevelopmentServerPort>
+          <DevelopmentServerPort>39739</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1755/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
