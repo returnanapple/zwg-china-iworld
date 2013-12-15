@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace zwg_china.client.framework
+namespace zwg_china.backstage.framework
 {
     public class IndexViewModel : ManagerViewModelBase
     {

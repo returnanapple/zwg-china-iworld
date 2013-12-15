@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows.Controls;
 using System.IO.IsolatedStorage;
 
-namespace zwg_china.client.framework
+namespace zwg_china.backstage.framework
 {
     /// <summary>
     /// 操作视图的基类
