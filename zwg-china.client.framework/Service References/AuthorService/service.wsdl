@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IAuthorService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthorService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetBasicSelfInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasicSelfInfo" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetBasicSelfInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasicSelfInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_BindingUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:BindingUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_BindingUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BindingUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_UpgradePorn_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradePorn" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_UpgradePorn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradePornResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditBank_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditBank" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditBank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPassword" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditFundsCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditFundsCode" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditFundsCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditFundsCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditPasswordWithSafeCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPasswordWithSafeCode" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditPasswordWithSafeCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPasswordWithSafeCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditFundsCodeWithSafeCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditFundsCodeWithSafeCode" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_EditFundsCodeWithSafeCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditFundsCodeWithSafeCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_KeepHeartbeat_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeepHeartbeat" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_KeepHeartbeat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeepHeartbeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSetting" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthorService">
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/GetUsers" message="tns:IAuthorService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/GetUsersResponse" message="tns:IAuthorService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/GetUserInfo" message="tns:IAuthorService_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/GetUserInfoResponse" message="tns:IAuthorService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBasicSelfInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/GetBasicSelfInfo" message="tns:IAuthorService_GetBasicSelfInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/GetBasicSelfInfoResponse" message="tns:IAuthorService_GetBasicSelfInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/Login" message="tns:IAuthorService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/LoginResponse" message="tns:IAuthorService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BindingUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/BindingUserInfo" message="tns:IAuthorService_BindingUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/BindingUserInfoResponse" message="tns:IAuthorService_BindingUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/CreateUser" message="tns:IAuthorService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/CreateUserResponse" message="tns:IAuthorService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradePorn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/UpgradePorn" message="tns:IAuthorService_UpgradePorn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/UpgradePornResponse" message="tns:IAuthorService_UpgradePorn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditBank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/EditBank" message="tns:IAuthorService_EditBank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/EditBankResponse" message="tns:IAuthorService_EditBank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/EditPassword" message="tns:IAuthorService_EditPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/EditPasswordResponse" message="tns:IAuthorService_EditPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditFundsCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/EditFundsCode" message="tns:IAuthorService_EditFundsCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/EditFundsCodeResponse" message="tns:IAuthorService_EditFundsCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPasswordWithSafeCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/EditPasswordWithSafeCode" message="tns:IAuthorService_EditPasswordWithSafeCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/EditPasswordWithSafeCodeResponse" message="tns:IAuthorService_EditPasswordWithSafeCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditFundsCodeWithSafeCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/EditFundsCodeWithSafeCode" message="tns:IAuthorService_EditFundsCodeWithSafeCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/EditFundsCodeWithSafeCodeResponse" message="tns:IAuthorService_EditFundsCodeWithSafeCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeepHeartbeat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/KeepHeartbeat" message="tns:IAuthorService_KeepHeartbeat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/KeepHeartbeatResponse" message="tns:IAuthorService_KeepHeartbeat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSetting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/GetSetting" message="tns:IAuthorService_GetSetting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/GetSettingResponse" message="tns:IAuthorService_GetSetting_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IAuthorService" type="tns:IAuthorService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IAuthorService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBasicSelfInfo">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/GetBasicSelfInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindingUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/BindingUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradePorn">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/UpgradePorn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditBank">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/EditBank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPassword">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/EditPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditFundsCode">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/EditFundsCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPasswordWithSafeCode">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/EditPasswordWithSafeCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditFundsCodeWithSafeCode">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/EditFundsCodeWithSafeCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeepHeartbeat">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/KeepHeartbeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSetting">
+      <soap12:operation soapAction="http://tempuri.org/IAuthorService/GetSetting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthorService">
+    <wsdl:port name="NetTcpBinding_IAuthorService" binding="tns:NetTcpBinding_IAuthorService">
+      <soap12:address location="net.tcp://192.168.1.130:4511/AuthorService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.130:4511/AuthorService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+  <xs:complexType name="GetUsersImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BelongingUserId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="GroupId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUsersImport" nillable="true" type="tns:GetUsersImport" />
+  <xs:complexType name="GetPageListImportOfAuthor">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportOfAuthor" nillable="true" type="tns:GetPageListImportOfAuthor" />
+  <xs:complexType name="ArrayOfAuthorExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AuthorExport" nillable="true" type="tns:AuthorExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAuthorExport" nillable="true" type="tns:ArrayOfAuthorExport" />
+  <xs:complexType name="AuthorExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Binding" nillable="true" type="tns:UserBindingExport" />
+      <xs:element minOccurs="0" name="Consumption" type="xs:double" />
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="tns:UserGroupExport" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Integral" type="xs:double" />
+      <xs:element minOccurs="0" name="LastLoginAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoginIp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Money" type="xs:double" />
+      <xs:element minOccurs="0" name="Money_Frozen" type="xs:double" />
+      <xs:element minOccurs="0" name="PlayInfo" nillable="true" type="tns:UserPlayInfoExport" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q2:UserStatus" />
+      <xs:element minOccurs="0" name="Subordinate" type="xs:int" />
+      <xs:element minOccurs="0" name="UserQuotas" nillable="true" type="tns:ArrayOfUserQuotaExport" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthorExport" nillable="true" type="tns:AuthorExport" />
+  <xs:complexType name="UserBindingExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlreadyBindingCard" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="BankOfTheCard" type="q3:Bank" />
+      <xs:element minOccurs="0" name="Card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HolderOfTheCard" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserBindingExport" nillable="true" type="tns:UserBindingExport" />
+  <xs:complexType name="UserGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsOfConsumption" type="xs:double" />
+      <xs:element minOccurs="0" name="Grade" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerOfConsumption" type="xs:double" />
+      <xs:element minOccurs="0" name="MaximumWithdrawalAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="MinimumWithdrawalAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimesOfWithdrawal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserGroupExport" nillable="true" type="tns:UserGroupExport" />
+  <xs:complexType name="UserPlayInfoExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Commission_A" type="xs:double" />
+      <xs:element minOccurs="0" name="Commission_B" type="xs:double" />
+      <xs:element minOccurs="0" name="Dividend" type="xs:double" />
+      <xs:element minOccurs="0" name="Rebate_IndefinitePosition" type="xs:double" />
+      <xs:element minOccurs="0" name="Rebate_Normal" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserPlayInfoExport" nillable="true" type="tns:UserPlayInfoExport" />
+  <xs:complexType name="ArrayOfUserQuotaExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserQuotaExport" nillable="true" type="tns:UserQuotaExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserQuotaExport" nillable="true" type="tns:ArrayOfUserQuotaExport" />
+  <xs:complexType name="UserQuotaExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+      <xs:element minOccurs="0" name="Surplus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserQuotaExport" nillable="true" type="tns:UserQuotaExport" />
+  <xs:complexType name="GetLandingRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetLandingRecordsImport" nillable="true" type="tns:GetLandingRecordsImport" />
+  <xs:complexType name="ArrayOfAuthorLandingRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AuthorLandingRecordExport" nillable="true" type="tns:AuthorLandingRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAuthorLandingRecordExport" nillable="true" type="tns:ArrayOfAuthorLandingRecordExport" />
+  <xs:complexType name="AuthorLandingRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthorLandingRecordExport" nillable="true" type="tns:AuthorLandingRecordExport" />
+  <xs:complexType name="GetBasicUserGroupsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetBasicUserGroupsImport" nillable="true" type="tns:GetBasicUserGroupsImport" />
+  <xs:complexType name="ImportBaseOfAuthor">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q4:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfAuthor" nillable="true" type="tns:ImportBaseOfAuthor" />
+  <xs:complexType name="ArrayOfBasicUserGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BasicUserGroupExport" nillable="true" type="tns:BasicUserGroupExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBasicUserGroupExport" nillable="true" type="tns:ArrayOfBasicUserGroupExport" />
+  <xs:complexType name="BasicUserGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicUserGroupExport" nillable="true" type="tns:BasicUserGroupExport" />
+  <xs:complexType name="GetUserGroupsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordForGroupName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUserGroupsImport" nillable="true" type="tns:GetUserGroupsImport" />
+  <xs:complexType name="ArrayOfUserGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserGroupExport" nillable="true" type="tns:UserGroupExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserGroupExport" nillable="true" type="tns:ArrayOfUserGroupExport" />
+  <xs:complexType name="CreateUserImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Rebate_IndefinitePosition" type="xs:double" />
+          <xs:element minOccurs="0" name="Rebate_Normal" type="xs:double" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateUserImport" nillable="true" type="tns:CreateUserImport" />
+  <xs:complexType name="EditUserImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="BankOfTheCard" type="q5:Bank" />
+          <xs:element minOccurs="0" name="Card" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Commission_A" type="xs:double" />
+          <xs:element minOccurs="0" name="Commission_B" type="xs:double" />
+          <xs:element minOccurs="0" name="Dividend" type="xs:double" />
+          <xs:element minOccurs="0" name="HolderOfTheCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Rebate_IndefinitePosition" type="xs:double" />
+          <xs:element minOccurs="0" name="Rebate_Normal" type="xs:double" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q6:UserStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditUserImport" nillable="true" type="tns:EditUserImport" />
+  <xs:complexType name="SetExtraQuotasImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExtraQuotas" nillable="true" type="tns:ArrayOfSetExtraQuotasImport.ExtraQuotaImport" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetExtraQuotasImport" nillable="true" type="tns:SetExtraQuotasImport" />
+  <xs:complexType name="ArrayOfSetExtraQuotasImport.ExtraQuotaImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SetExtraQuotasImport.ExtraQuotaImport" nillable="true" type="tns:SetExtraQuotasImport.ExtraQuotaImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSetExtraQuotasImport.ExtraQuotaImport" nillable="true" type="tns:ArrayOfSetExtraQuotasImport.ExtraQuotaImport" />
+  <xs:complexType name="SetExtraQuotasImport.ExtraQuotaImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+      <xs:element minOccurs="0" name="Sum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetExtraQuotasImport.ExtraQuotaImport" nillable="true" type="tns:SetExtraQuotasImport.ExtraQuotaImport" />
+  <xs:complexType name="RemoveUserImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveUserImport" nillable="true" type="tns:RemoveUserImport" />
+  <xs:complexType name="CreateUserGroupImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CapsOfConsumption" type="xs:double" />
+          <xs:element minOccurs="0" name="Grade" type="xs:int" />
+          <xs:element minOccurs="0" name="LowerOfConsumption" type="xs:double" />
+          <xs:element minOccurs="0" name="MaximumWithdrawalAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="MinimumWithdrawalAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TimesOfWithdrawal" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateUserGroupImport" nillable="true" type="tns:CreateUserGroupImport" />
+  <xs:complexType name="EditUserGroupImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CapsOfConsumption" type="xs:double" />
+          <xs:element minOccurs="0" name="Grade" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="LowerOfConsumption" type="xs:double" />
+          <xs:element minOccurs="0" name="MaximumWithdrawalAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="MinimumWithdrawalAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TimesOfWithdrawal" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditUserGroupImport" nillable="true" type="tns:EditUserGroupImport" />
+  <xs:complexType name="RemoveGroupImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveGroupImport" nillable="true" type="tns:RemoveGroupImport" />
+</xs:schema>

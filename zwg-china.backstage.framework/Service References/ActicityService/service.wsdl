@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ActicityService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IActicityService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IActicityService_GetRewardForRegisterPlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRegisterPlans" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForRegisterPlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRegisterPlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForRegisterRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRegisterRecords" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForRegisterRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRegisterRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForConsumptionPlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForConsumptionPlans" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForConsumptionPlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForConsumptionPlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForConsumptionRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForConsumptionRecords" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForConsumptionRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForConsumptionRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForRechargePlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRechargePlans" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForRechargePlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRechargePlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForRechargeRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRechargeRecords" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRewardForRechargeRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRewardForRechargeRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRedeemPlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemPlans" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRedeemPlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemPlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRedeemRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemRecords" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_GetRedeemRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRedeemRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRewardForRegisterPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRewardForRegisterPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRewardForRegisterPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRewardForRegisterPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRewardForRegisterPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditRewardForRegisterPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRewardForRegisterPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditRewardForRegisterPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRewardForRegisterPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRewardForRegisterPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRewardForRegisterPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRewardForRegisterPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRewardForConsumptionPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRewardForConsumptionPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRewardForConsumptionPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRewardForConsumptionPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRewardForConsumptionPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditRewardForConsumptionPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRewardForConsumptionPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditRewardForConsumptionPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRewardForConsumptionPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRewardForConsumptionPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRewardForConsumptionPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRewardForConsumptionPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRewardForRechargePlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRewardForRechargePlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRewardForRechargePlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRewardForRechargePlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRewardForRechargePlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditRewardForRechargePlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRewardForRechargePlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditRewardForRechargePlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRewardForRechargePlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRewardForRechargePlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRewardForRechargePlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRewardForRechargePlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRedeemPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRedeemPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_CreateRedeemPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRedeemPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRedeemPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditRedeemPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_EditRedeemPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditRedeemPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRedeemPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRedeemPlan" />
+  </wsdl:message>
+  <wsdl:message name="IActicityService_RemoveRedeemPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRedeemPlanResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IActicityService">
+    <wsdl:operation name="GetRewardForRegisterPlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRegisterPlans" message="tns:IActicityService_GetRewardForRegisterPlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRegisterPlansResponse" message="tns:IActicityService_GetRewardForRegisterPlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForRegisterRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRegisterRecords" message="tns:IActicityService_GetRewardForRegisterRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRegisterRecordsResponse" message="tns:IActicityService_GetRewardForRegisterRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForConsumptionPlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRewardForConsumptionPlans" message="tns:IActicityService_GetRewardForConsumptionPlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRewardForConsumptionPlansResponse" message="tns:IActicityService_GetRewardForConsumptionPlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForConsumptionRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRewardForConsumptionRecords" message="tns:IActicityService_GetRewardForConsumptionRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRewardForConsumptionRecordsResponse" message="tns:IActicityService_GetRewardForConsumptionRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForRechargePlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRechargePlans" message="tns:IActicityService_GetRewardForRechargePlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRechargePlansResponse" message="tns:IActicityService_GetRewardForRechargePlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForRechargeRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRechargeRecords" message="tns:IActicityService_GetRewardForRechargeRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRewardForRechargeRecordsResponse" message="tns:IActicityService_GetRewardForRechargeRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemPlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRedeemPlans" message="tns:IActicityService_GetRedeemPlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRedeemPlansResponse" message="tns:IActicityService_GetRedeemPlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/GetRedeemRecords" message="tns:IActicityService_GetRedeemRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/GetRedeemRecordsResponse" message="tns:IActicityService_GetRedeemRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRewardForRegisterPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/CreateRewardForRegisterPlan" message="tns:IActicityService_CreateRewardForRegisterPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/CreateRewardForRegisterPlanResponse" message="tns:IActicityService_CreateRewardForRegisterPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditRewardForRegisterPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/EditRewardForRegisterPlan" message="tns:IActicityService_EditRewardForRegisterPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/EditRewardForRegisterPlanResponse" message="tns:IActicityService_EditRewardForRegisterPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRewardForRegisterPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/RemoveRewardForRegisterPlan" message="tns:IActicityService_RemoveRewardForRegisterPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/RemoveRewardForRegisterPlanResponse" message="tns:IActicityService_RemoveRewardForRegisterPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRewardForConsumptionPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/CreateRewardForConsumptionPlan" message="tns:IActicityService_CreateRewardForConsumptionPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/CreateRewardForConsumptionPlanResponse" message="tns:IActicityService_CreateRewardForConsumptionPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditRewardForConsumptionPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/EditRewardForConsumptionPlan" message="tns:IActicityService_EditRewardForConsumptionPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/EditRewardForConsumptionPlanResponse" message="tns:IActicityService_EditRewardForConsumptionPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRewardForConsumptionPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/RemoveRewardForConsumptionPlan" message="tns:IActicityService_RemoveRewardForConsumptionPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/RemoveRewardForConsumptionPlanResponse" message="tns:IActicityService_RemoveRewardForConsumptionPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRewardForRechargePlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/CreateRewardForRechargePlan" message="tns:IActicityService_CreateRewardForRechargePlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/CreateRewardForRechargePlanResponse" message="tns:IActicityService_CreateRewardForRechargePlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditRewardForRechargePlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/EditRewardForRechargePlan" message="tns:IActicityService_EditRewardForRechargePlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/EditRewardForRechargePlanResponse" message="tns:IActicityService_EditRewardForRechargePlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRewardForRechargePlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/RemoveRewardForRechargePlan" message="tns:IActicityService_RemoveRewardForRechargePlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/RemoveRewardForRechargePlanResponse" message="tns:IActicityService_RemoveRewardForRechargePlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRedeemPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/CreateRedeemPlan" message="tns:IActicityService_CreateRedeemPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/CreateRedeemPlanResponse" message="tns:IActicityService_CreateRedeemPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditRedeemPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/EditRedeemPlan" message="tns:IActicityService_EditRedeemPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/EditRedeemPlanResponse" message="tns:IActicityService_EditRedeemPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRedeemPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActicityService/RemoveRedeemPlan" message="tns:IActicityService_RemoveRedeemPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActicityService/RemoveRedeemPlanResponse" message="tns:IActicityService_RemoveRedeemPlan_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IActicityService" type="tns:IActicityService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IActicityService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetRewardForRegisterPlans">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRewardForRegisterPlans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForRegisterRecords">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRewardForRegisterRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForConsumptionPlans">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRewardForConsumptionPlans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForConsumptionRecords">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRewardForConsumptionRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForRechargePlans">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRewardForRechargePlans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRewardForRechargeRecords">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRewardForRechargeRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemPlans">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRedeemPlans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRedeemRecords">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/GetRedeemRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRewardForRegisterPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/CreateRewardForRegisterPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRewardForRegisterPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/EditRewardForRegisterPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRewardForRegisterPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/RemoveRewardForRegisterPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRewardForConsumptionPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/CreateRewardForConsumptionPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRewardForConsumptionPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/EditRewardForConsumptionPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRewardForConsumptionPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/RemoveRewardForConsumptionPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRewardForRechargePlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/CreateRewardForRechargePlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRewardForRechargePlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/EditRewardForRechargePlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRewardForRechargePlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/RemoveRewardForRechargePlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRedeemPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/CreateRedeemPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditRedeemPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/EditRedeemPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRedeemPlan">
+      <soap12:operation soapAction="http://tempuri.org/IActicityService/RemoveRedeemPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActicityService">
+    <wsdl:port name="NetTcpBinding_IActicityService" binding="tns:NetTcpBinding_IActicityService">
+      <soap12:address location="net.tcp://192.168.1.130:4512/ActicityService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/ActicityService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

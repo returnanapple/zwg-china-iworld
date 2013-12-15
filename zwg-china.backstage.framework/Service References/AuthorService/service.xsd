@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q1:GetUsersImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetUsersResult" nillable="true" type="q2:PageResultOfAuthorExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLandingRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q3:GetLandingRecordsImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLandingRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetLandingRecordsResult" nillable="true" type="q4:PageResultOfAuthorLandingRecordExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasicUserGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q5:GetBasicUserGroupsImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasicUserGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetBasicUserGroupsResult" nillable="true" type="q6:NormalResultOfArrayOfBasicUserGroupExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q7:GetUserGroupsImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetGroupsResult" nillable="true" type="q8:PageResultOfUserGroupExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q9:CreateUserImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="CreateUserResult" nillable="true" type="q10:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q11:EditUserImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditUserResult" nillable="true" type="q12:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetExtraQuotas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q13:SetExtraQuotasImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetExtraQuotasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="SetExtraQuotasResult" nillable="true" type="q14:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q15:RemoveUserImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RemoveUserResult" nillable="true" type="q16:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q17:CreateUserGroupImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="CreateUserGroupResult" nillable="true" type="q18:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditUserGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q19:EditUserGroupImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditUserGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditUserGroupResult" nillable="true" type="q20:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q21:RemoveGroupImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RemoveUserGroupResult" nillable="true" type="q22:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

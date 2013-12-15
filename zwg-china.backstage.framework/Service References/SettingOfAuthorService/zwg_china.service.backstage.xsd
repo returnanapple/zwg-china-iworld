@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+  <xs:complexType name="GetSystemBankAccountsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetSettingImport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSystemBankAccountsImport" nillable="true" type="tns:GetSystemBankAccountsImport" />
+  <xs:complexType name="ArrayOfSystemBankAccountExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SystemBankAccountExport" nillable="true" type="tns:SystemBankAccountExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSystemBankAccountExport" nillable="true" type="tns:ArrayOfSystemBankAccountExport" />
+  <xs:complexType name="SystemBankAccountExport">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="BankOfTheCard" type="q2:Bank" />
+      <xs:element minOccurs="0" name="Card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HolderOfTheCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemBankAccountExport" nillable="true" type="tns:SystemBankAccountExport" />
+  <xs:complexType name="GetSettingOfAuthorImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q3:GetSettingImport">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSettingOfAuthorImport" nillable="true" type="tns:GetSettingOfAuthorImport" />
+  <xs:complexType name="SettingOfAuthorExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsRebate" type="xs:double" />
+      <xs:element minOccurs="0" name="CapsRebateOfHigh" type="xs:double" />
+      <xs:element minOccurs="0" name="ClearUser_DaysOfInactive" type="xs:int" />
+      <xs:element minOccurs="0" name="ClearUser_DaysOfUnMoneyChange" type="xs:int" />
+      <xs:element minOccurs="0" name="ClearUser_DaysOfUnSetIn" type="xs:int" />
+      <xs:element minOccurs="0" name="ClearUser_LowerOfMoney" type="xs:double" />
+      <xs:element minOccurs="0" name="Commission_A" type="xs:double" />
+      <xs:element minOccurs="0" name="Commission_B" type="xs:double" />
+      <xs:element minOccurs="0" name="DaysOfDividend" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dividend_A" type="xs:double" />
+      <xs:element minOccurs="0" name="Dividend_B" type="xs:double" />
+      <xs:element minOccurs="0" name="ForgotPasswordRecordTimeout" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerConsumptionForCommission" type="xs:double" />
+      <xs:element minOccurs="0" name="LowerConsumptionForDividend" type="xs:double" />
+      <xs:element minOccurs="0" name="LowerRebate" type="xs:double" />
+      <xs:element minOccurs="0" name="LowerRebateOfHigh" type="xs:double" />
+      <xs:element minOccurs="0" name="MaximumWithdrawalAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="MinimumWithdrawalAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="RechargeRecordTimeout" type="xs:int" />
+      <xs:element minOccurs="0" name="SpreadRecordTimeout" type="xs:int" />
+      <xs:element minOccurs="0" name="TimesOfWithdrawal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SettingOfAuthorExport" nillable="true" type="tns:SettingOfAuthorExport" />
+  <xs:complexType name="GetSystemQuotaImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q4:GetSettingImport">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSystemQuotaImport" nillable="true" type="tns:GetSystemQuotaImport" />
+  <xs:complexType name="ArrayOfSystemQuotaExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SystemQuotaExport" nillable="true" type="tns:SystemQuotaExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSystemQuotaExport" nillable="true" type="tns:ArrayOfSystemQuotaExport" />
+  <xs:complexType name="SystemQuotaExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfSystemQuotaDetailExport" />
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemQuotaExport" nillable="true" type="tns:SystemQuotaExport" />
+  <xs:complexType name="ArrayOfSystemQuotaDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SystemQuotaDetailExport" nillable="true" type="tns:SystemQuotaDetailExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSystemQuotaDetailExport" nillable="true" type="tns:ArrayOfSystemQuotaDetailExport" />
+  <xs:complexType name="SystemQuotaDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+      <xs:element minOccurs="0" name="Sum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemQuotaDetailExport" nillable="true" type="tns:SystemQuotaDetailExport" />
+  <xs:complexType name="CreateSystemBankAccountImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="BankOfTheCard" type="q5:Bank" />
+          <xs:element minOccurs="0" name="Card" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HolderOfTheCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Order" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateSystemBankAccountImport" nillable="true" type="tns:CreateSystemBankAccountImport" />
+  <xs:complexType name="ImportBaseOfAuthor">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q6:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfAuthor" nillable="true" type="tns:ImportBaseOfAuthor" />
+  <xs:complexType name="EditSystemBankAccountImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="BankOfTheCard" type="q7:Bank" />
+          <xs:element minOccurs="0" name="Card" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HolderOfTheCard" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Order" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditSystemBankAccountImport" nillable="true" type="tns:EditSystemBankAccountImport" />
+  <xs:complexType name="RemoveSystemBankAccountImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveSystemBankAccountImport" nillable="true" type="tns:RemoveSystemBankAccountImport" />
+  <xs:complexType name="SetSettingOfAuthorImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q8:SetSettingImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CapsRebate" type="xs:double" />
+          <xs:element minOccurs="0" name="CapsRebateOfHigh" type="xs:double" />
+          <xs:element minOccurs="0" name="ClearUser_DaysOfInactive" type="xs:int" />
+          <xs:element minOccurs="0" name="ClearUser_DaysOfUnMoneyChange" type="xs:int" />
+          <xs:element minOccurs="0" name="ClearUser_DaysOfUnSetIn" type="xs:int" />
+          <xs:element minOccurs="0" name="ClearUser_LowerOfMoney" type="xs:double" />
+          <xs:element minOccurs="0" name="Commission_A" type="xs:double" />
+          <xs:element minOccurs="0" name="Commission_B" type="xs:double" />
+          <xs:element minOccurs="0" name="DaysOfDividend" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Dividend_A" type="xs:double" />
+          <xs:element minOccurs="0" name="Dividend_B" type="xs:double" />
+          <xs:element minOccurs="0" name="ForgotPasswordRecordTimeout" type="xs:int" />
+          <xs:element minOccurs="0" name="LowerConsumptionForCommission" type="xs:double" />
+          <xs:element minOccurs="0" name="LowerConsumptionForDividend" type="xs:double" />
+          <xs:element minOccurs="0" name="LowerRebate" type="xs:double" />
+          <xs:element minOccurs="0" name="LowerRebateOfHigh" type="xs:double" />
+          <xs:element minOccurs="0" name="MaximumWithdrawalAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="MinimumWithdrawalAmount" type="xs:double" />
+          <xs:element minOccurs="0" name="RechargeRecordTimeout" type="xs:int" />
+          <xs:element minOccurs="0" name="SpreadRecordTimeout" type="xs:int" />
+          <xs:element minOccurs="0" name="TimesOfWithdrawal" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSettingOfAuthorImport" nillable="true" type="tns:SetSettingOfAuthorImport" />
+  <xs:complexType name="SetStstemQuotaImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q9:SetSettingImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Quotas" nillable="true" type="tns:ArrayOfSetStstemQuotaImport.QuotaImport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetStstemQuotaImport" nillable="true" type="tns:SetStstemQuotaImport" />
+  <xs:complexType name="ArrayOfSetStstemQuotaImport.QuotaImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SetStstemQuotaImport.QuotaImport" nillable="true" type="tns:SetStstemQuotaImport.QuotaImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSetStstemQuotaImport.QuotaImport" nillable="true" type="tns:ArrayOfSetStstemQuotaImport.QuotaImport" />
+  <xs:complexType name="SetStstemQuotaImport.QuotaImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfSetStstemQuotaImport.QuotaDetailImport" />
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetStstemQuotaImport.QuotaImport" nillable="true" type="tns:SetStstemQuotaImport.QuotaImport" />
+  <xs:complexType name="ArrayOfSetStstemQuotaImport.QuotaDetailImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SetStstemQuotaImport.QuotaDetailImport" nillable="true" type="tns:SetStstemQuotaImport.QuotaDetailImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSetStstemQuotaImport.QuotaDetailImport" nillable="true" type="tns:ArrayOfSetStstemQuotaImport.QuotaDetailImport" />
+  <xs:complexType name="SetStstemQuotaImport.QuotaDetailImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+      <xs:element minOccurs="0" name="Sum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetStstemQuotaImport.QuotaDetailImport" nillable="true" type="tns:SetStstemQuotaImport.QuotaDetailImport" />
+</xs:schema>

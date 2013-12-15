@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:element name="GetLotteryTickets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q1:GetLotteryTicketsImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLotteryTicketsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetLotteryTicketsResult" nillable="true" type="q2:PageResultOfLotteryTicketExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLotteries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q3:GetLotteriesImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLotteriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetLotteriesResult" nillable="true" type="q4:PageResultOfLotteryExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVirtualBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q5:GetVirtualBonusImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVirtualBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetVirtualBonusResult" nillable="true" type="q6:PageResultOfVirtualBonusExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q7:GetBettingsImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetBettingsResult" nillable="true" type="q8:PageResultOfBettingExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChasings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q9:GetChasingsImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChasingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetChasingsResult" nillable="true" type="q10:PageResultOfChasingExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingOfLottery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q11:GetSettingOfLotteryImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingOfLotteryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetSettingOfLotteryResult" nillable="true" type="q12:NormalResultOfSettingOfLotteryExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSettingOfLottery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q13:SetSettingOfLotteryImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSettingOfLotteryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="SetSettingOfLotteryResult" nillable="true" type="q14:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditLotteryTicket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q15:EditLotteryTicketImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditLotteryTicketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditLotteryTicketResult" nillable="true" type="q16:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVirtualBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q17:CreateVirtualBonusImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVirtualBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="CreateVirtualBonusResult" nillable="true" type="q18:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditVirtualBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q19:EditVirtualBonusImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditVirtualBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditVirtualBonusResult" nillable="true" type="q20:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveVirtualBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q21:RemoveVirtualBonusImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveVirtualBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RemoveVirtualBonusResult" nillable="true" type="q22:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

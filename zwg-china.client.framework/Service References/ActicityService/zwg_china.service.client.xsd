@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.client" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+  <xs:complexType name="GetRedeemPlansImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRedeemPlansImport" nillable="true" type="tns:GetRedeemPlansImport" />
+  <xs:complexType name="GetPageListImportBaseOfActivity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBaseOfActivity" nillable="true" type="tns:GetPageListImportBaseOfActivity" />
+  <xs:complexType name="ArrayOfRedeemPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RedeemPlanExport" nillable="true" type="tns:RedeemPlanExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRedeemPlanExport" nillable="true" type="tns:ArrayOfRedeemPlanExport" />
+  <xs:complexType name="RedeemPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Integral" type="xs:int" />
+      <xs:element minOccurs="0" name="Money" type="xs:double" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q2:RegularStatus" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedeemPlanExport" nillable="true" type="tns:RedeemPlanExport" />
+  <xs:complexType name="GetRedeemRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRedeemRecordsImport" nillable="true" type="tns:GetRedeemRecordsImport" />
+  <xs:complexType name="ArrayOfRedeemRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RedeemRecordExport" nillable="true" type="tns:RedeemRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRedeemRecordExport" nillable="true" type="tns:ArrayOfRedeemRecordExport" />
+  <xs:complexType name="RedeemRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Plan" nillable="true" type="tns:RedeemSnapshotExport" />
+      <xs:element minOccurs="0" name="PriceOfIntegral" type="xs:int" />
+      <xs:element minOccurs="0" name="PriceOfMoney" type="xs:double" />
+      <xs:element minOccurs="0" name="Sum" type="xs:int" />
+      <xs:element minOccurs="0" name="SumOfIntegral" type="xs:int" />
+      <xs:element minOccurs="0" name="SumOfMoney" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedeemRecordExport" nillable="true" type="tns:RedeemRecordExport" />
+  <xs:complexType name="RedeemSnapshotExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Integral" type="xs:int" />
+      <xs:element minOccurs="0" name="Money" type="xs:double" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedeemSnapshotExport" nillable="true" type="tns:RedeemSnapshotExport" />
+  <xs:complexType name="CreateRedeemRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PlanId" type="xs:int" />
+          <xs:element minOccurs="0" name="Sum" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRedeemRecordsImport" nillable="true" type="tns:CreateRedeemRecordsImport" />
+  <xs:complexType name="ImportBaseOfActivity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q3:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfActivity" nillable="true" type="tns:ImportBaseOfActivity" />
+</xs:schema>

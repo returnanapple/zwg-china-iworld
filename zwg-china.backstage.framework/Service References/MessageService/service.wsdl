@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MessageService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IMessageService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMessageService_GetBulletins_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBulletins" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_GetBulletins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBulletinsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateBullein_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBullein" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateBullein_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBulleinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_EditBullein_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditBullein" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_EditBullein_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditBulleinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_RemoveBullein_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBullein" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_RemoveBullein_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveBulleinResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMessageService">
+    <wsdl:operation name="GetBulletins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/GetBulletins" message="tns:IMessageService_GetBulletins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/GetBulletinsResponse" message="tns:IMessageService_GetBulletins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBullein">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/CreateBullein" message="tns:IMessageService_CreateBullein_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/CreateBulleinResponse" message="tns:IMessageService_CreateBullein_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditBullein">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/EditBullein" message="tns:IMessageService_EditBullein_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/EditBulleinResponse" message="tns:IMessageService_EditBullein_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBullein">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessageService/RemoveBullein" message="tns:IMessageService_RemoveBullein_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessageService/RemoveBulleinResponse" message="tns:IMessageService_RemoveBullein_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IMessageService" type="tns:IMessageService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IMessageService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetBulletins">
+      <soap12:operation soapAction="http://tempuri.org/IMessageService/GetBulletins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBullein">
+      <soap12:operation soapAction="http://tempuri.org/IMessageService/CreateBullein" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditBullein">
+      <soap12:operation soapAction="http://tempuri.org/IMessageService/EditBullein" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBullein">
+      <soap12:operation soapAction="http://tempuri.org/IMessageService/RemoveBullein" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessageService">
+    <wsdl:port name="NetTcpBinding_IMessageService" binding="tns:NetTcpBinding_IMessageService">
+      <soap12:address location="net.tcp://192.168.1.130:4512/MessageService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/MessageService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

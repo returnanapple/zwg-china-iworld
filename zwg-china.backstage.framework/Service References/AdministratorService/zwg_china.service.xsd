@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+  <xs:complexType name="GetPageListImportBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBase" nillable="true" type="tns:GetPageListImportBase" />
+  <xs:complexType name="ImportBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportBase" nillable="true" type="tns:ImportBase" />
+  <xs:complexType name="PageResultOfBasicAdministratorExportnxyTI_PDx">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BasicAdministratorExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
+          <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q1:ArrayOfBasicAdministratorExport" />
+          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PageResultOfBasicAdministratorExportnxyTI_PDx" nillable="true" type="tns:PageResultOfBasicAdministratorExportnxyTI_PDx" />
+  <xs:complexType name="NormalResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NormalResult" nillable="true" type="tns:NormalResult" />
+  <xs:complexType name="PageResultOfAdministratorGroupExportnxyTI_PDx">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AdministratorGroupExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
+          <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q2:ArrayOfAdministratorGroupExport" />
+          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PageResultOfAdministratorGroupExportnxyTI_PDx" nillable="true" type="tns:PageResultOfAdministratorGroupExportnxyTI_PDx" />
+  <xs:complexType name="NormalResultOfArrayOfBasicAdministratorGroupExportnxyTI_PDx">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="NormalResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfBasicAdministratorGroupExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="Info" nillable="true" type="q3:ArrayOfBasicAdministratorGroupExport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalResultOfArrayOfBasicAdministratorGroupExportnxyTI_PDx" nillable="true" type="tns:NormalResultOfArrayOfBasicAdministratorGroupExportnxyTI_PDx" />
+  <xs:complexType name="PageResultOfAdministratorLandingRecordExportnxyTI_PDx">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AdministratorLandingRecordExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
+          <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q4:ArrayOfAdministratorLandingRecordExport" />
+          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PageResultOfAdministratorLandingRecordExportnxyTI_PDx" nillable="true" type="tns:PageResultOfAdministratorLandingRecordExportnxyTI_PDx" />
+  <xs:complexType name="PageResultOfOperateRecordExportnxyTI_PDx">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="OperateRecordExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
+          <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q5:ArrayOfOperateRecordExport" />
+          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PageResultOfOperateRecordExportnxyTI_PDx" nillable="true" type="tns:PageResultOfOperateRecordExportnxyTI_PDx" />
+  <xs:complexType name="NormalResultOfAdministratorExportnxyTI_PDx">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="NormalResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AdministratorExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="Info" nillable="true" type="q6:AdministratorExport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalResultOfAdministratorExportnxyTI_PDx" nillable="true" type="tns:NormalResultOfAdministratorExportnxyTI_PDx" />
+  <xs:complexType name="GetSettingImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSettingImport" nillable="true" type="tns:GetSettingImport" />
+  <xs:complexType name="NormalResultOfSettingOfBaseExportnxyTI_PDx">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="NormalResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SettingOfBaseExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="Info" nillable="true" type="q7:SettingOfBaseExport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalResultOfSettingOfBaseExportnxyTI_PDx" nillable="true" type="tns:NormalResultOfSettingOfBaseExportnxyTI_PDx" />
+  <xs:complexType name="SetSettingImportBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSettingImportBase" nillable="true" type="tns:SetSettingImportBase" />
+</xs:schema>

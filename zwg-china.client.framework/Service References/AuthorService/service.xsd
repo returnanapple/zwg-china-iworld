@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q1:GetUsersImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetUsersResult" nillable="true" type="q2:PageResultOfBasicAuthorExport1C_S7RQu4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q3:GetUserInfoImpoert" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetUserInfoResult" nillable="true" type="q4:NormalResultOfAuthorExport1C_S7RQu4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasicSelfInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q5:GetBasicSelfInfoImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBasicSelfInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetBasicSelfInfoResult" nillable="true" type="q6:NormalResultOfBasicSelfInfoExport1C_S7RQu4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q7:LoginImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="LoginResult" nillable="true" type="q8:NormalResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BindingUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q9:BindingUserInfoImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BindingUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="BindingUserInfoResult" nillable="true" type="q10:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q11:CreateUserImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="CreateUserResult" nillable="true" type="q12:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpgradePorn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q13:UpgradePornImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpgradePornResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="UpgradePornResult" nillable="true" type="q14:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditBank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q15:EditBankImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditBankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditBankResult" nillable="true" type="q16:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q17:EditPasswordImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditPasswordResult" nillable="true" type="q18:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditFundsCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q19:EditFundsCodeImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditFundsCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditFundsCodeResult" nillable="true" type="q20:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPasswordWithSafeCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q21:EditPasswordWithSafeCodeImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPasswordWithSafeCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditPasswordWithSafeCodeResult" nillable="true" type="q22:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditFundsCodeWithSafeCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q23:EditFundsCodeWithSafeCodeImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditFundsCodeWithSafeCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditFundsCodeWithSafeCodeResult" nillable="true" type="q24:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeepHeartbeat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KeepHeartbeatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="KeepHeartbeatResult" nillable="true" type="q25:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q26:GetSettingImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetSettingResult" nillable="true" type="q27:NormalResultOfSettingExport1C_S7RQu4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.client" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:complexType name="GetRersonalAndTeamReportsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MOD" type="tns:MonthOrDay" />
+          <xs:element minOccurs="0" name="TOS" type="tns:TeamOrSelf" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRersonalAndTeamReportsImport" nillable="true" type="tns:GetRersonalAndTeamReportsImport" />
+  <xs:complexType name="GetPageListImportBaseOfReport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBaseOfReport" nillable="true" type="tns:GetPageListImportBaseOfReport" />
+  <xs:simpleType name="MonthOrDay">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Day" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MonthOrDay" nillable="true" type="tns:MonthOrDay" />
+  <xs:simpleType name="TeamOrSelf">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Team" />
+      <xs:enumeration value="Self" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TeamOrSelf" nillable="true" type="tns:TeamOrSelf" />
+  <xs:complexType name="ArrayOfRersonalAndTeamReportExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RersonalAndTeamReportExport" nillable="true" type="tns:RersonalAndTeamReportExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRersonalAndTeamReportExport" nillable="true" type="tns:ArrayOfRersonalAndTeamReportExport" />
+  <xs:complexType name="RersonalAndTeamReportExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountOfBets" type="xs:double" />
+      <xs:element minOccurs="0" name="Bonus" type="xs:double" />
+      <xs:element minOccurs="0" name="Commission" type="xs:double" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dividend" type="xs:double" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Profit" type="xs:double" />
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+      <xs:element minOccurs="0" name="Recharge" type="xs:double" />
+      <xs:element minOccurs="0" name="Reward" type="xs:double" />
+      <xs:element minOccurs="0" name="TimesOfLogin" type="xs:int" />
+      <xs:element minOccurs="0" name="Withdrawal" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RersonalAndTeamReportExport" nillable="true" type="tns:RersonalAndTeamReportExport" />
+</xs:schema>

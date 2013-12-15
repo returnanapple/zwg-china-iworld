@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:element name="GetSystemBankAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q1:GetSystemBankAccountsImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemBankAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetSystemBankAccountsResult" nillable="true" type="q2:PageResultOfSystemBankAccountExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingOfAuthor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q3:GetSettingOfAuthorImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingOfAuthorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetSettingOfAuthorResult" nillable="true" type="q4:NormalResultOfSettingOfAuthorExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemQuotas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q5:GetSystemQuotaImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemQuotasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetSystemQuotasResult" nillable="true" type="q6:NormalResultOfArrayOfSystemQuotaExportnxyTI_PDx" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSystemBankAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q7:CreateSystemBankAccountImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSystemBankAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="CreateSystemBankAccountResult" nillable="true" type="q8:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditSystemBankAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q9:EditSystemBankAccountImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditSystemBankAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="EditSystemBankAccountResult" nillable="true" type="q10:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveSystemBankAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q11:RemoveSystemBankAccountImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveSystemBankAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RemoveSystemBankAccountResult" nillable="true" type="q12:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSettingOfAuthor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q13:SetSettingOfAuthorImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSettingOfAuthorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="SetSettingOfAuthorResult" nillable="true" type="q14:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetStstemQuota">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="import" nillable="true" type="q15:SetStstemQuotaImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetStstemQuotaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="SetStstemQuotaResult" nillable="true" type="q16:NormalResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

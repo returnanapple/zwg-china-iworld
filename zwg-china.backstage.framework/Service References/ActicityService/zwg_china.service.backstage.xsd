@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+  <xs:complexType name="GetRewardForRegisterPlansImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordForTitle" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRewardForRegisterPlansImport" nillable="true" type="tns:GetRewardForRegisterPlansImport" />
+  <xs:complexType name="GetPageListImportBaseOfActivity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBaseOfActivity" nillable="true" type="tns:GetPageListImportBaseOfActivity" />
+  <xs:complexType name="ArrayOfRewardForRegisterPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForRegisterPlanExport" nillable="true" type="tns:RewardForRegisterPlanExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForRegisterPlanExport" nillable="true" type="tns:ArrayOfRewardForRegisterPlanExport" />
+  <xs:complexType name="RewardForRegisterPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q2:PrizesOfActivityType" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q3:RegularStatus" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRegisterPlanExport" nillable="true" type="tns:RewardForRegisterPlanExport" />
+  <xs:complexType name="GetRewardForRegisterRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRewardForRegisterRecordsImport" nillable="true" type="tns:GetRewardForRegisterRecordsImport" />
+  <xs:complexType name="ArrayOfRewardForRegisterRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForRegisterRecordExport" nillable="true" type="tns:RewardForRegisterRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForRegisterRecordExport" nillable="true" type="tns:ArrayOfRewardForRegisterRecordExport" />
+  <xs:complexType name="RewardForRegisterRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Plan" nillable="true" type="tns:RewardForRegisterSnapshotExport" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q4:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRegisterRecordExport" nillable="true" type="tns:RewardForRegisterRecordExport" />
+  <xs:complexType name="RewardForRegisterSnapshotExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q5:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRegisterSnapshotExport" nillable="true" type="tns:RewardForRegisterSnapshotExport" />
+  <xs:complexType name="GetRewardForConsumptionPlansImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordForTitle" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRewardForConsumptionPlansImport" nillable="true" type="tns:GetRewardForConsumptionPlansImport" />
+  <xs:complexType name="ArrayOfRewardForConsumptionPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForConsumptionPlanExport" nillable="true" type="tns:RewardForConsumptionPlanExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForConsumptionPlanExport" nillable="true" type="tns:ArrayOfRewardForConsumptionPlanExport" />
+  <xs:complexType name="RewardForConsumptionPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForConsumptionPlanDetailExport" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q6:RewardPlanType" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q7:RegularStatus" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q8:TimescaleOfActivity" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForConsumptionPlanExport" nillable="true" type="tns:RewardForConsumptionPlanExport" />
+  <xs:complexType name="ArrayOfRewardForConsumptionPlanDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForConsumptionPlanDetailExport" nillable="true" type="tns:RewardForConsumptionPlanDetailExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForConsumptionPlanDetailExport" nillable="true" type="tns:ArrayOfRewardForConsumptionPlanDetailExport" />
+  <xs:complexType name="RewardForConsumptionPlanDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsConsumption" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerConsumption" type="xs:double" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q9:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="WaysToReward" type="q10:WaysToRewardOfActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForConsumptionPlanDetailExport" nillable="true" type="tns:RewardForConsumptionPlanDetailExport" />
+  <xs:complexType name="GetRewardForConsumptionRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRewardForConsumptionRecordsImport" nillable="true" type="tns:GetRewardForConsumptionRecordsImport" />
+  <xs:complexType name="ArrayOfRewardForConsumptionRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForConsumptionRecordExport" nillable="true" type="tns:RewardForConsumptionRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForConsumptionRecordExport" nillable="true" type="tns:ArrayOfRewardForConsumptionRecordExport" />
+  <xs:complexType name="RewardForConsumptionRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Plan" nillable="true" type="tns:RewardForConsumptionSnapshotExport" />
+      <xs:element minOccurs="0" name="PostIn" type="xs:double" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q11:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element minOccurs="0" name="ValidDetail" nillable="true" type="tns:RewardForConsumptionSnapshotDetailExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForConsumptionRecordExport" nillable="true" type="tns:RewardForConsumptionRecordExport" />
+  <xs:complexType name="RewardForConsumptionSnapshotExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForConsumptionSnapshotDetailExport" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q12:RewardPlanType" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q13:TimescaleOfActivity" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForConsumptionSnapshotExport" nillable="true" type="tns:RewardForConsumptionSnapshotExport" />
+  <xs:complexType name="ArrayOfRewardForConsumptionSnapshotDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForConsumptionSnapshotDetailExport" nillable="true" type="tns:RewardForConsumptionSnapshotDetailExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForConsumptionSnapshotDetailExport" nillable="true" type="tns:ArrayOfRewardForConsumptionSnapshotDetailExport" />
+  <xs:complexType name="RewardForConsumptionSnapshotDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsConsumption" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerConsumption" type="xs:double" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q14:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="WaysToReward" type="q15:WaysToRewardOfActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForConsumptionSnapshotDetailExport" nillable="true" type="tns:RewardForConsumptionSnapshotDetailExport" />
+  <xs:complexType name="GetRewardForRechargePlansImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordForTitle" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRewardForRechargePlansImport" nillable="true" type="tns:GetRewardForRechargePlansImport" />
+  <xs:complexType name="ArrayOfRewardForRechargePlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForRechargePlanExport" nillable="true" type="tns:RewardForRechargePlanExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForRechargePlanExport" nillable="true" type="tns:ArrayOfRewardForRechargePlanExport" />
+  <xs:complexType name="RewardForRechargePlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForRechargePlanDetailExport" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q16:RewardPlanType" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q17:RegularStatus" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q18:TimescaleOfActivity" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRechargePlanExport" nillable="true" type="tns:RewardForRechargePlanExport" />
+  <xs:complexType name="ArrayOfRewardForRechargePlanDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForRechargePlanDetailExport" nillable="true" type="tns:RewardForRechargePlanDetailExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForRechargePlanDetailExport" nillable="true" type="tns:ArrayOfRewardForRechargePlanDetailExport" />
+  <xs:complexType name="RewardForRechargePlanDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsRecharge" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerRecharge" type="xs:double" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q19:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="WaysToReward" type="q20:WaysToRewardOfActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRechargePlanDetailExport" nillable="true" type="tns:RewardForRechargePlanDetailExport" />
+  <xs:complexType name="GetRewardForRechargeRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRewardForRechargeRecordsImport" nillable="true" type="tns:GetRewardForRechargeRecordsImport" />
+  <xs:complexType name="ArrayOfRewardForRechargeRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForRechargeRecordExport" nillable="true" type="tns:RewardForRechargeRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForRechargeRecordExport" nillable="true" type="tns:ArrayOfRewardForRechargeRecordExport" />
+  <xs:complexType name="RewardForRechargeRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Plan" nillable="true" type="tns:RewardForRechargeSnapshotExport" />
+      <xs:element minOccurs="0" name="PostIn" type="xs:double" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q21:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element minOccurs="0" name="ValidDetail" nillable="true" type="tns:RewardForRechargeSnapshotDetailExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRechargeRecordExport" nillable="true" type="tns:RewardForRechargeRecordExport" />
+  <xs:complexType name="RewardForRechargeSnapshotExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForRechargeSnapshotDetailExport" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q22:RewardPlanType" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q23:TimescaleOfActivity" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRechargeSnapshotExport" nillable="true" type="tns:RewardForRechargeSnapshotExport" />
+  <xs:complexType name="ArrayOfRewardForRechargeSnapshotDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForRechargeSnapshotDetailExport" nillable="true" type="tns:RewardForRechargeSnapshotDetailExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForRechargeSnapshotDetailExport" nillable="true" type="tns:ArrayOfRewardForRechargeSnapshotDetailExport" />
+  <xs:complexType name="RewardForRechargeSnapshotDetailExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsRecharge" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LowerRecharge" type="xs:double" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q24:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="WaysToReward" type="q25:WaysToRewardOfActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRechargeSnapshotDetailExport" nillable="true" type="tns:RewardForRechargeSnapshotDetailExport" />
+  <xs:complexType name="GetRedeemPlansImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordForTitle" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRedeemPlansImport" nillable="true" type="tns:GetRedeemPlansImport" />
+  <xs:complexType name="ArrayOfRedeemPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RedeemPlanExport" nillable="true" type="tns:RedeemPlanExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRedeemPlanExport" nillable="true" type="tns:ArrayOfRedeemPlanExport" />
+  <xs:complexType name="RedeemPlanExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Integral" type="xs:int" />
+      <xs:element minOccurs="0" name="Money" type="xs:double" />
+      <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q26:RegularStatus" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedeemPlanExport" nillable="true" type="tns:RedeemPlanExport" />
+  <xs:complexType name="GetRedeemRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRedeemRecordsImport" nillable="true" type="tns:GetRedeemRecordsImport" />
+  <xs:complexType name="ArrayOfRedeemRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RedeemRecordExport" nillable="true" type="tns:RedeemRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRedeemRecordExport" nillable="true" type="tns:ArrayOfRedeemRecordExport" />
+  <xs:complexType name="RedeemRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Plan" nillable="true" type="tns:RedeemSnapshotExport" />
+      <xs:element minOccurs="0" name="PriceOfIntegral" type="xs:int" />
+      <xs:element minOccurs="0" name="PriceOfMoney" type="xs:double" />
+      <xs:element minOccurs="0" name="Sum" type="xs:int" />
+      <xs:element minOccurs="0" name="SumOfIntegral" type="xs:int" />
+      <xs:element minOccurs="0" name="SumOfMoney" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedeemRecordExport" nillable="true" type="tns:RedeemRecordExport" />
+  <xs:complexType name="RedeemSnapshotExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Integral" type="xs:int" />
+      <xs:element minOccurs="0" name="Money" type="xs:double" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RedeemSnapshotExport" nillable="true" type="tns:RedeemSnapshotExport" />
+  <xs:complexType name="CreateRewardForRegisterPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q27:PrizesOfActivityType" />
+          <xs:element minOccurs="0" name="Sum" type="xs:double" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRewardForRegisterPlanImport" nillable="true" type="tns:CreateRewardForRegisterPlanImport" />
+  <xs:complexType name="ImportBaseOfActivity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q28:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfActivity" nillable="true" type="tns:ImportBaseOfActivity" />
+  <xs:complexType name="EditRewardForRegisterPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q29:PrizesOfActivityType" />
+          <xs:element minOccurs="0" name="Sum" type="xs:double" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditRewardForRegisterPlanImport" nillable="true" type="tns:EditRewardForRegisterPlanImport" />
+  <xs:complexType name="RemoveRewardForRegisterPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveRewardForRegisterPlanImport" nillable="true" type="tns:RemoveRewardForRegisterPlanImport" />
+  <xs:complexType name="CreateRewardForConsumptionPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForConsumptionPlanDetailImport" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q30:RewardPlanType" />
+          <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q31:TimescaleOfActivity" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRewardForConsumptionPlanImport" nillable="true" type="tns:CreateRewardForConsumptionPlanImport" />
+  <xs:complexType name="ArrayOfRewardForConsumptionPlanDetailImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForConsumptionPlanDetailImport" nillable="true" type="tns:RewardForConsumptionPlanDetailImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForConsumptionPlanDetailImport" nillable="true" type="tns:ArrayOfRewardForConsumptionPlanDetailImport" />
+  <xs:complexType name="RewardForConsumptionPlanDetailImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsConsumption" type="xs:double" />
+      <xs:element minOccurs="0" name="LowerConsumption" type="xs:double" />
+      <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q32:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="WaysToReward" type="q33:WaysToRewardOfActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForConsumptionPlanDetailImport" nillable="true" type="tns:RewardForConsumptionPlanDetailImport" />
+  <xs:complexType name="EditRewardForConsumptionPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q34:RewardPlanType" />
+          <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q35:TimescaleOfActivity" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditRewardForConsumptionPlanImport" nillable="true" type="tns:EditRewardForConsumptionPlanImport" />
+  <xs:complexType name="RemoveRewardForConsumptionPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveRewardForConsumptionPlanImport" nillable="true" type="tns:RemoveRewardForConsumptionPlanImport" />
+  <xs:complexType name="CreateRewardForRechargePlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForRechargePlanDetailImport" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q36:RewardPlanType" />
+          <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q37:TimescaleOfActivity" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRewardForRechargePlanImport" nillable="true" type="tns:CreateRewardForRechargePlanImport" />
+  <xs:complexType name="ArrayOfRewardForRechargePlanDetailImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RewardForRechargePlanDetailImport" nillable="true" type="tns:RewardForRechargePlanDetailImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRewardForRechargePlanDetailImport" nillable="true" type="tns:ArrayOfRewardForRechargePlanDetailImport" />
+  <xs:complexType name="RewardForRechargePlanDetailImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CapsRecharge" type="xs:double" />
+      <xs:element minOccurs="0" name="LowerRecharge" type="xs:double" />
+      <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PrizeType" type="q38:PrizesOfActivityType" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="WaysToReward" type="q39:WaysToRewardOfActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RewardForRechargePlanDetailImport" nillable="true" type="tns:RewardForRechargePlanDetailImport" />
+  <xs:complexType name="EditRewardForRechargePlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="PlanType" type="q40:RewardPlanType" />
+          <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Timescale" type="q41:TimescaleOfActivity" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditRewardForRechargePlanImport" nillable="true" type="tns:EditRewardForRechargePlanImport" />
+  <xs:complexType name="RemoveRewardForRechargePlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveRewardForRechargePlanImport" nillable="true" type="tns:RemoveRewardForRechargePlanImport" />
+  <xs:complexType name="CreateRedeemPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Integral" type="xs:int" />
+          <xs:element minOccurs="0" name="Money" type="xs:double" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRedeemPlanImport" nillable="true" type="tns:CreateRedeemPlanImport" />
+  <xs:complexType name="EditRedeemPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Integral" type="xs:int" />
+          <xs:element minOccurs="0" name="Money" type="xs:double" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditRedeemPlanImport" nillable="true" type="tns:EditRedeemPlanImport" />
+  <xs:complexType name="RemoveRedeemPlanImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfActivity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveRedeemPlanImport" nillable="true" type="tns:RemoveRedeemPlanImport" />
+</xs:schema>

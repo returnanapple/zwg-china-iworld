@@ -1,0 +1,52 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="NetTcpBinding_IAuthorService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IAuthorPushService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IActicityService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_ILotteryService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IMessageService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IReportService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="net.tcp://192.168.1.130:4511/AuthorService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IAuthorService"
+                contract="AuthorService.IAuthorService" name="NetTcpBinding_IAuthorService" />
+            <endpoint address="net.tcp://192.168.1.130:4511/AuthorPushService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IAuthorPushService"
+                contract="AuthorPushService.IAuthorPushService" name="NetTcpBinding_IAuthorPushService" />
+            <endpoint address="net.tcp://192.168.1.130:4511/ActicityService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IActicityService"
+                contract="ActicityService.IActicityService" name="NetTcpBinding_IActicityService" />
+            <endpoint address="net.tcp://192.168.1.130:4511/LotteryService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_ILotteryService"
+                contract="LotteryService.ILotteryService" name="NetTcpBinding_ILotteryService" />
+            <endpoint address="net.tcp://192.168.1.130:4511/MessageService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IMessageService"
+                contract="MessageService.IMessageService" name="NetTcpBinding_IMessageService" />
+            <endpoint address="net.tcp://192.168.1.130:4511/ReportService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IReportService"
+                contract="ReportService.IReportService" name="NetTcpBinding_IReportService" />
+        </client>
+    </system.serviceModel>
+</configuration>

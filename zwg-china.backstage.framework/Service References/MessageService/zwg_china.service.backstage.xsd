@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+  <xs:complexType name="GetBulletinsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordOfTitle" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetBulletinsImport" nillable="true" type="tns:GetBulletinsImport" />
+  <xs:complexType name="GetPageListImportBaseOfMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBaseOfMessage" nillable="true" type="tns:GetPageListImportBaseOfMessage" />
+  <xs:complexType name="ArrayOfBulletinExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BulletinExport" nillable="true" type="tns:BulletinExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBulletinExport" nillable="true" type="tns:ArrayOfBulletinExport" />
+  <xs:complexType name="BulletinExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q2:RegularStatus" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BulletinExport" nillable="true" type="tns:BulletinExport" />
+  <xs:complexType name="CreateBulleinImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateBulleinImport" nillable="true" type="tns:CreateBulleinImport" />
+  <xs:complexType name="ImportBaseOfMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q3:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfMessage" nillable="true" type="tns:ImportBaseOfMessage" />
+  <xs:complexType name="EditBulleinImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditBulleinImport" nillable="true" type="tns:EditBulleinImport" />
+  <xs:complexType name="RemoveBulleinImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfMessage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveBulleinImport" nillable="true" type="tns:RemoveBulleinImport" />
+</xs:schema>

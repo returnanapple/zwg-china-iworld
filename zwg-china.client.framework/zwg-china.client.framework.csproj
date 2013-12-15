@@ -47,6 +47,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Extensions, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.NetTcp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core">
@@ -65,6 +69,36 @@
     <Compile Include="Page.cs" />
     <Compile Include="Pop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ActicityService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AuthorPushService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AuthorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LotteryService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReportService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="UniversalCommand.cs" />
     <Compile Include="ViewAttribute.cs" />
     <Compile Include="ViewModelBase.cs" />
@@ -72,7 +106,199 @@
     <Compile Include="WindowAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ReportService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ReportService\configuration.svcinfo" />
+    <None Include="Service References\ReportService\configuration91.svcinfo" />
+    <None Include="Service References\MessageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MessageService\configuration.svcinfo" />
+    <None Include="Service References\MessageService\configuration91.svcinfo" />
+    <None Include="Service References\LotteryService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LotteryService\configuration.svcinfo" />
+    <None Include="Service References\LotteryService\configuration91.svcinfo" />
+    <None Include="Service References\ActicityService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ActicityService\configuration.svcinfo" />
+    <None Include="Service References\ActicityService\configuration91.svcinfo" />
+    <None Include="Service References\ActicityService\service.wsdl" />
+    <None Include="Service References\ActicityService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActicityService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActicityService\zwg_china.client.framework.ActicityService.NormalResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActicityService\zwg_china.client.framework.ActicityService.PageResultOfRedeemPlanExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActicityService\zwg_china.client.framework.ActicityService.PageResultOfRedeemRecordExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ActicityService\zwg_china.model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActicityService\zwg_china.service.client.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ActicityService\zwg_china.service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorPushService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AuthorPushService\configuration.svcinfo" />
+    <None Include="Service References\AuthorPushService\configuration91.svcinfo" />
+    <None Include="Service References\AuthorPushService\service.wsdl" />
+    <None Include="Service References\AuthorPushService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorPushService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorPushService\zwg_china.client.framework.AuthorPushService.NormalResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuthorPushService\zwg_china.service.client.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorPushService\zwg_china.service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorService\service.wsdl" />
+    <None Include="Service References\AuthorService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.client.framework.AuthorService.NormalResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.client.framework.AuthorService.NormalResultOfAuthorExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.client.framework.AuthorService.NormalResultOfBasicSelfInfoExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.client.framework.AuthorService.NormalResultOfSettingExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.client.framework.AuthorService.NormalResultOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.client.framework.AuthorService.PageResultOfBasicAuthorExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.service.client.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthorService\zwg_china.service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ServiceReferences.ClientConfig" />
+    <None Include="Service References\LotteryService\service.wsdl" />
+    <None Include="Service References\LotteryService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LotteryService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.client.framework.LotteryService.NormalResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryTicketExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.client.framework.LotteryService.PageResultOfBettingExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.client.framework.LotteryService.PageResultOfChasingExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.service.client.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LotteryService\zwg_china.service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageService\service.wsdl" />
+    <None Include="Service References\MessageService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageService\zwg_china.client.framework.MessageService.NormalResultOfArrayOfBulletinExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MessageService\zwg_china.service.client.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageService\zwg_china.service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportService\service.wsdl" />
+    <None Include="Service References\ReportService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportService\zwg_china.client.framework.ReportService.PageResultOfRersonalAndTeamReportExport1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReportService\zwg_china.service.client.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportService\zwg_china.service.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="_client.framework.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ActicityService\" />
+    <WCFMetadataStorage Include="Service References\AuthorPushService\" />
+    <WCFMetadataStorage Include="Service References\AuthorService\" />
+    <WCFMetadataStorage Include="Service References\LotteryService\" />
+    <WCFMetadataStorage Include="Service References\MessageService\" />
+    <WCFMetadataStorage Include="Service References\ReportService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>

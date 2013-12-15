@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+  <xs:complexType name="GetLotteryTicketsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordOfName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetLotteryTicketsImport" nillable="true" type="tns:GetLotteryTicketsImport" />
+  <xs:complexType name="GetPageListImportBaseOfLottery">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBaseOfLottery" nillable="true" type="tns:GetPageListImportBaseOfLottery" />
+  <xs:complexType name="ArrayOfLotteryTicketExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LotteryTicketExport" nillable="true" type="tns:LotteryTicketExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLotteryTicketExport" nillable="true" type="tns:ArrayOfLotteryTicketExport" />
+  <xs:complexType name="LotteryTicketExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Installments" type="xs:int" />
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotteryValues" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextIssue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Tags" nillable="true" type="tns:ArrayOfPlayTagExport" />
+      <xs:element minOccurs="0" name="Times" nillable="true" type="tns:ArrayOfLotteryTimeExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LotteryTicketExport" nillable="true" type="tns:LotteryTicketExport" />
+  <xs:complexType name="ArrayOfPlayTagExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlayTagExport" nillable="true" type="tns:PlayTagExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayTagExport" nillable="true" type="tns:ArrayOfPlayTagExport" />
+  <xs:complexType name="PlayTagExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HowToPlays" nillable="true" type="tns:ArrayOfHowToPlayExport" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayTagExport" nillable="true" type="tns:PlayTagExport" />
+  <xs:complexType name="ArrayOfHowToPlayExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HowToPlayExport" nillable="true" type="tns:HowToPlayExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHowToPlayExport" nillable="true" type="tns:ArrayOfHowToPlayExport" />
+  <xs:complexType name="HowToPlayExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Odds" type="xs:double" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HowToPlayExport" nillable="true" type="tns:HowToPlayExport" />
+  <xs:complexType name="ArrayOfLotteryTimeExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LotteryTimeExport" nillable="true" type="tns:LotteryTimeExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLotteryTimeExport" nillable="true" type="tns:ArrayOfLotteryTimeExport" />
+  <xs:complexType name="LotteryTimeExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Issue" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LotteryTimeExport" nillable="true" type="tns:LotteryTimeExport" />
+  <xs:complexType name="GetLotteriesImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForTicketName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TicketId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetLotteriesImport" nillable="true" type="tns:GetLotteriesImport" />
+  <xs:complexType name="ArrayOfLotteryExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LotteryExport" nillable="true" type="tns:LotteryExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLotteryExport" nillable="true" type="tns:ArrayOfLotteryExport" />
+  <xs:complexType name="LotteryExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Sources" type="q2:LotterySources" />
+      <xs:element minOccurs="0" name="Ticket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TicketId" type="xs:int" />
+      <xs:element minOccurs="0" name="values" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LotteryExport" nillable="true" type="tns:LotteryExport" />
+  <xs:complexType name="GetVirtualBonusImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordForTicketName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TicketId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetVirtualBonusImport" nillable="true" type="tns:GetVirtualBonusImport" />
+  <xs:complexType name="ArrayOfVirtualBonusExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VirtualBonusExport" nillable="true" type="tns:VirtualBonusExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVirtualBonusExport" nillable="true" type="tns:ArrayOfVirtualBonusExport" />
+  <xs:complexType name="VirtualBonusExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element minOccurs="0" name="Ticket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TicketId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VirtualBonusExport" nillable="true" type="tns:VirtualBonusExport" />
+  <xs:complexType name="GetBettingsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:int" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" nillable="true" type="q3:BettingStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetBettingsImport" nillable="true" type="tns:GetBettingsImport" />
+  <xs:complexType name="ArrayOfBettingExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BettingExport" nillable="true" type="tns:BettingExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBettingExport" nillable="true" type="tns:ArrayOfBettingExport" />
+  <xs:complexType name="BettingExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bonus" type="xs:double" />
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HowToPlay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Multiple" type="xs:double" />
+      <xs:element minOccurs="0" name="Notes" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Pay" type="xs:double" />
+      <xs:element minOccurs="0" name="Points" type="xs:double" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q4:BettingStatus" />
+      <xs:element minOccurs="0" name="values" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BettingExport" nillable="true" type="tns:BettingExport" />
+  <xs:complexType name="GetChasingsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetChasingsImport" nillable="true" type="tns:GetChasingsImport" />
+  <xs:complexType name="ArrayOfChasingExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChasingExport" nillable="true" type="tns:ChasingExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChasingExport" nillable="true" type="tns:ArrayOfChasingExport" />
+  <xs:complexType name="ChasingExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bettings" nillable="true" type="tns:ArrayOfBettingWithChasingExport" />
+      <xs:element minOccurs="0" name="Bonus" type="xs:double" />
+      <xs:element minOccurs="0" name="Continuance" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HowToPlay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Notes" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Pay" type="xs:double" />
+      <xs:element minOccurs="0" name="Points" type="xs:double" />
+      <xs:element minOccurs="0" name="StartIssue" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q5:ChasingStatus" />
+      <xs:element minOccurs="0" name="Values" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChasingExport" nillable="true" type="tns:ChasingExport" />
+  <xs:complexType name="ArrayOfBettingWithChasingExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BettingWithChasingExport" nillable="true" type="tns:BettingWithChasingExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBettingWithChasingExport" nillable="true" type="tns:ArrayOfBettingWithChasingExport" />
+  <xs:complexType name="BettingWithChasingExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bonus" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Multiple" type="xs:double" />
+      <xs:element minOccurs="0" name="Pay" type="xs:double" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q6:BettingStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BettingWithChasingExport" nillable="true" type="tns:BettingWithChasingExport" />
+  <xs:complexType name="GetSettingOfLotteryImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q7:GetSettingImport">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSettingOfLotteryImport" nillable="true" type="tns:GetSettingOfLotteryImport" />
+  <xs:complexType name="SettingOfLotteryExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClosureSingleTime" type="xs:int" />
+      <xs:element minOccurs="0" name="ConversionRates" type="xs:double" />
+      <xs:element minOccurs="0" name="LineForProhibitBetting" type="xs:int" />
+      <xs:element minOccurs="0" name="MaximumBetsNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="MaximumPayout" type="xs:int" />
+      <xs:element minOccurs="0" name="PayoutBase" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitPrice" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SettingOfLotteryExport" nillable="true" type="tns:SettingOfLotteryExport" />
+  <xs:complexType name="SetSettingOfLotteryImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q8:SetSettingImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClosureSingleTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ConversionRates" type="xs:double" />
+          <xs:element minOccurs="0" name="LineForProhibitBetting" type="xs:int" />
+          <xs:element minOccurs="0" name="MaximumBetsNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="MaximumPayout" type="xs:int" />
+          <xs:element minOccurs="0" name="PayoutBase" type="xs:int" />
+          <xs:element minOccurs="0" name="UnitPrice" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSettingOfLotteryImport" nillable="true" type="tns:SetSettingOfLotteryImport" />
+  <xs:complexType name="EditLotteryTicketImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Order" type="xs:int" />
+          <xs:element minOccurs="0" name="Tags" nillable="true" type="tns:ArrayOfEditPlayTagImport" />
+          <xs:element minOccurs="0" name="Times" nillable="true" type="tns:ArrayOfEditLotteryTimeImport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditLotteryTicketImport" nillable="true" type="tns:EditLotteryTicketImport" />
+  <xs:complexType name="ImportBaseOfLottery">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q9:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfLottery" nillable="true" type="tns:ImportBaseOfLottery" />
+  <xs:complexType name="ArrayOfEditPlayTagImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EditPlayTagImport" nillable="true" type="tns:EditPlayTagImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEditPlayTagImport" nillable="true" type="tns:ArrayOfEditPlayTagImport" />
+  <xs:complexType name="EditPlayTagImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HowToPlays" nillable="true" type="tns:ArrayOfEditHowToPlayImport" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EditPlayTagImport" nillable="true" type="tns:EditPlayTagImport" />
+  <xs:complexType name="ArrayOfEditHowToPlayImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EditHowToPlayImport" nillable="true" type="tns:EditHowToPlayImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEditHowToPlayImport" nillable="true" type="tns:ArrayOfEditHowToPlayImport" />
+  <xs:complexType name="EditHowToPlayImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EditHowToPlayImport" nillable="true" type="tns:EditHowToPlayImport" />
+  <xs:complexType name="ArrayOfEditLotteryTimeImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EditLotteryTimeImport" nillable="true" type="tns:EditLotteryTimeImport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEditLotteryTimeImport" nillable="true" type="tns:ArrayOfEditLotteryTimeImport" />
+  <xs:complexType name="EditLotteryTimeImport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Issue" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EditLotteryTimeImport" nillable="true" type="tns:EditLotteryTimeImport" />
+  <xs:complexType name="CreateVirtualBonusImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Sum" type="xs:double" />
+          <xs:element minOccurs="0" name="TicketId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateVirtualBonusImport" nillable="true" type="tns:CreateVirtualBonusImport" />
+  <xs:complexType name="EditVirtualBonusImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Sum" type="xs:double" />
+          <xs:element minOccurs="0" name="TicketId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditVirtualBonusImport" nillable="true" type="tns:EditVirtualBonusImport" />
+  <xs:complexType name="RemoveVirtualBonusImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveVirtualBonusImport" nillable="true" type="tns:RemoveVirtualBonusImport" />
+</xs:schema>

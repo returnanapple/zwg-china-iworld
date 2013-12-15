@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client" />
+  <xs:complexType name="GetPageListImportBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBase" nillable="true" type="tns:GetPageListImportBase" />
+  <xs:complexType name="ImportBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportBase" nillable="true" type="tns:ImportBase" />
+  <xs:complexType name="PageResultOfBasicAuthorExport1C_S7RQu4">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PageResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BasicAuthorExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
+          <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="List" nillable="true" type="q1:ArrayOfBasicAuthorExport" />
+          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PageResultOfBasicAuthorExport1C_S7RQu4" nillable="true" type="tns:PageResultOfBasicAuthorExport1C_S7RQu4" />
+  <xs:complexType name="NormalResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NormalResult" nillable="true" type="tns:NormalResult" />
+  <xs:complexType name="NormalResultOfAuthorExport1C_S7RQu4">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="NormalResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AuthorExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="Info" nillable="true" type="q2:AuthorExport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalResultOfAuthorExport1C_S7RQu4" nillable="true" type="tns:NormalResultOfAuthorExport1C_S7RQu4" />
+  <xs:complexType name="NormalResultOfBasicSelfInfoExport1C_S7RQu4">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="NormalResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="BasicSelfInfoExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="Info" nillable="true" type="q3:BasicSelfInfoExport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalResultOfBasicSelfInfoExport1C_S7RQu4" nillable="true" type="tns:NormalResultOfBasicSelfInfoExport1C_S7RQu4" />
+  <xs:complexType name="NormalResultOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="NormalResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalResultOfstring" nillable="true" type="tns:NormalResultOfstring" />
+  <xs:complexType name="NormalResultOfSettingExport1C_S7RQu4">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="NormalResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SettingExport" Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NormalResult">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="Info" nillable="true" type="q4:SettingExport" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalResultOfSettingExport1C_S7RQu4" nillable="true" type="tns:NormalResultOfSettingExport1C_S7RQu4" />
+</xs:schema>

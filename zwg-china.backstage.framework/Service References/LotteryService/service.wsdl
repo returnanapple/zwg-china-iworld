@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LotteryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ILotteryService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILotteryService_GetLotteryTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLotteryTickets" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetLotteryTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLotteryTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetLotteries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLotteries" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetLotteries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLotteriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetVirtualBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualBonus" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetVirtualBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetBettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBettings" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetBettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetChasings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChasings" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetChasings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChasingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetSettingOfLottery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingOfLottery" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetSettingOfLottery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingOfLotteryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_SetSettingOfLottery_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingOfLottery" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_SetSettingOfLottery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingOfLotteryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_EditLotteryTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditLotteryTicket" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_EditLotteryTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditLotteryTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_CreateVirtualBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVirtualBonus" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_CreateVirtualBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVirtualBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_EditVirtualBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditVirtualBonus" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_EditVirtualBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditVirtualBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_RemoveVirtualBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveVirtualBonus" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_RemoveVirtualBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveVirtualBonusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILotteryService">
+    <wsdl:operation name="GetLotteryTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetLotteryTickets" message="tns:ILotteryService_GetLotteryTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetLotteryTicketsResponse" message="tns:ILotteryService_GetLotteryTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLotteries">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetLotteries" message="tns:ILotteryService_GetLotteries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetLotteriesResponse" message="tns:ILotteryService_GetLotteries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVirtualBonus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetVirtualBonus" message="tns:ILotteryService_GetVirtualBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetVirtualBonusResponse" message="tns:ILotteryService_GetVirtualBonus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetBettings" message="tns:ILotteryService_GetBettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetBettingsResponse" message="tns:ILotteryService_GetBettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChasings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetChasings" message="tns:ILotteryService_GetChasings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetChasingsResponse" message="tns:ILotteryService_GetChasings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingOfLottery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetSettingOfLottery" message="tns:ILotteryService_GetSettingOfLottery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetSettingOfLotteryResponse" message="tns:ILotteryService_GetSettingOfLottery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingOfLottery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/SetSettingOfLottery" message="tns:ILotteryService_SetSettingOfLottery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/SetSettingOfLotteryResponse" message="tns:ILotteryService_SetSettingOfLottery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditLotteryTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/EditLotteryTicket" message="tns:ILotteryService_EditLotteryTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/EditLotteryTicketResponse" message="tns:ILotteryService_EditLotteryTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVirtualBonus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/CreateVirtualBonus" message="tns:ILotteryService_CreateVirtualBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/CreateVirtualBonusResponse" message="tns:ILotteryService_CreateVirtualBonus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditVirtualBonus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/EditVirtualBonus" message="tns:ILotteryService_EditVirtualBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/EditVirtualBonusResponse" message="tns:ILotteryService_EditVirtualBonus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveVirtualBonus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/RemoveVirtualBonus" message="tns:ILotteryService_RemoveVirtualBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/RemoveVirtualBonusResponse" message="tns:ILotteryService_RemoveVirtualBonus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ILotteryService" type="tns:ILotteryService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ILotteryService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetLotteryTickets">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetLotteryTickets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLotteries">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetLotteries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVirtualBonus">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetVirtualBonus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBettings">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetBettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChasings">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetChasings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingOfLottery">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetSettingOfLottery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingOfLottery">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/SetSettingOfLottery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditLotteryTicket">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/EditLotteryTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVirtualBonus">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/CreateVirtualBonus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditVirtualBonus">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/EditVirtualBonus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveVirtualBonus">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/RemoveVirtualBonus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LotteryService">
+    <wsdl:port name="NetTcpBinding_ILotteryService" binding="tns:NetTcpBinding_ILotteryService">
+      <soap12:address location="net.tcp://192.168.1.130:4512/LotteryService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/LotteryService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

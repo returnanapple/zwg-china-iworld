@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SettingOfAuthorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_ISettingOfAuthorService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISettingOfAuthorService_GetSystemBankAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemBankAccounts" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_GetSystemBankAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemBankAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_GetSettingOfAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingOfAuthor" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_GetSettingOfAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingOfAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_GetSystemQuotas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemQuotas" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_GetSystemQuotas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemQuotasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_CreateSystemBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSystemBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_CreateSystemBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSystemBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_EditSystemBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditSystemBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_EditSystemBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditSystemBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_RemoveSystemBankAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSystemBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_RemoveSystemBankAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSystemBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_SetSettingOfAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingOfAuthor" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_SetSettingOfAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingOfAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_SetStstemQuota_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStstemQuota" />
+  </wsdl:message>
+  <wsdl:message name="ISettingOfAuthorService_SetStstemQuota_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStstemQuotaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISettingOfAuthorService">
+    <wsdl:operation name="GetSystemBankAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/GetSystemBankAccounts" message="tns:ISettingOfAuthorService_GetSystemBankAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/GetSystemBankAccountsResponse" message="tns:ISettingOfAuthorService_GetSystemBankAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingOfAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/GetSettingOfAuthor" message="tns:ISettingOfAuthorService_GetSettingOfAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/GetSettingOfAuthorResponse" message="tns:ISettingOfAuthorService_GetSettingOfAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemQuotas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/GetSystemQuotas" message="tns:ISettingOfAuthorService_GetSystemQuotas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/GetSystemQuotasResponse" message="tns:ISettingOfAuthorService_GetSystemQuotas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSystemBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/CreateSystemBankAccount" message="tns:ISettingOfAuthorService_CreateSystemBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/CreateSystemBankAccountResponse" message="tns:ISettingOfAuthorService_CreateSystemBankAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditSystemBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/EditSystemBankAccount" message="tns:ISettingOfAuthorService_EditSystemBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/EditSystemBankAccountResponse" message="tns:ISettingOfAuthorService_EditSystemBankAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSystemBankAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/RemoveSystemBankAccount" message="tns:ISettingOfAuthorService_RemoveSystemBankAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/RemoveSystemBankAccountResponse" message="tns:ISettingOfAuthorService_RemoveSystemBankAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingOfAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/SetSettingOfAuthor" message="tns:ISettingOfAuthorService_SetSettingOfAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/SetSettingOfAuthorResponse" message="tns:ISettingOfAuthorService_SetSettingOfAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStstemQuota">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISettingOfAuthorService/SetStstemQuota" message="tns:ISettingOfAuthorService_SetStstemQuota_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISettingOfAuthorService/SetStstemQuotaResponse" message="tns:ISettingOfAuthorService_SetStstemQuota_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_ISettingOfAuthorService" type="tns:ISettingOfAuthorService">
+    <wsp:PolicyReference URI="#NetTcpBinding_ISettingOfAuthorService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetSystemBankAccounts">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/GetSystemBankAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingOfAuthor">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/GetSettingOfAuthor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemQuotas">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/GetSystemQuotas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSystemBankAccount">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/CreateSystemBankAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditSystemBankAccount">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/EditSystemBankAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSystemBankAccount">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/RemoveSystemBankAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingOfAuthor">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/SetSettingOfAuthor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStstemQuota">
+      <soap12:operation soapAction="http://tempuri.org/ISettingOfAuthorService/SetStstemQuota" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SettingOfAuthorService">
+    <wsdl:port name="NetTcpBinding_ISettingOfAuthorService" binding="tns:NetTcpBinding_ISettingOfAuthorService">
+      <soap12:address location="net.tcp://192.168.1.130:4512/SettingOfAuthorService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/SettingOfAuthorService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

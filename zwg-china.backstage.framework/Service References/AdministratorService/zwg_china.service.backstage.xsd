@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:complexType name="GetAdministratorsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAdministratorsImport" nillable="true" type="tns:GetAdministratorsImport" />
+  <xs:complexType name="GetPageListImportBaseOfAdministrator">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBaseOfAdministrator" nillable="true" type="tns:GetPageListImportBaseOfAdministrator" />
+  <xs:complexType name="ArrayOfBasicAdministratorExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BasicAdministratorExport" nillable="true" type="tns:BasicAdministratorExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBasicAdministratorExport" nillable="true" type="tns:ArrayOfBasicAdministratorExport" />
+  <xs:complexType name="BasicAdministratorExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoginAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoginIp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicAdministratorExport" nillable="true" type="tns:BasicAdministratorExport" />
+  <xs:complexType name="GetAdministratorGroupsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAdministratorGroupsImport" nillable="true" type="tns:GetAdministratorGroupsImport" />
+  <xs:complexType name="ArrayOfAdministratorGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdministratorGroupExport" nillable="true" type="tns:AdministratorGroupExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdministratorGroupExport" nillable="true" type="tns:ArrayOfAdministratorGroupExport" />
+  <xs:complexType name="AdministratorGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CanEditActivities" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanEditAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanEditDataReports" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanEditSettings" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanEditTickets" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanEditUsers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanViewActivities" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanViewAdministrator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanViewDataReports" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanViewSettings" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanViewTickets" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanViewUsers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsCustomerService" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdministratorGroupExport" nillable="true" type="tns:AdministratorGroupExport" />
+  <xs:complexType name="GetBasicAdministratorGroupsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetBasicAdministratorGroupsImport" nillable="true" type="tns:GetBasicAdministratorGroupsImport" />
+  <xs:complexType name="ImportBaseOfAdministrator">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q2:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfAdministrator" nillable="true" type="tns:ImportBaseOfAdministrator" />
+  <xs:complexType name="ArrayOfBasicAdministratorGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BasicAdministratorGroupExport" nillable="true" type="tns:BasicAdministratorGroupExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBasicAdministratorGroupExport" nillable="true" type="tns:ArrayOfBasicAdministratorGroupExport" />
+  <xs:complexType name="BasicAdministratorGroupExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasicAdministratorGroupExport" nillable="true" type="tns:BasicAdministratorGroupExport" />
+  <xs:complexType name="GetAdministratorLandingRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetAdministratorLandingRecordsImport" nillable="true" type="tns:GetAdministratorLandingRecordsImport" />
+  <xs:complexType name="ArrayOfAdministratorLandingRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdministratorLandingRecordExport" nillable="true" type="tns:AdministratorLandingRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAdministratorLandingRecordExport" nillable="true" type="tns:ArrayOfAdministratorLandingRecordExport" />
+  <xs:complexType name="AdministratorLandingRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdministratorLandingRecordExport" nillable="true" type="tns:AdministratorLandingRecordExport" />
+  <xs:complexType name="GetOperatedRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetOperatedRecordsImport" nillable="true" type="tns:GetOperatedRecordsImport" />
+  <xs:complexType name="ArrayOfOperateRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperateRecordExport" nillable="true" type="tns:OperateRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperateRecordExport" nillable="true" type="tns:ArrayOfOperateRecordExport" />
+  <xs:complexType name="OperateRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Operated" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperateRecordExport" nillable="true" type="tns:OperateRecordExport" />
+  <xs:complexType name="LoginImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q3:ImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginImport" nillable="true" type="tns:LoginImport" />
+  <xs:complexType name="AdministratorExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="tns:AdministratorGroupExport" />
+      <xs:element minOccurs="0" name="LastLoginAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoginIp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdministratorExport" nillable="true" type="tns:AdministratorExport" />
+  <xs:complexType name="CreateAdministratorImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateAdministratorImport" nillable="true" type="tns:CreateAdministratorImport" />
+  <xs:complexType name="EditPasswordImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NewPassowrd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldPassowrd" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditPasswordImport" nillable="true" type="tns:EditPasswordImport" />
+  <xs:complexType name="ChangeGroupImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="NewGroupId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangeGroupImport" nillable="true" type="tns:ChangeGroupImport" />
+  <xs:complexType name="RemoveAdministratorImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveAdministratorImport" nillable="true" type="tns:RemoveAdministratorImport" />
+  <xs:complexType name="CreateAdministratorGroupImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanEditActivities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditDataReports" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditSettings" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditTickets" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditUsers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewActivities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewDataReports" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewSettings" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewTickets" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewUsers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsCustomerService" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateAdministratorGroupImport" nillable="true" type="tns:CreateAdministratorGroupImport" />
+  <xs:complexType name="EditAdministratorGroupImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanEditActivities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditDataReports" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditSettings" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditTickets" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanEditUsers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewActivities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewDataReports" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewSettings" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewTickets" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanViewUsers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="IsCustomerService" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EditAdministratorGroupImport" nillable="true" type="tns:EditAdministratorGroupImport" />
+  <xs:complexType name="RemoveAdministratorGroupImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAdministrator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemoveAdministratorGroupImport" nillable="true" type="tns:RemoveAdministratorGroupImport" />
+  <xs:complexType name="GetSettingOfBaseImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q4:GetSettingImport">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSettingOfBaseImport" nillable="true" type="tns:GetSettingOfBaseImport" />
+  <xs:complexType name="SettingOfBaseExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CollectionRunning" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HeartbeatInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSizeForAdmin" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSizeForClient" type="xs:int" />
+      <xs:element minOccurs="0" name="VirtualQueuing" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkingHour_Begin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkingHour_End" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SettingOfBaseExport" nillable="true" type="tns:SettingOfBaseExport" />
+  <xs:complexType name="SetSettingOfBaseImport">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q5:SetSettingImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CollectionRunning" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HeartbeatInterval" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSizeForAdmin" type="xs:int" />
+          <xs:element minOccurs="0" name="PageSizeForClient" type="xs:int" />
+          <xs:element minOccurs="0" name="VirtualQueuing" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkingHour_Begin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkingHour_End" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetSettingOfBaseImport" nillable="true" type="tns:SetSettingOfBaseImport" />
+</xs:schema>
