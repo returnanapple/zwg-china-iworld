@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace zwg_china.backstage.framework
+namespace zwg_china.client.framework
 {
     /// <summary>
-    /// 弹窗标识
+    /// 界面标识
     /// </summary>
-    public enum Pop
+    public enum Page
     {
-        普通提示弹窗 = 101,
-        错误提示弹窗 = 102,
+        登陆页 = 101,
+        首页 = 102,
     }
 }

@@ -9,14 +9,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using zwg_china.backstage.framework;
+using zwg_china.client.framework;
 
-namespace zwg_china.backstage.control
+namespace zwg_china.client.control
 {
-    [Window(Pop.错误提示弹窗)]
-    public partial class ErrorPrompt : ChildWindow, IPop<string>
+    [Window(Pop.普通提示弹窗)]
+    public partial class NormalPrompt : ChildWindow, IPop<string>
     {
-        public ErrorPrompt()
+        public NormalPrompt()
         {
             InitializeComponent();
         }
@@ -30,10 +30,10 @@ namespace zwg_china.backstage.control
         }
 
         public static readonly DependencyProperty StateProperty =
-            DependencyProperty.Register("State", typeof(string), typeof(ErrorPrompt)
+            DependencyProperty.Register("State", typeof(string), typeof(NormalPrompt)
             , new PropertyMetadata("", (d, e) =>
             {
-                ErrorPrompt tool = (ErrorPrompt)d;
+                NormalPrompt tool = (NormalPrompt)d;
                 tool.text_content.Text = e.NewValue.ToString();
             }));
 
@@ -47,6 +47,16 @@ namespace zwg_china.backstage.control
         private void Enter(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
+        }
+
+        /// <summary>
+        /// 取消
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Cancel(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = false;
         }
     }
 }

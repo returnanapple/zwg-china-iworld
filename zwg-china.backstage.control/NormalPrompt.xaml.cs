@@ -13,7 +13,7 @@ using zwg_china.backstage.framework;
 
 namespace zwg_china.backstage.control
 {
-    [Window(Pop.NormalPrompt)]
+    [Window(Pop.普通提示弹窗)]
     public partial class NormalPrompt : ChildWindow, IPop<string>
     {
         public NormalPrompt()

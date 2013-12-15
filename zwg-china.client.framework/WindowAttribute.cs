@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace zwg_china.backstage.framework
+namespace zwg_china.client.framework
 {
     /// <summary>
     /// 标记控件对象为弹窗

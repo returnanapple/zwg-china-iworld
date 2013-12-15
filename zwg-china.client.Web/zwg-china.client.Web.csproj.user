@@ -21,7 +21,7 @@
           <EnableENC>True</EnableENC>
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
           <ProjectOutputReferences>
-            <Ref Project="{75BECC3C-F95C-4D72-B67A-03B2D1BCDA7D}" Folder="ClientBin">zwg-china.backstage.xap</Ref>
+            <Ref Project="{0C1E44B4-D2FE-49D0-A454-9D6B9A0E8857}" Folder="ClientBin">zwg-china.client.xap</Ref>
           </ProjectOutputReferences>
         </WebProjectProperties>
       </FlavorProperties>

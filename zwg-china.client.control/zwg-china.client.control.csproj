@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{87D8913D-8754-43EE-9632-66924D7A0450}</ProjectGuid>
+    <ProjectGuid>{72F0D820-54CA-4073-9DDA-E2DF2DAC400C}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>zwg_china.backstage.control</RootNamespace>
-    <AssemblyName>zwg-china.backstage.control</AssemblyName>
+    <RootNamespace>zwg_china.client.control</RootNamespace>
+    <AssemblyName>zwg-china.client.control</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
@@ -65,9 +65,6 @@
     <Compile Include="ErrorPrompt.xaml.cs">
       <DependentUpon>ErrorPrompt.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoginPrompt.xaml.cs">
-      <DependentUpon>LoginPrompt.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NormalPrompt.xaml.cs">
       <DependentUpon>NormalPrompt.xaml</DependentUpon>
     </Compile>
@@ -80,25 +77,20 @@
     <Compile Include="tool\VerticalScrollTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\zwg-china.backstage.framework\zwg-china.backstage.framework.csproj">
-      <Project>{414c409c-3293-4d77-a24f-6945579ea880}</Project>
-      <Name>zwg-china.backstage.framework</Name>
+    <ProjectReference Include="..\zwg-china.client.framework\zwg-china.client.framework.csproj">
+      <Project>{d69f6cf8-861c-4a60-8a14-3776ae6a52ff}</Project>
+      <Name>zwg-china.client.framework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\loading.png" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="CoverFloorTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="css.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ErrorPrompt.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="LoginPrompt.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -106,9 +98,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\loading.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>

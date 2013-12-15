@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("zwg_china.backstage.control")]
+[assembly: AssemblyTitle("zwg_china.client")]
 [assembly: AssemblyDescription("最出色的的博彩投注软件，尽在iworld系列")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("紫微阁工作室")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则以下 GUID 用作类型库的 ID
-[assembly: Guid("87d8913d-8754-43ee-9632-66924d7a0450")]
+[assembly: Guid("0c1e44b4-d2fe-49d0-a454-9d6b9a0e8857")]
 
 // 程序集的版本信息由下面四个值组成: 
 //

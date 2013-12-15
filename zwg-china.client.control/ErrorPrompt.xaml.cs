@@ -9,9 +9,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
-using zwg_china.backstage.framework;
+using zwg_china.client.framework;
 
-namespace zwg_china.backstage.control
+namespace zwg_china.client.control
 {
     [Window(Pop.错误提示弹窗)]
     public partial class ErrorPrompt : ChildWindow, IPop<string>

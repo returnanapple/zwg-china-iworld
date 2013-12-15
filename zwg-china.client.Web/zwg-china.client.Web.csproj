@@ -7,19 +7,19 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{29C14D30-EC09-4570-9671-910E0FD2D85F}</ProjectGuid>
+    <ProjectGuid>{A386BB8C-8C93-4EBA-B7AF-2B6080B1363D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>zwg_china.backstage.Web</RootNamespace>
-    <AssemblyName>zwg-china.backstage.Web</AssemblyName>
+    <RootNamespace>zwg_china.client.Web</RootNamespace>
+    <AssemblyName>zwg-china.client.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <SilverlightApplicationList>{75BECC3C-F95C-4D72-B67A-03B2D1BCDA7D}|..\zwg-china.backstage\zwg-china.backstage.csproj|ClientBin|False</SilverlightApplicationList>
+    <SilverlightApplicationList>{0C1E44B4-D2FE-49D0-A454-9D6B9A0E8857}|..\zwg-china.client\zwg-china.client.csproj|ClientBin|False</SilverlightApplicationList>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,7 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientBin\zwg-china.backstage.xap" />
+    <Content Include="ClientBin\zwg-china.client.xap" />
     <Content Include="Silverlight.js" />
     <Content Include="Web.config" />
     <Content Include="Index.html" />
@@ -88,9 +88,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>21625</DevelopmentServerPort>
+          <DevelopmentServerPort>1757</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:21625/</IISUrl>
+          <IISUrl>http://localhost:1755/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
