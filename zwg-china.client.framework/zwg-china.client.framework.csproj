@@ -67,6 +67,7 @@
     <Compile Include="IMainPage.cs" />
     <Compile Include="IPop.cs" />
     <Compile Include="LoginViewModel.cs" />
+    <Compile Include="ManagerViewModelBase.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="Pop.cs" />
