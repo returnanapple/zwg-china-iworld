@@ -11,6 +11,6 @@ namespace zwg_china.client.framework
     public enum Page
     {
         登陆页 = 101,
-        首页 = 102,
+        投注页 = 102,
     }
 }

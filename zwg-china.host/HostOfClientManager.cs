@@ -36,6 +36,7 @@ namespace zwg_china.host
                 ServiceHost host = new ServiceHost(_type);
                 host.Open();
             });
+            new AuthorCallbackManager();
             running = true;
         }
 
