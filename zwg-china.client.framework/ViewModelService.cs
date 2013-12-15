@@ -77,8 +77,16 @@ namespace zwg_china.client.framework
         {
             try
             {
-                Page page = (Page)Enum.Parse(typeof(Page), pageName, false);
-                JumpTo(page);
+                if (ContrastManager.Contrasts.Any(c => c.ButtonNames.Any(bName => bName == pageName)))
+                {
+                    Page page = Page.彩票投注;
+                    JumpTo(page, pageName);
+                }
+                else
+                {
+                    Page page = (Page)Enum.Parse(typeof(Page), pageName, false);
+                    JumpTo(page);
+                }
             }
             catch (Exception)
             {
@@ -90,7 +98,8 @@ namespace zwg_china.client.framework
         /// 界面跳转
         /// </summary>
         /// <param name="page">界面标识</param>
-        public static void JumpTo(Page page)
+        /// <param name="args">附带信息</param>
+        public static void JumpTo(Page page, string args = null)
         {
             bool haveCreater = _pageCreaters.Any(x => x.Key.Page == page);
             if (!haveCreater)
@@ -99,7 +108,7 @@ namespace zwg_china.client.framework
             }
             ControlCreater creater = _pageCreaters.Where(x => x.Key.Page == page).Select(x => x.Value).Single();
             UserControl userControl = creater();
-            Root.DataContext = GetViewModel(page);
+            Root.DataContext = GetViewModel(page, args);
             Root.Show(userControl);
         }
         #region 获取ViewModel实例
@@ -109,11 +118,20 @@ namespace zwg_china.client.framework
         /// </summary>
         /// <param name="page">界面标识</param>
         /// <returns>返回ViewModel实例</returns>
-        static object GetViewModel(Page page)
+        /// <param name="args">附带信息</param>
+        static object GetViewModel(Page page, string args = null)
         {
             string viewModelName = _pageCreaters.Where(x => x.Key.Page == page).Select(x => x.Key.ViewModelName).Single();
             Assembly assembly = Assembly.GetExecutingAssembly();
-            return assembly.CreateInstance(viewModelName);
+            if (args != null)
+            {
+                var t = assembly.GetType(viewModelName, true);
+                return Activator.CreateInstance(t, args);
+            }
+            else
+            {
+                return assembly.CreateInstance(viewModelName);
+            }
         }
 
         #endregion
@@ -230,17 +248,17 @@ namespace zwg_china.client.framework
             /// <summary>
             /// 界面标识
             /// </summary>
-            public Page Page { get; protected set; }
+            public Page Page { get; set; }
 
             /// <summary>
             /// 视图模型的名称
             /// </summary>
-            public string ViewModelName { get; protected set; }
+            public string ViewModelName { get; set; }
 
             /// <summary>
             /// 一个布尔值 表示被标记对象是否为默认界面
             /// </summary>
-            public bool IsDefault { get; protected set; }
+            public bool IsDefault { get; set; }
 
             /// <summary>
             /// 界面创建者的对照键值信息封装

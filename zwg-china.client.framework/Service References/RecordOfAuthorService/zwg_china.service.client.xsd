@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zwg_china.service.client" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+  <xs:complexType name="GetMoneyChangeRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetMoneyChangeRecordsImport" nillable="true" type="tns:GetMoneyChangeRecordsImport" />
+  <xs:complexType name="GetPageListImportOfAuthor">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportOfAuthor" nillable="true" type="tns:GetPageListImportOfAuthor" />
+  <xs:complexType name="ArrayOfMoneyChangeRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MoneyChangeRecordExport" nillable="true" type="tns:MoneyChangeRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMoneyChangeRecordExport" nillable="true" type="tns:ArrayOfMoneyChangeRecordExport" />
+  <xs:complexType name="MoneyChangeRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Expenses" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Income" type="xs:double" />
+      <xs:element minOccurs="0" name="Money" type="xs:double" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoneyChangeRecordExport" nillable="true" type="tns:MoneyChangeRecordExport" />
+  <xs:complexType name="GetRechargeDetailsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" nillable="true" type="q2:RechargeStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRechargeDetailsImport" nillable="true" type="tns:GetRechargeDetailsImport" />
+  <xs:complexType name="ArrayOfRechargeRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RechargeRecordExport" nillable="true" type="tns:RechargeRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRechargeRecordExport" nillable="true" type="tns:ArrayOfRechargeRecordExport" />
+  <xs:complexType name="RechargeRecordExport">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="ComeFrom" type="q3:Bank" />
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q4:RechargeStatus" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RechargeRecordExport" nillable="true" type="tns:RechargeRecordExport" />
+  <xs:complexType name="GetWithdrawDetailsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" nillable="true" type="q5:WithdrawalsStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetWithdrawDetailsImport" nillable="true" type="tns:GetWithdrawDetailsImport" />
+  <xs:complexType name="ArrayOfWithdrawalsRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WithdrawalsRecordExport" nillable="true" type="tns:WithdrawalsRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWithdrawalsRecordExport" nillable="true" type="tns:ArrayOfWithdrawalsRecordExport" />
+  <xs:complexType name="WithdrawalsRecordExport">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="BankOfTheCard" type="q6:Bank" />
+      <xs:element minOccurs="0" name="Card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HolderOfTheCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q7:WithdrawalsStatus" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WithdrawalsRecordExport" nillable="true" type="tns:WithdrawalsRecordExport" />
+  <xs:complexType name="GetRebateRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRebateRecordsImport" nillable="true" type="tns:GetRebateRecordsImport" />
+  <xs:complexType name="ArrayOfRebateRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RebateRecordExport" nillable="true" type="tns:RebateRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRebateRecordExport" nillable="true" type="tns:ArrayOfRebateRecordExport" />
+  <xs:complexType name="RebateRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GameName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsImmediate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RebateRecordExport" nillable="true" type="tns:RebateRecordExport" />
+  <xs:complexType name="GetCommissionRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCommissionRecordsImport" nillable="true" type="tns:GetCommissionRecordsImport" />
+  <xs:complexType name="ArrayOfCommissionRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommissionRecordExport" nillable="true" type="tns:CommissionRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommissionRecordExport" nillable="true" type="tns:ArrayOfCommissionRecordExport" />
+  <xs:complexType name="CommissionRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsImmediate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommissionRecordExport" nillable="true" type="tns:CommissionRecordExport" />
+  <xs:complexType name="GetDividendRecordsImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDividendRecordsImport" nillable="true" type="tns:GetDividendRecordsImport" />
+  <xs:complexType name="ArrayOfDividendRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DividendRecordExport" nillable="true" type="tns:DividendRecordExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDividendRecordExport" nillable="true" type="tns:ArrayOfDividendRecordExport" />
+  <xs:complexType name="DividendRecordExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Profit" type="xs:double" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Scale" type="xs:double" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q8:DividendStatus" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DividendRecordExport" nillable="true" type="tns:DividendRecordExport" />
+  <xs:complexType name="RechargeImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="ComeFrom" type="q9:Bank" />
+          <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RechargeImport" nillable="true" type="tns:RechargeImport" />
+  <xs:complexType name="ImportBaseOfAuthor">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q10:ImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaseOfAuthor" nillable="true" type="tns:ImportBaseOfAuthor" />
+  <xs:complexType name="WithdrawImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FundsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sum" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WithdrawImport" nillable="true" type="tns:WithdrawImport" />
+</xs:schema>

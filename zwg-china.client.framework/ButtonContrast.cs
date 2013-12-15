@@ -6,17 +6,18 @@ using System.Text;
 namespace zwg_china.client.framework
 {
     /// <summary>
-    /// 弹窗标识
+    /// 按键分组对照
     /// </summary>
-    public enum Pop
+    public class ButtonContrast
     {
         /// <summary>
-        /// 普通弹窗
+        /// 组名
         /// </summary>
-        NormalPrompt = 101,
+        public string GroupName { get; set; }
+
         /// <summary>
-        /// 错误提示弹窗
+        /// 所从属的按键的名字的集合
         /// </summary>
-        ErrorPrompt = 102,
+        public List<string> ButtonNames { get; set; }
     }
 }

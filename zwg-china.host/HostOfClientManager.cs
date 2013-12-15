@@ -18,6 +18,7 @@ namespace zwg_china.host
         {
             typeof(ActicityService),
             typeof(AuthorService),
+            typeof(RecordOfAuthorService),
             typeof(AuthorPushService),
             typeof(LotteryService),
             typeof(MessageService),

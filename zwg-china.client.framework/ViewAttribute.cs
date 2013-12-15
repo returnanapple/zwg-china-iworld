@@ -14,12 +14,12 @@ namespace zwg_china.client.framework
         /// <summary>
         /// 界面标识
         /// </summary>
-        public Page Page { get; protected set; }
+        public Page Page { get; set; }
 
         /// <summary>
         /// 一个布尔值 表示被标记对象是否为默认界面
         /// </summary>
-        public bool IsDefault { get; protected set; }
+        public bool IsDefault { get; set; }
 
         /// <summary>
         /// 标记视图对象为可跳转界面

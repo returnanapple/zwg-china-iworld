@@ -233,7 +233,7 @@ namespace zwg_china.client.framework
         {
             if (e.Result.Success)
             {
-                ViewModelService.JumpTo(Page.投注页);
+                ViewModelService.JumpTo(Page.彩票投注);
             }
             else
             {

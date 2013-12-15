@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RecordOfAuthorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IRecordOfAuthorService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRecordOfAuthorService_GetMoneyChangeRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoneyChangeRecords" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetMoneyChangeRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoneyChangeRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetRechargeDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRechargeDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetRechargeDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRechargeDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetWithdrawDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWithdrawDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetWithdrawDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWithdrawDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetRebateRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRebateRecords" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetRebateRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRebateRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetCommissionRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommissionRecords" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetCommissionRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommissionRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetDividendRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDividendRecords" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_GetDividendRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDividendRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_Recharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:Recharge" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_Recharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_Withdraw_InputMessage">
+    <wsdl:part name="parameters" element="tns:Withdraw" />
+  </wsdl:message>
+  <wsdl:message name="IRecordOfAuthorService_Withdraw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WithdrawResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRecordOfAuthorService">
+    <wsdl:operation name="GetMoneyChangeRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetMoneyChangeRecords" message="tns:IRecordOfAuthorService_GetMoneyChangeRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetMoneyChangeRecordsResponse" message="tns:IRecordOfAuthorService_GetMoneyChangeRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRechargeDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetRechargeDetails" message="tns:IRecordOfAuthorService_GetRechargeDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetRechargeDetailsResponse" message="tns:IRecordOfAuthorService_GetRechargeDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWithdrawDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetWithdrawDetails" message="tns:IRecordOfAuthorService_GetWithdrawDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetWithdrawDetailsResponse" message="tns:IRecordOfAuthorService_GetWithdrawDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRebateRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetRebateRecords" message="tns:IRecordOfAuthorService_GetRebateRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetRebateRecordsResponse" message="tns:IRecordOfAuthorService_GetRebateRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommissionRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetCommissionRecords" message="tns:IRecordOfAuthorService_GetCommissionRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetCommissionRecordsResponse" message="tns:IRecordOfAuthorService_GetCommissionRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDividendRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetDividendRecords" message="tns:IRecordOfAuthorService_GetDividendRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/GetDividendRecordsResponse" message="tns:IRecordOfAuthorService_GetDividendRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/Recharge" message="tns:IRecordOfAuthorService_Recharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/RechargeResponse" message="tns:IRecordOfAuthorService_Recharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Withdraw">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRecordOfAuthorService/Withdraw" message="tns:IRecordOfAuthorService_Withdraw_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRecordOfAuthorService/WithdrawResponse" message="tns:IRecordOfAuthorService_Withdraw_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IRecordOfAuthorService" type="tns:IRecordOfAuthorService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IRecordOfAuthorService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetMoneyChangeRecords">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/GetMoneyChangeRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRechargeDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/GetRechargeDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWithdrawDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/GetWithdrawDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRebateRecords">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/GetRebateRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommissionRecords">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/GetCommissionRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDividendRecords">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/GetDividendRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/Recharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Withdraw">
+      <soap12:operation soapAction="http://tempuri.org/IRecordOfAuthorService/Withdraw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RecordOfAuthorService">
+    <wsdl:port name="NetTcpBinding_IRecordOfAuthorService" binding="tns:NetTcpBinding_IRecordOfAuthorService">
+      <soap12:address location="net.tcp://192.168.1.130:4511/RecordOfAuthorService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.1.130:4511/RecordOfAuthorService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
