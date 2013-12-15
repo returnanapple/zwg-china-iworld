@@ -10,34 +10,17 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.backstage.framework;
+using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.control
 {
-    [Window(Pop.NormalPrompt)]
-    public partial class NormalPrompt : ChildWindow, IPop<string>
+    [Window(Pop.EditAccounTool)]
+    public partial class EditAccounTool : ChildWindow, IPop<ManagerViewModelBase.EditEditAccounPackage>
     {
-        public NormalPrompt()
+        public EditAccounTool()
         {
             InitializeComponent();
         }
-
-        #region 消息
-
-        public string State
-        {
-            get { return (string)GetValue(StateProperty); }
-            set { SetValue(StateProperty, value); }
-        }
-
-        public static readonly DependencyProperty StateProperty =
-            DependencyProperty.Register("State", typeof(string), typeof(NormalPrompt)
-            , new PropertyMetadata("", (d, e) =>
-            {
-                NormalPrompt tool = (NormalPrompt)d;
-                tool.text_content.Text = e.NewValue.ToString();
-            }));
-
-        #endregion
 
         /// <summary>
         /// 确认
@@ -46,6 +29,12 @@ namespace zwg_china.backstage.control
         /// <param name="e"></param>
         private void Enter(object sender, RoutedEventArgs e)
         {
+            this.State = new ManagerViewModelBase.EditEditAccounPackage
+            {
+                OldPassword = input_oldPassword.Password,
+                NewPassword = input_newPassword.Password,
+                NewPassword2 = inpu_newPassword_confirm.Password
+            };
             this.DialogResult = true;
         }
 
@@ -58,6 +47,11 @@ namespace zwg_china.backstage.control
         {
             this.DialogResult = false;
         }
+
+        /// <summary>
+        /// 内容
+        /// </summary>
+        public ManagerViewModelBase.EditEditAccounPackage State { get; set; }
     }
 }
 

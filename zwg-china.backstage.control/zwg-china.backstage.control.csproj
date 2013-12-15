@@ -65,6 +65,10 @@
     <Compile Include="ContentBox.xaml.cs">
       <DependentUpon>ContentBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditAccounTool.xaml.cs">
+      <DependentUpon>EditAccounTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="tool\CopyWhenClick.cs" />
     <Compile Include="CoverFloorTool.xaml.cs">
       <DependentUpon>CoverFloorTool.xaml</DependentUpon>
     </Compile>
@@ -124,6 +128,10 @@
     <Page Include="css.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditAccounTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ErrorPrompt.xaml">
       <Generator>MSBuild:Compile</Generator>

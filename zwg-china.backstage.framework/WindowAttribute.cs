@@ -20,7 +20,7 @@ namespace zwg_china.backstage.framework
         /// 标记控件对象为弹窗
         /// </summary>
         /// <param name="pop">弹窗标记</param>
-        public WindowAttribute(Pop pop = framework.Pop.普通提示弹窗)
+        public WindowAttribute(Pop pop = framework.Pop.NormalPrompt)
         {
             this.Pop = pop;
         }

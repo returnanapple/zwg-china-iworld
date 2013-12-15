@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Runtime.Serialization;
 using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.framework
@@ -174,7 +175,6 @@ namespace zwg_china.backstage.framework
             if (e.Result.Success)
             {
                 DataManager.SetValue(DataKey.IWorld_Backstage_AdministratorInfo, e.Result.Info);
-
                 ViewModelService.JumpTo(Page.首页);
             }
             else
@@ -197,6 +197,7 @@ namespace zwg_china.backstage.framework
         /// <summary>
         /// 用户登陆信息的封装
         /// </summary>
+        [DataContract]
         public class LoginPackage
         {
             #region 属性
@@ -204,11 +205,13 @@ namespace zwg_china.backstage.framework
             /// <summary>
             /// 用户名
             /// </summary>
+            [DataMember]
             public string Username { get; set; }
 
             /// <summary>
             /// 密码
             /// </summary>
+            [DataMember]
             public string Password { get; set; }
 
             #endregion

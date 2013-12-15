@@ -3,7 +3,35 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d">
 
-    <control:ManageFrame />
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="css.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <control:ManageFrame>
+        <Canvas>
+            <!--标题-->
+            <TextBlock Text="欢迎来到 IWorld" Style="{StaticResource ResourceKey=PageTitle}"/>
+
+            <!--软件介绍-->
+            <TextBlock Text="这个软件由紫微阁工作室制作。内核版本号为：v4.1.0.3703" Canvas.Top="52" Canvas.Left="3"/>
+            <TextBlock Text="如果你想要升级/拓展你的软件模组，或者重新定制你的软件UI；" Canvas.Top="69" Canvas.Left="3"/>
+            <TextBlock Text="又或者你遇到了一些无法处理的故障/疑问，请联系我们的工程师。" Canvas.Top="86" Canvas.Left="3"/>
+            <TextBlock Text="我们提供永久的技术支持和拓展、升级服务" Canvas.Top="101" Canvas.Left="3"/>
+            <StackPanel Orientation="Horizontal" Canvas.Top="120" Canvas.Left="3">
+                <TextBlock Text="Emai：" />
+                <TextBlock Text="2621762252@qq.com" Foreground="#FF007ACC" Cursor="Hand" ToolTipService.ToolTip="点击复制">
+                    <i:Interaction.Triggers>
+                        <control:CopyWhenClick />
+                    </i:Interaction.Triggers>
+                </TextBlock>
+            </StackPanel>
+        </Canvas>
+    </control:ManageFrame>
 </UserControl>

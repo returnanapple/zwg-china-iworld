@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Controls;
 using System.IO.IsolatedStorage;
+using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.framework
 {
@@ -14,10 +15,8 @@ namespace zwg_china.backstage.framework
     {
         #region 私有变量
 
-        string username = "";
-        bool readedUsername = false;
-        string group = "";
-        bool readedGroup = false;
+        string username = null;
+        string group = null;
         string selectedText_Menu = "";
         string selectedText_Page = "";
 
@@ -32,6 +31,18 @@ namespace zwg_china.backstage.framework
         {
             get
             {
+                if (username == null)
+                {
+                    try
+                    {
+                        AdministratorExport administratorInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
+                        username = administratorInfo.Username;
+                    }
+                    catch (Exception)
+                    {
+                        username = "";
+                    }
+                }
                 return username;
             }
         }
@@ -43,6 +54,18 @@ namespace zwg_china.backstage.framework
         {
             get
             {
+                if (group == null)
+                {
+                    try
+                    {
+                        AdministratorExport administratorInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
+                        group = administratorInfo.Group.Name;
+                    }
+                    catch (Exception)
+                    {
+                        group = "";
+                    }
+                }
                 return group;
             }
         }
@@ -131,7 +154,24 @@ namespace zwg_china.backstage.framework
         /// <param name="parameter"></param>
         void Logout(object parameter)
         {
+            IPop<string> cw = ViewModelService.GetPop(Pop.NormalPrompt) as IPop<string>;
+            cw.State = "你想要退出后台管理吗？";
+            cw.Closed += Logout_do;
+            cw.Show();
         }
+        #region 执行
+
+        void Logout_do(object sender, EventArgs e)
+        {
+            IPop cw = sender as IPop;
+            if (cw.DialogResult == true)
+            {
+                DataManager.RemoveValue(DataKey.IWorld_Backstage_AdministratorInfo);
+                ViewModelService.JumpToDefaultPage();
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// 跳转
@@ -154,6 +194,78 @@ namespace zwg_china.backstage.framework
         /// <param name="parameter">参数</param>
         void EditAccount(object parameter)
         {
+            IPop cw = ViewModelService.GetPop(Pop.EditAccounTool);
+            cw.Closed += EditAccount_do;
+            cw.Show();
+        }
+        #region 执行
+
+        void EditAccount_do(object sender, EventArgs e)
+        {
+            IPop<ManagerViewModelBase.EditEditAccounPackage> cw = sender as IPop<ManagerViewModelBase.EditEditAccounPackage>;
+            if (cw.DialogResult == true)
+            {
+                ManagerViewModelBase.EditEditAccounPackage package = cw.State;
+                if (package.NewPassword != package.NewPassword2)
+                {
+                    ShowError("两次输入的新密码不一致");
+                }
+                AdministratorExport self = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
+                EditPasswordImport import = new EditPasswordImport
+                {
+                    OldPassowrd = package.OldPassword,
+                    NewPassowrd = package.NewPassword,
+                    Token = self.Token
+                };
+                AdministratorServiceClient client = new AdministratorServiceClient();
+                client.EditPasswordCompleted += ShowEditAccountResult;
+                client.EditPasswordAsync(import);
+            }
+        }
+
+        #endregion
+        #region 执行结果
+
+        void ShowEditAccountResult(object sender, EditPasswordCompletedEventArgs e)
+        {
+            if (e.Result.Success)
+            {
+                IPop<string> cw = ViewModelService.GetPop(Pop.ErrorPrompt) as IPop<string>;
+                cw.State = "修改密码成功，请重新登录";
+                cw.Closed += Logout_do;
+                cw.Show();
+            }
+            else
+            {
+                ShowError(e.Result.Error);
+            }
+        }
+
+        #endregion
+
+        #endregion
+
+        #region 内嵌类型
+
+        /// <summary>
+        /// 用于修改账号密码的数据集
+        /// </summary>
+        public class EditEditAccounPackage
+        {
+            /// <summary>
+            /// 原密码
+            /// </summary>
+            public string OldPassword { get; set; }
+
+            /// <summary>
+            /// 新密码
+            /// </summary>
+            public string NewPassword { get; set; }
+
+            /// <summary>
+            /// 新密码第二次
+            /// </summary>
+            public string NewPassword2 { get; set; }
         }
 
         #endregion

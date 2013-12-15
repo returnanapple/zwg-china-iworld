@@ -140,13 +140,13 @@ namespace zwg_china.model.manager
         /// <param name="package">用于修改数据模型的数据集</param>
         public void Update(IPackageForUpdateModel<TDbContext, TModel> package)
         {
+            package.CheckData(db);
             TModel model = db.Set<TModel>().FirstOrDefault(x => x.Id == package.Id);
             if (model == null)
             {
                 string message = string.Format("数据集提供的存储指针指向的对象为Null，请检查数据集 {0}", package.GetType().FullName);
                 throw new Exception(message);
             }
-            package.CheckData(db);
 
             TActions action;
             bool gotAction = Enum.TryParse<TActions>("Update", out action);

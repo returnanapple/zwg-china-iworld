@@ -13,7 +13,7 @@ using zwg_china.backstage.framework;
 
 namespace zwg_china.backstage.control
 {
-    [Window(Pop.错误提示弹窗)]
+    [Window(Pop.ErrorPrompt)]
     public partial class ErrorPrompt : ChildWindow, IPop<string>
     {
         public ErrorPrompt()
