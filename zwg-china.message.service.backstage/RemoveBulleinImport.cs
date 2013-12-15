@@ -8,9 +8,6 @@ using zwg_china.aid;
 using zwg_china.logic;
 using zwg_china.model;
 using zwg_china.model.manager;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace zwg_china.service.backstage
 {

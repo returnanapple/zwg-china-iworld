@@ -65,6 +65,13 @@
       <FileName>DataManager.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="zwg_china.backstage.framework.IndexViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IndexViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="zwg_china.backstage.framework.IMainPage" Collapsed="true">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>

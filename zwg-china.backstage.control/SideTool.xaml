@@ -65,7 +65,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition MinHeight="120"></RowDefinition>
         </Grid.RowDefinitions>
         <Border Width="10" HorizontalAlignment="Left" Grid.RowSpan="4">

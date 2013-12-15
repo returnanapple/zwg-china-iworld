@@ -1,6 +1,67 @@
 ﻿<configuration>
     <system.serviceModel>
-        <bindings />
-        <client />
+        <bindings>
+            <customBinding>
+                <binding name="NetTcpBinding_IAdministratorService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IAuthorService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IRecordOfAuthorService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_ISettingOfAuthorService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_ILotteryService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IMessageService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IReportService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="NetTcpBinding_IActicityService">
+                    <binaryMessageEncoding />
+                    <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="net.tcp://192.168.1.130:4512/AdministratorService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IAdministratorService"
+                contract="AdministratorService.IAdministratorService" name="NetTcpBinding_IAdministratorService" />
+            <endpoint address="net.tcp://192.168.1.130:4512/AuthorService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IAuthorService"
+                contract="AuthorService.IAuthorService" name="NetTcpBinding_IAuthorService" />
+            <endpoint address="net.tcp://192.168.1.130:4512/RecordOfAuthorService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IRecordOfAuthorService"
+                contract="RecordOfAuthorService.IRecordOfAuthorService" name="NetTcpBinding_IRecordOfAuthorService" />
+            <endpoint address="net.tcp://192.168.1.130:4512/SettingOfAuthorService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_ISettingOfAuthorService"
+                contract="SettingOfAuthorService.ISettingOfAuthorService"
+                name="NetTcpBinding_ISettingOfAuthorService" />
+            <endpoint address="net.tcp://192.168.1.130:4512/LotteryService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_ILotteryService"
+                contract="LotteryService.ILotteryService" name="NetTcpBinding_ILotteryService" />
+            <endpoint address="net.tcp://192.168.1.130:4512/MessageService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IMessageService"
+                contract="MessageService.IMessageService" name="NetTcpBinding_IMessageService" />
+            <endpoint address="net.tcp://192.168.1.130:4512/ReportService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IReportService"
+                contract="ReportService.IReportService" name="NetTcpBinding_IReportService" />
+            <endpoint address="net.tcp://192.168.1.130:4512/ActicityService"
+                binding="customBinding" bindingConfiguration="NetTcpBinding_IActicityService"
+                contract="ActicityService.IActicityService" name="NetTcpBinding_IActicityService" />
+        </client>
     </system.serviceModel>
 </configuration>

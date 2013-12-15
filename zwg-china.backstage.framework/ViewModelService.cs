@@ -75,8 +75,15 @@ namespace zwg_china.backstage.framework
         /// <param name="pageName">界面名称</param>
         public static void JumpTo(string pageName)
         {
-            Page page = (Page)Enum.Parse(typeof(Page), pageName, false);
-            JumpTo(page);
+            try
+            {
+                Page page = (Page)Enum.Parse(typeof(Page), pageName, false);
+                JumpTo(page);
+            }
+            catch (Exception)
+            {
+                JumpToDefaultPage();
+            }
         }
 
         /// <summary>
@@ -242,9 +249,8 @@ namespace zwg_china.backstage.framework
             {
                 this.Page = page;
                 this.IsDefault = isDefault;
-                Assembly assembly = Assembly.GetExecutingAssembly();
                 pageName = new Regex("Page").Replace(pageName, "ViewModel");
-                string vmName = string.Format("{0}.{1}", assembly.FullName, pageName);
+                string vmName = string.Format("zwg_china.backstage.framework.{0}", pageName);
                 this.ViewModelName = vmName;
             }
         }

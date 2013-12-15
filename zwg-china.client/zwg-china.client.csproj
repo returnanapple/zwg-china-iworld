@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
+    <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zwg-china.client.control\zwg-china.client.control.csproj">

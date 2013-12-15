@@ -3,16 +3,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     mc:Ignorable="d">
 
-    <Grid x:Name="root">
-        <!--主显示区-->
-        <Grid Name="body">
+    <ScrollViewer BorderThickness="0">
+        <Grid x:Name="root">
+            <i:Interaction.Triggers>
+                <control:VerticalScrollTrigger/>
+            </i:Interaction.Triggers>
+            <!--主显示区-->
+            <Grid Name="body">
+            </Grid>
+            <!--遮蔽层-->
+            <Grid>
+                <control:CoverFloorTool CanSee="{Binding IsBusy}" />
+            </Grid>
         </Grid>
-        <!--遮蔽层-->
-        <Grid>
-            <control:CoverFloorTool CanSee="{Binding IsBusy}" />
-        </Grid>
-    </Grid>
-
+    </ScrollViewer>
 </UserControl>

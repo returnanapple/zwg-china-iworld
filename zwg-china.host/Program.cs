@@ -18,12 +18,9 @@ namespace zwg_china.host
             DefaultManager.Load();
             Console.WriteLine("初始化完毕，正在启动后台服务，请稍等...");
             HostOfBackstageManager.Run();
-            System.Threading.Thread.Sleep(1000);
             Console.WriteLine("后台服务已经启动，正在启动前台服务，请稍等...");
             HostOfClientManager.Run();
-            System.Threading.Thread.Sleep(1000);
             Console.WriteLine("前台服务已经启动，正在执行第一次伺配优化设置，请稍等...");
-            System.Threading.Thread.Sleep(1000);
 
             beginTime = DateTime.Now;
             Timer timer = new Timer(1000);
