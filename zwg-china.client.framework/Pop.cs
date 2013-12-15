@@ -13,10 +13,22 @@ namespace zwg_china.client.framework
         /// <summary>
         /// 普通弹窗
         /// </summary>
-        NormalPrompt = 101,
+        NormalPrompt,
         /// <summary>
         /// 错误提示弹窗
         /// </summary>
-        ErrorPrompt = 102,
+        ErrorPrompt,
+        /// <summary>
+        /// 创建用户弹窗
+        /// </summary>
+        CreateUserWindows,
+        /// <summary>
+        /// 确认投注弹窗
+        /// </summary>
+        EnterBettingWindow,
+        /// <summary>
+        /// 修改返点 - 赔率转换点数弹窗
+        /// </summary>
+        ChangePoinWindow
     }
 }

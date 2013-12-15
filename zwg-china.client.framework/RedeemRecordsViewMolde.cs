@@ -6,6 +6,9 @@ using zwg_china.client.framework.ActicityService;
 
 namespace zwg_china.client.framework
 {
+    /// <summary>
+    /// 积分兑换记录页的视图模型
+    /// </summary>
     public class RedeemRecordsViewMolde : ShowListViewModelBase<RedeemRecordExport, ActicityServiceClient>
     {
         #region 私有字段

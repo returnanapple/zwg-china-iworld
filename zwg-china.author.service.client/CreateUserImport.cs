@@ -43,8 +43,10 @@ namespace zwg_china.service.client
         /// <summary>
         /// 上级用户的存储指针
         /// </summary>
-        [DataMember]
-        public int ParentId { get; set; }
+        public int ParentId
+        {
+            get { return this.Self == null ? 0 : this.Self.Id; }
+        }
 
         #endregion
 
