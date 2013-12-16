@@ -34,6 +34,17 @@ namespace zwg_china.client.framework
             }
         }
 
+        /// <summary>
+        /// 显示错误信息
+        /// </summary>
+        /// <param name="error">错误信息</param>
+        protected void ShowError(string error)
+        {
+            IPop<string> cw = ViewModelService.GetPop(Pop.ErrorPrompt) as IPop<string>;
+            cw.State = error;
+            cw.Show();
+        }
+
         #endregion
     }
 }

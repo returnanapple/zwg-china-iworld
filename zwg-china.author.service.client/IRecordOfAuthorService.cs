@@ -15,6 +15,14 @@ namespace zwg_china.service.client
         #region 获取数据
 
         /// <summary>
+        /// 获取帐变记录的分页列表
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回帐变记录的分页列表</returns>
+        [OperationContract]
+        PageResult<MoneyChangeRecordExport> GetMoneyChangeRecords(GetMoneyChangeRecordsImport import);
+
+        /// <summary>
         /// 获取充值记录的分页列表
         /// </summary>
         /// <param name="import">数据集</param>

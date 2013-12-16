@@ -10,7 +10,13 @@ namespace zwg_china.client.framework
     /// </summary>
     public enum Pop
     {
-        普通提示弹窗 = 101,
-        错误提示弹窗 = 102,
+        /// <summary>
+        /// 普通弹窗
+        /// </summary>
+        NormalPrompt = 101,
+        /// <summary>
+        /// 错误提示弹窗
+        /// </summary>
+        ErrorPrompt = 102,
     }
 }

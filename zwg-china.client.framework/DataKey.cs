@@ -11,12 +11,20 @@ namespace zwg_china.client.framework
     public enum DataKey
     {
         /// <summary>
-        /// 记住密码
+        /// 身份标识
         /// </summary>
-        IWorld_Client_RememberMe = 101,
+        IWorld_Client_Token = 101,
         /// <summary>
         /// 用户信息
         /// </summary>
-        IWorld_Client_UserInfo = 102
+        IWorld_Client_UserInfo = 102,
+        /// <summary>
+        /// 彩票信息
+        /// </summary>
+        IWorld_Client_Tickets = 103,
+        /// <summary>
+        /// 系统设置
+        /// </summary>
+        IWorld_Client_Setting = 104
     }
 }

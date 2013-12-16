@@ -233,6 +233,8 @@ namespace zwg_china.logic
                 new RIOfReport().GetAssembly()
             };
             ManagerService.Initialize(assemblies);
+            AdministratorLoginInfoPond.Initialize();
+            AuthorLoginInfoPond.Initialize();
             CollectManager.Run();
         }
 

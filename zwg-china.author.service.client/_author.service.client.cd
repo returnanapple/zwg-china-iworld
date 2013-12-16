@@ -151,14 +151,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.client.WithdrawalsRecordExport" Collapsed="true">
-    <Position X="2.25" Y="11.5" Width="1.5" />
+    <Position X="4" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABCAACMAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAAQU=</HashCode>
       <FileName>WithdrawalsRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.client.RebateRecordExport" Collapsed="true">
-    <Position X="4" Y="11.5" Width="1.5" />
+    <Position X="5.75" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACIAgAAAAAQAAAAAABAAAAAAAAAAAAgAAAAAAU=</HashCode>
       <FileName>RebateRecordExport.cs</FileName>
@@ -202,42 +202,42 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.service.client.CommissionRecordExport" Collapsed="true">
-    <Position X="5.75" Y="11.5" Width="1.5" />
+    <Position X="7.5" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACIAgAAAAAQAAAAAABAAAAAAAAAAAAAAAAAAAU=</HashCode>
       <FileName>CommissionRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.client.DividendRecordExport" Collapsed="true">
-    <Position X="7.5" Y="11.5" Width="1.5" />
+    <Position X="9.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACMAAAAAEAAAAIAAAACAAAAAAAAAAAAAAAAAQU=</HashCode>
       <FileName>DividendRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.client.RechargeRecordExport" Collapsed="true">
-    <Position X="0.5" Y="11.5" Width="1.5" />
+    <Position X="2.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAACMAAAAAAAAAAAAAAAAAAEAAAAAAAACAAAAAAU=</HashCode>
       <FileName>RechargeRecordExport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.client.GetRebateRecordsImport" Collapsed="true" HideInheritanceLine="true">
-    <Position X="0.5" Y="7.75" Width="1.5" />
+    <Position X="2.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAIAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetRebateRecordsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.client.GetCommissionRecordsImport" Collapsed="true" HideInheritanceLine="true">
-    <Position X="2.25" Y="7.75" Width="1.5" />
+    <Position X="4" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAgAAAAAAAAACAAAAA=</HashCode>
       <FileName>GetCommissionRecordsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.service.client.GetDividendRecordsImport" Collapsed="true" HideInheritanceLine="true">
-    <Position X="4" Y="7.75" Width="1.5" />
+    <Position X="5.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAABAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GetDividendRecordsImport.cs</FileName>
@@ -246,7 +246,7 @@
   <Class Name="zwg_china.service.client.AuthorService" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABAAAAAAQAAAAAAAAAgQgAAAgAYABAAAAAQAQAAAAE=</HashCode>
+      <HashCode>IABAAAAAAUAAAAAAAAAgQgAAAgAYABAAAAAQAQAAAAE=</HashCode>
       <FileName>AuthorService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -254,7 +254,7 @@
   <Class Name="zwg_china.service.client.RecordOfAuthorService" Collapsed="true">
     <Position X="2.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAAAAAIBAEAAAAEAAAAAABACAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAIDAEAAAAEAAAAAABACAAAAA=</HashCode>
       <FileName>RecordOfAuthorService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -316,17 +316,31 @@
       <FileName>GetSettingImport.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="zwg_china.service.client.MoneyChangeRecordExport" Collapsed="true">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAACIAAAgAAAAAAAAAAAAAAACAAAAAQAAAAAAAAQ=</HashCode>
+      <FileName>MoneyChangeRecordExport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.client.GetMoneyChangeRecordsImport" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GetMoneyChangeRecordsImport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="zwg_china.service.client.IAuthorService" Collapsed="true">
     <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABAAAAAAQAAAAAAAAAgQgAAAgAYABAAAAAQAQAAAAE=</HashCode>
+      <HashCode>IABAAAAAAUAAAAAAAAAgQgAAAgAYABAAAAAQAQAAAAE=</HashCode>
       <FileName>IAuthorService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="zwg_china.service.client.IRecordOfAuthorService" Collapsed="true">
     <Position X="2.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAAAAAIBAEAAAAEAAAAAABACAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAIDAEAAAAEAAAAAABACAAAAA=</HashCode>
       <FileName>IRecordOfAuthorService.cs</FileName>
     </TypeIdentifier>
   </Interface>

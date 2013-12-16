@@ -24,7 +24,7 @@
     <TestPageFileName>zwg_china.clientTestPage.html</TestPageFileName>
     <CreateTestPage>true</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
-    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
     <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
     <UsePlatformExtensions>false</UsePlatformExtensions>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
@@ -84,11 +84,20 @@
     <Compile Include="Classes\BetInfo.cs" />
     <Compile Include="Classes\SelectResult.cs" />
     <Compile Include="Classes\SingleSelect.cs" />
+    <Compile Include="CoverFloorTool.xaml.cs">
+      <DependentUpon>CoverFloorTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LotteryButton.xaml.cs">
       <DependentUpon>LotteryButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainTool.xaml.cs">
+      <DependentUpon>MainTool.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewButton.xaml.cs">
       <DependentUpon>NewButton.xaml</DependentUpon>
@@ -132,11 +141,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CoverFloorTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LotteryButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainTool.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -319,6 +340,41 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\最新公告Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LoginPageBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LoginPageMainBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\-_MouseOver.png" />
+    <Resource Include="Images\-_Normal.png" />
+    <Resource Include="Images\-_Pressed.png" />
+    <Resource Include="Images\Go_MouseOver.png" />
+    <Resource Include="Images\Go_Normal.png" />
+    <Resource Include="Images\Go_Pressed.png" />
+    <Resource Include="Images\X_MouseOver.png" />
+    <Resource Include="Images\X_Normal.png" />
+    <Resource Include="Images\X_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pstemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GameButtonsBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotteryButtonsBg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

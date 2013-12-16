@@ -1,0 +1,30 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.LoginPage"
+    mc:Ignorable="d" Loaded="LoadedAction"
+    Width="960" Height="730">
+    <Canvas>
+        <Image Source="Images/LoginPageBg.png" Stretch="None"/>
+        <Image Source="Images/LoginPageMainBg.png" Stretch="None" Canvas.Left="155" Canvas.Top="152"/>
+
+        <local:NewButton Width="75" Height="76" ImageNameOfBackground="Go" 
+                         Command="{Binding LoginCommand}" Canvas.Left="612" Canvas.Top="392"/>
+        <local:NewButton Width="25" Height="25" ImageNameOfBackground="X"
+                         Click="Exit" Canvas.Left="759" Canvas.Top="176"/>
+        <local:NewButton Width="25" Height="25" ImageNameOfBackground="-"
+                         Click="Minimize" Canvas.Left="734" Canvas.Top="176"/>
+        <HyperlinkButton Content="找回密码"
+                         FontSize="14" Foreground="#FFFB005E" FontFamily="simsun" Canvas.Left="344" Canvas.Top="477"/>
+        <TextBox Width="208" Height="25"
+                 Background="Transparent" BorderThickness="0"
+                 Foreground="#FFD6A671" FontSize="14" FontFamily="SimSun"
+                 Text="{Binding Username, Mode=TwoWay}" Canvas.Left="364" Canvas.Top="399"/>
+        <PasswordBox Width="208" Height="25"
+                     Background="Transparent" BorderThickness="0"
+                     Foreground="#FFD6A671" FontSize="14" FontFamily="SimSun"
+                     Password="{Binding Password,Mode=TwoWay}" Canvas.Left="364" Canvas.Top="435"/>
+    </Canvas>
+</UserControl>

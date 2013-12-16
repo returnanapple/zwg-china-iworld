@@ -18,6 +18,7 @@ namespace zwg_china.host
         {
             typeof(ActicityService),
             typeof(AuthorService),
+            typeof(RecordOfAuthorService),
             typeof(AuthorPushService),
             typeof(LotteryService),
             typeof(MessageService),
@@ -36,6 +37,7 @@ namespace zwg_china.host
                 ServiceHost host = new ServiceHost(_type);
                 host.Open();
             });
+            new AuthorCallbackManager();
             running = true;
         }
 

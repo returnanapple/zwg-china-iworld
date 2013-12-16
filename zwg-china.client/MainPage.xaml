@@ -5,19 +5,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.MainPage"
     mc:Ignorable="d"
-    d:DesignHeight="700" d:DesignWidth="800">
+    MouseLeftButtonDown="DragMove">
 
     <Grid x:Name="root">
         <!--主显示区-->
-        <Grid x:Name="body"/>
+        <Grid x:Name="body">
+            <local:MainTool HorizontalAlignment="Left" Margin="13,14,0,0" VerticalAlignment="Top"/>
+        </Grid>
         <!--遮蔽层-->
         <Grid>
-            <local:ShowABulletinTool HorizontalAlignment="Left" Margin="259,195,0,0" VerticalAlignment="Top"
-                                     Text="我是公告" Tittle="我是"/>
-            <local:ShowAHistoryResultTool HorizontalAlignment="Left" Margin="285,324,0,0" VerticalAlignment="Top"
-                                          Issue="111123456"  AHistoryResult="1,1,1,11"/>
-            <local:ShowAWinningTool HorizontalAlignment="Left" Margin="432,155,0,0" VerticalAlignment="Top"
-                                     Issue="12345" Money="1345553"/>
+            <local:CoverFloorTool CanSee="{Binding IsBusy}" Message="{Binding LoadingMessage}"/>
         </Grid>
     </Grid>
 </UserControl>

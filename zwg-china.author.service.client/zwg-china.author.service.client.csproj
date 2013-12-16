@@ -83,6 +83,7 @@
     <Compile Include="GetBasicSelfInfoImport.cs" />
     <Compile Include="GetCommissionRecordsImport.cs" />
     <Compile Include="GetDividendRecordsImport.cs" />
+    <Compile Include="GetMoneyChangeRecordsImport.cs" />
     <Compile Include="GetPageListImportOfAuthor.cs" />
     <Compile Include="GetRebateRecordsImport.cs" />
     <Compile Include="GetRechargeDetailsImport.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="IRecordOfAuthorService.cs" />
     <Compile Include="LoginImport.cs" />
     <Compile Include="LotteryTicketExport.cs" />
+    <Compile Include="MoneyChangeRecordExport.cs" />
     <Compile Include="NoticeExport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RebateRecordExport.cs" />
