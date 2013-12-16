@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections.ObjectModel;
+using zwg_china.client.framework.LotteryService;
+using zwg_china.client.framework.MessageService;
 
 namespace zwg_china.client.framework
 {
@@ -13,6 +16,8 @@ namespace zwg_china.client.framework
         #region 私有变量
 
         string selectedButtonName = "";
+        ObservableCollection<BulletinExport> bulletins = new ObservableCollection<BulletinExport>();
+        ObservableCollection<TopBonus> topBonus = new ObservableCollection<TopBonus>();
 
         #endregion
 
@@ -33,6 +38,44 @@ namespace zwg_china.client.framework
                 {
                     selectedButtonName = value;
                     OnPropertyChanged("SelectedButtonName");
+                }
+            }
+        }
+
+        /// <summary>
+        /// 公告列表
+        /// </summary>
+        public ObservableCollection<BulletinExport> Bulletins
+        {
+            get
+            {
+                return bulletins;
+            }
+            set
+            {
+                if (bulletins != value)
+                {
+                    bulletins = value;
+                    OnPropertyChanged("Bulletins");
+                }
+            }
+        }
+
+        /// <summary>
+        /// 中奖排行
+        /// </summary>
+        public ObservableCollection<TopBonus> TopBonus
+        {
+            get
+            {
+                return topBonus;
+            }
+            set
+            {
+                if (topBonus != value)
+                {
+                    topBonus = value;
+                    OnPropertyChanged("TopBonus");
                 }
             }
         }
@@ -63,6 +106,9 @@ namespace zwg_china.client.framework
             //初始化命令
             this.JumpCommand = new UniversalCommand(new Action<object>(Jump));
             this.LogoutCommand = new UniversalCommand(new Action<object>(Logout));
+
+            //加载公告列表
+            DataManager.GetValue<List<BulletinExport>>(DataKey.IWorld_Client_Bulletins).ForEach(x => this.Bulletins.Add(x));
         }
 
         #endregion
@@ -87,11 +133,7 @@ namespace zwg_china.client.framework
             IPop cw = sender as IPop;
             if (cw.DialogResult == true)
             {
-                DataManager.RemoveValue(DataKey.IWorld_Client_Setting);
-                DataManager.RemoveValue(DataKey.IWorld_Client_Tickets);
-                DataManager.RemoveValue(DataKey.IWorld_Client_Token);
-                DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
-                ViewModelService.JumpToDefaultPage();
+                ClearInfoAndLogout();
             }
         }
 
@@ -110,6 +152,25 @@ namespace zwg_china.client.framework
             IsBusy = true;
             string pageName = parameter.ToString();
             ViewModelService.JumpTo(pageName);
+        }
+
+        #endregion
+
+        #region 保护方法
+
+        /// <summary>
+        /// 清空缓存并退出到默认界面
+        /// </summary>
+        protected void ClearInfoAndLogout()
+        {
+            DataManager.RemoveValue(DataKey.IWorld_Client_Setting);
+            DataManager.RemoveValue(DataKey.IWorld_Client_Tickets);
+            DataManager.RemoveValue(DataKey.IWorld_Client_Token);
+            DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
+            DataManager.RemoveValue(DataKey.IWorld_Client_Bulletins);
+            DataManager.RemoveValue(DataKey.IWorld_Client_TopBouns);
+            DataManager.RemoveValue(DataKey.IWorld_Client_UnReadNotices);
+            ViewModelService.JumpToDefaultPage();
         }
 
         #endregion

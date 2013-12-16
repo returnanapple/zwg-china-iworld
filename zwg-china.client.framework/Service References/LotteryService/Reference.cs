@@ -20,6 +20,7 @@ namespace zwg_china.client.framework.LotteryService {
     [System.Runtime.Serialization.DataContractAttribute(Name="ImportBase", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetPageListImportBase))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetPageListImportBaseOfLottery))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetBettingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetChasingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.ImportBaseOfLottery))]
@@ -59,6 +60,7 @@ namespace zwg_china.client.framework.LotteryService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetPageListImportBase", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetPageListImportBaseOfLottery))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetBettingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetChasingsImport))]
     public partial class GetPageListImportBase : zwg_china.client.framework.LotteryService.ImportBase {
@@ -82,9 +84,46 @@ namespace zwg_china.client.framework.LotteryService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetPageListImportBaseOfLottery", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetBettingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetChasingsImport))]
     public partial class GetPageListImportBaseOfLottery : zwg_china.client.framework.LotteryService.GetPageListImportBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetTopBonusImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
+    public partial class GetTopBonusImport : zwg_china.client.framework.LotteryService.GetPageListImportBaseOfLottery {
+        
+        private int NotesField;
+        
+        private System.Nullable<int> TicketIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Notes {
+            get {
+                return this.NotesField;
+            }
+            set {
+                if ((this.NotesField.Equals(value) != true)) {
+                    this.NotesField = value;
+                    this.RaisePropertyChanged("Notes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> TicketId {
+            get {
+                return this.TicketIdField;
+            }
+            set {
+                if ((this.TicketIdField.Equals(value) != true)) {
+                    this.TicketIdField = value;
+                    this.RaisePropertyChanged("TicketId");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -479,6 +518,7 @@ namespace zwg_china.client.framework.LotteryService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="NormalResult", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryExport1C_S7RQu4))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.PageResultOfBettingExport1C_S7RQu4))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.PageResultOfChasingExport1C_S7RQu4))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryTicketExport1C_S7RQu4))]
@@ -533,6 +573,27 @@ namespace zwg_china.client.framework.LotteryService {
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Collections.Generic.List<zwg_china.client.framework.LotteryService.LotteryExport> Info {
+            get {
+                return this.InfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InfoField, value) != true)) {
+                    this.InfoField = value;
+                    this.RaisePropertyChanged("Info");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NormalResultOfArrayOfTopBonus1C_S7RQu4", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
+    public partial class NormalResultOfArrayOfTopBonus1C_S7RQu4 : zwg_china.client.framework.LotteryService.NormalResult {
+        
+        private System.Collections.Generic.List<zwg_china.client.framework.LotteryService.TopBonus> InfoField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<zwg_china.client.framework.LotteryService.TopBonus> Info {
             get {
                 return this.InfoField;
             }
@@ -969,6 +1030,51 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((object.ReferenceEquals(this.valuesField, value) != true)) {
                     this.valuesField = value;
                     this.RaisePropertyChanged("values");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TopBonus", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
+    public partial class TopBonus : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string IssueField;
+        
+        private double SumField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Issue {
+            get {
+                return this.IssueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IssueField, value) != true)) {
+                    this.IssueField = value;
+                    this.RaisePropertyChanged("Issue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Sum {
+            get {
+                return this.SumField;
+            }
+            set {
+                if ((this.SumField.Equals(value) != true)) {
+                    this.SumField = value;
+                    this.RaisePropertyChanged("Sum");
                 }
             }
         }
@@ -1829,6 +1935,11 @@ namespace zwg_china.client.framework.LotteryService {
         
         zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryExport1C_S7RQu4 EndGetLotteries(System.IAsyncResult result);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ILotteryService/GetTopBonus", ReplyAction="http://tempuri.org/ILotteryService/GetTopBonusResponse")]
+        System.IAsyncResult BeginGetTopBonus(zwg_china.client.framework.LotteryService.GetTopBonusImport import, System.AsyncCallback callback, object asyncState);
+        
+        zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4 EndGetTopBonus(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ILotteryService/GetBettings", ReplyAction="http://tempuri.org/ILotteryService/GetBettingsResponse")]
         System.IAsyncResult BeginGetBettings(zwg_china.client.framework.LotteryService.GetBettingsImport import, System.AsyncCallback callback, object asyncState);
         
@@ -1893,6 +2004,25 @@ namespace zwg_china.client.framework.LotteryService {
             get {
                 base.RaiseExceptionIfNecessary();
                 return ((zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryExport1C_S7RQu4)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetTopBonusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetTopBonusCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4 Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4)(this.results[0]));
             }
         }
     }
@@ -2008,6 +2138,12 @@ namespace zwg_china.client.framework.LotteryService {
         
         private System.Threading.SendOrPostCallback onGetLotteriesCompletedDelegate;
         
+        private BeginOperationDelegate onBeginGetTopBonusDelegate;
+        
+        private EndOperationDelegate onEndGetTopBonusDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetTopBonusCompletedDelegate;
+        
         private BeginOperationDelegate onBeginGetBettingsDelegate;
         
         private EndOperationDelegate onEndGetBettingsDelegate;
@@ -2093,6 +2229,8 @@ namespace zwg_china.client.framework.LotteryService {
         public event System.EventHandler<GetTicketsCompletedEventArgs> GetTicketsCompleted;
         
         public event System.EventHandler<GetLotteriesCompletedEventArgs> GetLotteriesCompleted;
+        
+        public event System.EventHandler<GetTopBonusCompletedEventArgs> GetTopBonusCompleted;
         
         public event System.EventHandler<GetBettingsCompletedEventArgs> GetBettingsCompleted;
         
@@ -2198,6 +2336,52 @@ namespace zwg_china.client.framework.LotteryService {
             }
             base.InvokeAsync(this.onBeginGetLotteriesDelegate, new object[] {
                         import}, this.onEndGetLotteriesDelegate, this.onGetLotteriesCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult zwg_china.client.framework.LotteryService.ILotteryService.BeginGetTopBonus(zwg_china.client.framework.LotteryService.GetTopBonusImport import, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetTopBonus(import, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4 zwg_china.client.framework.LotteryService.ILotteryService.EndGetTopBonus(System.IAsyncResult result) {
+            return base.Channel.EndGetTopBonus(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetTopBonus(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            zwg_china.client.framework.LotteryService.GetTopBonusImport import = ((zwg_china.client.framework.LotteryService.GetTopBonusImport)(inValues[0]));
+            return ((zwg_china.client.framework.LotteryService.ILotteryService)(this)).BeginGetTopBonus(import, callback, asyncState);
+        }
+        
+        private object[] OnEndGetTopBonus(System.IAsyncResult result) {
+            zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4 retVal = ((zwg_china.client.framework.LotteryService.ILotteryService)(this)).EndGetTopBonus(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetTopBonusCompleted(object state) {
+            if ((this.GetTopBonusCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetTopBonusCompleted(this, new GetTopBonusCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetTopBonusAsync(zwg_china.client.framework.LotteryService.GetTopBonusImport import) {
+            this.GetTopBonusAsync(import, null);
+        }
+        
+        public void GetTopBonusAsync(zwg_china.client.framework.LotteryService.GetTopBonusImport import, object userState) {
+            if ((this.onBeginGetTopBonusDelegate == null)) {
+                this.onBeginGetTopBonusDelegate = new BeginOperationDelegate(this.OnBeginGetTopBonus);
+            }
+            if ((this.onEndGetTopBonusDelegate == null)) {
+                this.onEndGetTopBonusDelegate = new EndOperationDelegate(this.OnEndGetTopBonus);
+            }
+            if ((this.onGetTopBonusCompletedDelegate == null)) {
+                this.onGetTopBonusCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetTopBonusCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetTopBonusDelegate, new object[] {
+                        import}, this.onEndGetTopBonusDelegate, this.onGetTopBonusCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2529,6 +2713,19 @@ namespace zwg_china.client.framework.LotteryService {
             public zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryExport1C_S7RQu4 EndGetLotteries(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryExport1C_S7RQu4 _result = ((zwg_china.client.framework.LotteryService.NormalResultOfArrayOfLotteryExport1C_S7RQu4)(base.EndInvoke("GetLotteries", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginGetTopBonus(zwg_china.client.framework.LotteryService.GetTopBonusImport import, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = import;
+                System.IAsyncResult _result = base.BeginInvoke("GetTopBonus", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4 EndGetTopBonus(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4 _result = ((zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4)(base.EndInvoke("GetTopBonus", _args, result)));
                 return _result;
             }
             

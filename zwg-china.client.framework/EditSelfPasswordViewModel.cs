@@ -107,11 +107,7 @@ namespace zwg_china.client.framework
 
         void Logout(object sender, EventArgs e)
         {
-            DataManager.RemoveValue(DataKey.IWorld_Client_Setting);
-            DataManager.RemoveValue(DataKey.IWorld_Client_Tickets);
-            DataManager.RemoveValue(DataKey.IWorld_Client_Token);
-            DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
-            ViewModelService.JumpToDefaultPage();
+            ClearInfoAndLogout();
         }
 
         #endregion

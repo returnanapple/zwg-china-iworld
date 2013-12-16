@@ -85,6 +85,7 @@
     <Compile Include="GetLotteriesImport.cs" />
     <Compile Include="GetPageListImportBaseOfLottery.cs" />
     <Compile Include="GetTicketsImport.cs" />
+    <Compile Include="GetTopBonusImport.cs" />
     <Compile Include="HowToPlayExport.cs" />
     <Compile Include="ILotteryService.cs" />
     <Compile Include="ImportBaseOfLottery.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecallBettingImport.cs" />
     <Compile Include="RecallChassingImport.cs" />
+    <Compile Include="TopBonus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

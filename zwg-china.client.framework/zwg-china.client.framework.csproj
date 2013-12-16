@@ -137,6 +137,9 @@
     <Compile Include="WithdrawalViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\LotteryService\zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\RecordOfAuthorService\service.wsdl" />
     <None Include="Service References\RecordOfAuthorService\service.xsd">
       <SubType>Designer</SubType>

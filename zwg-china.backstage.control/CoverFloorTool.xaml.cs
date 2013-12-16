@@ -23,6 +23,7 @@ namespace zwg_china.backstage.control
         public CoverFloorTool()
         {
             InitializeComponent();
+            
         }
 
         /// <summary>

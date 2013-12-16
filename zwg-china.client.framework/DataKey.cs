@@ -13,18 +13,30 @@ namespace zwg_china.client.framework
         /// <summary>
         /// 身份标识
         /// </summary>
-        IWorld_Client_Token = 101,
+        IWorld_Client_Token,
         /// <summary>
         /// 用户信息
         /// </summary>
-        IWorld_Client_UserInfo = 102,
+        IWorld_Client_UserInfo,
         /// <summary>
         /// 彩票信息
         /// </summary>
-        IWorld_Client_Tickets = 103,
+        IWorld_Client_Tickets,
         /// <summary>
         /// 系统设置
         /// </summary>
-        IWorld_Client_Setting = 104
+        IWorld_Client_Setting,
+        /// <summary>
+        /// 公告
+        /// </summary>
+        IWorld_Client_Bulletins,
+        /// <summary>
+        /// 中奖排行
+        /// </summary>
+        IWorld_Client_TopBouns,
+        /// <summary>
+        /// 未读通知
+        /// </summary>
+        IWorld_Client_UnReadNotices
     }
 }

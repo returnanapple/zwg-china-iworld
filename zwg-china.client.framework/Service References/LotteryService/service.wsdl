@@ -31,6 +31,12 @@
   <wsdl:message name="ILotteryService_GetLotteries_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetLotteriesResponse" />
   </wsdl:message>
+  <wsdl:message name="ILotteryService_GetTopBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopBonus" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetTopBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopBonusResponse" />
+  </wsdl:message>
   <wsdl:message name="ILotteryService_GetBettings_InputMessage">
     <wsdl:part name="parameters" element="tns:GetBettings" />
   </wsdl:message>
@@ -70,6 +76,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetLotteries" message="tns:ILotteryService_GetLotteries_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetLotteriesResponse" message="tns:ILotteryService_GetLotteries_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetTopBonus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetTopBonus" message="tns:ILotteryService_GetTopBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetTopBonusResponse" message="tns:ILotteryService_GetTopBonus_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetBettings">
       <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetBettings" message="tns:ILotteryService_GetBettings_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetBettingsResponse" message="tns:ILotteryService_GetBettings_OutputMessage" />
@@ -106,6 +116,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetLotteries">
       <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetLotteries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopBonus">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetTopBonus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

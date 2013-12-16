@@ -103,26 +103,50 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LotteryExport" nillable="true" type="tns:LotteryExport" />
+  <xs:complexType name="GetTopBonusImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetPageListImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Notes" type="xs:int" />
+          <xs:element minOccurs="0" name="TicketId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetTopBonusImport" nillable="true" type="tns:GetTopBonusImport" />
+  <xs:complexType name="GetPageListImportBaseOfLottery">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q3:GetPageListImportBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBaseOfLottery" nillable="true" type="tns:GetPageListImportBaseOfLottery" />
+  <xs:complexType name="ArrayOfTopBonus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TopBonus" nillable="true" type="tns:TopBonus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTopBonus" nillable="true" type="tns:ArrayOfTopBonus" />
+  <xs:complexType name="TopBonus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TopBonus" nillable="true" type="tns:TopBonus" />
   <xs:complexType name="GetBettingsImport">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:GetPageListImportBaseOfLottery">
         <xs:sequence>
           <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
           <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
-          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" nillable="true" type="q3:BettingStatus" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" nillable="true" type="q4:BettingStatus" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="GetBettingsImport" nillable="true" type="tns:GetBettingsImport" />
-  <xs:complexType name="GetPageListImportBaseOfLottery">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q4:GetPageListImportBase">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="GetPageListImportBaseOfLottery" nillable="true" type="tns:GetPageListImportBaseOfLottery" />
   <xs:complexType name="ArrayOfBettingExport">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="BettingExport" nillable="true" type="tns:BettingExport" />
