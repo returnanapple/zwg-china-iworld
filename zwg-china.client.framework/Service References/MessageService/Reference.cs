@@ -18,8 +18,7 @@ namespace zwg_china.client.framework.MessageService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ImportBase", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.MessageService.GetPageListImportBase))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.MessageService.GetPageListImportBaseOfMessage))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.MessageService.ImportBaseOfMessage))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.MessageService.GetBulletinsImport))]
     public partial class ImportBase : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -50,38 +49,15 @@ namespace zwg_china.client.framework.MessageService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPageListImportBase", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.MessageService.GetPageListImportBaseOfMessage))]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ImportBaseOfMessage", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.MessageService.GetBulletinsImport))]
-    public partial class GetPageListImportBase : zwg_china.client.framework.MessageService.ImportBase {
-        
-        private int PageIndexField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageIndex {
-            get {
-                return this.PageIndexField;
-            }
-            set {
-                if ((this.PageIndexField.Equals(value) != true)) {
-                    this.PageIndexField = value;
-                    this.RaisePropertyChanged("PageIndex");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPageListImportBaseOfMessage", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.MessageService.GetBulletinsImport))]
-    public partial class GetPageListImportBaseOfMessage : zwg_china.client.framework.MessageService.GetPageListImportBase {
+    public partial class ImportBaseOfMessage : zwg_china.client.framework.MessageService.ImportBase {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetBulletinsImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
-    public partial class GetBulletinsImport : zwg_china.client.framework.MessageService.GetPageListImportBaseOfMessage {
+    public partial class GetBulletinsImport : zwg_china.client.framework.MessageService.ImportBaseOfMessage {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]

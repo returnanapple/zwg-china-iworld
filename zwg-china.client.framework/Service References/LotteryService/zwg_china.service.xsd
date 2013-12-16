@@ -50,16 +50,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="NormalResultOfArrayOfLotteryExport1C_S7RQu4" nillable="true" type="tns:NormalResultOfArrayOfLotteryExport1C_S7RQu4" />
-  <xs:complexType name="GetPageListImportBase">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:ImportBase">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="GetPageListImportBase" nillable="true" type="tns:GetPageListImportBase" />
   <xs:complexType name="NormalResultOfArrayOfTopBonus1C_S7RQu4">
     <xs:annotation>
       <xs:appinfo>
@@ -78,6 +68,16 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="NormalResultOfArrayOfTopBonus1C_S7RQu4" nillable="true" type="tns:NormalResultOfArrayOfTopBonus1C_S7RQu4" />
+  <xs:complexType name="GetPageListImportBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetPageListImportBase" nillable="true" type="tns:GetPageListImportBase" />
   <xs:complexType name="PageResultOfBettingExport1C_S7RQu4">
     <xs:annotation>
       <xs:appinfo>

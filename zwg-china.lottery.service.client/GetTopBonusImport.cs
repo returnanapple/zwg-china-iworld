@@ -15,7 +15,7 @@ namespace zwg_china.service.client
     /// 用于获取中奖排行的数据集
     /// </summary>
     [DataContract]
-    public class GetTopBonusImport : GetPageListImportBaseOfLottery
+    public class GetTopBonusImport : ImportBaseOfLottery
     {
         #region 属性
 

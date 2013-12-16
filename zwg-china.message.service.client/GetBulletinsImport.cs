@@ -15,7 +15,7 @@ namespace zwg_china.service.client
     /// 用于获取公告列表的数据集
     /// </summary>
     [DataContract]
-    public class GetBulletinsImport : GetPageListImportBaseOfMessage
+    public class GetBulletinsImport : ImportBaseOfMessage
     {
         #region 方法
 

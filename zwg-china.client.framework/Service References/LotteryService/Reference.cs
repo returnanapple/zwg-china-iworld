@@ -20,11 +20,11 @@ namespace zwg_china.client.framework.LotteryService {
     [System.Runtime.Serialization.DataContractAttribute(Name="ImportBase", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetPageListImportBase))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetPageListImportBaseOfLottery))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetBettingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetChasingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.ImportBaseOfLottery))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetLotteriesImport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.BetImpoert))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.RecallBettingImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.RecallChassingImport))]
@@ -60,7 +60,6 @@ namespace zwg_china.client.framework.LotteryService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetPageListImportBase", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetPageListImportBaseOfLottery))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetBettingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetChasingsImport))]
     public partial class GetPageListImportBase : zwg_china.client.framework.LotteryService.ImportBase {
@@ -84,46 +83,9 @@ namespace zwg_china.client.framework.LotteryService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetPageListImportBaseOfLottery", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetBettingsImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetChasingsImport))]
     public partial class GetPageListImportBaseOfLottery : zwg_china.client.framework.LotteryService.GetPageListImportBase {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetTopBonusImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
-    public partial class GetTopBonusImport : zwg_china.client.framework.LotteryService.GetPageListImportBaseOfLottery {
-        
-        private int NotesField;
-        
-        private System.Nullable<int> TicketIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Notes {
-            get {
-                return this.NotesField;
-            }
-            set {
-                if ((this.NotesField.Equals(value) != true)) {
-                    this.NotesField = value;
-                    this.RaisePropertyChanged("Notes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> TicketId {
-            get {
-                return this.TicketIdField;
-            }
-            set {
-                if ((this.TicketIdField.Equals(value) != true)) {
-                    this.TicketIdField = value;
-                    this.RaisePropertyChanged("TicketId");
-                }
-            }
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -217,6 +179,7 @@ namespace zwg_china.client.framework.LotteryService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ImportBaseOfLottery", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetLotteriesImport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.GetTopBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.BetImpoert))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.RecallBettingImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.client.framework.LotteryService.RecallChassingImport))]
@@ -248,6 +211,42 @@ namespace zwg_china.client.framework.LotteryService {
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int TicketId {
+            get {
+                return this.TicketIdField;
+            }
+            set {
+                if ((this.TicketIdField.Equals(value) != true)) {
+                    this.TicketIdField = value;
+                    this.RaisePropertyChanged("TicketId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetTopBonusImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
+    public partial class GetTopBonusImport : zwg_china.client.framework.LotteryService.ImportBaseOfLottery {
+        
+        private int NotesField;
+        
+        private System.Nullable<int> TicketIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Notes {
+            get {
+                return this.NotesField;
+            }
+            set {
+                if ((this.NotesField.Equals(value) != true)) {
+                    this.NotesField = value;
+                    this.RaisePropertyChanged("Notes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> TicketId {
             get {
                 return this.TicketIdField;
             }
