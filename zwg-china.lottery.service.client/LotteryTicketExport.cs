@@ -28,6 +28,12 @@ namespace zwg_china.service.client
         public string Name { get; set; }
 
         /// <summary>
+        /// 每日开奖期数
+        /// </summary>
+        [DataMember]
+        public int Installments { get; set; }
+
+        /// <summary>
         /// 当前期号
         /// </summary>
         [DataMember]
@@ -62,6 +68,12 @@ namespace zwg_china.service.client
         /// </summary>
         [DataMember]
         public int Order { get; set; }
+
+        /// <summary>
+        /// 期号的格式（例如“yymmddiii”）
+        /// </summary>
+        [DataMember]
+        public string FormatOfIssue { get; set; }
 
         /// <summary>
         /// 位
@@ -101,6 +113,7 @@ namespace zwg_china.service.client
         {
             this.Id = model.Id;
             this.Name = model.Name;
+            this.Installments = model.Installments;
             this.Issue = model.Issue;
             this.LotteryValues = model.LotteryValues;
             this.NextIssue = model.NextIssue;
@@ -108,6 +121,7 @@ namespace zwg_china.service.client
             this.Tags = model.Tags.Where(x => x.Hide == false).ToList()
                 .ConvertAll(x => new PlayTagExport(x));
             this.Order = model.Order;
+            this.FormatOfIssue = model.FormatOfIssue;
             this.Seats = model.Seats;
             this.FirstNum = model.FirstNum;
             this.CountOfNUm = model.CountOfNUm;

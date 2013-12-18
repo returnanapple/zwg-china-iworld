@@ -76,6 +76,19 @@ namespace zwg_china.service.client
         public int CountOfSeatsForWin { get; set; }
 
         /// <summary>
+        /// 中奖的位中不同号的个数（至少）（只在反奖接口为“任N组选”时有效）
+        /// </summary>
+        [DataMember]
+        public int LowerCountOfDifferentSeatsForWin { get; set; }
+
+
+        /// <summary>
+        /// 中奖的位中不同号的个数（至多）（只在反奖接口为“任N组选”时有效）
+        /// </summary>
+        [DataMember]
+        public int CapsCountOfDifferentSeatsForWin { get; set; }
+
+        /// <summary>
         /// 排序系数
         /// </summary>
         [DataMember]
@@ -109,6 +122,8 @@ namespace zwg_china.service.client
             this.OptionalSeats = model.OptionalSeats;
             this.IsDuplex = model.IsDuplex;
             this.CountOfSeatsForWin = model.CountOfSeatsForWin;
+            this.LowerCountOfDifferentSeatsForWin = model.LowerCountOfDifferentSeatsForWin;
+            this.CapsCountOfDifferentSeatsForWin = model.CapsCountOfDifferentSeatsForWin;
             this.Order = model.Order;
         }
 

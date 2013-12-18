@@ -797,7 +797,11 @@ namespace zwg_china.client.framework.LotteryService {
         
         private int FirstNumField;
         
+        private string FormatOfIssueField;
+        
         private int IdField;
+        
+        private int InstallmentsField;
         
         private string IssueField;
         
@@ -842,6 +846,19 @@ namespace zwg_china.client.framework.LotteryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FormatOfIssue {
+            get {
+                return this.FormatOfIssueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FormatOfIssueField, value) != true)) {
+                    this.FormatOfIssueField = value;
+                    this.RaisePropertyChanged("FormatOfIssue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Id {
             get {
                 return this.IdField;
@@ -850,6 +867,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Installments {
+            get {
+                return this.InstallmentsField;
+            }
+            set {
+                if ((this.InstallmentsField.Equals(value) != true)) {
+                    this.InstallmentsField = value;
+                    this.RaisePropertyChanged("Installments");
                 }
             }
         }
@@ -1113,9 +1143,13 @@ namespace zwg_china.client.framework.LotteryService {
         
         private double PayField;
         
+        private string PlayTagField;
+        
         private double PointsField;
         
         private zwg_china.client.framework.LotteryService.BettingStatus StatusField;
+        
+        private string TicketField;
         
         private string valuesField;
         
@@ -1250,6 +1284,19 @@ namespace zwg_china.client.framework.LotteryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PlayTag {
+            get {
+                return this.PlayTagField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlayTagField, value) != true)) {
+                    this.PlayTagField = value;
+                    this.RaisePropertyChanged("PlayTag");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public double Points {
             get {
                 return this.PointsField;
@@ -1271,6 +1318,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((this.StatusField.Equals(value) != true)) {
                     this.StatusField = value;
                     this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ticket {
+            get {
+                return this.TicketField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TicketField, value) != true)) {
+                    this.TicketField = value;
+                    this.RaisePropertyChanged("Ticket");
                 }
             }
         }
@@ -1323,11 +1383,15 @@ namespace zwg_china.client.framework.LotteryService {
         
         private double PayField;
         
+        private string PlayTagField;
+        
         private double PointsField;
         
         private string StartIssueField;
         
         private zwg_china.client.framework.LotteryService.ChasingStatus StatusField;
+        
+        private string TicketField;
         
         private string ValuesField;
         
@@ -1462,6 +1526,19 @@ namespace zwg_china.client.framework.LotteryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PlayTag {
+            get {
+                return this.PlayTagField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PlayTagField, value) != true)) {
+                    this.PlayTagField = value;
+                    this.RaisePropertyChanged("PlayTag");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public double Points {
             get {
                 return this.PointsField;
@@ -1496,6 +1573,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((this.StatusField.Equals(value) != true)) {
                     this.StatusField = value;
                     this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ticket {
+            get {
+                return this.TicketField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TicketField, value) != true)) {
+                    this.TicketField = value;
+                    this.RaisePropertyChanged("Ticket");
                 }
             }
         }
@@ -1730,6 +1820,8 @@ namespace zwg_china.client.framework.LotteryService {
         
         private bool AllowFreeSeatsField;
         
+        private int CapsCountOfDifferentSeatsForWinField;
+        
         private int CapsSeatsField;
         
         private int CountOfSeatsForWinField;
@@ -1739,6 +1831,8 @@ namespace zwg_china.client.framework.LotteryService {
         private zwg_china.client.framework.LotteryService.LotteryInterface InterfaceField;
         
         private bool IsDuplexField;
+        
+        private int LowerCountOfDifferentSeatsForWinField;
         
         private int LowerSeatsField;
         
@@ -1759,6 +1853,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((this.AllowFreeSeatsField.Equals(value) != true)) {
                     this.AllowFreeSeatsField = value;
                     this.RaisePropertyChanged("AllowFreeSeats");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CapsCountOfDifferentSeatsForWin {
+            get {
+                return this.CapsCountOfDifferentSeatsForWinField;
+            }
+            set {
+                if ((this.CapsCountOfDifferentSeatsForWinField.Equals(value) != true)) {
+                    this.CapsCountOfDifferentSeatsForWinField = value;
+                    this.RaisePropertyChanged("CapsCountOfDifferentSeatsForWin");
                 }
             }
         }
@@ -1824,6 +1931,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((this.IsDuplexField.Equals(value) != true)) {
                     this.IsDuplexField = value;
                     this.RaisePropertyChanged("IsDuplex");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LowerCountOfDifferentSeatsForWin {
+            get {
+                return this.LowerCountOfDifferentSeatsForWinField;
+            }
+            set {
+                if ((this.LowerCountOfDifferentSeatsForWinField.Equals(value) != true)) {
+                    this.LowerCountOfDifferentSeatsForWinField = value;
+                    this.RaisePropertyChanged("LowerCountOfDifferentSeatsForWin");
                 }
             }
         }

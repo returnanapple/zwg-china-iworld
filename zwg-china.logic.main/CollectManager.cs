@@ -462,7 +462,7 @@ namespace zwg_china.logic
                     throw new Exception("致命错误，不存在指定的彩票：" + this.TicketName);
                 }
                 var tSeatNames = ticket.Seats.Split(new char[] { ',' }).ToList();
-                var tValues = this.Values.Split(new char[] { ',' }).ToList();
+                var tValues = this.Values.Split(new char[] { ',' }).ToList().ConvertAll(x => Convert.ToInt32(x).ToString());
                 if (tSeatNames.Count != tValues.Count)
                 {
                     string error = string.Format("致命错误，采集到的彩票 {0} 的开奖号码（{1}）于标记的位无法保持一致（{2}）"

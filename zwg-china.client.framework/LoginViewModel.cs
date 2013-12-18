@@ -260,7 +260,7 @@ namespace zwg_china.client.framework
         {
             if (e.Result.Success)
             {
-                DataManager.SetValue(DataKey.IWorld_Client_Bulletins, new List<NoticeExport>());
+                DataManager.SetValue(DataKey.IWorld_Client_UnReadNotices, new List<NoticeExport>());
                 ViewModelService.JumpTo(Page.彩票投注);
             }
             else

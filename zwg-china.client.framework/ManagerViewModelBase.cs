@@ -17,7 +17,7 @@ namespace zwg_china.client.framework
     {
         #region 私有变量
 
-        string selectedButtonName = "";
+        string pageName = "";
         ObservableCollection<BulletinExport> bulletins = new ObservableCollection<BulletinExport>();
         ObservableCollection<TopBonus> topBonus = new ObservableCollection<TopBonus>();
         bool showingNotice = false;
@@ -28,20 +28,20 @@ namespace zwg_china.client.framework
         #region 公开属性
 
         /// <summary>
-        /// 高亮按键的名称
+        /// 界面名称
         /// </summary>
-        public string SelectedButtonName
+        public string PageName
         {
             get
             {
-                return selectedButtonName;
+                return pageName;
             }
             set
             {
-                if (selectedButtonName != value)
+                if (pageName != value)
                 {
-                    selectedButtonName = value;
-                    OnPropertyChanged("SelectedButtonName");
+                    pageName = value;
+                    OnPropertyChanged("PageName");
                 }
             }
         }
@@ -148,7 +148,7 @@ namespace zwg_china.client.framework
         public ManagerViewModelBase(string selectedButtonName)
         {
             //初始化参数
-            this.SelectedButtonName = selectedButtonName;
+            this.PageName = selectedButtonName;
 
             //初始化命令
             this.JumpCommand = new UniversalCommand(new Action<object>(Jump));

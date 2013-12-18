@@ -136,19 +136,19 @@ namespace zwg_china.model
             }
             else if (this.HowToPlay.Interface == LotteryInterface.任N直选)
             {
-                result = string.Join(",", this.Seats.ConvertAll(x => string.Join(" ", x.ValueList)));
+                result = string.Join(",", this.Seats.ConvertAll(x => string.Join("", x.ValueList.ConvertAll(v => GetTheRealStr(v, this.HowToPlay.Tag.Ticket.CountOfNUm)))));
             }
             else if (this.HowToPlay.Interface == LotteryInterface.任N组选
                 || this.HowToPlay.Interface == LotteryInterface.任N不定位)
             {
-                result = string.Join(" ", this.Seats.First().ValueList);
+                result = string.Join("", this.Seats.First().ValueList.ConvertAll(v => GetTheRealStr(v, this.HowToPlay.Tag.Ticket.CountOfNUm)));
             }
             else if (this.HowToPlay.Interface == LotteryInterface.任N定位胆)
             {
                 result = string.Join(",", this.Seats.ConvertAll(x =>
                 {
-                    string t = x.Values == "" ? "" : string.Join(" ", x.ValueList);
-                    return string.Format("{0}：", x.Name, t);
+                    string t = x.Values == "" ? "" : string.Join("", x.ValueList.ConvertAll(v => GetTheRealStr(v, this.HowToPlay.Tag.Ticket.CountOfNUm)));
+                    return string.Format("{0}：{1}", x.Name, t);
                 }));
             }
 
@@ -234,7 +234,15 @@ namespace zwg_china.model
                     Dictionary<string, string> tSeats = new Dictionary<string, string>();
                     for (int j = 0; j < tBettingValues.Count(); j++)
                     {
-                        tSeats.Add(seatNames[j], tBettingValues[j].ToString());
+                        if (this.HowToPlay.Tag.Ticket.CountOfNUm > 10)
+                        {
+                            string _str = tBettingValues[2 * j].ToString() + tBettingValues[2 * j + 1].ToString();
+                            tSeats.Add(seatNames[j], _str);
+                        }
+                        else
+                        {
+                            tSeats.Add(seatNames[j], tBettingValues[j].ToString());
+                        }
                     }
                     if (tSeats.All(t => t.Value == lottery.Seats.First(s => s.Name == t.Key).Value))
                     {
@@ -375,6 +383,23 @@ namespace zwg_china.model
             #endregion
 
             return notes;
+        }
+
+        #endregion
+
+        #region 转换
+
+        string GetTheRealStr(string input, int countOfNum)
+        {
+            int t = Convert.ToInt32(input);
+            if (countOfNum <= 10)
+            {
+                return t.ToString("0");
+            }
+            else
+            {
+                return t.ToString("00");
+            }
         }
 
         #endregion

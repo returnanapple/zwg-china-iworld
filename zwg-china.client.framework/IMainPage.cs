@@ -1,12 +1,13 @@
 ﻿using System.Reflection;
 using System.Windows.Controls;
+using zwg_china.client.framework.AuthorPushService;
 
 namespace zwg_china.client.framework
 {
     /// <summary>
     /// 定义主界面
     /// </summary>
-    public interface IMainPage
+    public interface IMainPage : IAuthorPushServiceCallback
     {
         /// <summary>
         /// 显示目标子界面
