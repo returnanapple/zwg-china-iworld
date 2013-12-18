@@ -28,7 +28,9 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CountOfNUm" type="xs:int" />
       <xs:element minOccurs="0" name="FirstNum" type="xs:int" />
+      <xs:element minOccurs="0" name="FormatOfIssue" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Installments" type="xs:int" />
       <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LotteryValues" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
@@ -64,11 +66,13 @@
   <xs:complexType name="HowToPlayExport">
     <xs:sequence>
       <xs:element minOccurs="0" name="AllowFreeSeats" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CapsCountOfDifferentSeatsForWin" type="xs:int" />
       <xs:element minOccurs="0" name="CapsSeats" type="xs:int" />
       <xs:element minOccurs="0" name="CountOfSeatsForWin" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Interface" type="q2:LotteryInterface" />
       <xs:element minOccurs="0" name="IsDuplex" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LowerCountOfDifferentSeatsForWin" type="xs:int" />
       <xs:element minOccurs="0" name="LowerSeats" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Odds" type="xs:double" />
@@ -165,8 +169,10 @@
       <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
       <xs:element minOccurs="0" name="Pay" type="xs:double" />
+      <xs:element minOccurs="0" name="PlayTag" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Points" type="xs:double" />
       <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q5:BettingStatus" />
+      <xs:element minOccurs="0" name="Ticket" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="values" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -200,9 +206,11 @@
       <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
       <xs:element minOccurs="0" name="Pay" type="xs:double" />
+      <xs:element minOccurs="0" name="PlayTag" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Points" type="xs:double" />
       <xs:element minOccurs="0" name="StartIssue" nillable="true" type="xs:string" />
       <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q6:ChasingStatus" />
+      <xs:element minOccurs="0" name="Ticket" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Values" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

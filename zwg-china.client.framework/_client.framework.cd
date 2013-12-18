@@ -47,7 +47,7 @@
   <Class Name="zwg_china.client.framework.LoginViewModel" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAIAAQAAAAAAAAQAAAIAAAAAAAAADQAIQIACAAQA=</HashCode>
+      <HashCode>ABQAAIAAQAAAAAAAARgAAIAAAAAAAAADQAIQIACAAQA=</HashCode>
       <FileName>LoginViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -61,7 +61,7 @@
   <Class Name="zwg_china.client.framework.ManagerViewModelBase" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CBAAAAAAAgEAAIAAAACAAAIAAAAAEAAABQAAAAgAAIA=</HashCode>
+      <HashCode>ABEQEAABAwEAAIgAAACAAEIAAQAAEAAABSAABAAAAIQ=</HashCode>
       <FileName>ManagerViewModelBase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -82,7 +82,7 @@
   <Class Name="zwg_china.client.framework.MainViewModel" Collapsed="true" HideInheritanceLine="true">
     <Position X="2.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAADAIAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>QtFigRRCAAlB4hICEgAQQBCQQQAggMgAAADIBGAB4AA=</HashCode>
       <FileName>MainViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -219,6 +219,41 @@
       <FileName>EditSelfBankInfoViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="zwg_china.client.framework.NumOfBet" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>NumOfBet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.client.framework.SeatOfBet" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgACAAAiAICAACAAAAAAQAAAAkAAABAgAAAABAAAA=</HashCode>
+      <FileName>SeatOfBet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.client.framework.TagOfBet" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAACAAgAAAAI=</HashCode>
+      <FileName>TagOfBet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.client.framework.HowToPlayOfBet" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAiAAAAI=</HashCode>
+      <FileName>HowToPlayOfBet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.client.framework.BettingWithChasingInfoOfBet" Collapsed="true" HideInheritanceLine="true">
+    <Position X="7.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>BettingWithChasingInfoOfBet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="zwg_china.client.framework.IMainPage" Collapsed="true">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -233,13 +268,6 @@
       <FileName>IPop.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="zwg_china.client.framework.ISelectedNumResult" Collapsed="true">
-    <Position X="5.75" Y="10.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
-      <FileName>ISelectedNumResult.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="zwg_china.client.framework.Page" Collapsed="true">
     <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
@@ -250,7 +278,7 @@
   <Enum Name="zwg_china.client.framework.Pop" Collapsed="true">
     <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAIAAAAAAIAAAgAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAAAAAAIAAAAAAIAAAgAAAAAAAAAAAGAAAAAAAA=</HashCode>
       <FileName>Pop.cs</FileName>
     </TypeIdentifier>
   </Enum>

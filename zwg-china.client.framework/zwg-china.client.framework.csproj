@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BetsViewModel.cs" />
+    <Compile Include="BettingWithChasingInfoOfBet.cs" />
     <Compile Include="CommissionRecordsViewModel.cs" />
     <Compile Include="ContrastManager.cs" />
     <Compile Include="CreateUserPackage.cs" />
@@ -72,14 +73,15 @@
     <Compile Include="EditSelfBankInfoViewModel.cs" />
     <Compile Include="EditSelfFundsCodeViewModel.cs" />
     <Compile Include="EditSelfPasswordViewModel.cs" />
+    <Compile Include="HowToPlayOfBet.cs" />
     <Compile Include="IMainPage.cs" />
     <Compile Include="IPop.cs" />
-    <Compile Include="ISelectedNumResult.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="ManagerViewModelBase.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="MoneyChangeViewModel.cs" />
+    <Compile Include="NumOfBet.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="Pop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="RechargeViewMolde.cs" />
     <Compile Include="RedeemPlansViewModel.cs" />
     <Compile Include="RedeemRecordsViewMolde.cs" />
+    <Compile Include="SeatOfBet.cs" />
     <Compile Include="Service References\ActicityService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +130,7 @@
     <Compile Include="ShowListViewModelBase.cs" />
     <Compile Include="SlefInfoViewModel.cs" />
     <Compile Include="StatisticsViewModel.cs" />
+    <Compile Include="TagOfBet.cs" />
     <Compile Include="UniversalCommand.cs" />
     <Compile Include="UsersViewModel.cs" />
     <Compile Include="ViewAttribute.cs" />

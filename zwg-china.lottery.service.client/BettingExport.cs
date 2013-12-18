@@ -58,6 +58,18 @@ namespace zwg_china.service.client
         public double Points { get; set; }
 
         /// <summary>
+        /// 彩票
+        /// </summary>
+        [DataMember]
+        public string Ticket { get; set; }
+
+        /// <summary>
+        /// 玩法标签
+        /// </summary>
+        [DataMember]
+        public string PlayTag { get; set; }
+
+        /// <summary>
         /// 玩法的名称
         /// </summary>
         [DataMember]
@@ -118,7 +130,9 @@ namespace zwg_china.service.client
             this.Notes = model.Notes;
             this.Multiple = model.Multiple;
             this.Points = model.Points;
-            this.HowToPlay = model.GetDescription();
+            this.Ticket = model.HowToPlay.Tag.Ticket.Name;
+            this.PlayTag = model.HowToPlay.Tag.Name;
+            this.HowToPlay = model.HowToPlay.Name;
             this.values = model.GetBetStr();
             this.Status = model.Status;
             this.Pay = model.Pay;

@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.client.framework;
+using zwg_china.client.framework.AuthorPushService;
 
 namespace zwg_china.client
 {
@@ -86,6 +87,37 @@ namespace zwg_china.client
                 });
 
             #endregion
+        }
+
+        #endregion
+
+        #region 实现IAuthorPushServiceCallback接口
+
+        public void CallWhenHaveUnreadNotices(List<NoticeExport> notices)
+        {
+            List<NoticeExport> unreadNotices = DataManager.GetValue<List<NoticeExport>>(DataKey.IWorld_Client_UnReadNotices);
+            unreadNotices.AddRange(notices);
+            DataManager.SetValue(DataKey.IWorld_Client_UnReadNotices, unreadNotices);
+        }
+
+        public void CallWhenLottery(List<LotteryTicketExport> tickets)
+        {
+            List<LotteryTicketExport> _tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
+            _tickets.ForEach(x =>
+                {
+                    var t = tickets.FirstOrDefault(c => c.Name == x.Name);
+                    if (t == null) { return; }
+                    x.Issue = t.Issue;
+                    x.NextIssue = t.NextIssue;
+                    x.NextLotteryTime = t.NextLotteryTime;
+                    x.LotteryValues = t.LotteryValues;
+                });
+            DataManager.SetValue(DataKey.IWorld_Client_Tickets, _tickets);
+        }
+
+        public void CallWhenLeave(string message)
+        {
+
         }
 
         #endregion

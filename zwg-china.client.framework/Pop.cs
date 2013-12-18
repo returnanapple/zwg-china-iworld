@@ -29,6 +29,10 @@ namespace zwg_china.client.framework
         /// <summary>
         /// 修改返点 - 赔率转换点数弹窗
         /// </summary>
-        ChangePoinWindow
+        ChangePoinWindow,
+        /// <summary>
+        /// 编辑用于追号的投注信息的弹窗
+        /// </summary>
+        EditBettingWithChasingWindow
     }
 }
