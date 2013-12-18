@@ -50,6 +50,24 @@ namespace zwg_china.service.client
         }
 
         /// <summary>
+        /// 获取中奖排行信息
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回行信息</returns>
+        public NormalResult<List<TopBonus>> GetTopBonus(GetTopBonusImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetTopBonus(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<List<TopBonus>>(null, ex.Message);
+            }
+        }
+
+        /// <summary>
         /// 获取投注记录的分页列表
         /// </summary>
         /// <param name="import">数据集</param>

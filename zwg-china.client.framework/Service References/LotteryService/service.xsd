@@ -30,73 +30,87 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetTopBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q5:GetTopBonusImport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTopBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetTopBonusResult" nillable="true" type="q6:NormalResultOfArrayOfTopBonus1C_S7RQu4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetBettings">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q5:GetBettingsImport" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q7:GetBettingsImport" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetBettingsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetBettingsResult" nillable="true" type="q6:PageResultOfBettingExport1C_S7RQu4" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetBettingsResult" nillable="true" type="q8:PageResultOfBettingExport1C_S7RQu4" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetChasings">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q7:GetChasingsImport" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q9:GetChasingsImport" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetChasingsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetChasingsResult" nillable="true" type="q8:PageResultOfChasingExport1C_S7RQu4" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="GetChasingsResult" nillable="true" type="q10:PageResultOfChasingExport1C_S7RQu4" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Bet">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q9:BetImpoert" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q11:BetImpoert" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="BetResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="BetResult" nillable="true" type="q10:NormalResult" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="BetResult" nillable="true" type="q12:NormalResult" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="RecallBetting">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q11:RecallBettingImport" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q13:RecallBettingImport" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="RecallBettingResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RecallBettingResult" nillable="true" type="q12:NormalResult" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RecallBettingResult" nillable="true" type="q14:NormalResult" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="RecallChasing">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q13:RecallChassingImport" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/zwg_china.service.client" minOccurs="0" name="import" nillable="true" type="q15:RecallChassingImport" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="RecallChasingResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RecallChasingResult" nillable="true" type="q14:NormalResult" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/zwg_china.service" minOccurs="0" name="RecallChasingResult" nillable="true" type="q16:NormalResult" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

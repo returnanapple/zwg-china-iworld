@@ -5,17 +5,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.MainTool"
     mc:Ignorable="d"
-    Width="1024" Height="700">
+    Width="1024" Height="700" Loaded="LoadedAction">
 
-    <Canvas Width="1024" Height="700">
+    <Canvas x:Name="Root" Width="1024" Height="700">
         <Canvas.Background>
             <ImageBrush Stretch="None" ImageSource="Images/MainBg.png"/>
         </Canvas.Background>
 
         <local:NewButton Width="64" Height="43" ImageNameOfBackground="提现"
-                         Canvas.Left="8" Canvas.Top="204"/>
+                         Canvas.Left="8" Canvas.Top="204" Click="ClickAction"/>
         <local:NewButton Width="64" Height="43" ImageNameOfBackground="充值"
-                         Canvas.Left="73" Canvas.Top="204"/>
+                         Canvas.Left="73" Canvas.Top="204" Click="ClickAction"/>
         <local:NewButton Width="64" Height="43" ImageNameOfBackground="信封"
                          Canvas.Left="138" Canvas.Top="204"/>
 
@@ -38,48 +38,57 @@
         </ItemsControl>
 
         <!--导航按键-->
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="首页" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="229" Canvas.Top="14"/>
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="个人中心" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="325" Canvas.Top="14"/>
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="资金管理" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="421" Canvas.Top="14"/>
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="投注明细" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="517" Canvas.Top="14"/>
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="数据报表" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="613" Canvas.Top="14"/>
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="会员管理" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="709" Canvas.Top="14"/>
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="在线客服" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="805" Canvas.Top="14"/>
-        <local:NewRadioButton Width="96" Height="52" ImageNameOfContent="安全退出" ImageNameOfBackground="NavigationButtonBg"
-                              GroupName="NavigationButtonGroup" Canvas.Left="901" Canvas.Top="14"/>
+        <local:NewRadioButton x:Name="主页" Width="96" Height="52" ImageNameOfContent="首页" ImageNameOfBackground="NavigationButtonBg"
+                              GroupName="NavigationButtonGroup" Canvas.Left="229" Canvas.Top="14" Checked="SelectPage"/>
+
+        <local:NewRadioButton x:Name="个人中心" Width="96" Height="52" ImageNameOfContent="个人中心" ImageNameOfBackground="NavigationButtonBg"
+                              GroupName="NavigationButtonGroup" Canvas.Left="325" Canvas.Top="14" Checked="SelectPage"/>
+
+        <local:NewRadioButton x:Name="资金管理" Width="96" Height="52" ImageNameOfContent="资金管理" ImageNameOfBackground="NavigationButtonBg"
+                              GroupName="NavigationButtonGroup" Canvas.Left="421" Canvas.Top="14" Checked="SelectPage"/>
+
+        <local:NewRadioButton x:Name="投注明细" Width="96" Height="52" ImageNameOfContent="投注明细" ImageNameOfBackground="NavigationButtonBg"
+                              GroupName="NavigationButtonGroup" Canvas.Left="517" Canvas.Top="14" Checked="SelectPage"/>
+
+        <local:NewRadioButton x:Name="数据报表" Width="96" Height="52" ImageNameOfContent="数据报表" ImageNameOfBackground="NavigationButtonBg"
+                              GroupName="NavigationButtonGroup" Canvas.Left="613" Canvas.Top="14" Checked="SelectPage"/>
+
+        <local:NewRadioButton x:Name="会员管理" Width="96" Height="52" ImageNameOfContent="会员管理" ImageNameOfBackground="NavigationButtonBg"
+                              GroupName="NavigationButtonGroup" Canvas.Left="709" Canvas.Top="14" Checked="SelectPage"/>
+
+        <local:NewButton Width="96" Height="52" ImageNameOfContent="在线客服" ImageNameOfBackground="NavigationButtonBg"
+                         Canvas.Left="805" Canvas.Top="14"/>
+
+        <local:NewButton Width="96" Height="52" ImageNameOfContent="安全退出" ImageNameOfBackground="NavigationButtonBg"
+                         Canvas.Left="901" Canvas.Top="14" Command="{Binding}"/>
 
         <!--游戏按键-->
-        <StackPanel Orientation="Horizontal" Width="686" Height="43" Opacity="1" Canvas.Left="214" Canvas.Top="69">
+        <StackPanel x:Name="PanelOfGameButton" Orientation="Horizontal" Visibility="Collapsed"
+                    Width="686" Height="43" Opacity="1" Canvas.Left="214" Canvas.Top="69">
             <StackPanel.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="Images/GameButtonsBg.png"/>
             </StackPanel.Background>
-            <local:NewRadioButton Width="117" Height="37"  ImageNameOfBackground="时时彩" VerticalAlignment="Top"
-                                  GroupName="GameButtonGroup"/>
-            <local:NewRadioButton Width="114" Height="37"  ImageNameOfBackground="十一选五" VerticalAlignment="Top"
-                                  GroupName="GameButtonGroup"/>
-            <local:NewRadioButton Width="114" Height="37"  ImageNameOfBackground="其他高频彩" VerticalAlignment="Top"
-                                  GroupName="GameButtonGroup"/>
-            <local:NewRadioButton Width="114" Height="37"  ImageNameOfBackground="低频彩" VerticalAlignment="Top"
-                                  GroupName="GameButtonGroup"/>
-            <local:NewRadioButton Width="114" Height="37"  ImageNameOfBackground="棋牌游戏" VerticalAlignment="Top"
-                                  GroupName="GameButtonGroup"/>
-            <local:NewRadioButton Width="113" Height="37"  ImageNameOfBackground="活动专区" VerticalAlignment="Top"
-                                  GroupName="GameButtonGroup"/>
+            <local:NewRadioButton x:Name="时时彩" Width="117" Height="37"  ImageNameOfBackground="时时彩" VerticalAlignment="Top"
+                                  GroupName="GameButtonGroup" Checked="SelectGame"/>
+            <local:NewRadioButton x:Name="十一选五" Width="114" Height="37"  ImageNameOfBackground="十一选五" VerticalAlignment="Top"
+                                  GroupName="GameButtonGroup" Checked="SelectGame"/>
+            <local:NewRadioButton x:Name="其他高频彩" Width="114" Height="37"  ImageNameOfBackground="其他高频彩" VerticalAlignment="Top"
+                                  GroupName="GameButtonGroup" Checked="SelectGame"/>
+            <local:NewRadioButton x:Name="低频彩" Width="114" Height="37"  ImageNameOfBackground="低频彩" VerticalAlignment="Top"
+                                  GroupName="GameButtonGroup" Checked="SelectGame"/>
+            <local:NewRadioButton x:Name="棋牌游戏"  Width="114" Height="37"  ImageNameOfBackground="棋牌游戏" VerticalAlignment="Top"
+                                  GroupName="GameButtonGroup" Checked="SelectGame"/>
+            <local:NewRadioButton x:Name="活动专区" Width="113" Height="37"  ImageNameOfBackground="活动专区" VerticalAlignment="Top"
+                                  GroupName="GameButtonGroup" Checked="SelectGame"/>
         </StackPanel>
 
         <!--彩票按键-->
-        <Grid Width="809" Height="29" Canvas.Left="213" Canvas.Top="105">
+        <Grid x:Name="PanelOfLotteryButton" Width="809" Height="29" 
+              Canvas.Left="213" Canvas.Top="106" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush Stretch="None" ImageSource="Images/LotteryButtonsBg.png"/>
             </Grid.Background>
-            <ItemsControl>
+            <ItemsControl x:Name="LotteryButtons">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal"/>
@@ -87,7 +96,9 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:LotteryButton ImageNameOfBackground="LotteryButtonBg" GroupName="LotteryButtonGroup"/>
+                        <local:LotteryButton Text="{Binding Lottery}" IsChecked="{Binding IsChecked, Mode=TwoWay}" 
+                                             ImageNameOfBackground="LotteryButtonBg" Checked="SelectLottery"
+                                             GroupName="LotteryButtonGroup"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

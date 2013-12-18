@@ -206,8 +206,6 @@ namespace zwg_china.client.framework.AuthorService {
     [System.Runtime.Serialization.DataContractAttribute(Name="CreateUserImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.client")]
     public partial class CreateUserImport : zwg_china.client.framework.AuthorService.ImportBaseOfAuthor {
         
-        private int ParentIdField;
-        
         private string PasswordField;
         
         private double Rebate_IndefinitePositionField;
@@ -215,19 +213,6 @@ namespace zwg_china.client.framework.AuthorService {
         private double Rebate_NormalField;
         
         private string UsernameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ParentId {
-            get {
-                return this.ParentIdField;
-            }
-            set {
-                if ((this.ParentIdField.Equals(value) != true)) {
-                    this.ParentIdField = value;
-                    this.RaisePropertyChanged("ParentId");
-                }
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Password {

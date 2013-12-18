@@ -103,6 +103,30 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LotteryExport" nillable="true" type="tns:LotteryExport" />
+  <xs:complexType name="GetTopBonusImport">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImportBaseOfLottery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Notes" type="xs:int" />
+          <xs:element minOccurs="0" name="TicketId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetTopBonusImport" nillable="true" type="tns:GetTopBonusImport" />
+  <xs:complexType name="ArrayOfTopBonus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TopBonus" nillable="true" type="tns:TopBonus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTopBonus" nillable="true" type="tns:ArrayOfTopBonus" />
+  <xs:complexType name="TopBonus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sum" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TopBonus" nillable="true" type="tns:TopBonus" />
   <xs:complexType name="GetBettingsImport">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:GetPageListImportBaseOfLottery">

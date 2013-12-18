@@ -3,20 +3,20 @@
   <xs:import namespace="http://schemas.datacontract.org/2004/07/zwg_china.service" />
   <xs:complexType name="GetBulletinsImport">
     <xs:complexContent mixed="false">
-      <xs:extension base="tns:GetPageListImportBaseOfMessage">
+      <xs:extension base="tns:ImportBaseOfMessage">
         <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="GetBulletinsImport" nillable="true" type="tns:GetBulletinsImport" />
-  <xs:complexType name="GetPageListImportBaseOfMessage">
+  <xs:complexType name="ImportBaseOfMessage">
     <xs:complexContent mixed="false">
-      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:GetPageListImportBase">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service" base="q1:ImportBase">
         <xs:sequence />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="GetPageListImportBaseOfMessage" nillable="true" type="tns:GetPageListImportBaseOfMessage" />
+  <xs:element name="ImportBaseOfMessage" nillable="true" type="tns:ImportBaseOfMessage" />
   <xs:complexType name="ArrayOfBulletinExport">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="BulletinExport" nillable="true" type="tns:BulletinExport" />

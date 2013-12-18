@@ -6,6 +6,7 @@ using System.ServiceModel;
 using zwg_china.client.framework.AuthorService;
 using zwg_china.client.framework.AuthorPushService;
 using zwg_china.client.framework.LotteryService;
+using zwg_china.client.framework.MessageService;
 
 namespace zwg_china.client.framework
 {
@@ -109,6 +110,7 @@ namespace zwg_china.client.framework
             {
                 return;
             }
+            this.LoadingMessage = "验证用户名和密码（1/7）...";
             IsBusy = true;
 
             //登陆
@@ -119,7 +121,6 @@ namespace zwg_china.client.framework
                 Username = this.Username,
                 Password = this.Password
             };
-            this.LoadingMessage = "验证用户名和密码...";
             client.LoginAsync(import);
         }
         #region 登陆结果
@@ -134,17 +135,12 @@ namespace zwg_china.client.framework
                 GetSettingImport import = new GetSettingImport { Token = e.Result.Info };
                 AuthorServiceClient client = (AuthorServiceClient)sender;
                 client.GetSettingCompleted += ShowGetSettingResult;
-                this.LoadingMessage = "加载系统设置...";
+                this.LoadingMessage = "加载系统设置（2/7）...";
                 client.GetSettingAsync(import);
             }
             else
             {
-                DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
-                this.LoadingMessage = e.Result.Error;
-                System.Threading.Thread.Sleep(1500);
-                this.Username = "";
-                this.Password = "";
-                IsBusy = false;
+                ShowLoginError(e.Result.Error);
             }
         }
 
@@ -158,17 +154,12 @@ namespace zwg_china.client.framework
                 GetUserInfoImpoert import = new GetUserInfoImpoert { Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token) };
                 AuthorServiceClient client = (AuthorServiceClient)sender;
                 client.GetUserInfoCompleted += ShowGetUserInfoResult;
-                this.LoadingMessage = "加载用户身份标识...";
+                this.LoadingMessage = "加载用户身份标识（3/7）...";
                 client.GetUserInfoAsync(import);
             }
             else
             {
-                DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
-                this.LoadingMessage = e.Result.Error;
-                System.Threading.Thread.Sleep(1500);
-                this.Username = "";
-                this.Password = "";
-                IsBusy = false;
+                ShowLoginError(e.Result.Error);
             }
         }
 
@@ -182,17 +173,12 @@ namespace zwg_china.client.framework
                 GetTicketsImport import = new GetTicketsImport { Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token) };
                 LotteryServiceClient client = new LotteryServiceClient();
                 client.GetTicketsCompleted += ShowGetTicketsResult;
-                this.LoadingMessage = "加载彩票玩法信息...";
+                this.LoadingMessage = "加载彩票玩法信息（4/7）...";
                 client.GetTicketsAsync(import);
             }
             else
             {
-                DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
-                this.LoadingMessage = e.Result.Error;
-                System.Threading.Thread.Sleep(1500);
-                this.Username = "";
-                this.Password = "";
-                IsBusy = false;
+                ShowLoginError(e.Result.Error);
             }
         }
 
@@ -203,28 +189,69 @@ namespace zwg_china.client.framework
             {
                 DataManager.SetValue(DataKey.IWorld_Client_Tickets, e.Result.Info);
 
+                GetTopBonusImport import = new GetTopBonusImport
+                {
+                    Notes = 7,
+                    Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token)
+                };
+                LotteryServiceClient client = (LotteryServiceClient)sender;
+                client.GetTopBonusCompleted += ShowGetTopBonusResult;
+                this.LoadingMessage = "加载历史记录（5/7）...";
+                client.GetTopBonusAsync(import);
+            }
+            else
+            {
+                ShowLoginError(e.Result.Error);
+            }
+        }
+
+        //处理获取中奖排行的结果
+        void ShowGetTopBonusResult(object sender, GetTopBonusCompletedEventArgs e)
+        {
+            if (e.Result.Success)
+            {
+                Dictionary<string, List<TopBonus>> tD = new Dictionary<string, List<TopBonus>>();
+                tD.Add("_all", e.Result.Info);
+                DataManager.SetValue(DataKey.IWorld_Client_TopBouns, tD);
+
+                GetBulletinsImport import = new GetBulletinsImport
+                {
+                    Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token)
+                };
+                MessageServiceClient client = new MessageServiceClient();
+                client.GetBulletinsCompleted += ShowGetBulletinsResult;
+                this.LoadingMessage = "加载系统公告（6/7）...";
+                client.GetBulletinsAsync(import);
+            }
+            else
+            {
+                ShowLoginError(e.Result.Error);
+            }
+        }
+
+        //处理获取系统公告的结果
+        void ShowGetBulletinsResult(object sender, GetBulletinsCompletedEventArgs e)
+        {
+            if (e.Result.Success)
+            {
+                DataManager.SetValue(DataKey.IWorld_Client_Bulletins, e.Result.Info);
 
                 object callback = ViewModelService.Root;
                 if (callback is IAuthorPushServiceCallback)
                 {
                     AuthorPushServiceClient client = new AuthorPushServiceClient(new InstanceContext(callback));
                     client.SetInCompleted += ShowSetInResult;
-                    this.LoadingMessage = "初始化加密信道...";
+                    this.LoadingMessage = "初始化加密信道（7/7）...";
                     client.SetInAsync(DataManager.GetValue<string>(DataKey.IWorld_Client_Token));
                 }
                 else
                 {
-                    throw new Exception("主界面没有实现 IAuthorPushServiceCallback 接口");
+                    ShowLoginError("加密信道初始化失败");
                 }
             }
             else
             {
-                DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
-                this.LoadingMessage = e.Result.Error;
-                System.Threading.Thread.Sleep(1500);
-                this.Username = "";
-                this.Password = "";
-                IsBusy = false;
+                ShowLoginError(e.Result.Error);
             }
         }
 
@@ -233,20 +260,29 @@ namespace zwg_china.client.framework
         {
             if (e.Result.Success)
             {
+                DataManager.SetValue(DataKey.IWorld_Client_Bulletins, new List<NoticeExport>());
                 ViewModelService.JumpTo(Page.彩票投注);
             }
             else
             {
-                DataManager.RemoveValue(DataKey.IWorld_Client_UserInfo);
-                this.LoadingMessage = e.Result.Error;
-                System.Threading.Thread.Sleep(1500);
-                this.Username = "";
-                this.Password = "";
-                IsBusy = false;
+                ShowLoginError(e.Result.Error);
             }
         }
 
         #endregion
+
+        #endregion
+
+        #region 私有方法
+
+        void ShowLoginError(string error)
+        {
+            this.LoadingMessage = error;
+            System.Threading.Thread.Sleep(1500);
+            this.Username = "";
+            this.Password = "";
+            IsBusy = false;
+        }
 
         #endregion
     }

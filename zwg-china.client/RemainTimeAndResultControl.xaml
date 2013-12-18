@@ -73,12 +73,8 @@
                 <RowDefinition Height="88"/>
                 <RowDefinition Height="32"/>
             </Grid.RowDefinitions>
-
-            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="第" Style="{StaticResource NextIssueTextBlockStyle}"/>
-                <TextBlock x:Name="CurrentIssueTextBlock" Style="{StaticResource NextIssueTextBlockStyle}"/>
-                <TextBlock Text="期" Style="{StaticResource NextIssueTextBlockStyle}"/>
-            </StackPanel>
+            
+                <TextBlock x:Name="CurrentIssueTextBlock" Grid.Row="0" HorizontalAlignment="Center" Style="{StaticResource NextIssueTextBlockStyle}"/>
 
             <ItemsControl Grid.Row="1" x:Name="CurrentResultItemsControl" HorizontalAlignment="Center">
                 <ItemsControl.ItemsPanel>

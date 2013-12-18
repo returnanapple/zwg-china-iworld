@@ -65,11 +65,16 @@
     <Compile Include="BetsViewModel.cs" />
     <Compile Include="CommissionRecordsViewModel.cs" />
     <Compile Include="ContrastManager.cs" />
+    <Compile Include="CreateUserPackage.cs" />
     <Compile Include="DataKey.cs" />
     <Compile Include="DataManager.cs" />
     <Compile Include="DividendRecordsViewModel.cs" />
+    <Compile Include="EditSelfBankInfoViewModel.cs" />
+    <Compile Include="EditSelfFundsCodeViewModel.cs" />
+    <Compile Include="EditSelfPasswordViewModel.cs" />
     <Compile Include="IMainPage.cs" />
     <Compile Include="IPop.cs" />
+    <Compile Include="ISelectedNumResult.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="ManagerViewModelBase.cs" />
@@ -120,8 +125,10 @@
     </Compile>
     <Compile Include="ButtonContrast.cs" />
     <Compile Include="ShowListViewModelBase.cs" />
+    <Compile Include="SlefInfoViewModel.cs" />
     <Compile Include="StatisticsViewModel.cs" />
     <Compile Include="UniversalCommand.cs" />
+    <Compile Include="UsersViewModel.cs" />
     <Compile Include="ViewAttribute.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="ViewModelService.cs" />
@@ -130,6 +137,9 @@
     <Compile Include="WithdrawalViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\LotteryService\zwg_china.client.framework.LotteryService.NormalResultOfArrayOfTopBonus1C_S7RQu4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\RecordOfAuthorService\service.wsdl" />
     <None Include="Service References\RecordOfAuthorService\service.xsd">
       <SubType>Designer</SubType>

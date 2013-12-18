@@ -178,7 +178,6 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:ImportBaseOfAuthor">
         <xs:sequence>
-          <xs:element minOccurs="0" name="ParentId" type="xs:int" />
           <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Rebate_IndefinitePosition" type="xs:double" />
           <xs:element minOccurs="0" name="Rebate_Normal" type="xs:double" />

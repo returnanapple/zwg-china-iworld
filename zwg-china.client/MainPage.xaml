@@ -9,12 +9,13 @@
 
     <Grid x:Name="root">
         <!--主显示区-->
-        <Grid x:Name="body">
-            <local:MainTool HorizontalAlignment="Left" Margin="13,14,0,0" VerticalAlignment="Top"/>
+        <Grid x:Name="body" Background="Gray">
+            <local:MainTool/>
         </Grid>
         <!--遮蔽层-->
         <Grid>
             <local:CoverFloorTool CanSee="{Binding IsBusy}" Message="{Binding LoadingMessage}"/>
         </Grid>
+        
     </Grid>
 </UserControl>

@@ -31,6 +31,14 @@ namespace zwg_china.service.client
         NormalResult<List<LotteryExport>> GetLotteries(GetLotteriesImport import);
 
         /// <summary>
+        /// 获取中奖排行信息
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回行信息</returns>
+        [OperationContract]
+        NormalResult<List<TopBonus>> GetTopBonus(GetTopBonusImport import);
+
+        /// <summary>
         /// 获取投注记录的分页列表
         /// </summary>
         /// <param name="import">数据集</param>
