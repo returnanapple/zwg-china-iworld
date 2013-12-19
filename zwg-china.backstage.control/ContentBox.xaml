@@ -8,12 +8,8 @@
     <ContentControl.Template>
         <ControlTemplate>
             <Grid MinHeight="200" MinWidth="400">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
                 <!--背景-->
-                <Grid Grid.RowSpan="2">
+                <Grid>
                     <Border Background="White" BorderBrush="#CCC" BorderThickness="1" CornerRadius="5"/>
                     <Border Height="50" CornerRadius="5" VerticalAlignment="Top" Margin="1,1,1,0">
                         <Border.Background>
@@ -27,11 +23,15 @@
                     <Border Background="#CCC" Height="1" VerticalAlignment="Top" Margin="1,45,1,0"/>
                     <Border BorderBrush="White" BorderThickness="1" CornerRadius="5" Margin="1"/>
                 </Grid>
-                <!--标题-->
-                <TextBlock Text="{Binding SelectedText_Page}" FontSize="16" Foreground="Black"
+                <StackPanel>
+                    <!--标题-->
+                    <Grid Height="45">
+                        <TextBlock Text="{Binding SelectedText_Page}" FontSize="16" Foreground="Black"
                            HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0"/>
-                <!--内容-->
-                <ContentPresenter Grid.RowSpan="2"/>
+                    </Grid>
+                    <!--内容-->
+                    <ContentPresenter Grid.RowSpan="2"/>
+                </StackPanel>
             </Grid>
         </ControlTemplate>
     </ContentControl.Template>

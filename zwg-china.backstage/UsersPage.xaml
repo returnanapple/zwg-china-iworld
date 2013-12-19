@@ -38,12 +38,7 @@
             <!--以上是导航按键-->
 
             <local:ContentBox Width="800" Canvas.Top="241">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="45"></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                </Grid>
+                <local:TableTool Height="705" CountOfRow="20" PageIndex="0" TotalPage="2" Margin="25,0,25,10"/>
             </local:ContentBox>
         </StackPanel>
     </local:ManageFrame>

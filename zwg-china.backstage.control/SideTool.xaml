@@ -21,7 +21,7 @@
             <Style TargetType="HyperlinkButton">
                 <Setter Property="HorizontalAlignment" Value="Left"></Setter>
                 <Setter Property="VerticalAlignment" Value="Top"></Setter>
-                <Setter Property="FontFamily" Value="font/msyh.ttc#Microsoft Yahei"></Setter>
+                <Setter Property="FontFamily" Value="SimSun"></Setter>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate>
@@ -91,10 +91,10 @@
                 <Run Foreground="White" Text="{Binding Username}"></Run>
             </TextBlock>
             <TextBlock Style="{StaticResource ResourceKey=userInfo}" Grid.Row="1" Text="{Binding Group}"/>
-            <HyperlinkButton Content="编辑账户" Grid.Row="2" Margin="101,21,0,0"
+            <HyperlinkButton Content="编辑账户" Grid.Row="2" Margin="101,23,0,0"
                              ToolTipService.ToolTip="编辑你的管理员账户" Click="OnEditAccount"/>
             <TextBlock Text="|" Grid.Row="2" Style="{StaticResource ResourceKey=normal}" Margin="150,23,0,0"/>
-            <HyperlinkButton Content="安全退出" Grid.Row="2" Margin="161,21,0,0"
+            <HyperlinkButton Content="安全退出" Grid.Row="2" Margin="161,23,0,0"
                              ToolTipService.ToolTip="退出后台管理系统" Click="OnLogout"/>
         </Grid>
         <StackPanel VerticalAlignment="Top" Grid.Row="2">

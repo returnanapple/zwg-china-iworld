@@ -12,7 +12,7 @@
                     <ControlTemplate>
                         <Grid Cursor="Hand" Background="#00000000">
                             <ContentControl HorizontalAlignment="Right" VerticalAlignment="Center"
-                                    FontFamily="font/msyh.ttc#Microsoft Yahei"
+                                    FontFamily="SimSun"
                                     Margin="0,0,10,0">
                                 <ContentControl.Foreground>
                                     <SolidColorBrush x:Name="_color" Color="#AAA"/>
@@ -48,7 +48,7 @@
                     <ControlTemplate>
                         <Grid Cursor="Hand" Background="{TemplateBinding Property=Background}">
                             <ContentControl HorizontalAlignment="Right" VerticalAlignment="Center"
-                                    FontFamily="font/msyh.ttc#Microsoft Yahei"
+                                    FontFamily="SimSun"
                                     Margin="0,0,10,0" Foreground="White">
                                 <ContentPresenter/>
                             </ContentControl>
