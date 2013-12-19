@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.client.framework;
+using zwg_china.client.framework.AuthorService;
 using zwg_china.client.framework.LotteryService;
 
 namespace zwg_china.client
@@ -23,19 +24,16 @@ namespace zwg_china.client
             InitializeComponent();
             InitializeList();
             LotteryButtons.ItemsSource = lotteryStateCollection;
+            (Resources["GetUserInfo"] as Storyboard).Begin();
         }
 
         #region 私有字段
         List<LotteryTicketExport> tickets;
         List<ButtonContrast> contrasts;
         ObservableCollection<StateOfLottery> lotteryStateCollection;
-        bool canJump = true;
         #endregion
 
         #region 依赖属性
-        /// <summary>
-        /// 选中的页面名称
-        /// </summary>
         public string PageName
         {
             get { return (string)GetValue(PageNameProperty); }
@@ -48,35 +46,30 @@ namespace zwg_china.client
                 string te = (string)e.NewValue;
                 if (te == "个人中心" || te == "资金管理" || te == "投注明细" || te == "数据报表" || te == "会员管理")
                 {
-                    (td.Root.FindName(te) as NewRadioButton).IsChecked = true;
-                    td.PanelOfGameButton.Visibility = Visibility.Collapsed;
-                    td.PanelOfLotteryButton.Visibility = Visibility.Collapsed;
-                }
-                else if (te == "积分兑换")
-                {
-                    td.活动专区.IsChecked = true;
-                    td.lotteryStateCollection.Clear();
-                    td.lotteryStateCollection.Add(new StateOfLottery("积分兑换", false));
-                    td.lotteryStateCollection.ToList().First(x => x.Lottery == "积分兑换").IsChecked = true;
+                    (td.PanelOfNavigationButton.FindName(te) as NewRadioButton).IsChecked = true;
                     td.PanelOfGameButton.Visibility = Visibility.Collapsed;
                     td.PanelOfLotteryButton.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    foreach (ButtonContrast i in td.contrasts)
+                    td.首页.IsChecked = true;
+                    if (te == "积分兑换")
                     {
-                        if (i.ButtonNames.Contains(te))
-                        {
-                            (td.PanelOfGameButton.FindName(i.GroupName) as NewRadioButton).IsChecked = true;
-                            td.lotteryStateCollection.ToList().First(x => x.Lottery == te).IsChecked = true;
-                            td.PanelOfGameButton.Visibility = Visibility.Visible;
-                            td.PanelOfLotteryButton.Visibility = Visibility.Visible;
-                            break;
-                        }
+                        td.活动专区.IsChecked = true;
+                        td.lotteryStateCollection.First(x => x.Lottery == te).IsChecked = true;
                     }
+                    else
+                    {
+                        string groupName = td.contrasts.First(x => x.ButtonNames.Contains(te)).GroupName;
+                        (td.PanelOfGameButton.FindName(groupName) as NewRadioButton).IsChecked = true;
+                        td.lotteryStateCollection.First(x => x.Lottery == te).IsChecked = true;
+                    }
+                    td.PanelOfGameButton.Visibility = Visibility.Visible;
+                    td.PanelOfLotteryButton.Visibility = Visibility.Visible;
                 }
-
             }));
+
+
         /// <summary>
         /// 页面跳转命令
         /// </summary>
@@ -92,10 +85,11 @@ namespace zwg_china.client
         #region 函数
         private void LoadedAction(object sender, RoutedEventArgs e)
         {
-            //App.Current.MainWindow.Width = 1024;
-            //App.Current.MainWindow.Height = 700;
+            App.Current.MainWindow.Width = 1024;
+            App.Current.MainWindow.Height = 700;
         }
 
+        #region 初始化列表
         void InitializeList()
         {
             tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
@@ -106,16 +100,22 @@ namespace zwg_china.client
             });
             lotteryStateCollection = new ObservableCollection<StateOfLottery>();
         }
+        #endregion
 
         #region Checked事件
-        void SelectPage(object sender, RoutedEventArgs e)
+        void SelectMainPage(object sender, RoutedEventArgs e)
         {
             NewRadioButton nrb = (NewRadioButton)sender;
-            if (nrb.ImageNameOfContent == PageName)
+            if (nrb.Name == "首页" && PageName != "个人中心" && PageName != "资金管理"
+                && PageName != "投注明细" && PageName != "数据报表" && PageName != "会员管理")
             {
                 return;
             }
-            switch (nrb.ImageNameOfContent)
+            else if (nrb.Name == PageName)
+            {
+                return;
+            }
+            switch (nrb.Name)
             {
                 case "首页":
                     Jump.Execute(tickets.First().Name);
@@ -137,70 +137,55 @@ namespace zwg_china.client
                     break;
                 default:
                     break;
-                //case "首页":
-                //    PageName = tickets.First().Name;
-                //    break;
-                //case "个人中心":
-                //    PageName = "个人中心";
-                //    break;
-                //case "资金管理":
-                //    PageName = "资金管理";
-                //    break;
-                //case "投注明细":
-                //    PageName = "投注明细";
-                //    break;
-                //case "数据报表":
-                //    PageName = "数据报表";
-                //    break;
-                //case "会员管理":
-                //    PageName = "会员管理";
-                //    break;
-                //default:
-                //    break;
             }
         }
 
-        private void SelectGame(object sender, RoutedEventArgs e)
+        void SelectGame(object sender, RoutedEventArgs e)
         {
             NewRadioButton nrb = (NewRadioButton)sender;
             lotteryStateCollection.Clear();
-            if (nrb.ImageNameOfBackground == "活动专区")
+            if (nrb.Name == "活动专区")
             {
-                lotteryStateCollection.Add(new StateOfLottery("积分兑换", false));
+                if (PageName == "积分兑换")
+                {
+                    lotteryStateCollection.Add(new StateOfLottery("积分兑换", true));
+                }
+                else
+                {
+                    lotteryStateCollection.Add(new StateOfLottery("积分兑换", false));
+                }
             }
             else
             {
                 foreach (ButtonContrast i in contrasts)
                 {
-                    if (nrb.ImageNameOfBackground == i.GroupName)
+                    if (i.GroupName == nrb.Name)
                     {
                         i.ButtonNames.ForEach(x =>
                         {
-                            lotteryStateCollection.Add(new StateOfLottery(x, false));
+                            if (x == PageName)
+                            {
+                                lotteryStateCollection.Add(new StateOfLottery(x, true));
+                            }
+                            else
+                            {
+                                lotteryStateCollection.Add(new StateOfLottery(x, false));
+                            }
                         });
                         break;
                     }
                 }
             }
-            foreach (StateOfLottery i in lotteryStateCollection)
-            {
-                if (i.Lottery == PageName)
-                {
-                    i.IsChecked = true;
-                    break;
-                }
-            }
-
         }
 
-        private void SelectLottery(object sender, RoutedEventArgs e)
+        void SelectLottery(object sender, RoutedEventArgs e)
         {
             LotteryButton lb = (LotteryButton)sender;
-            if (lb.Text != PageName)
+            if (lb.Text == PageName)
             {
-                Jump.Execute(lb.Text);
+                return;
             }
-
+            Jump.Execute(lb.Text);
         }
         #endregion
 
@@ -219,6 +204,17 @@ namespace zwg_china.client
                 default:
                     break;
             }
+        }
+        #endregion
+
+        #region 故事版完成事件
+        void ReflashUserInfo(object sender, EventArgs e)
+        {
+            AuthorExport userInfo = DataManager.GetValue<AuthorExport>(DataKey.IWorld_Client_UserInfo);
+            昵称.Text = userInfo.Username;
+            余额.Text = userInfo.Money.ToString();
+            积分.Text = userInfo.Integral.ToString();
+            等级.Text = userInfo.Group.Name;
         }
         #endregion
 
@@ -277,5 +273,7 @@ namespace zwg_china.client
             #endregion
         }
         #endregion
+
+
     }
 }

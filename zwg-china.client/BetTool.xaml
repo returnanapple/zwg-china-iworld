@@ -9,7 +9,7 @@
     <ItemsControl x:Name="BetInfoItemsControl">
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <local:BetBar Tittle="{Binding Tittle}" SingleSelectList="{Binding AllSingleSelect}" Margin="0,0,0,5"/>
+                <!--<local:BetBar Tittle="{Binding Tittle}" SingleSelectList="{Binding AllSingleSelect}" Margin="0,0,0,5"/>-->
             </DataTemplate>
         </ItemsControl.ItemTemplate>
     </ItemsControl>

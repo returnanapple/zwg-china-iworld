@@ -47,11 +47,11 @@ namespace zwg_china.client
         /// </summary>
         public string CurrentIssue
         {
-            get { return (string)GetValue(LastIssueProperty); }
-            set { SetValue(LastIssueProperty, value); }
+            get { return (string)GetValue(CurrentIssueProperty); }
+            set { SetValue(CurrentIssueProperty, value); }
         }
-        public static readonly DependencyProperty LastIssueProperty =
-            DependencyProperty.Register("LastIssue", typeof(string), typeof(RemainTimeAndResultControl), new PropertyMetadata(""));
+        public static readonly DependencyProperty CurrentIssueProperty =
+            DependencyProperty.Register("CurrentIssue", typeof(string), typeof(RemainTimeAndResultControl), new PropertyMetadata(""));
         /// <summary>
         /// 当前结果
         /// </summary>

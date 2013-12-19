@@ -93,6 +93,9 @@
     <Compile Include="LotteryButton.xaml.cs">
       <DependentUpon>LotteryButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LotteryTool.xaml.cs">
+      <DependentUpon>LotteryTool.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,9 @@
     </Compile>
     <Compile Include="NewRadioButton.xaml.cs">
       <DependentUpon>NewRadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NoBorderTextBox.xaml.cs">
+      <DependentUpon>NoBorderTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="PlayTagButton.xaml.cs">
       <DependentUpon>PlayTagButton.xaml</DependentUpon>
@@ -153,6 +159,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="LotteryTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NewRadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NoBorderTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -365,9 +379,6 @@
     <None Include="Properties\OutOfBrowserSettings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\pstemp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\MainBg.png" />
   </ItemGroup>
   <ItemGroup>
@@ -378,6 +389,30 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\结果-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RemainTimeBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pstemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AboutBetButtonBg_MouseOver.png" />
+    <Resource Include="Images\AboutBetButtonBg_Normal.png" />
+    <Resource Include="Images\AboutBetButtonBg_Pressed.png" />
+    <Resource Include="Images\一键清除.png" />
+    <Resource Include="Images\我要追号.png" />
+    <Resource Include="Images\添加号码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NewSliderThumb_Hover.png" />
+    <Resource Include="Images\NewSliderThumb_Normal.png" />
+    <Resource Include="Images\NewSliderThumb_Selected.png" />
+    <Resource Include="Images\NewSlider_Bg.png" />
+    <Resource Include="Images\NewSlider_Bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotteryToolBg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

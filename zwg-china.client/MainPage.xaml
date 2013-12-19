@@ -10,12 +10,13 @@
     <Grid x:Name="root">
         <!--主显示区-->
         <Grid x:Name="body" Background="Gray">
-            <local:MainTool/>
+            <local:LotteryTool HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Grid>
         <!--遮蔽层-->
         <Grid>
             <local:CoverFloorTool CanSee="{Binding IsBusy}" Message="{Binding LoadingMessage}"/>
         </Grid>
         
+
     </Grid>
 </UserControl>

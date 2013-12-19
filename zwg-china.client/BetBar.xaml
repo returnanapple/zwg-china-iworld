@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Image x:Name="ImageOfTittle" Grid.Column="0" Stretch="None"/>
 
-        <ItemsControl x:Name="Selections" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left">
+        <ItemsControl x:Name="Selections" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" ItemsSource="{Binding Nums}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -24,19 +24,19 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <local:NewCheckBoxWithOffsetEffect Width="31" Height="32" ImageNameOfBackground="NumberButtonBg" Margin="2,0,2,0"
-                                                       ImageNameOfContent="{Binding Number}" 
+                                                       ImageNameOfContent="{Binding Num}" 
                                                        IsChecked="{Binding Selected,Mode=TwoWay}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
 
         <StackPanel x:Name="MultiSelectNumberButtons" Grid.Column="2" Orientation="Horizontal">
-            <local:NewButton ImageNameOfContent="大"/>
-            <local:NewButton ImageNameOfContent="小" Margin="6,0,6,0"/>
-            <local:NewButton ImageNameOfContent="单"/>
-            <local:NewButton ImageNameOfContent="双" Margin="6,0,6,0"/>
-            <local:NewButton ImageNameOfContent="全"/>
-            <local:NewButton ImageNameOfContent="清" Margin="6,0,0,0"/>
+            <local:NewButton ImageNameOfContent="大" Command="{Binding SelectBigCommand}"/>
+            <local:NewButton ImageNameOfContent="小" Command="{Binding SelectSmallCommand}" Margin="6,0,6,0"/>
+            <local:NewButton ImageNameOfContent="单" Command="{Binding SelectSingleCommand}"/>
+            <local:NewButton ImageNameOfContent="双" Command="{Binding SelectDoubleCommand}" Margin="6,0,6,0"/>
+            <local:NewButton ImageNameOfContent="全" Command="{Binding SelectAllCommand}"/>
+            <local:NewButton ImageNameOfContent="清" Command="{Binding ClearCommand}" Margin="6,0,0,0"/>
         </StackPanel>
     </Grid>
 </UserControl>
