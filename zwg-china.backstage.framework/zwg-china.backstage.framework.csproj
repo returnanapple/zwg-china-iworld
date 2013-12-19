@@ -61,17 +61,38 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorGroupViewModel.cs" />
+    <Compile Include="AdministratorLandingRecordsViewModel.cs" />
+    <Compile Include="AdministratorsViewModel.cs" />
+    <Compile Include="AuthorSettingViewModel.cs" />
+    <Compile Include="BasicSettingViewModel.cs" />
+    <Compile Include="BettingsViewModel.cs" />
+    <Compile Include="BulletinsViewModel.cs" />
+    <Compile Include="ChasingsViewModel.cs" />
+    <Compile Include="CommissionRecordsViewModel.cs" />
     <Compile Include="DataKey.cs" />
     <Compile Include="DataManager.cs" />
+    <Compile Include="DividendRecordsViewModel.cs" />
+    <Compile Include="EditSQDModel.cs" />
+    <Compile Include="EditSQModel.cs" />
     <Compile Include="IMainPage.cs" />
     <Compile Include="IndexViewModel.cs" />
     <Compile Include="IPop.cs" />
     <Compile Include="LoginViewModel.cs" />
+    <Compile Include="LotteriesViewModel.cs" />
     <Compile Include="ManagerViewModelBase.cs" />
     <Compile Include="ModelBase.cs" />
+    <Compile Include="MoneyChangeRecordsViewModel.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="Pop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebateRecordsViewModel.cs" />
+    <Compile Include="RechargeRecordsViewModel.cs" />
+    <Compile Include="RedeemPlansViewModel.cs" />
+    <Compile Include="RersonalAndTeamReportsViewModel.cs" />
+    <Compile Include="RewardForConsumptionPlansViewModel.cs" />
+    <Compile Include="RewardForRechargePlansViewModel.cs" />
+    <Compile Include="RewardForRegisterPlansViewModel.cs" />
     <Compile Include="Service References\ActicityService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,12 +133,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ShowListViewModelBase.cs" />
+    <Compile Include="SiteReportsViewModel.cs" />
+    <Compile Include="SystemQuotasViewModel.cs" />
+    <Compile Include="SystemBankAccountsViewModel.cs" />
+    <Compile Include="TicketSettingViewModel.cs" />
+    <Compile Include="TicketsViewModel.cs" />
+    <Compile Include="TransferRecordsViewModel.cs" />
     <Compile Include="UniversalCommand.cs" />
+    <Compile Include="UserGroupsViewModel.cs" />
+    <Compile Include="UserLandingRecordsViewModel.cs" />
     <Compile Include="UsersViewModel.cs" />
     <Compile Include="ViewAttribute.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="ViewModelService.cs" />
+    <Compile Include="VirtualBonusViewModel.cs" />
     <Compile Include="WindowAttribute.cs" />
+    <Compile Include="WithdrawalsRecordsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ActicityService\Reference.svcmap">

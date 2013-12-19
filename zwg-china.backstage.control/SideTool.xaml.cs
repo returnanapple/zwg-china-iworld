@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using zwg_china.backstage.framework;
+using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.control
 {
@@ -20,6 +22,36 @@ namespace zwg_china.backstage.control
         {
             InitializeComponent();
             root.DataContext = selectedInfo;
+            this.Loaded += SideTool_Loaded;
+        }
+
+        void SideTool_Loaded(object sender, RoutedEventArgs e)
+        {
+            AdministratorExport info = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
+            if (!info.Group.CanViewUsers)
+            {
+                tag_users.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            if (!info.Group.CanViewTickets)
+            {
+                tag_tickets.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            if (!info.Group.CanViewActivities)
+            {
+                tag_activities.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            if (!info.Group.CanViewDataReports)
+            {
+                tag_datareports.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            if (!info.Group.CanViewSettings)
+            {
+                tag_settings.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            if (!info.Group.CanViewAdministrator)
+            {
+                tag_administrators.Visibility = System.Windows.Visibility.Collapsed;
+            }
         }
 
         #region 依赖属性
@@ -128,7 +160,7 @@ namespace zwg_china.backstage.control
 
         public static readonly DependencyProperty LogoutCommandProperty =
             DependencyProperty.Register("LogoutCommand", typeof(ICommand), typeof(SideTool), new PropertyMetadata(null));
-            
+
         #endregion
 
         /// <summary>

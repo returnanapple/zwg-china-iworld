@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Collections.ObjectModel;
 
-namespace zwg_china.client.framework
+namespace zwg_china.backstage.framework
 {
     /// <summary>
     /// 列表页的试图的基类
@@ -97,9 +97,10 @@ namespace zwg_china.client.framework
         /// <summary>
         /// 实例化一个新的列表页的试图的基类
         /// </summary>
-        /// <param name="pageName">界面名称</param>
-        public ShowListViewModelBase(string pageName)
-            : base(pageName)
+        /// <param name="selectedText_Menu">导航选择文本</param>
+        /// <param name="selectedText_Page">页面选择文本</param>
+        public ShowListViewModelBase(string selectedText_Menu, string selectedText_Page)
+            : base(selectedText_Menu, selectedText_Page)
         {
             this.RefreshCommand = new UniversalCommand(Refresh);
             this.RestCommand = new UniversalCommand(Reset);

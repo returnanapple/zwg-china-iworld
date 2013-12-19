@@ -41,7 +41,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:GetPageListImportBaseOfAdministrator">
         <xs:sequence>
-          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KeywordForGroupName" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

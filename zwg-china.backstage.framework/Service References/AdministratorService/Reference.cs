@@ -875,17 +875,17 @@ namespace zwg_china.backstage.framework.AdministratorService {
     [System.Runtime.Serialization.DataContractAttribute(Name="GetAdministratorGroupsImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
     public partial class GetAdministratorGroupsImport : zwg_china.backstage.framework.AdministratorService.GetPageListImportBaseOfAdministrator {
         
-        private string KeywordForUsernameField;
+        private string KeywordForGroupNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KeywordForUsername {
+        public string KeywordForGroupName {
             get {
-                return this.KeywordForUsernameField;
+                return this.KeywordForGroupNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.KeywordForUsernameField, value) != true)) {
-                    this.KeywordForUsernameField = value;
-                    this.RaisePropertyChanged("KeywordForUsername");
+                if ((object.ReferenceEquals(this.KeywordForGroupNameField, value) != true)) {
+                    this.KeywordForGroupNameField = value;
+                    this.RaisePropertyChanged("KeywordForGroupName");
                 }
             }
         }

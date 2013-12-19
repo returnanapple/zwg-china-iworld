@@ -23,7 +23,7 @@ namespace zwg_china.service.backstage
         /// 关键字
         /// </summary>
         [DataMember]
-        public string KeywordOfName { get; set; }
+        public string KeywordForName { get; set; }
 
         #endregion
 
@@ -42,10 +42,10 @@ namespace zwg_china.service.backstage
 
             Expression<Func<LotteryTicket, bool>> predicate1 = x => x.Id > 0;
 
-            if (this.KeywordOfName != null)
+            if (this.KeywordForName != null)
             {
-                this.KeywordOfName = VerifyHelper.EliminateSpaces(this.KeywordOfName);
-                string[] keywords = this.KeywordOfName.Split(new char[] { ' ' });
+                this.KeywordForName = VerifyHelper.EliminateSpaces(this.KeywordForName);
+                string[] keywords = this.KeywordForName.Split(new char[] { ' ' });
                 predicate1 = x => keywords.All(kw => x.Name.Contains(kw));
             }
 

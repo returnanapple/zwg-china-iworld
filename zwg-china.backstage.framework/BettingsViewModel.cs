@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using zwg_china.backstage.framework.AuthorService;
 using zwg_china.backstage.framework.AdministratorService;
+using zwg_china.backstage.framework.LotteryService;
 
 namespace zwg_china.backstage.framework
 {
     /// <summary>
-    /// 查看用户列表页的视图模型
+    /// 查看投注记录页的视图模型
     /// </summary>
-    public class UsersViewModel : ShowListViewModelBase<AuthorExport, AuthorServiceClient>
+    public class BettingsViewModel : ShowListViewModelBase<BettingExport, LotteryServiceClient>
     {
         #region 私有字段
 
         string keywordForUsername = null;
-        int? groupId = null;
-        int? belongingUserId = null;
+        int? ownerId = null;
+        DateTime? beginTime = null;
+        DateTime? endTime = null;
+        BettingStatus? status = null;
 
         #endregion
 
@@ -37,30 +39,58 @@ namespace zwg_china.backstage.framework
         }
 
         /// <summary>
-        /// 所从属的用户组的存储指针
+        /// 用户的存储指针
         /// </summary>
-        public int? GroupId
+        public int? OwnerId
         {
-            get { return groupId; }
+            get { return ownerId; }
             set
             {
-                if (groupId == value) { return; }
-                groupId = value;
-                OnPropertyChanged("GroupId");
+                if (ownerId == value) { return; }
+                ownerId = value;
+                OnPropertyChanged("OwnerId");
             }
         }
 
         /// <summary>
-        /// 所隶属的上级（无论是否直属）用户的存储指针
+        /// 起始时间
         /// </summary>
-        public int? BelongingUserId
+        public DateTime? BeginTime
         {
-            get { return belongingUserId; }
+            get { return beginTime; }
             set
             {
-                if (belongingUserId == value) { return; }
-                belongingUserId = value;
-                OnPropertyChanged("BelongingUserId");
+                if (beginTime == value) { return; }
+                beginTime = value;
+                OnPropertyChanged("BeginTime");
+            }
+        }
+
+        /// <summary>
+        /// 终止时间
+        /// </summary>
+        public DateTime? EndTime
+        {
+            get { return endTime; }
+            set
+            {
+                if (endTime == value) { return; }
+                endTime = value;
+                OnPropertyChanged("EndTime");
+            }
+        }
+
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public BettingStatus? Status
+        {
+            get { return status; }
+            set
+            {
+                if (status == value) { return; }
+                status = value;
+                OnPropertyChanged("Status");
             }
         }
 
@@ -68,8 +98,8 @@ namespace zwg_china.backstage.framework
 
         #region 构造方法
 
-        public UsersViewModel()
-            : base("用户管理", "查看用户列表")
+        public BettingsViewModel()
+            : base("彩票管理", "查看投注记录")
         {
         }
 
@@ -80,27 +110,31 @@ namespace zwg_china.backstage.framework
         protected override void Refresh(object obj)
         {
             int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
-            GetUsersImport import = new GetUsersImport
+            GetBettingsImport import = new GetBettingsImport
             {
                 KeywordForUsername = this.KeywordForUsername,
-                GroupId = this.GroupId,
-                BelongingUserId = this.BelongingUserId,
+                OwnerId = this.OwnerId,
+                BeginTime = this.BeginTime,
+                EndTime = this.EndTime,
+                Status = this.Status,
                 PageIndex = _pageIndex,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
-            client.GetUsersAsync(import);
+            client.GetBettingsAsync(import);
         }
 
         protected override void Reset(object obj)
         {
             this.KeywordForUsername = null;
-            this.GroupId = null;
-            this.BelongingUserId = null;
+            this.OwnerId = null;
+            this.BeginTime = null;
+            this.EndTime = null;
+            this.status = null;
             this.PageIndex = 1;
             Refresh(null);
         }
 
-        void ShowList(object sender, GetUsersCompletedEventArgs e)
+        void ShowList(object sender, GetBettingsCompletedEventArgs e)
         {
             if (e.Result.Success)
             {

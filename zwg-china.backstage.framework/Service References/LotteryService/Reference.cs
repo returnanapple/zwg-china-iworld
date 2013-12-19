@@ -698,17 +698,17 @@ namespace zwg_china.backstage.framework.LotteryService {
     [System.Runtime.Serialization.DataContractAttribute(Name="GetLotteryTicketsImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
     public partial class GetLotteryTicketsImport : zwg_china.backstage.framework.LotteryService.GetPageListImportBaseOfLottery {
         
-        private string KeywordOfNameField;
+        private string KeywordForNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string KeywordOfName {
+        public string KeywordForName {
             get {
-                return this.KeywordOfNameField;
+                return this.KeywordForNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.KeywordOfNameField, value) != true)) {
-                    this.KeywordOfNameField = value;
-                    this.RaisePropertyChanged("KeywordOfName");
+                if ((object.ReferenceEquals(this.KeywordForNameField, value) != true)) {
+                    this.KeywordForNameField = value;
+                    this.RaisePropertyChanged("KeywordForName");
                 }
             }
         }

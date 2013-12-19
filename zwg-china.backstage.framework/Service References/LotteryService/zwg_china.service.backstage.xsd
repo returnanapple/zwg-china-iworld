@@ -6,7 +6,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:GetPageListImportBaseOfLottery">
         <xs:sequence>
-          <xs:element minOccurs="0" name="KeywordOfName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KeywordForName" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
