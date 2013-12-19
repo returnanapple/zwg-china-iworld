@@ -19,7 +19,7 @@ namespace zwg_china.service
         /// 页码
         /// </summary>
         [DataMember]
-        public int PageInde { get; set; }
+        public int PageIndex { get; set; }
 
         /// <summary>
         /// 信息总数（条）
@@ -58,7 +58,7 @@ namespace zwg_china.service
         /// <param name="list">列表</param>
         public PageResult(int pageIndex, int countOfAllMessage, int pageSize, List<T> list)
         {
-            this.PageInde = pageIndex;
+            this.PageIndex = pageIndex;
             this.CountOfAllMessage = countOfAllMessage;
             this.PageSize = pageSize;
             this.List = list;
@@ -66,9 +66,9 @@ namespace zwg_china.service
             this.CountOfPage = this.CountOfAllMessage % this.PageSize == 0
                 ? this.CountOfAllMessage / this.PageSize
                 : this.CountOfAllMessage / this.PageSize + 1;
-            if (this.PageInde > this.CountOfPage)
+            if (this.PageIndex > this.CountOfPage)
             {
-                this.PageInde = this.CountOfPage;
+                this.PageIndex = this.CountOfPage;
             }
         }
 

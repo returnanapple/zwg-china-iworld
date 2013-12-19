@@ -30,7 +30,7 @@
           <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
           <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
           <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q1:ArrayOfTransferRecordExport" />
-          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
           <xs:element minOccurs="0" name="PageSize" type="xs:int" />
         </xs:sequence>
       </xs:extension>
@@ -69,7 +69,7 @@
           <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
           <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
           <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q2:ArrayOfRechargeRecordExport" />
-          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
           <xs:element minOccurs="0" name="PageSize" type="xs:int" />
         </xs:sequence>
       </xs:extension>
@@ -109,7 +109,7 @@
           <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
           <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
           <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q3:ArrayOfWithdrawalsRecordExport" />
-          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
           <xs:element minOccurs="0" name="PageSize" type="xs:int" />
         </xs:sequence>
       </xs:extension>
@@ -131,7 +131,7 @@
           <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
           <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
           <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q4:ArrayOfMoneyChangeRecordExport" />
-          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
           <xs:element minOccurs="0" name="PageSize" type="xs:int" />
         </xs:sequence>
       </xs:extension>
@@ -153,7 +153,7 @@
           <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
           <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
           <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q5:ArrayOfRebateRecordExport" />
-          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
           <xs:element minOccurs="0" name="PageSize" type="xs:int" />
         </xs:sequence>
       </xs:extension>
@@ -175,7 +175,7 @@
           <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
           <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
           <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q6:ArrayOfCommissionRecordExport" />
-          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
           <xs:element minOccurs="0" name="PageSize" type="xs:int" />
         </xs:sequence>
       </xs:extension>
@@ -197,7 +197,7 @@
           <xs:element minOccurs="0" name="CountOfAllMessage" type="xs:int" />
           <xs:element minOccurs="0" name="CountOfPage" type="xs:int" />
           <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage" minOccurs="0" name="List" nillable="true" type="q7:ArrayOfDividendRecordExport" />
-          <xs:element minOccurs="0" name="PageInde" type="xs:int" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
           <xs:element minOccurs="0" name="PageSize" type="xs:int" />
         </xs:sequence>
       </xs:extension>

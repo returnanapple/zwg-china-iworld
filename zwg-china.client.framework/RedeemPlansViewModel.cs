@@ -24,9 +24,10 @@ namespace zwg_china.client.framework
 
         protected override void Refresh(object obj)
         {
+            int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
             GetRedeemPlansImport import = new GetRedeemPlansImport
             {
-                PageIndex = this.PageIndex,
+                PageIndex = _pageIndex,
                 Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token)
             };
             client.GetRedeemPlansAsync(import);
@@ -42,7 +43,7 @@ namespace zwg_china.client.framework
         {
             if (e.Result.Success)
             {
-                this.PageIndex = e.Result.PageInde;
+                this.PageIndex = e.Result.PageIndex;
                 this.TotalPage = e.Result.CountOfPage;
                 UpdateLsit(e.Result.List);
             }

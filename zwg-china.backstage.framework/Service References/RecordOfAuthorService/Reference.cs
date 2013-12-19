@@ -821,7 +821,7 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.RecordOfAuthorService.RechargeRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -865,14 +865,14 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -923,7 +923,7 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.RecordOfAuthorService.WithdrawalsRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -967,14 +967,14 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1004,7 +1004,7 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.RecordOfAuthorService.MoneyChangeRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1048,14 +1048,14 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1085,7 +1085,7 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.RecordOfAuthorService.RebateRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1129,14 +1129,14 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1166,7 +1166,7 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.RecordOfAuthorService.CommissionRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1210,14 +1210,14 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1247,7 +1247,7 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.RecordOfAuthorService.DividendRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1291,14 +1291,14 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1328,7 +1328,7 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.RecordOfAuthorService.TransferRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1372,14 +1372,14 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
