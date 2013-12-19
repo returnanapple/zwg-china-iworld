@@ -1122,7 +1122,7 @@ namespace zwg_china.backstage.framework.AdministratorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.AdministratorService.AdministratorGroupExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1166,14 +1166,14 @@ namespace zwg_china.backstage.framework.AdministratorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1224,7 +1224,7 @@ namespace zwg_china.backstage.framework.AdministratorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.AdministratorService.AdministratorLandingRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1268,14 +1268,14 @@ namespace zwg_china.backstage.framework.AdministratorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1305,7 +1305,7 @@ namespace zwg_china.backstage.framework.AdministratorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.AdministratorService.OperateRecordExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1349,14 +1349,14 @@ namespace zwg_china.backstage.framework.AdministratorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }
@@ -1428,7 +1428,7 @@ namespace zwg_china.backstage.framework.AdministratorService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.AdministratorService.BasicAdministratorExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -1472,14 +1472,14 @@ namespace zwg_china.backstage.framework.AdministratorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }

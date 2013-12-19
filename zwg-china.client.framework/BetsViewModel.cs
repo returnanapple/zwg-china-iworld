@@ -93,12 +93,13 @@ namespace zwg_china.client.framework
 
         protected override void Refresh(object obj)
         {
+            int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
             GetBettingsImport import = new GetBettingsImport
             {
                 BeginTime = this.BeginTime,
                 EndTime = this.EndTime,
                 Status = this.Status,
-                PageIndex = this.PageIndex,
+                PageIndex = _pageIndex,
                 Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token)
             };
             client.GetBettingsAsync(import);
@@ -117,7 +118,7 @@ namespace zwg_china.client.framework
         {
             if (e.Result.Success)
             {
-                this.PageIndex = e.Result.PageInde;
+                this.PageIndex = e.Result.PageIndex;
                 this.TotalPage = e.Result.CountOfPage;
                 UpdateLsit(e.Result.List);
             }

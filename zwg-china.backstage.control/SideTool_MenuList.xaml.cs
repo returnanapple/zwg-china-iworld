@@ -15,7 +15,7 @@ namespace zwg_china.backstage.control
     /// <summary>
     /// 侧边栏小型导航面板
     /// </summary>
-    public partial class SideTool_MenuList : Grid
+    public partial class SideTool_MenuList : StackPanel
     {
         /// <summary>
         /// 实例化一个新的侧边栏小型导航面板

@@ -367,7 +367,7 @@ namespace zwg_china.backstage.framework.MessageService {
         
         private System.Collections.Generic.List<zwg_china.backstage.framework.MessageService.BulletinExport> ListField;
         
-        private int PageIndeField;
+        private int PageIndexField;
         
         private int PageSizeField;
         
@@ -411,14 +411,14 @@ namespace zwg_china.backstage.framework.MessageService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageInde {
+        public int PageIndex {
             get {
-                return this.PageIndeField;
+                return this.PageIndexField;
             }
             set {
-                if ((this.PageIndeField.Equals(value) != true)) {
-                    this.PageIndeField = value;
-                    this.RaisePropertyChanged("PageInde");
+                if ((this.PageIndexField.Equals(value) != true)) {
+                    this.PageIndexField = value;
+                    this.RaisePropertyChanged("PageIndex");
                 }
             }
         }

@@ -1,4 +1,4 @@
-﻿<Grid x:Class="zwg_china.backstage.control.SideTool_MenuList"
+﻿<StackPanel x:Class="zwg_china.backstage.control.SideTool_MenuList"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,7 +7,7 @@
     mc:Ignorable="d" x:Name="root" Loaded="CloseTheOpen"
     Width="200" RenderTransformOrigin="0.5,0" Visibility="Collapsed">
 
-    <Grid.Resources>
+    <StackPanel.Resources>
         <Storyboard x:Key="s_open">
             <DoubleAnimation x:Name="da_open" Storyboard.TargetName="root"
                              Storyboard.TargetProperty="Height"
@@ -20,5 +20,5 @@
                              To="0"
                              Duration="0:0:0.4"/>
         </Storyboard>
-    </Grid.Resources>
-</Grid>
+    </StackPanel.Resources>
+</StackPanel>

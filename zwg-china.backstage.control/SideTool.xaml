@@ -97,157 +97,113 @@
             <HyperlinkButton Content="安全退出" Grid.Row="2" Margin="161,21,0,0"
                              ToolTipService.ToolTip="退出后台管理系统" Click="OnLogout"/>
         </Grid>
-        <Grid VerticalAlignment="Top" Grid.Row="2">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="首页" Grid.Row="0"
+        <StackPanel VerticalAlignment="Top" Grid.Row="2">
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="首页" 
                                        Click="OnSelect" CanJump="True"/>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="用户管理" Grid.Row="1"
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="用户管理" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" Grid.Row="2"
+            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4"
                                      RelevanceText="用户管理">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看用户列表" Grid.Row="0"/>
+                                                Text="查看用户列表" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="添加新用户" Grid.Row="1"/>
+                                                Text="添加新用户" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看用户组" Grid.Row="2"/>
+                                                Text="查看用户组" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看用户登陆记录" Grid.Row="3"/>
+                                                Text="查看用户登陆记录" />
             </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="彩票管理" Grid.Row="3"
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="彩票管理" 
                                        Click="OnSelect"/>
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="5" Grid.Row="4"
+            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="5" 
                                      RelevanceText="彩票管理">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看彩票列表" Grid.Row="0"/>
+                                                Text="查看彩票列表" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                                                Text="查看开奖记录" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看玩法标签泪飙" Grid.Row="1"/>
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看玩法列表" Grid.Row="2"/>
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看开奖记录" Grid.Row="3"/>
+                                                Text="查看投注记录" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看虚拟排行" Grid.Row="4"/>
+                                                Text="查看追号记录" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="查看虚拟排行" />
             </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="公告管理" Grid.Row="5"
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="公告管理" 
                                        Click="OnSelect"/>
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="2" Grid.Row="6"
+            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="2" 
                                      RelevanceText="公告管理">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看公告列表" Grid.Row="0"/>
+                                                Text="查看公告列表" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="添加新公告" Grid.Row="1"/>
+                                                Text="添加新公告" />
             </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="活动管理" Grid.Row="7"
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="活动管理" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" Grid.Row="8"
+            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="8" 
                                      RelevanceText="活动管理">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看默认活动" Grid.Row="0"/>
+                                                Text="查看注册奖励" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看默认活动参与记录" Grid.Row="1"/>
+                                                Text="查看注册奖励的参与记录" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看兑换活动" Grid.Row="2"/>
+                                                Text="查看消费奖励" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                                                Text="查看消费奖励的参与记录" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看兑换活动参与记录" Grid.Row="3"/>
+                                                Text="查看充值奖励" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="查看充值奖励的参与记录" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="查看积分兑换" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="查看积分兑换的参与记录" />
             </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="数据报表" Grid.Row="9"
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="数据报表" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="5" Grid.Row="10"
+            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="7" 
                                      RelevanceText="数据报表">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看站点统计" Grid.Row="0"/>
+                                                Text="查看站点统计" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看个人统计" Grid.Row="1"/>
+                                                Text="查看个人统计" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看投注记录" Grid.Row="2"/>
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看充值记录" Grid.Row="3"/>
+                                                Text="查看充值记录" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看提现记录" Grid.Row="4"/>
+                                                Text="查看提现记录" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                                                Text="查看返点记录" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                                                Text="查看佣金记录" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                                                Text="查看分红记录" />
             </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="系统设置" Grid.Row="11"
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="系统设置" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" Grid.Row="12"
+            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" 
                                      RelevanceText="系统设置">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="综合设置" Grid.Row="0"/>
+                                                Text="系统相关" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="银行帐号（系统）" Grid.Row="1"/>
+                                                Text="用户相关" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="电子邮箱帐号" Grid.Row="2"/>
+                                                Text="彩票相关" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="电子邮箱服务" Grid.Row="3"/>
+                                                Text="银行帐号" />
             </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="管理员组" Grid.Row="13"
+            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="管理员组" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="3" Grid.Row="14"
+            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" 
                                      RelevanceText="管理员组">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看管理员列表" Grid.Row="0"/>
+                                                Text="查看管理员列表" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看管理员用户组" Grid.Row="1"/>
+                                                Text="查看管理员用户组" />
                 <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看管理员登陆记录" Grid.Row="2"/>
+                                                Text="查看管理员登陆记录" />
+                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="查看管理操作记录" />
             </local:SideTool_MenuList>
-        </Grid>
+        </StackPanel>
         <Border Width="5" HorizontalAlignment="Right" Grid.RowSpan="4">
             <Border.Background>
                 <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
