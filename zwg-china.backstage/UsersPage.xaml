@@ -8,7 +8,7 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="css.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -23,7 +23,7 @@
                 <TextBlock Text="你想要做点什么？" Canvas.Top="43"/>
             </Canvas>
             <!--以下是导航按键-->
-            <StackPanel Orientation="Horizontal" Height="155">
+            <StackPanel Orientation="Horizontal" Height="120">
                 <StackPanel.Resources>
                     <Style TargetType="local:MenuButton">
                         <Setter Property="VerticalAlignment" Value="Top"/>
@@ -31,14 +31,32 @@
                     </Style>
                 </StackPanel.Resources>
                 <local:MenuButton Text="查看用户列表" Icon="List" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Text="添加新用户" Icon="Pen" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看用户组" Icon="Women" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看用户登入记录" Icon="Files" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="查看帐变记录" Icon="Files" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="添加新用户" Icon="Pen" Click="CreateUser"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="155">
+                <StackPanel.Resources>
+                    <Style TargetType="local:MenuButton">
+                        <Setter Property="VerticalAlignment" Value="Top"/>
+                        <Setter Property="Margin" Value="0,0,10,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <local:MenuButton Text="高点号配额方案" Icon="Pen" Command="{Binding JumpCommand}"/>
             </StackPanel>
             <!--以上是导航按键-->
 
-            <local:ContentBox Width="800" Canvas.Top="241">
-                <local:TableTool Height="705" CountOfRow="20" PageIndex="0" TotalPage="2" Margin="25,0,25,10"/>
+            <local:ContentBox Width="800">
+                <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding JumpCommand}"
+                                 ColumnDefinitions="用户名:100,用户组:100,账户余额:120,消费量:120,上次登录:130,操作:180"
+                                 ItemsSource="{Binding List}" Width="750">
+                    <local:TableTool.ItemTemplate>
+                        <DataTemplate>
+                            <local:UsersPage_TableRow State="{Binding}" RefreshEventHandler="RefreshList" />
+                        </DataTemplate>
+                    </local:TableTool.ItemTemplate>
+                </local:TableTool>
             </local:ContentBox>
         </StackPanel>
     </local:ManageFrame>

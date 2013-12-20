@@ -86,6 +86,7 @@ namespace zwg_china.backstage.framework
         public UserLandingRecordsViewModel()
             : base("用户管理", "查看用户登陆记录")
         {
+            client.GetLandingRecordsCompleted += ShowList;
         }
 
         #endregion

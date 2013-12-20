@@ -86,6 +86,7 @@ namespace zwg_china.backstage.framework
         public LotteriesViewModel()
             : base("彩票管理", "查看开奖记录")
         {
+            client.GetLotteriesCompleted += ShowList;
         }
 
         #endregion

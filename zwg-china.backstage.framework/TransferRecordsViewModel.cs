@@ -71,6 +71,7 @@ namespace zwg_china.backstage.framework
         public TransferRecordsViewModel()
             : base("数据报表", "查看转账记录")
         {
+            client.GetTransferRecordsCompleted += ShowList;
         }
 
         #endregion

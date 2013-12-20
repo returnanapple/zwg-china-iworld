@@ -203,12 +203,13 @@ namespace zwg_china.logic
 
                     for (double i = 13; i > 12; i -= 0.1)
                     {
-                        SystemQuota sq = new SystemQuota(i, new List<SystemQuotaDetail>());
+                        SystemQuota sq = new SystemQuota(Math.Round(i, 1), new List<SystemQuotaDetail>());
                         for (double j = 13; j > 12; j -= 0.1)
                         {
-                            int t = (int)((i - j) * 10);
+                            int t = (int)((Math.Round(i, 1) - Math.Round(j, 1)) * 10) + 1;
+                            t *= 2;
                             if (t < 0) { t = 0; }
-                            SystemQuotaDetail sqd = new SystemQuotaDetail(j, t);
+                            SystemQuotaDetail sqd = new SystemQuotaDetail(Math.Round(j, 1), t);
                             sq.Details.Add(sqd);
                         }
                         db.SystemQuotas.Add(sq);

@@ -7,9 +7,9 @@ using System.Collections.ObjectModel;
 namespace zwg_china.backstage.framework
 {
     /// <summary>
-    /// 列表页的试图的基类
+    /// 列表页的视图模型的基类
     /// </summary>
-    public abstract class ShowListViewModelBase<TExport, TClient> : ManagerViewModelBase
+    public abstract class ShowListViewModelBase<TExport, TClient> : ManagerViewModelBase, IShowListViewModel
         where TClient : new()
     {
         #region 私有字段
@@ -104,6 +104,7 @@ namespace zwg_china.backstage.framework
         {
             this.RefreshCommand = new UniversalCommand(Refresh);
             this.RestCommand = new UniversalCommand(Reset);
+            Refresh();
         }
 
         #endregion
@@ -130,6 +131,18 @@ namespace zwg_china.backstage.framework
         {
             this.List.Clear();
             es.ForEach(e => this.List.Add(e));
+        }
+
+        #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 刷新列表
+        /// </summary>
+        public void Refresh()
+        {
+            Refresh(null);
         }
 
         #endregion

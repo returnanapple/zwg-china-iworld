@@ -47,6 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core">
@@ -112,6 +113,15 @@
     <Compile Include="tool\KeepTextRealTime.cs" />
     <Compile Include="tool\KeyDownCommandAction.cs" />
     <Compile Include="tool\VerticalScrollTrigger.cs" />
+    <Compile Include="UsersPage_CreateUserWindow.xaml.cs">
+      <DependentUpon>UsersPage_CreateUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_FullWindow.xaml.cs">
+      <DependentUpon>UsersPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_TableRow.xaml.cs">
+      <DependentUpon>UsersPage_TableRow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zwg-china.backstage.framework\zwg-china.backstage.framework.csproj">
@@ -128,7 +138,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="css.xaml">
+    <Page Include="UsersPage_CreateUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_Css.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_CssOfFullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_CssOfPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_CssOfTableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,6 +205,14 @@
     <Page Include="TechnicalSupport_Button.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UsersPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

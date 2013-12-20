@@ -39,6 +39,7 @@
       <xs:element minOccurs="0" name="LastLoginAddress" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginIp" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Layer" type="xs:int" />
       <xs:element minOccurs="0" name="Money" type="xs:double" />
       <xs:element minOccurs="0" name="Money_Frozen" type="xs:double" />
       <xs:element minOccurs="0" name="PlayInfo" nillable="true" type="tns:UserPlayInfoExport" />

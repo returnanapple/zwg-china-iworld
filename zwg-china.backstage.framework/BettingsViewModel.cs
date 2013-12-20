@@ -101,6 +101,7 @@ namespace zwg_china.backstage.framework
         public BettingsViewModel()
             : base("彩票管理", "查看投注记录")
         {
+            client.GetBettingsCompleted += ShowList;
         }
 
         #endregion

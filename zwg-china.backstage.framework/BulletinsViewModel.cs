@@ -41,6 +41,7 @@ namespace zwg_china.backstage.framework
         public BulletinsViewModel()
             : base("系统设置", "系统公告设置")
         {
+            client.GetBulletinsCompleted += ShowList;
         }
 
         #endregion

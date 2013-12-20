@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control">
+    
     <Style TargetType="TextBlock" x:Key="TextBlockBaseStyle">
         <Setter Property="FontSize" Value="12"></Setter>
         <Setter Property="FontFamily" Value="SimSun"></Setter>
@@ -256,4 +258,9 @@
         </Setter>
     </Style>
     <Style TargetType="HyperlinkButton" BasedOn="{StaticResource HyperlinkButtonBaseStyle}"/>
+    
+    <Style TargetType="local:TableTool">
+        <Setter Property="CountOfRow" Value="20"/>
+    </Style>
+
 </ResourceDictionary>

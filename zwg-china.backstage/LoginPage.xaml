@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="css.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <Style TargetType="TextBlock" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
                 <Setter Property="HorizontalAlignment" Value="Center"></Setter>

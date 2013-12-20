@@ -65,13 +65,12 @@ namespace zwg_china.model
             string[] t = TimeValue.Split(new char[] { ':', '：' });
             int tHour = Convert.ToInt32(t[0]);
             int tMinute = Convert.ToInt32(t[1]);
-            int tSecond = Convert.ToInt32(t[2]);
             return new DateTime(DateTime.Now.Year
                 , DateTime.Now.Month
                 , DateTime.Now.Day
                 , tHour
                 , tMinute
-                , tSecond);
+                , 0);
         }
 
         #endregion

@@ -116,6 +116,7 @@ namespace zwg_china.backstage.framework
         public RersonalAndTeamReportsViewModel()
             : base("数据报表", "查看个人统计")
         {
+            client.GetRersonalAndTeamReportsCompleted += ShowList;
         }
 
         #endregion

@@ -220,11 +220,11 @@ namespace zwg_china.backstage.framework
         /// </summary>
         public double Commission_B
         {
-            get { return dividend_B; }
+            get { return commission_B; }
             set
             {
-                if (dividend_B == value) { return; }
-                dividend_B = value;
+                if (commission_B == value) { return; }
+                commission_B = value;
                 OnPropertyChanged("Commission_B");
             }
         }

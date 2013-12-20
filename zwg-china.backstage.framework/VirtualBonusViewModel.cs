@@ -56,6 +56,7 @@ namespace zwg_china.backstage.framework
         public VirtualBonusViewModel()
             : base("彩票管理", "查看虚拟排行")
         {
+            client.GetVirtualBonusCompleted += ShowList;
         }
 
         #endregion

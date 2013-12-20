@@ -22,6 +22,12 @@ namespace zwg_china.service.backstage
         public int Id { get; set; }
 
         /// <summary>
+        /// 用户层级
+        /// </summary>
+        [DataMember]
+        public int Layer { get; set; }
+
+        /// <summary>
         /// 用户名
         /// </summary>
         [DataMember]
@@ -132,6 +138,7 @@ namespace zwg_china.service.backstage
         public AuthorExport(Author model, UserGroup group, List<SystemQuotaDetail> systemQuotas)
         {
             this.Id = model.Id;
+            this.Layer = model.Layer;
             this.Username = model.Username;
             this.Group = new UserGroupExport(group);
             this.Status = model.Status;

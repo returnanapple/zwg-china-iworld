@@ -40,6 +40,7 @@ namespace zwg_china.backstage.framework
         public AdministratorGroupViewModel()
             : base("管理员组", "查看管理员用户组")
         {
+            client.GetAdministratorGroupsCompleted += ShowList;
         }
 
         #endregion

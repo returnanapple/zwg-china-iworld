@@ -41,6 +41,7 @@ namespace zwg_china.backstage.framework
         public TicketsViewModel()
             : base("彩票管理", "查看彩票列表")
         {
+            client.GetLotteryTicketsCompleted += ShowList;
         }
 
         #endregion

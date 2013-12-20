@@ -39,6 +39,7 @@ namespace zwg_china.backstage.control
             if (Click != null)
             {
                 Click(this, new EventArgs());
+                ShowNormalStyle(null, null);
             }
             if (Command != null)
             {

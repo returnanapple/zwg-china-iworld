@@ -101,6 +101,7 @@ namespace zwg_china.backstage.framework
         public WithdrawalsRecordsViewModel()
             : base("数据报表", "查看提现记录")
         {
+            client.GetWithdrawalsRecordsCompleted += ShowList;
         }
 
         #endregion

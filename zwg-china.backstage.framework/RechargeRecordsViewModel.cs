@@ -101,6 +101,7 @@ namespace zwg_china.backstage.framework
         public RechargeRecordsViewModel()
             : base("数据报表", "查看充值记录")
         {
+            client.GetRechargeRecordsCompleted += ShowList;
         }
 
         #endregion

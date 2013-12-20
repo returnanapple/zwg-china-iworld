@@ -71,6 +71,7 @@ namespace zwg_china.backstage.framework
         public SiteReportsViewModel()
             : base("数据报表", "查看站点统计")
         {
+            client.GetSiteReportsCompleted += ShowList;
         }
 
         #endregion

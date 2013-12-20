@@ -76,16 +76,7 @@ namespace zwg_china.service.client
                 .ToList()
                 .ConvertAll(x =>
                 {
-                    UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption < x.Consumption && g.CapsOfConsumption > x.Consumption);
-                    if (group == null)
-                    {
-                        group = db.UserGroups.Where(g => g.CapsOfConsumption <= x.Consumption).OrderByDescending(g => g.CapsOfConsumption).FirstOrDefault();
-                    }
-                    if (group == null)
-                    {
-                        group = db.UserGroups.Where(g => g.LowerOfConsumption > x.Consumption).OrderBy(g => g.LowerOfConsumption).FirstOrDefault();
-                    }
-
+                    UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption <= x.Consumption && g.CapsOfConsumption > x.Consumption);
                     return new BasicAuthorExport(x, group);
                 });
 

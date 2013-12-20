@@ -41,6 +41,7 @@ namespace zwg_china.backstage.framework
         public RedeemPlansViewModel()
             : base("活动管理", "查看积分兑换")
         {
+            client.GetRedeemPlansCompleted += ShowList;
         }
 
         #endregion

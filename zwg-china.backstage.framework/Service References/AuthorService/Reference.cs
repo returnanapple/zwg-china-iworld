@@ -1218,6 +1218,8 @@ namespace zwg_china.backstage.framework.AuthorService {
         
         private System.DateTime LastLoginTimeField;
         
+        private int LayerField;
+        
         private double MoneyField;
         
         private double Money_FrozenField;
@@ -1345,6 +1347,19 @@ namespace zwg_china.backstage.framework.AuthorService {
                 if ((this.LastLoginTimeField.Equals(value) != true)) {
                     this.LastLoginTimeField = value;
                     this.RaisePropertyChanged("LastLoginTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Layer {
+            get {
+                return this.LayerField;
+            }
+            set {
+                if ((this.LayerField.Equals(value) != true)) {
+                    this.LayerField = value;
+                    this.RaisePropertyChanged("Layer");
                 }
             }
         }

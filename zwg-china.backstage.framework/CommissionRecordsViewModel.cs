@@ -86,6 +86,7 @@ namespace zwg_china.backstage.framework
         public CommissionRecordsViewModel()
             : base("数据报表", "查看佣金记录")
         {
+            client.GetCommissionRecordsCompleted += ShowList;
         }
 
         #endregion

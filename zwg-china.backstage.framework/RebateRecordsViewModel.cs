@@ -86,6 +86,7 @@ namespace zwg_china.backstage.framework
         public RebateRecordsViewModel()
             : base("数据报表", "查看返点记录")
         {
+            client.GetRebateRecordsCompleted += ShowList;
         }
 
         #endregion

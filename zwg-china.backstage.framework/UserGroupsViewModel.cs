@@ -41,6 +41,7 @@ namespace zwg_china.backstage.framework
         public UserGroupsViewModel()
             : base("用户管理", "查看用户组")
         {
+            client.GetGroupsCompleted += ShowList;
         }
 
         #endregion

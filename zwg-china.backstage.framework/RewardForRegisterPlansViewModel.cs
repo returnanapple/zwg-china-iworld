@@ -41,6 +41,7 @@ namespace zwg_china.backstage.framework
         public RewardForRegisterPlansViewModel()
             : base("活动管理", "查看注册奖励")
         {
+            client.GetRewardForRegisterPlansCompleted += ShowList;
         }
 
         #endregion

@@ -17,6 +17,7 @@ namespace zwg_china.backstage.framework
         public SystemBankAccountsViewModel()
             : base("系统设置", "银行帐号设置")
         {
+            client.GetSystemBankAccountsCompleted += ShowList;
         }
 
         #endregion

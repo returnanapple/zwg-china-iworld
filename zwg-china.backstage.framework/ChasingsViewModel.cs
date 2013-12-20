@@ -86,6 +86,7 @@ namespace zwg_china.backstage.framework
         public ChasingsViewModel()
             : base("彩票管理", "查看追号记录")
         {
+            client.GetChasingsCompleted += ShowList;
         }
 
         #endregion

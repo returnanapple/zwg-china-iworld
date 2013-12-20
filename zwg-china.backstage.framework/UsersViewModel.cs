@@ -71,6 +71,7 @@ namespace zwg_china.backstage.framework
         public UsersViewModel()
             : base("用户管理", "查看用户列表")
         {
+            client.GetUsersCompleted += ShowList;
         }
 
         #endregion

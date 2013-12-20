@@ -101,6 +101,7 @@ namespace zwg_china.backstage.framework
         public MoneyChangeRecordsViewModel()
             : base("用户管理", "查看帐变记录")
         {
+            client.GetMoneyChangeRecordsCompleted += ShowList;
         }
 
         #endregion

@@ -86,6 +86,7 @@ namespace zwg_china.backstage.framework
         public DividendRecordsViewModel()
             : base("数据报表", "查看分红记录")
         {
+            client.GetDividendRecordsCompleted += ShowList;
         }
 
         #endregion

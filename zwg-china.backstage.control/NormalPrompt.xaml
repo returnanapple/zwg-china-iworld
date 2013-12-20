@@ -7,19 +7,8 @@
     <controls:ChildWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="css.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="_CssOfPrompt.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-            <Style TargetType="Button" BasedOn="{StaticResource ResourceKey=SubmitButton}">
-                <Setter Property="HorizontalAlignment" Value="Right"></Setter>
-                <Setter Property="VerticalAlignment" Value="Top"></Setter>
-                <Setter Property="Width" Value="75"></Setter>
-                <Setter Property="Height" Value="25"></Setter>
-            </Style>
-            <Style TargetType="TextBlock" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
-                <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-                <Setter Property="VerticalAlignment" Value="Center"></Setter>
-                <Setter Property="Margin" Value="30,20"></Setter>
-            </Style>
         </ResourceDictionary>
     </controls:ChildWindow.Resources>
 

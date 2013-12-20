@@ -78,6 +78,7 @@
     <Compile Include="IMainPage.cs" />
     <Compile Include="IndexViewModel.cs" />
     <Compile Include="IPop.cs" />
+    <Compile Include="IShowListViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="LotteriesViewModel.cs" />
     <Compile Include="ManagerViewModelBase.cs" />
