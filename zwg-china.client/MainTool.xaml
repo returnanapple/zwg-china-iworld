@@ -96,7 +96,7 @@
 
         <!--彩票按键-->
         <Grid x:Name="PanelOfLotteryButton" Width="809" Height="29"
-              Canvas.Left="213" Canvas.Top="106" Visibility="Visible" Canvas.ZIndex="1">
+              Canvas.Left="213" Canvas.Top="106" Visibility="Collapsed" Canvas.ZIndex="1">
             <Grid.Background>
                 <ImageBrush Stretch="None" ImageSource="Images/LotteryButtonsBg.png"/>
             </Grid.Background>

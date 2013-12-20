@@ -85,8 +85,12 @@ namespace zwg_china.client
         #region 函数
         private void LoadedAction(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Width = 1024;
-            App.Current.MainWindow.Height = 700;
+            if (App.Current.IsRunningOutOfBrowser)
+            {
+                App.Current.MainWindow.Width = 1024;
+                App.Current.MainWindow.Height = 700;
+            }
+            
         }
 
         #region 初始化列表

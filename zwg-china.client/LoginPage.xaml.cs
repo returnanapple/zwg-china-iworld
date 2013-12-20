@@ -33,8 +33,12 @@ namespace zwg_china.client
 
         private void LoadedAction(object sender, RoutedEventArgs e)
         {
-            App.Current.MainWindow.Width = 960;
-            App.Current.MainWindow.Height = 730;
+            if (App.Current.IsRunningOutOfBrowser)
+            {
+                App.Current.MainWindow.Width = 960;
+                App.Current.MainWindow.Height = 730;
+            }
+            
         }
 
     }

@@ -217,6 +217,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
     <None Include="Fonts\simsun.ttc" />
