@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "basis", "basis", "{8F26D7F1-0579-41CE-A792-3AC1FF5E33F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "service", "service", "{0BDF8CD0-53F0-4957-BF67-D5A850B2D689}"
@@ -10,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "host", "host", "{A69FD608-7DCA-4D7E-815B-4526CAB19EA0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client", "client", "{D447A3C4-06A1-449C-8835-8AEF2CB2273A}"
+	ProjectSection(SolutionItems) = preProject
+		zwg-china.backstage.control\css.xaml = zwg-china.backstage.control\css.xaml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backstage", "backstage", "{966E0D28-9979-492B-9A8F-BEFD249E771F}"
 EndProject
