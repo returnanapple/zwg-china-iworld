@@ -24,12 +24,14 @@
     <TestPageFileName>zwg_china.clientTestPage.html</TestPageFileName>
     <CreateTestPage>true</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
-    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
     <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
     <UsePlatformExtensions>false</UsePlatformExtensions>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
     <LinkedServerProject>
     </LinkedServerProject>
+    <InBrowserSettingsFile>Properties\InBrowserSettings.xml</InBrowserSettingsFile>
+    <RequireInBrowserElevation>false</RequireInBrowserElevation>
   </PropertyGroup>
   <!-- This property group is only here to support building this project using the 
        MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
@@ -78,6 +80,12 @@
     <Compile Include="BetBar.xaml.cs">
       <DependentUpon>BetBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CoverFloorTool.xaml.cs">
+      <DependentUpon>CoverFloorTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -101,6 +109,14 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="BetBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CoverFloorTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,6 +146,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
     <None Include="Fonts\simsun.ttc" />
@@ -288,6 +305,31 @@
     <Resource Include="Images\结果8.png" />
     <Resource Include="Images\结果9.png" />
     <Resource Include="Images\重庆时时彩.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LoginPageBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\关闭_MouseOver.png" />
+    <Resource Include="Images\关闭_Normal.png" />
+    <Resource Include="Images\关闭_Pressed.png" />
+    <Resource Include="Images\最小化_MouseOver.png" />
+    <Resource Include="Images\最小化_Normal.png" />
+    <Resource Include="Images\最小化_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\登陆_MouseOver.png" />
+    <Resource Include="Images\登陆_Normal.png" />
+    <Resource Include="Images\登陆_Pressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\InBrowserSettings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
