@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="zwg_china.client.RemainTimeAndResultControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="348" Height="134">
+
+    <UserControl.Resources>
+        <Storyboard x:Key="FlickerAndDescending" Duration="0:0:1" 
+                    Completed="FlickerAndDescendingCompleted">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FlickerImage"
+                                           Storyboard.TargetProperty="Opacity">
+                <LinearDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <LinearDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Canvas>
+        <Canvas.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Fonts/msyh.ttf#Microsoft YaHei"/>
+            </Style>
+        </Canvas.Resources>
+        <Canvas.Background>
+            <ImageBrush Stretch="None" ImageSource="Images/RemainTimeAndResultControl_Bg.png"/>
+        </Canvas.Background>
+
+        <Grid Width="133" Height="43">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="LotteryTextBlock" Grid.Row="0" FontSize="12" TextAlignment="Center" VerticalAlignment="Bottom">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF7A83" Offset="0"/>
+                        <GradientStop Color="#FFB00009" Offset="0.993"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+                <TextBlock.Effect>
+                    <BlurEffect Radius="1"/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="Foreground">
+                            <Setter.Value>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFD6E0EB" Offset="0"/>
+                                    <GradientStop Color="#FF98A5C0" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Effect">
+                            <Setter.Value>
+                                <BlurEffect Radius="1"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock x:Name="CurrentIssueTextBlock"/>
+                <TextBlock Text="期"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Width="250" Height="64" Canvas.Left="50" Canvas.Top="50.5">
+            <ItemsControl x:Name="CurrentResultItemsControl" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding}" Stretch="None" Margin="1,0"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+
+
+        <StackPanel Orientation="Horizontal" Width="86" Height="30" Canvas.Left="238" Canvas.Top="11">
+            <StackPanel.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="Stretch" Value="None"/>
+                </Style>
+            </StackPanel.Resources>
+            <Image x:Name="ThousandImage" Width="19"/>
+            <Image x:Name="HundredImage" Width="19"/>
+            <Image x:Name="FlickerImage" Source="Images/led冒号.png" Width="10" Opacity="1"/>
+            <Image x:Name="TenImage" Width="19"/>
+            <Image x:Name="OneImage" Width="19"/>
+        </StackPanel>
+
+    </Canvas>
+</UserControl>

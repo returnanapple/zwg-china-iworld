@@ -1,0 +1,43 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.BetBar"
+    mc:Ignorable="d"
+    Width="631" Height="32">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="62"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="ImageOfTittle" Grid.Column="0" Stretch="None"/>
+
+        <ItemsControl x:Name="Selections" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:NewCheckBoxWithOffsetEffect Width="32" Height="32" ImageNameOfBackground="NumberButtonBg" Margin="0,0,2,0"
+                                                       ImageNameOfContent="{Binding Number}" 
+                                                       IsChecked="{Binding Selected,Mode=TwoWay}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <StackPanel x:Name="MultiSelectNumberButtons" Grid.Column="2" Orientation="Horizontal">
+            <local:NewButton ImageNameOfBackground="全" Margin="0,0,2,0"/>
+            <local:NewButton ImageNameOfBackground="大" Margin="2,0"/>
+            <local:NewButton ImageNameOfBackground="小" Margin="2,0"/>
+            <local:NewButton ImageNameOfBackground="单" Margin="2,0"/>
+            <local:NewButton ImageNameOfBackground="双" Margin="2,0"/>
+            <local:NewButton ImageNameOfBackground="清" Margin="2,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
