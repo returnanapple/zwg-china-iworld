@@ -32,8 +32,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForUsername == value) { return; }
-                keywordForUsername = value;
+                keywordForUsername = value == "" ? null : value;
                 OnPropertyChanged("KeywordForUsername");
+                Refresh(null);
             }
         }
 

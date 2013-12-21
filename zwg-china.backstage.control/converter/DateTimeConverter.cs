@@ -12,42 +12,39 @@ using System.Windows.Shapes;
 
 namespace zwg_china.backstage.control
 {
-    public class UsersPage_UserGroupConverter : IValueConverter
+    public class DateTimeConverter : IValueConverter
     {
+
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-
-            if (value == null && System.Convert.ToInt32(parameter) == 0)
+            if (value == null)
             {
-                return true;
-            }
-            else if (System.Convert.ToInt32(value) == System.Convert.ToInt32(parameter))
-            {
-                return true;
+                return "";
             }
             else
             {
-                return false;
+                DateTime time = (DateTime)value;
+                return string.Format("{0}-{1}-{2}"
+                     , time.Year
+                     , time.Month
+                     , time.Day);
             }
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if ((bool)value == true)
+            try
             {
-                int t = System.Convert.ToInt32(parameter);
-                if (t <= 0)
-                {
-                    return null;
-                }
-                else
-                {
-                    return t;
-                }
+                string[] ts = value.ToString().Split("-".ToCharArray());
+                DateTime time = new DateTime(System.Convert.ToInt32(ts[0])
+                    , System.Convert.ToInt32(ts[1])
+                    , System.Convert.ToInt32(ts[2]));
+                return time;
+
             }
-            else
+            catch (Exception)
             {
-                return -1;
+                return null;
             }
         }
     }

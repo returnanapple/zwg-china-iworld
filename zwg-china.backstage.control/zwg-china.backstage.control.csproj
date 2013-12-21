@@ -66,11 +66,22 @@
     <Compile Include="ContentBox.xaml.cs">
       <DependentUpon>ContentBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="converter\DateTimeConverter.cs" />
     <Compile Include="EditAccounTool.xaml.cs">
       <DependentUpon>EditAccounTool.xaml</DependentUpon>
     </Compile>
     <Compile Include="FilterBox.xaml.cs">
       <DependentUpon>FilterBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="converter\IntConverter.cs" />
+    <Compile Include="MoneyChangeRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>MoneyChangeRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemQuotasPage_TableRow.xaml.cs">
+      <DependentUpon>SystemQuotasPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemQuotasPage_TableRow_Detail.xaml.cs">
+      <DependentUpon>SystemQuotasPage_TableRow_Detail.xaml</DependentUpon>
     </Compile>
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
@@ -116,6 +127,21 @@
     <Compile Include="tool\KeepTextRealTime.cs" />
     <Compile Include="tool\KeyDownCommandAction.cs" />
     <Compile Include="tool\VerticalScrollTrigger.cs" />
+    <Compile Include="UserGroupsPage_CreateUserGroupWindow.xaml.cs">
+      <DependentUpon>UserGroupsPage_CreateUserGroupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroupsPage_EditWindow.xaml.cs">
+      <DependentUpon>UserGroupsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroupsPage_FullWindow.xaml.cs">
+      <DependentUpon>UserGroupsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroupsPage_TableRow.xaml.cs">
+      <DependentUpon>UserGroupsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserLandingRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>UserLandingRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UsersPage_CreateUserWindow.xaml.cs">
       <DependentUpon>UsersPage_CreateUserWindow.xaml</DependentUpon>
     </Compile>
@@ -131,7 +157,6 @@
     <Compile Include="UsersPage_TableRow.xaml.cs">
       <DependentUpon>UsersPage_TableRow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="converter\UsersPage_UserGroupConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zwg-china.backstage.framework\zwg-china.backstage.framework.csproj">
@@ -149,6 +174,38 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="FilterBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoneyChangeRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemQuotasPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemQuotasPage_TableRow_Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_CreateUserGroupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserLandingRecordsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,6 +310,7 @@
     <Resource Include="img\information.png" />
     <Resource Include="img\menu-current-arrow.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

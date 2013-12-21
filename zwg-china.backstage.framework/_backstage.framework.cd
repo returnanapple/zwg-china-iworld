@@ -75,7 +75,7 @@
   <Class Name="zwg_china.backstage.framework.UsersViewModel" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAFAABABAAAAAAAACAAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>QAEAAEABAABABAAAACAAACAAAAAAAAAAAAAAAEAAAAQ=</HashCode>
       <FileName>UsersViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -258,7 +258,7 @@
   <Class Name="zwg_china.backstage.framework.MoneyChangeRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
     <Position X="5.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAQABABAAACAAAACgAAAAhAAAAAQAAAEAAAAQ=</HashCode>
+      <HashCode>AgBAAAAAQABABAAACAAAACgAAAAgAAAAAAAAAEIAAAQ=</HashCode>
       <FileName>MoneyChangeRecordsViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -302,6 +302,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAQAABgAACAAAAABAAAAACAAAABAABAAA=</HashCode>
       <FileName>SystemQuotasViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.BasicUserGroupModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>BasicUserGroupModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.MoneyChangeRecordTypeModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAgAAAAI=</HashCode>
+      <FileName>MoneyChangeRecordTypeModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.backstage.framework.IMainPage" Collapsed="true">

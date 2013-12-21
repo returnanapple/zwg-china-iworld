@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections.ObjectModel;
 using zwg_china.backstage.framework.RecordOfAuthorService;
 using zwg_china.backstage.framework.AdministratorService;
 
@@ -18,7 +19,7 @@ namespace zwg_china.backstage.framework
         int? userId = null;
         DateTime? beginTime = null;
         DateTime? endTime = null;
-        string type = null;
+        ObservableCollection<MoneyChangeRecordTypeModel> types = new ObservableCollection<MoneyChangeRecordTypeModel>();
 
         #endregion
 
@@ -33,8 +34,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForUsername == value) { return; }
-                keywordForUsername = value;
+                keywordForUsername = value == "" ? null : value;
                 OnPropertyChanged("KeywordForUsername");
+                Refresh(null);
             }
         }
 
@@ -63,6 +65,7 @@ namespace zwg_china.backstage.framework
                 if (beginTime == value) { return; }
                 beginTime = value;
                 OnPropertyChanged("BeginTime");
+                Refresh(null);
             }
         }
 
@@ -77,21 +80,17 @@ namespace zwg_china.backstage.framework
                 if (endTime == value) { return; }
                 endTime = value;
                 OnPropertyChanged("EndTime");
+                Refresh(null);
             }
         }
 
         /// <summary>
         /// 帐变类型
         /// </summary>
-        public string Type
+        public ObservableCollection<MoneyChangeRecordTypeModel> Types
         {
-            get { return type; }
-            set
-            {
-                if (type == value) { return; }
-                type = value;
-                OnPropertyChanged("Type");
-            }
+            get { return types; }
+            set { types = value; }
         }
 
         #endregion
@@ -101,6 +100,18 @@ namespace zwg_china.backstage.framework
         public MoneyChangeRecordsViewModel()
             : base("用户管理", "查看帐变记录")
         {
+            this.Types.Add(new MoneyChangeRecordTypeModel(null, "全部", Refresh, true));
+            this.Types.Add(new MoneyChangeRecordTypeModel("充值", "充值", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("提现", "提现", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("投注", "投注", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("中奖", "中奖", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("返点", "返点", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("佣金", "佣金", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("分红", "分红", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("注册奖励", "注册奖励", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("消费奖励", "消费奖励", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("充值奖励", "充值奖励", Refresh));
+            this.Types.Add(new MoneyChangeRecordTypeModel("积分兑换", "积分兑换", Refresh));
             client.GetMoneyChangeRecordsCompleted += ShowList;
         }
 
@@ -111,13 +122,14 @@ namespace zwg_china.backstage.framework
         protected override void Refresh(object obj)
         {
             int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
+            string type = this.Types.Count == 0 ? null : this.types.First(x => x.Selected).Type;
             GetMoneyChangeRecordsImport import = new GetMoneyChangeRecordsImport
             {
                 KeywordForUsername = this.KeywordForUsername,
                 UserId = this.UserId,
                 BeginTime = this.BeginTime,
                 EndTime = this.EndTime,
-                Type = this.Type,
+                Type = type,
                 PageIndex = _pageIndex,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
@@ -130,7 +142,7 @@ namespace zwg_china.backstage.framework
             this.UserId = null;
             this.BeginTime = null;
             this.EndTime = null;
-            this.Type = null;
+            this.Types.First(x => x.Type == null).Selected = true;
             this.PageIndex = 1;
             Refresh(null);
         }

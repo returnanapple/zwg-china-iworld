@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using zwg_china.backstage.framework.AuthorService;
@@ -15,7 +16,7 @@ namespace zwg_china.backstage.framework
         #region 私有字段
 
         string keywordForUsername = null;
-        int? groupId = null;
+        ObservableCollection<BasicUserGroupModel> groups = new ObservableCollection<BasicUserGroupModel>();
         int? belongingUserId = null;
 
         #endregion
@@ -38,18 +39,16 @@ namespace zwg_china.backstage.framework
         }
 
         /// <summary>
-        /// 所从属的用户组的存储指针
+        /// 用户组
         /// </summary>
-        public int? GroupId
+        public ObservableCollection<BasicUserGroupModel> Groups
         {
-            get { return groupId; }
+            get { return groups; }
             set
             {
-                if (groupId == value) { return; }
-                if (value < 0) { return; }
-                groupId = value;
-                OnPropertyChanged("GroupId");
-                Refresh(null);
+                if (groups == value) { return; }
+                groups = value;
+                OnPropertyChanged("Groups");
             }
         }
 
@@ -74,7 +73,23 @@ namespace zwg_china.backstage.framework
         public UsersViewModel()
             : base("用户管理", "查看用户列表")
         {
+            this.Groups.Add(new BasicUserGroupModel(null, "全部", Refresh, true));
+
             client.GetUsersCompleted += ShowList;
+            client.GetBasicUserGroupsCompleted += InsetBasicGroups;
+            GetBasicUserGroupsImport import = new GetBasicUserGroupsImport
+            {
+                Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
+            };
+            client.GetBasicUserGroupsAsync(import);
+        }
+
+        void InsetBasicGroups(object sender, GetBasicUserGroupsCompletedEventArgs e)
+        {
+            if (e.Result.Success)
+            {
+                e.Result.Info.ForEach(x => this.Groups.Add(new BasicUserGroupModel(x.Id, x.Name, Refresh)));
+            }
         }
 
         #endregion
@@ -84,10 +99,11 @@ namespace zwg_china.backstage.framework
         protected override void Refresh(object obj)
         {
             int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
+            int? id = this.groups.Count == 0 ? null : this.Groups.First(x => x.Selected).Id;
             GetUsersImport import = new GetUsersImport
             {
                 KeywordForUsername = this.KeywordForUsername,
-                GroupId = this.GroupId,
+                GroupId = id,
                 BelongingUserId = this.BelongingUserId,
                 PageIndex = _pageIndex,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
@@ -98,7 +114,7 @@ namespace zwg_china.backstage.framework
         protected override void Reset(object obj)
         {
             this.KeywordForUsername = null;
-            this.GroupId = null;
+            this.Groups.First(x => x.Id == null).Selected = true;
             this.BelongingUserId = null;
             this.PageIndex = 1;
             Refresh(null);

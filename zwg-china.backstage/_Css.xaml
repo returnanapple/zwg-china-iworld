@@ -29,7 +29,7 @@
         <Setter Property="BorderThickness" Value="0"></Setter>
         <Setter Property="VerticalScrollBarVisibility" Value="Auto"></Setter>
     </Style>
-    <Style TargetType="TextBox">
+    <Style TargetType="TextBox" x:Key="TextBoxBaseStyle">
         <Setter Property="Height" Value="25"></Setter>
         <Setter Property="Width" Value="150"></Setter>
         <Setter Property="BorderBrush" Value="Gray"></Setter>
@@ -44,6 +44,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style TargetType="TextBox" BasedOn="{StaticResource TextBoxBaseStyle}"/>
     <Style TargetType="PasswordBox">
         <Setter Property="Height" Value="25"></Setter>
         <Setter Property="Width" Value="150"></Setter>

@@ -98,7 +98,7 @@ namespace zwg_china.backstage.control
             {
                 ErrorPrompt ep = new ErrorPrompt();
                 ep.State = "编辑用户信息成功";
-                ep.Closed += RefreshWhenRemoved;
+                ep.Closed += RefreshTable;
                 ep.Show();
             }
             else
@@ -130,7 +130,7 @@ namespace zwg_china.backstage.control
             {
                 ErrorPrompt ep = new ErrorPrompt();
                 ep.State = "修改用户的额外配额成功";
-                ep.Closed += RefreshWhenRemoved;
+                ep.Closed += RefreshTable;
                 ep.Show();
             }
             else
@@ -178,7 +178,7 @@ namespace zwg_china.backstage.control
             {
                 ErrorPrompt ep = new ErrorPrompt();
                 ep.State = "删除用户成功";
-                ep.Closed += RefreshWhenRemoved;
+                ep.Closed += RefreshTable;
                 ep.Show();
             }
             else
@@ -189,7 +189,7 @@ namespace zwg_china.backstage.control
             }
         }
 
-        void RefreshWhenRemoved(object sender, EventArgs e)
+        void RefreshTable(object sender, EventArgs e)
         {
             OnRefresh();
         }

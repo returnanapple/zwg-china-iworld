@@ -27,8 +27,8 @@
 
             <TextBox Name="input_Username" Canvas.Left="87" Canvas.Top="14"/>
             <PasswordBox Name="input_Password" Canvas.Left="87" Canvas.Top="44"/>
-            <TextBox Name="input_Rebate_Normal" Canvas.Left="87" Canvas.Top="74" Width="80" />
-            <TextBox Name="input_Rebate_IndefinitePosition" Canvas.Left="87" Canvas.Top="104" Width="80"/>
+            <TextBox Name="input_Rebate_Normal" Text="13.0" Canvas.Left="87" Canvas.Top="74" Width="80" />
+            <TextBox Name="input_Rebate_IndefinitePosition" Text="13.0" Canvas.Left="87" Canvas.Top="104" Width="80"/>
         </Canvas>
         <Button Content="添  加" Grid.Column="1" Margin="0,10,10,0" Click="Enter"/>
         <Button Content="取  消" Grid.Column="1" Margin="0,40,10,10" Click="Cancel"/>

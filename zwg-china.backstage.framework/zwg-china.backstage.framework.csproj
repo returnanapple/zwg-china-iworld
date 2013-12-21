@@ -66,6 +66,7 @@
     <Compile Include="AdministratorsViewModel.cs" />
     <Compile Include="AuthorSettingViewModel.cs" />
     <Compile Include="BasicSettingViewModel.cs" />
+    <Compile Include="BasicUserGroupModel.cs" />
     <Compile Include="BettingsViewModel.cs" />
     <Compile Include="BulletinsViewModel.cs" />
     <Compile Include="ChasingsViewModel.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="ManagerViewModelBase.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="MoneyChangeRecordsViewModel.cs" />
+    <Compile Include="MoneyChangeRecordTypeModel.cs" />
     <Compile Include="Page.cs" />
     <Compile Include="Pop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

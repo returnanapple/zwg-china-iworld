@@ -73,23 +73,23 @@ namespace zwg_china.backstage.control
                 tool.text_UserQuotas_130.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
                     : data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0).Surplus.ToString();
                 tool.text_UserQuotas_129.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.9).Surplus.ToString(); ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.9).Surplus.ToString(); 
                 tool.text_UserQuotas_128.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.8).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.8).Surplus.ToString(); 
                 tool.text_UserQuotas_127.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.7).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.7).Surplus.ToString(); 
                 tool.text_UserQuotas_126.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.6).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.6).Surplus.ToString(); 
                 tool.text_UserQuotas_125.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.5).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.5).Surplus.ToString(); 
                 tool.text_UserQuotas_124.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.4).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.4).Surplus.ToString(); 
                 tool.text_UserQuotas_123.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.3).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.3).Surplus.ToString(); 
                 tool.text_UserQuotas_122.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.2).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.2).Surplus.ToString(); 
                 tool.text_UserQuotas_121.Text = data.UserQuotas.FirstOrDefault(x => x.Rebate == 13.0) == null ? "0"
-                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.1).Surplus.ToString(); ; ;
+                    : data.UserQuotas.FirstOrDefault(x => x.Rebate == 12.1).Surplus.ToString(); 
             }));
 
         #endregion
