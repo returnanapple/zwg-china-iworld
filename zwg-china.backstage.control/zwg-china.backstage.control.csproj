@@ -69,6 +69,9 @@
     <Compile Include="EditAccounTool.xaml.cs">
       <DependentUpon>EditAccounTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FilterBox.xaml.cs">
+      <DependentUpon>FilterBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
     </Compile>
@@ -128,6 +131,7 @@
     <Compile Include="UsersPage_TableRow.xaml.cs">
       <DependentUpon>UsersPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="converter\UsersPage_UserGroupConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zwg-china.backstage.framework\zwg-china.backstage.framework.csproj">
@@ -143,6 +147,10 @@
     <Page Include="CoverFloorTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FilterBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UsersPage_CreateUserWindow.xaml">
       <SubType>Designer</SubType>

@@ -1,15 +1,19 @@
-﻿<UserControl xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control"  x:Class="zwg_china.backstage.UsersPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+﻿<UserControl xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+             xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control" 
+             x:Class="zwg_china.backstage.UsersPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d">
 
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
+            <local:UsersPage_UserGroupConverter x:Key="UsersPage_UserGroupConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -47,8 +51,90 @@
             </StackPanel>
             <!--以上是导航按键-->
 
+            <!--以下是筛选栏-->
+            <Grid Height="90" Margin="0,0,0,40">
+                <Grid.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="5" Color="#FF818181"/>
+                </Grid.Effect>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <!--以下是背景-->
+                <Border BorderThickness="0" Background="#FFF7F5F5"/>
+                <Border BorderThickness="0" Background="White" Grid.Column="1"/>
+                <!--以上是背景-->
+                <!--以下是内容-->
+                <StackPanel Orientation="Vertical" Grid.ColumnSpan="2">
+                    <StackPanel.Resources>
+                        <Style TargetType="Grid">
+                            <Setter Property="Height" Value="45"/>
+                            <Setter Property="VerticalAlignment" Value="Top"/>
+                        </Style>
+                        <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlockBaseStyle}">
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="15,0,0,0"/>
+                            <Setter Property="FontSize" Value="14"/>
+                        </Style>
+                        <Style TargetType="local:FilterBox">
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="Margin" Value="10,0,0,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Grid Height="45">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="160"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="#FFD1CCC7" Height="0.5" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+                        <TextBlock Text="用户组："/>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1">
+                            <local:FilterBox GroupName="userGroup" Content="全部"
+                                             IsChecked="{Binding GroupId, Mode=TwoWay,Converter={StaticResource UsersPage_UserGroupConverter},ConverterParameter=0}"/>
+                            <local:FilterBox GroupName="userGroup" Content="见习会员"
+                                             IsChecked="{Binding GroupId, Mode=TwoWay,Converter={StaticResource UsersPage_UserGroupConverter},ConverterParameter=1}" />
+                            <local:FilterBox GroupName="userGroup" Content="正式会员"
+                                             IsChecked="{Binding GroupId, Mode=TwoWay,Converter={StaticResource UsersPage_UserGroupConverter},ConverterParameter=2}" />
+                            <local:FilterBox GroupName="userGroup" Content="高级会员"
+                                             IsChecked="{Binding GroupId, Mode=TwoWay,Converter={StaticResource UsersPage_UserGroupConverter},ConverterParameter=3}" />
+                            <local:FilterBox GroupName="userGroup" Content="VIP会员"
+                                             IsChecked="{Binding GroupId, Mode=TwoWay,Converter={StaticResource UsersPage_UserGroupConverter},ConverterParameter=4}" />
+                        </StackPanel>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="160"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="根据用户名搜索："/>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <StackPanel.Resources>
+                                <Style TargetType="Button" BasedOn="{StaticResource SubmitButton}">
+                                    <Setter Property="Height" Value="25"/>
+                                    <Setter Property="Width" Value="60"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                                    <Setter Property="Margin" Value="10,0,0,0"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBox Margin="10,0" Text="{Binding KeywordForUsername,Mode=TwoWay}">
+                                <i:Interaction.Triggers>
+                                    <local:KeepTextRealTime/>
+                                </i:Interaction.Triggers>
+                            </TextBox>
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel/>
+                </StackPanel>
+                <!--以上是内容-->
+            </Grid>
+            <!--以上是筛选栏-->
+
+            <!--以下是列表-->
             <local:ContentBox Width="800">
-                <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding JumpCommand}"
+                <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding RefreshCommand}"
                                  ColumnDefinitions="用户名:100,用户组:100,账户余额:120,消费量:120,上次登录:130,操作:180"
                                  ItemsSource="{Binding List}" Width="750">
                     <local:TableTool.ItemTemplate>
@@ -58,6 +144,7 @@
                     </local:TableTool.ItemTemplate>
                 </local:TableTool>
             </local:ContentBox>
+            <!--以上是列表-->
         </StackPanel>
     </local:ManageFrame>
 </UserControl>
