@@ -73,19 +73,25 @@ namespace zwg_china.service.backstage
         /// 绑定信息
         /// </summary>
         [DataMember]
-        public virtual UserBindingExport Binding { get; set; }
+        public UserBindingExport Binding { get; set; }
 
         /// <summary>
         /// 游戏资料
         /// </summary>
         [DataMember]
-        public virtual UserPlayInfoExport PlayInfo { get; set; }
+        public UserPlayInfoExport PlayInfo { get; set; }
 
         /// <summary>
         /// 高点号配额的剩余量
         /// </summary>
         [DataMember]
-        public virtual List<UserQuotaExport> UserQuotas { get; set; }
+        public List<UserQuotaExport> UserQuotas { get; set; }
+
+        /// <summary>
+        /// 额外的高点号配额
+        /// </summary>
+        [DataMember]
+        public List<ExtraQuotaExport> ExtraQuotas { get; set; }
 
         /// <summary>
         /// 现金余额
@@ -153,6 +159,7 @@ namespace zwg_china.service.backstage
             this.Consumption = model.Consumption;
             this.Integral = model.Integral;
             this.Subordinate = model.Subordinate;
+            this.ExtraQuotas = model.ExtraQuotas.ConvertAll(x => new ExtraQuotaExport(x));
 
             this.UserQuotas = systemQuotas.OrderByDescending(x => x.Rebate).ToList()
                 .ConvertAll(sq =>

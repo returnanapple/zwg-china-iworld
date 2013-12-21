@@ -32,7 +32,7 @@
         </Grid>
         <StackPanel Width="180">
             <HyperlinkButton Content="详细信息" Click="ShowFullWindow" />
-            <HyperlinkButton Name="button_ShowUserQuotasWindow" Content="配额" Click="ShowUserQuotasWindow" />
+            <HyperlinkButton Name="button_ShowUserQuotasWindow" Content="配额" Click="ShowSetExtraQuotasWindow" />
             <HyperlinkButton Name="button_Remove" Content="删除" Click="Remove" />
         </StackPanel>
     </StackPanel>

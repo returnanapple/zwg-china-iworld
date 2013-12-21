@@ -42,23 +42,21 @@
                             <CompositeTransform x:Name="_ScaleY" ScaleY="1"/>
                         </ContentControl.RenderTransform>
                         <!--界面内容的载入动画-->
-                        <!--<ContentControl.Triggers>
+                        <ContentControl.Triggers>
                             <EventTrigger RoutedEvent="ContentControl.Loaded">
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="_ScaleY"
                                                    Storyboard.TargetProperty="ScaleY"
-                                                   Duration="0:0:1">
-                                            <LinearDoubleKeyFrame Value="1" KeyTime="0:0:0"/>
-                                            <LinearDoubleKeyFrame Value="-0.4" KeyTime="0:0:2"/>
-                                            <LinearDoubleKeyFrame Value="-1" KeyTime="0:0:0.5"/>
-                                            <LinearDoubleKeyFrame Value="-0.8" KeyTime="0:0:0.6"/>
-                                            <LinearDoubleKeyFrame Value="1" KeyTime="0:0:1"/>
+                                                   Duration="0:0:0.5">
+                                            <LinearDoubleKeyFrame Value="-1" KeyTime="0:0:0"/>
+                                            <LinearDoubleKeyFrame Value="-0.2" KeyTime="0:0:2"/>
+                                            <LinearDoubleKeyFrame Value="1" KeyTime="0:0:0.5"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-                        </ContentControl.Triggers>-->
+                        </ContentControl.Triggers>
                         <!--界面内容占位符-->
                         <ContentPresenter/>
                     </ContentControl>

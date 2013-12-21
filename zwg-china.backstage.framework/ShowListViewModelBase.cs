@@ -104,7 +104,7 @@ namespace zwg_china.backstage.framework
         {
             this.RefreshCommand = new UniversalCommand(Refresh);
             this.RestCommand = new UniversalCommand(Reset);
-            Refresh();
+            Refresh(null);
         }
 
         #endregion
@@ -142,7 +142,7 @@ namespace zwg_china.backstage.framework
         /// </summary>
         public void Refresh()
         {
-            Refresh(null);
+            this.JumpCommand.Execute(this.SelectedText_Page);
         }
 
         #endregion

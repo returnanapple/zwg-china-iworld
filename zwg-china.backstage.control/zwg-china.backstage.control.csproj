@@ -116,8 +116,14 @@
     <Compile Include="UsersPage_CreateUserWindow.xaml.cs">
       <DependentUpon>UsersPage_CreateUserWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UsersPage_EditWindow.xaml.cs">
+      <DependentUpon>UsersPage_EditWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UsersPage_FullWindow.xaml.cs">
       <DependentUpon>UsersPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_SetExtraQuotasWindow.xaml.cs">
+      <DependentUpon>UsersPage_SetExtraQuotasWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UsersPage_TableRow.xaml.cs">
       <DependentUpon>UsersPage_TableRow.xaml</DependentUpon>
@@ -139,6 +145,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UsersPage_CreateUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage_SetExtraQuotasWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

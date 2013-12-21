@@ -77,8 +77,9 @@ namespace zwg_china.backstage.control
             AdministratorExport aInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
             if (aInfo.Group.CanEditUsers)
             {
-                UsersPage_FullWindow fw = new UsersPage_FullWindow();
+                UsersPage_EditWindow fw = new UsersPage_EditWindow();
                 fw.State = data;
+                fw.Closed += ShowEditUserResult;
                 fw.Show();
             }
             else
@@ -89,13 +90,55 @@ namespace zwg_china.backstage.control
             }
         }
 
+        void ShowEditUserResult(object sender, EventArgs e)
+        {
+            UsersPage_EditWindow fw = (UsersPage_EditWindow)sender;
+            if (fw.DialogResult != true) { return; }
+            if (fw.Error == null)
+            {
+                ErrorPrompt ep = new ErrorPrompt();
+                ep.State = "编辑用户信息成功";
+                ep.Closed += RefreshWhenRemoved;
+                ep.Show();
+            }
+            else
+            {
+                ErrorPrompt ep = new ErrorPrompt();
+                ep.State = fw.Error;
+                ep.Show();
+            }
+        }
+
         #endregion
 
-        #region 修改用户配额
+        #region 修改用户的额外配额
 
-        private void ShowUserQuotasWindow(object sender, RoutedEventArgs e)
+        private void ShowSetExtraQuotasWindow(object sender, RoutedEventArgs e)
         {
+            AuthorExport data = this.DataContext as AuthorExport;
+            UsersPage_SetExtraQuotasWindow fw = new UsersPage_SetExtraQuotasWindow();
+            fw.State = data;
+            fw.Closed += ShowSetExtraQuotasResult;
+            fw.Show();
+        }
 
+        void ShowSetExtraQuotasResult(object sender, EventArgs e)
+        {
+            UsersPage_SetExtraQuotasWindow fw = (UsersPage_SetExtraQuotasWindow)sender;
+            if (fw.DialogResult != true) { return; }
+            if (fw.Error == null)
+            {
+                ErrorPrompt ep = new ErrorPrompt();
+                ep.State = "修改用户的额外配额成功";
+                ep.Closed += RefreshWhenRemoved;
+                ep.Show();
+            }
+            else
+            {
+                ErrorPrompt ep = new ErrorPrompt();
+                ep.State = fw.Error;
+                ep.Show();
+            }
         }
 
         #endregion
@@ -114,6 +157,8 @@ namespace zwg_china.backstage.control
 
         void Remove_do(object sender, EventArgs e)
         {
+            NormalPrompt np = (NormalPrompt)sender;
+            if (np.DialogResult != true) { return; }
             AuthorExport data = this.DataContext as AuthorExport;
             AdministratorExport aInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
 
