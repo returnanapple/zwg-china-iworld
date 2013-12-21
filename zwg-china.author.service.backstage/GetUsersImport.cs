@@ -102,8 +102,8 @@ namespace zwg_china.service.backstage
                             systemQuota.Details.Add(sqd);
                         }
                     }
-
-                    return new AuthorExport(x, group, systemQuota.Details);
+                    Author parent = db.Authors.FirstOrDefault(p => x.Relatives.Any(r => r.NodeId == p.Id) && p.Layer == x.Layer - 1);
+                    return new AuthorExport(x, parent, group, systemQuota.Details);
                 });
 
             return new PageResult<AuthorExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);

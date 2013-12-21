@@ -43,6 +43,8 @@
       <xs:element minOccurs="0" name="Layer" type="xs:int" />
       <xs:element minOccurs="0" name="Money" type="xs:double" />
       <xs:element minOccurs="0" name="Money_Frozen" type="xs:double" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentId" type="xs:int" />
       <xs:element minOccurs="0" name="PlayInfo" nillable="true" type="tns:UserPlayInfoExport" />
       <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q2:UserStatus" />
       <xs:element minOccurs="0" name="Subordinate" type="xs:int" />

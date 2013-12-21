@@ -1226,6 +1226,10 @@ namespace zwg_china.backstage.framework.AuthorService {
         
         private double Money_FrozenField;
         
+        private string ParentField;
+        
+        private int ParentIdField;
+        
         private zwg_china.backstage.framework.AuthorService.UserPlayInfoExport PlayInfoField;
         
         private zwg_china.backstage.framework.AuthorService.UserStatus StatusField;
@@ -1401,6 +1405,32 @@ namespace zwg_china.backstage.framework.AuthorService {
                 if ((this.Money_FrozenField.Equals(value) != true)) {
                     this.Money_FrozenField = value;
                     this.RaisePropertyChanged("Money_Frozen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Parent {
+            get {
+                return this.ParentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ParentField, value) != true)) {
+                    this.ParentField = value;
+                    this.RaisePropertyChanged("Parent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ParentId {
+            get {
+                return this.ParentIdField;
+            }
+            set {
+                if ((this.ParentIdField.Equals(value) != true)) {
+                    this.ParentIdField = value;
+                    this.RaisePropertyChanged("ParentId");
                 }
             }
         }

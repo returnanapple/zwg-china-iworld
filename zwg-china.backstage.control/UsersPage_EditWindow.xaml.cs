@@ -71,6 +71,7 @@ namespace zwg_china.backstage.control
                 tool.text_LastLoginTime.Text = data.LastLoginTime.ToLongDateString();
                 tool.text_LstLoginIp.Text = data.LastLoginIp;
                 tool.text_LastLoginAddress.Text = data.LastLoginAddress;
+                tool.text_parent.Text = data.Parent;
 
                 tool.text_Money.Text = data.Money.ToString("0.00");
                 tool.text_Money_Frozen.Text = data.Money_Frozen.ToString("0.00");

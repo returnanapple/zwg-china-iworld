@@ -26,7 +26,7 @@
             <TextBlock Text="我们提供永久的技术支持和拓展、升级服务" Canvas.Top="101" Canvas.Left="3"/>
             <StackPanel Orientation="Horizontal" Canvas.Top="120" Canvas.Left="3">
                 <TextBlock Text="Emai：" />
-                <TextBlock Text="2621762252@qq.com" Foreground="#FF007ACC" Cursor="Hand" ToolTipService.ToolTip="点击复制">
+                <TextBlock Text="2621762252@qq.com" Foreground="#FF007ACC" Cursor="Hand" ToolTipService.ToolTip="点击复制" TextDecorations="Underline">
                     <i:Interaction.Triggers>
                         <control:CopyWhenClick />
                     </i:Interaction.Triggers>

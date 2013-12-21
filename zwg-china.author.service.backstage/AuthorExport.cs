@@ -22,6 +22,18 @@ namespace zwg_china.service.backstage
         public int Id { get; set; }
 
         /// <summary>
+        /// 父用户的存储指针
+        /// </summary>
+        [DataMember]
+        public int ParentId { get; set; }
+
+        /// <summary>
+        /// 父用户的用户名
+        /// </summary>
+        [DataMember]
+        public string Parent { get; set; }
+
+        /// <summary>
         /// 用户层级
         /// </summary>
         [DataMember]
@@ -139,9 +151,10 @@ namespace zwg_china.service.backstage
         /// 实例化一个新的用户信息
         /// </summary>
         /// <param name="model">用户的数据模型</param>
+        /// <param name="parent">父用户</param>
         /// <param name="group">所属的用户组</param>
         /// <param name="systemQuotas">系统设置的高点号配额方案</param>
-        public AuthorExport(Author model, UserGroup group, List<SystemQuotaDetail> systemQuotas)
+        public AuthorExport(Author model, Author parent, UserGroup group, List<SystemQuotaDetail> systemQuotas)
         {
             this.Id = model.Id;
             this.Layer = model.Layer;
@@ -160,6 +173,17 @@ namespace zwg_china.service.backstage
             this.Integral = model.Integral;
             this.Subordinate = model.Subordinate;
             this.ExtraQuotas = model.ExtraQuotas.ConvertAll(x => new ExtraQuotaExport(x));
+
+            if (parent == null)
+            {
+                this.Parent = "";
+                this.ParentId = 0;
+            }
+            else
+            {
+                this.ParentId = parent.Id;
+                this.Parent = parent.Username;
+            }
 
             this.UserQuotas = systemQuotas.OrderByDescending(x => x.Rebate).ToList()
                 .ConvertAll(sq =>
