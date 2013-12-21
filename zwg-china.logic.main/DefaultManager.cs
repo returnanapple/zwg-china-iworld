@@ -201,15 +201,17 @@ namespace zwg_china.logic
 
                     #region 高点号配额
 
-                    for (double i = 13; i > 12; i -= 0.1)
+                    List<double> rs = new List<double> { 13.0, 12.9, 12.8, 12.7, 12.6, 12.5, 12.4, 12.3, 12.2, 12.1 };
+
+                    for (int i = 0; i < rs.Count; i++)
                     {
-                        SystemQuota sq = new SystemQuota(Math.Round(i, 1), new List<SystemQuotaDetail>());
-                        for (double j = 13; j > 12; j -= 0.1)
+                        SystemQuota sq = new SystemQuota(rs[i], new List<SystemQuotaDetail>());
+                        for (int j = 0; j < rs.Count; j++)
                         {
-                            int t = (int)((Math.Round(i, 1) - Math.Round(j, 1)) * 10) + 1;
+                            int t = j - i + 1;
                             t *= 2;
                             if (t < 0) { t = 0; }
-                            SystemQuotaDetail sqd = new SystemQuotaDetail(Math.Round(j, 1), t);
+                            SystemQuotaDetail sqd = new SystemQuotaDetail(rs[j], t);
                             sq.Details.Add(sqd);
                         }
                         db.SystemQuotas.Add(sq);

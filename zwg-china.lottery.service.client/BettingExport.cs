@@ -105,6 +105,12 @@ namespace zwg_china.service.client
         [DataMember]
         public DateTime CreatedTime { get; set; }
 
+        /// <summary>
+        /// 开奖号码（如果还未开奖则为空）
+        /// </summary>
+        [DataMember]
+        public string LotteryValue { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -138,6 +144,7 @@ namespace zwg_china.service.client
             this.Pay = model.Pay;
             this.Bonus = model.Bonus;
             this.CreatedTime = model.CreatedTime;
+            this.LotteryValue = model.LotteryValues;
         }
 
         #endregion
