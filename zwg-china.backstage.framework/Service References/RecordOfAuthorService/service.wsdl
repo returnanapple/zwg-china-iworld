@@ -218,9 +218,9 @@
   </wsdl:binding>
   <wsdl:service name="RecordOfAuthorService">
     <wsdl:port name="NetTcpBinding_IRecordOfAuthorService" binding="tns:NetTcpBinding_IRecordOfAuthorService">
-      <soap12:address location="net.tcp://192.168.1.130:4512/RecordOfAuthorService" />
+      <soap12:address location="net.tcp://192.168.1.102:4512/RecordOfAuthorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.1.130:4512/RecordOfAuthorService</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.102:4512/RecordOfAuthorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

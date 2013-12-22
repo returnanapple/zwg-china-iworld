@@ -3,7 +3,7 @@
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
            xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
            xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.TableRowOfLotteryTool_ChildWindow"
-           HasCloseButton="False">
+           HasCloseButton="False" Closed="ReBet">
 
     <controls:ChildWindow.Resources>
         <ResourceDictionary>
@@ -22,7 +22,7 @@
         <Canvas.Background>
             <ImageBrush Stretch="None" ImageSource="Images/ChildWindowBg.png"/>
         </Canvas.Background>
-        
+
         <TextBlock Text="彩种：" Canvas.Left="150" Canvas.Top="77"/>
         <TextBlock Text="玩法标签：" Canvas.Left="124" Canvas.Top="99"/>
         <TextBlock Text="玩法：" Canvas.Left="150" Canvas.Top="121"/>
@@ -64,7 +64,7 @@
                                    Foreground="#FFD7A471" FontSize="13" FontFamily="Microsoft YaHei"/>
         </ScrollViewer>
 
-        <local:NewButton Width="98" Height="37" ImageNameOfBackground="撤单2" 
+        <local:NewButton Width="98" Height="37" ImageNameOfBackground="撤单2" Click="OK"
                          Canvas.Left="303" Canvas.Top="394"/>
         <local:NewButton Width="98" Height="37" ImageNameOfBackground="返回" Click="Return"
                          Canvas.Left="437" Canvas.Top="394"/>

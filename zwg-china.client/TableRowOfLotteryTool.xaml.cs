@@ -20,11 +20,13 @@ namespace zwg_china.client
             InitializeComponent();
         }
 
+        #region Click事件
         private void ReBet(object sender, RoutedEventArgs e)
         {
             TableRowOfLotteryTool_ChildWindow cw = new TableRowOfLotteryTool_ChildWindow();
             cw.BetInfo = (BettingExport)DataContext;
             cw.Show();
         }
+        #endregion
     }
 }

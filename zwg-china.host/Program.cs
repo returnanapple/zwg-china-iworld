@@ -46,7 +46,7 @@ namespace zwg_china.host
             Console.WriteLine("开发商：紫微阁工作室");
             Console.WriteLine("版本号：v4.6.0.3703");
             Console.WriteLine();
-            Console.WriteLine("当前服务地址：net.tcp://192.168.1.130");
+            Console.WriteLine("当前服务地址：net.tcp://192.168.1.102");
             Console.WriteLine("前台服务端口：4511");
             Console.WriteLine("后台服务端口：4512");
             Console.WriteLine();

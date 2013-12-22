@@ -82,9 +82,9 @@
   </wsdl:binding>
   <wsdl:service name="AuthorPushService">
     <wsdl:port name="NetTcpBinding_IAuthorPushService" binding="tns:NetTcpBinding_IAuthorPushService">
-      <soap12:address location="net.tcp://192.168.1.130:4511/AuthorPushService" />
+      <soap12:address location="net.tcp://192.168.1.102:4511/AuthorPushService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.1.130:4511/AuthorPushService</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.102:4511/AuthorPushService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

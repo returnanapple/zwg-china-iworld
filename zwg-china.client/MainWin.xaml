@@ -1,0 +1,20 @@
+﻿<ContentControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.MainWin"
+    mc:Ignorable="d"
+    >
+
+    <ContentControl.Template>
+        <ControlTemplate>
+            <Canvas>
+                <local:MainTool Jump="{Binding JumpCommand}" PageName="{Binding PageName}"/>
+                <Grid Width="811" Height="560" Canvas.Left="210" Canvas.Top="135">
+                    <ContentPresenter/>
+                </Grid>
+            </Canvas>
+        </ControlTemplate>
+    </ContentControl.Template>
+</ContentControl>

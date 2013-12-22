@@ -20,15 +20,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://192.168.1.130:4512/MessageService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://192.168.1.102:4512/MessageService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fed90684-0188-4db3-a3b3-4ab0c99f4fa7" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/MessageService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9f389492-0cfa-4e9c-85af-279e1d7bce06" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/MessageService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="eeec80d1-4b6d-48ff-89ad-2e5f075027f3" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/MessageService/mex" />
-    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="929d12fb-bc51-4ea3-8962-a21876bdd0fb" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/MessageService/mex" />
-    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="089c18a6-aebb-4c99-a2cf-b8bb4f839798" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/MessageService/mex" />
-    <MetadataFile FileName="zwg_china.model.xsd" MetadataType="Schema" ID="36c9d759-e5ef-40e7-b490-b7859de29fd0" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/MessageService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fed90684-0188-4db3-a3b3-4ab0c99f4fa7" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/MessageService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9f389492-0cfa-4e9c-85af-279e1d7bce06" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/MessageService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="eeec80d1-4b6d-48ff-89ad-2e5f075027f3" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/MessageService/mex" />
+    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="929d12fb-bc51-4ea3-8962-a21876bdd0fb" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/MessageService/mex" />
+    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="089c18a6-aebb-4c99-a2cf-b8bb4f839798" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/MessageService/mex" />
+    <MetadataFile FileName="zwg_china.model.xsd" MetadataType="Schema" ID="36c9d759-e5ef-40e7-b490-b7859de29fd0" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/MessageService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

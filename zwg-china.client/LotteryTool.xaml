@@ -4,6 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.LotteryTool"
+    xmlns:classes="clr-namespace:zwg_china.client.Classes"
     mc:Ignorable="d"
     Width="814" Height="568">
 
@@ -12,6 +13,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="StyleDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <classes:HowToPlayConverter x:Key="HowToPlayConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -24,6 +26,14 @@
                 <Setter Property="FontSize" Value="14"/>
                 <Setter Property="FontFamily" Value="Fonts/simsun.ttc#SimSun"/>
                 <Setter Property="Foreground" Value="White"/>
+            </Style>
+            <Style TargetType="local:NoBorderTextBox" x:Key="TextBoxInScrollViewer">
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Foreground" Value="#FF8B94A0"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="Fonts/simsun.ttc#SimSun"/>
             </Style>
         </Canvas.Resources>
 
@@ -72,14 +82,23 @@
         </ItemsControl>
 
         <!--选号区-->
-        <ItemsControl ItemsSource="{Binding Seats}" Width="656" Height="177" Canvas.Left="35" Canvas.Top="209">
+        <ItemsControl ItemsSource="{Binding Seats}" Width="656" Height="177" 
+                      Visibility="{Binding IsDuplex, ConverterParameter=单式, Converter={StaticResource HowToPlayConverter}}"
+                      Canvas.Left="35" Canvas.Top="209">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <local:BetBar Tittle="{Binding Name}" Margin="0,0,0,3"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        <ScrollViewer Width="498" Height="159" Style="{StaticResource NewScrollViewerStyle}" Padding="12,0"
+                      Visibility="{Binding IsDuplex, ConverterParameter=复式, Converter={StaticResource HowToPlayConverter}}"
+                      VerticalScrollBarVisibility="Visible" Background="#FF560A28"
+                      Canvas.Left="40" Canvas.Top="219">
+            <local:NoBorderTextBox Style="{StaticResource TextBoxInScrollViewer}"/>
+        </ScrollViewer>
 
+        <!--确认投注、添加号码、一键清除、我要追号-->
         <local:NewButton Width="102" Height="78" ImageNameOfBackground="确认投注" Command="{Binding DoBetWindowCommand}"
                          Canvas.Left="543" Canvas.Top="389"/>
         <local:NewButton Width="77" Height="36" ImageNameOfContent="添加号码" ImageNameOfBackground="AboutBetButtonBg" 
@@ -92,14 +111,16 @@
                          Command="{Binding OpenChasingWindowCommand}"
                          Canvas.Left="515" Canvas.Top="470"/>
 
+        <!--左右拖动条-->
         <Slider Canvas.Left="651" Canvas.Top="435" Width="122" Style="{StaticResource NewSliderStyle}" Value="{Binding Point, Mode=TwoWay}"
                 Maximum="{Binding MaxPoint}"/>
-        <ScrollViewer Width="498" Height="48" Canvas.Left="39" Canvas.Top="410" VerticalScrollBarVisibility="Visible" Padding="12,0"
-                      Style="{StaticResource NewScrollViewerStyle}">
-            <local:NoBorderTextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" IsReadOnly="True"
-                     Foreground="#FF8B94A0" FontSize="14" FontFamily="Fonts/simsun.ttc#SimSun" Text="{Binding ContextOfSelected}"/>
-        </ScrollViewer>
 
+        <!--下注信息-->
+        <ScrollViewer Width="498" Height="48" Canvas.Left="40" Canvas.Top="410" VerticalScrollBarVisibility="Visible" Padding="12,0"
+                      Style="{StaticResource NewScrollViewerStyle}">
+            <local:NoBorderTextBox IsReadOnly="True" Style="{StaticResource TextBoxInScrollViewer}"
+                                   Text="{Binding ContextOfSelected}"/>
+        </ScrollViewer>
         <TextBlock Text="{Binding ContextOfPoinAndOdds}"
                    Canvas.Left="659" Canvas.Top="409"  />
         <TextBlock Text="{Binding Notes}" 
@@ -111,6 +132,7 @@
                                Foreground="White" FontSize="14" FontFamily="Fonts/simsun.ttc#SimSun"
                                Canvas.Left="305" Canvas.Top="476"/>
 
+        <!--投注记录列表-->
         <Grid Width="780" Height="55" Canvas.Left="15" Canvas.Top="506">
             <Grid.RowDefinitions>
                 <RowDefinition Height="32"/>

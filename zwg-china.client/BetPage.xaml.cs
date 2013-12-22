@@ -1,26 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
-using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using zwg_china.client.framework;
 
-namespace zwg_china.client.Classes
+namespace zwg_china.client
 {
-    public class SelectResult
+    [View(Page.彩票投注)]
+    public partial class BetPage : UserControl
     {
-        public string Tittle { get; set; }
-        public List<int> Data { get; set; }
-
-        public SelectResult(string t, List<int> d)
+        public BetPage()
         {
-            Tittle = t;
-            Data = d;
+            InitializeComponent();
         }
     }
 }

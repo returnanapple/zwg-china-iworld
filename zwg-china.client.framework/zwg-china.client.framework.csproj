@@ -77,7 +77,7 @@
     <Compile Include="IMainPage.cs" />
     <Compile Include="IPop.cs" />
     <Compile Include="LoginViewModel.cs" />
-    <Compile Include="MainViewModel.cs" />
+    <Compile Include="BetViewModel.cs" />
     <Compile Include="ManagerViewModelBase.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="MoneyChangeViewModel.cs" />

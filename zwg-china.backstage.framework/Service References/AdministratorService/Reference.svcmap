@@ -20,14 +20,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://192.168.1.130:4512/AdministratorService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://192.168.1.102:4512/AdministratorService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="39c3b1ff-c167-4fe5-af78-c1bd98c8c0f5" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/AdministratorService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d2eec1e3-61b5-4e24-96e5-4530475bc72b" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/AdministratorService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="beeeb79b-9861-4a9e-86e7-5e27ba5b2e00" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/AdministratorService/mex" />
-    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="6f205205-457a-4a13-8508-2a03e58b4ea1" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/AdministratorService/mex" />
-    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="64ed0fcc-08ee-4301-9a03-ce099f899e62" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/AdministratorService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="39c3b1ff-c167-4fe5-af78-c1bd98c8c0f5" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/AdministratorService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d2eec1e3-61b5-4e24-96e5-4530475bc72b" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/AdministratorService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="beeeb79b-9861-4a9e-86e7-5e27ba5b2e00" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/AdministratorService/mex" />
+    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="6f205205-457a-4a13-8508-2a03e58b4ea1" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/AdministratorService/mex" />
+    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="64ed0fcc-08ee-4301-9a03-ce099f899e62" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/AdministratorService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

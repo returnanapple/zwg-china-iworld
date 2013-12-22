@@ -41,7 +41,7 @@
             </ComboBox>
             <TextBlock x:Name="text_CreatedTime" Text="2013年12月20日" Canvas.Left="99" Canvas.Top="98"/>
             <TextBlock x:Name="text_LastLoginTime" Text="2013年12月20日" Canvas.Left="99" Canvas.Top="117"/>
-            <TextBlock x:Name="text_LstLoginIp" Text="192.168.1.130" Canvas.Left="99" Canvas.Top="136"/>
+            <TextBlock x:Name="text_LstLoginIp" Text="192.168.1.102" Canvas.Left="99" Canvas.Top="136"/>
             <TextBlock x:Name="text_LastLoginAddress" Text="广东省 广州市" Canvas.Left="99" Canvas.Top="155"/>
             <TextBox x:Name="text_parent" Text="magicvr" Canvas.Left="99" Canvas.Top="174" Width="120" IsReadOnly="True"/>
 

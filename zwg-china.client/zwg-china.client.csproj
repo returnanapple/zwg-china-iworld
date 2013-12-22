@@ -60,6 +60,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.NetTcp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core">
@@ -78,12 +80,10 @@
     <Compile Include="BetBar.xaml.cs">
       <DependentUpon>BetBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BetTool.xaml.cs">
-      <DependentUpon>BetTool.xaml</DependentUpon>
+    <Compile Include="BetPage.xaml.cs">
+      <DependentUpon>BetPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\BetInfo.cs" />
-    <Compile Include="Classes\SelectResult.cs" />
-    <Compile Include="Classes\SingleSelect.cs" />
+    <Compile Include="Classes\HowToPlayConverter.cs" />
     <Compile Include="CoverFloorTool.xaml.cs">
       <DependentUpon>CoverFloorTool.xaml</DependentUpon>
     </Compile>
@@ -101,6 +101,9 @@
     </Compile>
     <Compile Include="MainTool.xaml.cs">
       <DependentUpon>MainTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWin.xaml.cs">
+      <DependentUpon>MainWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewButton.xaml.cs">
       <DependentUpon>NewButton.xaml</DependentUpon>
@@ -133,6 +136,9 @@
     <Compile Include="ShowAWinningTool.xaml.cs">
       <DependentUpon>ShowAWinningTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowMessage_ChildWindow.xaml.cs">
+      <DependentUpon>ShowMessage_ChildWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubPlayTagButton.xaml.cs">
       <DependentUpon>SubPlayTagButton.xaml</DependentUpon>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Warning_ChildWindow.xaml.cs">
+      <DependentUpon>Warning_ChildWindow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -155,7 +164,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BetTool.xaml">
+    <Page Include="BetPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -227,6 +240,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ShowMessage_ChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StyleDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -247,6 +264,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Warning_ChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\撤单_MouseOver.png" />
@@ -261,6 +282,13 @@
     <Resource Include="Images\返回_Normal.png" />
     <Resource Include="Images\返回_Pressed.png" />
     <Resource Include="Images\TableRowOfLotteryTool_TittleBg.png" />
+    <Resource Include="Images\取消_MouseOver.png" />
+    <Resource Include="Images\取消_Normal.png" />
+    <Resource Include="Images\取消_Pressed.png" />
+    <Resource Include="Images\确定_MouseOver.png" />
+    <Resource Include="Images\确定_Normal.png" />
+    <Resource Include="Images\确定_Pressed.png" />
+    <Resource Include="Images\Warning_ChildWindowBg.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />

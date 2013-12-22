@@ -122,9 +122,11 @@ namespace zwg_china.client
 
         #endregion
 
+        #region DragMove事件
         private void DragMove(object sender, MouseButtonEventArgs e)
         {
             App.Current.MainWindow.DragMove();
         }
+        #endregion
     }
 }

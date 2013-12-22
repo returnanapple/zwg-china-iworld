@@ -23,6 +23,10 @@ namespace zwg_china.client
             Style = (Style)Resources["NewChildWindowStyle"];
         }
         #region Click事件
+        private void OK(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+        }
         private void Return(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
@@ -50,17 +54,53 @@ namespace zwg_china.client
                 td.订单号.Text = te.Id.ToString();
                 td.用户.Text = te.Owner.ToString();
                 td.下注时间.Text = te.CreatedTime.ToString();
-                td.总金额.Text = te.Pay.ToString();
-                td.中奖金额.Text = te.Bonus.ToString();
-                td.状态.Text = te.Status.ToString();
-
                 SettingExport se = DataManager.GetValue<SettingExport>(DataKey.IWorld_Client_Setting);
                 td.单注价格.Text = se.UnitPrice.ToString();
-
+                td.总金额.Text = te.Pay.ToString();
+                td.中奖金额.Text = te.Bonus.ToString();
+                //td.盈亏.Text
+                if (te.LotteryValue == null || te.LotteryValue == "")
+                {
+                    td.开奖号码.Text = "-,-,-,-,-";
+                }
+                else
+                {
+                    td.开奖号码.Text = te.LotteryValue;
+                }
+                td.状态.Text = te.Status.ToString();
             }));
 
 
 
+        #endregion
+
+        #region Closed事件
+        void ReBet(object sender, EventArgs e)
+        {
+            if (this.DialogResult == true)
+            {
+                Warning_ChildWindow cw = new Warning_ChildWindow();
+                cw.Text = "确认撤单吗";
+                cw.Closed += (_sender, _e) =>
+                {
+                    if (cw.DialogResult == true)
+                    {
+                        LotteryServiceClient client = new LotteryServiceClient();
+                        client.RecallBettingCompleted += (__sender, __e) =>
+                        {
+                            if (__e.Result.Success == false)
+                            {
+                                ShowMessage_ChildWindow smcw = new ShowMessage_ChildWindow();
+                                smcw.Text = __e.Result.Error;
+                                smcw.Show();
+                            }
+                        };
+                        client.RecallBettingAsync(new RecallBettingImport { BettingId = BetInfo.Id });
+
+                    }
+                };
+            }
+        }
         #endregion
     }
 }

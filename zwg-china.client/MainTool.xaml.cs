@@ -17,14 +17,11 @@ using zwg_china.client.framework.LotteryService;
 
 namespace zwg_china.client
 {
-    public partial class MainTool : ContentControl
+    public partial class MainTool : UserControl
     {
         public MainTool()
         {
             InitializeComponent();
-            InitializeList();
-            LotteryButtons.ItemsSource = lotteryStateCollection;
-            (Resources["GetUserInfo"] as Storyboard).Begin();
         }
 
         #region 私有字段
@@ -90,6 +87,9 @@ namespace zwg_china.client
                 App.Current.MainWindow.Width = 1024;
                 App.Current.MainWindow.Height = 700;
             }
+            InitializeList();
+            LotteryButtons.ItemsSource = lotteryStateCollection;
+            (Resources["GetUserInfo"] as Storyboard).Begin();
             
         }
 

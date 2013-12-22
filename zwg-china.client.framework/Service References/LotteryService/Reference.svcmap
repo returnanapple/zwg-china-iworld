@@ -20,15 +20,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://192.168.1.130:4511/LotteryService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://192.168.1.102:4511/LotteryService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="59ac243e-177a-442d-a388-d84252105d39" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4511/LotteryService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3a180236-e4cd-49c8-88b1-8eaeef8102b7" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4511/LotteryService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7e6dc051-a9d7-4d75-ac62-7cef948b2b0e" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4511/LotteryService/mex" />
-    <MetadataFile FileName="zwg_china.service.client.xsd" MetadataType="Schema" ID="35ec7fda-ff6a-4169-a624-cc7397f6336b" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4511/LotteryService/mex" />
-    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="2c159e4d-35d6-40a2-beb9-21b4c36a34f2" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4511/LotteryService/mex" />
-    <MetadataFile FileName="zwg_china.model.xsd" MetadataType="Schema" ID="9f635a6b-f512-4e95-97b0-1992754ac65d" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4511/LotteryService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="59ac243e-177a-442d-a388-d84252105d39" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4511/LotteryService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3a180236-e4cd-49c8-88b1-8eaeef8102b7" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4511/LotteryService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7e6dc051-a9d7-4d75-ac62-7cef948b2b0e" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4511/LotteryService/mex" />
+    <MetadataFile FileName="zwg_china.service.client.xsd" MetadataType="Schema" ID="35ec7fda-ff6a-4169-a624-cc7397f6336b" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4511/LotteryService/mex" />
+    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="2c159e4d-35d6-40a2-beb9-21b4c36a34f2" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4511/LotteryService/mex" />
+    <MetadataFile FileName="zwg_china.model.xsd" MetadataType="Schema" ID="9f635a6b-f512-4e95-97b0-1992754ac65d" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4511/LotteryService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
