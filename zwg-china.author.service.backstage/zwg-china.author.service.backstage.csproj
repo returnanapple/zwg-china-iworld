@@ -79,6 +79,7 @@
     <Compile Include="EditSystemBankAccountImport.cs" />
     <Compile Include="EditUserGroupImport.cs" />
     <Compile Include="EditUserImport.cs" />
+    <Compile Include="ExtraQuotaExport.cs" />
     <Compile Include="GetBasicUserGroupsImport.cs" />
     <Compile Include="GetCommissionRecordsImport.cs" />
     <Compile Include="GetCountOfUntreatedWithdrawalsRecordsImport.cs" />

@@ -62,6 +62,11 @@ namespace zwg_china.model
         /// </summary>
         public double Bonus { get; set; }
 
+        /// <summary>
+        /// 开奖号码（如果还没开奖则为空）
+        /// </summary>
+        public string LotteryValues { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -94,6 +99,7 @@ namespace zwg_china.model
             this.Seats = seats;
             this.Status = BettingStatus.等待开奖;
             this.Bonus = 0;
+            this.LotteryValues = "";
 
             this.Notes = GetNotes();
             double t = howToPlay.Interface == LotteryInterface.任N不定位

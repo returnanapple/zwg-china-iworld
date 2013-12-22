@@ -1206,6 +1206,8 @@ namespace zwg_china.backstage.framework.AuthorService {
         
         private System.DateTime CreatedTimeField;
         
+        private System.Collections.Generic.List<zwg_china.backstage.framework.AuthorService.ExtraQuotaExport> ExtraQuotasField;
+        
         private zwg_china.backstage.framework.AuthorService.UserGroupExport GroupField;
         
         private int IdField;
@@ -1218,9 +1220,15 @@ namespace zwg_china.backstage.framework.AuthorService {
         
         private System.DateTime LastLoginTimeField;
         
+        private int LayerField;
+        
         private double MoneyField;
         
         private double Money_FrozenField;
+        
+        private string ParentField;
+        
+        private int ParentIdField;
         
         private zwg_china.backstage.framework.AuthorService.UserPlayInfoExport PlayInfoField;
         
@@ -1267,6 +1275,19 @@ namespace zwg_china.backstage.framework.AuthorService {
                 if ((this.CreatedTimeField.Equals(value) != true)) {
                     this.CreatedTimeField = value;
                     this.RaisePropertyChanged("CreatedTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<zwg_china.backstage.framework.AuthorService.ExtraQuotaExport> ExtraQuotas {
+            get {
+                return this.ExtraQuotasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExtraQuotasField, value) != true)) {
+                    this.ExtraQuotasField = value;
+                    this.RaisePropertyChanged("ExtraQuotas");
                 }
             }
         }
@@ -1350,6 +1371,19 @@ namespace zwg_china.backstage.framework.AuthorService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Layer {
+            get {
+                return this.LayerField;
+            }
+            set {
+                if ((this.LayerField.Equals(value) != true)) {
+                    this.LayerField = value;
+                    this.RaisePropertyChanged("Layer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public double Money {
             get {
                 return this.MoneyField;
@@ -1371,6 +1405,32 @@ namespace zwg_china.backstage.framework.AuthorService {
                 if ((this.Money_FrozenField.Equals(value) != true)) {
                     this.Money_FrozenField = value;
                     this.RaisePropertyChanged("Money_Frozen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Parent {
+            get {
+                return this.ParentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ParentField, value) != true)) {
+                    this.ParentField = value;
+                    this.RaisePropertyChanged("Parent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ParentId {
+            get {
+                return this.ParentIdField;
+            }
+            set {
+                if ((this.ParentIdField.Equals(value) != true)) {
+                    this.ParentIdField = value;
+                    this.RaisePropertyChanged("ParentId");
                 }
             }
         }
@@ -1886,6 +1946,51 @@ namespace zwg_china.backstage.framework.AuthorService {
                 if ((this.Rebate_NormalField.Equals(value) != true)) {
                     this.Rebate_NormalField = value;
                     this.RaisePropertyChanged("Rebate_Normal");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ExtraQuotaExport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
+    public partial class ExtraQuotaExport : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double RebateField;
+        
+        private int SumField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Rebate {
+            get {
+                return this.RebateField;
+            }
+            set {
+                if ((this.RebateField.Equals(value) != true)) {
+                    this.RebateField = value;
+                    this.RaisePropertyChanged("Rebate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Sum {
+            get {
+                return this.SumField;
+            }
+            set {
+                if ((this.SumField.Equals(value) != true)) {
+                    this.SumField = value;
+                    this.RaisePropertyChanged("Sum");
                 }
             }
         }

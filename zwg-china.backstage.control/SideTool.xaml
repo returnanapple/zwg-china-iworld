@@ -9,7 +9,7 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="css.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <Style x:Key="normal" TargetType="TextBlock" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
                 <Setter Property="Foreground" Value="#888"></Setter>
@@ -98,111 +98,117 @@
                              ToolTipService.ToolTip="退出后台管理系统" Click="OnLogout"/>
         </Grid>
         <StackPanel VerticalAlignment="Top" Grid.Row="2">
+            <!--首页-->
             <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="首页" 
                                        Click="OnSelect" CanJump="True"/>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="用户管理" 
+            <!--用户管理-->
+            <StackPanel Name="tag_users">
+                <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="用户管理" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4"
+                <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="5"
                                      RelevanceText="用户管理">
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看用户列表" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="添加新用户" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看用户组" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看用户登陆记录" />
-            </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="彩票管理" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                                                Text="查看帐变记录" />
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                                                Text="高点号配额方案" />
+                </local:SideTool_MenuList>
+            </StackPanel>
+            <!--彩票管理-->
+            <StackPanel Name="tag_tickets">
+                <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="彩票管理" 
                                        Click="OnSelect"/>
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="5" 
+                <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="5" 
                                      RelevanceText="彩票管理">
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看彩票列表" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看开奖记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看投注记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看追号记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看虚拟排行" />
-            </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="公告管理" 
-                                       Click="OnSelect"/>
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="2" 
-                                     RelevanceText="公告管理">
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看公告列表" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="添加新公告" />
-            </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="活动管理" 
+                </local:SideTool_MenuList>
+            </StackPanel>
+            <!--活动管理-->
+            <StackPanel Name="tag_activities">
+                <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="活动管理" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="8" 
+                <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" 
                                      RelevanceText="活动管理">
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看注册奖励" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看注册奖励的参与记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看消费奖励" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
-                                                Text="查看消费奖励的参与记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看充值奖励" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看充值奖励的参与记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看积分兑换" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看积分兑换的参与记录" />
-            </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="数据报表" 
+                </local:SideTool_MenuList>
+            </StackPanel>
+            <!--数据报表-->
+            <StackPanel Name="tag_datareports">
+                <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="数据报表" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="7" 
+                <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="8" 
                                      RelevanceText="数据报表">
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看站点统计" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看个人统计" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="查看转账记录" />
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看充值记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看提现记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看返点记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看佣金记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}"
                                                 Text="查看分红记录" />
-            </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="系统设置" 
+                </local:SideTool_MenuList>
+            </StackPanel>
+            <!--系统设置-->
+            <StackPanel Name="tag_settings">
+                <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="系统设置" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" 
+                <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="5" 
                                      RelevanceText="系统设置">
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="系统相关" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="用户相关" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="彩票相关" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="银行帐号" />
-            </local:SideTool_MenuList>
-            <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="管理员组" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="基础系统设置" />
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="用户模块设置" />
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="彩票模块设置" />
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="银行帐号设置" />
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                                                Text="系统公告设置" />
+                </local:SideTool_MenuList>
+            </StackPanel>
+            <!--管理员组-->
+            <StackPanel Name="tag_administrators">
+                <local:SideTool_MenuButton SelectedText="{Binding SelectedText_Menu}" Text="管理员组" 
                                        Click="OnSelect" />
-            <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="4" 
+                <local:SideTool_MenuList SelectedText="{Binding OpenMenuText}" Width="200" CountOfButton="3" 
                                      RelevanceText="管理员组">
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看管理员列表" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看管理员用户组" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
+                    <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
                                                 Text="查看管理员登陆记录" />
-                <local:SideTool_MenuList_Button Click="OnJump" SelectedText="{Binding SelectedText_Page}" 
-                                                Text="查看管理操作记录" />
-            </local:SideTool_MenuList>
+                </local:SideTool_MenuList>
+            </StackPanel>
         </StackPanel>
         <Border Width="5" HorizontalAlignment="Right" Grid.RowSpan="4">
             <Border.Background>

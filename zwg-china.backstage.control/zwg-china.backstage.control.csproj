@@ -47,6 +47,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core">
@@ -59,14 +60,92 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorGroupPage_CreateWindow.xaml.cs">
+      <DependentUpon>AdministratorGroupPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorGroupPage_EditWindow.xaml.cs">
+      <DependentUpon>AdministratorGroupPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorGroupPage_TableRow.xaml.cs">
+      <DependentUpon>AdministratorGroupPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorLandingRecordsPage_Table.xaml.cs">
+      <DependentUpon>AdministratorLandingRecordsPage_Table.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsPage_CreateAdministratorWindow.xaml.cs">
+      <DependentUpon>AdministratorsPage_CreateAdministratorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsPage_EditWindow.xaml.cs">
+      <DependentUpon>AdministratorsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsPage_TableRow.xaml.cs">
+      <DependentUpon>AdministratorsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage_CreateWindow.xaml.cs">
+      <DependentUpon>BulletinsPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage_EditWindow.xaml.cs">
+      <DependentUpon>BulletinsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage_FullWindow.xaml.cs">
+      <DependentUpon>BulletinsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage_TableRow.xaml.cs">
+      <DependentUpon>BulletinsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="class\IJumpButton.cs" />
     <Compile Include="class\IMenuButton.cs" />
     <Compile Include="class\MenuSelectedInfo.cs" />
     <Compile Include="ContentBox.xaml.cs">
       <DependentUpon>ContentBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="converter\DateTimeConverter.cs" />
     <Compile Include="EditAccounTool.xaml.cs">
       <DependentUpon>EditAccounTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FilterBox.xaml.cs">
+      <DependentUpon>FilterBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="converter\IntConverter.cs" />
+    <Compile Include="converter\BoolToStringConverter.cs" />
+    <Compile Include="MoneyChangeRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>MoneyChangeRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeRecordsPage_CreateWindow.xaml.cs">
+      <DependentUpon>RechargeRecordsPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>RechargeRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RersonalAndTeamReportsPage_FullWindow.xaml.cs">
+      <DependentUpon>RersonalAndTeamReportsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RersonalAndTeamReportsPage_TableRow.xaml.cs">
+      <DependentUpon>RersonalAndTeamReportsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SiteReportsPage_FullWindow.xaml.cs">
+      <DependentUpon>SiteReportsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SiteReportsPage_TableRow.xaml.cs">
+      <DependentUpon>SiteReportsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_CreateWindow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_EditWindow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_FullWindow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_TableRow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemQuotasPage_TableRow.xaml.cs">
+      <DependentUpon>SystemQuotasPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemQuotasPage_TableRow_Detail.xaml.cs">
+      <DependentUpon>SystemQuotasPage_TableRow_Detail.xaml</DependentUpon>
     </Compile>
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
@@ -112,6 +191,39 @@
     <Compile Include="tool\KeepTextRealTime.cs" />
     <Compile Include="tool\KeyDownCommandAction.cs" />
     <Compile Include="tool\VerticalScrollTrigger.cs" />
+    <Compile Include="TransferRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>TransferRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroupsPage_CreateUserGroupWindow.xaml.cs">
+      <DependentUpon>UserGroupsPage_CreateUserGroupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroupsPage_EditWindow.xaml.cs">
+      <DependentUpon>UserGroupsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroupsPage_FullWindow.xaml.cs">
+      <DependentUpon>UserGroupsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserGroupsPage_TableRow.xaml.cs">
+      <DependentUpon>UserGroupsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserLandingRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>UserLandingRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_CreateUserWindow.xaml.cs">
+      <DependentUpon>UsersPage_CreateUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_EditWindow.xaml.cs">
+      <DependentUpon>UsersPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_FullWindow.xaml.cs">
+      <DependentUpon>UsersPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_SetExtraQuotasWindow.xaml.cs">
+      <DependentUpon>UsersPage_SetExtraQuotasWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage_TableRow.xaml.cs">
+      <DependentUpon>UsersPage_TableRow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zwg-china.backstage.framework\zwg-china.backstage.framework.csproj">
@@ -120,6 +232,50 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AdministratorGroupPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorGroupPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorGroupPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorLandingRecordsPage_Table.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorsPage_CreateAdministratorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ContentBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -128,7 +284,111 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="css.xaml">
+    <Page Include="FilterBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoneyChangeRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RechargeRecordsPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RechargeRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RersonalAndTeamReportsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RersonalAndTeamReportsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SiteReportsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SiteReportsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemQuotasPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemQuotasPage_TableRow_Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransferRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_CreateUserGroupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserGroupsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserLandingRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage_CreateUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage_SetExtraQuotasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_Css.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_CssOfFullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_CssOfPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="_CssOfTableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,6 +440,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UsersPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\loading.png" />
@@ -197,6 +465,7 @@
     <Resource Include="img\information.png" />
     <Resource Include="img\menu-current-arrow.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="zwg_china.backstage.framework.ViewModelService" Collapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
+    <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAiEAEAASAgAAAAAAgAAAAAAAAAAAAAAQBAAAA=</HashCode>
       <FileName>ViewModelService.cs</FileName>
@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.backstage.framework.UniversalCommand" Collapsed="true">
-    <Position X="0.5" Y="6" Width="1.5" />
+    <Position X="0.5" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAACAAQAAEAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniversalCommand.cs</FileName>
@@ -45,7 +45,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.backstage.framework.LoginViewModel" Collapsed="true" HideInheritanceLine="true">
-    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAQAAAQAEAAAAAAAAIAACQAIQAACgAAA=</HashCode>
       <FileName>LoginViewModel.cs</FileName>
@@ -59,24 +59,263 @@
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.backstage.framework.DataManager" Collapsed="true">
-    <Position X="2.25" Y="6" Width="1.5" />
+    <Position X="2.25" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAIAAAAgAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.backstage.framework.IndexViewModel" Collapsed="true" HideInheritanceLine="true">
-    <Position X="2.25" Y="2.75" Width="1.5" />
+    <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IndexViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="zwg_china.backstage.framework.UsersViewModel" Collapsed="true" HideInheritanceLine="true">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAEAAEABAABABAAAACAAACAAAAAAAAAAAAAAAEAAAAQ=</HashCode>
       <FileName>UsersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.ShowListViewModelBase&lt;TExport, TClient&gt;" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAABABAAQgAAAEAAAQAAAAEAgAAAEBAAAAAI=</HashCode>
+      <FileName>ShowListViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="zwg_china.backstage.framework.UserGroupsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAABABAAAAAAIACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserGroupsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.UserLandingRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQABABAAACAAAACgAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>UserLandingRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.TicketsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAFAAAABAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TicketsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.LotteriesViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAAAQABABBAAAAAAACAAAAAgABAAAAAAAEAAAAA=</HashCode>
+      <FileName>LotteriesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.BettingsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAxAAAAMQABABAAAAAAAACAAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>BettingsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.ChasingsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAAAAIQABABAAAAAAAACAAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>ChasingsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.VirtualBonusViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAABABBAAAAAAACAAAAAAABAAAAAAAEAAAAA=</HashCode>
+      <FileName>VirtualBonusViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.RewardForRegisterPlansViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAEAAAABACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RewardForRegisterPlansViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.RewardForConsumptionPlansViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAEAAAABACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RewardForConsumptionPlansViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.RewardForRechargePlansViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAEAAAABACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RewardForRechargePlansViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.RedeemPlansViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAEAAAABACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RedeemPlansViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.BasicSettingViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABAQYAAQBCQAAAwgACAAIAABAAAAACAAEABAABAQA=</HashCode>
+      <FileName>BasicSettingViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.AuthorSettingViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAACAEAQBhBQAEAghMXCgsBBJIBAICDAAAAFQkFAAA=</HashCode>
+      <FileName>AuthorSettingViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.TicketSettingViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAAICABAQAAAgAAiAAAADhAAACQCAAAABCABCAA=</HashCode>
+      <FileName>TicketSettingViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.SystemBankAccountsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SystemBankAccountsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.BulletinsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="7.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAAAAAAAACAAAAAAAAAAAgAAAAIAAAA=</HashCode>
+      <FileName>BulletinsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.AdministratorsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAAAABABAAAACAAACAAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>AdministratorsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.AdministratorGroupViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAABABAAAAAAIACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AdministratorGroupViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.AdministratorLandingRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQABABAAACAAAACgAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>AdministratorLandingRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.SiteReportsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQARABAAAAAAABCAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SiteReportsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.RersonalAndTeamReportsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQARIBAAACIACBCgAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RersonalAndTeamReportsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.RebateRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQABABAAACAAAACgAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>RebateRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.TransferRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAEQABABAAAAAAAACAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransferRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.RechargeRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAEQABABAAACAAAACgAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>RechargeRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.MoneyChangeRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAAAAAQABABAAACAAAACgAAAAgAAAAAAAAAEIAAAQ=</HashCode>
+      <FileName>MoneyChangeRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.WithdrawalsRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAEQABABAAACAAAACgAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>WithdrawalsRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.CommissionRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQABABAAACAAAACgAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>CommissionRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.DividendRecordsViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQABABAAACAAAACgAAAAgAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>DividendRecordsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.EditSQDModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>EditSQDModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.EditSQModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABBAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EditSQModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.SystemQuotasViewModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAQAABgAACAAAAABAAAAACAAAABAABAAA=</HashCode>
+      <FileName>SystemQuotasViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.BasicUserGroupModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="0.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>BasicUserGroupModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.backstage.framework.MoneyChangeRecordTypeModel" Collapsed="true" HideInheritanceLine="true">
+    <Position X="2.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAgAAAAI=</HashCode>
+      <FileName>MoneyChangeRecordTypeModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="zwg_china.backstage.framework.IMainPage" Collapsed="true">
@@ -93,24 +332,31 @@
       <FileName>IPop.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="zwg_china.backstage.framework.Page" Collapsed="true">
+  <Interface Name="zwg_china.backstage.framework.IShowListViewModel" Collapsed="true">
     <Position X="7.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAIAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IShowListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="zwg_china.backstage.framework.Page" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAYBAEEAYIAAEAACAAUiAGgAAEAACAMAAwjAEIBA=</HashCode>
       <FileName>Page.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="zwg_china.backstage.framework.Pop" Collapsed="true">
-    <Position X="9.25" Y="1.5" Width="1.5" />
+    <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Pop.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="zwg_china.backstage.framework.DataKey" Collapsed="true">
-    <Position X="4" Y="6" Width="1.5" />
+    <Position X="4" Y="12.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAIAAgAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataKey.cs</FileName>
     </TypeIdentifier>
   </Enum>

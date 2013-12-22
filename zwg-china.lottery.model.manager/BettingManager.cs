@@ -204,6 +204,7 @@ namespace zwg_china.model.manager
                 .ToList()
                 .ForEach(betting =>
                 {
+                    betting.LotteryValues = string.Format(",", model.Seats.ConvertAll(x => x.Value));
                     int notes = betting.GetNotesOfWin(model);
                     if (notes <= 0)
                     {

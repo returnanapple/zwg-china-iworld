@@ -1,0 +1,41 @@
+﻿<controls:ChildWindow x:Class="zwg_china.backstage.control.UserGroupsPage_EditWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           HasCloseButton="False">
+
+    <controls:ChildWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_CssOfFullWindow.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </controls:ChildWindow.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas Width="320" Height="240">
+
+            <TextBlock Text="名称：" Canvas.Left="81" Canvas.Top="18"/>
+            <TextBlock Text="等级：" Canvas.Left="81" Canvas.Top="48"/>
+            <TextBlock Text="消费量下限：" Canvas.Left="45" Canvas.Top="78"/>
+            <TextBlock Text="消费量上限：" Canvas.Left="45" Canvas.Top="108"/>
+            <TextBlock Text="每日允许提现次数：" Canvas.Left="9" Canvas.Top="138"/>
+            <TextBlock Text="单笔最低取款金额：" Canvas.Left="9" Canvas.Top="168"/>
+            <TextBlock Text="单笔最高取款金额：" Canvas.Left="9" Canvas.Top="198"/>
+
+            <TextBox Name="input_Name" Text="普通用户" Canvas.Left="122" Canvas.Top="12"/>
+            <TextBox Name="input_Grade" Text="1" Canvas.Left="122" Canvas.Top="42"/>
+            <TextBox Name="input_LowerOfConsumption" Text="0.00" Canvas.Left="122" Canvas.Top="72"/>
+            <TextBox Name="input_CapsOfConsumption" Text="5000.00" Canvas.Left="122" Canvas.Top="102"/>
+            <TextBox Name="input_TimesOfWithdrawal" Text="3" Canvas.Left="122" Canvas.Top="132"/>
+            <TextBox Name="input_MinimumWithdrawalAmount" Text="10.00" Canvas.Left="122" Canvas.Top="162"/>
+            <TextBox Name="input_MaximumWithdrawalAmount" Text="100000.00" Canvas.Left="122" Canvas.Top="192"/>
+        </Canvas>
+        <Button Content="修  改" Grid.Column="1" Margin="0,10,10,0" Click="Edit"/>
+        <Button Content="取  消" Grid.Column="1" Margin="0,40,10,10" Click="Cancel"/>
+    </Grid>
+</controls:ChildWindow>

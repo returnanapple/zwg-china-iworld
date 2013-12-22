@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="zwg_china.backstage.AuthorSettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control" 
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <!--主体框架-->
+    <local:ManageFrame>
+        <StackPanel Width="800">
+            <Canvas Height="85">
+                <!--标题-->
+                <StackPanel Height="35" Orientation="Horizontal" Canvas.Left="-2">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock" BasedOn="{StaticResource PageTitle}">
+                            <Setter Property="VerticalAlignment" Value="Bottom"/>
+                            <Setter Property="Margin" Value="0,0,15,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="{Binding SelectedText_Menu}"/>
+                    <TextBlock Text="→"/>
+                    <TextBlock Text="{Binding SelectedText_Page}"/>
+                </StackPanel>
+                <!--副标题-->
+                <TextBlock Text="你想要做点什么？" Canvas.Top="43"/>
+            </Canvas>
+            <!--以下是导航按键-->
+            <StackPanel Orientation="Horizontal" Height="155">
+                <StackPanel.Resources>
+                    <Style TargetType="local:MenuButton">
+                        <Setter Property="VerticalAlignment" Value="Top"/>
+                        <Setter Property="Margin" Value="0,0,10,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <local:MenuButton Text="基础系统设置" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="用户模块设置" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="彩票模块设置" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="银行帐号设置" Icon="List" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="系统公告设置" Icon="List" Command="{Binding JumpCommand}"/>
+            </StackPanel>
+            <!--以上是导航按键-->
+
+            <!--以下是列表-->
+            <local:ContentBox Width="800">
+                <Canvas Width="800" Height="820">
+                    <TextBlock Text="允许设置的最低返点：" Canvas.Left="191" Canvas.Top="52"/>
+                    <TextBlock Text="允许设置的最高返点：" Canvas.Left="191" Canvas.Top="82"/>
+                    <TextBlock Text="高点号定义的下限：" Canvas.Left="203" Canvas.Top="112"/>
+                    <TextBlock Text="高点号定义的上限：" Canvas.Left="203" Canvas.Top="142"/>
+
+                    <TextBlock Text="充值记录超时时间（小时）：" Canvas.Left="155" Canvas.Top="192"/>
+                    <TextBlock Text="推广记录超时时间（小时）：" Canvas.Left="155" Canvas.Top="222"/>
+                    <TextBlock Text="找回密码记录超时时间（小时）：" Canvas.Left="131" Canvas.Top="252"/>
+
+                    <TextBlock Text="每日允许提现次数：" Canvas.Left="203" Canvas.Top="300"/>
+                    <TextBlock Text="单笔最低取款金额：" Canvas.Left="203" Canvas.Top="330"/>
+                    <TextBlock Text="单笔最高取款金额：" Canvas.Left="203" Canvas.Top="360"/>
+
+                    <TextBlock Text="一级佣金：" Canvas.Left="251" Canvas.Top="406"/>
+                    <TextBlock Text="二级佣金：" Canvas.Left="251" Canvas.Top="436"/>
+                    <TextBlock Text="获得佣金的消费额下限：" Canvas.Left="179" Canvas.Top="466"/>
+                    <TextBlock Text="顶级用户分红（百分比）：" Canvas.Left="167" Canvas.Top="496"/>
+                    <TextBlock Text="次级用户分红（百分比）：" Canvas.Left="167" Canvas.Top="526"/>
+                    <TextBlock Text="获得分红的消费额下限：" Canvas.Left="179" Canvas.Top="556"/>
+                    <TextBlock Text="分红日：" Canvas.Left="263" Canvas.Top="586"/>
+
+                    <TextBlock Text="自动清理用户的条件：未激活时间（天）：" Canvas.Left="83" Canvas.Top="637"/>
+                    <TextBlock Text="自动清理用户的条件：未登陆时间（天）：" Canvas.Left="83" Canvas.Top="667"/>
+                    <TextBlock Text="自动清理用户的条件：余额（小于）：" Canvas.Left="107" Canvas.Top="697"/>
+                    <TextBlock Text="自动清理用户的条件：未发送帐变的时间（天）：" Canvas.Left="47" Canvas.Top="727"/>
+
+                    <TextBox Canvas.Left="316" Canvas.Top="46" Text="{Binding LowerRebate,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="76" Text="{Binding CapsRebate,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="106" Text="{Binding LowerRebateOfHigh,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="136" Text="{Binding CapsRebateOfHigh,Mode=TwoWay}"/>
+
+                    <TextBox Canvas.Left="316" Canvas.Top="186" Text="{Binding RechargeRecordTimeout,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="216" Text="{Binding SpreadRecordTimeout,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="246" Text="{Binding ForgotPasswordRecordTimeout, Mode=TwoWay}"/>
+
+                    <TextBox Canvas.Left="316" Canvas.Top="294" Text="{Binding TimesOfWithdrawal, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="324" Text="{Binding MinimumWithdrawalAmount, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="354" Text="{Binding MaximumWithdrawalAmount, Mode=TwoWay}"/>
+
+                    <TextBox Canvas.Left="316" Canvas.Top="400" Text="{Binding Commission_A, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="430" Text="{Binding Commission_B, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="460" Text="{Binding LowerConsumptionForCommission, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="490" Text="{Binding Dividend_A, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="520" Text="{Binding Dividend_B, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="550" Text="{Binding LowerConsumptionForDividend, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="580" Text="{Binding DaysOfDividend, Mode=TwoWay}"/>
+
+                    <TextBox Canvas.Left="316" Canvas.Top="631" Text="{Binding ClearUser_DaysOfInactive, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="661" Text="{Binding ClearUser_DaysOfUnSetIn, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="691" Text="{Binding ClearUser_LowerOfMoney, Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="721" Text="{Binding ClearUser_DaysOfUnMoneyChange, Mode=TwoWay}"/>
+
+                    <Button Name="button_Edit" Style="{StaticResource SubmitButton}" Content="修  改" Width="75" Height="25" Canvas.Left="533" Canvas.Top="51"
+                            Command="{Binding EditCommand}"/>
+                    <Button Name="button_Remove" Style="{StaticResource SubmitButton}" Content="取  消" Width="75" Height="25" Canvas.Left="533" Canvas.Top="81"
+                            Command="{Binding RefreshCommand}"/>
+
+                    <Canvas Name="cover_Main" Width="800" Height="820" Background="#00000000" Visibility="Collapsed"/>
+                </Canvas>
+            </local:ContentBox>
+            <!--以上是列表-->
+        </StackPanel>
+    </local:ManageFrame>
+</UserControl>

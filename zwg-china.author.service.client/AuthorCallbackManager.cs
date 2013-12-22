@@ -96,7 +96,8 @@ namespace zwg_china.service.client
             {
                 var tickets = db.LotteryTickets.Where(x => x.Hide == false).ToList()
                     .ConvertAll(x => new LotteryTicketExport(x));
-                var notices = db.Notices.Where(x => x.IsReaded == false && callbacks.Any(c => c.Key == x.Id)).ToList()
+                var vKeys = callbacks.Keys.ToList();
+                var notices = db.Notices.Where(x => x.IsReaded == false && vKeys.Any(key => key == x.Id)).ToList()
                     .ConvertAll(x => new NoticeExport(x));
                 lock (callbacks)
                 {

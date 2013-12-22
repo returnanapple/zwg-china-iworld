@@ -164,6 +164,7 @@
       <xs:element minOccurs="0" name="HowToPlay" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotteryValue" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Multiple" type="xs:double" />
       <xs:element minOccurs="0" name="Notes" type="xs:int" />
       <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
@@ -226,6 +227,7 @@
       <xs:element minOccurs="0" name="Bonus" type="xs:double" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Issue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotteryValue" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Multiple" type="xs:double" />
       <xs:element minOccurs="0" name="Pay" type="xs:double" />
       <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q7:BettingStatus" />

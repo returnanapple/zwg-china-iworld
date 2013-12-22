@@ -49,15 +49,7 @@ namespace zwg_china.service.client
             {
                 throw new Exception("未绑定银行卡信息，操作无效");
             }
-            UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption < this.Self.Consumption && g.CapsOfConsumption > this.Self.Consumption);
-            if (group == null)
-            {
-                group = db.UserGroups.Where(g => g.CapsOfConsumption <= this.Self.Consumption).OrderByDescending(g => g.CapsOfConsumption).FirstOrDefault();
-            }
-            if (group == null)
-            {
-                group = db.UserGroups.Where(g => g.LowerOfConsumption > this.Self.Consumption).OrderBy(g => g.LowerOfConsumption).FirstOrDefault();
-            }
+            UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption <= this.Self.Consumption && g.CapsOfConsumption > this.Self.Consumption);
             DateTime now = DateTime.Now;
             SettingOfAuthor settingOfAuthor = new SettingOfAuthor(db);
             int timesOfWithdrawal = group.TimesOfWithdrawal == 0

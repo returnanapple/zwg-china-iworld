@@ -339,10 +339,12 @@ namespace zwg_china.logic
 
             modelBuilder.Entity<Author>().HasOptional(x => x.Binding)
                 .WithMany()
-                .Map(x => x.MapKey("BindingId"));
+                .Map(x => x.MapKey("BindingId"))
+                .WillCascadeOnDelete(true);
             modelBuilder.Entity<Author>().HasOptional(x => x.PlayInfo)
                 .WithMany()
-                .Map(x => x.MapKey("PlayInfoId"));
+                .Map(x => x.MapKey("PlayInfoId"))
+                .WillCascadeOnDelete(true);
             modelBuilder.Entity<Author>().HasMany(x => x.ExtraQuotas)
                 .WithMany()
                 .Map(x => x.ToTable("zwg-Author-ExtraQuotas"));

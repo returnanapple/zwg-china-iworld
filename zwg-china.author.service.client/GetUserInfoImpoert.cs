@@ -24,15 +24,7 @@ namespace zwg_china.service.client
         public NormalResult<AuthorExport> GetSelf(IModelToDbContextOfAuthor db)
         {
             SettingOfAuthor settingOfAuthor = new SettingOfAuthor(db);
-            UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption < this.Self.Consumption && g.CapsOfConsumption > this.Self.Consumption);
-            if (group == null)
-            {
-                group = db.UserGroups.Where(g => g.CapsOfConsumption <= this.Self.Consumption).OrderByDescending(g => g.CapsOfConsumption).FirstOrDefault();
-            }
-            if (group == null)
-            {
-                group = db.UserGroups.Where(g => g.LowerOfConsumption > this.Self.Consumption).OrderBy(g => g.LowerOfConsumption).FirstOrDefault();
-            }
+            UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption <= this.Self.Consumption && g.CapsOfConsumption > this.Self.Consumption);
             SystemQuota systemQuota = db.SystemQuotas.FirstOrDefault(s => s.Rebate == this.Self.PlayInfo.Rebate_Normal);
             if (systemQuota == null)
             {

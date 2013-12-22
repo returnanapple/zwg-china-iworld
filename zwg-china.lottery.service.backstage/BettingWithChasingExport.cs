@@ -51,6 +51,12 @@ namespace zwg_china.service.backstage
         [DataMember]
         public double Bonus { get; set; }
 
+        /// <summary>
+        /// 开奖号码（如果还未开奖则为空）
+        /// </summary>
+        [DataMember]
+        public string LotteryValue { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -75,6 +81,7 @@ namespace zwg_china.service.backstage
             this.Status = model.Status;
             this.Pay = model.Pay;
             this.Bonus = model.Bonus;
+            this.LotteryValue = model.LotteryValues;
         }
 
         #endregion

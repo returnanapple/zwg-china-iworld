@@ -33,14 +33,18 @@
       <xs:element minOccurs="0" name="Binding" nillable="true" type="tns:UserBindingExport" />
       <xs:element minOccurs="0" name="Consumption" type="xs:double" />
       <xs:element minOccurs="0" name="CreatedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExtraQuotas" nillable="true" type="tns:ArrayOfExtraQuotaExport" />
       <xs:element minOccurs="0" name="Group" nillable="true" type="tns:UserGroupExport" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Integral" type="xs:double" />
       <xs:element minOccurs="0" name="LastLoginAddress" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginIp" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Layer" type="xs:int" />
       <xs:element minOccurs="0" name="Money" type="xs:double" />
       <xs:element minOccurs="0" name="Money_Frozen" type="xs:double" />
+      <xs:element minOccurs="0" name="Parent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentId" type="xs:int" />
       <xs:element minOccurs="0" name="PlayInfo" nillable="true" type="tns:UserPlayInfoExport" />
       <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q2:UserStatus" />
       <xs:element minOccurs="0" name="Subordinate" type="xs:int" />
@@ -58,6 +62,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UserBindingExport" nillable="true" type="tns:UserBindingExport" />
+  <xs:complexType name="ArrayOfExtraQuotaExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExtraQuotaExport" nillable="true" type="tns:ExtraQuotaExport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExtraQuotaExport" nillable="true" type="tns:ArrayOfExtraQuotaExport" />
+  <xs:complexType name="ExtraQuotaExport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rebate" type="xs:double" />
+      <xs:element minOccurs="0" name="Sum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExtraQuotaExport" nillable="true" type="tns:ExtraQuotaExport" />
   <xs:complexType name="UserGroupExport">
     <xs:sequence>
       <xs:element minOccurs="0" name="CapsOfConsumption" type="xs:double" />

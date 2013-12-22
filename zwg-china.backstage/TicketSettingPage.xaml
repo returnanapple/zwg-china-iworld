@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="zwg_china.backstage.TicketSettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control" 
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <!--主体框架-->
+    <local:ManageFrame>
+        <StackPanel Width="800">
+            <Canvas Height="85">
+                <!--标题-->
+                <StackPanel Height="35" Orientation="Horizontal" Canvas.Left="-2">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock" BasedOn="{StaticResource PageTitle}">
+                            <Setter Property="VerticalAlignment" Value="Bottom"/>
+                            <Setter Property="Margin" Value="0,0,15,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="{Binding SelectedText_Menu}"/>
+                    <TextBlock Text="→"/>
+                    <TextBlock Text="{Binding SelectedText_Page}"/>
+                </StackPanel>
+                <!--副标题-->
+                <TextBlock Text="你想要做点什么？" Canvas.Top="43"/>
+            </Canvas>
+            <!--以下是导航按键-->
+            <StackPanel Orientation="Horizontal" Height="155">
+                <StackPanel.Resources>
+                    <Style TargetType="local:MenuButton">
+                        <Setter Property="VerticalAlignment" Value="Top"/>
+                        <Setter Property="Margin" Value="0,0,10,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <local:MenuButton Text="基础系统设置" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="用户模块设置" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="彩票模块设置" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="银行帐号设置" Icon="List" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="系统公告设置" Icon="List" Command="{Binding JumpCommand}"/>
+            </StackPanel>
+            <!--以上是导航按键-->
+
+            <!--以下是列表-->
+            <local:ContentBox Width="800">
+                <Canvas Width="800" Height="300">
+                    <TextBlock Text="单注价格：" Canvas.Left="251" Canvas.Top="52"/>
+                    <TextBlock Text="返奖基数：" Canvas.Left="251" Canvas.Top="82"/>
+                    <TextBlock Text="禁止投注的基数线：" Canvas.Left="203" Canvas.Top="112"/>
+                    <TextBlock Text="返奖金额上限：" Canvas.Left="227" Canvas.Top="142"/>
+                    <TextBlock Text="奖金 - 返点换算率：" Canvas.Left="197" Canvas.Top="172"/>
+                    <TextBlock Text="最大投注倍数：" Canvas.Left="227" Canvas.Top="202"/>
+                    <TextBlock Text="封单时间（秒）：" Canvas.Left="215" Canvas.Top="232"/>
+
+                    <TextBox Canvas.Left="316" Canvas.Top="46" Text="{Binding UnitPrice,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="76" Text="{Binding PayoutBase,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="106" Text="{Binding LineForProhibitBetting,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="136" Text="{Binding MaximumPayout,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="166" Text="{Binding ConversionRates,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="196" Text="{Binding MaximumBetsNumber,Mode=TwoWay}"/>
+                    <TextBox Canvas.Left="316" Canvas.Top="226" Text="{Binding ClosureSingleTime, Mode=TwoWay}"/>
+
+                    <Button Name="button_Edit" Style="{StaticResource SubmitButton}" Content="修  改" Width="75" Height="25" Canvas.Left="533" Canvas.Top="51"
+                            Command="{Binding EditCommand}"/>
+                    <Button Name="button_Remove" Style="{StaticResource SubmitButton}" Content="取  消" Width="75" Height="25" Canvas.Left="533" Canvas.Top="81"
+                            Command="{Binding RefreshCommand}"/>
+
+                    <Canvas Name="cover_Main" Width="800" Height="300" Background="#00000000" Visibility="Collapsed"/>
+                </Canvas>
+            </local:ContentBox>
+            <!--以上是列表-->
+        </StackPanel>
+    </local:ManageFrame>
+</UserControl>

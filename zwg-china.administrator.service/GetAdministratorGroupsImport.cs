@@ -20,10 +20,10 @@ namespace zwg_china.service.backstage
         #region 属性
 
         /// <summary>
-        /// 关键字（用户名）
+        /// 关键字
         /// </summary>
         [DataMember]
-        public string KeywordForUsername { get; set; }
+        public string KeywordForGroupName { get; set; }
 
         #endregion
 
@@ -43,10 +43,10 @@ namespace zwg_china.service.backstage
 
             Expression<Func<AdministratorGroup, bool>> predicate1 = x => x.Id > 0;
 
-            if (this.KeywordForUsername != null)
+            if (this.KeywordForGroupName != null)
             {
-                this.KeywordForUsername = VerifyHelper.EliminateSpaces(this.KeywordForUsername);
-                string[] keywords = this.KeywordForUsername.Split(new char[] { ' ' });
+                this.KeywordForGroupName = VerifyHelper.EliminateSpaces(this.KeywordForGroupName);
+                string[] keywords = this.KeywordForGroupName.Split(new char[] { ' ' });
                 predicate1 = x => keywords.All(kw => x.Name.Contains(kw));
             }
 

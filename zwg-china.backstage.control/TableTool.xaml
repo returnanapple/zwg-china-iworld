@@ -8,7 +8,7 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="css.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <Style x:Key="text_titile" TargetType="TextBlock" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
                 <Setter Property="Foreground" Value="Black"/>

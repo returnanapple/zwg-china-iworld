@@ -1,0 +1,38 @@
+﻿<controls:ChildWindow x:Class="zwg_china.backstage.control.SystemBankAccountsPage_FullWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           HasCloseButton="False">
+
+    <controls:ChildWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_CssOfFullWindow.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </controls:ChildWindow.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas Width="240" Height="160">
+
+            <TextBlock Text="卡号：" Canvas.Left="29" Canvas.Top="18"/>
+            <TextBlock Text="开户人：" Canvas.Left="17" Canvas.Top="37"/>
+            <TextBlock Text="银行：" Canvas.Left="29" Canvas.Top="56"/>
+            <TextBlock Text="备注：" Canvas.Left="29" Canvas.Top="75"/>
+            <TextBlock Text="排列：" Canvas.Left="29" Canvas.Top="94"/>
+            <TextBlock Text="隐藏：" Canvas.Left="29" Canvas.Top="113"/>
+
+            <TextBlock Name="text_Card" Text="6743364587665473647" Canvas.Left="70" Canvas.Top="18"/>
+            <TextBlock Name="text_HolderOfTheCard" Text="习近平" Canvas.Left="70" Canvas.Top="37"/>
+            <TextBlock Name="text_BankOfTheCard" Text="中国工商银行" Canvas.Left="70" Canvas.Top="56"/>
+            <TextBlock Name="text_Remark" Text="测试账户" Canvas.Left="70" Canvas.Top="75"/>
+            <TextBlock Name="text_Order" Text="1" Canvas.Left="70" Canvas.Top="94"/>
+            <TextBlock Name="text_Hide" Text="否" Canvas.Left="70" Canvas.Top="113"/>
+        </Canvas>
+        <Button Content="确  定" Grid.Column="1" Margin="0,10,10,0" Click="Enter"/>
+    </Grid>
+</controls:ChildWindow>

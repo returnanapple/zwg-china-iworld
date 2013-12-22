@@ -79,19 +79,19 @@ namespace zwg_china.backstage.framework.RecordOfAuthorService {
     [System.Runtime.Serialization.DataContractAttribute(Name="CreateRechargeRecordImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
     public partial class CreateRechargeRecordImport : zwg_china.backstage.framework.RecordOfAuthorService.ImportBaseOfAuthor {
         
-        private int OwnerIdField;
+        private string OwnerField;
         
         private double SumField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int OwnerId {
+        public string Owner {
             get {
-                return this.OwnerIdField;
+                return this.OwnerField;
             }
             set {
-                if ((this.OwnerIdField.Equals(value) != true)) {
-                    this.OwnerIdField = value;
-                    this.RaisePropertyChanged("OwnerId");
+                if ((object.ReferenceEquals(this.OwnerField, value) != true)) {
+                    this.OwnerField = value;
+                    this.RaisePropertyChanged("Owner");
                 }
             }
         }

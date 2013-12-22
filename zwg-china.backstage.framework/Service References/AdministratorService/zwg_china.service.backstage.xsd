@@ -30,6 +30,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="LastLoginAddress" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginIp" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />
@@ -41,7 +42,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:GetPageListImportBaseOfAdministrator">
         <xs:sequence>
-          <xs:element minOccurs="0" name="KeywordForUsername" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="KeywordForGroupName" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -67,6 +68,7 @@
       <xs:element minOccurs="0" name="CanViewSettings" type="xs:boolean" />
       <xs:element minOccurs="0" name="CanViewTickets" type="xs:boolean" />
       <xs:element minOccurs="0" name="CanViewUsers" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CountOfCanDo" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="IsCustomerService" type="xs:boolean" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
@@ -176,6 +178,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Group" nillable="true" type="tns:AdministratorGroupExport" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="LastLoginAddress" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginIp" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastLoginTime" type="xs:dateTime" />

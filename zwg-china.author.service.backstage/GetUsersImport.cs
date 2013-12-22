@@ -90,16 +90,9 @@ namespace zwg_china.service.backstage
                 .ToList()
                 .ConvertAll(x =>
                 {
-                    UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption < x.Consumption && g.CapsOfConsumption > x.Consumption);
-                    if (group == null)
-                    {
-                        group = db.UserGroups.Where(g => g.CapsOfConsumption <= x.Consumption).OrderByDescending(g => g.CapsOfConsumption).FirstOrDefault();
-                    }
-                    if (group == null)
-                    {
-                        group = db.UserGroups.Where(g => g.LowerOfConsumption > x.Consumption).OrderBy(g => g.LowerOfConsumption).FirstOrDefault();
-                    }
+                    UserGroup group = db.UserGroups.FirstOrDefault(g => g.LowerOfConsumption <= x.Consumption && g.CapsOfConsumption > x.Consumption);
                     SystemQuota systemQuota = db.SystemQuotas.FirstOrDefault(s => s.Rebate == x.PlayInfo.Rebate_Normal);
+                    var t = db.SystemQuotas.ToList();
                     if (systemQuota == null)
                     {
                         systemQuota = new SystemQuota(x.PlayInfo.Rebate_Normal, new List<SystemQuotaDetail>());
@@ -109,8 +102,8 @@ namespace zwg_china.service.backstage
                             systemQuota.Details.Add(sqd);
                         }
                     }
-
-                    return new AuthorExport(x, group, systemQuota.Details);
+                    Author parent = db.Authors.FirstOrDefault(p => x.Relatives.Any(r => r.NodeId == p.Id) && p.Layer == x.Layer - 1);
+                    return new AuthorExport(x, parent, group, systemQuota.Details);
                 });
 
             return new PageResult<AuthorExport>(this.PageIndex, countOfAllMessages, settingOfBase.PageSizeForAdmin, tList);

@@ -69,8 +69,8 @@ namespace zwg_china.service.backstage
             var tList = db.Administrators
                 .Where(predicate1)
                 .Where(predicate2)
-                .Skip(startRow)
                 .OrderBy(x => x.Username)
+                .Skip(startRow)
                 .Take(settingOfBase.PageSizeForAdmin)
                 .ToList()
                 .ConvertAll(x => new BasicAdministratorExport(x));

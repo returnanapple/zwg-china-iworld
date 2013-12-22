@@ -1,0 +1,50 @@
+﻿<controls:ChildWindow x:Class="zwg_china.backstage.control.RersonalAndTeamReportsPage_FullWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           HasCloseButton="False">
+
+    <controls:ChildWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_CssOfFullWindow.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </controls:ChildWindow.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas Width="280" Height="260">
+
+            <TextBlock Text="用户：" Canvas.Left="82" Canvas.Top="15"/>
+            <TextBlock Text="日期：" Canvas.Left="82" Canvas.Top="34"/>
+            <TextBlock Text="登陆次数：" Canvas.Left="58" Canvas.Top="53"/>
+            <TextBlock Text="投注额：" Canvas.Left="70" Canvas.Top="72"/>
+            <TextBlock Text="返点：" Canvas.Left="82" Canvas.Top="91"/>
+            <TextBlock Text="奖金：" Canvas.Left="82" Canvas.Top="110"/>
+            <TextBlock Text="佣金：" Canvas.Left="82" Canvas.Top="129"/>
+            <TextBlock Text="活动奖励：" Canvas.Left="58" Canvas.Top="148"/>
+            <TextBlock Text="分红：" Canvas.Left="82" Canvas.Top="167"/>
+            <TextBlock Text="盈亏：" Canvas.Left="82" Canvas.Top="186"/>
+            <TextBlock Text="充值：" Canvas.Left="82" Canvas.Top="205"/>
+            <TextBlock Text="提现：" Canvas.Left="82" Canvas.Top="224"/>
+
+            <TextBlock Name="text_Owner" Text="admin" Canvas.Left="123" Canvas.Top="15"/>
+            <TextBlock Name="text_Date" Text="2013-12" Canvas.Left="123" Canvas.Top="34"/>
+            <TextBlock Name="text_TimesOfLogin" Text="26" Canvas.Left="123" Canvas.Top="53"/>
+            <TextBlock Name="text_AmountOfBets" Text="0.00" Canvas.Left="123" Canvas.Top="72"/>
+            <TextBlock x:Name="text_Rebate" Text="0.00" Canvas.Left="123" Canvas.Top="91"/>
+            <TextBlock x:Name="text_Bonus" Text="0.00" Canvas.Left="123" Canvas.Top="110"/>
+            <TextBlock x:Name="text_Commission" Text="0.00" Canvas.Left="123" Canvas.Top="129"/>
+            <TextBlock x:Name="text_Reward" Text="0.00" Canvas.Left="123" Canvas.Top="148"/>
+            <TextBlock x:Name="text_Dividend" Text="0.00" Canvas.Left="123" Canvas.Top="167"/>
+            <TextBlock x:Name="text_Profit" Text="0.00" Canvas.Left="123" Canvas.Top="186"/>
+            <TextBlock x:Name="text_Recharge" Text="0.00" Canvas.Left="123" Canvas.Top="205"/>
+            <TextBlock x:Name="text_Withdrawal" Text="0.00" Canvas.Left="123" Canvas.Top="224"/>
+        </Canvas>
+        <Button Content="确  定" Grid.Column="1" Margin="0,10,10,0" Click="Enter"/>
+    </Grid>
+</controls:ChildWindow>

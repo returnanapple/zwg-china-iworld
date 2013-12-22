@@ -1133,6 +1133,8 @@ namespace zwg_china.client.framework.LotteryService {
         
         private string IssueField;
         
+        private string LotteryValueField;
+        
         private double MultipleField;
         
         private int NotesField;
@@ -1214,6 +1216,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((object.ReferenceEquals(this.IssueField, value) != true)) {
                     this.IssueField = value;
                     this.RaisePropertyChanged("Issue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LotteryValue {
+            get {
+                return this.LotteryValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LotteryValueField, value) != true)) {
+                    this.LotteryValueField = value;
+                    this.RaisePropertyChanged("LotteryValue");
                 }
             }
         }
@@ -1624,6 +1639,8 @@ namespace zwg_china.client.framework.LotteryService {
         
         private string IssueField;
         
+        private string LotteryValueField;
+        
         private double MultipleField;
         
         private double PayField;
@@ -1665,6 +1682,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((object.ReferenceEquals(this.IssueField, value) != true)) {
                     this.IssueField = value;
                     this.RaisePropertyChanged("Issue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LotteryValue {
+            get {
+                return this.LotteryValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LotteryValueField, value) != true)) {
+                    this.LotteryValueField = value;
+                    this.RaisePropertyChanged("LotteryValue");
                 }
             }
         }

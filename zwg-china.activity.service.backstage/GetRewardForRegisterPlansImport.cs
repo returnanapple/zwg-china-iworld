@@ -20,7 +20,7 @@ namespace zwg_china.service.backstage
         #region 属性
 
         /// <summary>
-        /// 关键字（用户名）
+        /// 关键字
         /// </summary>
         [DataMember]
         public string KeywordForTitle { get; set; }

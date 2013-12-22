@@ -261,7 +261,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:ImportBaseOfAuthor">
         <xs:sequence>
-          <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+          <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Sum" type="xs:double" />
         </xs:sequence>
       </xs:extension>

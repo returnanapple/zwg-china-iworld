@@ -16,6 +16,12 @@ namespace zwg_china.service.backstage
         #region 属性
 
         /// <summary>
+        /// 存储指针
+        /// </summary>
+        [DataMember]
+        public int Id { get; set; }
+
+        /// <summary>
         /// 开户人
         /// </summary>
         [DataMember]
@@ -69,6 +75,7 @@ namespace zwg_china.service.backstage
         /// <param name="model">银行账号的数据模型</param>
         public SystemBankAccountExport(SystemBankAccount model)
         {
+            this.Id = model.Id;
             this.HolderOfTheCard = model.HolderOfTheCard;
             this.Card = model.Card;
             this.BankOfTheCard = model.BankOfTheCard;

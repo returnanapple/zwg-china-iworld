@@ -97,9 +97,9 @@ namespace zwg_china.client.framework
         /// <summary>
         /// 实例化一个新的列表页的试图的基类
         /// </summary>
-        /// <param name="selectedButtonName">高亮按键的名称</param>
-        public ShowListViewModelBase(string selectedButtonName)
-            : base(selectedButtonName)
+        /// <param name="pageName">界面名称</param>
+        public ShowListViewModelBase(string pageName)
+            : base(pageName)
         {
             this.RefreshCommand = new UniversalCommand(Refresh);
             this.RestCommand = new UniversalCommand(Reset);

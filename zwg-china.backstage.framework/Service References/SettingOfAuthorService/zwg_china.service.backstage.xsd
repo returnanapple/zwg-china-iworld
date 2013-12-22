@@ -24,6 +24,7 @@
       <xs:element minOccurs="0" name="Card" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
       <xs:element minOccurs="0" name="HolderOfTheCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Order" type="xs:int" />
       <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
     </xs:sequence>

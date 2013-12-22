@@ -1,0 +1,90 @@
+﻿<controls:ChildWindow x:Class="zwg_china.backstage.control.AdministratorGroupPage_CreateWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+           xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control"
+           HasCloseButton="False">
+
+    <controls:ChildWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_CssOfFullWindow.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="ComboBox">
+                <Setter Property="Width" Value="60"/>
+                <Setter Property="Height" Value="25"/>
+                <Setter Property="SelectedIndex" Value="0"/>
+            </Style>
+        </ResourceDictionary>
+    </controls:ChildWindow.Resources>
+
+    <Grid MaxWidth="450">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas Width="360" Height="400">
+            <TextBlock Text="名称：" Canvas.Left="118" Canvas.Top="20"/>
+            <TextBlock Text="允许查看前台用户列表：" Canvas.Left="22" Canvas.Top="51"/>
+            <TextBlock Text="允许修改前台用户列表：" Canvas.Left="22" Canvas.Top="81"/>
+            <TextBlock Text="允许查看彩票信息：" Canvas.Left="46" Canvas.Top="111"/>
+            <TextBlock Text="允许修改彩票信息：" Canvas.Left="46" Canvas.Top="141"/>
+            <TextBlock Text="允许查看活动信息：" Canvas.Left="46" Canvas.Top="171"/>
+            <TextBlock Text="允许修改活动信息：" Canvas.Left="46" Canvas.Top="201"/>
+            <TextBlock Text="允许查看系统设置：" Canvas.Left="46" Canvas.Top="231"/>
+            <TextBlock Text="允许修改系统设置：" Canvas.Left="46" Canvas.Top="261"/>
+            <TextBlock Text="允许查看数据报表：" Canvas.Left="46" Canvas.Top="291"/>
+            <TextBlock Text="允许操作数据报表：" Canvas.Left="46" Canvas.Top="321"/>
+            <TextBlock Text="是否客服人员组：" Canvas.Left="46" Canvas.Top="351"/>
+
+            <TextBox Name="input_Name" Canvas.Left="159" Canvas.Top="14"/>
+            <ComboBox Name="input_CanViewUsers" Canvas.Left="159" Canvas.Top="44">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanEditUsers" Canvas.Left="159" Canvas.Top="74">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanViewTickets" Canvas.Left="159" Canvas.Top="104">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanEditTickets" Canvas.Left="159" Canvas.Top="134">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanViewActivities" Canvas.Left="159" Canvas.Top="164">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanEditActivities" Canvas.Left="159" Canvas.Top="194">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanViewSettings" Canvas.Left="159" Canvas.Top="224">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanEditSettings" Canvas.Left="159" Canvas.Top="254">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanViewDataReports" Canvas.Left="159" Canvas.Top="284">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_CanEditDataReports" Canvas.Left="159" Canvas.Top="314">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+            <ComboBox x:Name="input_IsCustomerService" Canvas.Left="159" Canvas.Top="344">
+                <TextBlock Text="是"/>
+                <TextBlock Text="否"/>
+            </ComboBox>
+        </Canvas>
+        <Button Content="添  加" Grid.Column="1" Margin="0,10,10,0" Click="CreateGroup"/>
+        <Button Content="取  消" Grid.Column="1" Margin="0,40,10,10" Click="Cancel"/>
+    </Grid>
+</controls:ChildWindow>
