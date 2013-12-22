@@ -16,8 +16,8 @@ namespace zwg_china.backstage.framework
 
         string keywordOfUsername = null;
         int? userId = null;
-        MonthOrDay mod = MonthOrDay.Day;
-        TeamOrSelf tos = TeamOrSelf.Self;
+        string mod = "Day";
+        string tos = "Self";
         DateTime? beginTime = null;
         DateTime? endTime = null;
 
@@ -34,8 +34,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordOfUsername == value) { return; }
-                keywordOfUsername = value;
+                keywordOfUsername = value == "" ? null : value;
                 OnPropertyChanged("KeywordOfUsername");
+                Refresh(null);
             }
         }
 
@@ -56,28 +57,32 @@ namespace zwg_china.backstage.framework
         /// <summary>
         /// 用户的存储指针
         /// </summary>
-        public MonthOrDay MOD
+        public string MOD
         {
             get { return mod; }
             set
             {
+                if (value == "") { return; }
                 if (mod == value) { return; }
                 mod = value;
                 OnPropertyChanged("MOD");
+                Refresh(null);
             }
         }
 
         /// <summary>
         /// 团队还是个人 
         /// </summary>
-        public TeamOrSelf TOS
+        public string TOS
         {
             get { return tos; }
             set
             {
+                if (value == "") { return; }
                 if (tos == value) { return; }
                 tos = value;
                 OnPropertyChanged("TOS");
+                Refresh(null);
             }
         }
 
@@ -92,6 +97,7 @@ namespace zwg_china.backstage.framework
                 if (beginTime == value) { return; }
                 beginTime = value;
                 OnPropertyChanged("BeginTime");
+                Refresh(null);
             }
         }
 
@@ -106,6 +112,7 @@ namespace zwg_china.backstage.framework
                 if (endTime == value) { return; }
                 endTime = value;
                 OnPropertyChanged("EndTime");
+                Refresh(null);
             }
         }
 
@@ -130,8 +137,8 @@ namespace zwg_china.backstage.framework
             {
                 KeywordOfUsername = this.KeywordOfUsername,
                 UserId = this.UserId,
-                MOD = this.MOD,
-                TOS = this.tos,
+                MOD = (MonthOrDay)Enum.Parse(typeof(MonthOrDay), this.MOD, false),
+                TOS = (TeamOrSelf)Enum.Parse(typeof(TeamOrSelf), this.TOS, false),
                 BeginTime = this.BeginTime,
                 EndTime = this.EndTime,
                 PageIndex = _pageIndex,
@@ -144,8 +151,8 @@ namespace zwg_china.backstage.framework
         {
             this.KeywordOfUsername = null;
             this.UserId = null;
-            this.MOD = MonthOrDay.Day;
-            this.tos = TeamOrSelf.Self;
+            this.MOD = "Day";
+            this.tos = "Self";
             this.BeginTime = null;
             this.EndTime = null;
             this.PageIndex = 1;

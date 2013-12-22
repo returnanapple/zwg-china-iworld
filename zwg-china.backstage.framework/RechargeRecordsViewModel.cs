@@ -18,7 +18,7 @@ namespace zwg_china.backstage.framework
         int? userId = null;
         DateTime? beginTime = null;
         DateTime? endTime = null;
-        RechargeStatus? status = null;
+        string status = "all";
 
         #endregion
 
@@ -33,8 +33,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForUsername == value) { return; }
-                keywordForUsername = value;
+                keywordForUsername = value == "" ? null : value;
                 OnPropertyChanged("KeywordForUsername");
+                Refresh(null);
             }
         }
 
@@ -63,6 +64,7 @@ namespace zwg_china.backstage.framework
                 if (beginTime == value) { return; }
                 beginTime = value;
                 OnPropertyChanged("BeginTime");
+                Refresh(null);
             }
         }
 
@@ -77,20 +79,23 @@ namespace zwg_china.backstage.framework
                 if (endTime == value) { return; }
                 endTime = value;
                 OnPropertyChanged("EndTime");
+                Refresh(null);
             }
         }
 
         /// <summary>
         /// 状态
         /// </summary>
-        public RechargeStatus? Status
+        public string Status
         {
             get { return status; }
             set
             {
+                if (value == "") { return; }
                 if (status == value) { return; }
                 status = value;
                 OnPropertyChanged("Status");
+                Refresh(null);
             }
         }
 
@@ -111,13 +116,18 @@ namespace zwg_china.backstage.framework
         protected override void Refresh(object obj)
         {
             int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
+            RechargeStatus? _status = null;
+            if (this.Status != "all")
+            {
+                _status = (RechargeStatus)Enum.Parse(typeof(RechargeStatus), this.Status, false);
+            }
             GetRechargeRecordsImport import = new GetRechargeRecordsImport
             {
                 KeywordForUsername = this.KeywordForUsername,
                 UserId = this.UserId,
                 BeginTime = this.BeginTime,
                 EndTime = this.EndTime,
-                Status = this.Status,
+                Status = _status,
                 PageIndex = _pageIndex,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
@@ -130,7 +140,7 @@ namespace zwg_china.backstage.framework
             this.UserId = null;
             this.BeginTime = null;
             this.EndTime = null;
-            this.status = null;
+            this.status = "all";
             this.PageIndex = 1;
             Refresh(null);
         }

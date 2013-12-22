@@ -14,7 +14,7 @@ namespace zwg_china.backstage.framework
     {
         #region 私有字段
 
-        MonthOrDay mod = MonthOrDay.Day;
+        string mod = "Day";
         DateTime? beginTime = null;
         DateTime? endTime = null;
 
@@ -25,14 +25,16 @@ namespace zwg_china.backstage.framework
         /// <summary>
         /// 用户的存储指针
         /// </summary>
-        public MonthOrDay MOD
+        public string MOD
         {
             get { return mod; }
             set
             {
+                if (value == "") { return; }
                 if (mod == value) { return; }
                 mod = value;
                 OnPropertyChanged("MOD");
+                Refresh(null);
             }
         }
 
@@ -47,6 +49,7 @@ namespace zwg_china.backstage.framework
                 if (beginTime == value) { return; }
                 beginTime = value;
                 OnPropertyChanged("BeginTime");
+                Refresh(null);
             }
         }
 
@@ -61,6 +64,7 @@ namespace zwg_china.backstage.framework
                 if (endTime == value) { return; }
                 endTime = value;
                 OnPropertyChanged("EndTime");
+                Refresh(null);
             }
         }
 
@@ -83,7 +87,7 @@ namespace zwg_china.backstage.framework
             int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
             GetSiteReportsImport import = new GetSiteReportsImport
             {
-                MOD = this.MOD,
+                MOD = (MonthOrDay)Enum.Parse(typeof(MonthOrDay), this.MOD, false),
                 BeginTime = this.BeginTime,
                 EndTime = this.EndTime,
                 PageIndex = _pageIndex,
@@ -94,7 +98,7 @@ namespace zwg_china.backstage.framework
 
         protected override void Reset(object obj)
         {
-            this.MOD = MonthOrDay.Day;
+            this.MOD = "Day";
             this.BeginTime = null;
             this.EndTime = null;
             this.PageIndex = 1;

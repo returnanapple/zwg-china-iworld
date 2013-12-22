@@ -18,10 +18,10 @@ namespace zwg_china.service.backstage
         #region 属性
 
         /// <summary>
-        /// 用户的存储指针
+        /// 用户的用户名
         /// </summary>
         [DataMember]
-        public int OwnerId { get; set; }
+        public string Owner { get; set; }
 
         /// <summary>
         /// 充值金额
@@ -43,6 +43,7 @@ namespace zwg_china.service.backstage
             {
                 throw new Exception("充值金额不能小于 0");
             }
+            this.Owner = VerifyHelper.EliminateSpaces(this.Owner);
         }
 
         /// <summary>
@@ -51,7 +52,7 @@ namespace zwg_china.service.backstage
         /// <param name="db">数据库连接对象</param>
         public RechargeRecord GetModel(IModelToDbContextOfAuthor db)
         {
-            Author owner = db.Authors.Find(this.OwnerId);
+            Author owner = db.Authors.First(x => x.Username == this.Owner);
             RechargeRecord result = new RechargeRecord(owner, Bank.无, "");
             result.Status = RechargeStatus.后台手动添加;
             return result;

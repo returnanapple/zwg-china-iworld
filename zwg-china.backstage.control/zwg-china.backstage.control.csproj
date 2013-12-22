@@ -107,8 +107,27 @@
       <DependentUpon>FilterBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="converter\IntConverter.cs" />
+    <Compile Include="converter\BoolToStringConverter.cs" />
     <Compile Include="MoneyChangeRecordsPage_TableRow.xaml.cs">
       <DependentUpon>MoneyChangeRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeRecordsPage_CreateWindow.xaml.cs">
+      <DependentUpon>RechargeRecordsPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RechargeRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>RechargeRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RersonalAndTeamReportsPage_FullWindow.xaml.cs">
+      <DependentUpon>RersonalAndTeamReportsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RersonalAndTeamReportsPage_TableRow.xaml.cs">
+      <DependentUpon>RersonalAndTeamReportsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SiteReportsPage_FullWindow.xaml.cs">
+      <DependentUpon>SiteReportsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SiteReportsPage_TableRow.xaml.cs">
+      <DependentUpon>SiteReportsPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SystemBankAccountsPage_CreateWindow.xaml.cs">
       <DependentUpon>SystemBankAccountsPage_CreateWindow.xaml</DependentUpon>
@@ -172,6 +191,9 @@
     <Compile Include="tool\KeepTextRealTime.cs" />
     <Compile Include="tool\KeyDownCommandAction.cs" />
     <Compile Include="tool\VerticalScrollTrigger.cs" />
+    <Compile Include="TransferRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>TransferRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserGroupsPage_CreateUserGroupWindow.xaml.cs">
       <DependentUpon>UserGroupsPage_CreateUserGroupWindow.xaml</DependentUpon>
     </Compile>
@@ -270,6 +292,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RechargeRecordsPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RechargeRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RersonalAndTeamReportsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RersonalAndTeamReportsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SiteReportsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SiteReportsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SystemBankAccountsPage_CreateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -291,6 +337,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SystemQuotasPage_TableRow_Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransferRecordsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

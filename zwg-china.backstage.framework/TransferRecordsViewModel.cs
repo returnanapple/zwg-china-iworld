@@ -16,7 +16,7 @@ namespace zwg_china.backstage.framework
 
         DateTime? beginTime = null;
         DateTime? endTime = null;
-        TransferStatus? status = null;
+        string status = "all";
 
         #endregion
 
@@ -33,6 +33,7 @@ namespace zwg_china.backstage.framework
                 if (beginTime == value) { return; }
                 beginTime = value;
                 OnPropertyChanged("BeginTime");
+                Refresh(null);
             }
         }
 
@@ -47,20 +48,23 @@ namespace zwg_china.backstage.framework
                 if (endTime == value) { return; }
                 endTime = value;
                 OnPropertyChanged("EndTime");
+                Refresh(null);
             }
         }
 
         /// <summary>
         /// 状态
         /// </summary>
-        public TransferStatus? Status
+        public string Status
         {
             get { return status; }
             set
             {
+                if (value == "") { return; }
                 if (status == value) { return; }
                 status = value;
                 OnPropertyChanged("Status");
+                Refresh(null);
             }
         }
 
@@ -81,11 +85,16 @@ namespace zwg_china.backstage.framework
         protected override void Refresh(object obj)
         {
             int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
+            TransferStatus? _status = null;
+            if (this.Status != "all")
+            {
+                _status = (TransferStatus)Enum.Parse(typeof(TransferStatus), this.Status, false);
+            }
             GetTransferRecordsImport import = new GetTransferRecordsImport
             {
                 BeginTime = this.BeginTime,
                 EndTime = this.EndTime,
-                Status = this.Status,
+                Status = _status,
                 PageIndex = _pageIndex,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
@@ -96,7 +105,7 @@ namespace zwg_china.backstage.framework
         {
             this.BeginTime = null;
             this.EndTime = null;
-            this.status = null;
+            this.Status = "all";
             this.PageIndex = 1;
             Refresh(null);
         }
