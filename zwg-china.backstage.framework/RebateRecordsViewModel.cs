@@ -32,8 +32,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForUsername == value) { return; }
-                keywordForUsername = value;
+                keywordForUsername = value == "" ? null : value;
                 OnPropertyChanged("KeywordForUsername");
+                Refresh(null);
             }
         }
 
@@ -62,6 +63,7 @@ namespace zwg_china.backstage.framework
                 if (beginTime == value) { return; }
                 beginTime = value;
                 OnPropertyChanged("BeginTime");
+                Refresh(null);
             }
         }
 
@@ -76,6 +78,7 @@ namespace zwg_china.backstage.framework
                 if (endTime == value) { return; }
                 endTime = value;
                 OnPropertyChanged("EndTime");
+                Refresh(null);
             }
         }
 

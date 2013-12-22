@@ -61,7 +61,7 @@ namespace zwg_china.backstage.control
         /// <summary>
         /// 触发刷新列表动作
         /// </summary>
-        protected void OnRefresh()
+        protected void OnRefresh(object sender,EventArgs e)
         {
             if (RefreshEventHandler == null) { return; }
             RefreshEventHandler(this, new EventArgs());
@@ -98,7 +98,7 @@ namespace zwg_china.backstage.control
             {
                 ErrorPrompt ep = new ErrorPrompt();
                 ep.State = "编辑用户信息成功";
-                ep.Closed += RefreshTable;
+                ep.Closed += OnRefresh;
                 ep.Show();
             }
             else
@@ -130,7 +130,7 @@ namespace zwg_china.backstage.control
             {
                 ErrorPrompt ep = new ErrorPrompt();
                 ep.State = "修改用户的额外配额成功";
-                ep.Closed += RefreshTable;
+                ep.Closed += OnRefresh;
                 ep.Show();
             }
             else
@@ -175,7 +175,7 @@ namespace zwg_china.backstage.control
             {
                 ErrorPrompt ep = new ErrorPrompt();
                 ep.State = "删除用户成功";
-                ep.Closed += RefreshTable;
+                ep.Closed += OnRefresh;
                 ep.Show();
             }
             else
@@ -184,11 +184,6 @@ namespace zwg_china.backstage.control
                 ep.State = e.Result.Error;
                 ep.Show();
             }
-        }
-
-        void RefreshTable(object sender, EventArgs e)
-        {
-            OnRefresh();
         }
 
         #endregion
