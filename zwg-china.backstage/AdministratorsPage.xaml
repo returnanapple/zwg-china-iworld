@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="zwg_china.backstage.UserLandingRecordsPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-    xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control" 
-    mc:Ignorable="d">
+﻿<UserControl x:Class="zwg_china.backstage.AdministratorsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:zwg_china.backstage.control;assembly=zwg-china.backstage.control" 
+             mc:Ignorable="d">
 
     <UserControl.Resources>
         <ResourceDictionary>
@@ -42,16 +42,15 @@
                         <Setter Property="Margin" Value="0,0,10,0"/>
                     </Style>
                 </StackPanel.Resources>
-                <local:MenuButton Text="查看用户列表" Icon="List" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Text="查看用户组" Icon="Women" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="查看管理员列表" Icon="List" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="查看管理员用户组" Icon="Women" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看用户登陆记录" Icon="Files" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Text="查看帐变记录" Icon="Files" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Text="高点号配额方案" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="添加新的管理员" Icon="Pen" Click="CreateAdministrator"/>
             </StackPanel>
             <!--以上是导航按键-->
 
             <!--以下是筛选栏-->
-            <Grid Height="45" Margin="0,0,0,40">
+            <Grid Height="90" Margin="0,0,0,40">
                 <Grid.Effect>
                     <DropShadowEffect ShadowDepth="0" BlurRadius="5" Color="#FF818181"/>
                 </Grid.Effect>
@@ -82,6 +81,26 @@
                             <Setter Property="Margin" Value="10,0,0,0"/>
                         </Style>
                     </StackPanel.Resources>
+                    <Grid Height="45">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="160"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="#FFD1CCC7" Height="0.5" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+                        <TextBlock Text="用户组："/>
+                        <ItemsControl Grid.Column="1" ItemsSource="{Binding Groups}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <local:FilterBox Content="{Binding Name}" IsChecked="{Binding Selected,Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="160"/>
@@ -89,15 +108,6 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Text="根据用户名搜索："/>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <StackPanel.Resources>
-                                <Style TargetType="Button" BasedOn="{StaticResource SubmitButton}">
-                                    <Setter Property="Height" Value="25"/>
-                                    <Setter Property="Width" Value="60"/>
-                                    <Setter Property="FontSize" Value="14"/>
-                                    <Setter Property="HorizontalAlignment" Value="Right"/>
-                                    <Setter Property="Margin" Value="10,0,0,0"/>
-                                </Style>
-                            </StackPanel.Resources>
                             <TextBox Margin="10,0" Text="{Binding KeywordForUsername,Mode=TwoWay}">
                                 <i:Interaction.Triggers>
                                     <local:KeepTextRealTime/>
@@ -114,11 +124,11 @@
             <!--以下是列表-->
             <local:ContentBox Width="800">
                 <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding RefreshCommand}"
-                                 ColumnDefinitions="用户:180,登陆时间:210,登陆IP:180,登陆地址:180"
+                                 ColumnDefinitions="用户名:100,用户组:100,上次登录时间:130,上次登录IP:130,上次登录地址:160,操作:130"
                                  ItemsSource="{Binding List}" Width="750">
                     <local:TableTool.ItemTemplate>
                         <DataTemplate>
-                            <local:UserLandingRecordsPage_TableRow State="{Binding}" />
+                            <local:AdministratorsPage_TableRow State="{Binding}" RefreshEventHandler="RefreshList" />
                         </DataTemplate>
                     </local:TableTool.ItemTemplate>
                 </local:TableTool>

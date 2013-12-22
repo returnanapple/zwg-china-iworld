@@ -147,10 +147,8 @@ namespace zwg_china.backstage.control
 
         private void Remove(object sender, RoutedEventArgs e)
         {
-            AuthorExport data = this.DataContext as AuthorExport;
-
             NormalPrompt np = new NormalPrompt();
-            np.State = string.Format("你确定要删除用户 {0} 吗？注意：该操作不可逆转。", data.Username);
+            np.State = string.Format("你确定要删除用户 {0} 吗？注意：该操作不可逆转。", this.State.Username);
             np.Closed += Remove_do;
             np.Show();
         }
@@ -159,12 +157,11 @@ namespace zwg_china.backstage.control
         {
             NormalPrompt np = (NormalPrompt)sender;
             if (np.DialogResult != true) { return; }
-            AuthorExport data = this.DataContext as AuthorExport;
             AdministratorExport aInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
 
             RemoveUserImport import = new RemoveUserImport
             {
-                Id = data.Id,
+                Id = this.State.Id,
                 Token = aInfo.Token
             };
             AuthorServiceClient client = new AuthorServiceClient();

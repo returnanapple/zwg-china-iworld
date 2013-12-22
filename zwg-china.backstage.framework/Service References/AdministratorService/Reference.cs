@@ -1507,6 +1507,8 @@ namespace zwg_china.backstage.framework.AdministratorService {
         
         private string GroupField;
         
+        private int IdField;
+        
         private string LastLoginAddressField;
         
         private string LastLoginIpField;
@@ -1537,6 +1539,19 @@ namespace zwg_china.backstage.framework.AdministratorService {
                 if ((object.ReferenceEquals(this.GroupField, value) != true)) {
                     this.GroupField = value;
                     this.RaisePropertyChanged("Group");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -1631,6 +1646,8 @@ namespace zwg_china.backstage.framework.AdministratorService {
         private bool CanViewTicketsField;
         
         private bool CanViewUsersField;
+        
+        private int CountOfCanDoField;
         
         private int IdField;
         
@@ -1790,6 +1807,19 @@ namespace zwg_china.backstage.framework.AdministratorService {
                 if ((this.CanViewUsersField.Equals(value) != true)) {
                     this.CanViewUsersField = value;
                     this.RaisePropertyChanged("CanViewUsers");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CountOfCanDo {
+            get {
+                return this.CountOfCanDoField;
+            }
+            set {
+                if ((this.CountOfCanDoField.Equals(value) != true)) {
+                    this.CountOfCanDoField = value;
+                    this.RaisePropertyChanged("CountOfCanDo");
                 }
             }
         }
@@ -2062,6 +2092,8 @@ namespace zwg_china.backstage.framework.AdministratorService {
         
         private zwg_china.backstage.framework.AdministratorService.AdministratorGroupExport GroupField;
         
+        private int IdField;
+        
         private string LastLoginAddressField;
         
         private string LastLoginIpField;
@@ -2094,6 +2126,19 @@ namespace zwg_china.backstage.framework.AdministratorService {
                 if ((object.ReferenceEquals(this.GroupField, value) != true)) {
                     this.GroupField = value;
                     this.RaisePropertyChanged("Group");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }

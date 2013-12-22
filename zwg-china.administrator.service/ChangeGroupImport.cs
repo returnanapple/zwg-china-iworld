@@ -55,7 +55,7 @@ namespace zwg_china.service.backstage
         /// <param name="model">所要修改的数据模型</param>
         public void Update(Administrator model)
         {
-            AdministratorGroup group = this.group;
+            model.Group = this.group;
         }
 
         #endregion

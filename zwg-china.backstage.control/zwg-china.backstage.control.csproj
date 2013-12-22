@@ -60,6 +60,27 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorGroupPage_CreateWindow.xaml.cs">
+      <DependentUpon>AdministratorGroupPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorGroupPage_EditWindow.xaml.cs">
+      <DependentUpon>AdministratorGroupPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorGroupPage_TableRow.xaml.cs">
+      <DependentUpon>AdministratorGroupPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorLandingRecordsPage_Table.xaml.cs">
+      <DependentUpon>AdministratorLandingRecordsPage_Table.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsPage_CreateAdministratorWindow.xaml.cs">
+      <DependentUpon>AdministratorsPage_CreateAdministratorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsPage_EditWindow.xaml.cs">
+      <DependentUpon>AdministratorsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsPage_TableRow.xaml.cs">
+      <DependentUpon>AdministratorsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="class\IJumpButton.cs" />
     <Compile Include="class\IMenuButton.cs" />
     <Compile Include="class\MenuSelectedInfo.cs" />
@@ -165,6 +186,34 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AdministratorGroupPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorGroupPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorGroupPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorLandingRecordsPage_Table.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorsPage_CreateAdministratorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ContentBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

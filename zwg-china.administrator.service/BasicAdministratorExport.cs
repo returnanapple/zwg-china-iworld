@@ -16,6 +16,12 @@ namespace zwg_china.service.backstage
         #region 属性
 
         /// <summary>
+        /// 存储指针
+        /// </summary>
+        [DataMember]
+        public int Id { get; set; }
+
+        /// <summary>
         /// 用户名
         /// </summary>
         [DataMember]
@@ -69,6 +75,7 @@ namespace zwg_china.service.backstage
         /// <param name="model">管理员信息的数据模型</param>
         public BasicAdministratorExport(Administrator model)
         {
+            this.Id = model.Id;
             this.Username = model.Username;
             this.Group = model.Group.Name;
             this.CreateTime = model.CreatedTime;

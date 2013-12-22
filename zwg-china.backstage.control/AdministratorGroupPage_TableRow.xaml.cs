@@ -10,41 +10,43 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.backstage.framework;
-using zwg_china.backstage.framework.AuthorService;
 using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.control
 {
-    public partial class UserGroupsPage_TableRow : UserControl
+    public partial class AdministratorGroupPage_TableRow : UserControl
     {
-        public UserGroupsPage_TableRow()
+        public AdministratorGroupPage_TableRow()
         {
             InitializeComponent();
         }
 
         #region 附加内容
 
-        public UserGroupExport State
+        public AdministratorGroupExport State
         {
-            get { return (UserGroupExport)GetValue(StateProperty); }
+            get { return (AdministratorGroupExport)GetValue(StateProperty); }
             set { SetValue(StateProperty, value); }
         }
 
         public static readonly DependencyProperty StateProperty =
-            DependencyProperty.Register("State", typeof(UserGroupExport), typeof(UserGroupsPage_TableRow)
+            DependencyProperty.Register("State", typeof(AdministratorGroupExport), typeof(AdministratorGroupPage_TableRow)
             , new PropertyMetadata(null, (d, e) =>
             {
-                UserGroupsPage_TableRow tool = (UserGroupsPage_TableRow)d;
-                UserGroupExport data = (UserGroupExport)e.NewValue;
+                AdministratorGroupPage_TableRow tool = (AdministratorGroupPage_TableRow)d;
+                AdministratorGroupExport data = (AdministratorGroupExport)e.NewValue;
 
                 tool.text_Name.Text = data.Name;
-                tool.text_Grade.Text = data.Grade.ToString();
-                tool.text_LowerOfConsumption.Text = data.LowerOfConsumption.ToString("0.00");
-                tool.text_CapsOfConsumption.Text = data.CapsOfConsumption.ToString("0.00");
+                tool.text_CountOfCanDo.Text = data.CountOfCanDo.ToString();
+                tool.text_IsCustomerService.Text = data.IsCustomerService ? "是" : "否";
 
                 AdministratorExport aInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
-                if (aInfo.Group.CanEditUsers) { return; }
-                tool.button_Remove.Visibility = System.Windows.Visibility.Collapsed;
+                if (!aInfo.Group.CanEditAdministrator
+                    || data.Name == "系统管理员")
+                {
+                    tool.button_Edit.Visibility = System.Windows.Visibility.Collapsed;
+                    tool.button_Remove.Visibility = System.Windows.Visibility.Collapsed;
+                }
             }));
 
         #endregion
@@ -67,35 +69,25 @@ namespace zwg_china.backstage.control
 
         #endregion
 
-        #region 显示详细信息弹窗
+        #region 修改
 
-        private void ShowFullWindow(object sender, RoutedEventArgs e)
+        private void Edit(object sender, RoutedEventArgs e)
         {
-            UserGroupExport data = this.DataContext as UserGroupExport;
-            AdministratorExport aInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
-            if (aInfo.Group.CanEditUsers)
-            {
-                UserGroupsPage_EditWindow fw = new UserGroupsPage_EditWindow();
-                fw.State = data;
-                fw.Closed += ShowEditUserGroupResult;
-                fw.Show();
-            }
-            else
-            {
-                UserGroupsPage_FullWindow fw = new UserGroupsPage_FullWindow();
-                fw.State = data;
-                fw.Show();
-            }
+            AdministratorGroupPage_EditWindow fw = new AdministratorGroupPage_EditWindow();
+            fw.State = this.State;
+            fw.Closed += ShowEditResult;
+            fw.Show();
+            fw.Show();
         }
 
-        void ShowEditUserGroupResult(object sender, EventArgs e)
+        void ShowEditResult(object sender, EventArgs e)
         {
-            UserGroupsPage_EditWindow fw = (UserGroupsPage_EditWindow)sender;
+            AdministratorGroupPage_EditWindow fw = (AdministratorGroupPage_EditWindow)sender;
             if (fw.DialogResult != true) { return; }
             if (fw.Error == null)
             {
                 ErrorPrompt ep = new ErrorPrompt();
-                ep.State = "编辑用户组成功";
+                ep.State = "编辑管理员组成功";
                 ep.Closed += OnRefresh;
                 ep.Show();
             }
@@ -109,12 +101,12 @@ namespace zwg_china.backstage.control
 
         #endregion
 
-        #region 删除用户
+        #region 移除
 
         private void Remove(object sender, RoutedEventArgs e)
         {
             NormalPrompt np = new NormalPrompt();
-            np.State = string.Format("你确定要删除 {0} 用户组吗？注意：该操作不可逆转。", this.State.Name);
+            np.State = string.Format("你确定要删除管理员组 {0} 吗？注意：该操作不可逆转。", this.State.Name);
             np.Closed += Remove_do;
             np.Show();
         }
@@ -125,22 +117,22 @@ namespace zwg_china.backstage.control
             if (np.DialogResult != true) { return; }
             AdministratorExport aInfo = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
 
-            RemoveGroupImport import = new RemoveGroupImport
+            RemoveAdministratorGroupImport import = new RemoveAdministratorGroupImport
             {
                 Id = this.State.Id,
                 Token = aInfo.Token
             };
-            AuthorServiceClient client = new AuthorServiceClient();
-            client.RemoveUserGroupCompleted += ShowRemoveResult;
-            client.RemoveUserGroupAsync(import);
+            AdministratorServiceClient client = new AdministratorServiceClient();
+            client.RemoveAdministratorGroupCompleted += ShowRemoveResult;
+            client.RemoveAdministratorGroupAsync(import);
         }
 
-        void ShowRemoveResult(object sender, RemoveUserGroupCompletedEventArgs e)
+        void ShowRemoveResult(object sender, RemoveAdministratorGroupCompletedEventArgs e)
         {
             if (e.Result.Success)
             {
                 ErrorPrompt ep = new ErrorPrompt();
-                ep.State = "删除用户组成功";
+                ep.State = "删除管理员组成功";
                 ep.Closed += OnRefresh;
                 ep.Show();
             }

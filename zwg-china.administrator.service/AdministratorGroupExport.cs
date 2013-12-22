@@ -105,6 +105,9 @@ namespace zwg_china.service.backstage
         [DataMember]
         public bool IsCustomerService { get; set; }
 
+        [DataMember]
+        public int CountOfCanDo { get; set; }
+
         #endregion
 
         #region 构造方法
@@ -138,6 +141,9 @@ namespace zwg_china.service.backstage
             this.CanViewAdministrator = model.CanViewAdministrator;
             this.CanEditAdministrator = model.CanEditAdministrator;
             this.IsCustomerService = model.IsCustomerService;
+
+            this.CountOfCanDo = this.GetType().GetProperties().Where(x => x.PropertyType == typeof(bool)).ToList()
+                .ConvertAll(x => x.GetValue(this)).Count(x => (bool)x == true);
         }
 
         #endregion

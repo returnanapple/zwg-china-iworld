@@ -77,6 +77,15 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorGroupPage.xaml.cs">
+      <DependentUpon>AdministratorGroupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorLandingRecordsPage.xaml.cs">
+      <DependentUpon>AdministratorLandingRecordsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsPage.xaml.cs">
+      <DependentUpon>AdministratorsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -111,6 +120,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="AdministratorGroupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorLandingRecordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MoneyChangeRecordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

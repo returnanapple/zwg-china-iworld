@@ -14,31 +14,31 @@ using zwg_china.backstage.framework;
 
 namespace zwg_china.backstage
 {
-    [View(page: Page.查看用户列表)]
-    public partial class UsersPage : UserControl
+    [View(page: Page.查看管理员列表)]
+    public partial class AdministratorsPage : UserControl
     {
-        public UsersPage()
+        public AdministratorsPage()
         {
             InitializeComponent();
         }
 
-        #region 创建新用户
+        #region 创建新的管理员
 
-        private void CreateUser(object sender, EventArgs e)
+        private void CreateAdministrator(object sender, EventArgs e)
         {
-            UsersPage_CreateUserWindow cw = new UsersPage_CreateUserWindow();
+            AdministratorsPage_CreateAdministratorWindow cw = new AdministratorsPage_CreateAdministratorWindow();
             cw.Closed += ShowCreateResult;
             cw.Show();
         }
 
         void ShowCreateResult(object sender, EventArgs e)
         {
-            UsersPage_CreateUserWindow cw = (UsersPage_CreateUserWindow)sender;
+            AdministratorsPage_CreateAdministratorWindow cw = (AdministratorsPage_CreateAdministratorWindow)sender;
             if (cw.DialogResult != true) { return; }
             if (cw.Error == null)
             {
                 ErrorPrompt ep = new ErrorPrompt();
-                ep.State = "添加用户成功";
+                ep.State = "添加管理员成功";
                 ep.Closed += RefreshList;
                 ep.Show();
             }
