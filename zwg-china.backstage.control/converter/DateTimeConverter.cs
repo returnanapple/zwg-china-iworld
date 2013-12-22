@@ -14,7 +14,6 @@ namespace zwg_china.backstage.control
 {
     public class DateTimeConverter : IValueConverter
     {
-
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             if (value == null)
@@ -24,7 +23,7 @@ namespace zwg_china.backstage.control
             else
             {
                 DateTime time = (DateTime)value;
-                return string.Format("{0}-{1}-{2}"
+                return string.Format("{0}/{1}/{2}"
                      , time.Year
                      , time.Month
                      , time.Day);
@@ -35,7 +34,7 @@ namespace zwg_china.backstage.control
         {
             try
             {
-                string[] ts = value.ToString().Split("-".ToCharArray());
+                string[] ts = value.ToString().Split("-/".ToCharArray());
                 DateTime time = new DateTime(System.Convert.ToInt32(ts[0])
                     , System.Convert.ToInt32(ts[1])
                     , System.Convert.ToInt32(ts[2]));

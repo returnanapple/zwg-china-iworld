@@ -11,13 +11,13 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.backstage.framework;
 using zwg_china.backstage.framework.AdministratorService;
-using zwg_china.backstage.framework.AuthorService;
+using zwg_china.backstage.framework.MessageService;
 
 namespace zwg_china.backstage.control
 {
-    public partial class UsersPage_CreateUserWindow : ChildWindow
+    public partial class BulletinsPage_CreateWindow : ChildWindow
     {
-        public UsersPage_CreateUserWindow()
+        public BulletinsPage_CreateWindow()
         {
             InitializeComponent();
         }
@@ -34,29 +34,29 @@ namespace zwg_china.backstage.control
         }
 
         public static readonly DependencyProperty ErrorProperty =
-            DependencyProperty.Register("Error", typeof(string), typeof(UsersPage_CreateUserWindow), new PropertyMetadata(null));
+            DependencyProperty.Register("Error", typeof(string), typeof(BulletinsPage_CreateWindow), new PropertyMetadata(null));
 
         #endregion
 
-        #region 方法
+        #region 创建
 
-        private void Enter(object sender, RoutedEventArgs e)
+        private void Create(object sender, RoutedEventArgs e)
         {
-            CreateUserImport import = new CreateUserImport
+            CreateBulleinImport import = new CreateBulleinImport
             {
-                Username = input_Username.Text,
-                Password = input_Password.Password,
-                Rebate_Normal = Math.Round(Convert.ToDouble(input_Rebate_Normal.Text), 2),
-                Rebate_IndefinitePosition = Math.Round(Convert.ToDouble(input_Rebate_IndefinitePosition.Text), 2),
+                Title = input_Title.Text,
+                Context = input_Context.Text,
+                BeginTime = GetTime(input_BeginTime.Text),
+                EndTime = GetTime(input_EndTime.Text),
+                Hide = input_Hide.SelectedIndex == 0,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
-            AuthorServiceClient client = new AuthorServiceClient();
-            client.CreateUserCompleted += ShowCreateUserResult;
-            client.CreateUserAsync(import);
+            MessageServiceClient client = new MessageServiceClient();
+            client.CreateBulleinCompleted += ShowCreateResult;
+            client.CreateBulleinAsync(import);
         }
-        #region 创建结果
 
-        void ShowCreateUserResult(object sender, CreateUserCompletedEventArgs e)
+        void ShowCreateResult(object sender, CreateBulleinCompletedEventArgs e)
         {
             if (!e.Result.Success)
             {
@@ -67,9 +67,23 @@ namespace zwg_china.backstage.control
 
         #endregion
 
+        #region 取消
+
         private void Cancel(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
+        }
+
+        #endregion
+
+        #region 私有方法
+
+        DateTime GetTime(string input)
+        {
+            string[] t = input.Split("-/".ToArray());
+            return new DateTime(Convert.ToInt32(t[0])
+                , Convert.ToInt32(t[1])
+                , Convert.ToInt32(t[2]));
         }
 
         #endregion

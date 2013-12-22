@@ -44,7 +44,7 @@
                 </StackPanel.Resources>
                 <local:MenuButton Text="查看管理员列表" Icon="List" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看管理员用户组" Icon="Women" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Text="查看用户登陆记录" Icon="Files" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Text="查看管理员登陆记录" Icon="Files" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="添加新的管理员组" Icon="Pen" Click="CreateGroup"/>
             </StackPanel>
             <!--以上是导航按键-->

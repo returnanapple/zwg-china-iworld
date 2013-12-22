@@ -89,6 +89,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AuthorSettingPage.xaml.cs">
+      <DependentUpon>AuthorSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BasicSettingPage.xaml.cs">
+      <DependentUpon>BasicSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage.xaml.cs">
+      <DependentUpon>BulletinsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IndexPage.xaml.cs">
       <DependentUpon>IndexPage.xaml</DependentUpon>
     </Compile>
@@ -102,8 +111,14 @@
       <DependentUpon>MoneyChangeRecordsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemBankAccountsPage.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SystemQuotasPage.xaml.cs">
       <DependentUpon>SystemQuotasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketSettingPage.xaml.cs">
+      <DependentUpon>TicketSettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserGroupsPage.xaml.cs">
       <DependentUpon>UserGroupsPage.xaml</DependentUpon>
@@ -132,11 +147,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AuthorSettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BasicSettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MoneyChangeRecordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SystemBankAccountsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SystemQuotasPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketSettingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

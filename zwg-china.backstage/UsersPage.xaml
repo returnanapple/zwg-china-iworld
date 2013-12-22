@@ -35,7 +35,7 @@
                 <TextBlock Text="你想要做点什么？" Canvas.Top="43"/>
             </Canvas>
             <!--以下是导航按键-->
-            <StackPanel Orientation="Horizontal" Height="120">
+            <StackPanel Name="menu_fir" Orientation="Horizontal" Height="120">
                 <StackPanel.Resources>
                     <Style TargetType="local:MenuButton">
                         <Setter Property="VerticalAlignment" Value="Top"/>
@@ -46,9 +46,9 @@
                 <local:MenuButton Text="查看用户组" Icon="Women" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看用户登陆记录" Icon="Files" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看帐变记录" Icon="Files" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Text="高点号配额方案" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Name="button_sqs" Text="高点号配额方案" Icon="Pen" Command="{Binding JumpCommand}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Height="155">
+            <StackPanel Name="menu_sec" Orientation="Horizontal" Height="155">
                 <StackPanel.Resources>
                     <Style TargetType="local:MenuButton">
                         <Setter Property="VerticalAlignment" Value="Top"/>

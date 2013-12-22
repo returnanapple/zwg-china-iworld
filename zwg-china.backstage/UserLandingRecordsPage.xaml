@@ -46,7 +46,7 @@
                 <local:MenuButton Text="查看用户组" Icon="Women" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看用户登陆记录" Icon="Files" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看帐变记录" Icon="Files" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Text="高点号配额方案" Icon="Pen" Command="{Binding JumpCommand}"/>
+                <local:MenuButton Name="button_sqs" Text="高点号配额方案" Icon="Pen" Command="{Binding JumpCommand}"/>
             </StackPanel>
             <!--以上是导航按键-->
 

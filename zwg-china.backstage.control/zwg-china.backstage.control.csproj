@@ -81,6 +81,18 @@
     <Compile Include="AdministratorsPage_TableRow.xaml.cs">
       <DependentUpon>AdministratorsPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BulletinsPage_CreateWindow.xaml.cs">
+      <DependentUpon>BulletinsPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage_EditWindow.xaml.cs">
+      <DependentUpon>BulletinsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage_FullWindow.xaml.cs">
+      <DependentUpon>BulletinsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinsPage_TableRow.xaml.cs">
+      <DependentUpon>BulletinsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="class\IJumpButton.cs" />
     <Compile Include="class\IMenuButton.cs" />
     <Compile Include="class\MenuSelectedInfo.cs" />
@@ -97,6 +109,18 @@
     <Compile Include="converter\IntConverter.cs" />
     <Compile Include="MoneyChangeRecordsPage_TableRow.xaml.cs">
       <DependentUpon>MoneyChangeRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_CreateWindow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_EditWindow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_FullWindow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBankAccountsPage_TableRow.xaml.cs">
+      <DependentUpon>SystemBankAccountsPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SystemQuotasPage_TableRow.xaml.cs">
       <DependentUpon>SystemQuotasPage_TableRow.xaml</DependentUpon>
@@ -214,6 +238,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BulletinsPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BulletinsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ContentBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -227,6 +267,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MoneyChangeRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemBankAccountsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

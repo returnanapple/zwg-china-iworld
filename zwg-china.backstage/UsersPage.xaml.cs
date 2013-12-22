@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.backstage.control;
 using zwg_china.backstage.framework;
+using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage
 {
@@ -20,6 +21,21 @@ namespace zwg_china.backstage
         public UsersPage()
         {
             InitializeComponent();
+            this.Loaded += HideMenu;
+        }
+
+        void HideMenu(object sender, RoutedEventArgs e)
+        {
+            AdministratorExport info = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
+            if (!info.Group.CanEditSettings)
+            {
+                button_sqs.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            if (!info.Group.CanEditUsers)
+            {
+                menu_fir.Height = 155;
+                menu_sec.Visibility = System.Windows.Visibility.Collapsed;
+            }
         }
 
         #region 创建新用户

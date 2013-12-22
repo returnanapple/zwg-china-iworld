@@ -14,22 +14,22 @@ using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage
 {
-    [View(page: Page.查看帐变记录)]
-    public partial class MoneyChangeRecordsPage : UserControl
+    [View(page: Page.基础系统设置)]
+    public partial class BasicSettingPage : UserControl
     {
-        public MoneyChangeRecordsPage()
+        public BasicSettingPage()
         {
             InitializeComponent();
-            this.Loaded += HideMenu;
+            this.Loaded += HideButton;
         }
 
-        void HideMenu(object sender, RoutedEventArgs e)
+        void HideButton(object sender, RoutedEventArgs e)
         {
             AdministratorExport info = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
-            if (!info.Group.CanEditSettings)
-            {
-                button_sqs.Visibility = System.Windows.Visibility.Collapsed;
-            }
+            if (info.Group.CanEditSettings) { return; }
+            button_Edit.Visibility = System.Windows.Visibility.Collapsed;
+            button_Remove.Visibility = System.Windows.Visibility.Collapsed;
+            cover_Main.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }

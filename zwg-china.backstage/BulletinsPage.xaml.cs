@@ -13,12 +13,13 @@ using zwg_china.backstage.control;
 using zwg_china.backstage.framework;
 using zwg_china.backstage.framework.AdministratorService;
 
+
 namespace zwg_china.backstage
 {
-    [View(page: Page.查看用户组)]
-    public partial class UserGroupsPage : UserControl
+    [View(page: Page.系统公告设置)]
+    public partial class BulletinsPage : UserControl
     {
-        public UserGroupsPage()
+        public BulletinsPage()
         {
             InitializeComponent();
             this.Loaded += HideMenu;
@@ -29,33 +30,28 @@ namespace zwg_china.backstage
             AdministratorExport info = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
             if (!info.Group.CanEditSettings)
             {
-                button_sqs.Visibility = System.Windows.Visibility.Collapsed;
-            }
-            if (!info.Group.CanEditUsers)
-            {
                 menu_fir.Height = 155;
                 menu_sec.Visibility = System.Windows.Visibility.Collapsed;
             }
         }
 
-        #region 创建新的用户组
+        #region 创建
 
-        private void CreateUserGroup(object sender, EventArgs e)
+        private void Create(object sender, EventArgs e)
         {
-            UserGroupsPage_CreateUserGroupWindow cw = new UserGroupsPage_CreateUserGroupWindow();
-            cw.Closed += ShowCreateUserGroupResult;
+            BulletinsPage_CreateWindow cw = new BulletinsPage_CreateWindow();
+            cw.Closed += ShowCreateResult;
             cw.Show();
-
         }
 
-        void ShowCreateUserGroupResult(object sender, EventArgs e)
+        void ShowCreateResult(object sender, EventArgs e)
         {
-            UserGroupsPage_CreateUserGroupWindow cw = (UserGroupsPage_CreateUserGroupWindow)sender;
+            BulletinsPage_CreateWindow cw = (BulletinsPage_CreateWindow)sender;
             if (cw.DialogResult != true) { return; }
             if (cw.Error == null)
             {
                 ErrorPrompt ep = new ErrorPrompt();
-                ep.State = "添加成功";
+                ep.State = "添加公告成功";
                 ep.Closed += RefreshList;
                 ep.Show();
             }

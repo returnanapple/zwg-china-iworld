@@ -202,7 +202,7 @@
   <Class Name="zwg_china.backstage.framework.AdministratorsViewModel" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAABABAAAAAAAACAAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>QAAAAEAAAABABAAAACAAACAAAAAAAAAAAAAAAEAAAAQ=</HashCode>
       <FileName>AdministratorsViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>

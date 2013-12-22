@@ -994,6 +994,8 @@ namespace zwg_china.backstage.framework.SettingOfAuthorService {
         
         private string HolderOfTheCardField;
         
+        private int IdField;
+        
         private int OrderField;
         
         private string RemarkField;
@@ -1046,6 +1048,19 @@ namespace zwg_china.backstage.framework.SettingOfAuthorService {
                 if ((object.ReferenceEquals(this.HolderOfTheCardField, value) != true)) {
                     this.HolderOfTheCardField = value;
                     this.RaisePropertyChanged("HolderOfTheCard");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
