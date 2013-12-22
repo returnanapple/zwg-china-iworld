@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.LotteryTool"
     mc:Ignorable="d"
     Width="814" Height="568">
-    
+
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -94,7 +94,8 @@
 
         <Slider Canvas.Left="651" Canvas.Top="435" Width="122" Style="{StaticResource NewSliderStyle}" Value="{Binding Point, Mode=TwoWay}"
                 Maximum="{Binding MaxPoint}"/>
-        <ScrollViewer Width="499" Height="57" Canvas.Left="39" Canvas.Top="402" Style="{StaticResource NewScrollViewerStyle}">
+        <ScrollViewer Width="498" Height="48" Canvas.Left="39" Canvas.Top="410" VerticalScrollBarVisibility="Visible" Padding="12,0"
+                      Style="{StaticResource NewScrollViewerStyle}">
             <local:NoBorderTextBox TextWrapping="Wrap" Background="Transparent" BorderThickness="0" IsReadOnly="True"
                      Foreground="#FF8B94A0" FontSize="14" FontFamily="Fonts/simsun.ttc#SimSun" Text="{Binding ContextOfSelected}"/>
         </ScrollViewer>
@@ -109,6 +110,41 @@
                                BorderThickness="0,0,0,1" BorderBrush="Red" Background="Transparent"
                                Foreground="White" FontSize="14" FontFamily="Fonts/simsun.ttc#SimSun"
                                Canvas.Left="305" Canvas.Top="476"/>
+
+        <Grid Width="780" Height="55" Canvas.Left="15" Canvas.Top="506">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="23"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <StackPanel.Background>
+                    <ImageBrush Stretch="None" ImageSource="Images/TableRowOfLotteryTool_TittleBg.png"/>
+                </StackPanel.Background>
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="FontFamily" Value="Fonts/simsun.ttc#SimSun"/>
+                        <Setter Property="Foreground" Value="#FFD3C772"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="TextAlignment" Value="Center"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock Text="期号" Width="140"/>
+                <TextBlock Text="玩法" Width="110"/>
+                <TextBlock Text="投注内容" Width="200"/>
+                <TextBlock Text="倍数" Width="110"/>
+                <TextBlock Text="金额" Width="110"/>
+                <TextBlock Text="撤单" Width="110"/>
+            </StackPanel>
+            <ItemsControl Grid.Row="1" Height="23" ItemsSource="{Binding Bettings}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:TableRowOfLotteryTool/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
 
 
 

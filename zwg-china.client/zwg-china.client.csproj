@@ -105,6 +105,9 @@
     <Compile Include="NewButton.xaml.cs">
       <DependentUpon>NewButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewButtonOfCover.xaml.cs">
+      <DependentUpon>NewButtonOfCover.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewCheckBoxWithOffsetEffect.xaml.cs">
       <DependentUpon>NewCheckBoxWithOffsetEffect.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,12 @@
     </Compile>
     <Compile Include="SubPlayTagButton.xaml.cs">
       <DependentUpon>SubPlayTagButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableRowOfLotteryTool.xaml.cs">
+      <DependentUpon>TableRowOfLotteryTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableRowOfLotteryTool_ChildWindow.xaml.cs">
+      <DependentUpon>TableRowOfLotteryTool_ChildWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
@@ -182,6 +191,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NewButtonOfCover.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NewCheckBoxWithOffsetEffect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -222,12 +235,32 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <ApplicationDefinition Include="TableTool.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="TableRowOfLotteryTool.xaml">
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableRowOfLotteryTool_ChildWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\撤单_MouseOver.png" />
+    <Resource Include="Images\撤单_Normal.png" />
+    <Resource Include="Images\撤单_Pressed.png" />
+    <Resource Include="Images\pstemp.png" />
+    <Resource Include="Images\ChildWindowBg.png" />
+    <Resource Include="Images\撤单2_MouseOver.png" />
+    <Resource Include="Images\撤单2_Normal.png" />
+    <Resource Include="Images\撤单2_Pressed.png" />
+    <Resource Include="Images\返回_MouseOver.png" />
+    <Resource Include="Images\返回_Normal.png" />
+    <Resource Include="Images\返回_Pressed.png" />
+    <Resource Include="Images\TableRowOfLotteryTool_TittleBg.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
@@ -404,9 +437,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\RemainTimeBg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\pstemp.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\AboutBetButtonBg_MouseOver.png" />

@@ -1,0 +1,29 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.TableRowOfLotteryTool"
+    mc:Ignorable="d"
+    Width="780" Height="23">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="None" ImageSource="Images/ptemp.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Text="{Binding Issue}"/>
+        <TextBlock Grid.Column="1" Text="{Binding HowToPlay}"/>
+        <TextBlock Grid.Column="2" Text="{Binding values}"/>
+        <TextBlock Grid.Column="3" Text="{Binding Multiple}"/>
+        <TextBlock Grid.Column="4" Text="{Binding Pay}"/>
+        <local:NewButton Grid.Column="5" Width="58" Height="21" ImageNameOfBackground="撤单" Click="ReBet"/>
+    </Grid>
+</UserControl>
