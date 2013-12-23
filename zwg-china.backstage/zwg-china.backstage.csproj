@@ -154,6 +154,9 @@
     <Compile Include="TicketSettingPage.xaml.cs">
       <DependentUpon>TicketSettingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TicketsPage.xaml.cs">
+      <DependentUpon>TicketsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TransferRecordsPage.xaml.cs">
       <DependentUpon>TransferRecordsPage.xaml</DependentUpon>
     </Compile>
@@ -255,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TicketSettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
