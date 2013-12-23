@@ -105,6 +105,9 @@
     <Compile Include="BulletinsPage.xaml.cs">
       <DependentUpon>BulletinsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChasingsPage.xaml.cs">
+      <DependentUpon>ChasingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CommissionRecordsPage.xaml.cs">
       <DependentUpon>CommissionRecordsPage.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BulletinsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChasingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

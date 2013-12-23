@@ -1831,7 +1831,7 @@ namespace zwg_china.backstage.framework.LotteryService {
         
         private zwg_china.backstage.framework.LotteryService.BettingStatus StatusField;
         
-        private string valuesField;
+        private string ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public double Bonus {
@@ -2003,14 +2003,14 @@ namespace zwg_china.backstage.framework.LotteryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string values {
+        public string Values {
             get {
-                return this.valuesField;
+                return this.ValuesField;
             }
             set {
-                if ((object.ReferenceEquals(this.valuesField, value) != true)) {
-                    this.valuesField = value;
-                    this.RaisePropertyChanged("values");
+                if ((object.ReferenceEquals(this.ValuesField, value) != true)) {
+                    this.ValuesField = value;
+                    this.RaisePropertyChanged("Values");
                 }
             }
         }
