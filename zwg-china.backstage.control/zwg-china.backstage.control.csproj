@@ -54,6 +54,8 @@
       <HintPath>$(TargetFrameworkDirectory)System.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="system.windows.controls.datavisualization.toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
@@ -138,6 +140,15 @@
     </Compile>
     <Compile Include="RewardForRegisterPlansPage_CreateWndow.xaml.cs">
       <DependentUpon>RewardForRegisterPlansPage_CreateWndow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage_EditWindow.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage_FullWindow.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage_TableRow.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SiteReportsPage_FullWindow.xaml.cs">
       <DependentUpon>SiteReportsPage_FullWindow.xaml</DependentUpon>
@@ -360,6 +371,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RewardForRegisterPlansPage_CreateWndow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
