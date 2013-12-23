@@ -1,0 +1,43 @@
+﻿<controls:ChildWindow x:Class="zwg_china.backstage.control.RewardForRegisterPlansPage_FullWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           HasCloseButton="False" 
+           >
+
+    <controls:ChildWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_CssOfFullWindow.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </controls:ChildWindow.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas Width="280" Height="260">
+
+            <TextBlock Text="标题：" Canvas.Left="64" Canvas.Top="20"/>
+            <TextBlock Text="描述：" Canvas.Left="64" Canvas.Top="39"/>
+            <TextBlock Text="奖品类型：" Canvas.Left="40" Canvas.Top="129"/>
+            <TextBlock Text="数额：" Canvas.Left="64" Canvas.Top="148"/>
+            <TextBlock Text="开始时间：" Canvas.Left="40" Canvas.Top="167"/>
+            <TextBlock Text="结束时间：" Canvas.Left="40" Canvas.Top="186"/>
+            <TextBlock Text="是否暂停：" Canvas.Left="40" Canvas.Top="205"/>
+            <TextBlock Text="状态：" Canvas.Left="64" Canvas.Top="224"/>
+
+            <TextBlock Name="text_Title" Text="老子是标题" Canvas.Left="105" Canvas.Top="20"/>
+            <TextBox Name="text_Description" Text="老子是描述" Canvas.Left="105" Canvas.Top="39" Height="85" Width="138" IsReadOnly="True" TextWrapping="Wrap"/>
+            <TextBlock Name="text_PrizeType" Text="积分" Canvas.Left="105" Canvas.Top="129"/>
+            <TextBlock Name="text_Sum" Text="5000.00" Canvas.Left="105" Canvas.Top="148"/>
+            <TextBlock Name="text_BeginTime" Text="2013/12/22" Canvas.Left="105" Canvas.Top="167"/>
+            <TextBlock Name="text_EndTime" Text="2013/12/22" Canvas.Left="105" Canvas.Top="186"/>
+            <TextBlock Name="text_Hide" Text="否" Canvas.Left="105" Canvas.Top="205"/>
+            <TextBlock Name="text_Status" Text="未开始" Canvas.Left="105" Canvas.Top="224"/>
+        </Canvas>
+        <Button Content="确  定" Grid.Column="1" Margin="0,10,10,0" Click="Enter"/>
+    </Grid>
+</controls:ChildWindow>

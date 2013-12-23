@@ -46,7 +46,7 @@
                 <local:MenuButton Text="查看消费奖励" Icon="List" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看充值奖励" Icon="List" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看积分兑换" Icon="List" Command="{Binding JumpCommand}"/>
-                <local:MenuButton Name="button_Create" Text="添加注册奖励" Icon="Pen" Click="Create"/>
+                <local:MenuButton Name="button_Create" Text="添加注册奖励" Icon="Pen" Click="CreateRewardForRegisterPlans"/>
             </StackPanel>
             <!--以上是导航按键-->
 
