@@ -20,6 +20,8 @@ namespace zwg_china.backstage.control
         public LotteriesPage_TableRow()
         {
             InitializeComponent();
+        }
+
 
         #region 附加内容
 
