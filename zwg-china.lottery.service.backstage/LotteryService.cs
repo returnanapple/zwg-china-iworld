@@ -104,6 +104,24 @@ namespace zwg_china.service.backstage
             }
         }
 
+        /// <summary>
+        /// 获取基础的彩票信息
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回基础的彩票信息</returns>
+        public NormalResult<List<BasicLotteryTicketExport>> GetBasicLotteryTickets(GetBasicLotteryTicketsImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                return import.GetBasicLotteryTickets(db);
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult<List<BasicLotteryTicketExport>>(null, ex.Message);
+            }
+        }
+
         #endregion
 
         #region 设置
@@ -148,6 +166,25 @@ namespace zwg_china.service.backstage
         #endregion
 
         #region 操作
+
+        /// <summary>
+        /// 手动添加开奖记录
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        public NormalResult CreateLottery(CreateLotteryImport import)
+        {
+            try
+            {
+                import.CheckAllowExecuteOrNot(db);
+                new LotteryManager(db).Create(import);
+                return new NormalResult();
+            }
+            catch (Exception ex)
+            {
+                return new NormalResult(ex.Message);
+            }
+        }
 
         /// <summary>
         /// 修改彩票信息

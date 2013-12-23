@@ -54,6 +54,14 @@ namespace zwg_china.service.backstage
         [OperationContract]
         PageResult<ChasingExport> GetChasings(GetChasingsImport import);
 
+        /// <summary>
+        /// 获取基础的彩票信息
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回基础的彩票信息</returns>
+        [OperationContract]
+        NormalResult<List<BasicLotteryTicketExport>> GetBasicLotteryTickets(GetBasicLotteryTicketsImport import);
+
         #endregion
 
         #region 获取设置
@@ -77,6 +85,14 @@ namespace zwg_china.service.backstage
         #endregion
 
         #region 操作
+
+        /// <summary>
+        /// 手动添加开奖记录
+        /// </summary>
+        /// <param name="import">数据集</param>
+        /// <returns>返回操作结果</returns>
+        [OperationContract]
+        NormalResult CreateLottery(CreateLotteryImport import);
 
         /// <summary>
         /// 修改彩票信息

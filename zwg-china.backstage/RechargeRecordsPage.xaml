@@ -13,7 +13,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-            <local:DateTimeConverter x:Key="DateTimeConverter"/>
             <local:BoolToStringConverter x:Key="BoolToStringConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -109,9 +108,9 @@
                         <Border Background="#FFD1CCC7" Height="0.5" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
                         <TextBlock Text="时间段："/>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <sdk:DatePicker Text="{Binding BeginTime,Mode=TwoWay,Converter={StaticResource DateTimeConverter}}" />
+                            <sdk:DatePicker SelectedDate="{Binding BeginTime,Mode=TwoWay}" />
                             <TextBlock Text="至" Margin="10,0,0,0"/>
-                            <sdk:DatePicker Text="{Binding EndTime,Mode=TwoWay,Converter={StaticResource DateTimeConverter}}" />
+                            <sdk:DatePicker SelectedDate="{Binding EndTime,Mode=TwoWay}" />
                         </StackPanel>
                     </Grid>
                     <Grid>

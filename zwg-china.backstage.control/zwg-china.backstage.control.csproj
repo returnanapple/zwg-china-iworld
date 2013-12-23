@@ -102,7 +102,6 @@
     <Compile Include="ContentBox.xaml.cs">
       <DependentUpon>ContentBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="converter\DateTimeConverter.cs" />
     <Compile Include="DividendRecordsPage_TableRow.xaml.cs">
       <DependentUpon>DividendRecordsPage_TableRow.xaml</DependentUpon>
     </Compile>
@@ -112,8 +111,13 @@
     <Compile Include="FilterBox.xaml.cs">
       <DependentUpon>FilterBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="converter\IntConverter.cs" />
     <Compile Include="converter\BoolToStringConverter.cs" />
+    <Compile Include="LotteriesPage_CreateWindow.xaml.cs">
+      <DependentUpon>LotteriesPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LotteriesPage_TableRow.xaml.cs">
+      <DependentUpon>LotteriesPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MoneyChangeRecordsPage_TableRow.xaml.cs">
       <DependentUpon>MoneyChangeRecordsPage_TableRow.xaml</DependentUpon>
     </Compile>
@@ -236,6 +240,15 @@
     <Compile Include="UsersPage_TableRow.xaml.cs">
       <DependentUpon>UsersPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VirtualBonusPage_CreateWindow.xaml.cs">
+      <DependentUpon>VirtualBonusPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualBonusPage_EditWindow.xaml.cs">
+      <DependentUpon>VirtualBonusPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualBonusPage_TableRow.xaml.cs">
+      <DependentUpon>VirtualBonusPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WithdrawalsRecordsPage_FullWindow.xaml.cs">
       <DependentUpon>WithdrawalsRecordsPage_FullWindow.xaml</DependentUpon>
     </Compile>
@@ -311,6 +324,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FilterBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LotteriesPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LotteriesPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -407,6 +428,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UsersPage_SetExtraQuotasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualBonusPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualBonusPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualBonusPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

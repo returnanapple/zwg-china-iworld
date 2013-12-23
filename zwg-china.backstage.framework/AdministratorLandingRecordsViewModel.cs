@@ -6,6 +6,9 @@ using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.framework
 {
+    /// <summary>
+    /// 管理员登陆记录的视图模型
+    /// </summary>
     public class AdministratorLandingRecordsViewModel : ShowListViewModelBase<AdministratorLandingRecordExport, AdministratorServiceClient>
     {
         #region 私有字段
@@ -28,8 +31,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForUsername == value) { return; }
-                keywordForUsername = value;
+                keywordForUsername = value == "" ? null : value;
                 OnPropertyChanged("KeywordForUsername");
+                Refresh(null);
             }
         }
 
