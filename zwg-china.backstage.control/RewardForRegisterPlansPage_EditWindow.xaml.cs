@@ -46,21 +46,19 @@ namespace zwg_china.backstage.control
                 RewardForRegisterPlanExport data = (RewardForRegisterPlanExport)e.NewValue;
                 tool.input_Title.Text = data.Title;
                 tool.input_Description.Text = data.Description;
-                (tool.input_PrizeType.SelectedItem as TextBlock).Text = data.PrizeType.ToString();
-                (tool.input_Hide.SelectedItem as TextBlock).Text = data.Hide == false ? "否" : "是";
+                tool.input_PrizeType.SelectedIndex = data.PrizeType.ToString() == "积分" ? 0 : 1;
+                tool.input_Hide.SelectedIndex = data.Hide == false ? 0 : 1;
                 tool.input_BeginTime.SelectedDate = data.BeginTime;
                 tool.input_EndTime.SelectedDate = data.EndTime;
                 tool.input_Sum.Text = data.Sum.ToString("0.00");
 
             }));
-
-
         #endregion
 
         #region 修改
         private void Edit(object sender, RoutedEventArgs e)
         {
-            EditRewardForRegisterPlanImport import = new EditRewardForRegisterPlanImport 
+            EditRewardForRegisterPlanImport import = new EditRewardForRegisterPlanImport
             {
                 Id = this.State.Id,
                 Title = input_Title.Text,
