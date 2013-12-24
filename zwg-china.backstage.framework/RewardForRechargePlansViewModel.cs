@@ -29,8 +29,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForTitle == value) { return; }
-                keywordForTitle = value;
+                keywordForTitle = value == "" ? null : value;
                 OnPropertyChanged("KeywordForTitle");
+                Refresh(null);
             }
         }
 

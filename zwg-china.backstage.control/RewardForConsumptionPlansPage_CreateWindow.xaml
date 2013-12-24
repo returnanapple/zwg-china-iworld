@@ -51,7 +51,7 @@
                 <ItemsControl x:Name="input_Details">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <local:RewardForRechargePlansPage_TableRowOfDetails DeleteEventHandler="DelADetail" Margin="0,0,0,10"/>
+                            <local:RewardForConsumptionPlansPage_TableRowOfDetails DeleteEventHandler="DelADetail" Margin="0,0,0,10"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
