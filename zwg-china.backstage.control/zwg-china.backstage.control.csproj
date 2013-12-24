@@ -165,6 +165,7 @@
     <Compile Include="RersonalAndTeamReportsPage_TableRow.xaml.cs">
       <DependentUpon>RersonalAndTeamReportsPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="converter\ReversionBoolConverter.cs" />
     <Compile Include="RewardForConsumptionPlansPage_CreateWindow.xaml.cs">
       <DependentUpon>RewardForConsumptionPlansPage_CreateWindow.xaml</DependentUpon>
     </Compile>
