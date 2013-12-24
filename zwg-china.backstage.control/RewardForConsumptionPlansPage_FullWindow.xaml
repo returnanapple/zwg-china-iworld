@@ -40,7 +40,7 @@
                 <ItemsControl x:Name="input_Details">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <local:RewardForRechargePlansPage_TableRowOfDetails_ReadOnly Margin="0,0,0,10"/>
+                            <local:RewardForConsumptionPlansPage_TableRowOfDetails_ReadOnly Margin="0,0,0,10"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

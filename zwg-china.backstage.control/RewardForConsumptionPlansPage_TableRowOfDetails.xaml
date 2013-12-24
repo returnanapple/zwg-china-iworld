@@ -30,8 +30,8 @@
                 <TextBlock Text="数额：" Canvas.Left="203" Canvas.Top="48" Margin="0"/>
                 <TextBlock Text="返还方式：" Canvas.Left="5" Canvas.Top="81" Margin="0"/>
 
-                <TextBox Width="87" Height="25" Canvas.Left="70" Canvas.Top="14" Text="{Binding LowerRecharge, Mode=TwoWay}"/>
-                <TextBox Width="87" Height="25" Canvas.Left="251" Canvas.Top="14" Text="{Binding CapsRecharge, Mode=TwoWay}"/>
+                <TextBox Width="87" Height="25" Canvas.Left="70" Canvas.Top="14" Text="{Binding LowerConsumption, Mode=TwoWay}"/>
+                <TextBox Width="87" Height="25" Canvas.Left="251" Canvas.Top="14" Text="{Binding CapsConsumption, Mode=TwoWay}"/>
                 <ComboBox x:Name="input_PrizeType" Width="87" Canvas.Left="70" Height="25" Canvas.Top="44"
                           SelectedItem="{Binding PrizeType,Mode=TwoWay}"/>
                 <TextBox Width="87" Canvas.Left="251" Canvas.Top="44" Text="{Binding Sum, Mode=TwoWay}"/>

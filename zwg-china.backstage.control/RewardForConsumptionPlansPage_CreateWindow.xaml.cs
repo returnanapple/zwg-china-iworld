@@ -74,7 +74,7 @@ namespace zwg_china.backstage.control
         #region 创建一条消费奖励明细
         private void AddADetail(object sender, RoutedEventArgs e)
         {
-            Details.Add(new RewardForConsumptionPlanDetailImport { PrizeType = PrizesOfActivityType.积分, WaysToReward = WaysToRewardOfActivity.百分比 });
+            Details.Add(new RewardForConsumptionPlanDetailImport { PrizeType = PrizesOfActivityType.积分, WaysToReward = WaysToRewardOfActivity.百分比,CapsConsumption=2.00 });
         }
         #endregion
 

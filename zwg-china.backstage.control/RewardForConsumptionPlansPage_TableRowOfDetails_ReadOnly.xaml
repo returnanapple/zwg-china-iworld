@@ -29,8 +29,8 @@
                 <TextBlock Text="数额：" Canvas.Left="214" Canvas.Top="43" Margin="0"/>
                 <TextBlock Text="返还方式：" Canvas.Left="16" Canvas.Top="70" Margin="0"/>
 
-                <TextBlock Canvas.Left="81" Canvas.Top="15" Text="{Binding LowerRecharge}" Margin="0"/>
-                <TextBlock Canvas.Left="255" Canvas.Top="15" Text="{Binding CapsRecharge}" Margin="0"/>
+                <TextBlock Canvas.Left="81" Canvas.Top="15" Text="{Binding LowerConsumption}" Margin="0"/>
+                <TextBlock Canvas.Left="255" Canvas.Top="15" Text="{Binding CapsConsumption}" Margin="0"/>
                 <TextBlock x:Name="input_PrizeType" Canvas.Left="81" Canvas.Top="43" Text="{Binding PrizeType}" Margin="0"/>
                 <TextBlock Canvas.Left="255" Canvas.Top="43" Text="{Binding Sum}" Margin="0"/>
                 <TextBlock x:Name="input_WaysToReward" Canvas.Left="81" Canvas.Top="70" Text="{Binding WaysToReward}" Margin="0"/>
