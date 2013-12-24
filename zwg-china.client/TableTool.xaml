@@ -11,13 +11,13 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-            <Style x:Key="text_titile" TargetType="TextBlock" BasedOn="{StaticResource ResourceKey=TextBlockBaseStyle}">
-                <Setter Property="Foreground" Value="Black"/>
-                <Setter Property="FontWeight" Value="Bold"/>
+            <Style x:Key="text_titile" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="Margin" Value="10,0,10,0"/>
-                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontFamily" Value="Fonts/msyh.ttf#Microsoft YaHei"/>
             </Style>
             <Style x:Key="bg_single" TargetType="Grid">
                 <Setter Property="Height" Value="30"/>
@@ -31,16 +31,19 @@
 
     <Grid Name="root" MinHeight="105">
         <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
+            <RowDefinition Height="56"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         <!--外框-->
-        <Border Height="0.5" Background="#FFDDDDDD" BorderThickness="0" Grid.Row="0" VerticalAlignment="Bottom"/>
-        <StackPanel Name="_bg" Grid.Row="1"/>
-        <Border Height="0.5" Background="#FFDDDDDD" BorderThickness="0" Grid.Row="2" VerticalAlignment="Top"/>
+        <StackPanel Name="_bg" Grid.Row="1" Background="#45000000" Margin="7,-7,7,0">
+            <Grid/>
+        </StackPanel>
         <!--标题-->
         <Grid Name="_title">
+            <Grid.Background>
+                <ImageBrush Stretch="None" ImageSource="Images/TableHeadBg.png"/>
+            </Grid.Background>
         </Grid>
         <!--列表-->
         <ItemsControl Name="_list" Grid.Row="1"/>
@@ -48,13 +51,13 @@
         <StackPanel Name="_page" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right"
                     Orientation="Horizontal">
             <StackPanel.Resources>
-                <Style TargetType="HyperlinkButton" BasedOn="{StaticResource HyperlinkButtonBaseStyle}">
-                    <Setter Property="Margin" Value="15,0,0,0"/>
-                </Style>
-                <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlockBaseStyle}">
+                <Style TargetType="TextBlock">
                     <Setter Property="HorizontalAlignment" Value="Center"/>
                     <Setter Property="VerticalAlignment" Value="Center"/>
                     <Setter Property="Margin" Value="15,0,0,0"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="FontFamily" Value="Fonts/msyh.ttf#Microsoft YaHei"/>
                 </Style>
             </StackPanel.Resources>
             <TextBlock Text="首页" />

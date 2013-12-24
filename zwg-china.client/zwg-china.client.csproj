@@ -289,6 +289,14 @@
     <Resource Include="Images\确定_Normal.png" />
     <Resource Include="Images\确定_Pressed.png" />
     <Resource Include="Images\Warning_ChildWindowBg.png" />
+    <Resource Include="Images\TableHeadBg.png" />
+    <Resource Include="Images\PageButtonBg_MouseOver.png" />
+    <Resource Include="Images\PageButtonBg_Normal.png" />
+    <Resource Include="Images\PageButtonBg_Pressed.png" />
+    <Resource Include="Images\上一页OfTable.png" />
+    <Resource Include="Images\下一页OfTable.png" />
+    <Resource Include="Images\尾页OfTable.png" />
+    <Resource Include="Images\首页OfTable.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
