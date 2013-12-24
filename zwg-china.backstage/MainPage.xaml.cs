@@ -21,6 +21,12 @@ namespace zwg_china.backstage
     /// </summary>
     public partial class MainPage : UserControl, IMainPage
     {
+        #region 私有字段
+
+        AdministratorServiceClient client = new AdministratorServiceClient();
+
+        #endregion
+
         #region 构造方法
 
         /// <summary>
@@ -29,6 +35,7 @@ namespace zwg_china.backstage
         public MainPage()
         {
             InitializeComponent();
+            this.Loaded += KeepHeartbeat;
         }
 
         #endregion
@@ -79,9 +86,21 @@ namespace zwg_china.backstage
 
         #region 心跳协议
 
-        void KeepHeartbeat()
+        void KeepHeartbeat(object sender, RoutedEventArgs e)
         {
+            Storyboard sb = new Storyboard();
+            sb.Duration = new Duration(new TimeSpan(0, 0, 10));
+            sb.Completed += KeepHeartbeat_do;
+            sb.Begin();
+        }
 
+        void KeepHeartbeat_do(object sender, EventArgs e)
+        {
+            if (!DataManager.HaveValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo)) { return; }
+            AdministratorExport info = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo);
+            client.KeepHeartbeatAsync(info.Token);
+            Storyboard sb = (Storyboard)sender;
+            sb.Begin();
         }
 
         #endregion
