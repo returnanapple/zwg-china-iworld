@@ -12,6 +12,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.backstage.control;
 using zwg_china.backstage.framework;
+using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage
 {
@@ -72,6 +73,15 @@ namespace zwg_china.backstage
 
             //注册弹窗
             new RI().Register();
+        }
+
+        #endregion
+
+        #region 心跳协议
+
+        void KeepHeartbeat()
+        {
+
         }
 
         #endregion
