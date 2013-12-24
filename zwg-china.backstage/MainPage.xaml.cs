@@ -36,6 +36,16 @@ namespace zwg_china.backstage
         {
             InitializeComponent();
             this.Loaded += KeepHeartbeat;
+            client.KeepHeartbeatCompleted += Hit;
+        }
+
+        void Hit(object sender, KeepHeartbeatCompletedEventArgs e)
+        {
+            if (!e.Result.Success)
+            {
+                if (HitEventHandler == null) { return; }
+                HitEventHandler(this, new EventArgs());
+            }
         }
 
         #endregion
@@ -81,6 +91,11 @@ namespace zwg_china.backstage
             //注册弹窗
             new RI().Register();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public event EventHandler HitEventHandler;
 
         #endregion
 

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Windows.Controls;
 
 namespace zwg_china.backstage.framework
@@ -23,5 +24,10 @@ namespace zwg_china.backstage.framework
         /// 源数据
         /// </summary>
         object DataContext { get; set; }
+
+        /// <summary>
+        /// 事件，将用户踢出
+        /// </summary>
+        event EventHandler HitEventHandler;
     }
 }
