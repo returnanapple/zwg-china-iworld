@@ -6,6 +6,9 @@ using zwg_china.client.framework.ReportService;
 
 namespace zwg_china.client.framework
 {
+    /// <summary>
+    /// 统计数据页的视图模型
+    /// </summary>
     public class StatisticsViewModel : ShowListViewModelBase<RersonalAndTeamReportExport, ReportServiceClient>
     {
         #region 私有字段
@@ -32,6 +35,7 @@ namespace zwg_china.client.framework
                 {
                     mod = value;
                     OnPropertyChanged("BeginTime");
+                    Refresh(null);
                 }
             }
         }
@@ -51,6 +55,7 @@ namespace zwg_china.client.framework
                 {
                     tos = value;
                     OnPropertyChanged("EndTime");
+                    Refresh(null);
                 }
             }
         }
