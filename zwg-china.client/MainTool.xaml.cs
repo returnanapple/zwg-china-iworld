@@ -64,7 +64,7 @@ namespace zwg_china.client
             }
             InitializeList();
             LotteryButtons.ItemsSource = lotteryStateCollection;
-            (this.Root.Resources["GetUserInfo"] as Storyboard).Begin();
+            ReflashUserInfo(null, null);
             ShowButtons_fuck();
         }
 
@@ -228,8 +228,7 @@ namespace zwg_china.client
             余额.Text = userInfo.Money.ToString();
             积分.Text = userInfo.Integral.ToString();
             等级.Text = userInfo.Group.Name;
-            Storyboard sb = (Storyboard)sender;
-            sb.Begin();
+            (this.Root.Resources["GetUserInfo"] as Storyboard).Begin();
         }
         #endregion
 
@@ -288,12 +287,5 @@ namespace zwg_china.client
             #endregion
         }
         #endregion
-
-        private void NewButton_Click(object sender, RoutedEventArgs e)
-        {
-            ChildWindow cw = new ChildWindow();
-            cw.Content = "点你妹，玩儿蛋去~";
-            cw.Show();
-        }
     }
 }

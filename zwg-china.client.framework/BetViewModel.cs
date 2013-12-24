@@ -217,8 +217,8 @@ namespace zwg_china.client.framework
                 OnPropertyChanged("Point");
                 SettingExport setting = DataManager.GetValue<SettingExport>(DataKey.IWorld_Client_Setting);
                 double odds = (setting.PayoutBase + this.Point * setting.ConversionRates) / setting.PayoutBase * howToPlay.Odds;
-                odds = Math.Round(odds, 2);
-                this.ContextOfPoinAndOdds = string.Format("{0}/{1}%", odds, this.MaxPoint - this.Point);
+                odds = Math.Round(odds, 0);
+                this.ContextOfPoinAndOdds = string.Format("{0}/{1}%", odds, Math.Round(this.MaxPoint - this.Point, 1));
                 OnPropertyChanged("Pay");
             }
         }
@@ -358,13 +358,13 @@ namespace zwg_china.client.framework
             this.ClearBetCommand = new UniversalCommand(ClearBet);
             this.OpenChasingWindowCommand = new UniversalCommand(OpenChasingWindow);
             this.DoBetWindowCommand = new UniversalCommand(DoBetWindow);
-            this.DoBetWindowCommand.SetCanExecute(false);
 
             this.Tags = new ObservableCollection<TagOfBet>();
             this.HowToPlays = new ObservableCollection<HowToPlayOfBet>();
             this.Seats = new ObservableCollection<SeatOfBet>();
             this.Lotteries = new ObservableCollection<LotteryExport>();
             this.Bettings = new ObservableCollection<BettingExport>();
+            this.BettingWithChasings = new ObservableCollection<BettingWithChasingInfoOfBet>();
 
             lotteryClient.GetLotteriesCompleted += ShowGetLotteriesResult;
             lotteryClient.GetBettingsCompleted += ShowGetBettingsResult;
@@ -591,8 +591,6 @@ namespace zwg_china.client.framework
                 catch (Exception)
                 {
                     ShowError("输入的复式选号序列不合法，请检查输入");
-                    this.DoBetWindowCommand.SetCanExecute(false);
-                    this.ReadyBetCommand.SetCanExecute(true);
                 }
 
                 #endregion
@@ -600,8 +598,6 @@ namespace zwg_china.client.framework
                 this.ContextOfSelected = _text;
                 this.Notes = _betValues.Count;
                 this.Pay = setting.UnitPrice * this.Notes;
-                this.DoBetWindowCommand.SetCanExecute(true);
-                this.ReadyBetCommand.SetCanExecute(false);
 
                 #endregion
             }
@@ -613,8 +609,6 @@ namespace zwg_china.client.framework
                     && this.Seats.Any(s => s.Nums.All(n => n.Selected == false)))
                 {
                     ShowError("选号不合法，请检查你的选号。");
-                    this.DoBetWindowCommand.SetCanExecute(false);
-                    this.ReadyBetCommand.SetCanExecute(true);
                     return;
                 }
                 string _vs = "";
@@ -699,8 +693,6 @@ namespace zwg_china.client.framework
                 this.Notes = _notes;
                 #endregion
                 this.Pay = setting.UnitPrice * this.Notes;
-                this.DoBetWindowCommand.SetCanExecute(true);
-                this.ReadyBetCommand.SetCanExecute(false);
 
 
                 foreach (var seat in this.Seats)
@@ -724,8 +716,6 @@ namespace zwg_china.client.framework
             this.Pay = 0;
             this.Multiple = 1;
             this.BettingWithChasings.Clear();
-            this.DoBetWindowCommand.SetCanExecute(false);
-            this.ReadyBetCommand.SetCanExecute(true);
         }
 
         /// <summary>
@@ -822,8 +812,6 @@ namespace zwg_china.client.framework
             {
                 ShowError(e.Result.Error);
             }
-            this.DoBetWindowCommand.SetCanExecute(false);
-            this.ReadyBetCommand.SetCanExecute(true);
             this.ContextOfMain = "";
             this.Seats.ToList().ForEach(x => x.Clear(null));
             ClearBet(null);

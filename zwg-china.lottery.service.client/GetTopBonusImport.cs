@@ -46,16 +46,19 @@ namespace zwg_china.service.client
             {
                 List<TopBonus> t = new List<TopBonus>();
                 List<TopBonus> t1 = db.VirtualBonuss
+                    .Where(x => x.Sum > 0)
                     .OrderByDescending(x => x.Sum)
                     .Take(this.Notes)
                     .ToList()
                     .ConvertAll(x => new TopBonus(x));
                 List<TopBonus> t2 = db.Bettings
+                    .Where(x => x.Bonus > 0)
                     .OrderByDescending(x => x.Bonus)
                     .Take(this.Notes)
                     .ToList()
                     .ConvertAll(x => new TopBonus(x));
                 List<TopBonus> t3 = db.BettingWithChasings
+                    .Where(x => x.Bonus > 0)
                     .OrderByDescending(x => x.Bonus)
                     .Take(this.Notes)
                     .ToList()
@@ -72,17 +75,20 @@ namespace zwg_china.service.client
                 List<TopBonus> t = new List<TopBonus>();
                 List<TopBonus> t1 = db.VirtualBonuss
                     .Where(x => x.Ticket.Id == ticketId)
+                    .Where(x => x.Sum > 0)
                     .OrderByDescending(x => x.Sum)
                     .Take(this.Notes)
                     .ToList()
                     .ConvertAll(x => new TopBonus(x));
                 List<TopBonus> t2 = db.Bettings
+                    .Where(x => x.Bonus > 0)
                     .Where(x => x.HowToPlay.Tag.Ticket.Id == ticketId)
                     .OrderByDescending(x => x.Bonus)
                     .Take(this.Notes)
                     .ToList()
                     .ConvertAll(x => new TopBonus(x));
                 List<TopBonus> t3 = db.BettingWithChasings
+                    .Where(x => x.Bonus > 0)
                     .Where(x => x.Chasing.HowToPlay.Tag.Ticket.Id == ticketId)
                     .OrderByDescending(x => x.Bonus)
                     .Take(this.Notes)

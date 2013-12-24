@@ -54,6 +54,7 @@ namespace zwg_china.service.backstage
         {
             Author owner = db.Authors.First(x => x.Username == this.Owner);
             RechargeRecord result = new RechargeRecord(owner, Bank.无, "");
+            result.Sum = this.Sum;
             result.Status = RechargeStatus.后台手动添加;
             return result;
         }

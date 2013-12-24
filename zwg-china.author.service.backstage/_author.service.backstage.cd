@@ -12,7 +12,7 @@
   <Class Name="zwg_china.service.backstage.AuthorExport" Collapsed="true">
     <Position X="0.5" Y="13.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAASAEgEAAAAAAgAQQAAAAgAAAkAgCAEAAAAAAAAACE=</HashCode>
+      <HashCode>AAASAEgEAAAAAAgAQQAAQEgAAAkAgCAEAgAAAAAAACE=</HashCode>
       <FileName>AuthorExport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -178,7 +178,7 @@
   <Class Name="zwg_china.service.backstage.SystemBankAccountExport" Collapsed="true">
     <Position X="0.5" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAFAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAACAAAQA=</HashCode>
+      <HashCode>AAFCAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAACAAAQA=</HashCode>
       <FileName>SystemBankAccountExport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -286,7 +286,7 @@
   <Class Name="zwg_china.service.backstage.CreateRechargeRecordImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAACAAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>CreateRechargeRecordImport.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />

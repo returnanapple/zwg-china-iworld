@@ -32,7 +32,7 @@
         <local:NewButton Width="64" Height="43" ImageNameOfBackground="充值"
                          Canvas.Left="73" Canvas.Top="204" Click="ClickAction"/>
         <local:NewButton Width="64" Height="43" ImageNameOfBackground="信封"
-                         Canvas.Left="138" Canvas.Top="204" Click="NewButton_Click"/>
+                         Canvas.Left="138" Canvas.Top="204"/>
 
         <!--中奖排行-->
         <ItemsControl Width="191" Height="162" Canvas.Left="10" Canvas.Top="308" ItemsSource="{Binding TopBonus}">
