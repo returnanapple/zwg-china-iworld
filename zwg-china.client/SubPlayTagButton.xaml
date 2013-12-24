@@ -28,10 +28,10 @@
                                     </VisualState>
                                     <VisualState x:Name="Pressed">
                                         <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextBlockOfContent" Storyboard.TargetProperty="Effect">
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextBlockOfContent" Storyboard.TargetProperty="Foreground">
                                                 <DiscreteObjectKeyFrame KeyTime="0">
                                                     <DiscreteObjectKeyFrame.Value>
-                                                        <DropShadowEffect Color="Red" BlurRadius="5" ShadowDepth="0"/>
+                                                        <SolidColorBrush Color="#FFF92C00"/>
                                                     </DiscreteObjectKeyFrame.Value>
                                                 </DiscreteObjectKeyFrame>
                                             </ObjectAnimationUsingKeyFrames>
@@ -64,16 +64,12 @@
                                     <VisualState x:Name="Unchecked"/>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
-                            <TextBlock x:Name="TextBlockOfContent" Foreground="#FFFDFFCA">
+                            <TextBlock x:Name="TextBlockOfContent" Foreground="White">
                                 <TextBlock.RenderTransform>
                                     <TranslateTransform x:Name="Offset" X="0" Y="0"/>
                                 </TextBlock.RenderTransform>
                             </TextBlock>
-                            <TextBlock x:Name="TextBlock2OfContent" Foreground="#FFFDFFCA" Visibility="Collapsed">
-                                <TextBlock.Effect>
-                                    <DropShadowEffect Color="Red" BlurRadius="5" ShadowDepth="0"/>
-                                </TextBlock.Effect>
-                            </TextBlock>
+                            <TextBlock x:Name="TextBlock2OfContent" Foreground="#FFF92C00" Visibility="Collapsed"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>

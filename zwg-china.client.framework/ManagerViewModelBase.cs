@@ -184,11 +184,12 @@ namespace zwg_china.client.framework
                     LotteryServiceClient client = new LotteryServiceClient();
                     client.GetTopBonusCompleted += (sender, e) =>
                     {
-                        if (e.Result.Success) { return; }
+                        if (!e.Result.Success) { return; }
                         tD.Add(selectedButtonName, e.Result.Info);
                         DataManager.SetValue(DataKey.IWorld_Client_TopBouns, tD);
-                        e.Result.Info.OrderByDescending(x => x.Sum).ToList();
+                        e.Result.Info.OrderByDescending(x => x.Sum).ToList().ForEach(x => this.TopBonus.Add(x));
                     };
+                    client.GetTopBonusAsync(import);
                 }
                 else
                 {

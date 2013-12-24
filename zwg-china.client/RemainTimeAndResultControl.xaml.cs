@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Windows;
@@ -15,10 +16,13 @@ namespace zwg_china.client
 {
     public partial class RemainTimeAndResultControl : UserControl
     {
+        ObservableCollection<string> values = new ObservableCollection<string>();
+
         public RemainTimeAndResultControl()
         {
             InitializeComponent();
-            (this.Resources["FlickerAndDescending"] as Storyboard).Begin();
+            CurrentResultItemsControl.ItemsSource = values;
+            this.Loaded += FlickerAndDescendingCompleted;
         }
 
         #region 依赖属性
@@ -71,39 +75,40 @@ namespace zwg_china.client
             NextIssueTextBlock.Text = NextIssue;
             if (remainTime.TotalSeconds > 0)
             {
-                CurrentIssueTextBlock.Text = "第" + CurrentIssue + "期";
-
-                List<string> sl = CurrentResult.Split(new char[] { ',' }).ToList();
-                sl.ForEach(x => 
+                if (CurrentResult != null)
                 {
-                    x = string.Format("Images/结果{0}.png",x);
-                });
-                CurrentResultItemsControl.ItemsSource = null;
-                CurrentResultItemsControl.ItemsSource = sl;
+                    CurrentIssueTextBlock.Text = "第" + CurrentIssue + "期";
 
-                remainTime = remainTime - new TimeSpan(0, 0, 1);
-                if (remainTime.Hours == 0)
-                {
-                    ThousandImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) / 10)), UriKind.RelativeOrAbsolute));
-                    HundredImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) % 10)), UriKind.RelativeOrAbsolute));
-                    TenImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Seconds) / 10)), UriKind.RelativeOrAbsolute));
-                    OneImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Seconds) % 10)), UriKind.RelativeOrAbsolute));
+                    List<string> sl = CurrentResult.Split(new char[] { ',' }).ToList();
+                    values.Clear();
+                    sl.ForEach(x =>
+                    {
+                        x = string.Format("Images/结果{0}.png", x);
+                        values.Add(x);
+                    });
+
+                    remainTime = remainTime - new TimeSpan(0, 0, 1);
+                    if (remainTime.Hours == 0)
+                    {
+                        ThousandImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) / 10)), UriKind.RelativeOrAbsolute));
+                        HundredImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) % 10)), UriKind.RelativeOrAbsolute));
+                        TenImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Seconds) / 10)), UriKind.RelativeOrAbsolute));
+                        OneImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Seconds) % 10)), UriKind.RelativeOrAbsolute));
+                    }
+                    else
+                    {
+                        ThousandImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Hours) / 10)), UriKind.RelativeOrAbsolute));
+                        HundredImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Hours) % 10)), UriKind.RelativeOrAbsolute));
+                        TenImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) / 10)), UriKind.RelativeOrAbsolute));
+                        OneImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) % 10)), UriKind.RelativeOrAbsolute));
+                    }
                 }
-                else
-                {
-                    ThousandImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Hours) / 10)), UriKind.RelativeOrAbsolute));
-                    HundredImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Hours) % 10)), UriKind.RelativeOrAbsolute));
-                    TenImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) / 10)), UriKind.RelativeOrAbsolute));
-                    OneImage.Source = new BitmapImage(new Uri(string.Format("Images/led{0}.png", Convert.ToString((remainTime.Minutes) % 10)), UriKind.RelativeOrAbsolute));
-                }
-
             }
             else
             {
                 CurrentIssueTextBlock.Text = "正在努力开奖中...";
 
-                List<string> sl = new List<string> 
-                { "Images/结果-.png", "Images/结果-.png", "Images/结果-.png", "Images/结果-.png", "Images/结果-.png" };
+                List<string> sl = new List<string> { "Images/结果-.png", "Images/结果-.png", "Images/结果-.png", "Images/结果-.png", "Images/结果-.png" };
                 CurrentResultItemsControl.ItemsSource = null;
                 CurrentResultItemsControl.ItemsSource = sl;
 
@@ -112,8 +117,8 @@ namespace zwg_china.client
                 TenImage.Source = new BitmapImage(new Uri("Images/led0.png", UriKind.RelativeOrAbsolute));
                 OneImage.Source = new BitmapImage(new Uri("Images/led0.png", UriKind.RelativeOrAbsolute));
             }
-            (this.Resources["FlickerAndDescending"] as Storyboard).Begin();
-
+            Storyboard sb = (Storyboard)this.Resources["FlickerAndDescending"];
+            sb.Begin();
         }
         #endregion
     }
