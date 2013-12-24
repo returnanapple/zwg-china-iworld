@@ -147,6 +147,18 @@
     <Compile Include="RechargeRecordsPage_TableRow.xaml.cs">
       <DependentUpon>RechargeRecordsPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RedeemPlansPage_CreateWindow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedeemPlansPage_EditWindow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedeemPlansPage_FullWindow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedeemPlansPage_TableRow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RersonalAndTeamReportsPage_FullWindow.xaml.cs">
       <DependentUpon>RersonalAndTeamReportsPage_FullWindow.xaml</DependentUpon>
     </Compile>
@@ -406,6 +418,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RechargeRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

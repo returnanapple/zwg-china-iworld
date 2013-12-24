@@ -136,6 +136,9 @@
     <Compile Include="RechargeRecordsPage.xaml.cs">
       <DependentUpon>RechargeRecordsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RedeemPlansPage.xaml.cs">
+      <DependentUpon>RedeemPlansPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RersonalAndTeamReportsPage.xaml.cs">
       <DependentUpon>RersonalAndTeamReportsPage.xaml</DependentUpon>
     </Compile>
@@ -234,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RechargeRecordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

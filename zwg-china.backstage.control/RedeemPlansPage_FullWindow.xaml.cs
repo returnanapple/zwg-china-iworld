@@ -13,30 +13,30 @@ using zwg_china.backstage.framework.ActicityService;
 
 namespace zwg_china.backstage.control
 {
-    public partial class RewardForRegisterPlansPage_FullWindow : ChildWindow
+    public partial class RedeemPlansPage_FullWindow : ChildWindow
     {
-        public RewardForRegisterPlansPage_FullWindow()
+        public RedeemPlansPage_FullWindow()
         {
             InitializeComponent();
         }
 
         #region 附加内容
 
-        public RewardForRegisterPlanExport State
+        public RedeemPlanExport State
         {
-            get { return (RewardForRegisterPlanExport)GetValue(StateProperty); }
+            get { return (RedeemPlanExport)GetValue(StateProperty); }
             set { SetValue(StateProperty, value); }
         }
         public static readonly DependencyProperty StateProperty =
-            DependencyProperty.Register("State", typeof(RewardForRegisterPlanExport), typeof(RewardForRegisterPlansPage_FullWindow)
+            DependencyProperty.Register("State", typeof(RedeemPlanExport), typeof(RedeemPlansPage_FullWindow)
             , new PropertyMetadata(null, (d, e) =>
             {
-                RewardForRegisterPlansPage_FullWindow tool = (RewardForRegisterPlansPage_FullWindow)d;
-                RewardForRegisterPlanExport data = (RewardForRegisterPlanExport)e.NewValue;
+                RedeemPlansPage_FullWindow tool = (RedeemPlansPage_FullWindow)d;
+                RedeemPlanExport data = (RedeemPlanExport)e.NewValue;
                 tool.text_Title.Text = data.Title;
                 tool.text_Description.Text = data.Description;
-                tool.text_PrizeType.Text = data.PrizeType.ToString();
-                tool.text_Sum.Text = data.Sum.ToString("0.00");
+                tool.text_Integral.Text = data.Integral.ToString();
+                tool.text_Money.Text = data.Money.ToString("0.00");
                 tool.text_BeginTime.Text = data.BeginTime.ToLongDateString();
                 tool.text_EndTime.Text = data.EndTime.ToLongDateString();
                 tool.text_Hide.Text = data.Hide == false ? "否" : "是";

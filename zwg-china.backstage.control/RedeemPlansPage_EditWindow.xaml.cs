@@ -15,68 +15,72 @@ using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.control
 {
-    public partial class RewardForRegisterPlansPage_EditWindow : ChildWindow
+    public partial class RedeemPlansPage_EditWindow : ChildWindow
     {
-        public RewardForRegisterPlansPage_EditWindow()
+        public RedeemPlansPage_EditWindow()
         {
             InitializeComponent();
         }
 
         #region 错误信息
+
         public string Error
         {
             get { return (string)GetValue(ErrorProperty); }
             set { SetValue(ErrorProperty, value); }
         }
         public static readonly DependencyProperty ErrorProperty =
-            DependencyProperty.Register("Error", typeof(string), typeof(RewardForRegisterPlansPage_EditWindow), new PropertyMetadata(null));
+            DependencyProperty.Register("Error", typeof(string), typeof(RedeemPlansPage_EditWindow), new PropertyMetadata(null));
+
         #endregion
 
         #region 附加内容
 
-
-        public RewardForRegisterPlanExport State
+        public RedeemPlanExport State
         {
-            get { return (RewardForRegisterPlanExport)GetValue(StateProperty); }
+            get { return (RedeemPlanExport)GetValue(StateProperty); }
             set { SetValue(StateProperty, value); }
         }
         public static readonly DependencyProperty StateProperty =
-            DependencyProperty.Register("State", typeof(RewardForRegisterPlanExport), typeof(RewardForRegisterPlansPage_EditWindow), new PropertyMetadata(null, (d, e) =>
+            DependencyProperty.Register("State", typeof(RedeemPlanExport), typeof(RedeemPlansPage_EditWindow)
+            , new PropertyMetadata(null, (d, e) =>
             {
-                RewardForRegisterPlansPage_EditWindow tool = (RewardForRegisterPlansPage_EditWindow)d;
-                RewardForRegisterPlanExport data = (RewardForRegisterPlanExport)e.NewValue;
+                RedeemPlansPage_EditWindow tool = (RedeemPlansPage_EditWindow)d;
+                RedeemPlanExport data = (RedeemPlanExport)e.NewValue;
                 tool.input_Title.Text = data.Title;
                 tool.input_Description.Text = data.Description;
-                tool.input_PrizeType.SelectedIndex = data.PrizeType.ToString() == "积分" ? 0 : 1;
+                tool.input_Integral.Text = data.Integral.ToString();
                 tool.input_Hide.SelectedIndex = data.Hide == false ? 0 : 1;
                 tool.input_BeginTime.SelectedDate = data.BeginTime;
                 tool.input_EndTime.SelectedDate = data.EndTime;
-                tool.input_Sum.Text = data.Sum.ToString("0.00");
+                tool.input_Money.Text = data.Money.ToString("0.00");
 
             }));
+
         #endregion
 
         #region 修改
+
         private void Edit(object sender, RoutedEventArgs e)
         {
-            EditRewardForRegisterPlanImport import = new EditRewardForRegisterPlanImport
+            EditRedeemPlanImport import = new EditRedeemPlanImport
             {
                 Id = this.State.Id,
                 Title = input_Title.Text,
                 Description = input_Description.Text,
-                PrizeType = (PrizesOfActivityType)Enum.Parse(typeof(PrizesOfActivityType), (input_PrizeType.SelectedItem as TextBlock).Text, false),
-                Sum = Math.Round(Convert.ToDouble(input_Sum.Text), 2),
+                Integral = Convert.ToInt32(this.input_Integral.Text),
+                Money = Math.Round(Convert.ToDouble(this.input_Money.Text), 2),
                 BeginTime = (DateTime)input_BeginTime.SelectedDate,
                 EndTime = (DateTime)input_EndTime.SelectedDate,
                 Hide = input_Hide.SelectedIndex == 0 ? false : true,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
             ActicityServiceClient client = new ActicityServiceClient();
-            client.EditRewardForRegisterPlanCompleted += ShowEditRewardForRegisterPlanResult;
-            client.EditRewardForRegisterPlanAsync(import);
+            client.EditRedeemPlanCompleted += ShowEditResult;
+            client.EditRedeemPlanAsync(import);
         }
 
-        void ShowEditRewardForRegisterPlanResult(object sender, EditRewardForRegisterPlanCompletedEventArgs e)
+        void ShowEditResult(object sender, EditRedeemPlanCompletedEventArgs e)
         {
             if (!e.Result.Success)
             {
@@ -84,6 +88,7 @@ namespace zwg_china.backstage.control
             }
             this.DialogResult = true;
         }
+
         #endregion
 
         #region 取消
