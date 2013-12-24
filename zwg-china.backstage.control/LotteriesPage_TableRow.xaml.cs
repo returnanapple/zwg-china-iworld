@@ -42,7 +42,9 @@ namespace zwg_china.backstage.control
                 tool.text_Issue.Text = data.Issue;
                 tool.text_Values.Text = data.Values;
                 tool.text_Sources.Text = data.Sources.ToString();
-                tool.text_CreatedTime.Text = data.CreatedTime.ToLongDateString();
+                tool.text_CreatedTime.Text = string.Format("{0} {1}"
+                    , data.CreatedTime.ToLongDateString()
+                    , data.CreatedTime.ToShortTimeString());
             }));
 
         #endregion

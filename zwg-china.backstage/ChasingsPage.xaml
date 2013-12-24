@@ -1,4 +1,4 @@
-﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="zwg_china.backstage.LotteriesPage"
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="zwg_china.backstage.ChasingsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,6 +12,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="_Css.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
+            <local:BoolToStringConverter x:Key="BoolToStringConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -35,7 +36,7 @@
                 <TextBlock Text="你想要做点什么？" Canvas.Top="43"/>
             </Canvas>
             <!--以下是导航按键-->
-            <StackPanel Name="menu_fir" Orientation="Horizontal" Height="120">
+            <StackPanel Orientation="Horizontal" Height="155">
                 <StackPanel.Resources>
                     <Style TargetType="local:MenuButton">
                         <Setter Property="VerticalAlignment" Value="Top"/>
@@ -47,15 +48,6 @@
                 <local:MenuButton Text="查看投注记录" Icon="Files" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看追号记录" Icon="Files" Command="{Binding JumpCommand}"/>
                 <local:MenuButton Text="查看虚拟排行" Icon="Files" Command="{Binding JumpCommand}"/>
-            </StackPanel>
-            <StackPanel Name="menu_sec" Orientation="Horizontal" Height="155">
-                <StackPanel.Resources>
-                    <Style TargetType="local:MenuButton">
-                        <Setter Property="VerticalAlignment" Value="Top"/>
-                        <Setter Property="Margin" Value="0,0,10,0"/>
-                    </Style>
-                </StackPanel.Resources>
-                <local:MenuButton Text="添加开奖记录" Icon="Pen" Click="Create"/>
             </StackPanel>
             <!--以上是导航按键-->
 
@@ -113,7 +105,7 @@
                             <ColumnDefinition Width="160"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="根据彩票名称搜索："/>
+                        <TextBlock Text="根据用户名搜索："/>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
                             <StackPanel.Resources>
                                 <Style TargetType="Button" BasedOn="{StaticResource SubmitButton}">
@@ -124,7 +116,7 @@
                                     <Setter Property="Margin" Value="10,0,0,0"/>
                                 </Style>
                             </StackPanel.Resources>
-                            <TextBox Margin="10,0" Text="{Binding KeywordForTicketName,Mode=TwoWay}">
+                            <TextBox Margin="10,0" Text="{Binding KeywordForUsername,Mode=TwoWay}">
                                 <i:Interaction.Triggers>
                                     <local:KeepTextRealTime/>
                                 </i:Interaction.Triggers>
@@ -140,11 +132,11 @@
             <!--以下是列表-->
             <local:ContentBox Width="800">
                 <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding RefreshCommand}"
-                                 ColumnDefinitions="彩票:120,期号:130,开奖号码:140,来源:120,时间:240"
+                                 ColumnDefinitions="方案:200,起始期号:130,用户:100,金额:120,状态:100,操作:100"
                                  ItemsSource="{Binding List}" Width="750">
                     <local:TableTool.ItemTemplate>
                         <DataTemplate>
-                            <local:LotteriesPage_TableRow State="{Binding}" />
+                            <local:ChasingsPage_TableRow State="{Binding}" />
                         </DataTemplate>
                     </local:TableTool.ItemTemplate>
                 </local:TableTool>

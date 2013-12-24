@@ -177,7 +177,7 @@
       <xs:element minOccurs="0" name="Pay" type="xs:double" />
       <xs:element minOccurs="0" name="Points" type="xs:double" />
       <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" type="q4:BettingStatus" />
-      <xs:element minOccurs="0" name="values" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Values" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BettingExport" nillable="true" type="tns:BettingExport" />

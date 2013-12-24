@@ -105,6 +105,9 @@
     <Compile Include="BulletinsPage.xaml.cs">
       <DependentUpon>BulletinsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChasingsPage.xaml.cs">
+      <DependentUpon>ChasingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CommissionRecordsPage.xaml.cs">
       <DependentUpon>CommissionRecordsPage.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,9 @@
     </Compile>
     <Compile Include="TicketSettingPage.xaml.cs">
       <DependentUpon>TicketSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage.xaml.cs">
+      <DependentUpon>TicketsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="TransferRecordsPage.xaml.cs">
       <DependentUpon>TransferRecordsPage.xaml</DependentUpon>
@@ -203,6 +209,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChasingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CommissionRecordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -248,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TicketSettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

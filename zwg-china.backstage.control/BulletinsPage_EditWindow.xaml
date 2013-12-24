@@ -27,7 +27,7 @@
             <TextBlock Text="暂停：" Canvas.Left="40" Canvas.Top="190"/>
 
             <TextBox Name="input_Title" Canvas.Left="81" Canvas.Top="12" Width="200"/>
-            <TextBox Name="input_Context" Canvas.Left="81" Canvas.Top="42" Height="80" Width="200" TextWrapping="Wrap"/>
+            <TextBox Name="input_Context" Canvas.Left="81" Canvas.Top="42" Height="80" Width="200" TextWrapping="Wrap" AcceptsReturn="True"/>
             <controls:DatePicker Name="input_BeginTime" Height="23" Canvas.Left="81" Canvas.Top="127" Width="227"/>
             <controls:DatePicker Name="input_EndTime" Height="23" Canvas.Left="81" Canvas.Top="155" Width="227"/>
             <ComboBox Name="input_Hide" Canvas.Left="81" Canvas.Top="183" Width="70" Height="25" SelectedIndex="0">

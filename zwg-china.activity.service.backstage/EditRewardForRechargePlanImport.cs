@@ -52,6 +52,7 @@ namespace zwg_china.service.backstage
         /// <summary>
         /// 明细
         /// </summary>
+        [DataMember]
         public List<RewardForRechargePlanDetailImport> Details { get; set; }
 
         /// <summary>

@@ -148,11 +148,11 @@
             <!--以下是列表-->
             <local:ContentBox Width="800">
                 <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding RefreshCommand}"
-                                 ColumnDefinitions="彩票:120,期号:130,开奖号码:230,来源:120,时间:150"
+                                 ColumnDefinitions="方案:230,期号:100,用户:100,金额:120,状态:100,操作:100"
                                  ItemsSource="{Binding List}" Width="750">
                     <local:TableTool.ItemTemplate>
                         <DataTemplate>
-                            <local:LotteriesPage_TableRow State="{Binding}" />
+                            <local:BettingsPage_TableRow State="{Binding}" />
                         </DataTemplate>
                     </local:TableTool.ItemTemplate>
                 </local:TableTool>

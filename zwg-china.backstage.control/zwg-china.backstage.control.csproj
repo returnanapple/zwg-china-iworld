@@ -83,6 +83,12 @@
     <Compile Include="AdministratorsPage_TableRow.xaml.cs">
       <DependentUpon>AdministratorsPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BettingsPage_FullWindow.xaml.cs">
+      <DependentUpon>BettingsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BettingsPage_TableRow.xaml.cs">
+      <DependentUpon>BettingsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BulletinsPage_CreateWindow.xaml.cs">
       <DependentUpon>BulletinsPage_CreateWindow.xaml</DependentUpon>
     </Compile>
@@ -94,6 +100,15 @@
     </Compile>
     <Compile Include="BulletinsPage_TableRow.xaml.cs">
       <DependentUpon>BulletinsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChasingsPage_BettingWithChasingExport_ShowRow.xaml.cs">
+      <DependentUpon>ChasingsPage_BettingWithChasingExport_ShowRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChasingsPage_FullWindow.xaml.cs">
+      <DependentUpon>ChasingsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChasingsPage_TableRow.xaml.cs">
+      <DependentUpon>ChasingsPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="class\IJumpButton.cs" />
     <Compile Include="class\IMenuButton.cs" />
@@ -191,6 +206,18 @@
     </Compile>
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_EditWindow.xaml.cs">
+      <DependentUpon>TicketsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_LotteryTime_EditRow.xaml.cs">
+      <DependentUpon>TicketsPage_LotteryTime_EditRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_PlayTag_EditRow.xaml.cs">
+      <DependentUpon>TicketsPage_PlayTag_EditRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_TableRow.xaml.cs">
+      <DependentUpon>TicketsPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="tool\CopyWhenClick.cs" />
     <Compile Include="CoverFloorTool.xaml.cs">
@@ -317,6 +344,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BettingsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BettingsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BulletinsPage_CreateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -330,6 +365,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BulletinsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChasingsPage_BettingWithChasingExport_ShowRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChasingsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChasingsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -450,6 +497,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SystemQuotasPage_TableRow_Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_LotteryTime_EditRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_PlayTag_EditRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

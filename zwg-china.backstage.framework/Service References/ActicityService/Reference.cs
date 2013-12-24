@@ -752,6 +752,8 @@ namespace zwg_china.backstage.framework.ActicityService {
         
         private string DescriptionField;
         
+        private System.Collections.Generic.List<zwg_china.backstage.framework.ActicityService.RewardForRechargePlanDetailImport> DetailsField;
+        
         private System.DateTime EndTimeField;
         
         private bool HideField;
@@ -786,6 +788,19 @@ namespace zwg_china.backstage.framework.ActicityService {
                 if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
                     this.DescriptionField = value;
                     this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<zwg_china.backstage.framework.ActicityService.RewardForRechargePlanDetailImport> Details {
+            get {
+                return this.DetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DetailsField, value) != true)) {
+                    this.DetailsField = value;
+                    this.RaisePropertyChanged("Details");
                 }
             }
         }
