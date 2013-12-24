@@ -162,6 +162,9 @@
     <Compile Include="RewardForRechargePlansPage_FullWindow.xaml.cs">
       <DependentUpon>RewardForRechargePlansPage_FullWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RewardForRechargePlansPage_TableRow.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RewardForRechargePlansPage_TableRowOfDetails.xaml.cs">
       <DependentUpon>RewardForRechargePlansPage_TableRowOfDetails.xaml</DependentUpon>
     </Compile>
@@ -441,6 +444,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RewardForRechargePlansPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

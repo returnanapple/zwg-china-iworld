@@ -94,12 +94,39 @@ namespace zwg_china.backstage.control
                 Description = input_Description.Text,
                 PlanType = (RewardPlanType)Enum.Parse(typeof(RewardPlanType), (input_PlanType.SelectedItem as TextBlock).Text, false),
                 Timescale = (TimescaleOfActivity)Enum.Parse(typeof(TimescaleOfActivity), (input_Timescale.SelectedItem as TextBlock).Text, false),
-                Details
+                Details = details.ToList(),
                 BeginTime = (DateTime)input_BeginTime.SelectedDate,
                 EndTime = (DateTime)input_EndTime.SelectedDate,
                 Hide = input_Hide.SelectedIndex == 0 ? false : true,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token,
             };
+            ActicityServiceClient client = new ActicityServiceClient();
+            client.EditRewardForRechargePlanCompleted += ShowEditRewardForRechargePlanResult;
+            client.EditRewardForRechargePlanAsync(import);
+        }
+
+        void ShowEditRewardForRechargePlanResult(object sender, EditRewardForRechargePlanCompletedEventArgs e)
+        {
+            if (!e.Result.Success)
+            {
+                this.Error = e.Result.Error;
+            }
+            this.DialogResult = true;
+        }
+        #endregion
+
+        #region 创建一条充值奖励明细
+        private void AddADetail(object sender, RoutedEventArgs e)
+        {
+            details.Add(new RewardForRechargePlanDetailImport { PrizeType = PrizesOfActivityType.积分, WaysToReward = WaysToRewardOfActivity.百分比 });
+        }
+        #endregion
+
+        #region 删除充值明细
+        private void DelADetail(object sender, EventArgs e)
+        {
+            RewardForRechargePlanDetailImport item = (RewardForRechargePlanDetailImport)(sender as RewardForRechargePlansPage_TableRowOfDetails).DataContext;
+            details.Remove(item);
         }
         #endregion
 

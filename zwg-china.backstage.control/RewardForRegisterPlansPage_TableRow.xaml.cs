@@ -92,7 +92,7 @@ namespace zwg_china.backstage.control
             if (fw.Error == null)
             {
                 ErrorPrompt ep = new ErrorPrompt();
-                ep.State = "编辑用户组成功";
+                ep.State = "编辑注册奖励成功";
                 ep.Closed += OnRefresh;
                 ep.Show();
             }

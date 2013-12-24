@@ -50,15 +50,15 @@
                 <ItemsControl x:Name="input_Details">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <!--<local:RewardForRechargePlansPage_TableRowOfDetails DeleteEventHandler="DelADetail" Margin="0,0,0,10"/>-->
+                            <local:RewardForRechargePlansPage_TableRowOfDetails DeleteEventHandler="DelADetail" Margin="0,0,0,10"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
-            <!--<HyperlinkButton Content="添  加" Canvas.Left="133" Canvas.Top="250" Click="AddADetail"/>-->
+            <HyperlinkButton Content="添  加" Canvas.Left="133" Canvas.Top="250" Click="AddADetail"/>
         </Canvas>
-        <!--<Button Content="修  改" Grid.Column="1" Margin="0,10,10,0" Click="CreateRewardForRechargePlan"/>
-        <Button Content="取  消" Grid.Column="1" Margin="0,40,10,10" Click="Cancel"/>-->
+        <Button Content="修  改" Grid.Column="1" Margin="0,10,10,0" Click="Edit"/>
+        <Button Content="取  消" Grid.Column="1" Margin="0,40,10,10" Click="Cancel"/>
 
     </Grid>
 </controls:ChildWindow>
