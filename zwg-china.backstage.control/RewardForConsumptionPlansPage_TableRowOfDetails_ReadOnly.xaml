@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="zwg_china.backstage.control.RewardForConsumptionPlansPage_TableRowOfDetails_ReadOnly"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="_CssOfTableRow.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Width="350" Height="135" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="110"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FFF7F5F5">
+        </Grid>
+        <Border Grid.Row="1" BorderThickness="0,1,0,1" BorderBrush="#FFD1CCC7">
+            <Canvas>
+                <TextBlock Text="最低充值：" Canvas.Top="15" Canvas.Left="16" Margin="0"/>
+                <TextBlock Text="最高充值：" Canvas.Left="190" Canvas.Top="15" Margin="0"/>
+                <TextBlock Text="奖品类型：" Canvas.Left="16" Canvas.Top="43" Margin="0"/>
+                <TextBlock Text="数额：" Canvas.Left="214" Canvas.Top="43" Margin="0"/>
+                <TextBlock Text="返还方式：" Canvas.Left="16" Canvas.Top="70" Margin="0"/>
+
+                <TextBlock Canvas.Left="81" Canvas.Top="15" Text="{Binding LowerRecharge}" Margin="0"/>
+                <TextBlock Canvas.Left="255" Canvas.Top="15" Text="{Binding CapsRecharge}" Margin="0"/>
+                <TextBlock x:Name="input_PrizeType" Canvas.Left="81" Canvas.Top="43" Text="{Binding PrizeType}" Margin="0"/>
+                <TextBlock Canvas.Left="255" Canvas.Top="43" Text="{Binding Sum}" Margin="0"/>
+                <TextBlock x:Name="input_WaysToReward" Canvas.Left="81" Canvas.Top="70" Text="{Binding WaysToReward}" Margin="0"/>
+            </Canvas>
+        </Border>
+    </Grid>
+</UserControl>
