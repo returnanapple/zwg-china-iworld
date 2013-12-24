@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using zwg_china.client.framework;
+using zwg_china.client.framework.LotteryService;
 using zwg_china.client.framework.AuthorPushService;
 
 namespace zwg_china.client
@@ -100,9 +101,11 @@ namespace zwg_china.client
             DataManager.SetValue(DataKey.IWorld_Client_UnReadNotices, unreadNotices);
         }
 
-        public void CallWhenLottery(List<LotteryTicketExport> tickets)
+        public void CallWhenLottery(List<zwg_china.client.framework.AuthorPushService.LotteryTicketExport> tickets)
         {
-            List<LotteryTicketExport> _tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
+
+            List<zwg_china.client.framework.LotteryService.LotteryTicketExport> _tickets
+                = DataManager.GetValue<List<zwg_china.client.framework.LotteryService.LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
             _tickets.ForEach(x =>
                 {
                     var t = tickets.FirstOrDefault(c => c.Name == x.Name);

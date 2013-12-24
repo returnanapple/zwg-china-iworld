@@ -83,7 +83,7 @@
 
         <!--选号区-->
         <ItemsControl ItemsSource="{Binding Seats}" Width="656" Height="177" 
-                      Visibility="{Binding IsDuplex, ConverterParameter=单式, Converter={StaticResource HowToPlayConverter}}"
+                      Visibility="{Binding IsDuplex, ConverterParameter=复式, Converter={StaticResource HowToPlayConverter}}"
                       Canvas.Left="35" Canvas.Top="209">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
@@ -92,7 +92,7 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
         <ScrollViewer Width="498" Height="159" Style="{StaticResource NewScrollViewerStyle}" Padding="12,0"
-                      Visibility="{Binding IsDuplex, ConverterParameter=复式, Converter={StaticResource HowToPlayConverter}}"
+                      Visibility="{Binding IsDuplex, ConverterParameter=单式, Converter={StaticResource HowToPlayConverter}}"
                       VerticalScrollBarVisibility="Visible" Background="#FF560A28"
                       Canvas.Left="40" Canvas.Top="219">
             <local:NoBorderTextBox Style="{StaticResource TextBoxInScrollViewer}"/>

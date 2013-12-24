@@ -390,15 +390,12 @@ namespace zwg_china.client.framework
             {
                 List<LotteryTicketExport> _tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
                 LotteryTicketExport _ticket = tickets.First(x => x.Name == ticketName);
-                if (this.Ticket.Issue != _ticket.Issue)
-                {
-                    this.Ticket.Issue = _ticket.Issue;
-                    this.Ticket.NextIssue = _ticket.NextIssue;
-                    this.Ticket.NextLotteryTime = _ticket.NextLotteryTime;
-                    this.Ticket.LotteryValues = _ticket.LotteryValues;
-                    RefreshLotteryInfo();
-                    RefreshLotteries();
-                }
+                this.Ticket.Issue = _ticket.Issue;
+                this.Ticket.NextIssue = _ticket.NextIssue;
+                this.Ticket.NextLotteryTime = _ticket.NextLotteryTime;
+                this.Ticket.LotteryValues = _ticket.LotteryValues;
+                RefreshLotteryInfo();
+                RefreshLotteries();
 
                 Storyboard storyboard = (Storyboard)sender;
                 storyboard.Begin();

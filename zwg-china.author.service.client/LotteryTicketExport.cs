@@ -66,6 +66,7 @@ namespace zwg_china.service.client
             this.Issue = model.Issue;
             this.NextIssue = model.NextIssue;
             this.NextLotteryTime = model.NextLotteryTime;
+            this.LotteryValues = model.LotteryValues;
         }
 
         #endregion

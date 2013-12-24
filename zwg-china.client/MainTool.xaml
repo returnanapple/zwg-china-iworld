@@ -8,7 +8,7 @@
     Width="1024" Height="700" Loaded="LoadedAction">
     <Canvas x:Name="Root" Width="1024" Height="700">
         <Canvas.Resources>
-            <Storyboard x:Key="GetUserInfo" Duration="0:0:1" RepeatBehavior="Forever" Completed="ReflashUserInfo"/>
+            <Storyboard x:Key="GetUserInfo" Duration="0:0:1" Completed="ReflashUserInfo"/>
             <Style TargetType="TextBlock" x:Key="TextStyleOfUserInfo">
                 <Setter Property="FontSize" Value="12"/>
                 <Setter Property="Foreground" Value="White"/>
@@ -32,7 +32,7 @@
         <local:NewButton Width="64" Height="43" ImageNameOfBackground="充值"
                          Canvas.Left="73" Canvas.Top="204" Click="ClickAction"/>
         <local:NewButton Width="64" Height="43" ImageNameOfBackground="信封"
-                         Canvas.Left="138" Canvas.Top="204"/>
+                         Canvas.Left="138" Canvas.Top="204" Click="NewButton_Click"/>
 
         <!--中奖排行-->
         <ItemsControl Width="191" Height="162" Canvas.Left="10" Canvas.Top="308" ItemsSource="{Binding TopBonus}">
@@ -95,7 +95,7 @@
 
         <!--彩票按键-->
         <Grid x:Name="PanelOfLotteryButton" Width="809" Height="29"
-              Canvas.Left="213" Canvas.Top="106" Visibility="Collapsed" Canvas.ZIndex="1">
+              Canvas.Left="213" Canvas.Top="106" Canvas.ZIndex="1">
             <Grid.Background>
                 <ImageBrush Stretch="None" ImageSource="Images/LotteryButtonsBg.png"/>
             </Grid.Background>
