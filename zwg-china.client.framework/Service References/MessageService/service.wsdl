@@ -46,9 +46,9 @@
   </wsdl:binding>
   <wsdl:service name="MessageService">
     <wsdl:port name="NetTcpBinding_IMessageService" binding="tns:NetTcpBinding_IMessageService">
-      <soap12:address location="net.tcp://192.168.1.102:4511/MessageService" />
+      <soap12:address location="net.tcp://192.168.1.130:4511/MessageService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.1.102:4511/MessageService</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.130:4511/MessageService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

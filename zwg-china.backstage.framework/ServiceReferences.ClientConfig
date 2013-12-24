@@ -37,29 +37,29 @@
             </customBinding>
         </bindings>
         <client>
-            <endpoint address="net.tcp://192.168.1.102:4512/AdministratorService"
+            <endpoint address="net.tcp://192.168.1.130:4512/AdministratorService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_IAdministratorService"
                 contract="AdministratorService.IAdministratorService" name="NetTcpBinding_IAdministratorService" />
-            <endpoint address="net.tcp://192.168.1.102:4512/AuthorService"
+            <endpoint address="net.tcp://192.168.1.130:4512/AuthorService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_IAuthorService"
                 contract="AuthorService.IAuthorService" name="NetTcpBinding_IAuthorService" />
-            <endpoint address="net.tcp://192.168.1.102:4512/RecordOfAuthorService"
+            <endpoint address="net.tcp://192.168.1.130:4512/RecordOfAuthorService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_IRecordOfAuthorService"
                 contract="RecordOfAuthorService.IRecordOfAuthorService" name="NetTcpBinding_IRecordOfAuthorService" />
-            <endpoint address="net.tcp://192.168.1.102:4512/SettingOfAuthorService"
+            <endpoint address="net.tcp://192.168.1.130:4512/SettingOfAuthorService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_ISettingOfAuthorService"
                 contract="SettingOfAuthorService.ISettingOfAuthorService"
                 name="NetTcpBinding_ISettingOfAuthorService" />
-            <endpoint address="net.tcp://192.168.1.102:4512/LotteryService"
+            <endpoint address="net.tcp://192.168.1.130:4512/LotteryService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_ILotteryService"
                 contract="LotteryService.ILotteryService" name="NetTcpBinding_ILotteryService" />
-            <endpoint address="net.tcp://192.168.1.102:4512/MessageService"
+            <endpoint address="net.tcp://192.168.1.130:4512/MessageService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_IMessageService"
                 contract="MessageService.IMessageService" name="NetTcpBinding_IMessageService" />
-            <endpoint address="net.tcp://192.168.1.102:4512/ReportService"
+            <endpoint address="net.tcp://192.168.1.130:4512/ReportService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_IReportService"
                 contract="ReportService.IReportService" name="NetTcpBinding_IReportService" />
-            <endpoint address="net.tcp://192.168.1.102:4512/ActicityService"
+            <endpoint address="net.tcp://192.168.1.130:4512/ActicityService"
                 binding="customBinding" bindingConfiguration="NetTcpBinding_IActicityService"
                 contract="ActicityService.IActicityService" name="NetTcpBinding_IActicityService" />
         </client>

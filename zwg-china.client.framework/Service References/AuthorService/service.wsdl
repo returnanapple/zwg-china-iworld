@@ -294,9 +294,9 @@
   </wsdl:binding>
   <wsdl:service name="AuthorService">
     <wsdl:port name="NetTcpBinding_IAuthorService" binding="tns:NetTcpBinding_IAuthorService">
-      <soap12:address location="net.tcp://192.168.1.102:4511/AuthorService" />
+      <soap12:address location="net.tcp://192.168.1.130:4511/AuthorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.1.102:4511/AuthorService</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.130:4511/AuthorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

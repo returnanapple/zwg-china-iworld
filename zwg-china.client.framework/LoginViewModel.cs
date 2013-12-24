@@ -261,7 +261,8 @@ namespace zwg_china.client.framework
             if (e.Result.Success)
             {
                 DataManager.SetValue(DataKey.IWorld_Client_UnReadNotices, new List<NoticeExport>());
-                ViewModelService.JumpTo(Page.彩票投注);
+                List<LotteryService.LotteryTicketExport> tickets = DataManager.GetValue<List<LotteryService.LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
+                ViewModelService.JumpTo(Page.彩票投注, tickets.First().Name);
             }
             else
             {

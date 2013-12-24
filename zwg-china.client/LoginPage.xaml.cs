@@ -13,7 +13,7 @@ using zwg_china.client.framework;
 
 namespace zwg_china.client
 {
-    [View(Page.登陆,IsDefault=true)]
+    [View(Page.登陆, IsDefault = true)]
     public partial class LoginPage : UserControl
     {
         public LoginPage()
@@ -33,12 +33,9 @@ namespace zwg_china.client
 
         private void LoadedAction(object sender, RoutedEventArgs e)
         {
-            if (App.Current.IsRunningOutOfBrowser)
-            {
-                App.Current.MainWindow.Width = 960;
-                App.Current.MainWindow.Height = 730;
-            }
-            
+            if (!App.Current.IsRunningOutOfBrowser) { return; }
+            App.Current.MainWindow.Width = 960;
+            App.Current.MainWindow.Height = 730;
         }
 
     }

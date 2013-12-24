@@ -65,9 +65,9 @@
   </wsdl:binding>
   <wsdl:service name="ReportService">
     <wsdl:port name="NetTcpBinding_IReportService" binding="tns:NetTcpBinding_IReportService">
-      <soap12:address location="net.tcp://192.168.1.102:4512/ReportService" />
+      <soap12:address location="net.tcp://192.168.1.130:4512/ReportService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.1.102:4512/ReportService</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/ReportService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

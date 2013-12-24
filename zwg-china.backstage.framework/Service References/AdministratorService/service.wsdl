@@ -331,9 +331,9 @@
   </wsdl:binding>
   <wsdl:service name="AdministratorService">
     <wsdl:port name="NetTcpBinding_IAdministratorService" binding="tns:NetTcpBinding_IAdministratorService">
-      <soap12:address location="net.tcp://192.168.1.102:4512/AdministratorService" />
+      <soap12:address location="net.tcp://192.168.1.130:4512/AdministratorService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.1.102:4512/AdministratorService</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/AdministratorService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

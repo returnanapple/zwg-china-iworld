@@ -275,9 +275,9 @@
   </wsdl:binding>
   <wsdl:service name="LotteryService">
     <wsdl:port name="NetTcpBinding_ILotteryService" binding="tns:NetTcpBinding_ILotteryService">
-      <soap12:address location="net.tcp://192.168.1.102:4512/LotteryService" />
+      <soap12:address location="net.tcp://192.168.1.130:4512/LotteryService" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://192.168.1.102:4512/LotteryService</wsa10:Address>
+        <wsa10:Address>net.tcp://192.168.1.130:4512/LotteryService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

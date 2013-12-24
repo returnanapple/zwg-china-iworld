@@ -20,14 +20,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://192.168.1.102:4512/ReportService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://192.168.1.130:4512/ReportService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f50e24a6-dc59-4fbc-8959-0c1314b3190c" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ReportService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7003ad74-b215-48ab-82c9-1acf7b406573" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ReportService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="fe83c587-85b5-45ec-9e31-1369f7b0485b" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ReportService/mex" />
-    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="c7564a5c-705d-4f21-b5bd-fc39bfcb7f84" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ReportService/mex" />
-    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="53e647a0-6cd5-44c4-bd8d-f61faadf883e" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ReportService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f50e24a6-dc59-4fbc-8959-0c1314b3190c" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ReportService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7003ad74-b215-48ab-82c9-1acf7b406573" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ReportService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="fe83c587-85b5-45ec-9e31-1369f7b0485b" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ReportService/mex" />
+    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="c7564a5c-705d-4f21-b5bd-fc39bfcb7f84" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ReportService/mex" />
+    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="53e647a0-6cd5-44c4-bd8d-f61faadf883e" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ReportService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

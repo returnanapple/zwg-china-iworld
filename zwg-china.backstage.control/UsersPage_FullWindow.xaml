@@ -37,7 +37,7 @@
             <TextBlock Name="text_Status" Text="正常" Canvas.Left="99" Canvas.Top="63"/>
             <TextBlock Name="text_CreatedTime" Text="2013年12月20日" Canvas.Left="99" Canvas.Top="82"/>
             <TextBlock Name="text_LastLoginTime" Text="2013年12月20日" Canvas.Left="99" Canvas.Top="101"/>
-            <TextBlock Name="text_LstLoginIp" Text="192.168.1.102" Canvas.Left="99" Canvas.Top="120"/>
+            <TextBlock Name="text_LstLoginIp" Text="192.168.1.130" Canvas.Left="99" Canvas.Top="120"/>
             <TextBlock Name="text_LastLoginAddress" Text="广东省 广州市" Canvas.Left="99" Canvas.Top="139"/>
             <TextBox Name="text_parent" Text="magicvr" Canvas.Left="99" Canvas.Top="158" IsReadOnly="True" Width="120"/>
 

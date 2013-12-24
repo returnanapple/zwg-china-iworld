@@ -10,9 +10,6 @@ using zwg_china.client.framework.LotteryService;
 
 namespace zwg_china.client.framework
 {
-    /// <summary>
-    /// 投注页的视图模型
-    /// </summary>
     public class BetViewModel : ManagerViewModelBase
     {
         #region 私有字段
@@ -376,10 +373,10 @@ namespace zwg_china.client.framework
             List<LotteryTicketExport> tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
             this.Ticket = tickets.First(x => x.Name == ticketName);
             this.Ticket.Tags.ForEach(x =>
-                {
-                    TagOfBet tag = new TagOfBet(x.Name, new UniversalCommand(SelectTag));
-                    this.Tags.Add(tag);
-                });
+            {
+                TagOfBet tag = new TagOfBet(x.Name, new UniversalCommand(SelectTag));
+                this.Tags.Add(tag);
+            });
             this.Tags.First().Selected = true;
             AuthorExport userInfo = DataManager.GetValue<AuthorExport>(DataKey.IWorld_Client_UserInfo);
             this.maxPoinN = userInfo.PlayInfo.Rebate_Normal;
@@ -390,22 +387,22 @@ namespace zwg_china.client.framework
             Storyboard s = new Storyboard();
             s.Duration = new System.Windows.Duration(new TimeSpan(0, 0, 1));
             s.Completed += (sender, e) =>
+            {
+                List<LotteryTicketExport> _tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
+                LotteryTicketExport _ticket = tickets.First(x => x.Name == ticketName);
+                if (this.Ticket.Issue != _ticket.Issue)
                 {
-                    List<LotteryTicketExport> _tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
-                    LotteryTicketExport _ticket = tickets.First(x => x.Name == ticketName);
-                    if (this.Ticket.Issue != _ticket.Issue)
-                    {
-                        this.Ticket.Issue = _ticket.Issue;
-                        this.Ticket.NextIssue = _ticket.NextIssue;
-                        this.Ticket.NextLotteryTime = _ticket.NextLotteryTime;
-                        this.Ticket.LotteryValues = _ticket.LotteryValues;
-                        RefreshLotteryInfo();
-                        RefreshLotteries();
-                    }
+                    this.Ticket.Issue = _ticket.Issue;
+                    this.Ticket.NextIssue = _ticket.NextIssue;
+                    this.Ticket.NextLotteryTime = _ticket.NextLotteryTime;
+                    this.Ticket.LotteryValues = _ticket.LotteryValues;
+                    RefreshLotteryInfo();
+                    RefreshLotteries();
+                }
 
-                    Storyboard storyboard = (Storyboard)sender;
-                    storyboard.Begin();
-                };
+                Storyboard storyboard = (Storyboard)sender;
+                storyboard.Begin();
+            };
             s.Begin();
         }
 
@@ -423,10 +420,10 @@ namespace zwg_china.client.framework
             PlayTagExport tag = this.Ticket.Tags.First(x => x.Name == tagName);
             this.HowToPlays.Clear();
             tag.HowToPlays.ForEach(x =>
-                {
-                    HowToPlayOfBet howToPlay = new HowToPlayOfBet(x.Name, new UniversalCommand(SelectHowToPlay));
-                    this.HowToPlays.Add(howToPlay);
-                });
+            {
+                HowToPlayOfBet howToPlay = new HowToPlayOfBet(x.Name, new UniversalCommand(SelectHowToPlay));
+                this.HowToPlays.Add(howToPlay);
+            });
             this.HowToPlays.First().Selected = true;
         }
 

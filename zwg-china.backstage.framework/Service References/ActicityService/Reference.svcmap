@@ -20,15 +20,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="net.tcp://192.168.1.102:4512/ActicityService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://192.168.1.130:4512/ActicityService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e93427fd-11ce-4c39-a8ba-f8b156a543e4" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ActicityService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="74211146-ecfe-4881-8fe3-ed866b829342" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ActicityService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="0ff059af-cad6-4307-9ba1-9b196bb301ca" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ActicityService/mex" />
-    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="ebd689b2-35e1-4912-8405-2bbd33fae100" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ActicityService/mex" />
-    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="4aa0c30e-5039-44d4-bf87-83e91c1beb94" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ActicityService/mex" />
-    <MetadataFile FileName="zwg_china.model.xsd" MetadataType="Schema" ID="8a4d2bea-a774-468d-a5ae-e8c3645a3996" SourceId="1" SourceUrl="net.tcp://192.168.1.102:4512/ActicityService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e93427fd-11ce-4c39-a8ba-f8b156a543e4" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ActicityService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="74211146-ecfe-4881-8fe3-ed866b829342" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ActicityService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="0ff059af-cad6-4307-9ba1-9b196bb301ca" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ActicityService/mex" />
+    <MetadataFile FileName="zwg_china.service.backstage.xsd" MetadataType="Schema" ID="ebd689b2-35e1-4912-8405-2bbd33fae100" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ActicityService/mex" />
+    <MetadataFile FileName="zwg_china.service.xsd" MetadataType="Schema" ID="4aa0c30e-5039-44d4-bf87-83e91c1beb94" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ActicityService/mex" />
+    <MetadataFile FileName="zwg_china.model.xsd" MetadataType="Schema" ID="8a4d2bea-a774-468d-a5ae-e8c3645a3996" SourceId="1" SourceUrl="net.tcp://192.168.1.130:4512/ActicityService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
