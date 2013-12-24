@@ -179,15 +179,21 @@ namespace zwg_china.client
             if (this.PageIndex > 1
                 && this.TotalPage > 1)
             {
-                HyperlinkButton hb1 = new HyperlinkButton();
-                hb1.Content = "首页";
-                hb1.Click += JumpToFirsPage;
-                _page.Children.Add(hb1);
+                NewButton nb1 = new NewButton();
+                nb1.ImageNameOfContent = "首页OfTable";
+                nb1.ImageNameOfBackground = "PageButton";
+                nb1.Width = 77;
+                nb1.Height = 36;
+                nb1.Click += JumpToFirsPage;
+                _page.Children.Add(nb1);
 
-                HyperlinkButton hb2 = new HyperlinkButton();
-                hb2.Content = "上一页";
-                hb2.Click += JumpToPreviousPage;
-                _page.Children.Add(hb2);
+                NewButton nb2 = new NewButton();
+                nb2.ImageNameOfContent = "上一页OfTable";
+                nb2.ImageNameOfBackground = "PageButton";
+                nb2.Width = 77;
+                nb2.Height = 36;
+                nb2.Click += JumpToPreviousPage;
+                _page.Children.Add(nb2);
             }
             else
             {
@@ -215,15 +221,21 @@ namespace zwg_china.client
             if (this.PageIndex < this.TotalPage
                 && this.PageIndex > 0)
             {
-                HyperlinkButton hb1 = new HyperlinkButton();
-                hb1.Content = "下一页";
-                hb1.Click += JumpToNextPage;
-                _page.Children.Add(hb1);
+                NewButton nb1 = new NewButton();
+                nb1.ImageNameOfContent = "下一页OfTable";
+                nb1.ImageNameOfBackground = "PageButton";
+                nb1.Width = 77;
+                nb1.Height = 36;
+                nb1.Click += JumpToNextPage;
+                _page.Children.Add(nb1);
 
-                HyperlinkButton hb2 = new HyperlinkButton();
-                hb2.Content = "尾页";
-                hb2.Click += JumpToLastPage;
-                _page.Children.Add(hb2);
+                NewButton nb2 = new NewButton();
+                nb2.ImageNameOfContent = "尾页OfTable";
+                nb2.ImageNameOfBackground = "PageButton";
+                nb2.Width = 77;
+                nb2.Height = 36;
+                nb2.Click += JumpToLastPage;
+                _page.Children.Add(nb2);
             }
             else
             {

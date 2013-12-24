@@ -87,6 +87,9 @@
     <Compile Include="CoverFloorTool.xaml.cs">
       <DependentUpon>CoverFloorTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ErrorPrompt.xaml.cs">
+      <DependentUpon>ErrorPrompt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,9 @@
     <Compile Include="NoBorderTextBox.xaml.cs">
       <DependentUpon>NoBorderTextBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NormalPrompt.xaml.cs">
+      <DependentUpon>NormalPrompt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PlayTagButton.xaml.cs">
       <DependentUpon>PlayTagButton.xaml</DependentUpon>
     </Compile>
@@ -135,9 +141,6 @@
     </Compile>
     <Compile Include="ShowAWinningTool.xaml.cs">
       <DependentUpon>ShowAWinningTool.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ShowMessage_ChildWindow.xaml.cs">
-      <DependentUpon>ShowMessage_ChildWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="StatisticsPage.xaml.cs">
       <DependentUpon>StatisticsPage.xaml</DependentUpon>
@@ -181,6 +184,10 @@
     <Page Include="css.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ErrorPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
@@ -226,6 +233,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NormalPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PlayTagButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,10 +254,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ShowAWinningTool.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ShowMessage_ChildWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -303,6 +310,14 @@
     <Resource Include="Images\确定_Normal.png" />
     <Resource Include="Images\确定_Pressed.png" />
     <Resource Include="Images\Warning_ChildWindowBg.png" />
+    <Resource Include="Images\TableHeadBg.png" />
+    <Resource Include="Images\PageButtonBg_MouseOver.png" />
+    <Resource Include="Images\PageButtonBg_Normal.png" />
+    <Resource Include="Images\PageButtonBg_Pressed.png" />
+    <Resource Include="Images\上一页OfTable.png" />
+    <Resource Include="Images\下一页OfTable.png" />
+    <Resource Include="Images\尾页OfTable.png" />
+    <Resource Include="Images\首页OfTable.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />

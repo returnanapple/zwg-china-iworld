@@ -90,9 +90,9 @@ namespace zwg_china.client
                         {
                             if (__e.Result.Success == false)
                             {
-                                ShowMessage_ChildWindow smcw = new ShowMessage_ChildWindow();
-                                smcw.Text = __e.Result.Error;
-                                smcw.Show();
+                                //ShowMessage_ChildWindow smcw = new ShowMessage_ChildWindow();
+                                //smcw.Text = __e.Result.Error;
+                                //smcw.Show();
                             }
                         };
                         client.RecallBettingAsync(new RecallBettingImport { BettingId = BetInfo.Id });

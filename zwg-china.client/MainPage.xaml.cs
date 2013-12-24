@@ -128,7 +128,11 @@ namespace zwg_china.client
         #region DragMove事件
         private void DragMove(object sender, MouseButtonEventArgs e)
         {
-            App.Current.MainWindow.DragMove();
+            if (App.Current.IsRunningOutOfBrowser)
+            {
+                App.Current.MainWindow.DragMove();
+            }
+            
         }
         #endregion
     }
