@@ -43,7 +43,7 @@ namespace zwg_china.service.backstage
         /// 开奖号码
         /// </summary>
         [DataMember]
-        public string values { get; set; }
+        public string Values { get; set; }
 
         /// <summary>
         /// 创建时间
@@ -73,7 +73,7 @@ namespace zwg_china.service.backstage
             this.Sources = model.Sources;
             this.TicketId = model.Ticket.Id;
             this.Ticket = model.Ticket.Name;
-            this.values = string.Join(",", model.Seats.ConvertAll(x => x.Value));
+            this.Values = string.Join(",", model.Seats.ConvertAll(x => x.Value));
             this.CreatedTime = model.CreatedTime;
         }
 

@@ -47,7 +47,13 @@ namespace zwg_china.backstage.framework
         public static void Initialize(IMainPage root)
         {
             Root = root;
+            Root.HitEventHandler += Hit;
             Root.RegisterViews();
+            JumpToDefaultPage();
+        }
+
+        static void Hit(object sender, EventArgs e)
+        {
             JumpToDefaultPage();
         }
 

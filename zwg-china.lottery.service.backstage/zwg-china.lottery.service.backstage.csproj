@@ -65,15 +65,18 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicLotteryTicketExport.cs" />
     <Compile Include="BettingExport.cs" />
     <Compile Include="BettingWithChasingExport.cs" />
     <Compile Include="ChasingExport.cs" />
+    <Compile Include="CreateLotteryImport.cs" />
     <Compile Include="CreateVirtualBonusImport.cs" />
     <Compile Include="EditHowToPlayImport.cs" />
     <Compile Include="EditLotteryTicketImport.cs" />
     <Compile Include="EditLotteryTimeImport.cs" />
     <Compile Include="EditPlayTagImport.cs" />
     <Compile Include="EditVirtualBonusImport.cs" />
+    <Compile Include="GetBasicLotteryTicketsImport.cs" />
     <Compile Include="GetBettingsImport.cs" />
     <Compile Include="GetChasingsImport.cs" />
     <Compile Include="GetLotteriesImport.cs" />

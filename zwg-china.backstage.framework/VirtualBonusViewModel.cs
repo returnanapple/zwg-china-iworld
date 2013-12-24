@@ -30,8 +30,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForTicketName == value) { return; }
-                keywordForTicketName = value;
+                keywordForTicketName = value == "" ? null : value;
                 OnPropertyChanged("KeywordForTicketName");
+                Refresh(null);
             }
         }
 

@@ -11,7 +11,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="_CssOfTableRow.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-            <loc:IntConverter x:Key="IntConverter"/>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -22,6 +21,6 @@
         </Grid.RowDefinitions>
         <TextBlock Text="{Binding Rebate}"/>
         <TextBox Grid.Row="1" Width="55" HorizontalAlignment="Left" Margin="10,0,10,0" 
-                 Text="{Binding Sum,Mode=TwoWay,Converter={StaticResource IntConverter}}"/>
+                 Text="{Binding Sum,Mode=TwoWay}"/>
     </Grid>
 </UserControl>

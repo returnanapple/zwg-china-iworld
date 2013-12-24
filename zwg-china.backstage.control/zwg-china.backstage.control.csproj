@@ -54,6 +54,8 @@
       <HintPath>$(TargetFrameworkDirectory)System.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="system.windows.controls.datavisualization.toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
@@ -81,6 +83,12 @@
     <Compile Include="AdministratorsPage_TableRow.xaml.cs">
       <DependentUpon>AdministratorsPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BettingsPage_FullWindow.xaml.cs">
+      <DependentUpon>BettingsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BettingsPage_TableRow.xaml.cs">
+      <DependentUpon>BettingsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BulletinsPage_CreateWindow.xaml.cs">
       <DependentUpon>BulletinsPage_CreateWindow.xaml</DependentUpon>
     </Compile>
@@ -93,23 +101,45 @@
     <Compile Include="BulletinsPage_TableRow.xaml.cs">
       <DependentUpon>BulletinsPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChasingsPage_BettingWithChasingExport_ShowRow.xaml.cs">
+      <DependentUpon>ChasingsPage_BettingWithChasingExport_ShowRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChasingsPage_FullWindow.xaml.cs">
+      <DependentUpon>ChasingsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChasingsPage_TableRow.xaml.cs">
+      <DependentUpon>ChasingsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="class\IJumpButton.cs" />
     <Compile Include="class\IMenuButton.cs" />
     <Compile Include="class\MenuSelectedInfo.cs" />
+    <Compile Include="CommissionRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>CommissionRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ContentBox.xaml.cs">
       <DependentUpon>ContentBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="converter\DateTimeConverter.cs" />
+    <Compile Include="DividendRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>DividendRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditAccounTool.xaml.cs">
       <DependentUpon>EditAccounTool.xaml</DependentUpon>
     </Compile>
     <Compile Include="FilterBox.xaml.cs">
       <DependentUpon>FilterBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="converter\IntConverter.cs" />
     <Compile Include="converter\BoolToStringConverter.cs" />
+    <Compile Include="LotteriesPage_CreateWindow.xaml.cs">
+      <DependentUpon>LotteriesPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LotteriesPage_TableRow.xaml.cs">
+      <DependentUpon>LotteriesPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MoneyChangeRecordsPage_TableRow.xaml.cs">
       <DependentUpon>MoneyChangeRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RebateRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>RebateRecordsPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RechargeRecordsPage_CreateWindow.xaml.cs">
       <DependentUpon>RechargeRecordsPage_CreateWindow.xaml</DependentUpon>
@@ -117,11 +147,71 @@
     <Compile Include="RechargeRecordsPage_TableRow.xaml.cs">
       <DependentUpon>RechargeRecordsPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RedeemPlansPage_CreateWindow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedeemPlansPage_EditWindow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedeemPlansPage_FullWindow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedeemPlansPage_TableRow.xaml.cs">
+      <DependentUpon>RedeemPlansPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RersonalAndTeamReportsPage_FullWindow.xaml.cs">
       <DependentUpon>RersonalAndTeamReportsPage_FullWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RersonalAndTeamReportsPage_TableRow.xaml.cs">
       <DependentUpon>RersonalAndTeamReportsPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForConsumptionPlansPage_CreateWindow.xaml.cs">
+      <DependentUpon>RewardForConsumptionPlansPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForConsumptionPlansPage_EditWindow.xaml.cs">
+      <DependentUpon>RewardForConsumptionPlansPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForConsumptionPlansPage_FullWindow.xaml.cs">
+      <DependentUpon>RewardForConsumptionPlansPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForConsumptionPlansPage_TableRow.xaml.cs">
+      <DependentUpon>RewardForConsumptionPlansPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForConsumptionPlansPage_TableRowOfDetails.xaml.cs">
+      <DependentUpon>RewardForConsumptionPlansPage_TableRowOfDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForConsumptionPlansPage_TableRowOfDetails_ReadOnly.xaml.cs">
+      <DependentUpon>RewardForConsumptionPlansPage_TableRowOfDetails_ReadOnly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRechargePlansPage_CreateWindow.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRechargePlansPage_EditWindow.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRechargePlansPage_FullWindow.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRechargePlansPage_TableRow.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRechargePlansPage_TableRowOfDetails.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage_TableRowOfDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRechargePlansPage_TableRowOfDetails_ReadOnly.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage_TableRowOfDetails_ReadOnly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage_CreateWndow.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage_CreateWndow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage_EditWindow.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage_FullWindow.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage_TableRow.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SiteReportsPage_FullWindow.xaml.cs">
       <DependentUpon>SiteReportsPage_FullWindow.xaml</DependentUpon>
@@ -149,6 +239,18 @@
     </Compile>
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_EditWindow.xaml.cs">
+      <DependentUpon>TicketsPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_LotteryTime_EditRow.xaml.cs">
+      <DependentUpon>TicketsPage_LotteryTime_EditRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_PlayTag_EditRow.xaml.cs">
+      <DependentUpon>TicketsPage_PlayTag_EditRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsPage_TableRow.xaml.cs">
+      <DependentUpon>TicketsPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="tool\CopyWhenClick.cs" />
     <Compile Include="CoverFloorTool.xaml.cs">
@@ -224,6 +326,21 @@
     <Compile Include="UsersPage_TableRow.xaml.cs">
       <DependentUpon>UsersPage_TableRow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VirtualBonusPage_CreateWindow.xaml.cs">
+      <DependentUpon>VirtualBonusPage_CreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualBonusPage_EditWindow.xaml.cs">
+      <DependentUpon>VirtualBonusPage_EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualBonusPage_TableRow.xaml.cs">
+      <DependentUpon>VirtualBonusPage_TableRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawalsRecordsPage_FullWindow.xaml.cs">
+      <DependentUpon>WithdrawalsRecordsPage_FullWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawalsRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>WithdrawalsRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\zwg-china.backstage.framework\zwg-china.backstage.framework.csproj">
@@ -260,6 +377,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BettingsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BettingsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BulletinsPage_CreateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -276,6 +401,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChasingsPage_BettingWithChasingExport_ShowRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChasingsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChasingsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommissionRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ContentBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -284,11 +425,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="DividendRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FilterBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="LotteriesPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LotteriesPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MoneyChangeRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RebateRecordsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -300,11 +457,91 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RedeemPlansPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedeemPlansPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RersonalAndTeamReportsPage_FullWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RersonalAndTeamReportsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForConsumptionPlansPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForConsumptionPlansPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForConsumptionPlansPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForConsumptionPlansPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForConsumptionPlansPage_TableRowOfDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForConsumptionPlansPage_TableRowOfDetails_ReadOnly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage_TableRowOfDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage_TableRowOfDetails_ReadOnly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage_CreateWndow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -337,6 +574,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SystemQuotasPage_TableRow_Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_LotteryTime_EditRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_PlayTag_EditRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -373,6 +626,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UsersPage_SetExtraQuotasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualBonusPage_CreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualBonusPage_EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualBonusPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WithdrawalsRecordsPage_FullWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WithdrawalsRecordsPage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

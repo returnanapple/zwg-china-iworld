@@ -49,6 +49,12 @@
   <wsdl:message name="ILotteryService_GetChasings_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetChasingsResponse" />
   </wsdl:message>
+  <wsdl:message name="ILotteryService_GetBasicLotteryTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasicLotteryTickets" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_GetBasicLotteryTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasicLotteryTicketsResponse" />
+  </wsdl:message>
   <wsdl:message name="ILotteryService_GetSettingOfLottery_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSettingOfLottery" />
   </wsdl:message>
@@ -60,6 +66,12 @@
   </wsdl:message>
   <wsdl:message name="ILotteryService_SetSettingOfLottery_OutputMessage">
     <wsdl:part name="parameters" element="tns:SetSettingOfLotteryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_CreateLottery_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLottery" />
+  </wsdl:message>
+  <wsdl:message name="ILotteryService_CreateLottery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLotteryResponse" />
   </wsdl:message>
   <wsdl:message name="ILotteryService_EditLotteryTicket_InputMessage">
     <wsdl:part name="parameters" element="tns:EditLotteryTicket" />
@@ -106,6 +118,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetChasings" message="tns:ILotteryService_GetChasings_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetChasingsResponse" message="tns:ILotteryService_GetChasings_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetBasicLotteryTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetBasicLotteryTickets" message="tns:ILotteryService_GetBasicLotteryTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetBasicLotteryTicketsResponse" message="tns:ILotteryService_GetBasicLotteryTickets_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetSettingOfLottery">
       <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/GetSettingOfLottery" message="tns:ILotteryService_GetSettingOfLottery_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/GetSettingOfLotteryResponse" message="tns:ILotteryService_GetSettingOfLottery_OutputMessage" />
@@ -113,6 +129,10 @@
     <wsdl:operation name="SetSettingOfLottery">
       <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/SetSettingOfLottery" message="tns:ILotteryService_SetSettingOfLottery_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/SetSettingOfLotteryResponse" message="tns:ILotteryService_SetSettingOfLottery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLottery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/CreateLottery" message="tns:ILotteryService_CreateLottery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILotteryService/CreateLotteryResponse" message="tns:ILotteryService_CreateLottery_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="EditLotteryTicket">
       <wsdl:input wsaw:Action="http://tempuri.org/ILotteryService/EditLotteryTicket" message="tns:ILotteryService_EditLotteryTicket_InputMessage" />
@@ -180,6 +200,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetBasicLotteryTickets">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetBasicLotteryTickets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetSettingOfLottery">
       <soap12:operation soapAction="http://tempuri.org/ILotteryService/GetSettingOfLottery" style="document" />
       <wsdl:input>
@@ -191,6 +220,15 @@
     </wsdl:operation>
     <wsdl:operation name="SetSettingOfLottery">
       <soap12:operation soapAction="http://tempuri.org/ILotteryService/SetSettingOfLottery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLottery">
+      <soap12:operation soapAction="http://tempuri.org/ILotteryService/CreateLottery" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -19,8 +19,7 @@
           <StartWorkingDirectory>
           </StartWorkingDirectory>
           <ShowWebRefOnDebugPrompt>True</ShowWebRefOnDebugPrompt>
-          <OutOfBrowserProjectToDebug>
-          </OutOfBrowserProjectToDebug>
+          <OutOfBrowserProjectToDebug>zwg-china.backstage.Web</OutOfBrowserProjectToDebug>
           <ShowRiaSvcsOnDebugPrompt>True</ShowRiaSvcsOnDebugPrompt>
         </SilverlightProjectProperties>
       </FlavorProperties>

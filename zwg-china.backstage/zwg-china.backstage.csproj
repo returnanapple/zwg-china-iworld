@@ -26,7 +26,7 @@
     <ValidateXaml>true</ValidateXaml>
     <EnableOutOfBrowser>false</EnableOutOfBrowser>
     <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
-    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <UsePlatformExtensions>true</UsePlatformExtensions>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
     <LinkedServerProject>
     </LinkedServerProject>
@@ -60,6 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.NetTcp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -70,8 +71,11 @@
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Toolkit.Internals, Version=4.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
@@ -95,14 +99,29 @@
     <Compile Include="BasicSettingPage.xaml.cs">
       <DependentUpon>BasicSettingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BettingsPage.xaml.cs">
+      <DependentUpon>BettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BulletinsPage.xaml.cs">
       <DependentUpon>BulletinsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChasingsPage.xaml.cs">
+      <DependentUpon>ChasingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommissionRecordsPage.xaml.cs">
+      <DependentUpon>CommissionRecordsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DividendRecordsPage.xaml.cs">
+      <DependentUpon>DividendRecordsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="IndexPage.xaml.cs">
       <DependentUpon>IndexPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LotteriesPage.xaml.cs">
+      <DependentUpon>LotteriesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -111,11 +130,26 @@
       <DependentUpon>MoneyChangeRecordsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebateRecordsPage.xaml.cs">
+      <DependentUpon>RebateRecordsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RechargeRecordsPage.xaml.cs">
       <DependentUpon>RechargeRecordsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RedeemPlansPage.xaml.cs">
+      <DependentUpon>RedeemPlansPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RersonalAndTeamReportsPage.xaml.cs">
       <DependentUpon>RersonalAndTeamReportsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForConsumptionPlansPage.xaml.cs">
+      <DependentUpon>RewardForConsumptionPlansPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRechargePlansPage.xaml.cs">
+      <DependentUpon>RewardForRechargePlansPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RewardForRegisterPlansPage.xaml.cs">
+      <DependentUpon>RewardForRegisterPlansPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SiteReportsPage.xaml.cs">
       <DependentUpon>SiteReportsPage.xaml</DependentUpon>
@@ -129,6 +163,9 @@
     <Compile Include="TicketSettingPage.xaml.cs">
       <DependentUpon>TicketSettingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TicketsPage.xaml.cs">
+      <DependentUpon>TicketsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TransferRecordsPage.xaml.cs">
       <DependentUpon>TransferRecordsPage.xaml</DependentUpon>
     </Compile>
@@ -140,6 +177,12 @@
     </Compile>
     <Compile Include="UsersPage.xaml.cs">
       <DependentUpon>UsersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualBonusPage.xaml.cs">
+      <DependentUpon>VirtualBonusPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawalsRecordsPage.xaml.cs">
+      <DependentUpon>WithdrawalsRecordsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -167,7 +210,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BulletinsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChasingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommissionRecordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DividendRecordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LotteriesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,11 +238,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RebateRecordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RechargeRecordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RedeemPlansPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RersonalAndTeamReportsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForConsumptionPlansPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRechargePlansPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RewardForRegisterPlansPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,6 +282,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TicketsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TransferRecordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -208,6 +295,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserLandingRecordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VirtualBonusPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WithdrawalsRecordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,6 +329,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\OutOfBrowserSettings.xml" />
     <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>

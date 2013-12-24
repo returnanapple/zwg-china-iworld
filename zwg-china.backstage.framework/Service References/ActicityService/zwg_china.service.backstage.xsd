@@ -470,6 +470,7 @@
         <xs:sequence>
           <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
           <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForConsumptionPlanDetailImport" />
           <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
           <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
           <xs:element minOccurs="0" name="Id" type="xs:int" />
@@ -530,6 +531,7 @@
         <xs:sequence>
           <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
           <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfRewardForRechargePlanDetailImport" />
           <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
           <xs:element minOccurs="0" name="Hide" type="xs:boolean" />
           <xs:element minOccurs="0" name="Id" type="xs:int" />

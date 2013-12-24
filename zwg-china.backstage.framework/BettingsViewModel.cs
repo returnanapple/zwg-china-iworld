@@ -18,7 +18,7 @@ namespace zwg_china.backstage.framework
         int? ownerId = null;
         DateTime? beginTime = null;
         DateTime? endTime = null;
-        BettingStatus? status = null;
+        string status = "all";
 
         #endregion
 
@@ -33,8 +33,9 @@ namespace zwg_china.backstage.framework
             set
             {
                 if (keywordForUsername == value) { return; }
-                keywordForUsername = value;
+                keywordForUsername = value == "" ? null : value;
                 OnPropertyChanged("KeywordForUsername");
+                Refresh(null);
             }
         }
 
@@ -63,6 +64,7 @@ namespace zwg_china.backstage.framework
                 if (beginTime == value) { return; }
                 beginTime = value;
                 OnPropertyChanged("BeginTime");
+                Refresh(null);
             }
         }
 
@@ -77,13 +79,14 @@ namespace zwg_china.backstage.framework
                 if (endTime == value) { return; }
                 endTime = value;
                 OnPropertyChanged("EndTime");
+                Refresh(null);
             }
         }
 
         /// <summary>
         /// 状态
         /// </summary>
-        public BettingStatus? Status
+        public string Status
         {
             get { return status; }
             set
@@ -111,13 +114,18 @@ namespace zwg_china.backstage.framework
         protected override void Refresh(object obj)
         {
             int _pageIndex = obj == null ? this.PageIndex : Convert.ToInt32(obj);
+            BettingStatus? status = null;
+            if (this.Status != "all")
+            {
+                status = (BettingStatus)Enum.Parse(typeof(BettingStatus), this.Status, false);
+            }
             GetBettingsImport import = new GetBettingsImport
             {
                 KeywordForUsername = this.KeywordForUsername,
                 OwnerId = this.OwnerId,
                 BeginTime = this.BeginTime,
                 EndTime = this.EndTime,
-                Status = this.Status,
+                Status = status,
                 PageIndex = _pageIndex,
                 Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
@@ -130,7 +138,7 @@ namespace zwg_china.backstage.framework
             this.OwnerId = null;
             this.BeginTime = null;
             this.EndTime = null;
-            this.status = null;
+            this.Status = "all";
             this.PageIndex = 1;
             Refresh(null);
         }

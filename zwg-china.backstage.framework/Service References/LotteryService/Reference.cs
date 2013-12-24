@@ -19,6 +19,8 @@ namespace zwg_china.backstage.framework.LotteryService {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ImportBase", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.ImportBaseOfLottery))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.CreateLotteryImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.EditLotteryTicketImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.CreateVirtualBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.EditVirtualBonusImport))]
@@ -64,11 +66,70 @@ namespace zwg_china.backstage.framework.LotteryService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ImportBaseOfLottery", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.CreateLotteryImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.EditLotteryTicketImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.CreateVirtualBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.EditVirtualBonusImport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.RemoveVirtualBonusImport))]
     public partial class ImportBaseOfLottery : zwg_china.backstage.framework.LotteryService.ImportBase {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetBasicLotteryTicketsImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
+    public partial class GetBasicLotteryTicketsImport : zwg_china.backstage.framework.LotteryService.ImportBaseOfLottery {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CreateLotteryImport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
+    public partial class CreateLotteryImport : zwg_china.backstage.framework.LotteryService.ImportBaseOfLottery {
+        
+        private string IssueField;
+        
+        private int TicketIdField;
+        
+        private string ValuesField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Issue {
+            get {
+                return this.IssueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IssueField, value) != true)) {
+                    this.IssueField = value;
+                    this.RaisePropertyChanged("Issue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TicketId {
+            get {
+                return this.TicketIdField;
+            }
+            set {
+                if ((this.TicketIdField.Equals(value) != true)) {
+                    this.TicketIdField = value;
+                    this.RaisePropertyChanged("TicketId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Values {
+            get {
+                return this.ValuesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValuesField, value) != true)) {
+                    this.ValuesField = value;
+                    this.RaisePropertyChanged("Values");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -891,6 +952,7 @@ namespace zwg_china.backstage.framework.LotteryService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.PageResultOfVirtualBonusExportnxyTI_PDx))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.PageResultOfBettingExportnxyTI_PDx))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.PageResultOfChasingExportnxyTI_PDx))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.NormalResultOfSettingOfLotteryExportnxyTI_PDx))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(zwg_china.backstage.framework.LotteryService.PageResultOfLotteryTicketExportnxyTI_PDx))]
     public partial class NormalResult : object, System.ComponentModel.INotifyPropertyChanged {
@@ -1261,6 +1323,27 @@ namespace zwg_china.backstage.framework.LotteryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
+    public partial class NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx : zwg_china.backstage.framework.LotteryService.NormalResult {
+        
+        private System.Collections.Generic.List<zwg_china.backstage.framework.LotteryService.BasicLotteryTicketExport> InfoField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<zwg_china.backstage.framework.LotteryService.BasicLotteryTicketExport> Info {
+            get {
+                return this.InfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InfoField, value) != true)) {
+                    this.InfoField = value;
+                    this.RaisePropertyChanged("Info");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="NormalResultOfSettingOfLotteryExportnxyTI_PDx", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service")]
     public partial class NormalResultOfSettingOfLotteryExportnxyTI_PDx : zwg_china.backstage.framework.LotteryService.NormalResult {
         
@@ -1541,7 +1624,7 @@ namespace zwg_china.backstage.framework.LotteryService {
         
         private int TicketIdField;
         
-        private string valuesField;
+        private string ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime CreatedTime {
@@ -1609,14 +1692,14 @@ namespace zwg_china.backstage.framework.LotteryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string values {
+        public string Values {
             get {
-                return this.valuesField;
+                return this.ValuesField;
             }
             set {
-                if ((object.ReferenceEquals(this.valuesField, value) != true)) {
-                    this.valuesField = value;
-                    this.RaisePropertyChanged("values");
+                if ((object.ReferenceEquals(this.ValuesField, value) != true)) {
+                    this.ValuesField = value;
+                    this.RaisePropertyChanged("Values");
                 }
             }
         }
@@ -1748,7 +1831,7 @@ namespace zwg_china.backstage.framework.LotteryService {
         
         private zwg_china.backstage.framework.LotteryService.BettingStatus StatusField;
         
-        private string valuesField;
+        private string ValuesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public double Bonus {
@@ -1920,14 +2003,14 @@ namespace zwg_china.backstage.framework.LotteryService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string values {
+        public string Values {
             get {
-                return this.valuesField;
+                return this.ValuesField;
             }
             set {
-                if ((object.ReferenceEquals(this.valuesField, value) != true)) {
-                    this.valuesField = value;
-                    this.RaisePropertyChanged("values");
+                if ((object.ReferenceEquals(this.ValuesField, value) != true)) {
+                    this.ValuesField = value;
+                    this.RaisePropertyChanged("Values");
                 }
             }
         }
@@ -2309,6 +2392,51 @@ namespace zwg_china.backstage.framework.LotteryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BasicLotteryTicketExport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
+    public partial class BasicLotteryTicketExport : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int IdField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SettingOfLotteryExport", Namespace="http://schemas.datacontract.org/2004/07/zwg_china.service.backstage")]
     public partial class SettingOfLotteryExport : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -2681,6 +2809,11 @@ namespace zwg_china.backstage.framework.LotteryService {
         
         zwg_china.backstage.framework.LotteryService.PageResultOfChasingExportnxyTI_PDx EndGetChasings(System.IAsyncResult result);
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ILotteryService/GetBasicLotteryTickets", ReplyAction="http://tempuri.org/ILotteryService/GetBasicLotteryTicketsResponse")]
+        System.IAsyncResult BeginGetBasicLotteryTickets(zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport import, System.AsyncCallback callback, object asyncState);
+        
+        zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx EndGetBasicLotteryTickets(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ILotteryService/GetSettingOfLottery", ReplyAction="http://tempuri.org/ILotteryService/GetSettingOfLotteryResponse")]
         System.IAsyncResult BeginGetSettingOfLottery(zwg_china.backstage.framework.LotteryService.GetSettingOfLotteryImport import, System.AsyncCallback callback, object asyncState);
         
@@ -2690,6 +2823,11 @@ namespace zwg_china.backstage.framework.LotteryService {
         System.IAsyncResult BeginSetSettingOfLottery(zwg_china.backstage.framework.LotteryService.SetSettingOfLotteryImport import, System.AsyncCallback callback, object asyncState);
         
         zwg_china.backstage.framework.LotteryService.NormalResult EndSetSettingOfLottery(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ILotteryService/CreateLottery", ReplyAction="http://tempuri.org/ILotteryService/CreateLotteryResponse")]
+        System.IAsyncResult BeginCreateLottery(zwg_china.backstage.framework.LotteryService.CreateLotteryImport import, System.AsyncCallback callback, object asyncState);
+        
+        zwg_china.backstage.framework.LotteryService.NormalResult EndCreateLottery(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ILotteryService/EditLotteryTicket", ReplyAction="http://tempuri.org/ILotteryService/EditLotteryTicketResponse")]
         System.IAsyncResult BeginEditLotteryTicket(zwg_china.backstage.framework.LotteryService.EditLotteryTicketImport import, System.AsyncCallback callback, object asyncState);
@@ -2813,6 +2951,25 @@ namespace zwg_china.backstage.framework.LotteryService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetBasicLotteryTicketsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetBasicLotteryTicketsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class GetSettingOfLotteryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
@@ -2837,6 +2994,25 @@ namespace zwg_china.backstage.framework.LotteryService {
         private object[] results;
         
         public SetSettingOfLotteryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public zwg_china.backstage.framework.LotteryService.NormalResult Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((zwg_china.backstage.framework.LotteryService.NormalResult)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CreateLotteryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CreateLotteryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -2959,6 +3135,12 @@ namespace zwg_china.backstage.framework.LotteryService {
         
         private System.Threading.SendOrPostCallback onGetChasingsCompletedDelegate;
         
+        private BeginOperationDelegate onBeginGetBasicLotteryTicketsDelegate;
+        
+        private EndOperationDelegate onEndGetBasicLotteryTicketsDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetBasicLotteryTicketsCompletedDelegate;
+        
         private BeginOperationDelegate onBeginGetSettingOfLotteryDelegate;
         
         private EndOperationDelegate onEndGetSettingOfLotteryDelegate;
@@ -2970,6 +3152,12 @@ namespace zwg_china.backstage.framework.LotteryService {
         private EndOperationDelegate onEndSetSettingOfLotteryDelegate;
         
         private System.Threading.SendOrPostCallback onSetSettingOfLotteryCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCreateLotteryDelegate;
+        
+        private EndOperationDelegate onEndCreateLotteryDelegate;
+        
+        private System.Threading.SendOrPostCallback onCreateLotteryCompletedDelegate;
         
         private BeginOperationDelegate onBeginEditLotteryTicketDelegate;
         
@@ -3057,9 +3245,13 @@ namespace zwg_china.backstage.framework.LotteryService {
         
         public event System.EventHandler<GetChasingsCompletedEventArgs> GetChasingsCompleted;
         
+        public event System.EventHandler<GetBasicLotteryTicketsCompletedEventArgs> GetBasicLotteryTicketsCompleted;
+        
         public event System.EventHandler<GetSettingOfLotteryCompletedEventArgs> GetSettingOfLotteryCompleted;
         
         public event System.EventHandler<SetSettingOfLotteryCompletedEventArgs> SetSettingOfLotteryCompleted;
+        
+        public event System.EventHandler<CreateLotteryCompletedEventArgs> CreateLotteryCompleted;
         
         public event System.EventHandler<EditLotteryTicketCompletedEventArgs> EditLotteryTicketCompleted;
         
@@ -3304,6 +3496,52 @@ namespace zwg_china.backstage.framework.LotteryService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult zwg_china.backstage.framework.LotteryService.ILotteryService.BeginGetBasicLotteryTickets(zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport import, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetBasicLotteryTickets(import, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx zwg_china.backstage.framework.LotteryService.ILotteryService.EndGetBasicLotteryTickets(System.IAsyncResult result) {
+            return base.Channel.EndGetBasicLotteryTickets(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetBasicLotteryTickets(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport import = ((zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport)(inValues[0]));
+            return ((zwg_china.backstage.framework.LotteryService.ILotteryService)(this)).BeginGetBasicLotteryTickets(import, callback, asyncState);
+        }
+        
+        private object[] OnEndGetBasicLotteryTickets(System.IAsyncResult result) {
+            zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx retVal = ((zwg_china.backstage.framework.LotteryService.ILotteryService)(this)).EndGetBasicLotteryTickets(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetBasicLotteryTicketsCompleted(object state) {
+            if ((this.GetBasicLotteryTicketsCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetBasicLotteryTicketsCompleted(this, new GetBasicLotteryTicketsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetBasicLotteryTicketsAsync(zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport import) {
+            this.GetBasicLotteryTicketsAsync(import, null);
+        }
+        
+        public void GetBasicLotteryTicketsAsync(zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport import, object userState) {
+            if ((this.onBeginGetBasicLotteryTicketsDelegate == null)) {
+                this.onBeginGetBasicLotteryTicketsDelegate = new BeginOperationDelegate(this.OnBeginGetBasicLotteryTickets);
+            }
+            if ((this.onEndGetBasicLotteryTicketsDelegate == null)) {
+                this.onEndGetBasicLotteryTicketsDelegate = new EndOperationDelegate(this.OnEndGetBasicLotteryTickets);
+            }
+            if ((this.onGetBasicLotteryTicketsCompletedDelegate == null)) {
+                this.onGetBasicLotteryTicketsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetBasicLotteryTicketsCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetBasicLotteryTicketsDelegate, new object[] {
+                        import}, this.onEndGetBasicLotteryTicketsDelegate, this.onGetBasicLotteryTicketsCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.IAsyncResult zwg_china.backstage.framework.LotteryService.ILotteryService.BeginGetSettingOfLottery(zwg_china.backstage.framework.LotteryService.GetSettingOfLotteryImport import, System.AsyncCallback callback, object asyncState) {
             return base.Channel.BeginGetSettingOfLottery(import, callback, asyncState);
         }
@@ -3393,6 +3631,52 @@ namespace zwg_china.backstage.framework.LotteryService {
             }
             base.InvokeAsync(this.onBeginSetSettingOfLotteryDelegate, new object[] {
                         import}, this.onEndSetSettingOfLotteryDelegate, this.onSetSettingOfLotteryCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult zwg_china.backstage.framework.LotteryService.ILotteryService.BeginCreateLottery(zwg_china.backstage.framework.LotteryService.CreateLotteryImport import, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCreateLottery(import, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        zwg_china.backstage.framework.LotteryService.NormalResult zwg_china.backstage.framework.LotteryService.ILotteryService.EndCreateLottery(System.IAsyncResult result) {
+            return base.Channel.EndCreateLottery(result);
+        }
+        
+        private System.IAsyncResult OnBeginCreateLottery(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            zwg_china.backstage.framework.LotteryService.CreateLotteryImport import = ((zwg_china.backstage.framework.LotteryService.CreateLotteryImport)(inValues[0]));
+            return ((zwg_china.backstage.framework.LotteryService.ILotteryService)(this)).BeginCreateLottery(import, callback, asyncState);
+        }
+        
+        private object[] OnEndCreateLottery(System.IAsyncResult result) {
+            zwg_china.backstage.framework.LotteryService.NormalResult retVal = ((zwg_china.backstage.framework.LotteryService.ILotteryService)(this)).EndCreateLottery(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCreateLotteryCompleted(object state) {
+            if ((this.CreateLotteryCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CreateLotteryCompleted(this, new CreateLotteryCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CreateLotteryAsync(zwg_china.backstage.framework.LotteryService.CreateLotteryImport import) {
+            this.CreateLotteryAsync(import, null);
+        }
+        
+        public void CreateLotteryAsync(zwg_china.backstage.framework.LotteryService.CreateLotteryImport import, object userState) {
+            if ((this.onBeginCreateLotteryDelegate == null)) {
+                this.onBeginCreateLotteryDelegate = new BeginOperationDelegate(this.OnBeginCreateLottery);
+            }
+            if ((this.onEndCreateLotteryDelegate == null)) {
+                this.onEndCreateLotteryDelegate = new EndOperationDelegate(this.OnEndCreateLottery);
+            }
+            if ((this.onCreateLotteryCompletedDelegate == null)) {
+                this.onCreateLotteryCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCreateLotteryCompleted);
+            }
+            base.InvokeAsync(this.onBeginCreateLotteryDelegate, new object[] {
+                        import}, this.onEndCreateLotteryDelegate, this.onCreateLotteryCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3720,6 +4004,19 @@ namespace zwg_china.backstage.framework.LotteryService {
                 return _result;
             }
             
+            public System.IAsyncResult BeginGetBasicLotteryTickets(zwg_china.backstage.framework.LotteryService.GetBasicLotteryTicketsImport import, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = import;
+                System.IAsyncResult _result = base.BeginInvoke("GetBasicLotteryTickets", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx EndGetBasicLotteryTickets(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx _result = ((zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx)(base.EndInvoke("GetBasicLotteryTickets", _args, result)));
+                return _result;
+            }
+            
             public System.IAsyncResult BeginGetSettingOfLottery(zwg_china.backstage.framework.LotteryService.GetSettingOfLotteryImport import, System.AsyncCallback callback, object asyncState) {
                 object[] _args = new object[1];
                 _args[0] = import;
@@ -3743,6 +4040,19 @@ namespace zwg_china.backstage.framework.LotteryService {
             public zwg_china.backstage.framework.LotteryService.NormalResult EndSetSettingOfLottery(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 zwg_china.backstage.framework.LotteryService.NormalResult _result = ((zwg_china.backstage.framework.LotteryService.NormalResult)(base.EndInvoke("SetSettingOfLottery", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginCreateLottery(zwg_china.backstage.framework.LotteryService.CreateLotteryImport import, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = import;
+                System.IAsyncResult _result = base.BeginInvoke("CreateLottery", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public zwg_china.backstage.framework.LotteryService.NormalResult EndCreateLottery(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                zwg_china.backstage.framework.LotteryService.NormalResult _result = ((zwg_china.backstage.framework.LotteryService.NormalResult)(base.EndInvoke("CreateLottery", _args, result)));
                 return _result;
             }
             

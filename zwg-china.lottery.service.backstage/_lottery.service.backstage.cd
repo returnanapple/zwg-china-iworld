@@ -12,7 +12,7 @@
   <Class Name="zwg_china.service.backstage.LotteryService" Collapsed="true">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEQAACAAAAgAAAgAAAAAEAAAAAAAAQAEADAACAAAA=</HashCode>
+      <HashCode>AACEQAACAAAAgAAAgAAAAAEAAAAAAAAQAEADAACAAAA=</HashCode>
       <FileName>LotteryService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -98,7 +98,7 @@
   <Class Name="zwg_china.service.backstage.BettingExport" Collapsed="true">
     <Position X="0.5" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAMiAACMAAAAggAAEAAAAAAAAgAAACAAAAAAAAAAAAE=</HashCode>
+      <HashCode>AAMiAACMAAAAggAAEAAAEAAAAgAAACAAAAAAAAAAAAE=</HashCode>
       <FileName>BettingExport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -112,7 +112,7 @@
   <Class Name="zwg_china.service.backstage.BettingWithChasingExport" Collapsed="true">
     <Position X="4" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAECAAAEAAAAAgAAEAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAECAAAEAAAAAgAAEAAAEAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BettingWithChasingExport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -150,7 +150,7 @@
   <Class Name="zwg_china.service.backstage.GetLotteryTicketsImport" Collapsed="true" HideInheritanceLine="true">
     <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
       <FileName>GetLotteryTicketsImport.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -203,10 +203,32 @@
       <FileName>SetSettingOfLotteryImport.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="zwg_china.service.backstage.BasicLotteryTicketExport" Collapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BasicLotteryTicketExport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.backstage.GetBasicLotteryTicketsImport" Collapsed="true" HideInheritanceLine="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GetBasicLotteryTicketsImport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="zwg_china.service.backstage.CreateLotteryImport" Collapsed="true" HideInheritanceLine="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAEKAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAA=</HashCode>
+      <FileName>CreateLotteryImport.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
   <Interface Name="zwg_china.service.backstage.ILotteryService" Collapsed="true">
     <Position X="2.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEQAACAAAAgAAAgAAAAAEAAAAAAAAQAEADAACAAAA=</HashCode>
+      <HashCode>AACEQAACAAAAgAAAgAAAAAEAAAAAAAAQAEADAACgAAA=</HashCode>
       <FileName>ILotteryService.cs</FileName>
     </TypeIdentifier>
   </Interface>

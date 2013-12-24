@@ -204,6 +204,9 @@
     <None Include="Service References\ActicityService\zwg_china.service.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\LotteryService\zwg_china.backstage.framework.LotteryService.NormalResultOfArrayOfBasicLotteryTicketExportnxyTI_PDx.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ReportService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

@@ -67,7 +67,7 @@ namespace zwg_china.service.backstage
         /// 投注信息
         /// </summary>
         [DataMember]
-        public string values { get; set; }
+        public string Values { get; set; }
 
         /// <summary>
         /// 当前状态
@@ -125,7 +125,7 @@ namespace zwg_china.service.backstage
             this.Multiple = model.Multiple;
             this.Points = model.Points;
             this.HowToPlay = model.GetDescription();
-            this.values = model.GetBetStr();
+            this.Values = model.GetBetStr();
             this.Status = model.Status;
             this.Pay = model.Pay;
             this.Bonus = model.Bonus;
