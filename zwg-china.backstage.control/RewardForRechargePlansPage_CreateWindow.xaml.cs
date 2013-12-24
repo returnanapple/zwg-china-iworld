@@ -10,7 +10,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using zwg_china.backstage.framework;
 using zwg_china.backstage.framework.ActicityService;
+using zwg_china.backstage.framework.AdministratorService;
 
 namespace zwg_china.backstage.control
 {
@@ -50,7 +52,8 @@ namespace zwg_china.backstage.control
                 Timescale = (TimescaleOfActivity)Enum.Parse(typeof(TimescaleOfActivity),(input_Timescale.SelectedItem as TextBlock).Text,false),
                 Details = Details.ToList(),
                 BeginTime = (DateTime)input_BeginTime.SelectedDate,
-                EndTime = (DateTime)input_EndTime.SelectedDate
+                EndTime = (DateTime)input_EndTime.SelectedDate,
+                Token = DataManager.GetValue<AdministratorExport>(DataKey.IWorld_Backstage_AdministratorInfo).Token
             };
             ActicityServiceClient client = new ActicityServiceClient();
             client.CreateRewardForRechargePlanCompleted += ShowCreateRewardForRechargePlanResult;

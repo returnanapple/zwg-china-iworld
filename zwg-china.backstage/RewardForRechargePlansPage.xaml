@@ -109,7 +109,7 @@
                                  ItemsSource="{Binding List}" Width="750">
                     <local:TableTool.ItemTemplate>
                         <DataTemplate>
-                            <local:RewardForRegisterPlansPage_TableRow State="{Binding}" RefreshEventHandler="RefreshList" />
+                            <local:RewardForRechargePlansPage_TableRow State="{Binding}" RefreshEventHandler="RefreshList" />
                         </DataTemplate>
                     </local:TableTool.ItemTemplate>
                 </local:TableTool>
