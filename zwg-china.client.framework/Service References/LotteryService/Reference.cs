@@ -99,6 +99,8 @@ namespace zwg_china.client.framework.LotteryService {
         
         private System.Nullable<zwg_china.client.framework.LotteryService.BettingStatus> StatusField;
         
+        private System.Nullable<int> TicketIdField;
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> BeginTime {
             get {
@@ -134,6 +136,19 @@ namespace zwg_china.client.framework.LotteryService {
                 if ((this.StatusField.Equals(value) != true)) {
                     this.StatusField = value;
                     this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> TicketId {
+            get {
+                return this.TicketIdField;
+            }
+            set {
+                if ((this.TicketIdField.Equals(value) != true)) {
+                    this.TicketIdField = value;
+                    this.RaisePropertyChanged("TicketId");
                 }
             }
         }

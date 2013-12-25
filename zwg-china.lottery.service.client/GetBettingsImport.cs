@@ -35,6 +35,12 @@ namespace zwg_china.service.client
         [DataMember]
         public BettingStatus? Status { get; set; }
 
+        /// <summary>
+        /// 彩票的存储指针
+        /// </summary>
+        [DataMember]
+        public int? TicketId { get; set; }
+
         #endregion
 
         #region 方法
@@ -54,6 +60,7 @@ namespace zwg_china.service.client
             Expression<Func<Betting, bool>> predicate2 = x => x.Id > 0;
             Expression<Func<Betting, bool>> predicate3 = x => x.Id > 0;
             Expression<Func<Betting, bool>> predicate4 = x => x.Id > 0;
+            Expression<Func<Betting, bool>> predicate5 = x => x.Id > 0;
 
             if (this.BeginTime != null)
             {
@@ -63,12 +70,17 @@ namespace zwg_china.service.client
             if (this.EndTime != null)
             {
                 DateTime endTime = (DateTime)this.EndTime;
-                predicate2 = x => x.CreatedTime < endTime;
+                predicate3 = x => x.CreatedTime < endTime;
             }
             if (this.Status != null)
             {
                 BettingStatus status = (BettingStatus)this.Status;
-                predicate3 = x => x.Status == status;
+                predicate4 = x => x.Status == status;
+            }
+            if (this.TicketId != null)
+            {
+                int ticketId = (int)this.TicketId;
+                predicate5 = x => x.HowToPlay.Tag.Ticket.Id == ticketId;
             }
 
             int countOfAllMessages = db.Bettings
@@ -76,12 +88,14 @@ namespace zwg_china.service.client
                 .Where(predicate2)
                 .Where(predicate3)
                 .Where(predicate4)
+                .Where(predicate5)
                 .Count();
             var tList = db.Bettings
                 .Where(predicate1)
                 .Where(predicate2)
                 .Where(predicate3)
                 .Where(predicate4)
+                .Where(predicate5)
                 .OrderByDescending(x => x.CreatedTime)
                 .Skip(startRow)
                 .Take(settingOfBase.PageSizeForClient)

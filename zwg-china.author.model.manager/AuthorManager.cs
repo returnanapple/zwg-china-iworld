@@ -304,7 +304,7 @@ namespace zwg_china.model.manager
             List<string> tNames = new List<string> { "投注", "撤单" };
             if (tNames.Contains(model.Type))
             {
-                user.Consumption += model.Sum;
+                user.Consumption -= model.Sum;
             }
         }
 

@@ -138,6 +138,7 @@
           <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
           <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
           <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/zwg_china.model" minOccurs="0" name="Status" nillable="true" type="q3:BettingStatus" />
+          <xs:element minOccurs="0" name="TicketId" nillable="true" type="xs:int" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

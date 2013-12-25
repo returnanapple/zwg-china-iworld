@@ -15,6 +15,7 @@ namespace zwg_china.client.framework
         #region 私有字段
 
         LotteryServiceClient lotteryClient = new LotteryServiceClient();
+        AuthorServiceClient authorClient = new AuthorServiceClient();
 
         static double poinN = 0;
         static double poinUn = 0;
@@ -369,6 +370,7 @@ namespace zwg_china.client.framework
             lotteryClient.GetLotteriesCompleted += ShowGetLotteriesResult;
             lotteryClient.GetBettingsCompleted += ShowGetBettingsResult;
             lotteryClient.BetCompleted += ShowBetResult;
+            authorClient.GetBasicSelfInfoCompleted += WriteSelfInfo;
 
             List<LotteryTicketExport> tickets = DataManager.GetValue<List<LotteryTicketExport>>(DataKey.IWorld_Client_Tickets);
             this.Ticket = tickets.First(x => x.Name == ticketName);
@@ -495,6 +497,7 @@ namespace zwg_china.client.framework
         {
             GetBettingsImport import = new GetBettingsImport
             {
+                TicketId = this.Ticket.Id,
                 PageIndex = 1,
                 Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token)
             };
@@ -540,16 +543,6 @@ namespace zwg_china.client.framework
             if (howToPlay.Interface == LotteryInterface.任N直选
                 && howToPlay.IsDuplex == false)
             {
-                #region 填充选号
-
-                BetSeatImport bsImport = new BetSeatImport
-                {
-                    SeatNmae = "选号",
-                    Values = this.ContextOfSelected
-                };
-                _betSeatImports.Add(bsImport);
-
-                #endregion
                 #region 单式
 
                 string _text = this.ContextOfMain;
@@ -613,7 +606,16 @@ namespace zwg_china.client.framework
                 this.Pay = setting.UnitPrice * this.Notes;
 
                 #endregion
+                #region 填充选号
 
+                BetSeatImport bsImport = new BetSeatImport
+                {
+                    SeatNmae = "选号",
+                    Values = this.ContextOfSelected
+                };
+                _betSeatImports.Add(bsImport);
+
+                #endregion
             }
             else
             {
@@ -809,6 +811,12 @@ namespace zwg_china.client.framework
             if (e.Result.Success)
             {
                 ShowError("投注成功");
+                RefreshBettings();
+                GetBasicSelfInfoImport import = new GetBasicSelfInfoImport
+                {
+                    Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token)
+                };
+                authorClient.GetBasicSelfInfoAsync(import);
             }
             else
             {
@@ -835,6 +843,20 @@ namespace zwg_china.client.framework
             {
                 return input.ToString("00");
             }
+        }
+
+        #endregion
+
+        #region 刷新用户信息
+
+        void WriteSelfInfo(object sender, GetBasicSelfInfoCompletedEventArgs e)
+        {
+            if (!e.Result.Success) { return; }
+            AuthorExport selfInfo = DataManager.GetValue<AuthorExport>(DataKey.IWorld_Client_UserInfo);
+            selfInfo.Money = e.Result.Info.Money;
+            selfInfo.Money_Frozen = e.Result.Info.Money_Frozen;
+            selfInfo.Consumption = e.Result.Info.Consumption;
+            selfInfo.Integral = e.Result.Info.Integral;
         }
 
         #endregion

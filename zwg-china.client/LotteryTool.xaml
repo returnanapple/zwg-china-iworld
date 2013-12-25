@@ -95,7 +95,7 @@
                       Visibility="{Binding IsDuplex, ConverterParameter=单式, Converter={StaticResource HowToPlayConverter}}"
                       VerticalScrollBarVisibility="Visible" Background="#FF560A28"
                       Canvas.Left="40" Canvas.Top="219">
-            <local:NoBorderTextBox Style="{StaticResource TextBoxInScrollViewer}"/>
+            <local:NoBorderTextBox Text="{Binding ContextOfMain,Mode=TwoWay}" Style="{StaticResource TextBoxInScrollViewer}"/>
         </ScrollViewer>
 
         <!--确认投注、添加号码、一键清除、我要追号-->
