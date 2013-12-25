@@ -20,7 +20,7 @@
 
     <Canvas Width="600" Height="500">
         <Canvas.Background>
-            <ImageBrush Stretch="None" ImageSource="Images/ChildWindowBg.png"/>
+            <ImageBrush Stretch="Fill" ImageSource="Images/PromptBg.png"/>
         </Canvas.Background>
 
         <TextBlock Text="彩种：" Canvas.Left="150" Canvas.Top="77"/>
@@ -64,7 +64,7 @@
                                    Foreground="#FFD7A471" FontSize="13" FontFamily="Microsoft YaHei"/>
         </ScrollViewer>
 
-        <local:NewButton Width="98" Height="37" ImageNameOfBackground="撤单2" Click="OK"
+        <local:NewButton Width="98" Height="37" ImageNameOfBackground="撤单2"  Click="OK"
                          Canvas.Left="303" Canvas.Top="394"/>
         <local:NewButton Width="98" Height="37" ImageNameOfBackground="返回" Click="Return"
                          Canvas.Left="437" Canvas.Top="394"/>

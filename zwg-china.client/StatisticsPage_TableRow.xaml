@@ -5,23 +5,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Width="780" Height="30" Orientation="Horizontal">
-        <StackPanel.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Margin" Value="10,0"/>
-                <Setter Property="FontFamily" Value="SimSun"/>
-                <Setter Property="FontSize" Value="13"/>
-            </Style>
-            <Style TargetType="HyperlinkButton">
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Margin" Value="10,0"/>
-                <Setter Property="FontFamily" Value="SimSun"/>
-                <Setter Property="FontSize" Value="13"/>
-            </Style>
-        </StackPanel.Resources>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="TableStyleDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <StackPanel Width="780" Height="25" Orientation="Horizontal">
         <Grid Width="130">
             <TextBlock Name="text_Owner" Text="用户"/>
         </Grid>

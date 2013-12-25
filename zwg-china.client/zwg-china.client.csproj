@@ -84,8 +84,14 @@
       <DependentUpon>BetPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\HowToPlayConverter.cs" />
+    <Compile Include="CommissionRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>CommissionRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CoverFloorTool.xaml.cs">
       <DependentUpon>CoverFloorTool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DividendRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>DividendRecordsPage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ErrorPrompt.xaml.cs">
       <DependentUpon>ErrorPrompt.xaml</DependentUpon>
@@ -107,6 +113,9 @@
     </Compile>
     <Compile Include="MainWin.xaml.cs">
       <DependentUpon>MainWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyChangePage_TableRow.xaml.cs">
+      <DependentUpon>MoneyChangePage_TableRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewButton.xaml.cs">
       <DependentUpon>NewButton.xaml</DependentUpon>
@@ -130,6 +139,9 @@
       <DependentUpon>PlayTagButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RebateRecordsPage_TableRow.xaml.cs">
+      <DependentUpon>RebateRecordsPage_TableRow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RemainTimeAndResultControl.xaml.cs">
       <DependentUpon>RemainTimeAndResultControl.xaml</DependentUpon>
     </Compile>
@@ -144,6 +156,9 @@
     </Compile>
     <Compile Include="StatisticsPage.xaml.cs">
       <DependentUpon>StatisticsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsPage_FullWindow.xaml.cs">
+      <DependentUpon>StatisticsPage_FullWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="StatisticsPage_TableRow.xaml.cs">
       <DependentUpon>StatisticsPage_TableRow.xaml</DependentUpon>
@@ -160,6 +175,9 @@
     <Compile Include="TableRowOfLotteryTool_ChildWindow.xaml.cs">
       <DependentUpon>TableRowOfLotteryTool_ChildWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TableTextBox.xaml.cs">
+      <DependentUpon>TableTextBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
     </Compile>
@@ -171,9 +189,6 @@
     <Compile Include="tool\VerticalScrollTrigger.cs" />
     <Compile Include="UsersPage.xaml.cs">
       <DependentUpon>UsersPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Warning_ChildWindow.xaml.cs">
-      <DependentUpon>Warning_ChildWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +204,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CommissionRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CoverFloorTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -196,6 +215,10 @@
     <Page Include="css.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DividendRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ErrorPrompt.xaml">
       <SubType>Designer</SubType>
@@ -222,6 +245,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MoneyChangePage_TableRow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,6 +280,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RebateRecordsPage_TableRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RemainTimeAndResultControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -270,6 +301,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StatisticsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StatisticsPage_FullWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -297,6 +332,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TableStyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TableTool.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -305,16 +348,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Warning_ChildWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\撤单_MouseOver.png" />
     <Resource Include="Images\撤单_Normal.png" />
     <Resource Include="Images\撤单_Pressed.png" />
-    <Resource Include="Images\ChildWindowBg.png" />
     <Resource Include="Images\撤单2_MouseOver.png" />
     <Resource Include="Images\撤单2_Normal.png" />
     <Resource Include="Images\撤单2_Pressed.png" />
@@ -328,7 +366,6 @@
     <Resource Include="Images\确定_MouseOver.png" />
     <Resource Include="Images\确定_Normal.png" />
     <Resource Include="Images\确定_Pressed.png" />
-    <Resource Include="Images\Warning_ChildWindowBg.png" />
     <Resource Include="Images\TableHeadBg.png" />
     <Resource Include="Images\PageButtonBg_MouseOver.png" />
     <Resource Include="Images\PageButtonBg_Normal.png" />
@@ -341,6 +378,9 @@
     <Resource Include="Images\PromptBg.png" />
     <Resource Include="Images\LotteryToolBg.png" />
     <Resource Include="Images\TableLabelToolBg.png" />
+    <Resource Include="Images\TableTextBoxBg.png" />
+    <Resource Include="Images\搜索.png" />
+    <Resource Include="Images\重置.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
@@ -532,6 +572,9 @@
     <Resource Include="Images\NewSliderThumb_Selected.png" />
     <Resource Include="Images\NewSlider_Bg.png" />
     <Resource Include="Images\NewSlider_Bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

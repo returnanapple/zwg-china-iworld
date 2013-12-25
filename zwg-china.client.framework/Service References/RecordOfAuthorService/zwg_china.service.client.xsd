@@ -29,6 +29,7 @@
   <xs:element name="ArrayOfMoneyChangeRecordExport" nillable="true" type="tns:ArrayOfMoneyChangeRecordExport" />
   <xs:complexType name="MoneyChangeRecordExport">
     <xs:sequence>
+      <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Expenses" type="xs:double" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />

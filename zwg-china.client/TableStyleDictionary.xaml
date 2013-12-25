@@ -1,0 +1,21 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="10,0"/>
+        <Setter Property="FontFamily" Value="SimSun"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="white"/>
+    </Style>
+    <Style TargetType="HyperlinkButton">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="10,0"/>
+        <Setter Property="FontFamily" Value="SimSun"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="#FFD7A471"/>
+    </Style>
+</ResourceDictionary>

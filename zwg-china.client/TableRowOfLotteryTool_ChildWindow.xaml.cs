@@ -77,29 +77,6 @@ namespace zwg_china.client
         #region Closed事件
         void ReBet(object sender, EventArgs e)
         {
-            if (this.DialogResult == true)
-            {
-                Warning_ChildWindow cw = new Warning_ChildWindow();
-                cw.Text = "确认撤单吗";
-                cw.Closed += (_sender, _e) =>
-                {
-                    if (cw.DialogResult == true)
-                    {
-                        LotteryServiceClient client = new LotteryServiceClient();
-                        client.RecallBettingCompleted += (__sender, __e) =>
-                        {
-                            if (__e.Result.Success == false)
-                            {
-                                //ShowMessage_ChildWindow smcw = new ShowMessage_ChildWindow();
-                                //smcw.Text = __e.Result.Error;
-                                //smcw.Show();
-                            }
-                        };
-                        client.RecallBettingAsync(new RecallBettingImport { BettingId = BetInfo.Id });
-
-                    }
-                };
-            }
         }
         #endregion
     }
