@@ -78,7 +78,7 @@ namespace zwg_china.model
                 ? this.Chasing.Owner.PlayInfo.Rebate_IndefinitePosition
                 : this.Chasing.Owner.PlayInfo.Rebate_Normal;
             t -= this.Chasing.Points;
-            t = (1 - t) / 100;
+            t = 1 - t / 100;
             this.Pay = Math.Round(pay * t, 2);
         }
 
