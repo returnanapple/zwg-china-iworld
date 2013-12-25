@@ -18,11 +18,11 @@
                          Click="Minimize" Canvas.Left="734" Canvas.Top="176"/>
         <HyperlinkButton Content="找回密码"
                          FontSize="14" Foreground="#FFFB005E" FontFamily="simsun" Canvas.Left="344" Canvas.Top="477"/>
-        <TextBox Width="208" Height="25"
+        <TextBox Width="208" Height="25" CaretBrush="White"
                  Background="Transparent" BorderThickness="0"
                  Foreground="#FFD6A671" FontSize="14" FontFamily="SimSun"
-                 Text="{Binding Username, Mode=TwoWay}" Canvas.Left="364" Canvas.Top="399"/>
-        <PasswordBox Width="208" Height="25"
+                 Text="{Binding Username, Mode=TwoWay}" Canvas.Left="364" Canvas.Top="396"/>
+        <PasswordBox Width="208" Height="25" CaretBrush="White"
                      Background="Transparent" BorderThickness="0"
                      Foreground="#FFD6A671" FontSize="14" FontFamily="SimSun"
                      Password="{Binding Password,Mode=TwoWay}" Canvas.Left="364" Canvas.Top="435"/>
