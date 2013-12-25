@@ -65,7 +65,7 @@
         <ItemsControl Name="_list" Grid.Row="1"/>
         <!--分页选择区-->
         <StackPanel Name="_page" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal" Margin="0,0,15,0">
             <StackPanel.Resources>
                 <Style TargetType="TextBlock">
                     <Setter Property="HorizontalAlignment" Value="Center"/>

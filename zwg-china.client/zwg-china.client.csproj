@@ -166,6 +166,9 @@
     <Compile Include="tool\KeepTextRealTime.cs" />
     <Compile Include="tool\KeyDownCommandAction.cs" />
     <Compile Include="tool\VerticalScrollTrigger.cs" />
+    <Compile Include="UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Warning_ChildWindow.xaml.cs">
       <DependentUpon>Warning_ChildWindow.xaml</DependentUpon>
     </Compile>
@@ -288,6 +291,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TableTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

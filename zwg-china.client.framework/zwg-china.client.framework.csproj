@@ -77,6 +77,7 @@
     <Compile Include="HowToPlayOfBet.cs" />
     <Compile Include="IMainPage.cs" />
     <Compile Include="IPop.cs" />
+    <Compile Include="IShowListViewModel.cs" />
     <Compile Include="LoginViewModel.cs" />
     <Compile Include="ManagerViewModelBase.cs" />
     <Compile Include="ModelBase.cs" />

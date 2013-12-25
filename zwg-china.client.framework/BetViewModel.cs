@@ -769,6 +769,14 @@ namespace zwg_china.client.framework
         void DoBetWindow(object obj)
         {
             if (this._betSeatImports.Count <= 0) { return; }
+            SettingExport setting = DataManager.GetValue<SettingExport>(DataKey.IWorld_Client_Setting);
+            if(this.Ticket.NextLotteryTime.AddSeconds(-setting.ClosureSingleTime)<DateTime.Now)
+            {
+                IPop<string> cw = ViewModelService.GetPop(Pop.ErrorPrompt) as IPop<string>;
+                cw.State = "已经封单，请等候下期投注";
+                cw.Show();
+                return;
+            }
             HowToPlayOfBet tH = this.HowToPlays.FirstOrDefault(x => x.Selected);
             HowToPlayExport howToPlay = this.Ticket
                 .Tags.First(x => x.Name == this.Tags.First(t => t.Selected).Name)

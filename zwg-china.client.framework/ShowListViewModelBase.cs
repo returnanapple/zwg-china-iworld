@@ -9,7 +9,7 @@ namespace zwg_china.client.framework
     /// <summary>
     /// 列表页的试图的基类
     /// </summary>
-    public abstract class ShowListViewModelBase<TExport, TClient> : ManagerViewModelBase
+    public abstract class ShowListViewModelBase<TExport, TClient> : ManagerViewModelBase, IShowListViewModel
         where TClient : new()
     {
         #region 私有字段
@@ -129,6 +129,18 @@ namespace zwg_china.client.framework
         {
             this.List.Clear();
             es.ForEach(e => this.List.Add(e));
+        }
+
+        #endregion
+
+        #region 方法
+
+        /// <summary>
+        /// 刷新列表
+        /// </summary>
+        public void Refresh()
+        {
+            this.JumpCommand.Execute(this.PageName);
         }
 
         #endregion

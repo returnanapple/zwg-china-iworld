@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="zwg_china.client.UsersPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:zwg_china.client"
+    mc:Ignorable="d">
+    <local:MainWin>
+        <StackPanel Margin="0,-50,0,0">
+            <Canvas Height="120">
+                
+            </Canvas>
+            
+            <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding RefreshCommand}"
+                             ColumnDefinitions="用户名:100,返点:100,当前余额:100,消费量:100,状态:100,上次登录:150,操作:100"
+                             ItemsSource="{Binding List}" Width="750" CountOfRow="12">
+                <local:TableTool.ItemTemplate>
+                    <DataTemplate>
+                        
+                    </DataTemplate>
+                </local:TableTool.ItemTemplate>
+            </local:TableTool>
+        </StackPanel>
+    </local:MainWin>
+</UserControl>

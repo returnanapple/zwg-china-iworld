@@ -169,6 +169,7 @@
       <HashCode>AAAAAgAAAABABAAQgAAAEAAAQAAAAEAgAAAEBAAAAAI=</HashCode>
       <FileName>ShowListViewModelBase.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="zwg_china.client.framework.UsersViewModel" Collapsed="true" HideInheritanceLine="true">
     <Position X="4" Y="3.75" Width="1.5" />
@@ -266,6 +267,13 @@
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAACAAAA=</HashCode>
       <FileName>IPop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="zwg_china.client.framework.IShowListViewModel" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IShowListViewModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="zwg_china.client.framework.Page" Collapsed="true">
