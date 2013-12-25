@@ -4,3 +4,5 @@ Obj
 obj
 ClientBin
 *.suo
+*.xap
+*.xap
