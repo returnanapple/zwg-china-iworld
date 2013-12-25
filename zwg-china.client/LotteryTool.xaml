@@ -101,19 +101,19 @@
 
         <!--确认投注、添加号码、一键清除、我要追号-->
         <local:NewButton Width="102" Height="78" ImageNameOfBackground="确认投注" Command="{Binding DoBetWindowCommand}"
-                         Canvas.Left="543" Canvas.Top="389"/>
+                         Canvas.Left="544" Canvas.Top="386"/>
         <local:NewButton Width="77" Height="36" ImageNameOfContent="添加号码" ImageNameOfBackground="AboutBetButtonBg" 
                          Command="{Binding ReadyBetCommand}"
-                         Canvas.Left="341" Canvas.Top="470"/>
+                         Canvas.Left="532" Canvas.Top="468"/>
         <local:NewButton Width="77" Height="36" ImageNameOfContent="一键清除" ImageNameOfBackground="AboutBetButtonBg" 
                          Command="{Binding ClearBetCommand}"
-                         Canvas.Left="428" Canvas.Top="470"/>
+                         Canvas.Left="614" Canvas.Top="468"/>
         <local:NewButton Width="77" Height="36" ImageNameOfContent="我要追号" ImageNameOfBackground="AboutBetButtonBg" 
                          Command="{Binding OpenChasingWindowCommand}"
-                         Canvas.Left="515" Canvas.Top="470"/>
+                         Canvas.Left="696" Canvas.Top="468"/>
 
         <!--左右拖动条-->
-        <Slider Canvas.Left="651" Canvas.Top="435" Width="122" Style="{StaticResource NewSliderStyle}" Value="{Binding Point, Mode=TwoWay}"
+        <Slider Canvas.Left="651" Canvas.Top="439" Width="122" Style="{StaticResource NewSliderStyle}" Value="{Binding Point, Mode=TwoWay}"
                 Maximum="{Binding MaxPoint}"/>
 
         <!--下注信息-->
@@ -124,14 +124,17 @@
         </ScrollViewer>
         <TextBlock Text="{Binding ContextOfPoinAndOdds}"
                    Canvas.Left="659" Canvas.Top="409"  />
+        <TextBlock Text="总注数：" Canvas.Left="40" Canvas.Top="478"/>
         <TextBlock Text="{Binding Notes}" VerticalAlignment="Center"
-                   Canvas.Left="96" Canvas.Top="476"/>
+                   Canvas.Left="101" Canvas.Top="478"/>
+        <TextBlock Text="总金额：" Canvas.Left="200" Canvas.Top="478"/>
         <TextBlock Text="{Binding Pay}" VerticalAlignment="Center"
-                   Canvas.Left="215" Canvas.Top="476"/>
-        <local:NoBorderTextBox Text="{Binding Multiple,Mode=TwoWay}" Padding="0" Width="30" CaretBrush="White"
+                   Canvas.Left="261" Canvas.Top="478"/>
+        <TextBlock Text="倍数：" Canvas.Left="377" Canvas.Top="478"/>
+        <local:NoBorderTextBox Text="{Binding Multiple,Mode=TwoWay}" Padding="0" Width="50" CaretBrush="White"
                                BorderThickness="0,0,0,1" BorderBrush="Red" Background="Transparent"
                                Foreground="White" FontSize="14" FontFamily="Fonts/simsun.ttc#SimSun"
-                               Canvas.Left="305" Canvas.Top="476">
+                               Canvas.Left="424" Canvas.Top="477"/>
             <i:Interaction.Triggers>
                 <local:KeepTextRealTime/>
             </i:Interaction.Triggers>
