@@ -106,7 +106,7 @@ namespace zwg_china.model
                 ? owner.PlayInfo.Rebate_IndefinitePosition
                 : owner.PlayInfo.Rebate_Normal;
             t -= this.Points;
-            t = (1 - t) / 100;
+            t = 1 - t / 100;
             this.Pay = Math.Round(unitPrice * this.Notes * this.Multiple * t, 2);
         }
 

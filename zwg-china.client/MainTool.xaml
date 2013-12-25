@@ -69,7 +69,7 @@
             <local:NewButton Width="96" Height="52" ImageNameOfContent="在线客服" ImageNameOfBackground="NavigationButtonBg"
                          Canvas.Left="805" Canvas.Top="14"/>
             <local:NewButton Width="96" Height="52" ImageNameOfContent="安全退出" ImageNameOfBackground="NavigationButtonBg"
-                         Canvas.Left="901" Canvas.Top="14"/>
+                         Canvas.Left="901" Canvas.Top="14" Command="{Binding LogoutCommand}"/>
         </StackPanel>
 
 

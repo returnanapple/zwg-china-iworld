@@ -215,7 +215,7 @@ namespace zwg_china.client.framework
         void Logout(object parameter)
         {
             IPop<string> cw = ViewModelService.GetPop(Pop.NormalPrompt) as IPop<string>;
-            cw.State = "你想要退出后台管理吗？";
+            cw.State = "你想要退出程序吗？";
             cw.Closed += Logout_do;
             cw.Show();
         }

@@ -518,6 +518,8 @@ namespace zwg_china.client.framework
 
         #region 命令方法
 
+        List<BetSeatImport> _betSeatImports = new List<BetSeatImport>();
+
         /// <summary>
         /// 声明投注已经准备好了
         /// </summary>
@@ -533,10 +535,21 @@ namespace zwg_china.client.framework
                 .Tags.First(x => x.Name == this.Tags.First(t => t.Selected).Name)
                 .HowToPlays.First(x => x.Name == tH.Name);
             SettingExport setting = DataManager.GetValue<SettingExport>(DataKey.IWorld_Client_Setting);
-            #region 现实区
+            _betSeatImports.Clear();
+            #region 显示区
             if (howToPlay.Interface == LotteryInterface.任N直选
                 && howToPlay.IsDuplex == false)
             {
+                #region 填充选号
+
+                BetSeatImport bsImport = new BetSeatImport
+                {
+                    SeatNmae = "选号",
+                    Values = this.ContextOfSelected
+                };
+                _betSeatImports.Add(bsImport);
+
+                #endregion
                 #region 单式
 
                 string _text = this.ContextOfMain;
@@ -600,9 +613,24 @@ namespace zwg_china.client.framework
                 this.Pay = setting.UnitPrice * this.Notes;
 
                 #endregion
+
             }
             else
             {
+                #region 填充选号
+
+                this.Seats.ToList()
+                    .ForEach(seat =>
+                    {
+                        BetSeatImport _bsImport = new BetSeatImport
+                        {
+                            SeatNmae = seat.Name,
+                            Values = string.Join(",", seat.Nums.Where(x => x.Selected).OrderBy(x => x.Num).Select(x => x.Num).ToList())
+                        };
+                        _betSeatImports.Add(_bsImport);
+                    });
+
+                #endregion
                 #region 复式
 
                 if (howToPlay.Interface != LotteryInterface.任N定位胆
@@ -715,6 +743,7 @@ namespace zwg_china.client.framework
             this.Notes = 0;
             this.Pay = 0;
             this.Multiple = 1;
+            this._betSeatImports.Clear();
             this.BettingWithChasings.Clear();
         }
 
@@ -736,38 +765,11 @@ namespace zwg_china.client.framework
         /// <param name="obj"></param>
         void DoBetWindow(object obj)
         {
+            if (this._betSeatImports.Count <= 0) { return; }
             HowToPlayOfBet tH = this.HowToPlays.FirstOrDefault(x => x.Selected);
             HowToPlayExport howToPlay = this.Ticket
                 .Tags.First(x => x.Name == this.Tags.First(t => t.Selected).Name)
                 .HowToPlays.First(x => x.Name == tH.Name);
-            #region 选号
-
-            List<BetSeatImport> bs = new List<BetSeatImport>();
-            if (howToPlay.IsDuplex == false
-                && howToPlay.Interface == LotteryInterface.任N直选)
-            {
-                BetSeatImport bsImport = new BetSeatImport
-                {
-                    SeatNmae = "选号",
-                    Values = this.ContextOfSelected
-                };
-                bs.Add(bsImport);
-            }
-            else
-            {
-                this.Seats.ToList()
-                    .ForEach(seat =>
-                    {
-                        BetSeatImport bsImport = new BetSeatImport
-                        {
-                            SeatNmae = seat.Name,
-                            Values = string.Join(",", seat.Nums.Where(x => x.Selected).OrderBy(x => x.Num).Select(x => x.Num).ToList())
-                        };
-                        bs.Add(bsImport);
-                    });
-            }
-
-            #endregion
             #region 追号
 
             List<BettingWithChasingImport> bws = null;
@@ -794,7 +796,7 @@ namespace zwg_china.client.framework
                 Multiple = this.Multiple,
                 Points = this.Point,
                 Token = DataManager.GetValue<string>(DataKey.IWorld_Client_Token),
-                Seats = bs,
+                Seats = this._betSeatImports,
                 BettingWithChasings = bws
             };
 
