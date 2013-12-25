@@ -18,20 +18,15 @@
         </ResourceDictionary>
     </controls:ChildWindow.Resources>
 
-    <Border BorderThickness="3" CornerRadius="1">
-        <Border.BorderBrush>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFB9004E" Offset="0"/>
-                <GradientStop Color="#FFD7B475" Offset="1"/>
-            </LinearGradientBrush>
-        </Border.BorderBrush>
-        <Grid MaxWidth="400" Background="#FF3D001C">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="120"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock x:Name="text_content" Text="错误" Margin="30,20"/>
-            <local:NewButton ImageNameOfBackground="确定" Grid.Column="1" Width="98" Height="37" VerticalAlignment="Top" Margin="0,15,0,0" Click="Enter"/>
-        </Grid>
-    </Border>
+    <Grid MaxWidth="400">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Images/PromptBg.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="text_content" Text="错误" Margin="30,20"/>
+        <local:NewButton ImageNameOfBackground="确定" Grid.Column="1" Width="98" Height="37" VerticalAlignment="Top" Margin="0,15,0,0" Click="Enter"/>
+    </Grid>
 </controls:ChildWindow>

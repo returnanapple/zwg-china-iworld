@@ -47,7 +47,7 @@
         <ItemsControl Width="189" Height="160" Canvas.Left="12" Canvas.Top="528" ItemsSource="{Binding Bulletins}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <local:ShowABulletinTool Tittle="{Binding Tittle}" Text="{Binding Context}"/>
+                    <local:ShowABulletinTool Tittle="{Binding Title}" Text="{Binding Context}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

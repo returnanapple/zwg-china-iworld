@@ -318,6 +318,8 @@
     <Resource Include="Images\尾页OfTable.png" />
     <Resource Include="Images\首页OfTable.png" />
     <Resource Include="Images\TableRowOfLotteryToolBg.png" />
+    <Resource Include="Images\PromptBg.png" />
+    <Resource Include="Images\LotteryToolBg.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
@@ -509,9 +511,6 @@
     <Resource Include="Images\NewSliderThumb_Selected.png" />
     <Resource Include="Images\NewSlider_Bg.png" />
     <Resource Include="Images\NewSlider_Bg2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\LotteryToolBg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
