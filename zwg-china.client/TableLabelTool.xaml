@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="zwg_china.client.TableLabelTool"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFEEE67C" Offset="0"/>
+                        <GradientStop Color="#FFA05000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Margin" Value="0,-6,0,0"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Width="725" Height="21">
+        <Grid.Background>
+            <ImageBrush Stretch="None" ImageSource="Images/TableLabelToolBg.png"/>
+        </Grid.Background>
+        <TextBlock x:Name="Label" Text="XXX管理,XXX中心,XXX信息"/>
+    </Grid>
+</UserControl>

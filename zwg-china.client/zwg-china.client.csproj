@@ -151,6 +151,9 @@
     <Compile Include="SubPlayTagButton.xaml.cs">
       <DependentUpon>SubPlayTagButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TableLabelTool.xaml.cs">
+      <DependentUpon>TableLabelTool.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TableRowOfLotteryTool.xaml.cs">
       <DependentUpon>TableRowOfLotteryTool.xaml</DependentUpon>
     </Compile>
@@ -282,6 +285,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TableLabelTool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TableRowOfLotteryTool.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -333,6 +340,7 @@
     <Resource Include="Images\TableRowOfLotteryToolBg.png" />
     <Resource Include="Images\PromptBg.png" />
     <Resource Include="Images\LotteryToolBg.png" />
+    <Resource Include="Images\TableLabelToolBg.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
