@@ -134,7 +134,7 @@
         <local:NoBorderTextBox Text="{Binding Multiple,Mode=TwoWay}" Padding="0" Width="50" CaretBrush="White"
                                BorderThickness="0,0,0,1" BorderBrush="Red" Background="Transparent"
                                Foreground="White" FontSize="14" FontFamily="Fonts/simsun.ttc#SimSun"
-                               Canvas.Left="424" Canvas.Top="477"/>
+                               Canvas.Left="424" Canvas.Top="477">
             <i:Interaction.Triggers>
                 <local:KeepTextRealTime/>
             </i:Interaction.Triggers>
