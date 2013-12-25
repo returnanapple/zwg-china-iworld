@@ -63,10 +63,13 @@ namespace zwg_china.client
                 tool._line.Children.Clear();
                 for (int i = 0; i < countOftList; i++)
                 {
+
                     Border b = new Border();
                     b.Style = (Style)tool.Resources["line"];
-                    b.Margin = new Thickness(tList[i].Width, 0, 0, 0);
-                    tool._line.Children.Add(b);
+                    Grid g = new Grid();
+                    g.Width = tList[i].Width;
+                    g.Children.Add(b);
+                    tool._line.Children.Add(g);
                 }
 
                 #endregion

@@ -70,14 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClientBin\System.ComponentModel.DataAnnotations.zip" />
-    <Content Include="ClientBin\System.ServiceModel.NetTcp.zip" />
-    <Content Include="ClientBin\System.Windows.Controls.Data.zip" />
-    <Content Include="ClientBin\System.Windows.Controls.Data.Input.zip" />
-    <Content Include="ClientBin\System.Windows.Controls.zip" />
-    <Content Include="ClientBin\System.Windows.Controls.Toolkit.zip" />
-    <Content Include="ClientBin\System.Windows.Data.zip" />
-    <Content Include="ClientBin\System.ServiceModel.Extensions.zip" />
     <None Include="Properties\PublishProfiles\部署1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

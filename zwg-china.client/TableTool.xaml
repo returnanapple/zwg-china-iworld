@@ -20,14 +20,15 @@
                 <Setter Property="FontFamily" Value="Fonts/msyh.ttf#Microsoft YaHei"/>
             </Style>
             <Style x:Key="bg_single" TargetType="Grid">
-                <Setter Property="Height" Value="30"/>
+                <Setter Property="Height" Value="25"/>
                 <Setter Property="Background" Value="#00000000"/>
             </Style>
             <Style x:Key="bg_double" TargetType="Grid">
-                <Setter Property="Height" Value="30"/>
+                <Setter Property="Height" Value="25"/>
             </Style>
             <Style x:Key="line" TargetType="Border">
                 <Setter Property="Width" Value="1"/>
+                <Setter Property="HorizontalAlignment" Value="Right"/>
                 <Setter Property="Background">
                     <Setter.Value>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

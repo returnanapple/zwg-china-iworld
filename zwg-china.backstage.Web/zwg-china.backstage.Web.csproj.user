@@ -24,7 +24,7 @@
           <EnableENC>True</EnableENC>
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
           <ProjectOutputReferences>
-            <Ref Project="{75BECC3C-F95C-4D72-B67A-03B2D1BCDA7D}" Folder="ClientBin">System.ComponentModel.DataAnnotations.zip|System.ServiceModel.Extensions.zip|System.ServiceModel.NetTcp.zip|System.Windows.Controls.Data.Input.zip|System.Windows.Controls.Data.zip|System.Windows.Controls.Toolkit.zip|System.Windows.Controls.zip|System.Windows.Data.zip|zwg-china.backstage.xap</Ref>
+            <Ref Project="{75BECC3C-F95C-4D72-B67A-03B2D1BCDA7D}" Folder="ClientBin">zwg-china.backstage.xap</Ref>
           </ProjectOutputReferences>
         </WebProjectProperties>
       </FlavorProperties>
