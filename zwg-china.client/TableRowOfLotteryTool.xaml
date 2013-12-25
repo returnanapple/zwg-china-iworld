@@ -9,7 +9,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="None" ImageSource="Images/ptemp.png"/>
+            <ImageBrush Stretch="None" ImageSource="Images/TableRowOfLotteryToolBg.png"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="140"/>
@@ -19,7 +19,16 @@
             <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="110"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Text="{Binding Issue}"/>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="#FFFDFFCA"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+            </Style>
+        </Grid.Resources>
+        <TextBlock Grid.Column="0" Text="{Binding Issue}" />
         <TextBlock Grid.Column="1" Text="{Binding HowToPlay}"/>
         <TextBlock Grid.Column="2" Text="{Binding values}"/>
         <TextBlock Grid.Column="3" Text="{Binding Multiple}"/>

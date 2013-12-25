@@ -285,7 +285,7 @@ namespace zwg_china.client.framework
         /// </summary>
         public double Pay
         {
-            get { return Math.Round(pay * (1 - (this.MaxPoint - this.Point) / 100), 2); }
+            get { return Math.Round(pay * this.Multiple * (1 - (this.MaxPoint - this.Point) / 100), 2); }
             set
             {
                 if (pay == value) { return; }
@@ -305,6 +305,7 @@ namespace zwg_china.client.framework
                 if (multiple == value) { return; }
                 multiple = value;
                 OnPropertyChanged("Multiple");
+                OnPropertyChanged("Pay");
             }
         }
 

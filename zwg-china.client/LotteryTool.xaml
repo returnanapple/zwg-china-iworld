@@ -4,6 +4,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:zwg_china.client" x:Class="zwg_china.client.LotteryTool"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
     xmlns:classes="clr-namespace:zwg_china.client.Classes"
     mc:Ignorable="d"
     Width="814" Height="568">
@@ -127,10 +128,14 @@
                    Canvas.Left="96" Canvas.Top="476"/>
         <TextBlock Text="{Binding Pay}" VerticalAlignment="Center"
                    Canvas.Left="215" Canvas.Top="476"/>
-        <local:NoBorderTextBox Text="{Binding Multiple,Mode=TwoWay}" Padding="0" Width="30"
+        <local:NoBorderTextBox Text="{Binding Multiple,Mode=TwoWay}" Padding="0" Width="30" CaretBrush="White"
                                BorderThickness="0,0,0,1" BorderBrush="Red" Background="Transparent"
                                Foreground="White" FontSize="14" FontFamily="Fonts/simsun.ttc#SimSun"
-                               Canvas.Left="305" Canvas.Top="476"/>
+                               Canvas.Left="305" Canvas.Top="476">
+            <i:Interaction.Triggers>
+                <local:KeepTextRealTime/>
+            </i:Interaction.Triggers>
+        </local:NoBorderTextBox>
 
         <!--投注记录列表-->
         <Grid Width="780" Height="55" Canvas.Left="15" Canvas.Top="506">

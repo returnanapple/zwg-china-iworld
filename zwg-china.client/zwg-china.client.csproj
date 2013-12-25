@@ -160,6 +160,12 @@
     <Compile Include="TableTool.xaml.cs">
       <DependentUpon>TableTool.xaml</DependentUpon>
     </Compile>
+    <Compile Include="tool\ClearPasswordOnFocus.cs" />
+    <Compile Include="tool\CopyWhenClick.cs" />
+    <Compile Include="tool\KeepPasswordRealTime.cs" />
+    <Compile Include="tool\KeepTextRealTime.cs" />
+    <Compile Include="tool\KeyDownCommandAction.cs" />
+    <Compile Include="tool\VerticalScrollTrigger.cs" />
     <Compile Include="Warning_ChildWindow.xaml.cs">
       <DependentUpon>Warning_ChildWindow.xaml</DependentUpon>
     </Compile>
@@ -294,7 +300,6 @@
     <Resource Include="Images\撤单_MouseOver.png" />
     <Resource Include="Images\撤单_Normal.png" />
     <Resource Include="Images\撤单_Pressed.png" />
-    <Resource Include="Images\pstemp.png" />
     <Resource Include="Images\ChildWindowBg.png" />
     <Resource Include="Images\撤单2_MouseOver.png" />
     <Resource Include="Images\撤单2_Normal.png" />
@@ -318,6 +323,7 @@
     <Resource Include="Images\下一页OfTable.png" />
     <Resource Include="Images\尾页OfTable.png" />
     <Resource Include="Images\首页OfTable.png" />
+    <Resource Include="Images\TableRowOfLotteryToolBg.png" />
     <Content Include="ServiceReferences.ClientConfig" />
     <Resource Include="Fonts\ARIALUNI.TTF" />
     <Resource Include="Fonts\msyh.ttf" />
