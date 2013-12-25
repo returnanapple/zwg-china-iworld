@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:zwg_china.client"
     mc:Ignorable="d">
     <local:MainWin>
-        <StackPanel Margin="0,-50,0,0">
+        <StackPanel>
             <Canvas Height="120">
                 
             </Canvas>
