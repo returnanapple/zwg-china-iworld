@@ -3,6 +3,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:zwg_china.client" 
     mc:Ignorable="d">
-
+    <local:MainWin>
+        <StackPanel>
+            <local:TableTool PageIndex="{Binding PageIndex}" TotalPage="{Binding TotalPage}" JumpCommand="{Binding RefreshCommand}"
+                             ColumnDefinitions="用户:100,类型:100,收入:100,支出:100,变动:100,余额:100,时间:150"
+                             ItemsSource="{Binding List}" Width="750" CountOfRow="12"/>
+        </StackPanel>
+    </local:MainWin>
 </UserControl>

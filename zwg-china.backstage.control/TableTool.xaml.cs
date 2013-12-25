@@ -127,6 +127,7 @@ namespace zwg_china.backstage.control
                 if (t < 1) { return; }
 
                 TableTool tool = (TableTool)d;
+                tool._bg.Children.Clear();
                 for (int i = 0; i < t; i++)
                 {
                     Grid grid = new Grid();

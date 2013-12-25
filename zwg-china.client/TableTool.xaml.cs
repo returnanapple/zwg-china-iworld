@@ -60,9 +60,13 @@ namespace zwg_china.client
                 #region 描绘列分割线
 
                 int countOftList = tList.Count - 1;
+                tool._line.Children.Clear();
                 for (int i = 0; i < countOftList; i++)
                 {
-
+                    Border b = new Border();
+                    b.Style = (Style)tool.Resources["line"];
+                    b.Margin = new Thickness(tList[i].Width, 0, 0, 0);
+                    tool._line.Children.Add(b);
                 }
 
                 #endregion
@@ -126,6 +130,7 @@ namespace zwg_china.client
                 if (t < 1) { return; }
 
                 TableTool tool = (TableTool)d;
+                tool._bg.Children.Clear();
                 for (int i = 0; i < t; i++)
                 {
                     Grid grid = new Grid();
@@ -181,7 +186,7 @@ namespace zwg_china.client
             {
                 NewButton nb1 = new NewButton();
                 nb1.ImageNameOfContent = "首页OfTable";
-                nb1.ImageNameOfBackground = "PageButton";
+                nb1.ImageNameOfBackground = "PageButtonBg";
                 nb1.Width = 77;
                 nb1.Height = 36;
                 nb1.Click += JumpToFirsPage;
@@ -189,21 +194,11 @@ namespace zwg_china.client
 
                 NewButton nb2 = new NewButton();
                 nb2.ImageNameOfContent = "上一页OfTable";
-                nb2.ImageNameOfBackground = "PageButton";
+                nb2.ImageNameOfBackground = "PageButtonBg";
                 nb2.Width = 77;
                 nb2.Height = 36;
                 nb2.Click += JumpToPreviousPage;
                 _page.Children.Add(nb2);
-            }
-            else
-            {
-                TextBlock tb1 = new TextBlock();
-                tb1.Text = "首页";
-                _page.Children.Add(tb1);
-
-                TextBlock tb2 = new TextBlock();
-                tb2.Text = "上一页";
-                _page.Children.Add(tb2);
             }
             #endregion
             #region 页码和总页数
@@ -223,7 +218,7 @@ namespace zwg_china.client
             {
                 NewButton nb1 = new NewButton();
                 nb1.ImageNameOfContent = "下一页OfTable";
-                nb1.ImageNameOfBackground = "PageButton";
+                nb1.ImageNameOfBackground = "PageButtonBg";
                 nb1.Width = 77;
                 nb1.Height = 36;
                 nb1.Click += JumpToNextPage;
@@ -231,21 +226,11 @@ namespace zwg_china.client
 
                 NewButton nb2 = new NewButton();
                 nb2.ImageNameOfContent = "尾页OfTable";
-                nb2.ImageNameOfBackground = "PageButton";
+                nb2.ImageNameOfBackground = "PageButtonBg";
                 nb2.Width = 77;
                 nb2.Height = 36;
                 nb2.Click += JumpToLastPage;
                 _page.Children.Add(nb2);
-            }
-            else
-            {
-                TextBlock tb1 = new TextBlock();
-                tb1.Text = "下一页";
-                _page.Children.Add(tb1);
-
-                TextBlock tb2 = new TextBlock();
-                tb2.Text = "尾页";
-                _page.Children.Add(tb2);
             }
             #endregion
         }
